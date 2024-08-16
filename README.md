@@ -1,4 +1,4 @@
-# Austin LangChain Community Group Website 🌟
+# Austin LangChain Community Docs Site 🌟
 
 Welcome to the official repository for the Austin LangChain community group documentation website! 🤠
 
