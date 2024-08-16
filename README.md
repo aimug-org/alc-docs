@@ -15,10 +15,11 @@ To contribute to this project, you'll need:
 
 ### Installation
 
-1. Clone the repository:
+1. Clone the repository - move to main-docs:
    ```
-   git clone https://github.com/aimug-org/website.git
-   cd website
+   git clone https://github.com/aimug-org/alc-docs.git
+   cd alc-docs
+   cd main-docs
    ```
 
 2. Install dependencies:
