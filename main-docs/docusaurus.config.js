@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Austin LangChain',
   tagline: 'User Guide and Documentation',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/alc-favicon.ico',
 
   // Set the production url of your site here
   url: 'https://aimug-org.github.io/',
