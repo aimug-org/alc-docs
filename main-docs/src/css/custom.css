@@ -28,3 +28,110 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Custom styles for the landing page */
+.hero {
+  background-color: #f0f4f8;
+  color: #333;
+  padding: 4rem 0;
+  margin-bottom: 2rem; /* Add space between hero and features */
+}
+
+.hero__title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero__subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.button--primary {
+  background-color: #2e8555;
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.button--primary:hover {
+  background-color: #205d3b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+  width: 100%;
+  background-color: #ffffff; /* Light background for features section */
+}
+
+.featureIcon {
+  font-size: 3rem;
+  color: #205d3b; /* Darker color for better contrast */
+  margin-bottom: 1rem;
+}
+
+.features h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #2e8555; /* Match with primary color */
+}
+
+.features p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 996px) {
+  .hero__title {
+    font-size: 2.5rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.2rem;
+  }
+
+  .features h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Add Font Awesome for icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+/* Additional custom styles */
+.navbar {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  background-color: #f0f4f8;
+  color: #666;
+}
+
+.footer__link-item {
+  color: #2e8555;
+}
+
+.footer__link-item:hover {
+  color: #205d3b;
+}
+
+/* Add a subtle hover effect to feature items */
+.col.col--4 {
+  transition: transform 0.3s ease;
+}
+
+.col.col--4:hover {
+  transform: translateY(-5px);
+}
