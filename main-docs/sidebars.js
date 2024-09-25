@@ -21,6 +21,17 @@ const sidebars = {
         'langchain-102/langserve-pirate-speak',
       ],
     },
+    {
+      type: 'category',
+      label: 'Langchain 103',
+      items: [
+        'langchain-103/introduction-to-103',
+        'langchain-103/docker-introduction',
+        'langchain-103/langserve-on-docker',
+        'langchain-103/pandas-df-agent',
+        'langchain-103/rag-quickstart',
+      ],
+    },
     // You can add more categories or documents here as needed
   ],
 };
