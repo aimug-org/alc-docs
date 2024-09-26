@@ -6,7 +6,7 @@ const sidebars = {
     'langchain-introduction',
     {
       type: 'category',
-      label: 'Langchain 101',
+      label: 'Oct 2023',
       items: [
         'langchain-101/streamlit-streaming',
         'langchain-101/streamlit-document-search',
@@ -16,14 +16,14 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Langchain 102',
+      label: 'Nov 2023',
       items: [
         'langchain-102/langserve-pirate-speak',
       ],
     },
     {
       type: 'category',
-      label: 'Langchain 103',
+      label: 'Dec 2023',
       items: [
         'langchain-103/introduction-to-103',
         'langchain-103/docker-introduction',
