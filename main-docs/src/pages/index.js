@@ -14,7 +14,7 @@ function HomepageHeader() {
         <Heading as="h1" className="hero__title">
           {siteConfig.title} AIMUG
         </Heading>
-        <p className="hero__subtitle">Austin LangChain AI Middleware Users Group</p>
+        <p className="hero__subtitle">AI Middleware Users Group</p>
         <p>{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
@@ -79,7 +79,7 @@ export default function Home() {
   return (
     <Layout
       title={`Welcome to AIMUG - ${siteConfig.title}`}
-      description="AIMUG - Austin LangChain AI Middleware Users Group - Learn, Connect, and Build with LangChain">
+      description="AIMUG - AI Middleware Users Group - Learn, Connect, and Build with LangChain">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

@@ -29,7 +29,7 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          editUrl: 'https://github.com/aimug-org/alc-docs/tree/main/main-docs/',
+          editUrl: 'https://github.com/aimug-org/austin_langchain/tree/main/main-docs/',
         },
         blog: {
           showReadingTime: true,
@@ -37,7 +37,7 @@ const config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          editUrl: 'https://github.com/aimug-org/alc-docs/tree/main/main-docs/',
+          editUrl: 'https://github.com/aimug-org/austin_langchain/tree/main/main-docs/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -66,7 +66,7 @@ const config = {
           {to: '/blog', label: 'Blog', position: 'left'},
           {to: '/events', label: 'Events', position: 'left'},
           {
-            href: 'https://github.com/aimug-org/alc-docs',
+            href: 'https://github.com/aimug-org/austin_langchain',
             label: 'GitHub',
             position: 'right',
           },
@@ -89,15 +89,19 @@ const config = {
             items: [
               {
                 label: 'Meetup',
-                href: 'https://www.meetup.com/austin-langchain/',
+                href: 'https://www.meetup.com/austin-langchain-ai-group/',
               },
               {
                 label: 'Discord',
-                href: 'https://discord.gg/langchain',
+                href: 'https://discord.gg/JzWgadPFQd',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/LangChainAI',
+                href: 'https://twitter.com/AustinLangChain',
+              },
+              {
+                label: 'YouTube',
+                href: 'https://www.youtube.com/channel/UC03IXA4KU6hOQ_3YPTbS0ig',
               },
             ],
           },
@@ -110,7 +114,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/aimug-org/alc-docs',
+                href: 'https://github.com/aimug-org/austin_langchain',
               },
             ],
           },
