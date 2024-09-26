@@ -4,7 +4,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Austin LangChain',
-  tagline: 'Learn, Connect, and Build with Austin LangChain',
+  tagline: 'Learn, Connect, and Build in the open with Austin LangChain',
   favicon: 'img/favicon.ico',
 
   url: 'https://aimug-org.github.io/',
