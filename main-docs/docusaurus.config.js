@@ -4,7 +4,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Austin LangChain',
-  tagline: 'Learn, Connect, and Build with LangChain',
+  tagline: 'Learn, Connect, and Build with Austin LangChain',
   favicon: 'img/alc-favicon.ico',
 
   url: 'https://aimug-org.github.io/',
@@ -88,20 +88,20 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Meetup',
-                href: 'https://www.meetup.com/austin-langchain-ai-group/',
-              },
-              {
                 label: 'Discord',
                 href: 'https://discord.gg/JzWgadPFQd',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/AustinLangChain',
+                label: 'Meetup',
+                href: 'https://www.meetup.com/austin-langchain-ai-group/',
               },
               {
                 label: 'YouTube',
                 href: 'https://www.youtube.com/channel/UC03IXA4KU6hOQ_3YPTbS0ig',
+              },
+              {
+                label: 'Twitter',
+                href: 'https://twitter.com/AustinLangChain',
               },
             ],
           },
