@@ -2,9 +2,9 @@
 sidebar_position: 1
 ---
 
-# Introduction to LangChain 103
+# Introduction to Dec 2023
 
-Welcome to LangChain 103! This course builds upon the concepts learned in LangChain 101 and 102, introducing more advanced topics and practical applications of LangChain.
+Welcome to Dec 2023! This course builds upon the concepts learned in Oct 2023 and Nov 2023, introducing more advanced topics and practical applications of LangChain.
 
 ## What You'll Learn
 
@@ -24,7 +24,7 @@ In this course, we'll cover:
 
 Before starting this course, you should have:
 
-- Completed LangChain 101 and 102 or have equivalent knowledge
+- Completed Oct 2023 and Nov 2023 or have equivalent knowledge
 - Basic understanding of Python programming
 - Familiarity with concepts of large language models and AI
 
@@ -32,6 +32,6 @@ Before starting this course, you should have:
 
 To begin, make sure you have the necessary environment set up. You'll need Python, LangChain, and potentially Docker installed on your system. Detailed setup instructions will be provided in each section.
 
-Each section in this course is designed to be both theoretical and practical. You'll learn the concepts behind each topic and then apply them in hands-on exercises. By the end of LangChain 103, you'll have a solid understanding of how to use Docker with LangChain, work with advanced agents like the Pandas DataFrame Agent, and implement sophisticated techniques like RAG.
+Each section in this course is designed to be both theoretical and practical. You'll learn the concepts behind each topic and then apply them in hands-on exercises. By the end of Dec 2023, you'll have a solid understanding of how to use Docker with LangChain, work with advanced agents like the Pandas DataFrame Agent, and implement sophisticated techniques like RAG.
 
 Let's dive in and expand your LangChain knowledge!

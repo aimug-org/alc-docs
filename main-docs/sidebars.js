@@ -25,7 +25,7 @@ const sidebars = {
       type: 'category',
       label: 'Dec 2023',
       items: [
-        'langchain-103/introduction-to-103',
+        'langchain-103/introduction-to-dec-2023',
         'langchain-103/docker-introduction',
         'langchain-103/langserve-on-docker',
         'langchain-103/pandas-df-agent',
