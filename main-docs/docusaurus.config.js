@@ -5,7 +5,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Austin LangChain',
   tagline: 'Learn, Connect, and Build with Austin LangChain',
-  favicon: 'img/alc-favicon.ico',
+  favicon: 'img/favicon.ico',
 
   url: 'https://aimug-org.github.io/',
   baseUrl: '/',
@@ -52,6 +52,10 @@ const config = {
       image: 'img/alc-docs-social-card.jpg',
       navbar: {
         title: 'Austin LangChain',
+        logo: {
+          alt: 'Austin LangChain Logo',
+          src: 'img/austin_langchain-192x192.png',
+        },
         items: [
           {
             type: 'docSidebar',
