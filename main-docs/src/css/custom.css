@@ -114,17 +114,42 @@
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
 }
 
+/* Styles for navbar links */
+.navbar__items .navbar__item.navbar__link {
+  color: #0a3622; /* Even darker green color for better readability */
+  font-weight: 700; /* Make the text bolder */
+  font-size: 1.1rem; /* Slightly larger font size */
+}
+
+.navbar__items .navbar__item.navbar__link:hover,
+.navbar__items .navbar__item.navbar__link--active {
+  color: #2e8555; /* Use primary color on hover and for active link */
+}
+
+/* Updated footer styles */
 .footer {
   background-color: #f0f4f8;
-  color: #666;
+  color: #333; /* Darker text color for better readability */
+}
+
+.footer__title {
+  color: #0a3622; /* Dark green color for category titles */
+  font-weight: 700; /* Make the text bolder */
+  font-size: 1.2rem; /* Slightly larger font size */
+}
+
+.footer__item {
+  font-weight: 500; /* Make the text slightly bolder */
 }
 
 .footer__link-item {
-  color: #2e8555;
+  color: #205d3b; /* Darker green color for better readability */
+  font-weight: 500; /* Make the text slightly bolder */
 }
 
 .footer__link-item:hover {
-  color: #205d3b;
+  color: #2e8555; /* Lighter green on hover */
+  text-decoration: underline; /* Add underline on hover for better visibility */
 }
 
 /* Add a subtle hover effect to feature items */
@@ -134,4 +159,31 @@
 
 .col.col--4:hover {
   transform: translateY(-5px);
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .navbar__items .navbar__item.navbar__link {
+  color: #a3f7e0; /* Lighter and more vibrant color for dark mode */
+}
+
+[data-theme='dark'] .navbar__items .navbar__item.navbar__link:hover,
+[data-theme='dark'] .navbar__items .navbar__item.navbar__link--active {
+  color: #25c2a0; /* Use primary color for dark mode on hover and for active link */
+}
+
+[data-theme='dark'] .footer {
+  background-color: #1a2b42; /* Darker background for footer in dark mode */
+  color: #e0e0e0; /* Lighter text color for better readability in dark mode */
+}
+
+[data-theme='dark'] .footer__title {
+  color: #a3f7e0; /* Light green color for category titles in dark mode */
+}
+
+[data-theme='dark'] .footer__link-item {
+  color: #7de2c9; /* Lighter green color for better readability in dark mode */
+}
+
+[data-theme='dark'] .footer__link-item:hover {
+  color: #25c2a0; /* Even lighter green on hover in dark mode */
 }

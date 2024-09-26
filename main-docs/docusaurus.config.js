@@ -52,10 +52,6 @@ const config = {
       image: 'img/alc-docs-social-card.jpg',
       navbar: {
         title: 'Austin LangChain',
-        logo: {
-          alt: 'Austin LangChain Logo',
-          src: 'img/logo.svg',
-        },
         items: [
           {
             type: 'docSidebar',
