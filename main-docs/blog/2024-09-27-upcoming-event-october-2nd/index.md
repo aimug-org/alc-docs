@@ -1,6 +1,6 @@
 ---
 slug: upcoming-event-october-2nd
-title: Monthly Meeting - October 2nd, 2024
+title: October Meeting - Austin LangChain AIMUG
 authors: [colinmcnamara]
 tags: [event, meetup, langchain]
 ---
