@@ -119,7 +119,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Austin LangChain Community. Built with Docusaurus.`,
+        copyright: `© ${new Date().getFullYear()} Austin LangChain AIMUG. Creative Commons Attribution 4.0.`,
       },
       prism: {
         theme: prismThemes.github,
