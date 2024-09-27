@@ -14,6 +14,11 @@ Held on the first Wednesday of each month, this event combines networking, learn
 - The main show follows, featuring showcases, labs, panels, and workshops.
 - This is our primary monthly event where we come together to learn, share, and collaborate.
 
+**Location**: Center for Government and Civil Service at ACC Rio Grande Campus (ACC RGC3000)
+- Address: 1218 West Avenue, Austin, TX
+- Directions: It's the tan brick building on your left if you are going north on West Avenue between 12th and 13th streets. Go up the stairs to reach ACC RGC3000.
+- Parking: Free in the Garage all day, and free on the surrounding streets after 6 PM.
+
 ### Mid-Month Happy Hours
 Typically held two weeks after the Mixer and Showcase, on a Wednesday. These social gatherings are a great way to network and connect with other community members in a relaxed setting. Check our [Meetup page](https://www.meetup.com/austin-langchain-ai-group/) for specific dates and locations.
 
