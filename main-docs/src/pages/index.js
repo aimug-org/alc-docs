@@ -28,16 +28,18 @@ function HomepageHeader() {
   );
 }
 
-function Feature({title, description, icon}) {
+function Feature({title, description, icon, link}) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <i className={`featureIcon ${icon}`}></i>
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
+      <Link to={link} className={styles.featureLink}>
+        <div className="text--center">
+          <i className={`featureIcon ${icon}`}></i>
+        </div>
+        <div className="text--center padding-horiz--md">
+          <Heading as="h3">{title}</Heading>
+          <p>{description}</p>
+        </div>
+      </Link>
     </div>
   );
 }
@@ -48,16 +50,19 @@ function HomepageFeatures() {
       title: 'Learn',
       icon: 'fas fa-book',
       description: 'Explore our comprehensive documentation and tutorials on LangChain and associated ecosystem technologies.',
+      link: '/docs/langchain-introduction',
     },
     {
       title: 'Connect',
       icon: 'fas fa-users',
       description: 'Join our vibrant AIMUG community of developers, researchers, and enthusiasts in Austin and abroad.',
+      link: '/community',
     },
     {
       title: 'Build',
       icon: 'fas fa-code',
       description: 'Create innovative applications and contribute to open-source projects using LangChain ',
+      link: 'https://github.com/aimug-org',
     },
   ];
 

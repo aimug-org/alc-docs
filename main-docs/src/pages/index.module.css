@@ -21,3 +21,31 @@
   align-items: center;
   justify-content: center;
 }
+
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.featureLink {
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: block;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.featureLink:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.featureIcon {
+  font-size: 3rem;
+  padding-bottom: 1rem;
+}
