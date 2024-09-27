@@ -4,6 +4,7 @@ yangshun:
   url: https://github.com/yangshun
   image_url: https://github.com/yangshun.png
   page: true
+  description: Yangshun is a Front End Engineer at Facebook, passionate about web development and open source projects.
   socials:
     x: yangshunz
     github: yangshun
@@ -14,10 +15,28 @@ slorber:
   url: https://sebastienlorber.com
   image_url: https://github.com/slorber.png
   page:
-    # customize the url of the author page at /blog/authors/<permalink>
     permalink: '/all-sebastien-lorber-articles'
+  description: Sébastien is the maintainer of Docusaurus, dedicated to improving documentation and developer experiences.
   socials:
     x: sebastienlorber
     linkedin: sebastienlorber
     github: slorber
     newsletter: https://thisweekinreact.com
+
+colinmcnamara:
+  name: Colin McNamara
+  title: Founder - Austin LangChain AIMUG, Sustainable Innovation Leader
+  url: https://www.colinmcnamara.com
+  image_url: http://github.com/colinmcnamara.png
+  page: true
+  description: |
+    While many claim to be a 10x programmer, Colin is proud to claim the title of 10% programmer.
+    He balances that with 90% Engineering and Business skills.
+    
+    As the Founder of Austin LangChain AIMUG and a Sustainable Innovation Leader,
+    Colin combines his technical expertise with a strong focus on practical business
+    applications and sustainable solutions.
+  socials:
+    linkedin: colinmcnamara
+    github: colinmcnamara
+    x: colinmcnamara

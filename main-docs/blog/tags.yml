@@ -17,3 +17,18 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
+
+event:
+  label: Event
+  permalink: /event
+  description: Posts related to Austin LangChain AI Group events
+
+meetup:
+  label: Meetup
+  permalink: /meetup
+  description: Information about our meetups and gatherings
+
+langchain:
+  label: LangChain
+  permalink: /langchain
+  description: Topics related to LangChain and its applications in AI
