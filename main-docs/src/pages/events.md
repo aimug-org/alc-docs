@@ -4,6 +4,25 @@ Welcome to the Austin LangChain Events page!
 
 Here you'll find information about upcoming meetups, workshops, and other events related to LangChain and AI in the Austin area.
 
+## Regular Events
+
+We host several regular events to keep our community engaged and connected:
+
+### Mixer and Showcase
+Held on the first Wednesday of each month, this event combines networking, learning, and showcasing:
+- We start with a mixer that runs parallel to a 101 track to bring people up to speed.
+- The main show follows, featuring showcases, labs, panels, and workshops.
+- This is our primary monthly event where we come together to learn, share, and collaborate.
+
+### Mid-Month Happy Hours
+Typically held two weeks after the Mixer and Showcase, on a Wednesday. These social gatherings are a great way to network and connect with other community members in a relaxed setting. Check our [Meetup page](https://www.meetup.com/austin-langchain-ai-group/) for specific dates and locations.
+
+### Office Hours
+Every Tuesday at 2 PM Central, join us in the [Discord Meeting Room](https://discord.com/channels/1149779360178524272/1149779360967045170) for Office Hours. This is a great opportunity to ask questions, get help with your projects, or just chat with other community members.
+
+### Community Call
+Join our weekly Community Call every Thursday at 2 PM Central at [https://meet.aimug.org/session/1b5321b1-e360-4b4a-bc33-9307dc4782de](https://meet.aimug.org/session/1b5321b1-e360-4b4a-bc33-9307dc4782de). During these calls, we plan our events and then break into an open forum. Everyone is welcome to join and contribute ideas!
+
 ## Upcoming Events
 
 1. **Unlocking AI with LangChain: Networking, Showcases and Insights - October**

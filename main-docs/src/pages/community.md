@@ -27,11 +27,24 @@ Watch our recorded sessions, tutorials, and presentations:
 Follow us on Twitter for the latest updates, announcements, and AI insights:
 [Austin LangChain Twitter](https://twitter.com/AustinLangChain)
 
+## Regular Events
+
+We host several regular events to keep our community engaged and connected:
+
+### Office Hours
+Every Tuesday at 2 PM Central, join us in the Discord Meeting Room for Office Hours. This is a great opportunity to ask questions, get help with your projects, or just chat with other community members.
+
+### Community Call
+Join our weekly Community Call every Thursday at 2 PM Central at [https://meet.aimug.org/session/1b5321b1-e360-4b4a-bc33-9307dc4782de](https://meet.aimug.org/session/1b5321b1-e360-4b4a-bc33-9307dc4782de). During these calls, we plan our events and then break into an open forum. Everyone is welcome to join and contribute ideas!
+
+### Mid-Month Happy Hours
+Explore fun places around town with us during our mid-month happy hours. These social gatherings are a great way to network and connect with other community members in a relaxed setting.
+
 ## Get Involved
 
 We encourage all community members to actively participate:
 
-- Attend our monthly meetups
+- Attend our regular events and meetups
 - Contribute to open-source projects
 - Share your knowledge and experiences
 - Collaborate on AI and LangChain projects
