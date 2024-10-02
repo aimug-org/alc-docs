@@ -37,6 +37,10 @@ const sidebars = {
       label: 'Oct 2024',
       items: [
         'langchain-110/introduction-to-110',
+        'langchain-110/session',
+        'langchain-110/email-rag-showcase',
+        'langchain-110/perplexity-clone-showcase',
+        'langchain-110/ai-accelerated-software-development-panel',
       ],
     },
     // You can add more categories or documents here as needed
