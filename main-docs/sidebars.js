@@ -32,6 +32,13 @@ const sidebars = {
         'langchain-103/rag-quickstart',
       ],
     },
+    {
+      type: 'category',
+      label: 'Oct 2024',
+      items: [
+        'langchain-110/introduction-to-110',
+      ],
+    },
     // You can add more categories or documents here as needed
   ],
 };
