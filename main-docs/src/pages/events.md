@@ -4,7 +4,7 @@ Welcome to the Austin LangChain Events page!
 
 Here you'll find information about upcoming meetups, workshops, and other events related to LangChain and AI in the Austin area.
 
-*Last updated: October 5, 2024*
+*Last updated: October 18, 2023*
 
 ## Regular Events
 
@@ -32,50 +32,34 @@ Join our weekly Community Call every Thursday at 2 PM Central at [https://meet.g
 
 ## Upcoming Events
 
-1. **Austin LangChain Hacky Hour**
-   - Date: Wednesday, October 16, 2024
-   - Time: 6:00 PM - 8:00 PM CDT
-   - Location: Skinny's Off Track Bar, East Austin, 1806 E. 12th St., Austin, TX 78702
-   - [Event Details](https://www.meetup.com/austin-langchain-ai-group/events/303825248/)
-   - [Venue Website](https://www.skinnysotb.com/)
+1. **Austin LangChain November Meetup**
+   - Date: Wednesday, November 1, 2023
+   - Time: 6:00 PM - 9:00 PM CDT
+   - Location: ACC - RGC 3000, 1218 West Avenue, Austin, TX
+   - [Event Details](https://www.meetup.com/austin-langchain-ai-group/events/)
 
-   Join us for a Hacky Hour hosted by the Austin LangChain Enthusiasts Meetup Group! This casual, informal gathering is the perfect opportunity for AI and LangChain enthusiasts to come together, hack on labs, and share knowledge in a relaxed, fun environment.
+   Join us for our monthly Mixer and Showcase event. More details will be posted on our Meetup page as we get closer to the date.
 
-   **What to Expect:**
-   - Open Lab Time: Work on LangChain projects, explore AI development tools, and collaborate with others.
-   - Networking: Connect with fellow LangChain enthusiasts in the Austin area.
-   - Learn and Share: Exchange tips, tricks, and insights on using LangChain.
-
-   **Who Should Attend:**
-   - AI/LLM enthusiasts curious about LangChain
-   - Individuals currently learning or utilizing LangChain technology
-   - Anyone interested in the future of language technology
-
-   Bring your laptop, your ideas, and your enthusiasm!
+2. **Austin LangChain Mid-Month Happy Hour**
+   - Date: Wednesday, November 15, 2023 (tentative)
+   - Time: TBA
+   - Location: TBA
+   - Check our [Meetup page](https://www.meetup.com/austin-langchain-ai-group/events/) for updates and official announcement
 
 ## Past Events
 
-1. **Unlocking AI with LangChain: Networking, Showcases and Insights - October**
-   - Date: Wednesday, October 2, 2024
+1. **Austin LangChain October Meetup**
+   - Date: Wednesday, October 4, 2023
    - Time: 6:00 PM - 9:00 PM CDT
    - Location: ACC - RGC 3000, 1218 West Avenue, Austin, TX
-   - [Event Details](https://www.meetup.com/austin-langchain-ai-group/events/303569533/)
 
-2. **Austin LangChain Hacky Hour - Claud-Dev @ Skinny's Off Track Bar - East Austin**
-   - Date: Wednesday, September 25, 2024
-   - [Event Details](https://www.meetup.com/austin-langchain-ai-group/events/303396926/)
+2. **Austin LangChain Hacky Hour**
+   - Date: Wednesday, September 20, 2023
+   - Location: Skinny's Off Track Bar, East Austin, 1806 E. 12th St., Austin, TX 78702
 
-3. **Austin LangChain AIMUG September Showcases and Mixer**
-   - Date: Wednesday, September 11, 2024
-   - [Event Details](https://www.meetup.com/austin-langchain-ai-group/events/303065879/)
-
-4. **Austin LangChain Hacky Hour @ Skinny's Off Track Bar - East Austin**
-   - Date: Wednesday, August 21, 2024
-   - [Event Details](https://www.meetup.com/austin-langchain-ai-group/events/302580770/)
-
-5. **Austin LangChain - August meeting**
-   - Date: Wednesday, August 7, 2024
-   - [Event Details](https://www.meetup.com/austin-langchain-ai-group/events/302530348/)
+3. **Austin LangChain September Meetup**
+   - Date: Wednesday, September 6, 2023
+   - Location: ACC - RGC 3000, 1218 West Avenue, Austin, TX
 
 For a complete list of our past events, please visit our [Meetup page](https://www.meetup.com/austin-langchain-ai-group/events/past/).
 
