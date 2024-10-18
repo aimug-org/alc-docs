@@ -7,7 +7,7 @@ tags: [event, mlops, langchain, community]
 
 🚀 **Showcase Your Project at the MLOps World Community Corner in Austin!** 🌟
 
-Are you working on something exciting in **MLOps or LangChain**? Have a **lab, notebook, or project** you'd like to showcase? Submit your work to be featured in our **Community Corner** at the upcoming **MLOps World Summit in Austin**!
+Are you working on something exciting in **MLOps or LangChain**? Have a **lab, notebook, or project** you'd like to showcase? Submit your work to be featured in our **Community Corner** at the upcoming [MLOps World Summit in Austin](https://mlopsworld.com/)!
 
 Whether it's a **new tool**, an **innovative solution**, or a **valuable insight**, this is your opportunity to share it with a vibrant community of professionals, researchers, and enthusiasts. Let's **connect, collaborate, and inspire**!
 
@@ -32,3 +32,5 @@ We'll contact those selected to present via email by **October 30th**. Those cho
 Ready to share your work? Let's make an impact together!
 
 Don't miss this chance to showcase your project and connect with the MLOps and LangChain community. Submit your work today and be part of this exciting event!
+
+For more information about the MLOps World Summit, visit their official website: [https://mlopsworld.com/](https://mlopsworld.com/)

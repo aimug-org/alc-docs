@@ -86,7 +86,16 @@ During these calls, we plan our events and then break into an open forum. Everyo
 
 ## Upcoming Events
 
-Please check our [Meetup page](https://www.meetup.com/austin-langchain-ai-group/events/) for the most up-to-date information on upcoming events.
+### MLOps World Summit - Community Corner
+- **Date**: November 7-8, 2023
+- **Location**: The Renaissance Austin Hotel
+- **Event**: Austin LangChain will be hosting a Community Corner at the MLOps World Summit. This is an excellent opportunity to showcase your projects related to MLOps or LangChain.
+- **Time Slot**: November 7, 12:35 PM - 1:35 PM (Day 1 lunch slot)
+- **Format**: Casual presentation space with a large monitor for demonstrations
+- **How to Participate**: Submit your project for consideration through our [intake form](https://forms.gle/9aDS8z5ASBagMJXm8)
+- **More Information**: Check out our [blog post](https://aimug.org/blog/mlops-world-community-corner) for full details or visit the [MLOps World website](https://mlopsworld.com/)
+
+For more information on our regular events and other upcoming activities, please check our [Meetup page](https://www.meetup.com/austin-langchain-ai-group/events/).
 
 ## Past Events
 
