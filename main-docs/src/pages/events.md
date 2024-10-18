@@ -33,18 +33,13 @@ Join our weekly Community Call every Thursday at 2 PM Central at [https://meet.g
 ## Upcoming Events
 
 1. **Austin LangChain November Meetup**
-   - Date: Wednesday, November 1, 2023
+   - Date: Wednesday, November 13, 2023
    - Time: 6:00 PM - 9:00 PM CDT
    - Location: ACC - RGC 3000, 1218 West Avenue, Austin, TX
    - [Event Details](https://www.meetup.com/austin-langchain-ai-group/events/)
 
    Join us for our monthly Mixer and Showcase event. More details will be posted on our Meetup page as we get closer to the date.
 
-2. **Austin LangChain Mid-Month Happy Hour**
-   - Date: Wednesday, November 15, 2023 (tentative)
-   - Time: TBA
-   - Location: TBA
-   - Check our [Meetup page](https://www.meetup.com/austin-langchain-ai-group/events/) for updates and official announcement
 
 ## Past Events
 
