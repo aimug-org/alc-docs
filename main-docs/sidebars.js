@@ -1,50 +1,37 @@
-// @ts-check
+const fs = require('fs');
+const path = require('path');
 
-/** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
-const sidebars = {
-  tutorialSidebar: [
+function generateSidebar() {
+  const docsPath = path.join(__dirname, 'docs');
+  const folders = fs.readdirSync(docsPath, { withFileTypes: true })
+    .filter(dirent => dirent.isDirectory())
+    .map(dirent => dirent.name)
+    .filter(name => /^\w+-\d{4}$/.test(name))
+    .sort((a, b) => {
+      const [aMonth, aYear] = a.split('-');
+      const [bMonth, bYear] = b.split('-');
+      return new Date(`${aMonth} 1, ${aYear}`) - new Date(`${bMonth} 1, ${bYear}`);
+    });
+
+  const sidebar = [
     'langchain-introduction',
-    {
+    ...folders.map(folder => ({
       type: 'category',
-      label: 'Oct 2023',
-      items: [
-        'oct-2023/streamlit-streaming',
-        'oct-2023/streamlit-document-search',
-        'oct-2023/search-chat',
-        'oct-2023/streamlit-introduction',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Nov 2023',
-      items: [
-        'nov-2023/langserve-pirate-speak',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Dec 2023',
-      items: [
-        'dec-2023/introduction-to-dec-2023',
-        'dec-2023/docker-introduction',
-        'dec-2023/langserve-on-docker',
-        'dec-2023/pandas-df-agent',
-        'dec-2023/rag-quickstart',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Oct 2024',
-      items: [
-        'oct-2024/introduction-to-110',
-        'oct-2024/session',
-        'oct-2024/email-rag-showcase',
-        'oct-2024/perplexity-clone-showcase',
-        'oct-2024/ai-accelerated-software-development-panel',
-      ],
-    },
-    // You can add more categories or documents here as needed
-  ],
-};
+      label: formatFolderName(folder),
+      items: fs.readdirSync(path.join(docsPath, folder))
+        .filter(file => file.endsWith('.md'))
+        .map(file => `${folder}/${path.parse(file).name}`),
+    })),
+  ];
 
-export default sidebars;
+  return {
+    tutorialSidebar: sidebar,
+  };
+}
+
+function formatFolderName(folder) {
+  const [month, year] = folder.split('-');
+  return `${month.charAt(0).toUpperCase() + month.slice(1)} ${year}`;
+}
+
+module.exports = generateSidebar();
