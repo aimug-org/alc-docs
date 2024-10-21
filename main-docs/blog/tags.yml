@@ -32,3 +32,13 @@ langchain:
   label: LangChain
   permalink: /langchain
   description: Topics related to LangChain and its applications in AI
+
+mlops:
+  label: MLOps
+  permalink: /mlops
+  description: Topics related to Machine Learning Operations
+
+community:
+  label: Community
+  permalink: /community
+  description: Posts related to our AI community and events

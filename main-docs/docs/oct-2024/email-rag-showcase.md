@@ -14,6 +14,12 @@ In this showcase, Jackson and Cameron present their work on Email RAG (Retrieval
 - Email summarization
 - Improved email search and retrieval
 
+### Video Demonstration
+
+Watch Jackson and Cameron's demonstration of the Email RAG system:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DSvQYLn8kjI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### GitHub Repository
 
 You can find the code and detailed implementation in the following Jupyter notebook:

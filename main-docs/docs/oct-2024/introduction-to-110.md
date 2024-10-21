@@ -27,6 +27,12 @@ Whether you're joining us remotely or in person, we've got you covered! This lin
 
 By providing these resources, we ensure that everyone can fully engage with the event, regardless of their location or any potential technical issues.
 
+## Full Meeting Recording
+
+If you missed the live event or want to revisit the discussions, you can watch the full recording of our October 2024 meeting here:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1WYQNkNMMyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Agenda
 
 1. **Mixer**: Network with fellow AI enthusiasts and professionals
