@@ -14,7 +14,7 @@ We host several regular events to keep our community engaged and connected:
 
 #### 2024:
 - November 13, 2024 (Wednesday)
-- December 4, 2024 (Wednesday)
+- December 11, 2024 (Wednesday)
 
 #### 2025:
 - January 8, 2025 (Wednesday)
@@ -53,8 +53,11 @@ This event combines networking, learning, and showcasing. It's our primary month
 ### Mid-Month Happy Hour ("Hacky Hour") (Third Wednesday of Each Month)
 
 #### 2024:
+- November 20, 2024 (Wednesday)
+  - Location: Kinda Tropical
 - December 18, 2024 (Wednesday)
-  - Location: Consider a festive spot to close the year with a casual and celebratory tone.
+  - Location: Kinda Tropical
+  - Note: We'll be meeting at Kinda Tropical to close the year with a casual and celebratory tone.
 
 #### 2025:
 - January 22, 2025 (Wednesday)
