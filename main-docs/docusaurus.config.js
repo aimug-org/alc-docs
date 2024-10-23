@@ -7,7 +7,7 @@ const config = {
   tagline: 'Learn, Connect, and Build in the open with Austin LangChain',
   favicon: 'img/favicon.ico',
 
-  url: 'https://aimug-org.github.io/',
+  url: 'https://aimug.org',
   baseUrl: '/',
 
   organizationName: 'aimug-org',
