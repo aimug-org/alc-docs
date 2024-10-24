@@ -2,9 +2,46 @@
 
 Welcome to the Austin LangChain Events page!
 
-Here you'll find information about upcoming meetups, workshops, and other events related to LangChain and AI in the Austin area.
-
 *Last updated: October 24, 2024*
+
+## Upcoming Events
+
+### Austin LangChain AIMUG November Meeting
+- **Date**: Wednesday, November 13, 2024, 6:00 PM CST
+- **Location**: ACC - RGC 3000, Austin, TX
+- **Description**: Join Us for the November Monthly Mixer and Showcase! An evening of innovation, inspiration, and connections. Don't miss out on the latest in AI and LangChain Ecosystem technology.
+- **RSVP**: [Meetup Event Page](https://www.meetup.com/austin-langchain-ai-group/events/austin-langchain-aimug-november-meeting/)
+
+### Austin LangChain November Hacky Hour @ Kinda Tropical
+- **Date**: Wednesday, November 20, 2024, 6:00 PM CST
+- **Location**: Kinda Tropical, Austin, TX
+- **Description**: Join Us for the November Hacky Hour! Our Hacky Hour continues to explore fun places around Austin, and this month we're at Kinda Tropical!
+- **RSVP**: [Meetup Event Page](https://www.meetup.com/austin-langchain-ai-group/events/austin-langchain-november-hacky-hour/)
+
+### Austin LangChain AIMUG December Showcase and Mixer
+- **Date**: Wednesday, December 11, 2024, 6:00 PM CST
+- **Location**: ACC - RGC 3000, Austin, TX
+- **Description**: Join Us for the December Monthly Mixer and Showcase! Celebrate the end of the year with innovation, insights, and connections! Discover the latest in AI and LangChain technology and enjoy a festive atmosphere.
+- **RSVP**: [Meetup Event Page](https://www.meetup.com/austin-langchain-ai-group/events/austin-langchain-aimug-december-showcase-and-mixer/)
+
+### Austin LangChain December Hacky Hour @ Kinda Tropical
+- **Date**: Wednesday, December 18, 2024, 6:00 PM CST
+- **Location**: Kinda Tropical, Austin, TX
+- **Description**: Join Us for the December Holiday Hacky Hour! Our Hacky Hour continues to explore fun places around Austin. December is Kinda Tropical!
+- **RSVP**: [Meetup Event Page](https://www.meetup.com/austin-langchain-ai-group/events/austin-langchain-december-hacky-hour/)
+
+### MLOps World Summit - Community Corner
+- **Date**: November 7-8, 2024
+- **Location**: The Renaissance Austin Hotel
+- **Event**: Austin LangChain will be hosting a Community Corner at the MLOps World Summit. This is an excellent opportunity to showcase your projects related to MLOps or LangChain.
+- **Time Slot**: November 7, 12:35 PM - 1:35 PM (Day 1 lunch slot)
+- **Format**: Casual presentation space with a large monitor for demonstrations
+- **How to Participate**: Submit your project for consideration through our [intake form](https://forms.gle/9aDS8z5ASBagMJXm8)
+- **More Information**: Check out our [blog post](/blog/mlops-world-community-corner) for full details or visit the [MLOps World website](https://mlopsworld.com/)
+
+## Past Events
+
+For a complete list of our past events, please visit our [Meetup page](https://www.meetup.com/austin-langchain-ai-group/events/past/).
 
 ## Regular Events
 
@@ -87,46 +124,7 @@ This is a great opportunity to ask questions, get help with your projects, or ju
 
 During these calls, we plan our events and then break into an open forum. Everyone is welcome to join and contribute ideas!
 
-## Upcoming Events
-
-### Austin LangChain AIMUG November Meeting
-- **Date**: Wednesday, November 13, 2024, 6:00 PM CST
-- **Location**: ACC - RGC 3000, Austin, TX
-- **Description**: Join Us for the November Monthly Mixer and Showcase! An evening of innovation, inspiration, and connections. Don't miss out on the latest in AI and LangChain Ecosystem technology.
-- **RSVP**: [Meetup Event Page](https://www.meetup.com/austin-langchain-ai-group/events/austin-langchain-aimug-november-meeting/)
-
-### Austin LangChain November Hacky Hour @ Kinda Tropical
-- **Date**: Wednesday, November 20, 2024, 6:00 PM CST
-- **Location**: Kinda Tropical, Austin, TX
-- **Description**: Join Us for the November Hacky Hour! Our Hacky Hour continues to explore fun places around Austin, and this month we're at Kinda Tropical!
-- **RSVP**: [Meetup Event Page](https://www.meetup.com/austin-langchain-ai-group/events/austin-langchain-november-hacky-hour/)
-
-### Austin LangChain AIMUG December Showcase and Mixer
-- **Date**: Wednesday, December 11, 2024, 6:00 PM CST
-- **Location**: ACC - RGC 3000, Austin, TX
-- **Description**: Join Us for the December Monthly Mixer and Showcase! Celebrate the end of the year with innovation, insights, and connections! Discover the latest in AI and LangChain technology and enjoy a festive atmosphere.
-- **RSVP**: [Meetup Event Page](https://www.meetup.com/austin-langchain-ai-group/events/austin-langchain-aimug-december-showcase-and-mixer/)
-
-### Austin LangChain December Hacky Hour @ Kinda Tropical
-- **Date**: Wednesday, December 18, 2024, 6:00 PM CST
-- **Location**: Kinda Tropical, Austin, TX
-- **Description**: Join Us for the December Holiday Hacky Hour! Our Hacky Hour continues to explore fun places around Austin. December is Kinda Tropical!
-- **RSVP**: [Meetup Event Page](https://www.meetup.com/austin-langchain-ai-group/events/austin-langchain-december-hacky-hour/)
-
-### MLOps World Summit - Community Corner
-- **Date**: November 7-8, 2024
-- **Location**: The Renaissance Austin Hotel
-- **Event**: Austin LangChain will be hosting a Community Corner at the MLOps World Summit. This is an excellent opportunity to showcase your projects related to MLOps or LangChain.
-- **Time Slot**: November 7, 12:35 PM - 1:35 PM (Day 1 lunch slot)
-- **Format**: Casual presentation space with a large monitor for demonstrations
-- **How to Participate**: Submit your project for consideration through our [intake form](https://forms.gle/9aDS8z5ASBagMJXm8)
-- **More Information**: Check out our [blog post](/blog/mlops-world-community-corner) for full details or visit the [MLOps World website](https://mlopsworld.com/)
-
 For more information on our regular events and other upcoming activities, please check our [Meetup page](https://www.meetup.com/austin-langchain-ai-group/events/).
-
-## Past Events
-
-For a complete list of our past events, please visit our [Meetup page](https://www.meetup.com/austin-langchain-ai-group/events/past/).
 
 If you have any questions or would like to propose an event, please reach out to us through our community channels:
 
