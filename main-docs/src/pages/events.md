@@ -19,13 +19,13 @@ Welcome to the Austin LangChain Events page!
 - **RSVP**: [Meetup Event Page](https://www.meetup.com/austin-langchain-ai-group/events/304170533/)
 
 ### Austin LangChain AIMUG December Showcase and Mixer
-- **Date**: Wednesday, December 11, 2024, 6:00 PM CST
+- **Date**: Wednesday, December 19, 2024, 6:00 PM CST
 - **Location**: ACC - RGC 3000, Austin, TX
 - **Description**: Join Us for the December Monthly Mixer and Showcase! Celebrate the end of the year with innovation, insights, and connections! Discover the latest in AI and LangChain technology and enjoy a festive atmosphere.
 - **RSVP**: [Meetup Event Page](https://www.meetup.com/austin-langchain-ai-group/events/304169482/)
 
 ### Austin LangChain December Hacky Hour @ Kinda Tropical
-- **Date**: Wednesday, December 18, 2024, 6:00 PM CST
+- **Date**: Wednesday, December 4, 2024, 6:00 PM CST
 - **Location**: Kinda Tropical, Austin, TX
 - **Description**: Join Us for the December Holiday Hacky Hour! Our Hacky Hour continues to explore fun places around Austin. December is Kinda Tropical!
 - **RSVP**: [Meetup Event Page](https://www.meetup.com/austin-langchain-ai-group/events/304172493/)
