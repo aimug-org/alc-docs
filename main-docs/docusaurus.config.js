@@ -29,7 +29,7 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          editUrl: 'https://github.com/aimug-org/austin_langchain',
+          editUrl: 'https://github.com/aimug-org/alc-docs/tree/main/main-docs/',
         },
         blog: {
           showReadingTime: true,
@@ -66,7 +66,7 @@ const config = {
           {to: '/blog', label: 'Blog', position: 'left'},
           {to: '/events', label: 'Events', position: 'left'},
           {
-            href: 'https://github.com/aimug-org/alc-docs',
+            href: 'https://github.com/aimug-org/austin_langchain',
             label: 'GitHub',
             position: 'right',
           },
