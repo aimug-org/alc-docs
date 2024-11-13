@@ -4,6 +4,9 @@
 
 Get ready for an exciting evening where innovation meets community! The Austin LangChain AI Middleware Users Group (AIMUG) invites you to our November Monthly Mixer and Showcase, where we'll explore groundbreaking developments in AI automation and the LangChain ecosystem. Whether you're a seasoned AI practitioner or just curious about the technology, this event offers something for everyone.
 
+#### 🎥 Virtual Attendance
+**Join via Zoom:** [Click here to join the meeting](https://us06web.zoom.us/j/88663359917?pwd=y36gIoxwlIVPzHHSbim3UR4fIZ6xeu.1)
+
 #### 📅 Event Essentials
 
 - **Date & Time:** Wednesday, November 13, 2024, 6:00 PM - 8:30 PM
