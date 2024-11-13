@@ -96,10 +96,10 @@ Join Colin in this collaborative session to shape the future of our community! T
 
 This workshop is your opportunity to directly influence our community's direction and ensure our 2025 schedule aligns with your learning goals and interests.
 
-##### Wrap-Up & Transition (7:55 - 8:00 PM)
+##### Wrap-Up & Transition (7:55 - 8:30 PM)
 Quick announcements and directions to the after-party
 
-##### 🍻 After-Party at The Tavern (8:00 - 8:30 PM+)
+##### 🍻 After-Party at The Tavern (8:30 PM onwards)
 Continue the conversation in a relaxed atmosphere:
 - Network with speakers and attendees
 - Special drinks menu available
