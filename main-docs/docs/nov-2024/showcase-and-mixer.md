@@ -46,11 +46,25 @@ Join us for an exciting demonstration of streamlined AI deployment! Ricky will s
 
 This presentation is particularly exciting as it demonstrates how to make advanced AI implementations more accessible and manageable, bridging the gap between complex AI systems and practical deployment. Ricky's work showcases how to create an AI frontend service that seamlessly connects with LangChain through pipelines, offering flexibility in both local GPU utilization and hosted inference options.
 
-###### 🤖 Claude Computer Use for LangChain (7:05 - 7:30 PM)
-- Exploring Claude's capabilities in LangChain
-- Best practices and optimization techniques
-- Implementation strategies
-- Open discussion and Q&A
+###### 🤖 Integrating Claude with Your Local Machine (7:05 - 7:30 PM)
+**Presenter: Cameron**
+
+Discover how to harness the power of Claude AI on your local machine! Cameron will demonstrate innovative approaches to integrating AI capabilities with your local development environment.
+
+**Key Features:**
+- Local machine integration with Claude's AI capabilities
+- Direct interaction between your system and AI processes
+- Streamlined workflow automation
+- Enhanced development productivity
+
+**Technical Insights:**
+- Setting up Claude for local development
+- Best practices for AI-local machine integration
+- Performance optimization techniques
+- Security considerations and best practices
+- Real-world implementation examples
+
+This session will show you how to leverage Claude's advanced AI capabilities while maintaining the flexibility and control of your local development environment.
 
 ###### 🎯 2025 Topic Planning Workshop (7:30 - 7:55 PM)
 Help shape our community's future:
