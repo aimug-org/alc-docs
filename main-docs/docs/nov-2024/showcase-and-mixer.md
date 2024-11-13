@@ -25,10 +25,11 @@ Stay informed with the latest from our vibrant community:
 - Upcoming projects and initiatives
 - Community achievements and milestones
 
-##### Featured Presentations & Workshops (6:40 - 8:00 PM)
+#### Featured Presentations & Workshops
 
-###### 💡 Automating OpenLangGraph: From Complex Pipeline to Simple BAT File (6:40 - 7:05 PM)
+### 🚀 Automating AI Deployment with Openweb-ui
 **Presenter: Ricky Pirrucio**
+**Time: 6:40 - 7:05 PM**
 
 Join us for an exciting demonstration of streamlined AI deployment! Ricky will showcase his innovative work in simplifying complex AI implementations:
 
@@ -46,8 +47,9 @@ Join us for an exciting demonstration of streamlined AI deployment! Ricky will s
 
 This presentation is particularly exciting as it demonstrates how to make advanced AI implementations more accessible and manageable, bridging the gap between complex AI systems and practical deployment. Ricky's work showcases how to create an AI frontend service that seamlessly connects with LangChain through pipelines, offering flexibility in both local GPU utilization and hosted inference options.
 
-###### 🤖 Integrating Claude with Your Local Machine (7:05 - 7:30 PM)
+### 🤖 Revolutionizing Local Development with Claude AI
 **Presenter: Cameron**
+**Time: 7:05 - 7:30 PM**
 
 Discover how to harness the power of Claude AI on your local machine! Cameron will demonstrate innovative approaches to integrating AI capabilities with your local development environment.
 
@@ -66,12 +68,33 @@ Discover how to harness the power of Claude AI on your local machine! Cameron wi
 
 This session will show you how to leverage Claude's advanced AI capabilities while maintaining the flexibility and control of your local development environment.
 
-###### 🎯 2025 Topic Planning Workshop (7:30 - 7:55 PM)
-Help shape our community's future:
-- Collaborative brainstorming session
-- Identifying key areas of interest
-- Planning upcoming presentations
-- Community feedback and suggestions
+### 🎯 Shaping AIMUG's 2025 Vision: Interactive Planning Workshop
+**Facilitator: Colin**
+**Time: 7:30 - 7:55 PM**
+
+Join Colin in this collaborative session to shape the future of our community! This interactive workshop will help define our technical direction and learning journey for 2025.
+
+**Workshop Focus:**
+- Community-driven topic selection
+- Emerging technology exploration
+- Vendor partnership opportunities
+- Skill development pathways
+
+**Key Activities:**
+- Brainstorming future presentation topics
+- Identifying key technology trends to explore
+- Mapping out monthly themes
+- Planning hands-on workshop series
+- Discussing potential industry partnerships
+
+**Areas of Exploration:**
+- Advanced LangChain implementations
+- Emerging AI frameworks and tools
+- Integration patterns and best practices
+- Industry-specific use cases
+- Community project initiatives
+
+This workshop is your opportunity to directly influence our community's direction and ensure our 2025 schedule aligns with your learning goals and interests.
 
 ##### Wrap-Up & Transition (7:55 - 8:00 PM)
 Quick announcements and directions to the after-party
