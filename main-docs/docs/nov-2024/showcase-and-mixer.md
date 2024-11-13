@@ -2,7 +2,7 @@
 
 #### 🌟 Join Us for an Evening of AI Innovation!
 
-Get ready for an exciting evening where innovation meets community! The Austin LangChain AI Middleware Users Group (AIMUG) invites you to our November Monthly Mixer and Showcase, where we'll explore the latest developments in AI and the LangChain ecosystem. Whether you're a seasoned AI practitioner or just curious about the technology, this event offers something for everyone.
+Get ready for an exciting evening where innovation meets community! The Austin LangChain AI Middleware Users Group (AIMUG) invites you to our November Monthly Mixer and Showcase, where we'll explore groundbreaking developments in AI automation and the LangChain ecosystem. Whether you're a seasoned AI practitioner or just curious about the technology, this event offers something for everyone.
 
 #### 📅 Event Essentials
 
@@ -27,12 +27,24 @@ Stay informed with the latest from our vibrant community:
 
 ##### Featured Presentations & Workshops (6:40 - 8:00 PM)
 
-###### 💡 OpenWebUI to LangGraph Pipelines (6:40 - 7:05 PM)
-**Presenter: Ricky**
-- Deep dive into integrating OpenWebUI with LangGraph
-- Practical implementation strategies
-- Real-world use cases and examples
-- Interactive Q&A session
+###### 💡 Automating OpenLangGraph: From Complex Pipeline to Simple BAT File (6:40 - 7:05 PM)
+**Presenter: Ricky Pirrucio**
+
+Join us for an exciting demonstration of streamlined AI deployment! Ricky will showcase his innovative work in simplifying complex AI implementations:
+
+**Key Highlights:**
+- Automated deployment of Openweb-ui through a simple BAT file
+- Integration of AI frontend services with LangGraph pipelines
+- Flexible deployment options supporting both local GPU and hosted inference
+- Real-time demonstration of the automation process
+
+**Technical Deep-Dive:**
+- Architecture overview of the AI frontend service
+- Pipeline configuration and optimization techniques
+- Integration patterns with LangChain
+- Performance considerations and best practices
+
+This presentation is particularly exciting as it demonstrates how to make advanced AI implementations more accessible and manageable, bridging the gap between complex AI systems and practical deployment. Ricky's work showcases how to create an AI frontend service that seamlessly connects with LangChain through pipelines, offering flexibility in both local GPU utilization and hosted inference options.
 
 ###### 🤖 Claude Computer Use for LangChain (7:05 - 7:30 PM)
 - Exploring Claude's capabilities in LangChain
@@ -76,7 +88,8 @@ The venue is easily accessible:
 
 This monthly gathering is more than just an event - it's where our community comes together to:
 - Learn from real-world AI implementations
-- Share knowledge and experiences
+- See practical demonstrations of AI automation
+- Understand how to simplify complex AI deployments
 - Network with industry peers
 - Stay current with AI trends
 - Contribute to our growing community
@@ -85,9 +98,10 @@ This monthly gathering is more than just an event - it's where our community com
 
 - AI developers and engineers
 - LangChain enthusiasts
+- DevOps professionals interested in AI automation
 - Tech professionals
 - AI/ML students
-- Anyone interested in AI and automation
+- Anyone interested in practical AI implementation
 
 Join us for an evening of learning, sharing, and connecting with fellow AI enthusiasts. From technical deep-dives to casual networking, this event offers the perfect blend of professional development and community building.
 
