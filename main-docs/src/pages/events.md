@@ -4,6 +4,9 @@ Welcome to the Austin LangChain Events page!
 
 *Last updated: October 24, 2024*
 
+## Tonight's Event - Join via Zoom!
+**🎥 [Click here to join tonight's meeting](https://us06web.zoom.us/j/88663359917?pwd=y36gIoxwlIVPzHHSbim3UR4fIZ6xeu.1)**
+
 ## Upcoming Events
 
 ### Austin LangChain AIMUG November Meeting
