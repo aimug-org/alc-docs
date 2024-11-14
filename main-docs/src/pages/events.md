@@ -14,6 +14,7 @@ Welcome to the Austin LangChain Events page!
 - **Location**: ACC - RGC 3000, Austin, TX
 - **Description**: Join Us for the November Monthly Mixer and Showcase! An evening of innovation, inspiration, and connections. Don't miss out on the latest in AI and LangChain Ecosystem technology.
 - **RSVP**: [Meetup Event Page](https://www.meetup.com/austin-langchain-ai-group/events/304169365/)
+- **2025 Planning**: Help shape our community's future by submitting your ideas through our [planning form](https://forms.gle/ChC4WLnBVRiSSTBb8)
 
 ### Austin LangChain November Hacky Hour @ Kinda Tropical
 - **Date**: Wednesday, November 20, 2024, 6:00 PM CST
