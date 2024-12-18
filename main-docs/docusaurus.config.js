@@ -79,8 +79,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Langchain Introduction',
-                to: '/docs/langchain-introduction',
+                label: 'Getting Started',
+                to: '/docs/getting-started',
               },
             ],
           },
