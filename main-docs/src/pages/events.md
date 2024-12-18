@@ -4,19 +4,16 @@ Welcome to the Austin LangChain Events page!
 
 *Last updated: December 19, 2024*
 
-## Tonight's Event - Join via Google Meet!
-**🎥 [Click here to join tonight's meeting](https://meet.google.com/dkm-xwbm-hhs)**
-
 ## Upcoming Events
-No upcoming events scheduled at this time. Check back soon for our 2025 events!
-
-
-## Past Events
 
 ### Austin LangChain AIMUG December Showcase and Mixer
 - **Date**: Thursday, December 19, 2024, 6:00 PM CST
 - **Location**: ACC - RGC 3000, Austin, TX
 - **Description**: Join Us for the December Monthly Mixer and Showcase! Celebrate the end of the year with innovation, insights, and connections! Discover the latest in AI and LangChain technology and enjoy a festive atmosphere.
+- **RSVP**: [Meetup Event Page](https://www.meetup.com/austin-langchain-ai-group/events/304169482/)
+- **Join Meeting**: [Google Meet Link](https://meet.google.com/dkm-xwbm-hhs)
+
+## Past Events
 
 ### Austin LangChain AIMUG November Meeting
 - **Date**: Wednesday, November 13, 2024, 6:00 PM CST
