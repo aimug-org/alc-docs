@@ -27,3 +27,5 @@
 
 ### Fixes Made
 - Fixed broken link in getting-started.md: Changed `/docs/category/tutorials` to `/docs` to resolve build error
+- Updated docs link again: Changed `/docs` to `/` to try resolving Cloudflare build error
+- Simplified learning path: Removed problematic docs section link and streamlined the steps to focus on LangChain Introduction

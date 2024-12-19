@@ -56,9 +56,8 @@ Welcome to Austin LangChain! We're excited to have you join our community of AI 
 Ready to dive into LangChain development? Here's your learning path:
 
 1. [LangChain Introduction](./langchain-introduction) - Start here for the fundamentals
-2. Check our [Docs section](/docs) for more tutorials
-3. Join our Discord for project discussions and support
-4. Attend office hours for personalized guidance, or to show off a project
+2. Join our Discord for project discussions and support
+3. Attend office hours for personalized guidance, or to show off a project
 
 ## Next Steps
 
