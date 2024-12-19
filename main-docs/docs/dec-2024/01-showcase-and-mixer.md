@@ -38,7 +38,7 @@ Two exciting presentations showcasing innovative applications of AI and modern d
 **Time:** 6:40 - 7:25 PM
 **Presenter:** Karim Lalani
 
-Join Karim for a hands-on exploration of edge computing capabilities. Learn how to build and deploy efficient AI applications at the edge through practical examples. Lab materials available in our [documentation](/docs/dec-2024/gradio-edge-computing-lab) and [GitHub repository](https://github.com/aimug-org/austin_langchain/tree/main/labs/LangChain_111).
+Join Karim for a hands-on exploration of edge computing capabilities. Learn how to build and deploy efficient AI applications at the edge through practical examples. Lab materials available in our [documentation](/docs/dec-2024/02-gradio-edge-computing-lab) and [GitHub repository](https://github.com/aimug-org/austin_langchain/tree/main/labs/LangChain_111).
 
 **Key Topics:**
 • Building interactive web interfaces with Gradio
