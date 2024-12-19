@@ -1,6 +1,7 @@
 # Edge Computing with Gradio and Cloudflare Lab
+**Presented by Karim Lalani**
 
-Welcome to our hands-on lab session on Edge Computing using Gradio and Cloudflare! This lab will guide you through building and deploying efficient AI applications at the edge.
+Welcome to our hands-on lab session on Edge Computing using Gradio and Cloudflare! Join Karim Lalani as he guides you through building and deploying efficient AI applications at the edge.
 
 ## Lab Materials
 

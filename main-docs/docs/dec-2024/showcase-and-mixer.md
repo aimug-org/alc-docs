@@ -30,17 +30,20 @@ Get ready for insightful showcases, engaging panels, and a festive gathering tha
 
 ### 🚀 LAB - Edge Computing using Gradio and Cloudflare
 **Time: 6:40 - 7:25 PM**
+**Presenter: Karim Lalani**
 
-An in-depth exploration of edge computing capabilities using Gradio and Cloudflare, demonstrating how to build and deploy efficient AI applications at the edge. Lab materials are available in our [documentation](/docs/dec-2024/gradio-edge-computing-lab) and [GitHub repository](https://github.com/aimug-org/austin_langchain/tree/main/labs/LangChain_111).
+Join Karim Lalani for an in-depth exploration of edge computing capabilities using Gradio and Cloudflare, demonstrating how to build and deploy efficient AI applications at the edge. Lab materials are available in our [documentation](/docs/dec-2024/gradio-edge-computing-lab) and [GitHub repository](https://github.com/aimug-org/austin_langchain/tree/main/labs/LangChain_111).
 
 ### 💻 Building a Full-Stack App in Five Days: Lessons Learned and Best Practices Pipelines
 **Time: 7:30 - 7:55 PM**
 
-A comprehensive look at rapid application development, covering:
-- Development strategies
-- Pipeline optimization
-- Best practices for quick iteration
-- Real-world challenges and solutions
+Join Ricky Pirruccio for an in-depth look at building a marina management system in just five days. Learn about rapid application development using Next.js, Supabase, and Cloudflare Workers. Full presentation details available in our [documentation](/docs/dec-2024/full-stack-app-five-days).
+
+Key topics include:
+- Modern tech stack implementation
+- Real-time features and email notifications
+- Development strategies and best practices
+- Live demonstration of the application
 
 ##### Wrap-Up and Transition (7:55 - 8:00 PM)
 Brief closing remarks and transition to the after-party
