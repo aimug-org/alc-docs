@@ -23,3 +23,6 @@
 - Events page is current with December 19th meeting information
 - New Getting Started page provides clear onboarding path for new members
 - All navigation properly points to new Getting Started page
+
+### Fixes Made
+- Fixed broken link in getting-started.md: Changed `/docs/category/tutorials` to `/docs` to resolve build error
