@@ -64,6 +64,12 @@ function HomepageFeatures() {
       description: 'Create innovative applications and contribute to open-source projects using LangChain ',
       link: 'https://github.com/aimug-org',
     },
+    {
+      title: 'Volunteer',
+      icon: 'fas fa-hands-helping',
+      description: 'Join our team of volunteers and help make our events successful while gaining valuable experience.',
+      link: '/volunteer',
+    },
   ];
 
   return (

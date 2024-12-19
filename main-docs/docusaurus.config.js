@@ -65,6 +65,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {to: '/events', label: 'Events', position: 'left'},
+          {to: '/volunteer', label: 'Volunteer', position: 'left'},
           {
             href: 'https://github.com/aimug-org/austin_langchain',
             label: 'GitHub',
@@ -102,6 +103,10 @@ const config = {
               {
                 label: 'Twitter',
                 href: 'https://twitter.com/AustinLangChain',
+              },
+              {
+                label: 'Volunteer',
+                to: '/volunteer',
               },
             ],
           },
