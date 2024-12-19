@@ -23,9 +23,13 @@
 - Events page is current with December 19th meeting information
 - New Getting Started page provides clear onboarding path for new members
 - All navigation properly points to new Getting Started page
-- Cloudflare is still getting an error on depoy 
+- Build successful after fixing sidebar configuration issue
 
 ### Fixes Made
 - Fixed broken link in getting-started.md: Changed `/docs/category/tutorials` to `/docs` to resolve build error
 - Updated docs link again: Changed `/docs` to `/` to try resolving Cloudflare build error
 - Simplified learning path: Removed problematic docs section link and streamlined the steps to focus on LangChain Introduction
+- Fixed sidebar configuration issue:
+  - Removed duplicate file 'main-docs/docs/dec-2024/01-showcase-and-mixer.md'
+  - Kept 'showcase-and-mixer.md' as the canonical version
+  - Successfully resolved build error related to invalid sidebar document ID
