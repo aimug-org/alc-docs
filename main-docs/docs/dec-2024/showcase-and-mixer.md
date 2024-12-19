@@ -31,7 +31,7 @@ Get ready for insightful showcases, engaging panels, and a festive gathering tha
 ### 🚀 LAB - Edge Computing using Gradio and Cloudflare
 **Time: 6:40 - 7:25 PM**
 
-An in-depth exploration of edge computing capabilities using Gradio and Cloudflare, demonstrating how to build and deploy efficient AI applications at the edge.
+An in-depth exploration of edge computing capabilities using Gradio and Cloudflare, demonstrating how to build and deploy efficient AI applications at the edge. Lab materials are available in our [documentation](/docs/dec-2024/gradio-edge-computing-lab) and [GitHub repository](https://github.com/aimug-org/austin_langchain/tree/main/labs/LangChain_111).
 
 ### 💻 Building a Full-Stack App in Five Days: Lessons Learned and Best Practices Pipelines
 **Time: 7:30 - 7:55 PM**
