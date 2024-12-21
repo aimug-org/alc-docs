@@ -19,11 +19,18 @@
    - Updated "Learn" feature link
    - Updated footer documentation link
 
+4. Enhanced December showcase documentation:
+   - Added event recording video embed
+   - Integrated YouTube video (sfsE6x3rP_4) into showcase-and-mixer.md
+   - Moved recording section to top of page for immediate visibility
+   - Reorganized content flow: Recording > Event Details > Schedule
+
 ### Current State
 - Events page is current with December 19th meeting information
 - New Getting Started page provides clear onboarding path for new members
 - All navigation properly points to new Getting Started page
 - Build successful after fixing sidebar configuration issue
+- December showcase page now includes event recording at the top
 
 ### Fixes Made
 - Fixed broken link in getting-started.md: Changed `/docs/category/tutorials` to `/docs` to resolve build error

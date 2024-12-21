@@ -1,5 +1,13 @@
 # December Monthly Mixer and Showcase 2024
 
+## 📹 Event Recording
+
+Missed the event or want to revisit the presentations? Watch the full recording of our December showcase:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sfsE6x3rP_4" title="December 2024 Austin LangChain Showcase Recording" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+The recording includes both technical presentations and community updates, allowing you to catch up on all the exciting developments shared during the event.
+
 ## 🎄 Year-End Celebration & Innovation
 
 Join us for our final gathering of 2024 - a special evening blending technical innovation with festive celebration! Connect with fellow AI enthusiasts, learn from engaging presentations, and celebrate another year of community achievements.
