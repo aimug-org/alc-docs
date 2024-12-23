@@ -37,6 +37,16 @@
    - Added monthly archives for easy navigation
    - Listed LangChain series learning path
 
+7. Enhanced Gradio Edge Computing lab:
+   - Added lab recording video (47KiKEgsrKI) at top of page
+   - Maintained clear structure with materials and prerequisites below
+   - Improved learning experience with video walkthrough
+
+8. Enhanced Full-Stack App presentation:
+   - Added presentation recording video (a4VnImAMhLQ) at top of page
+   - Maintained detailed project documentation below
+   - Improved accessibility to both video content and written materials
+
 ### Current State
 - Events page is current with December 19th meeting information
 - New Getting Started page provides clear onboarding path for new members
@@ -45,6 +55,8 @@
 - December showcase page now includes event recording at the top
 - Homepage Learn feature and header button direct to documentation landing page
 - Documentation organized with clear structure and easy access to recordings
+- Gradio lab enhanced with video walkthrough
+- Full-stack app presentation enhanced with video recording
 
 ### Fixes Made
 - Fixed broken link in getting-started.md: Changed `/docs/category/tutorials` to `/docs` to resolve build error
