@@ -1,5 +1,29 @@
 # Search-Enhanced Chat Interface
 
+## Presenter
+**Colin McNamara** is Engineer 🔧 | Entrepreneur 💼 | Sustainability Champion 🌱 | Supply Chain Strategist 🔗 | Private Label Pioneer 🏷️ | Build a Better Tomorrow 🌍
+Currently at Always Cool Brands in Austin, TX.
+
+> "Our focus is really low-stress learning and sharing. We're not trying to be experts. We're all learning. This is a fast-moving project. We are here to connect with other early adopters of AI middleware, and specifically, focused around the LangChain project."
+
+Connect with Colin:
+- GitHub: [@colinmcnamara](https://github.com/colinmcnamara)
+- Twitter: [@colinmcnamara](https://twitter.com/colinmcnamara)
+- Website: [https://colinmcnamara.com](https://colinmcnamara.com)
+
+## Workshop Details
+
+### What to Expect
+During this session, you'll discover how to harness the power of ChatGPT models via API access and customize a web interface. Rest assured, your data going through this API will not be used for training.
+
+### Requirements
+- A working computer.
+- A free Google Colab account (Google login) for Jupyter notebooks
+- A working paid OpenAI API key - https://platform.openai.com/account/api-keys
+- A can-do attitude and an eagerness to explore this exciting new form of software
+- If you prefer to attend the lecture and soak in the concepts without participating in the lab, that's perfectly fine too!
+- This event is part of our multi-part lecture and lab series designed to equip you with the skills to set up your own AI microservices centered around LangChain.
+
 ## Lab Overview
 Learn how to build a chat interface with integrated search capabilities, combining conversation and document retrieval functionalities using LangChain. This lab demonstrates how to create an AI assistant that can search the internet in real-time to provide up-to-date information while maintaining conversation context.
 
@@ -23,6 +47,7 @@ Learn how to build a chat interface with integrated search capabilities, combini
   - Message history reset functionality
 
 ## Technical Implementation
+
 ### Agent Configuration
 ```python
 llm = ChatOpenAI(

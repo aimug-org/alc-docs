@@ -1,441 +1,252 @@
-import subprocess
-import json
-import requests
-import os
 import yaml
-import re
-from collections import defaultdict
+import json
 from datetime import datetime
+import re
+import os
 from pathlib import Path
-from dotenv import load_dotenv
 
-# Load environment variables from current directory
-env_path = Path('.env')
-if env_path.exists():
-    load_dotenv(env_path)
-    print(f"Loaded .env file from: {env_path.absolute()}")
-else:
-    print(f"No .env file found at: {env_path.absolute()}")
+def load_authors():
+    """Load author information from authors.yml"""
+    with open('main-docs/blog/authors.yml', 'r') as file:
+        return yaml.safe_load(file)
 
-# Debug: Print environment variables (without exposing token value)
-print("Environment variables loaded:")
-print("GITHUB_TOKEN present:", "GITHUB_TOKEN" in os.environ)
-if "GITHUB_TOKEN" not in os.environ:
-    print("Warning: GITHUB_TOKEN not found in environment variables")
+def load_events():
+    """Load event information from meetup_events_detailed.txt"""
+    with open('meetup_events_detailed.txt', 'r') as file:
+        return json.load(file)
 
-# Map of email addresses to GitHub usernames (for non-noreply addresses)
-EMAIL_TO_GITHUB = {
-    'colin@2cups.com': 'colinmcnamara',
-    'rickp1795@gmail.com': 'RPirruccio',
-    'jimmy00784@gmail.com': 'lalanikarim',
-    'scott@askinosie.com': 'saskinosie',
-    'saurabhlal193@gmail.com': 'saurabhlalsaxena'
-}
-
-def get_git_log():
-    try:
-        # Set environment variable to disable git pager
-        env = os.environ.copy()
-        env["GIT_PAGER"] = ""
+def extract_lab_info(event):
+    """Extract lab information from event description"""
+    description = event.get('description', '')
+    lab_info = []
+    
+    # Clean up HTML tags and extract key lab information
+    clean_description = re.sub(r'<[^>]+>', '', description)
+    
+    # Extract What to Expect section
+    what_to_expect = re.search(r'What to Expect(.*?)(?=###|$)', clean_description, re.DOTALL)
+    if what_to_expect:
+        content = what_to_expect.group(1).strip()
+        lab_info.append("### What to Expect")
+        # Split content into paragraphs
+        paragraphs = content.split('To actively participate')
+        if len(paragraphs) > 0:
+            lab_info.append(paragraphs[0].strip())
         
-        # Get git log with specific format and no pagination
-        cmd = ["git", "log", "--pretty=format:%h|%ae|%ad|%s", "--date=short"]
-        result = subprocess.run(
-            cmd,
-            capture_output=True,
-            text=True,
-            env=env,
-            cwd="/Users/colinmcnamara/Code/austin_langchain"
-        )
-        
-        if result.stdout:
-            return [line for line in result.stdout.strip().split('\n') if line]
-        return []
-    except subprocess.CalledProcessError as e:
-        print(f"Error getting git log: {e}")
-        return []
-
-def parse_git_log(log_entries):
-    # Dictionary to store commits by month
-    monthly_commits = defaultdict(list)
-    
-    for entry in log_entries:
-        if not entry:
-            continue
-        
-        try:
-            hash_id, email, date, subject = entry.split('|')
-            # Convert date string to datetime
-            commit_date = datetime.strptime(date, '%Y-%m-%d')
-            month_key = f"{commit_date.strftime('%B')} {commit_date.year}"
-            
-            monthly_commits[month_key].append({
-                'hash': hash_id,
-                'email': email,
-                'date': date,
-                'subject': subject
-            })
-        except ValueError as e:
-            print(f"Error parsing log entry: {e}")
-            continue
-    
-    return monthly_commits
-
-def get_github_username(email):
-    # Extract username from GitHub noreply email
-    if 'users.noreply.github.com' in email:
-        return email.split('@')[0]
-    return None
-
-def extract_social_links(bio):
-    """Extract social media links from GitHub bio"""
-    social_links = {}
-    
-    # Common patterns for social links
-    patterns = {
-        'linkedin': r'linkedin\.com/in/([a-zA-Z0-9-]+)',
-        'twitter': r'twitter\.com/([a-zA-Z0-9_]+)',
-        'x': r'x\.com/([a-zA-Z0-9_]+)',
-        'website': r'https?://(?:www\.)?([a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:/\S*)?)',
-        'medium': r'medium\.com/@?([a-zA-Z0-9_.-]+)',
-    }
-    
-    if bio:
-        for platform, pattern in patterns.items():
-            match = re.search(pattern, bio, re.IGNORECASE)
-            if match:
-                if platform == 'website':
-                    social_links[platform] = f"https://{match.group(1)}"
+        # Extract requirements
+        if len(paragraphs) > 1:
+            lab_info.append("\n### Requirements")
+            requirements = re.findall(r'\* ([^*\n]+)', paragraphs[1])
+            for req in requirements:
+                if "perfectly fine" in req:
+                    # Split this into two separate points
+                    lab_info.append(f"- If you prefer to attend the lecture and soak in the concepts without participating in the lab, that's perfectly fine too!")
+                    lab_info.append("- This event is part of our multi-part lecture and lab series designed to equip you with the skills to set up your own AI microservices centered around LangChain.")
                 else:
-                    social_links[platform] = match.group(1)
+                    lab_info.append(f"- {req.strip()}")
     
-    return social_links
+    return lab_info
 
-def get_github_profile(username):
-    if not username:
+def find_markdown_files():
+    """Find all markdown files in the docs directory and sort by date"""
+    docs_dir = Path('main-docs/docs')
+    markdown_files = []
+    
+    for path in docs_dir.rglob('*.md'):
+        # Skip index files
+        if path.name == 'index.md':
+            continue
+            
+        # Extract date from path (assuming format: docs/MMM-YYYY/file.md)
+        try:
+            date_str = None
+            parts = path.parts
+            for part in parts:
+                if re.match(r'\d{3,4}-\d{4}', part):  # Matches MMM-YYYY or MMMM-YYYY
+                    date_str = part
+                    break
+            
+            if date_str:
+                # Convert month name to number
+                month_str, year_str = date_str.split('-')
+                month = int(month_str)
+                year = int(year_str)
+                date = datetime(year, month, 1)
+                
+                markdown_files.append((date, path))
+        except (ValueError, IndexError):
+            print(f"Warning: Could not extract date from {path}")
+            continue
+    
+    # Sort by date
+    markdown_files.sort(key=lambda x: x[0])
+    return markdown_files
+
+def match_event_to_file(file_path, events):
+    """Match a markdown file to its corresponding event"""
+    # Extract the month and year from the file path
+    path_str = str(file_path)
+    date_match = re.search(r'/(\d{3,4})-(\d{4})/', path_str)
+    if not date_match:
         return None
         
-    url = f"https://api.github.com/users/{username}"
-    headers = {
-        'Accept': 'application/vnd.github.v3+json'
-    }
-    github_token = os.getenv('GITHUB_TOKEN')
-    if github_token:
-        # Debug token format (without exposing the actual token)
-        print(f"Token format check: starts with 'ghp_': {github_token.startswith('ghp_')}")
-        print(f"Token length: {len(github_token)}")
-        
-        # Always use 'token' format for GitHub API
-        headers['Authorization'] = f"token {github_token}"
-        
-        # Debug output
-        print(f"\nMaking request for {username}:")
-        print(f"URL: {url}")
-        print("Headers:", {k: '***' if k == 'Authorization' else v for k, v in headers.items()})
-        
-    try:
-        response = requests.get(url, headers=headers)
-        if response.status_code == 200:
-            profile = response.json()
-            
-            # Extract additional social links from bio
-            social_links = extract_social_links(profile.get('bio', ''))
-            
-            # Add social links to profile
-            profile['social_links'] = social_links
-            
-            return profile
-        else:
-            print(f"Error fetching profile for {username}: {response.status_code}")
-            if response.status_code == 401:
-                print("Response headers:", dict(response.headers))
-                print("Response body:", response.text)
-            return None
-    except requests.RequestException as e:
-        print(f"Request error: {e}")
-        return None
-
-def get_github_username_from_email(email):
-    # First check our manual mapping
-    if email in EMAIL_TO_GITHUB:
-        return EMAIL_TO_GITHUB[email]
+    month = int(date_match.group(1))
+    year = int(date_match.group(2))
     
-    # Then check if it's a GitHub noreply address
-    if 'users.noreply.github.com' in email:
-        return email.split('@')[0]
+    # Get the file name without extension
+    file_name = file_path.stem.lower()
+    
+    # Look for matching events
+    matching_events = []
+    for event in events:
+        event_date = datetime.strptime(event['date'], '%Y-%m-%d')
+        if event_date.year == year and event_date.month == month:
+            # Check if event title or description contains keywords from file name
+            keywords = file_name.replace('-', ' ').split()
+            event_text = (event.get('name', '') + ' ' + event.get('description', '')).lower()
+            if any(keyword in event_text for keyword in keywords):
+                matching_events.append(event)
+    
+    # Return the most relevant event (for now, just the first match)
+    return matching_events[0] if matching_events else None
+
+def match_author_to_event(event, authors):
+    """Match event presenter to author information"""
+    description = event.get('description', '').lower()
+    name = event.get('name', '').lower()
+    
+    # Look for presenter patterns in description
+    presenter_patterns = [
+        r'presented by[:\s]+([^\n]+)',
+        r'presenter[:\s]+([^\n]+)',
+        r'with ([^,\n]+)',
+        r'join ([^,\n]+) for',
+        r'by ([^,\n]+)'
+    ]
+    
+    # Try to find presenter name in description
+    for pattern in presenter_patterns:
+        matches = re.finditer(pattern, description, re.IGNORECASE)
+        for match in matches:
+            presenter_text = match.group(1).lower()
+            # Check each author
+            for author_id, author_info in authors.items():
+                author_name = author_info['name'].lower()
+                if author_name in presenter_text:
+                    return author_id, author_info
+    
+    # If no match found in description patterns, check if any author name appears in description or title
+    for author_id, author_info in authors.items():
+        author_name = author_info['name'].lower()
+        if author_name in description or author_name in name:
+            return author_id, author_info
+    
+    # Default to Colin McNamara for older content
+    for author_id, author_info in authors.items():
+        if author_info['name'].lower() == 'colin mcnamara':
+            return author_id, author_info
     
     return None
 
-def generate_author_entry(email, profile, commits):
-    """Generate an author entry in the Docusaurus authors.yml format"""
-    username = get_github_username_from_email(email)
-    if not username or not profile:
-        return None
-        
-    # Extract relevant information from profile
-    name = profile.get('name', username)
-    bio = profile.get('bio', '')
+def update_markdown_with_presenter(markdown_path, author_info, lab_info):
+    """Update markdown file with presenter information and lab details"""
+    with open(markdown_path, 'r') as file:
+        content = file.read()
     
-    # Generate description based on commits
-    lab_contributions = []
-    for commit in commits:
-        if any(keyword in commit['subject'].lower() for keyword in ['lab', 'tutorial', 'notebook']):
-            lab_contributions.append(commit['subject'])
+    # Extract the technical content (everything after first section)
+    tech_content = ""
+    first_section = content.split('##')[1] if '##' in content else ""
+    if first_section:
+        tech_content = '##'.join(content.split('##')[2:])
     
-    # Create a more specific description based on actual contributions
-    description = bio + "\n\n" if bio else ""
-    description += "Key Contributions to Austin LangChain AIMUG:\n\n"
+    # Create presenter section
+    presenter_section = f"""## Presenter
+**{author_info['name']}** is {author_info['description'].split('\n\n')[0]}
 
-    # Analyze contributions to create specific categories
-    contributions = {
-        'langchain': [],
-        'rag': [],
-        'langgraph': [],
-        'ollama': [],
-        'streamlit': [],
-        'colab': [],
-        'infrastructure': []
-    }
+> "Our focus is really low-stress learning and sharing. We're not trying to be experts. We're all learning. This is a fast-moving project. We are here to connect with other early adopters of AI middleware, and specifically, focused around the LangChain project."
 
-    for contrib in set(lab_contributions):
-        subject = contrib.lower()
-        if 'rag' in subject:
-            contributions['rag'].append(contrib)
-        elif 'langgraph' in subject:
-            contributions['langgraph'].append(contrib)
-        elif 'ollama' in subject:
-            contributions['ollama'].append(contrib)
-        elif 'streamlit' in subject:
-            contributions['streamlit'].append(contrib)
-        elif 'colab' in subject:
-            contributions['colab'].append(contrib)
-        elif any(word in subject for word in ['lab', 'notebook', 'tutorial']):
-            contributions['langchain'].append(contrib)
-        else:
-            contributions['infrastructure'].append(contrib)
-
-    # Create personalized descriptions based on actual contributions
-    contributor_specialties = {
-        'colinmcnamara': {
-            'intro': "Core maintainer and founder of Austin LangChain AIMUG. Established the project's foundation and learning path structure from LangChain 101 through advanced implementations.",
-            'highlights': [
-                "Created the initial LangServe and Streamlit integration labs",
-                "Developed the LangGraph introduction and customer support tutorials",
-                "Implemented Neo4j graph database integration examples",
-                "Pioneered the Google Colab integration strategy for accessible learning"
-            ]
-        },
-        'RPirruccio': {
-            'intro': "Enterprise architecture specialist focusing on production-ready implementations and Docker containerization.",
-            'highlights': [
-                "Developed the LangGraph Manufacturing BOM Analyzer",
-                "Created the RAG implementation with Google Drive integration",
-                "Built the AI Data Scientist report writer using LangGraph",
-                "Authored comprehensive Docker deployment tutorials"
-            ]
-        },
-        'lalanikarim': {
-            'intro': "Local LLM and voice integration expert, specializing in Ollama implementations and WebRTC technologies.",
-            'highlights': [
-                "Created the WebRTC AI voice chat implementation",
-                "Developed Ollama and Bakllava integration tutorials",
-                "Built the Mistral chatbot implementation",
-                "Pioneered local LLM deployment strategies"
-            ]
-        },
-        'saskinosie': {
-            'intro': "Data science specialist focusing on practical AI applications in data analysis and automation.",
-            'highlights': [
-                "Created the Pandas DataFrame Agent tutorial series",
-                "Developed AI-powered data scientist implementations",
-                "Built practical examples for business analytics",
-                "Authored comprehensive data processing guides"
-            ]
-        },
-        'saurabhlalsaxena': {
-            'intro': "Advanced RAG architect specializing in sophisticated search and retrieval implementations.",
-            'highlights': [
-                "Created the Perplexity Clone implementation",
-                "Developed advanced RAG architectures",
-                "Built complex document processing systems",
-                "Implemented efficient search strategies"
-            ]
-        }
-    }
-
-    if username in contributor_specialties:
-        specialty = contributor_specialties[username]
-        description += specialty['intro'] + "\n\n"
-        description += "Notable Contributions:\n"
-        for highlight in specialty['highlights']:
-            description += f"• {highlight}\n"
-        description += "\n"
-
-    # Add specific contribution areas
-    if contributions['langchain']:
-        description += "LangChain Development:\n"
-        description += "• Created foundational tutorials and labs for LangChain implementation\n"
-        description += "• Developed practical examples for real-world applications\n\n"
-
-    if contributions['rag']:
-        description += "RAG Implementations:\n"
-        description += "• Built advanced retrieval-augmented generation systems\n"
-        description += "• Integrated RAG with various data sources and storage solutions\n\n"
-
-    if contributions['langgraph']:
-        description += "LangGraph Projects:\n"
-        description += "• Developed complex LangGraph applications\n"
-        description += "• Created tutorials for graph-based AI implementations\n\n"
-
-    if contributions['ollama']:
-        description += "Ollama Integration:\n"
-        description += "• Implemented local LLM solutions using Ollama\n"
-        description += "• Created guides for efficient model deployment\n\n"
-
-    if contributions['streamlit']:
-        description += "Streamlit Applications:\n"
-        description += "• Built interactive web interfaces for AI applications\n"
-        description += "• Created user-friendly demonstration platforms\n\n"
-
-    if contributions['colab']:
-        description += "Google Colab Integration:\n"
-        description += "• Enhanced accessibility through Colab integration\n"
-        description += "• Maintained cross-platform compatibility\n\n"
-    
-    # Create author entry
-    author_entry = {
-        username: {
-            'name': name,
-            'title': f"Contributor - Austin LangChain AIMUG",
-            'url': profile.get('html_url', f'https://github.com/{username}'),
-            'image_url': f'https://github.com/{username}.png',
-            'page': True,
-            'description': description.strip(),
-            'socials': {
-                'github': username
-            }
-        }
-    }
+Connect with {author_info['name'].split()[0]}:"""
     
     # Add social links
-    if profile.get('twitter_username'):
-        author_entry[username]['socials']['x'] = profile['twitter_username']
-    if profile.get('blog'):
-        author_entry[username]['socials']['website'] = profile['blog']
+    if 'socials' in author_info:
+        for platform, handle in author_info['socials'].items():
+            if platform == 'github':
+                presenter_section += f"\n- GitHub: [@{handle}](https://github.com/{handle})"
+            elif platform == 'linkedin':
+                presenter_section += f"\n- LinkedIn: [{handle}](https://www.linkedin.com/in/{handle})"
+            elif platform == 'x':
+                presenter_section += f"\n- Twitter: [@{handle}](https://twitter.com/{handle})"
+            elif platform == 'website':
+                presenter_section += f"\n- Website: [{handle}]({handle})"
     
-    # Add social links extracted from bio
-    if profile.get('social_links'):
-        for platform, value in profile['social_links'].items():
-            if platform not in author_entry[username]['socials']:
-                author_entry[username]['socials'][platform] = value
+    # Add workshop details if available
+    workshop_section = ""
+    if lab_info:
+        workshop_section = "\n\n## Workshop Details"
+        current_section = None
+        for info in lab_info:
+            if info.startswith('###'):
+                workshop_section += f"\n\n{info}"
+            elif info.startswith('-'):
+                workshop_section += f"\n{info}"
+            else:
+                workshop_section += f"\n{info}"
     
-    return author_entry
+    # Get the title
+    title = content.split('\n', 1)[0] if content else "# Untitled"
+    
+    # Combine everything
+    updated_content = f"""{title}
 
-def update_authors_file(new_authors):
-    """Update the authors.yml file with new contributors"""
-    authors_file = Path('/Users/colinmcnamara/Code/alc-docs/main-docs/blog/authors.yml')
-    
-    # Read existing authors
-    if authors_file.exists():
-        with open(authors_file) as f:
-            existing_authors = yaml.safe_load(f) or {}
-    else:
-        existing_authors = {}
-    
-    # Merge new authors with existing ones
-    updated_authors = {**existing_authors, **new_authors}
-    
-    # Write back to file
-    with open(authors_file, 'w') as f:
-        yaml.dump(updated_authors, f, sort_keys=False, allow_unicode=True)
+{presenter_section}
+{workshop_section}
 
-def analyze_labs_by_month(monthly_commits):
-    print("\nLabs Analysis by Month:")
-    print("=" * 80)
+{tech_content}"""
     
-    lab_related_commits = defaultdict(list)
+    # Clean up any multiple blank lines
+    updated_content = re.sub(r'\n{3,}', '\n\n', updated_content)
     
-    # Keywords that indicate lab-related commits
-    lab_keywords = ['lab', 'tutorial', 'notebook', 'workshop']
-    
-    for month, commits in monthly_commits.items():
-        for commit in commits:
-            subject = commit['subject'].lower()
-            if any(keyword in subject for keyword in lab_keywords):
-                lab_related_commits[month].append(commit)
-    
-    # Print analysis
-    for month in sorted(lab_related_commits.keys()):
-        commits = lab_related_commits[month]
-        if commits:
-            print(f"\n{month}:")
-            print("-" * 40)
-            
-            # Group by contributor
-            contributors = defaultdict(list)
-            for commit in commits:
-                contributors[commit['email']].append(commit)
-            
-            for email, commits in contributors.items():
-                print(f"\nContributor: {email}")
-                print(f"Number of lab-related commits: {len(commits)}")
-                print("Lab Contributions:")
-                for commit in commits:
-                    print(f"  {commit['date']} - {commit['subject']} ({commit['hash']})")
+    with open(markdown_path, 'w') as file:
+        file.write(updated_content)
 
 def main():
-    print("Analyzing Git Repository and Generating Author Profiles...")
+    # Load data
+    authors = load_authors()
+    events = load_events()
     
-    # Get git log entries
-    log_entries = get_git_log()
-    if not log_entries:
-        print("No git log entries found")
-        return
+    # Find all markdown files sorted by date
+    markdown_files = find_markdown_files()
+    
+    print(f"Found {len(markdown_files)} markdown files to process")
+    
+    # Process each file
+    for date, file_path in markdown_files:
+        print(f"\nProcessing {file_path} from {date.strftime('%B %Y')}")
         
-    # Parse log entries by month
-    monthly_commits = parse_git_log(log_entries)
-    
-    # Analyze labs by month
-    analyze_labs_by_month(monthly_commits)
-    
-    # Track unique contributors
-    unique_contributors = set()
-    for commits in monthly_commits.values():
-        for commit in commits:
-            unique_contributors.add(commit['email'])
-    
-    # Track all commits by email
-    all_commits_by_email = defaultdict(list)
-    
-    # Analyze GitHub profiles and generate author entries
-    print("\nGenerating Author Profiles:")
-    print("=" * 80)
-    
-    new_authors = {}
-    
-    for email in unique_contributors:
-        username = get_github_username_from_email(email)
-        if username:
-            profile = get_github_profile(username)
-            if profile:
-                print(f"\nGenerating profile for {username}...")
+        # Match file to event
+        event = match_event_to_file(file_path, events)
+        if event:
+            print(f"Found matching event: {event['name']}")
+            
+            # Extract lab information
+            lab_info = extract_lab_info(event)
+            
+            # Match author
+            author_match = match_author_to_event(event, authors)
+            if author_match:
+                author_id, author_info = author_match
+                # Update markdown file
+                update_markdown_with_presenter(file_path, author_info, lab_info)
+                print(f"Updated {file_path} with presenter information for {author_info['name']}")
                 
-                # Get all commits for this email
-                commits = []
-                for month_commits in monthly_commits.values():
-                    for commit in month_commits:
-                        if commit['email'] == email:
-                            commits.append(commit)
-                
-                author_entry = generate_author_entry(email, profile, commits)
-                if author_entry:
-                    new_authors.update(author_entry)
-    
-    # Update authors.yml file
-    if new_authors:
-        print("\nUpdating authors.yml file...")
-        update_authors_file(new_authors)
-        print("Authors file updated successfully!")
+                if lab_info:
+                    print("\nIncluded workshop details:")
+                    for info in lab_info:
+                        print(info)
+            else:
+                print(f"Could not find matching author for event: {event['name']}")
+        else:
+            print(f"Could not find matching event for {file_path}")
 
 if __name__ == "__main__":
     main()

@@ -1,21 +1,73 @@
-# Build outputs
-main-docs/build/
-main-docs/.docusaurus/
-
-# Dependencies
+# Node modules and build artifacts
 main-docs/node_modules/
+main-docs/.docusaurus/
+main-docs/build/
 
-# System files
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
 .DS_Store
 
-# Package files (since they're managed by npm)
-package-lock.json
+# Dependency lock files
+main-docs/package-lock.json
+main-docs/yarn.lock
 
-# Temporary files
-*.log
-*.tmp
+# Cache directories
+.cache/
+__pycache__/
 
-# Local environment files
+# Environment files
 .env
 .env.local
 .env.*.local
+
+# Log files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Generated documentation
+main-docs/docs/api/
+main-docs/docs/generated/
+
+# Test files
+**/test/
+**/tests/
+**/__tests__/
+**/*.test.*
+**/*.spec.*
+
+# Backup files
+**/*.backup
+**/*~
+
+# Large media files
+**/*.mp4
+**/*.mov
+**/*.avi
+**/*.wmv
+**/*.flv
+
+# Archive files
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z
