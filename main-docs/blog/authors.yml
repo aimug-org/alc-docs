@@ -4,41 +4,233 @@ yangshun:
   url: https://github.com/yangshun
   image_url: https://github.com/yangshun.png
   page: true
-  description: Yangshun is a Front End Engineer at Facebook, passionate about web development and open source projects.
+  description: Yangshun is a Front End Engineer at Facebook, passionate about web
+    development and open source projects.
   socials:
     x: yangshunz
     github: yangshun
-
 slorber:
   name: Sébastien Lorber
   title: Docusaurus maintainer
   url: https://sebastienlorber.com
   image_url: https://github.com/slorber.png
   page:
-    permalink: '/all-sebastien-lorber-articles'
-  description: Sébastien is the maintainer of Docusaurus, dedicated to improving documentation and developer experiences.
+    permalink: /all-sebastien-lorber-articles
+  description: Sébastien is the maintainer of Docusaurus, dedicated to improving documentation
+    and developer experiences.
   socials:
     x: sebastienlorber
     linkedin: sebastienlorber
     github: slorber
     newsletter: https://thisweekinreact.com
-
 colinmcnamara:
   name: Colin McNamara
-  title: Core Team - Austin LangChain AIMUG, Sustainable Innovation Leader
-  url: https://www.colinmcnamara.com
-  image_url: http://github.com/colinmcnamara.png
+  title: Contributor - Austin LangChain AIMUG
+  url: https://github.com/colinmcnamara
+  image_url: https://github.com/colinmcnamara.png
   page: true
-  description: |
-    While many claim to be a 10x programmer, Colin is proud to claim the title of 10% programmer.
-    He balances that with 90% Engineering and Business skills.
-    
-    As the Founder of Austin LangChain AIMUG and a Sustainable Innovation Leader,
-    Colin combines his technical expertise with a strong focus on practical business
-    applications and sustainable solutions.
+  description: 'Engineer 🔧 | Entrepreneur 💼 | Sustainability Champion 🌱 | Supply Chain
+    Strategist 🔗 | Private Label Pioneer 🏷️ | Build a Better Tomorrow 🌍
+
+
+    Contributions to Austin LangChain AIMUG:
+
+    - initializing LangGraph_introduction lab
+
+    - updated notebook to change personality of app to HaX0r speak
+
+    - colab_env + LangSmith example for labs
+
+    - adding Apache2 license to labs
+
+    - organizing labs
+
+    - adding LangChain_104 directory and populating first lab folder
+
+    - Updating devcontainers.json to make it easier for folks to run labs in a secure
+    environment
+
+    - adding sample vars.env for labs
+
+    - fixed key name issues bug found in yesterdays labs
+
+    - Updated into notebook to current packages + added logic to check for .env files
+    if not run in colab
+
+    - moving colab example to labs
+
+    - Break lab apart into steps
+
+    - Added lab 101.3 to presentation
+
+    - Update notebooks for lab with google colab links + auth code
+
+    - Merge pull request #61 from aimug-org/lab110_outlook_rag
+
+    - adding lab
+
+    - fixed error in colab button
+
+    - Updating meeting notes, moving labs around
+
+    - Demo for 101, with a link to Colab
+
+    - LC102-lab
+
+    - updatin google colab link
+
+    - adding colab button to scotts lab
+
+    - adding colab based rag labed based on 0.1 update
+
+    - Added LangServe pirate speak example running on google colab
+
+    - Updatated streamlit streaming lab in 101
+
+    - Updating LangGraph customer support notebook
+
+    - adding LangGraph into notebooks
+
+    - Uploaded Neo4j starter notebook - this is starting to help me understand things
+
+    - update google colab button
+
+    - updated colab link
+
+    - Updating transcripts + shortening intro lab
+
+    - uploading first simple lab
+
+    - Moving lc102 into labs
+
+    - update colab button url
+
+    - Merge pull request #31 from lalanikarim/auto1111-notebook-update
+
+    - remove tavily from google colab block
+
+    - changed colab link from 2 to 3
+
+    - change pip install command to %, update colab
+
+    - Pulling openai key from colab keys
+
+    - updated lab to pull transcript from github into a labs folder in the users gdrive
+
+    - labs
+
+    - Fix bug in 101 when clicking open in colab
+
+    - updating lab
+
+    - Added level 3 of the lab
+
+    - Changing google colab cell to markdown
+
+    - Update google colab link in RAG Quickstart
+
+    - moving lab folders around
+
+    - fixed open in colab link'
   socials:
-    website: https://www.colinmcnamara.com
-    linkedin: colinmcnamara
     github: colinmcnamara
     x: colinmcnamara
+    website: https://colinmcnamara.com
+RPirruccio:
+  name: Riccardo Pirruccio (Ricky)
+  title: Contributor - Austin LangChain AIMUG
+  url: https://github.com/RPirruccio
+  image_url: https://github.com/RPirruccio.png
+  page: true
+  description: 'Contributions to Austin LangChain AIMUG:
 
+    - Added missing colab links to 106 and 105
+
+    - added rag_chroma_from_google_drive app to 103 labs
+
+    - Added LangGraph_LLM_Manufacturing_BOM_Analyser directory to 104 labs with boilerplate
+    files
+
+    - refactored rag_chroma_from_google_drive lab slides
+
+    - Add a streamlit introduction notebook
+
+    - Add tutorial
+
+    - Add Colab link
+
+    - Remove standard streamlit run command since we''re running this in Colab
+
+    - updated instructions.md file for rag_chroma_from_google_drive lab to show the
+    user how to save google drive api credentials json file to authenticate
+
+    - added rag_chroma_from_google_drive lab slides
+
+    - add docker tutorial
+
+    - added langgraph_ai_data_scientist_report_writer.ipynb notebook in 107
+
+    - updated 101-4 lab showing caching an expensive llm response'
+  socials:
+    github: RPirruccio
+lalanikarim:
+  name: Karim Lalani
+  title: Contributor - Austin LangChain AIMUG
+  url: https://github.com/lalanikarim
+  image_url: https://github.com/lalanikarim.png
+  page: true
+  description: 'Contributions to Austin LangChain AIMUG:
+
+    - added colab button
+
+    - update instructions for notebook
+
+    - add colab link
+
+    - adding 101-1-mistral-chatbot code without notebook dependency
+
+    - add google colab link
+
+    - Merge pull request #40 from lalanikarim/webrtc-colab-button
+
+    - adding webrtc ai voice chat notebook
+
+    - add ollama+bakllava optional lab. update readme for optional labs.
+
+    - added notebook for running codestral locally using OllamaFunctions
+
+    - Merge pull request #41 from lalanikarim/webrtc-colab-button
+
+    - Add a notebook with introduction to langchain
+
+    - updated notebook'
+  socials:
+    github: lalanikarim
+    website: https://medium.com/@klcoder
+saskinosie:
+  name: Scott Askinosie
+  title: Contributor - Austin LangChain AIMUG
+  url: https://github.com/saskinosie
+  image_url: https://github.com/saskinosie.png
+  page: true
+  description: 'Contributions to Austin LangChain AIMUG:
+
+    - added pandas_dataframe_agent folder with ai_sata_scientist tutorial in docx
+    and pdf format. Link to notebook and video tutorial in tutorial.
+
+    - added my lab for virtual event'
+  socials:
+    github: saskinosie
+saurabhlalsaxena:
+  name: saurabhlalsaxena
+  title: Contributor - Austin LangChain AIMUG
+  url: https://github.com/saurabhlalsaxena
+  image_url: https://github.com/saurabhlalsaxena.png
+  page: true
+  description: 'Contributions to Austin LangChain AIMUG:
+
+    - Created using Colab
+
+    - Perplexity Clone notebook'
+  socials:
+    github: saurabhlalsaxena

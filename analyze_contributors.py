@@ -2,8 +2,19 @@ import subprocess
 import json
 import requests
 import os
+import yaml
 from collections import defaultdict
 from datetime import datetime
+from pathlib import Path
+
+# Map of email addresses to GitHub usernames (for non-noreply addresses)
+EMAIL_TO_GITHUB = {
+    'colin@2cups.com': 'colinmcnamara',
+    'rickp1795@gmail.com': 'RPirruccio',
+    'jimmy00784@gmail.com': 'lalanikarim',
+    'scott@askinosie.com': 'saskinosie',
+    'saurabhlal193@gmail.com': 'saurabhlalsaxena'
+}
 
 def get_git_log():
     try:
@@ -65,8 +76,12 @@ def get_github_profile(username):
         return None
         
     url = f"https://api.github.com/users/{username}"
+    headers = {}
+    if 'GITHUB_TOKEN' in os.environ:
+        headers['Authorization'] = f"token {os.environ['GITHUB_TOKEN']}"
+        
     try:
-        response = requests.get(url)
+        response = requests.get(url, headers=headers)
         if response.status_code == 200:
             return response.json()
         else:
@@ -75,6 +90,79 @@ def get_github_profile(username):
     except requests.RequestException as e:
         print(f"Request error: {e}")
         return None
+
+def get_github_username_from_email(email):
+    # First check our manual mapping
+    if email in EMAIL_TO_GITHUB:
+        return EMAIL_TO_GITHUB[email]
+    
+    # Then check if it's a GitHub noreply address
+    if 'users.noreply.github.com' in email:
+        return email.split('@')[0]
+    
+    return None
+
+def generate_author_entry(email, profile, commits):
+    """Generate an author entry in the Docusaurus authors.yml format"""
+    username = get_github_username_from_email(email)
+    if not username or not profile:
+        return None
+        
+    # Extract relevant information from profile
+    name = profile.get('name', username)
+    bio = profile.get('bio', '')
+    
+    # Generate description based on commits
+    lab_contributions = []
+    for commit in commits:
+        if any(keyword in commit['subject'].lower() for keyword in ['lab', 'tutorial', 'notebook']):
+            lab_contributions.append(commit['subject'])
+    
+    description = bio + "\n\n" if bio else ""
+    description += "Contributions to Austin LangChain AIMUG:\n"
+    for contrib in set(lab_contributions):  # Use set to remove duplicates
+        description += f"- {contrib}\n"
+    
+    # Create author entry
+    author_entry = {
+        username: {
+            'name': name,
+            'title': f"Contributor - Austin LangChain AIMUG",
+            'url': profile.get('html_url', f'https://github.com/{username}'),
+            'image_url': f'https://github.com/{username}.png',
+            'page': True,
+            'description': description.strip(),
+            'socials': {
+                'github': username
+            }
+        }
+    }
+    
+    # Add additional social links if available
+    if profile.get('twitter_username'):
+        author_entry[username]['socials']['x'] = profile['twitter_username']
+    if profile.get('blog'):
+        author_entry[username]['socials']['website'] = profile['blog']
+    
+    return author_entry
+
+def update_authors_file(new_authors):
+    """Update the authors.yml file with new contributors"""
+    authors_file = Path('/Users/colinmcnamara/Code/alc-docs/main-docs/blog/authors.yml')
+    
+    # Read existing authors
+    if authors_file.exists():
+        with open(authors_file) as f:
+            existing_authors = yaml.safe_load(f) or {}
+    else:
+        existing_authors = {}
+    
+    # Merge new authors with existing ones
+    updated_authors = {**existing_authors, **new_authors}
+    
+    # Write back to file
+    with open(authors_file, 'w') as f:
+        yaml.dump(updated_authors, f, sort_keys=False, allow_unicode=True)
 
 def analyze_labs_by_month(monthly_commits):
     print("\nLabs Analysis by Month:")
@@ -111,7 +199,7 @@ def analyze_labs_by_month(monthly_commits):
                     print(f"  {commit['date']} - {commit['subject']} ({commit['hash']})")
 
 def main():
-    print("Analyzing Git Repository...")
+    print("Analyzing Git Repository and Generating Author Profiles...")
     
     # Get git log entries
     log_entries = get_git_log()
@@ -131,22 +219,38 @@ def main():
         for commit in commits:
             unique_contributors.add(commit['email'])
     
-    # Analyze GitHub profiles
-    print("\nGitHub Profile Analysis:")
+    # Track all commits by email
+    all_commits_by_email = defaultdict(list)
+    
+    # Analyze GitHub profiles and generate author entries
+    print("\nGenerating Author Profiles:")
     print("=" * 80)
     
+    new_authors = {}
+    
     for email in unique_contributors:
-        username = get_github_username(email)
+        username = get_github_username_from_email(email)
         if username:
             profile = get_github_profile(username)
             if profile:
-                print(f"\nProfile for {username}:")
-                print(f"Name: {profile.get('name', 'N/A')}")
-                print(f"Bio: {profile.get('bio', 'N/A')}")
-                print(f"Location: {profile.get('location', 'N/A')}")
-                print(f"Public repos: {profile.get('public_repos', 'N/A')}")
-                print(f"Followers: {profile.get('followers', 'N/A')}")
-                print(f"Following: {profile.get('following', 'N/A')}")
+                print(f"\nGenerating profile for {username}...")
+                
+                # Get all commits for this email
+                commits = []
+                for month_commits in monthly_commits.values():
+                    for commit in month_commits:
+                        if commit['email'] == email:
+                            commits.append(commit)
+                
+                author_entry = generate_author_entry(email, profile, commits)
+                if author_entry:
+                    new_authors.update(author_entry)
+    
+    # Update authors.yml file
+    if new_authors:
+        print("\nUpdating authors.yml file...")
+        update_authors_file(new_authors)
+        print("Authors file updated successfully!")
 
 if __name__ == "__main__":
     main()
