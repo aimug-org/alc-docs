@@ -3,9 +3,25 @@ import json
 import requests
 import os
 import yaml
+import re
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
+from dotenv import load_dotenv
+
+# Load environment variables from current directory
+env_path = Path('.env')
+if env_path.exists():
+    load_dotenv(env_path)
+    print(f"Loaded .env file from: {env_path.absolute()}")
+else:
+    print(f"No .env file found at: {env_path.absolute()}")
+
+# Debug: Print environment variables (without exposing token value)
+print("Environment variables loaded:")
+print("GITHUB_TOKEN present:", "GITHUB_TOKEN" in os.environ)
+if "GITHUB_TOKEN" not in os.environ:
+    print("Warning: GITHUB_TOKEN not found in environment variables")
 
 # Map of email addresses to GitHub usernames (for non-noreply addresses)
 EMAIL_TO_GITHUB = {
@@ -71,21 +87,69 @@ def get_github_username(email):
         return email.split('@')[0]
     return None
 
+def extract_social_links(bio):
+    """Extract social media links from GitHub bio"""
+    social_links = {}
+    
+    # Common patterns for social links
+    patterns = {
+        'linkedin': r'linkedin\.com/in/([a-zA-Z0-9-]+)',
+        'twitter': r'twitter\.com/([a-zA-Z0-9_]+)',
+        'x': r'x\.com/([a-zA-Z0-9_]+)',
+        'website': r'https?://(?:www\.)?([a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:/\S*)?)',
+        'medium': r'medium\.com/@?([a-zA-Z0-9_.-]+)',
+    }
+    
+    if bio:
+        for platform, pattern in patterns.items():
+            match = re.search(pattern, bio, re.IGNORECASE)
+            if match:
+                if platform == 'website':
+                    social_links[platform] = f"https://{match.group(1)}"
+                else:
+                    social_links[platform] = match.group(1)
+    
+    return social_links
+
 def get_github_profile(username):
     if not username:
         return None
         
     url = f"https://api.github.com/users/{username}"
-    headers = {}
-    if 'GITHUB_TOKEN' in os.environ:
-        headers['Authorization'] = f"token {os.environ['GITHUB_TOKEN']}"
+    headers = {
+        'Accept': 'application/vnd.github.v3+json'
+    }
+    github_token = os.getenv('GITHUB_TOKEN')
+    if github_token:
+        # Debug token format (without exposing the actual token)
+        print(f"Token format check: starts with 'ghp_': {github_token.startswith('ghp_')}")
+        print(f"Token length: {len(github_token)}")
+        
+        # Always use 'token' format for GitHub API
+        headers['Authorization'] = f"token {github_token}"
+        
+        # Debug output
+        print(f"\nMaking request for {username}:")
+        print(f"URL: {url}")
+        print("Headers:", {k: '***' if k == 'Authorization' else v for k, v in headers.items()})
         
     try:
         response = requests.get(url, headers=headers)
         if response.status_code == 200:
-            return response.json()
+            profile = response.json()
+            
+            # Extract additional social links from bio
+            social_links = extract_social_links(profile.get('bio', ''))
+            
+            # Add social links to profile
+            profile['social_links'] = social_links
+            
+            return profile
         else:
             print(f"Error fetching profile for {username}: {response.status_code}")
+            if response.status_code == 401:
+                print("Response headers:", dict(response.headers))
+                print("Response body:", response.text)
             return None
     except requests.RequestException as e:
         print(f"Request error: {e}")
@@ -253,11 +317,17 @@ def generate_author_entry(email, profile, commits):
         }
     }
     
-    # Add additional social links if available
+    # Add social links
     if profile.get('twitter_username'):
         author_entry[username]['socials']['x'] = profile['twitter_username']
     if profile.get('blog'):
         author_entry[username]['socials']['website'] = profile['blog']
+    
+    # Add social links extracted from bio
+    if profile.get('social_links'):
+        for platform, value in profile['social_links'].items():
+            if platform not in author_entry[username]['socials']:
+                author_entry[username]['socials'][platform] = value
     
     return author_entry
 
