@@ -1,0 +1,21 @@
+# Build outputs
+main-docs/build/
+main-docs/.docusaurus/
+
+# Dependencies
+main-docs/node_modules/
+
+# System files
+.DS_Store
+
+# Package files (since they're managed by npm)
+package-lock.json
+
+# Temporary files
+*.log
+*.tmp
+
+# Local environment files
+.env
+.env.local
+.env.*.local
