@@ -1,47 +1,34 @@
----
-sidebar_position: 2
----
+# Document Search with Streamlit
 
-# Streamlit Document Search with LangChain
+## Lab Overview
+Learn how to implement document search functionality using Streamlit and LangChain, creating a powerful search interface for your documents.
 
-This document provides an overview of the Streamlit document search functionality using LangChain, as demonstrated in the `101-2-streamlit_document_search.ipynb` notebook.
+## Lab Materials
+- [View Lab Notebook](https://github.com/aimug-org/austin_langchain/blob/main/labs/LangChain_101/101-2-streamlit_document_search.ipynb)
 
-## Overview
+## Key Topics
+- Document handling in LangChain
+- Implementing search functionality
+- Streamlit UI components
+- Search result presentation
+- Document processing techniques
 
-The Streamlit document search notebook demonstrates how to create a web application that allows users to search through a collection of documents using natural language queries. This application leverages LangChain's document loading, text splitting, and retrieval capabilities, combined with Streamlit's interactive interface.
+## Features
+- Document upload and processing
+- Full-text search capabilities
+- Result highlighting
+- Interactive search interface
 
-## Key Concepts
+## Prerequisites
+- Google Colab account
+- OpenAI API key
+- Basic Python knowledge
+- Understanding of:
+  - Document processing
+  - Search concepts
+  - Web interfaces
 
-- Loading and processing documents with LangChain
-- Creating and using vector stores for efficient document retrieval
-- Implementing similarity search using embeddings
-- Building an interactive search interface with Streamlit
-
-## Notebook Contents
-
-The notebook covers the following main topics:
-
-1. Setting up the necessary imports and configurations
-2. Loading and processing documents
-3. Creating a vector store from the processed documents
-4. Implementing a search function using LangChain's retrieval capabilities
-5. Building a Streamlit interface for user queries and result display
-
-## How to Use
-
-To explore this notebook and run the Streamlit document search application:
-
-1. Open the [101-2-streamlit_document_search.ipynb](https://github.com/aimug-org/austin_langchain/blob/main/labs/LangChain_101/101-2-streamlit_document_search.ipynb) notebook in the GitHub repository.
-2. Follow the instructions in the notebook to set up your environment and prepare the document collection.
-3. Run the Streamlit application and use the interface to perform document searches.
-
-## Learning Outcomes
-
-By studying this notebook, you will learn:
-
-- How to load and process documents using LangChain
-- Techniques for creating and using vector stores for efficient document retrieval
-- Methods for implementing similarity search using embeddings
-- Best practices for building interactive search interfaces with Streamlit
-
-Explore the notebook to gain hands-on experience with document search applications using LangChain and Streamlit!
+## Resources
+- [GitHub Repository](https://github.com/aimug-org/austin_langchain)
+- [Streamlit Documentation](https://docs.streamlit.io)
+- [LangChain Document Loaders](https://python.langchain.com/docs/modules/data_connection/document_loaders/)

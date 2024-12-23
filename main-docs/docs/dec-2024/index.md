@@ -1,70 +1,41 @@
-# December 2024 - Gradio Integration & Year-End Showcase
+# December 2024: Year-End Celebration & Innovation
 
-## Events
+Welcome to our December 2024 events! As we wrap up the year, we're celebrating with a special mix of technical innovation and community celebration.
 
-### LangChain 111: Gradio Integration (December 19, 2024)
-End-of-year showcase featuring:
-- Edge computing with Gradio and Cloudflare
-- Full-stack application development
-- Community demonstrations
-- Year-end celebration
+## Featured Content
 
-### Hacky Hour (December 4, 2024)
-Holiday-themed gathering at Kinda Tropical:
-- Collaborative coding
-- Project sharing
-- Seasonal networking
-- Community building
+### Monthly Showcase & Mixer
+Join us for our final gathering of 2024, featuring technical presentations and community celebration.
+[Learn more about the December Showcase & Mixer](showcase-and-mixer)
 
-## Labs
+### Technical Presentations
 
-### Gradio Integration Labs
-- **Gradio Introduction** ([Intro_to_Gradio.ipynb](https://github.com/aimug-org/austin_langchain/blob/main/labs/LangChain_111/Intro_to_Gradio.ipynb))
-  - Basic Gradio concepts
-  - LangChain integration
-  - Interface development
-  - Best practices
+#### Edge Computing with Gradio and Cloudflare
+Learn how to build and deploy efficient AI applications at the edge through practical examples.
+[View the Edge Computing Lab](gradio-edge-computing-lab)
 
-- **Spoil a Wish** ([Spoil_a_wish.ipynb](https://github.com/aimug-org/austin_langchain/blob/main/labs/LangChain_111/Spoil_a_wish.ipynb))
-  - Interactive application example
-  - User interaction handling
-  - Response generation
-  - Creative implementation
+#### Building a Full-Stack App in Five Days
+Join Ricky's journey through building a marina management system in just five days.
+[Read about the Full-Stack App Development](full-stack-app-five-days)
 
-## Workshop Components
+### LangChain Updates
+Catch up on the latest developments in the LangChain ecosystem.
+[View December LangChain Updates](langchain-news-and-updates)
 
-### Edge Computing with Gradio
-- Cloudflare integration
-- Edge deployment
-- Performance optimization
-- Scaling strategies
+## Event Details
 
-### Full-Stack Application Development
-- Architecture design
-- Component integration
-- Development workflow
-- Deployment strategies
-
-### Year-End Showcase
-- Community achievements
-- Project demonstrations
-- Future planning
-- Celebration of growth
-
-## Prerequisites
-- Understanding of:
-  - LangChain fundamentals
-  - Gradio framework
-  - Edge computing concepts
-  - Full-stack development
-- Development environment setup
-- Required API access
+- **Date:** Wednesday, December 4, 2024
+- **Time:** 6:00 PM - 8:30 PM
+- **Main Venue:** ACC - RGC 3000, 1218 West Avenue, Austin, TX
+- **Virtual Bridge:** [Google Meet](https://meet.google.com/dkm-xwbm-hhs)
+- **After Party:** The Tavern (922 W 12th Street)
 
 ## Resources
 - [GitHub Repository](https://github.com/aimug-org/austin_langchain)
+- [LangChain Documentation](https://python.langchain.com/docs/get_started/introduction.html)
 
-## Additional Materials
-- Implementation guides
-- Configuration templates
-- Architecture diagrams
-- Best practices documentation
+## Venue Information
+- Located in tan brick building on West Avenue
+- Between 12th and 13th Streets
+- Free garage parking available
+- Street parking free after 6 PM
