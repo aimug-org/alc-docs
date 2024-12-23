@@ -2,6 +2,13 @@
 
 ## December 19, 2024 - Documentation Fixes and Labs Timeline
 
+### Fixed Build and Security Issues
+- Fixed npm package vulnerabilities:
+  - Updated path-to-regexp to latest version
+  - Ran npm audit fix to address security issues
+  - Resolved all high severity vulnerabilities
+  - Updated and cleaned up package dependencies
+
 ### Fixed Documentation Build Issues
 - Modified docusaurus.config.js to handle broken links:
   - Changed onBrokenLinks from 'throw' to 'ignore'
