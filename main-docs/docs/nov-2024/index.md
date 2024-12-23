@@ -1,38 +1,59 @@
-# November 2024: Community Growth & Innovation
+# November 2024: Advanced Pipelines & Future Planning
 
-Welcome to our November 2024 events! This month features a mix of technical presentations, community engagement, and hands-on learning opportunities.
+Welcome to our November 2024 events! This month focuses on advanced LangGraph pipelines and planning for the future of our community.
 
 ## Featured Content
 
-### Monthly Showcase & Mixer
-Join us for our November gathering featuring technical presentations and community networking.
-[Learn more about the November Showcase & Mixer](showcase-and-mixer)
+### Advanced Pipelines
+1. [OpenWebUI to LangGraph](openwebui-langgraph)
+   - Pipeline development
+   - Graph-based workflows
+   - Real-time processing
 
-### Technical Presentations
-- OpenWebUI to LangGraph Pipelines by Ricky
-- Claude Computer Use for LangChain
-- Group Workshop: 2025 Topic Planning
+2. [Claude Computer Use](claude-computer)
+   - System automation
+   - Tool orchestration
+   - Security practices
 
-### Hacky Hour (November 20, 2024)
-Join us at Kinda Tropical for a casual evening of:
-- Collaborative coding
-- Project sharing
-- Knowledge exchange
-- Community networking
+3. [2025 Topic Planning](topic-planning)
+   - Community input
+   - Future directions
+   - Resource planning
 
 ## Event Details
 
-- **Date:** Wednesday, November 13, 2024
-- **Time:** 6:00 PM - 8:30 PM
-- **Main Venue:** ACC - RGC 3000, 1218 West Avenue, Austin, TX
-- **After Party:** The Tavern (922 W 12th Street)
+### OpenWebUI to LangGraph Pipelines
+Presented by Ricky:
+- OpenWebUI to LangGraph Pipelines
+- Claude Computer Use for LangChain
+- Group Workshop: 2025 Topic Planning
+
+### Workshop Components
+1. **Pipeline Development**
+   - OpenWebUI integration
+   - LangGraph workflows
+   - Performance optimization
+
+2. **System Automation**
+   - Claude computer capabilities
+   - Tool orchestration
+   - Security implementation
+
+3. **Future Planning**
+   - Topic brainstorming
+   - Resource allocation
+   - Timeline development
+
+## Prerequisites
+- Basic understanding of:
+  - OpenWebUI
+  - LangGraph
+  - Claude capabilities
+  - Python programming
+- Development environment setup
 
 ## Resources
 - [GitHub Repository](https://github.com/aimug-org/austin_langchain)
-- [LangChain Documentation](https://python.langchain.com/docs/get_started/introduction.html)
-
-## Venue Information
-- Located in tan brick building on West Avenue
-- Between 12th and 13th Streets
-- Free garage parking available
-- Street parking free after 6 PM
+- [LangGraph Documentation](https://python.langchain.com/docs/langgraph)
+- [OpenWebUI Documentation](https://docs.openwebui.com/)
+- [Claude Documentation](https://docs.anthropic.com/claude/)

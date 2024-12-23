@@ -1,43 +1,44 @@
-# November 2023 - LangServe & Advanced RAG
+# November 2023: LangServe & Advanced RAG
 
-## Events
+Welcome to our November 2023 events! This month focuses on advanced LangChain features, including LangServe deployment and sophisticated RAG implementations.
+
+## Featured Content
+
+### LangChain 102: LangServe & LangSmith
+- [LangServe Pirate Speak](langserve-pirate-speak)
+  - Deploy LangChain applications using LangServe
+  - Create fun language transformation templates
+
+### LangChain 103: Advanced Applications
+1. [Pandas DataFrame Agent](pandas-df-agent)
+   - Automate data analysis tasks
+   - Natural language DataFrame interactions
+
+2. [RAG Quickstart](rag-quickstart)
+   - Implement Retrieval Augmented Generation
+   - Enhance AI responses with external knowledge
+
+3. [LangSmith Integration](langsmith-colab)
+   - Set up LangSmith in Google Colab
+   - Debug and monitor LangChain applications
+
+4. [Question Answering System](qa-retriever)
+   - Build retriever-based QA systems
+   - Implement context-aware responses
+
+## Event Details
 
 ### LangChain 102 (November 14, 2023)
-Advanced session focusing on LangServe and LangSmith:
+Advanced session focusing on:
 - Introduction to LangServe for AI template creation
 - Insights into AI analysis with LangSmith
 - Featured showcase by Karim Lalani incorporating Mistral 7b
 
 ### Virtual Recap Session (November 1, 2023)
-Remote recap of LangChain 101 for those who missed the October session:
+Remote recap of LangChain 101 covering:
 - Review of basic concepts
 - Hands-on practice with ChatGPT API
 - Interactive Q&A session
-
-## Labs
-
-### LangChain 102
-- **LangServe Pirate Speak** ([LC_102-LangServe-pirate-speak.ipynb](https://github.com/aimug-org/austin_langchain/blob/main/labs/LangChain_102/LC_102-LangServe-pirate-speak.ipynb))
-  - Example of LangServe deployment
-  - Fun pirate speak translator implementation
-  - Demonstration of template creation
-
-### LangChain 103
-- **Pandas DataFrame Agent** ([103-4-pandas_df_agent_langchain.ipynb](https://github.com/aimug-org/austin_langchain/blob/main/labs/LangChain_103/103-4-pandas_df_agent_langchain.ipynb))
-  - Working with DataFrame agents
-  - Data analysis automation
-
-- **RAG Quickstart** ([ALC_Turbocharge_your_RAG_quickstart.ipynb](https://github.com/aimug-org/austin_langchain/blob/main/labs/LangChain_103/ALC_Turbocharge_your_RAG_quickstart.ipynb))
-  - Introduction to Retrieval Augmented Generation
-  - Basic RAG implementation
-
-- **Google Colab Integration** ([Google_colab_and_langsmith_base_template.ipynb](https://github.com/aimug-org/austin_langchain/blob/main/labs/LangChain_103/Google_colab_and_langsmith_base_template.ipynb))
-  - Template for Google Colab
-  - LangSmith integration setup
-
-- **QA Retriever** ([QA_Using_Retriever.ipynb](https://github.com/aimug-org/austin_langchain/blob/main/labs/LangChain_103/QA_Using_Retriever.ipynb))
-  - Question-answering system implementation
-  - Retriever-based approach
 
 ## Prerequisites
 - Google Colab account
@@ -47,5 +48,6 @@ Remote recap of LangChain 101 for those who missed the October session:
 - Basic understanding of LangChain concepts from 101
 
 ## Resources
-- [LangSmith Documentation](https://www.langchain.com/langsmith)
 - [GitHub Repository](https://github.com/aimug-org/austin_langchain)
+- [LangSmith Documentation](https://www.langchain.com/langsmith)
+- [LangServe Documentation](https://python.langchain.com/docs/langserve)

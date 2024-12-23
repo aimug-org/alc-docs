@@ -1,6 +1,21 @@
-# May 2024 - AI Data Science & Voice Integration
+# May 2024: AI Data Science & Voice Integration
 
-## Events
+Welcome to our May 2024 events! This month focuses on AI-powered data science and voice-enabled applications.
+
+## Featured Content
+
+### AI Data Science
+1. [AI Data Scientist & Blockchain](ai-data-scientist)
+   - AI Data Scientist capabilities
+   - Blockchain agent integration
+   - Voice-controlled features
+
+2. [Voice-Enabled WebRTC](webrtc-langgraph)
+   - WebRTC voice-enabled agent
+   - LangGraph Data Scientist evolution
+   - Real-time communication
+
+## Event Details
 
 ### AI Data Scientist & Blockchain Integration (May 1, 2024)
 Comprehensive session on AI data science and blockchain:
@@ -35,26 +50,6 @@ Advanced implementation session:
   - Ollama functions integration
   - Advanced messaging patterns
 
-## Workshop Components
-
-### AI Data Science Track
-- Data analysis automation
-- Machine learning integration
-- Predictive modeling
-- Visualization techniques
-
-### Blockchain Integration
-- Smart contract interaction
-- Agent-based operations
-- Security considerations
-- Performance optimization
-
-### Voice Control Implementation
-- WebRTC integration
-- Real-time processing
-- Voice recognition
-- Response generation
-
 ## Prerequisites
 - Understanding of:
   - Data science concepts
@@ -66,9 +61,5 @@ Advanced implementation session:
 
 ## Resources
 - [GitHub Repository](https://github.com/aimug-org/austin_langchain)
-
-## Additional Materials
-- Implementation guides
-- Code templates
-- Architecture diagrams
-- Best practices documentation
+- [LangChain Documentation](https://python.langchain.com/docs/get_started/introduction.html)
+- [WebRTC Documentation](https://webrtc.org/getting-started/overview)

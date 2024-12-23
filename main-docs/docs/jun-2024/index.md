@@ -1,6 +1,16 @@
-# June 2024 - GitHub Integration & Community Building
+# June 2024: GitHub Integration & Community Building
 
-## Events
+Welcome to our June 2024 events! This month focuses on integrating LangChain with GitHub workflows and strengthening our community connections.
+
+## Featured Content
+
+### GitHub Integration
+1. [GitHub Code Generation](github-integration)
+   - Automated code generation
+   - GitHub workflow integration
+   - Best practices implementation
+
+## Event Details
 
 ### LangChain 109: GitHub Integration
 Focus on integrating LangChain with GitHub workflows:
@@ -56,9 +66,5 @@ Community gathering at Lustre Pearl East:
 
 ## Resources
 - [GitHub Repository](https://github.com/aimug-org/austin_langchain)
-
-## Additional Materials
-- Workflow templates
-- Configuration guides
-- Best practices documentation
-- Integration examples
+- [GitHub API Documentation](https://docs.github.com/en/rest)
+- [LangChain Documentation](https://python.langchain.com/docs/get_started/introduction.html)

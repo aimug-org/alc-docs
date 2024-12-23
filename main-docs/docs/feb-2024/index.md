@@ -1,6 +1,21 @@
-# February 2024 - LangGraph & Google Drive Integration
+# February 2024: LangGraph & Google Drive Integration
 
-## Events
+Welcome to our February 2024 events! This month focuses on integrating LangGraph with Google Drive for advanced document processing and RAG capabilities.
+
+## Featured Content
+
+### LangGraph Integration
+1. [LangGraph RAG Agent](langgraph-rag)
+   - RAG implementation with LangGraph
+   - Multi-modal capabilities
+   - Agent orchestration
+
+2. [Google Drive Integration](google-drive-integration)
+   - Document processing setup
+   - Data analysis automation
+   - Security implementation
+
+## Event Details
 
 ### LangChain 104: LangGraph RAG Virtual Workshop (February 7, 2024)
 Comprehensive virtual workshop on integrating RAG with Google Drive:
@@ -16,15 +31,7 @@ Deep dive into LangGraph capabilities:
 - Practical implementations
 - Collaborative sessions
 
-## Labs
-
-### LangGraph RAG Lab
-- **LangGraph RAG Agent** ([104-langgraph-rag-agent.ipynb](https://github.com/aimug-org/austin_langchain/blob/main/labs/LangChain_104/104-langgraph-rag-agent.ipynb))
-  - Implementation of RAG using LangGraph
-  - Advanced agent orchestration
-  - Integration with Google Drive
-
-### Workshop Labs
+## Workshop Labs
 1. **Google Drive Integration Lab**
    - Document integration with LangChain
    - Access and processing of Drive documents
@@ -57,9 +64,5 @@ Deep dive into LangGraph capabilities:
 
 ## Resources
 - [GitHub Repository](https://github.com/aimug-org/austin_langchain)
-
-## Additional Materials
-- Graph theory primer
-- Configuration templates
-- Architecture diagrams
-- Best practices documentation
+- [LangGraph Documentation](https://python.langchain.com/docs/langgraph)
+- [Google Drive API Documentation](https://developers.google.com/drive/api/guides/about-sdk)

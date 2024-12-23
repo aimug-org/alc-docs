@@ -1,6 +1,21 @@
-# September 2024 - Advanced Applications & Community Growth
+# September 2024: Advanced Applications & Community Growth
 
-## Events
+Welcome to our September 2024 events! This month focuses on advanced LangChain applications and community development.
+
+## Featured Content
+
+### Advanced Applications
+1. [Perplexity Clone](perplexity-clone)
+   - Implementation of Perplexity-like system
+   - Advanced search capabilities
+   - Response generation
+
+2. [API Chains](api-chains)
+   - Working with API chains
+   - Integration patterns
+   - Data flow management
+
+## Event Details
 
 ### LangChain 110: Advanced Applications (September 11, 2024)
 Showcase of innovative AI implementations:
@@ -31,28 +46,8 @@ Special session at Skinny's Off Track Bar focusing on Claude-Dev:
   - Data flow management
   - Error handling
 
-## Workshop Components
-
-### Perplexity System Implementation
-- Search system architecture
-- Response generation
-- Knowledge integration
-- User experience optimization
-
-### API Chain Development
-- Chain architecture
-- API integration patterns
-- Data transformation
-- Error handling strategies
-
-### Claude-Dev Integration
-- AI development tools
-- Code generation
-- Testing strategies
-- Performance optimization
-
 ## Prerequisites
-- Advanced understanding of:
+- Basic understanding of:
   - LangChain
   - API development
   - Python programming
@@ -62,9 +57,4 @@ Special session at Skinny's Off Track Bar focusing on Claude-Dev:
 
 ## Resources
 - [GitHub Repository](https://github.com/aimug-org/austin_langchain)
-
-## Additional Materials
-- Architecture diagrams
-- Implementation guides
-- Code templates
-- Best practices documentation
+- [LangChain Documentation](https://python.langchain.com/docs/get_started/introduction.html)

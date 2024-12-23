@@ -1,6 +1,28 @@
-# December 2023 - AI Web Architecture & Docker
+# December 2023: AI Web Architecture & Docker
 
-## Events
+Welcome to our December 2023 events! This month focuses on building secure, multi-tier AI applications using Docker and modern web architecture patterns.
+
+## Featured Content
+
+### Docker & Containerization
+1. [Introduction to Docker](docker-introduction)
+   - Docker fundamentals for AI development
+   - Container basics and best practices
+
+2. [LangServe on Docker](langserve-on-docker)
+   - Containerizing LangServe applications
+   - Secure deployment strategies
+
+### Advanced Applications
+1. [Pandas DataFrame Agent](pandas-df-agent)
+   - Containerized data analysis
+   - Natural language DataFrame interactions
+
+2. [RAG Quickstart](rag-quickstart)
+   - Containerized RAG implementation
+   - Secure knowledge enhancement
+
+## Event Details
 
 ### AI Web Architecture with LangChain, Streamlit & Docker (December 14, 2023)
 Comprehensive session on building secure, multi-tier AI applications:
@@ -16,24 +38,6 @@ End-of-year celebration at Central Machine Works:
 - Community building
 - Year-end reflections
 
-## Labs and Workshops
-
-### Multi-tier AI Web Application Lab
-- Creating web applications using:
-  - Streamlit for frontend
-  - LangServe for API layer
-  - Docker for containerization
-- Focus on security and isolation
-- Best practices for AI code development
-
-### Multi-Modal RAG Application Lab
-- Building advanced RAG applications using LangServe templates
-- Integration of:
-  - Image processing
-  - Text analysis
-  - Multi-modal responses
-- Practical implementation examples
-
 ## Prerequisites
 - Docker Desktop installation required
 - Basic understanding of:
@@ -43,19 +47,6 @@ End-of-year celebration at Central Machine Works:
 - OpenAI API key
 - Google Colab account
 
-## Key Concepts Covered
-- Container-based development
-- Secure AI deployment practices
-- Multi-modal AI integration
-- Microservices architecture
-- State management in AI applications
-
 ## Resources
 - [Docker Installation Guide](https://docs.docker.com/desktop/)
 - [GitHub Repository](https://github.com/aimug-org/austin_langchain)
-
-## Additional Materials
-- Docker configuration files
-- LangServe templates
-- Architecture diagrams
-- Security best practices documentation

@@ -1,6 +1,21 @@
-# April 2024 - GPU Access & AI Gaming
+# April 2024: GPU Access & AI Gaming
 
-## Events
+Welcome to our April 2024 events! This month focuses on GPU-powered AI applications and gaming integrations.
+
+## Featured Content
+
+### GPU Integration
+1. [Hosted GPU Access](gpu-access)
+   - Paperspace by DigitalOcean integration
+   - GPU resource management
+   - Performance optimization
+
+2. [AI Gaming Development](ai-gaming)
+   - LLM-driven NPCs
+   - Real-time processing
+   - Game AI implementation
+
+## Event Details
 
 ### Hosted GPU Access & AI Integration (April 3, 2024)
 Comprehensive session on advanced AI implementations:
@@ -56,10 +71,5 @@ Casual gathering at Central Machine Works:
 
 ## Resources
 - [GitHub Repository](https://github.com/aimug-org/austin_langchain)
-
-## Additional Materials
-- Configuration guides
-- Architecture diagrams
-- Code templates
-- Best practices documentation
-- Performance optimization guides
+- [Paperspace Documentation](https://docs.paperspace.com/)
+- [LangChain Documentation](https://python.langchain.com/docs/get_started/introduction.html)

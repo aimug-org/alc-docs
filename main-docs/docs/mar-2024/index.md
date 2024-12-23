@@ -1,6 +1,26 @@
-# March 2024 - Advanced LangGraph Applications
+# March 2024: Advanced LangGraph Applications
 
-## Events
+Welcome to our March 2024 events! This month focuses on advanced LangGraph applications and integrations with various tools and platforms.
+
+## Featured Content
+
+### LangGraph Applications
+1. [LangGraph Code Assistant](code-assistant)
+   - Advanced code generation
+   - Multi-actor systems
+   - State management
+
+2. [Streamlit & Ollama Integration](streamlit-ollama)
+   - Local LLM implementation
+   - LLAVA integration
+   - Auto1111 functionality
+
+3. [Runnable Passthrough](runnable-passthrough)
+   - Chain composition
+   - Data flow management
+   - Performance optimization
+
+## Event Details
 
 ### Virtual Meetup: Dive into LangGraph (March 7, 2024)
 Deep dive into LangGraph's advanced capabilities:
@@ -28,30 +48,6 @@ Deep dive into LangGraph's advanced capabilities:
   - Implementation examples
   - Best practices
 
-## Workshop Components
-
-### Theory Session
-- Graph theory fundamentals
-- LangGraph architecture
-- Multi-actor coordination
-- State management concepts
-
-### Hands-on Labs
-1. **First LangGraph Build**
-   - Google Colab implementation
-   - Basic graph creation
-   - Testing and validation
-
-2. **RAG Agent Orchestration**
-   - Integration with Surreal DB
-   - Agent coordination
-   - Graph-based workflows
-
-3. **Automotive Projects Lab**
-   - Parts list orchestration
-   - Practical application
-   - Real-world use case
-
 ## Prerequisites
 - Understanding of basic LangChain concepts
 - Familiarity with graph theory
@@ -61,9 +57,5 @@ Deep dive into LangGraph's advanced capabilities:
 
 ## Resources
 - [GitHub Repository](https://github.com/aimug-org/austin_langchain)
-
-## Additional Materials
-- Graph theory documentation
-- Implementation guides
-- Code templates
-- Best practices documentation
+- [LangGraph Documentation](https://python.langchain.com/docs/langgraph)
+- [Streamlit Documentation](https://docs.streamlit.io)
