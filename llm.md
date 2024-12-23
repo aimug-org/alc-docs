@@ -41,6 +41,9 @@
     - Welcome Reception: 6:00-6:20 PM
     - Showcases & Presentations: 6:20-8:00 PM
     - After-party at The Tavern (upstairs): 8:00 PM onwards
+  - Fixed weekly session links:
+    - Updated Office Hours link to correct Discord event
+    - Updated Community Call link to correct Discord event
   - Made links more prominent and clickable
   - Added styling for better visual hierarchy
 

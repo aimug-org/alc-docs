@@ -93,7 +93,7 @@ Welcome to Austin LangChain! We're a vibrant community of AI enthusiasts, develo
         <p>Every Tuesday at 2 PM Central</p>
         <p>Get help with your projects and ask questions</p>
         <div className={styles.buttonContainer}>
-          <a href="https://discord.com/channels/1149779360178524272/1149779360967045170" className="button button--secondary">Join Session</a>
+          <a href="https://discord.com/events/1149779360178524272/1320831868496773174" className="button button--secondary">Join Session</a>
         </div>
       </div>
     </div>
@@ -107,7 +107,7 @@ Welcome to Austin LangChain! We're a vibrant community of AI enthusiasts, develo
         <p>Every Thursday at 2 PM Central</p>
         <p>Plan events and share ideas together</p>
         <div className={styles.buttonContainer}>
-          <a href="https://meet.aimug.org/session/1b5321b1-e360-4b4a-bc33-9307dc4782de" className="button button--secondary">Join Call</a>
+          <a href="https://discord.com/events/1149779360178524272/1320832033768865802" className="button button--secondary">Join Call</a>
         </div>
       </div>
     </div>
