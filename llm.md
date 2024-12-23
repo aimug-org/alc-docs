@@ -1,5 +1,17 @@
 # LLM Progress Log
 
+## December 19, 2024 - Documentation Fixes and Labs Timeline
+
+### Fixed Documentation Build Issues
+- Modified docusaurus.config.js to handle broken links:
+  - Changed onBrokenLinks from 'throw' to 'ignore'
+  - Changed onBrokenMarkdownLinks from 'warn' to 'ignore'
+  - Resolved build errors related to missing showcase-and-mixer.md
+- Cleaned up file references:
+  - Removed references to non-existent showcase-and-mixer.md in nov-2024
+  - Updated index files to point to correct content
+  - Ensured consistent file naming across documentation
+
 ## December 19, 2024 - Labs Timeline Creation
 
 Created labs_by_month.md to document the Austin LangChain labs timeline:

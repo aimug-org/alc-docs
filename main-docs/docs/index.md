@@ -10,12 +10,13 @@ Welcome to the Austin LangChain documentation! Here you'll find recordings and m
 - [View Full December Showcase](/docs/dec-2024/showcase-and-mixer)
 
 ### November 2024
-- [MLOPS World GenAI Summit](/docs/nov-2024/MLOPS-World-GenAI-Summit)
+- [OpenWebUI to LangGraph Pipelines](/docs/nov-2024/openwebui-langgraph)
+- [Claude Computer Use for LangChain](/docs/nov-2024/claude-computer)
+- [2025 Topic Planning Workshop](/docs/nov-2024/topic-planning)
 
-### October 2024
-- [AI-Accelerated Software Development Panel](/docs/oct-2024/ai-accelerated-software-development-panel)
-- [Email RAG Showcase](/docs/oct-2024/email-rag-showcase)
-- [Perplexity Clone Showcase](/docs/oct-2024/perplexity-clone-showcase)
+### September 2024
+- [Perplexity Clone Implementation](/docs/sep-2024/perplexity-clone)
+- [Working with API Chains](/docs/sep-2024/api-chains)
 
 ## 🎯 Getting Started
 
@@ -26,21 +27,17 @@ New to Austin LangChain? Start here:
 ## 🗂️ Monthly Archives
 
 ### 2024
-- [December 2024](/docs/dec-2024/introduction-to-dec-2024)
-- [November 2024](/docs/nov-2024/MLOPS-World-GenAI-Summit)
-- [October 2024](/docs/oct-2024/introduction-to-110)
+- [December 2024](/docs/dec-2024/)
+- [November 2024](/docs/nov-2024/)
+- [September 2024](/docs/sep-2024/)
+- [June 2024](/docs/jun-2024/)
+- [May 2024](/docs/may-2024/)
+- [April 2024](/docs/apr-2024/)
+- [March 2024](/docs/mar-2024/)
+- [February 2024](/docs/feb-2024/)
+- [January 2024](/docs/jan-2024/)
 
 ### 2023
-- [December 2023](/docs/dec-2023/introduction-to-dec-2023)
-- [November 2023](/docs/nov-2023/langserve-pirate-speak)
-- [October 2023](/docs/oct-2023/streamlit-introduction)
-
-## 📚 Learning Paths
-
-### LangChain Series
-- [LangChain 104](/docs/langchain-104/introduction-to-104)
-- [LangChain 105](/docs/langchain-105/introduction-to-105)
-- [LangChain 106](/docs/langchain-106/introduction-to-106)
-- [LangChain 107](/docs/langchain-107/introduction-to-107)
-- [LangChain 108](/docs/langchain-108/introduction-to-108)
-- [LangChain 109](/docs/langchain-109/introduction-to-109)
+- [December 2023](/docs/dec-2023/)
+- [November 2023](/docs/nov-2023/)
+- [October 2023](/docs/oct-2023/)
