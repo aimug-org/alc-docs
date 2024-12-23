@@ -75,9 +75,9 @@ Welcome to Austin LangChain! We're a vibrant community of AI enthusiasts, develo
 
 ### Monthly Showcase & Mixer
 **First Wednesday of Each Month**
-- 6:00 PM: Networking & 101 Track
-- 7:00 PM: Showcases & Presentations
-- 8:30 PM: After-party
+- 6:00 - 6:20 PM: Welcome Reception & Networking
+- 6:20 - 8:00 PM: Showcases & Presentations
+- 8:00 PM onwards: After-party at The Tavern (upstairs)
 <div className={styles.buttonContainer}>
   <a href="https://www.meetup.com/austin-langchain-ai-group/events/" className="button button--secondary">View Schedule</a>
 </div>

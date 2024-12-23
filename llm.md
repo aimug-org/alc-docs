@@ -37,7 +37,10 @@
   - Created clear call-to-action buttons
   - Improved layout with responsive design
   - Added emojis for visual engagement
-  - Organized events in a more structured format
+  - Updated event schedule with accurate timings:
+    - Welcome Reception: 6:00-6:20 PM
+    - Showcases & Presentations: 6:20-8:00 PM
+    - After-party at The Tavern (upstairs): 8:00 PM onwards
   - Made links more prominent and clickable
   - Added styling for better visual hierarchy
 
