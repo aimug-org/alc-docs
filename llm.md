@@ -1,5 +1,22 @@
 # LLM Progress Log
 
+## December 19, 2024 - Labs Timeline Creation
+
+Created labs_by_month.md to document the Austin LangChain labs timeline:
+- Mapped all LangChain labs (101-111) to their respective months
+- Added descriptions for each lab and notebook
+- Organized content chronologically from September 2023 to December 2024
+- Included direct links to all notebooks
+- Enhanced with detailed meetup event context and presentation dates
+- Added comprehensive information about:
+  - Workshop prerequisites and requirements
+  - Lab objectives and focus areas
+  - Special presentations and demonstrations
+  - Community showcases and panel discussions
+  - Hands-on workshop content
+
+# Previous Updates
+
 ## December 19, 2024
 
 ### Updates Made
