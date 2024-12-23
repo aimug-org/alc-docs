@@ -1,5 +1,11 @@
 # Building a Full-Stack App in Five Days: A Marina Management System
 
+## 📹 Presentation Recording
+
+Watch Ricky's full presentation on building a marina management system in five days:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/a4VnImAMhLQ" title="Building a Full-Stack App in Five Days" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Overview
 
 Join Ricky Pirruccio as he demonstrates the rapid development of a tenant management application for a marina business, showcasing how modern tools and efficient workflows enabled completion in just five days. This presentation offers valuable insights into fast-paced development while maintaining code quality and scalability.
