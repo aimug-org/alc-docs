@@ -1,5 +1,11 @@
 # Building a Perplexity-like System
 
+## Presenter
+**Saurabh Lal Saxena** is an advanced RAG architect specializing in sophisticated search and retrieval implementations. He has made significant contributions to the Austin LangChain community through his expertise in developing complex document processing systems and advanced RAG architectures.
+
+Connect with Saurabh:
+- GitHub: [@saurabhlalsaxena](https://github.com/saurabhlalsaxena)
+
 ## Lab Overview
 Learn how to build a Perplexity-like search and response system using LangChain, implementing advanced search capabilities and response generation.
 

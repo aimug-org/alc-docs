@@ -1,5 +1,12 @@
 # Pandas DataFrame Agent in Docker
 
+## Presenter
+**Scott Askinosie** is a data science specialist based in Austin, TX, focusing on practical AI applications in data analysis and automation. His expertise in developing AI-powered data scientist implementations and DataFrame Agent tutorials has helped make complex data analysis more accessible to the Austin LangChain community.
+
+Connect with Scott:
+- GitHub: [@saskinosie](https://github.com/saskinosie)
+- LinkedIn: [scott-askinosie](https://www.linkedin.com/in/scott-askinosie)
+
 ## Lab Overview
 Learn how to containerize and deploy a Pandas DataFrame Agent using Docker, combining the power of LangChain's data analysis capabilities with secure containerization.
 

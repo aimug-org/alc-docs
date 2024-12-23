@@ -1,5 +1,12 @@
 # Voice-Enabled WebRTC and LangGraph
 
+## Presenter
+**Karim Lalani** is a local LLM and voice integration expert at Infinidigm LLC, specializing in Ollama implementations and WebRTC technologies. Based in Leander, TX, he has pioneered several innovative voice chat implementations and local LLM deployment strategies for the Austin LangChain community.
+
+Connect with Karim:
+- GitHub: [@lalanikarim](https://github.com/lalanikarim)
+- Blog: [Medium @klcoder](https://medium.com/@klcoder)
+
 ## Lab Overview
 Learn how to implement voice-enabled WebRTC capabilities with LangGraph, creating real-time communication systems with AI integration.
 

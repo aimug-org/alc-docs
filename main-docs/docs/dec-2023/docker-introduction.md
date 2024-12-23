@@ -1,5 +1,12 @@
 # Introduction to Docker for AI Development
 
+## Presenter
+**Riccardo Pirruccio (Ricky)** is an enterprise architecture specialist focusing on production-ready implementations and Docker containerization. His expertise in developing the LangGraph Manufacturing BOM Analyzer and creating comprehensive Docker deployment tutorials has helped the Austin LangChain community build robust, containerized AI applications.
+
+Connect with Ricky:
+- GitHub: [@RPirruccio](https://github.com/RPirruccio)
+- LinkedIn: [riccardopirruccio](https://www.linkedin.com/in/riccardopirruccio)
+
 ## Lab Overview
 Learn how to use Docker for secure and isolated AI development, focusing on containerization best practices for LangChain applications.
 
