@@ -55,15 +55,16 @@ Welcome to Austin LangChain! We're excited to have you join our community of AI 
 
 Ready to dive into LangChain development? Here's your learning path:
 
-1. [LangChain Introduction](./langchain-introduction) - Start here for the fundamentals
-2. Join our Discord for project discussions and support
-3. Attend office hours for personalized guidance, or to show off a project
+1. [Introduction to Austin LangChain AIMUG](./Austin-LangChain-AIMUG-Introduction) - Start here for the fundamentals
+2. Browse our [Labs Timeline](./labs_by_month) to see our learning progression
+3. Join our Discord for project discussions and support
+4. Attend office hours for personalized guidance, or to show off a project
 
 ## Next Steps
 
 1. 📅 RSVP to our next event on [Meetup](https://www.meetup.com/austin-langchain-ai-group/)
 2. 💻 Join our [Discord](https://discord.gg/JzWgadPFQd) community
 3. 🎥 Subscribe to our [YouTube](https://www.youtube.com/channel/UC03IXA4KU6hOQ_3YPTbS0ig) channel
-4. 📚 Continue to our [LangChain Introduction](./langchain-introduction)
+4. 📚 Continue to our [Introduction to Austin LangChain AIMUG](./Austin-LangChain-AIMUG-Introduction)
 
 We're excited to have you as part of our community! If you have any questions, don't hesitate to ask in our Discord server or during office hours.

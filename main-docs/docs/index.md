@@ -1,43 +1,52 @@
-# Austin LangChain Documentation
+# Welcome to Austin LangChain AIMUG
 
-Welcome to the Austin LangChain documentation! Here you'll find recordings and materials from our monthly meetings, technical presentations, and hands-on workshops.
+We're a community dedicated to exploring and learning AI development together through LangChain. Our "Learning in the Open" approach means we share our journey, challenges, and discoveries as we explore the rapidly evolving world of AI.
 
-## 📹 Latest Recordings
+## 🎯 Start Here
 
-### December 2024
-- [Edge Computing with Gradio and Cloudflare](/docs/dec-2024/gradio-edge-computing-lab)
-- [Building a Full-Stack App in Five Days](/docs/dec-2024/full-stack-app-five-days)
-- [View Full December Showcase](/docs/dec-2024/showcase-and-mixer)
+New to our community? Begin your journey:
+1. [Getting Started Guide](/docs/getting-started) - Join our community and events
+2. [Introduction to Austin LangChain AIMUG](/docs/Austin-LangChain-AIMUG-Introduction) - Learn about our approach
+3. [Labs Timeline](/docs/labs_by_month) - See our learning progression
 
-### November 2024
-- [OpenWebUI to LangGraph Pipelines](/docs/nov-2024/openwebui-langgraph)
-- [Claude Computer Use for LangChain](/docs/nov-2024/claude-computer)
-- [2025 Topic Planning Workshop](/docs/nov-2024/topic-planning)
+## 🚀 Latest Highlights
 
-### September 2024
-- [Perplexity Clone Implementation](/docs/sep-2024/perplexity-clone)
-- [Working with API Chains](/docs/sep-2024/api-chains)
+### Featured Projects
+- [Edge Computing with Gradio](/docs/dec-2024/gradio-edge-computing-lab) - Deploy AI apps to the edge
+- [Full-Stack AI App Development](/docs/dec-2024/full-stack-app-five-days) - Build complete AI applications
+- [Perplexity Clone](/docs/sep-2024/perplexity-clone) - Create an AI search interface
 
-## 🎯 Getting Started
+### Advanced Topics
+- [OpenWebUI to LangGraph Pipelines](/docs/nov-2024/openwebui-langgraph) - Complex AI workflows
+- [Claude Computer Integration](/docs/nov-2024/claude-computer) - AI system automation
+- [API Chain Development](/docs/sep-2024/api-chains) - Connect AI to external services
 
-New to Austin LangChain? Start here:
-- [Getting Started Guide](/docs/getting-started)
-- [Introduction to LangChain](/docs/langchain-introduction)
+## 📚 Learning Paths
 
-## 🗂️ Monthly Archives
+### Beginner Path
+1. Start with our [Introduction](/docs/Austin-LangChain-AIMUG-Introduction)
+2. Explore [October 2023](/docs/oct-2023/) for basics
+3. Progress to [November 2023](/docs/nov-2023/) for RAG
+
+### Advanced Path
+1. Check [LangGraph](/docs/feb-2024/) implementations
+2. Study [Edge Computing](/docs/dec-2024/gradio-edge-computing-lab)
+3. Explore [AI Pipelines](/docs/nov-2024/openwebui-langgraph)
+
+## 📅 Monthly Archives
 
 ### 2024
-- [December 2024](/docs/dec-2024/)
-- [November 2024](/docs/nov-2024/)
-- [September 2024](/docs/sep-2024/)
-- [June 2024](/docs/jun-2024/)
-- [May 2024](/docs/may-2024/)
-- [April 2024](/docs/apr-2024/)
-- [March 2024](/docs/mar-2024/)
-- [February 2024](/docs/feb-2024/)
-- [January 2024](/docs/jan-2024/)
+- [December](/docs/dec-2024/) - Edge Computing & Full-Stack Apps
+- [November](/docs/nov-2024/) - Advanced Pipelines & Planning
+- [September](/docs/sep-2024/) - Search Systems & API Integration
+- [June](/docs/jun-2024/) - GitHub & Automation
+- [May](/docs/may-2024/) - AI Data Science & Voice
+- [April](/docs/apr-2024/) - GPU Access & Gaming
+- [March](/docs/mar-2024/) - Code Assistance & Ollama
+- [February](/docs/feb-2024/) - LangGraph & Google Drive
+- [January](/docs/jan-2024/) - Advanced RAG & Images
 
 ### 2023
-- [December 2023](/docs/dec-2023/)
-- [November 2023](/docs/nov-2023/)
-- [October 2023](/docs/oct-2023/)
+- [December](/docs/dec-2023/) - Docker & Web Architecture
+- [November](/docs/nov-2023/) - LangServe & RAG
+- [October](/docs/oct-2023/) - Streamlit & Search

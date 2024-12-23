@@ -14,7 +14,7 @@ function generateSidebar() {
     });
 
   const sidebar = [
-    'langchain-introduction',
+    'Austin-LangChain-AIMUG-Introduction',
     ...folders.map(folder => ({
       type: 'category',
       label: formatFolderName(folder),

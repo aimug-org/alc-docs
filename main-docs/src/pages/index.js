@@ -19,7 +19,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--primary button--lg"
-            to="/docs">
+            to="/docs/Austin-LangChain-AIMUG-Introduction">
             Get Started
           </Link>
         </div>
@@ -50,7 +50,7 @@ function HomepageFeatures() {
       title: 'Learn',
       icon: 'fas fa-book',
       description: 'Access recordings and documentation from our monthly meetings, showcases, and technical presentations.',
-      link: '/docs',
+      link: '/docs/Austin-LangChain-AIMUG-Introduction',
     },
     {
       title: 'Connect',
