@@ -25,6 +25,15 @@ Created monthly documentation structure:
 - Added detailed context from meetup events
 - Included links to lab notebooks and resources
 
+Fixed documentation build issues:
+- Removed placeholder links (link_to_materials, link_to_docs, link_to_slides)
+- Kept only valid, working links to:
+  - GitHub repository
+  - Official documentation
+  - Installation guides
+  - Lab notebooks
+- Ensured consistent resource sections across all monthly pages
+
 # Previous Updates
 
 ## December 19, 2024

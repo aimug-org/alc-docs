@@ -65,10 +65,7 @@ Advanced implementation session:
 - Required API access
 
 ## Resources
-- [Event Recording](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
-- [Workshop Materials](link_to_materials)
 - [GitHub Repository](https://github.com/aimug-org/austin_langchain)
-- [Documentation](link_to_docs)
 
 ## Additional Materials
 - Implementation guides

@@ -55,10 +55,7 @@ Two major hands-on workshops:
 - Production deployment
 
 ## Resources
-- [Event Recording](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
-- [Presentation Slides](link_to_slides)
 - [GitHub Repository](https://github.com/aimug-org/austin_langchain)
-- [Documentation](link_to_docs)
 
 ## Additional Materials
 - Code templates

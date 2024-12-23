@@ -52,8 +52,6 @@ End-of-year celebration at Central Machine Works:
 
 ## Resources
 - [Docker Installation Guide](https://docs.docker.com/desktop/)
-- [Event Recording](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
-- [Presentation Slides](link_to_slides)
 - [GitHub Repository](https://github.com/aimug-org/austin_langchain)
 
 ## Additional Materials

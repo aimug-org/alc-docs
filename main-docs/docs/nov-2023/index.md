@@ -47,6 +47,5 @@ Remote recap of LangChain 101 for those who missed the October session:
 - Basic understanding of LangChain concepts from 101
 
 ## Resources
-- [Event Recording](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
 - [LangSmith Documentation](https://www.langchain.com/langsmith)
 - [GitHub Repository](https://github.com/aimug-org/austin_langchain)

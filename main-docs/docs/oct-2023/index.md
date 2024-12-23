@@ -33,6 +33,4 @@ First introduction to LangChain and hands-on lab experience, focusing on:
 - Basic Python knowledge
 
 ## Resources
-- [Event Recording](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
-- [Presentation Slides](link_to_slides)
 - [GitHub Repository](https://github.com/aimug-org/austin_langchain)
