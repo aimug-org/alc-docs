@@ -19,7 +19,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--primary button--lg"
-            to="/docs/getting-started">
+            to="/docs">
             Get Started
           </Link>
         </div>
@@ -49,8 +49,8 @@ function HomepageFeatures() {
     {
       title: 'Learn',
       icon: 'fas fa-book',
-      description: 'Explore our comprehensive documentation and tutorials on LangChain and associated ecosystem technologies.',
-      link: '/docs/getting-started',
+      description: 'Access recordings and documentation from our monthly meetings, showcases, and technical presentations.',
+      link: '/docs',
     },
     {
       title: 'Connect',
