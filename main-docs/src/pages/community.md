@@ -1,65 +1,145 @@
 ---
-title: Austin LangChain Community
-description: Join the Austin LangChain community and connect with other developers, researchers, and enthusiasts.
+title: Join the Austin LangChain Community
+description: Connect with AI enthusiasts, learn together, and build innovative solutions with LangChain.
 ---
 
-# Austin LangChain Community
+import styles from './community.module.css';
 
-Welcome to the Austin LangChain community! We're excited to have you join us in exploring the world of AI and language models. Our community is a vibrant group of developers, researchers, and enthusiasts who are passionate about advancing AI technology.
+# 🤝 Join Our Community
 
-## Connect with Us
+Welcome to Austin LangChain! We're a vibrant community of AI enthusiasts, developers, and innovators learning and building together. Whether you're just starting your AI journey or you're an experienced developer, there's a place for you here.
 
-There are several ways to connect with the Austin LangChain community:
+## 🌟 Connect & Engage
 
-### Discord
-Join our Discord server to chat with other members, ask questions, and share your projects:
-[Join Austin LangChain Discord](https://discord.gg/JzWgadPFQd)
+### Join Our Online Communities
+<div className={styles.row}>
+  <div className={styles.col}>
+    <div className={styles.card}>
+      <div className={styles.cardHeader}>
+        <h3>💬 Discord</h3>
+      </div>
+      <div className={styles.cardBody}>
+        <p>Chat with members, get help, and share your projects</p>
+        <div className={styles.buttonContainer}>
+          <a href="https://discord.gg/JzWgadPFQd" className="button button--primary">Join Discord</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div className={styles.col}>
+    <div className={styles.card}>
+      <div className={styles.cardHeader}>
+        <h3>🐦 Twitter</h3>
+      </div>
+      <div className={styles.cardBody}>
+        <p>Stay updated with the latest news and announcements</p>
+        <div className={styles.buttonContainer}>
+          <a href="https://twitter.com/AustinLangChain" className="button button--primary">Follow Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div className={styles.col}>
+    <div className={styles.card}>
+      <div className={styles.cardHeader}>
+        <h3>📺 YouTube</h3>
+      </div>
+      <div className={styles.cardBody}>
+        <p>Watch tutorials, presentations, and event recordings</p>
+        <div className={styles.buttonContainer}>
+          <a href="https://www.youtube.com/channel/UC03IXA4KU6hOQ_3YPTbS0ig" className="button button--primary">Subscribe</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-### Meetup
-Attend our local meetups in Austin to network, learn, and collaborate:
-[Austin LangChain Meetup Group](https://www.meetup.com/austin-langchain-ai-group/)
+### Attend Our Events
+<div className={styles.row}>
+  <div className={styles.col}>
+    <div className={styles.card}>
+      <div className={styles.cardHeader}>
+        <h3>🤝 Monthly Meetups</h3>
+      </div>
+      <div className={styles.cardBody}>
+        <p>Join us in Austin for learning, networking, and collaboration</p>
+        <div className={styles.buttonContainer}>
+          <a href="https://www.meetup.com/austin-langchain-ai-group/" className="button button--primary">RSVP Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-### YouTube
-Watch our recorded sessions, tutorials, and presentations:
-[Austin LangChain YouTube Channel](https://www.youtube.com/channel/UC03IXA4KU6hOQ_3YPTbS0ig)
+## 📅 Regular Events
 
-### Twitter
-Follow us on Twitter for the latest updates, announcements, and AI insights:
-[Austin LangChain Twitter](https://twitter.com/AustinLangChain)
+### Monthly Showcase & Mixer
+**First Wednesday of Each Month**
+- 6:00 PM: Networking & 101 Track
+- 7:00 PM: Showcases & Presentations
+- 8:30 PM: After-party
+<div className={styles.buttonContainer}>
+  <a href="https://www.meetup.com/austin-langchain-ai-group/events/" className="button button--secondary">View Schedule</a>
+</div>
 
-## Regular Events
+### Weekly Sessions
+<div className={styles.row}>
+  <div className={styles.col}>
+    <div className={styles.card}>
+      <div className={styles.cardHeader}>
+        <h3>🎯 Office Hours</h3>
+      </div>
+      <div className={styles.cardBody}>
+        <p>Every Tuesday at 2 PM Central</p>
+        <p>Get help with your projects and ask questions</p>
+        <div className={styles.buttonContainer}>
+          <a href="https://discord.com/channels/1149779360178524272/1149779360967045170" className="button button--secondary">Join Session</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div className={styles.col}>
+    <div className={styles.card}>
+      <div className={styles.cardHeader}>
+        <h3>🗣️ Community Call</h3>
+      </div>
+      <div className={styles.cardBody}>
+        <p>Every Thursday at 2 PM Central</p>
+        <p>Plan events and share ideas together</p>
+        <div className={styles.buttonContainer}>
+          <a href="https://meet.aimug.org/session/1b5321b1-e360-4b4a-bc33-9307dc4782de" className="button button--secondary">Join Call</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-We host several regular events to keep our community engaged and connected:
+### Hacky Hours
+**Third Wednesday of Each Month**
+- Casual networking
+- Project collaboration
+- Knowledge sharing
+<div className={styles.buttonContainer}>
+  <a href="https://www.meetup.com/austin-langchain-ai-group/events/" className="button button--secondary">Find Next Event</a>
+</div>
 
-### Mixer and Showcase
-Held on the first Wednesday of each month, this event combines networking, learning, and showcasing:
-- We start with a mixer that runs parallel to a 101 track to bring people up to speed.
-- The main show follows, featuring showcases, labs, panels, and workshops.
-- This is our primary monthly event where we come together to learn, share, and collaborate.
+## 🚀 Get Involved
 
-### Mid-Month Happy Hours
-Typically held two weeks after the Mixer and Showcase, on a Wednesday. These social gatherings are a great way to network and connect with other community members in a relaxed setting. Check our [Meetup page](https://www.meetup.com/austin-langchain-ai-group/) for specific dates and locations.
+### Ways to Contribute
+- Share your projects during showcases
+- Help others in Discord channels
+- Present at monthly meetings
+- Contribute to our [GitHub repositories](https://github.com/aimug-org)
+- Join our volunteer team
 
-### Office Hours
-Every Tuesday at 2 PM Central, join us in the [Discord Meeting Room](https://discord.com/channels/1149779360178524272/1149779360967045170) for Office Hours. This is a great opportunity to ask questions, get help with your projects, or just chat with other community members.
+<div className={styles.buttonContainer}>
+  <a href="/volunteer" className="button button--primary">Become a Volunteer</a>
+</div>
 
-### Community Call
-Join our weekly Community Call every Thursday at 2 PM Central at [https://meet.aimug.org/session/1b5321b1-e360-4b4a-bc33-9307dc4782de](https://meet.aimug.org/session/1b5321b1-e360-4b4a-bc33-9307dc4782de). During these calls, we plan our events and then break into an open forum. Everyone is welcome to join and contribute ideas!
+## 🤝 Code of Conduct
 
-## Get Involved
+We're committed to creating a welcoming and inclusive environment for everyone. Please review our community standards:
 
-We encourage all community members to actively participate:
-
-- Attend our regular events and meetups
-- Contribute to open-source projects
-- Share your knowledge and experiences
-- Collaborate on AI and LangChain projects
-- Help others by answering questions on Discord
-
-Whether you're a beginner or an expert, there's a place for you in our community. Let's learn, grow, and innovate together!
-
-## Code of Conduct
-
-We are committed to providing a welcoming and inclusive environment for all community members. Please review our [Code of Conduct](/code-of-conduct) to understand our community standards and expectations.
-
-We look forward to connecting with you and exploring the exciting world of AI and LangChain together!
+<div className={styles.buttonContainer}>
+  <a href="/code-of-conduct" className="button button--secondary">Read Code of Conduct</a>
+</div>

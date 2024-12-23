@@ -1,0 +1,39 @@
+
+
+.buttonContainer {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.card {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-card-border-radius);
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.cardHeader {
+  margin-bottom: 0.5rem;
+}
+
+.cardHeader h3 {
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.5rem;
+}
+
+.col {
+  flex: 1;
+  padding: 0.5rem;
+  min-width: 250px;
+}
+
+@media (max-width: 768px) {
+  .col {
+    flex: 0 0 100%;
+  }
+}
