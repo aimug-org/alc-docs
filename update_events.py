@@ -34,7 +34,36 @@ def format_event(event):
     # Clean up description - convert HTML to Markdown
     description = event['description']
     # Convert HTML links to Markdown
-    description = description.replace('<a href="', '[').replace('" class="linkified">', '](').replace('</a>', ')')
+    import re
+    
+    # Clean up and convert links
+    def fix_link(match):
+        url = match.group(1)
+        text = match.group(2) if len(match.groups()) > 1 else url
+        # Remove any extra brackets and parentheses
+        url = re.sub(r'[\[\]()]', '', url)
+        return f'[{text}]({url})'
+
+    # Convert HTML links to Markdown
+    description = re.sub(
+        r'<a href="([^"]+)"[^>]*>([^<]+)</a>',
+        fix_link,
+        description
+    )
+
+    # Fix malformed markdown links
+    description = re.sub(
+        r'\[([^\]]+)\]\(([^\)]+)\)',
+        fix_link,
+        description
+    )
+
+    # Fix any remaining bracketed URLs
+    description = re.sub(
+        r'\[+\s*(https?://[^\s\]]+)\s*\]+',
+        r'[\1](\1)',
+        description
+    )
     description = description.replace('<p>', '').replace('</p>', '\n\n')
     description = description.replace('<br/>', '\n')
     # Convert HTML entities

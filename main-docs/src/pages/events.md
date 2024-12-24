@@ -17,7 +17,7 @@ Welcome to the Austin LangChain Events page!
 **Date:** Wednesday, December 4, 2024
 **Time:** Starts at 6:00 PM
 **Location:** ACC - RGC 3000, 1218 West Avenue, Austin, TX
-**Bridge:** [[https://meet.google.com/dkm-xwbm-hhs](https://meet.google.com/dkm-xwbm-hhs](https://meet.google.com/dkm-xwbm-hhs](https://meet.google.com/dkm-xwbm-hhs))
+**Bridge:** [https://meet.google.com/dkm-xwbm-hhs](https://meet.google.com/dkm-xwbm-hhs)(https://meet.google.com/dkm-xwbm-hhshttps://meet.google.com/dkm-xwbm-hhs](https://meet.google.com/dkm-xwbm-hhs))
 **After Party:** The Tavern, 922 W 12th Street, Austin, TX 78703 (next to the parking garage)
 **Detailed Schedule:**
 *Get ready for insightful showcases, engaging panels, and a festive gathering that will leave you inspired as we wrap up 2024!*
@@ -45,7 +45,7 @@ Parking at the garage is free, but please note that the metal doors close and lo
 **Date:** Wednesday, December 18, 2024
 **Time:** 6:00 PM - 8:00 PM
 **Location:** Kinda Tropical
-**Website:** [Kinda Tropical]([https://www.kindatropical.com](https://www.kindatropical.com)) **Address:** 3501 E 7th St, Austin, TX 78702
+**Website:** [https://www.kindatropical.com](https://www.kindatropical.com)(https://www.kindatropical.com](Kinda Tropical)) **Address:** 3501 E 7th St, Austin, TX 78702
 **Event Highlights:**
 
  * **Open Lab Time:** Bring your laptop and dive into your projects! Whether you're just starting out or a seasoned pro, there's plenty of space to code, learn, and share ideas.
@@ -64,7 +64,7 @@ Street parking is free after 6 PM, and Kinda Tropical has some parking available
 **Date:** Wednesday, November 20, 2024
 **Time:** 6:00 PM - 8:00 PM
 **Location:** Kinda Tropical
-**Website:** [Kinda Tropical]([https://www.kindatropical.com](https://www.kindatropical.com)) **Address:** 3501 E 7th St, Austin, TX 78702
+**Website:** [https://www.kindatropical.com](https://www.kindatropical.com)(https://www.kindatropical.com](Kinda Tropical)) **Address:** 3501 E 7th St, Austin, TX 78702
 **Event Highlights:**
 
  * **Open Lab Time:** Bring your laptop and dive into your projects! Whether you're just starting out or a seasoned pro, there's plenty of space to code, learn, and share ideas.
@@ -112,7 +112,7 @@ Wednesday, October 16th, 6:00 PM - 8:00 PM
 Skinny's Off Track Bar, East Austin
 1806 E. 12th St.
 Austin, TX 78702
-[[https://www.skinnysotb.com/](https://www.skinnysotb.com/](https://www.skinnysotb.com/](https://www.skinnysotb.com/))
+[https://www.skinnysotb.com/](https://www.skinnysotb.com/)(https://www.skinnysotb.com/https://www.skinnysotb.com/](https://www.skinnysotb.com/))
 
  ***
 
@@ -151,12 +151,12 @@ Exchange tips, tricks, and insights on using LangChain to its fullest potential.
 
  Don’t miss out on updates or future events! Follow us and join the conversation:
 
- * **Website:** [[https://aimug.org](https://aimug.org](https://aimug.org](https://aimug.org))
-* **Discord:** [[https://discord.gg/JzWgadPFQd](https://discord.gg/JzWgadPFQd](https://discord.gg/JzWgadPFQd](https://discord.gg/JzWgadPFQd))
-* **GitHub:** [[https://github.com/aimug-org/austin_langchain](https://github.com/aimug-org/austin_langchain](https://github.com/aimug-org/austin_langchain](https://github.com/aimug-org/austin_langchain))
-* **Twitter:** [[https://twitter.com/AustinLangChain](https://twitter.com/AustinLangChain](https://twitter.com/AustinLangChain](https://twitter.com/AustinLangChain))
-* **MeetUp:** [[https://www.meetup.com/austin-langchain-ai-group/](https://www.meetup.com/austin-langchain-ai-group/](https://www.meetup.com/austin-langchain-ai-group/](https://www.meetup.com/austin-langchain-ai-group/))
-* **YouTube:** [[https://www.youtube.com/channel/UC03IXA4KU6hOQ_3YPTbS0ig](https://www.youtube.com/channel/UC03IXA4KU6hOQ_3YPTbS0ig" class="embedded">https://www.youtube.com/channel/UC03IXA4KU6hOQ_3YPTbS0ig](https://www.youtube.com/channel/UC03IXA4KU6hOQ_3YPTbS0ig))
+ * **Website:** [https://aimug.org](https://aimug.org)(https://aimug.orghttps://aimug.org](https://aimug.org))
+* **Discord:** [https://discord.gg/JzWgadPFQd](https://discord.gg/JzWgadPFQd)(https://discord.gg/JzWgadPFQdhttps://discord.gg/JzWgadPFQd](https://discord.gg/JzWgadPFQd))
+* **GitHub:** [https://github.com/aimug-org/austin_langchain](https://github.com/aimug-org/austin_langchain)(https://github.com/aimug-org/austin_langchainhttps://github.com/aimug-org/austin_langchain](https://github.com/aimug-org/austin_langchain))
+* **Twitter:** [https://twitter.com/AustinLangChain](https://twitter.com/AustinLangChain)(https://twitter.com/AustinLangChainhttps://twitter.com/AustinLangChain](https://twitter.com/AustinLangChain))
+* **MeetUp:** [https://www.meetup.com/austin-langchain-ai-group/](https://www.meetup.com/austin-langchain-ai-group/)(https://www.meetup.com/austin-langchain-ai-group/https://www.meetup.com/austin-langchain-ai-group/](https://www.meetup.com/austin-langchain-ai-group/))
+* **YouTube:** [https://www.youtube.com/channel/UC03IXA4KU6hOQ_3YPTbS0ig](https://www.youtube.com/channel/UC03IXA4KU6hOQ_3YPTbS0ig)(https://www.youtube.com/channel/UC03IXA4KU6hOQ_3YPTbS0ighttps://www.youtube.com/channel/UC03IXA4KU6hOQ_3YPTbS0ig](https://www.youtube.com/channel/UC03IXA4KU6hOQ_3YPTbS0ig))
 
  ***
 
