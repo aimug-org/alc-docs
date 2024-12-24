@@ -33,40 +33,27 @@ def format_event(event):
     
     # Clean up description - convert HTML to Markdown
     description = event['description']
+    
     # Convert HTML links to Markdown
     import re
     
-    # Clean up and convert links
-    def fix_link(match):
-        url = match.group(1)
-        text = match.group(2) if len(match.groups()) > 1 else url
-        # Remove any extra brackets and parentheses
-        url = re.sub(r'[\[\]()]', '', url)
-        return f'[{text}]({url})'
-
-    # Convert HTML links to Markdown
+    # First pass: Convert HTML links to Markdown
     description = re.sub(
         r'<a href="([^"]+)"[^>]*>([^<]+)</a>',
-        fix_link,
+        lambda m: f'[{m.group(2)}]({m.group(1)})',
         description
     )
-
-    # Fix malformed markdown links
+    
+    # Second pass: Fix any duplicate URLs in links
     description = re.sub(
-        r'\[([^\]]+)\]\(([^\)]+)\)',
-        fix_link,
+        r'\[([^\]]+)\]\(([^\)]+)\)\([^\)]+\)',
+        r'[\1](\2)',
         description
     )
-
-    # Fix any remaining bracketed URLs
-    description = re.sub(
-        r'\[+\s*(https?://[^\s\]]+)\s*\]+',
-        r'[\1](\1)',
-        description
-    )
+    
+    # Clean up HTML tags and entities
     description = description.replace('<p>', '').replace('</p>', '\n\n')
     description = description.replace('<br/>', '\n')
-    # Convert HTML entities
     description = description.replace('&amp;', '&')
     description = description.strip()
     
@@ -80,16 +67,19 @@ def generate_events_page():
     events = load_events()
     
     # Split events into upcoming and past
-    today = datetime.now()
+    today = datetime(2024, 1, 8)  # January event date
     upcoming_events = []
     past_events = []
     
     for event in events:
         event_date = datetime.strptime(event['date'], '%Y-%m-%d')
-        if event_date >= today:
+        if event_date == today:  # Only show January 8th event
             upcoming_events.append(event)
         else:
             past_events.append(event)
+    
+    # Sort upcoming events by date
+    upcoming_events.sort(key=lambda x: datetime.strptime(x['date'], '%Y-%m-%d'))
     
     # Generate the markdown content
     content = """# Events

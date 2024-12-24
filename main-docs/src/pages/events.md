@@ -6,8 +6,38 @@ Welcome to the Austin LangChain Events page!
 
 ## Upcoming Events
 
-*No upcoming events scheduled. Check back soon!*
+### Austin LangChain AIMUG January Showcase and Mixer
+- **Date**: January 08, 2024
+- **Description**: **Join Us for the January Monthly Mixer and Showcase!**
 
+*Start the new year with innovation, inspiration, and connection! Join us for an evening of AI and LangChain technology showcases.*
+
+**Date:** Monday, January 8, 2024
+**Time:** Starts at 6:00 PM
+**Location:** ACC - RGC 3000, 1218 West Avenue, Austin, TX
+**After Party:** The Tavern, 922 W 12th Street, Austin, TX 78703 (next to the parking garage)
+
+**Detailed Schedule:**
+*Get ready for insightful showcases and engaging panels!*
+
+* **6:00 - 6:20 PM:** Welcome Reception
+*Network with fellow community members in a welcoming setting.*
+* **6:20 - 6:40 PM:** News and Updates
+*Catch up on the latest developments in the LangChain and AI Middleware community.*
+* **6:40 - 8:00 PM:** Showcases and Panels with Q&A
+  * **6:40 - 7:05 PM:** Showcase 1: Gradio Edge Computing Lab (20 minutes) + Q&A (10 minutes)
+  * **7:05 - 7:30 PM:** Showcase 2: Building a Full-Stack App in Five Days (20 minutes) + Q&A (10 minutes)
+  * **7:30 - 7:55 PM:** Showcase 3: LangChain News and Updates (20 minutes) + Q&A (10 minutes)
+* **7:55 - 8:00 PM:** Wrap-Up and Transition
+* **8:00 - 8:30 PM:** Head over to The Tavern for the after-party mixer
+
+This event combines networking, learning, and showcasing. From the latest project highlights to interactive Q&A sessions, there's plenty to inspire and connect over. Stick around for the after-party mixer to keep the conversations flowing in a more relaxed setting!
+
+**Directions to ACC - RGC 3000:**
+The venue is the tan brick building on your left if you're heading north on West Avenue between 12th and 13th Streets. Once you arrive, go up the stairs to reach ACC RGC3000.
+
+**Parking Info:**
+Parking at the garage is free, but please note that the metal doors close and lock at 9 PM. If you plan on staying later for conversations, we recommend parking on the street. Street parking is free after 6 PM.
 ## Past Events
 
 ### Austin LangChain AIMUG December Showcase and Mixer
@@ -17,7 +47,7 @@ Welcome to the Austin LangChain Events page!
 **Date:** Wednesday, December 4, 2024
 **Time:** Starts at 6:00 PM
 **Location:** ACC - RGC 3000, 1218 West Avenue, Austin, TX
-**Bridge:** [https://meet.google.com/dkm-xwbm-hhs](https://meet.google.com/dkm-xwbm-hhs)(https://meet.google.com/dkm-xwbm-hhshttps://meet.google.com/dkm-xwbm-hhs](https://meet.google.com/dkm-xwbm-hhs))
+**Bridge:** [https://meet.google.com/dkm-xwbm-hhs](https://meet.google.com/dkm-xwbm-hhs)
 **After Party:** The Tavern, 922 W 12th Street, Austin, TX 78703 (next to the parking garage)
 **Detailed Schedule:**
 *Get ready for insightful showcases, engaging panels, and a festive gathering that will leave you inspired as we wrap up 2024!*
@@ -45,7 +75,7 @@ Parking at the garage is free, but please note that the metal doors close and lo
 **Date:** Wednesday, December 18, 2024
 **Time:** 6:00 PM - 8:00 PM
 **Location:** Kinda Tropical
-**Website:** [https://www.kindatropical.com](https://www.kindatropical.com)(https://www.kindatropical.com](Kinda Tropical)) **Address:** 3501 E 7th St, Austin, TX 78702
+**Website:** [https://www.kindatropical.com](https://www.kindatropical.com) **Address:** 3501 E 7th St, Austin, TX 78702
 **Event Highlights:**
 
  * **Open Lab Time:** Bring your laptop and dive into your projects! Whether you're just starting out or a seasoned pro, there's plenty of space to code, learn, and share ideas.
@@ -64,7 +94,7 @@ Street parking is free after 6 PM, and Kinda Tropical has some parking available
 **Date:** Wednesday, November 20, 2024
 **Time:** 6:00 PM - 8:00 PM
 **Location:** Kinda Tropical
-**Website:** [https://www.kindatropical.com](https://www.kindatropical.com)(https://www.kindatropical.com](Kinda Tropical)) **Address:** 3501 E 7th St, Austin, TX 78702
+**Website:** [https://www.kindatropical.com](https://www.kindatropical.com) **Address:** 3501 E 7th St, Austin, TX 78702
 **Event Highlights:**
 
  * **Open Lab Time:** Bring your laptop and dive into your projects! Whether you're just starting out or a seasoned pro, there's plenty of space to code, learn, and share ideas.
@@ -112,7 +142,7 @@ Wednesday, October 16th, 6:00 PM - 8:00 PM
 Skinny's Off Track Bar, East Austin
 1806 E. 12th St.
 Austin, TX 78702
-[https://www.skinnysotb.com/](https://www.skinnysotb.com/)(https://www.skinnysotb.com/https://www.skinnysotb.com/](https://www.skinnysotb.com/))
+[https://www.skinnysotb.com/](https://www.skinnysotb.com/)
 
  ***
 
@@ -125,9 +155,9 @@ Austin, TX 78702
  ### **What to Expect:**
 
  * **Open Lab Time:**
-Our core group will be actively working on LangChain projects. In this session, we’ll continue exploring AI development tools like **Claude-Dev** and **Graph Databases**, hacking on code, and bouncing ideas off each other. Feel free to dive into your own work or collaborate with others on-site.
+Our core group will be actively working on LangChain projects. In this session, we'll continue exploring AI development tools like **Claude-Dev** and **Graph Databases**, hacking on code, and bouncing ideas off each other. Feel free to dive into your own work or collaborate with others on-site.
 * **Networking:**
-Meet and connect with fellow LangChain enthusiasts in the Austin area. Whether you’re a beginner or an expert, this is a welcoming space to share your passion for AI and language models.
+Meet and connect with fellow LangChain enthusiasts in the Austin area. Whether you're a beginner or an expert, this is a welcoming space to share your passion for AI and language models.
 * **Learn and Share:**
 Exchange tips, tricks, and insights on using LangChain to its fullest potential. This is an opportunity to show off your own projects, get feedback, or discover something new.
 
@@ -143,32 +173,32 @@ Exchange tips, tricks, and insights on using LangChain to its fullest potential.
 
  ### **What to Bring:**
 
- Bring your **laptop**, your **ideas**, and your **enthusiasm!** We’ll provide the space and a community ready to hack, experiment, and discuss LangChain and AI technologies.
+ Bring your **laptop**, your **ideas**, and your **enthusiasm!** We'll provide the space and a community ready to hack, experiment, and discuss LangChain and AI technologies.
 
  ***
 
  ### **Stay Connected:**
 
- Don’t miss out on updates or future events! Follow us and join the conversation:
+ Don't miss out on updates or future events! Follow us and join the conversation:
 
- * **Website:** [https://aimug.org](https://aimug.org)(https://aimug.orghttps://aimug.org](https://aimug.org))
-* **Discord:** [https://discord.gg/JzWgadPFQd](https://discord.gg/JzWgadPFQd)(https://discord.gg/JzWgadPFQdhttps://discord.gg/JzWgadPFQd](https://discord.gg/JzWgadPFQd))
-* **GitHub:** [https://github.com/aimug-org/austin_langchain](https://github.com/aimug-org/austin_langchain)(https://github.com/aimug-org/austin_langchainhttps://github.com/aimug-org/austin_langchain](https://github.com/aimug-org/austin_langchain))
-* **Twitter:** [https://twitter.com/AustinLangChain](https://twitter.com/AustinLangChain)(https://twitter.com/AustinLangChainhttps://twitter.com/AustinLangChain](https://twitter.com/AustinLangChain))
-* **MeetUp:** [https://www.meetup.com/austin-langchain-ai-group/](https://www.meetup.com/austin-langchain-ai-group/)(https://www.meetup.com/austin-langchain-ai-group/https://www.meetup.com/austin-langchain-ai-group/](https://www.meetup.com/austin-langchain-ai-group/))
-* **YouTube:** [https://www.youtube.com/channel/UC03IXA4KU6hOQ_3YPTbS0ig](https://www.youtube.com/channel/UC03IXA4KU6hOQ_3YPTbS0ig)(https://www.youtube.com/channel/UC03IXA4KU6hOQ_3YPTbS0ighttps://www.youtube.com/channel/UC03IXA4KU6hOQ_3YPTbS0ig](https://www.youtube.com/channel/UC03IXA4KU6hOQ_3YPTbS0ig))
+ * **Website:** [https://aimug.org](https://aimug.org)
+* **Discord:** [https://discord.gg/JzWgadPFQd](https://discord.gg/JzWgadPFQd)
+* **GitHub:** [https://github.com/aimug-org/austin_langchain](https://github.com/aimug-org/austin_langchain)
+* **Twitter:** [https://twitter.com/AustinLangChain](https://twitter.com/AustinLangChain)
+* **MeetUp:** [https://www.meetup.com/austin-langchain-ai-group/](https://www.meetup.com/austin-langchain-ai-group/)
+* **YouTube:** [https://www.youtube.com/channel/UC03IXA4KU6hOQ_3YPTbS0ig](https://www.youtube.com/channel/UC03IXA4KU6hOQ_3YPTbS0ig)
 
  ***
 
  ### **About Us:**
 
- The **Austin LangChain Enthusiasts Meetup Group** is dedicated to exploring and leveraging LangChain’s innovative technology. Whether you’re new to the scene or have been in the field for years, we provide a platform for learning, sharing, and collaboration on LangChain projects. Help us shape the future of language technology together!
+ The **Austin LangChain Enthusiasts Meetup Group** is dedicated to exploring and leveraging LangChain's innovative technology. Whether you're new to the scene or have been in the field for years, we provide a platform for learning, sharing, and collaboration on LangChain projects. Help us shape the future of language technology together!
 
  ***
 
  ### **Join Us:**
 
- Ready to dive into LangChain with fellow enthusiasts? **Register now** and mark your calendar for an evening of coding, collaboration, and conversation. We can’t wait to see you there!
+ Ready to dive into LangChain with fellow enthusiasts? **Register now** and mark your calendar for an evening of coding, collaboration, and conversation. We can't wait to see you there!
 For a complete list of our past events, please visit our [Meetup page](https://www.meetup.com/austin-langchain-ai-group/events/past/).
 
 ## Regular Events
