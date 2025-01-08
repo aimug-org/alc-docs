@@ -2,7 +2,9 @@
 
 Welcome to the Austin LangChain Events page!
 
-*Last updated: December 23, 2024*
+**Virtual Meeting Link**: [https://meet.google.com/sed-mtuv-ggq](https://meet.google.com/sed-mtuv-ggq)
+
+*Last updated: January 8, 2024*
 
 ## Upcoming Events
 
