@@ -1,5 +1,5 @@
 ---
-slug: january-2024-meeting-recap
+slug: january-2025-meeting-recap
 title: Austin LangChain AI Group - January Meeting Recap
 authors: [colinmcnamara, RPirruccio]
 tags: [meetup, recap, ai-development, local-models]
