@@ -42,3 +42,18 @@ community:
   label: Community
   permalink: /community
   description: Posts related to our AI community and events
+
+recap:
+  label: Recap
+  permalink: /recap
+  description: Summary and highlights from past events and meetings
+
+ai-development:
+  label: AI Development
+  permalink: /ai-development
+  description: Topics related to artificial intelligence development and implementation
+
+local-models:
+  label: Local Models
+  permalink: /local-models
+  description: Content about running and implementing AI models locally

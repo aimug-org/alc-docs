@@ -7,6 +7,8 @@ tags: [meetup, recap, ai-development, local-models]
 
 The January meeting of the Austin LangChain AI Group was nothing short of eventful, with discussions ranging from real-world applications of AI to cutting-edge tools for building agentic infrastructure. Held on January 8, 2025, at the Austin Community College Rio Grande Campus, the meeting brought together a vibrant community of learners, developers, and innovators dedicated to exploring the ever-evolving landscape of AI.
 
+<!-- truncate -->
+
 **Key Highlights:**
 
 1. **Kickoff and Community Updates:**  
