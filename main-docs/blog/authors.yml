@@ -241,3 +241,40 @@ saurabhlalsaxena:
     • Maintained cross-platform compatibility'
   socials:
     github: saurabhlalsaxena
+that1guy15:
+  name: Ryan Booth
+  title: Contributor - Austin LangChain AIMUG
+  url: https://github.com/that1guy15
+  image_url: https://github.com/that1guy15.png
+  page: true
+  description: 'Key Contributions to Austin LangChain AIMUG:
+
+
+    Integration specialist focusing on AI-driven development and LangGraph implementations.
+
+
+    Notable Contributions:
+
+    • Delivered AI Driven Development Presentation
+
+    • Created LangGraph APIChain integration demo
+
+    • Developed LangChain GitHub integration demo
+
+    • Contributed to advanced integration strategies
+
+
+    LangChain Development:
+
+    • Implemented practical integration examples
+
+    • Created tutorials for AI-driven development workflows
+
+
+    LangGraph Projects:
+
+    • Developed APIChain integration solutions
+
+    • Built demonstration projects for practical applications'
+  socials:
+    github: that1guy15

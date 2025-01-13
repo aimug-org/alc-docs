@@ -1,7 +1,7 @@
 ---
 slug: january-2025-meeting-recap
 title: Austin LangChain AI Group - January Meeting Recap
-authors: [colinmcnamara, RPirruccio]
+authors: [colinmcnamara, RPirruccio, that1guy15]
 tags: [meetup, recap, ai-development, local-models]
 ---
 
@@ -13,7 +13,7 @@ The January meeting of the Austin LangChain AI Group was nothing short of eventf
    [Colin McNamara](https://github.com/colinmcnamara) opened the meeting with updates on the group's progress, including nearly reaching 1,000 members. He shared the group's unique ethos of "learning in the open" and emphasized the importance of fostering a supportive environment where members can share and grow together. He also highlighted the venue's partnership with ACC's Center for Government and Civil Service, encouraging attendees to utilize the space and support the programs that drive internships and community growth.
 
 2. **Ryan Booth's Presentation - Building a Full-Stack AI-Powered Web Application:**  
-   Ryan Booth shared his journey of building a social media management tool for artists entirely through AI-driven development. His presentation detailed:
+   [Ryan Booth](https://github.com/that1guy15) shared his journey of building a social media management tool for artists entirely through AI-driven development. His presentation detailed:
    - Architecture and technology stack: FastAPI, React, Next.js, Celery, and Redis.
    - Challenges and lessons learned, including managing AI limitations like context retention and enforcing best practices.
    - Insights into using AI for automated testing, OAUTH integration, and debugging.  
