@@ -14,6 +14,9 @@ LangChain is more than just a framework - it's a bridge that connects various AI
 - Memory Systems
 - And much more!
 
+<img width="397" alt="image" src="https://github.com/user-attachments/assets/d8ff1710-1099-4e5c-b02e-52bdadbed544" />
+
+
 Through LangChain's integrations, we can explore the entire AI ecosystem while building practical applications.
 
 ## Our Learning Journey
