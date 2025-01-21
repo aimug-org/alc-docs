@@ -58,6 +58,11 @@ local-models:
   permalink: /local-models
   description: Content about running and implementing AI models locally
 
+ai:
+  label: AI
+  permalink: /ai
+  description: Topics related to artificial intelligence and machine learning
+
 workflows:
   label: Workflows
   permalink: /workflows

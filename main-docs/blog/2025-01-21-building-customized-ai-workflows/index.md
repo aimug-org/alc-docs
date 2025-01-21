@@ -1,16 +1,8 @@
 ---
-authors: [colinmcnamara]
-category: AI Development
-date: 2025-01-21 12:00:00+00:00
-tags:
-- ai
-- workflows
-- models
-- tools
-- openwebui
-thumbnail: ./thumbnail.png
-thumbnailText: AI Workflow Automation and Model Distillation
+slug: building-customized-ai-workflows
 title: Building Customized AI Workflows - Distilling Models, Managing Tools, and Exploring Open Web UI
+authors: [colinmcnamara]
+tags: [ai, workflows, models, tools, openwebui]
 ---
 
 ## **Building Customized AI Workflows: Distilling Models, Managing Tools, and Exploring Open Web UI**
@@ -20,6 +12,10 @@ title: Building Customized AI Workflows - Distilling Models, Managing Tools, and
 This week's Austin LangChain AI Group Office Hours focused on advancing AI development workflows through three key areas: model distillation techniques, tool management strategies, and the emerging Open Web UI ecosystem. Participants shared experiences with running large language models locally, discussed the benefits of model distillation for practical applications, and explored how Open Web UI is revolutionizing the way we build AI-powered applications. The session highlighted a growing trend toward more efficient, customizable AI solutions that can run on consumer hardware while maintaining enterprise-grade capabilities.
 
 *(Join our weekly discussions every Tuesday at 2 pm Central on our [Discord server](https://discord.com/invite/JzWgadPFQd). All experience levels welcome!)*
+
+<!-- truncate -->
+
+![AI Workflow Automation and Model Distillation](./thumbnail.png)
 
 ---
 
