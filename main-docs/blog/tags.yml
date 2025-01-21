@@ -57,3 +57,28 @@ local-models:
   label: Local Models
   permalink: /local-models
   description: Content about running and implementing AI models locally
+
+ai:
+  label: AI
+  permalink: /ai
+  description: Topics related to artificial intelligence and machine learning
+
+workflows:
+  label: Workflows
+  permalink: /workflows
+  description: Topics related to AI workflows and process automation
+
+models:
+  label: Models
+  permalink: /models
+  description: Content about AI models, their development, and implementation
+
+tools:
+  label: Tools
+  permalink: /tools
+  description: Information about AI tools, utilities, and development resources
+
+openwebui:
+  label: Open Web UI
+  permalink: /openwebui
+  description: Topics related to Open Web UI platform and its applications
