@@ -82,3 +82,28 @@ openwebui:
   label: Open Web UI
   permalink: /openwebui
   description: Topics related to Open Web UI platform and its applications
+
+local-llm:
+  label: Local LLM
+  permalink: /local-llm
+  description: Topics related to running and implementing Large Language Models locally
+
+text-to-video:
+  label: Text to Video
+  permalink: /text-to-video
+  description: Content about AI-powered text to video generation and related technologies
+
+3d-modeling:
+  label: 3D Modeling
+  permalink: /3d-modeling
+  description: Topics related to AI-assisted 3D modeling and asset generation
+
+mcp:
+  label: MCP
+  permalink: /mcp
+  description: Content about Model Context Protocol and its implementations
+
+sxsw:
+  label: SXSW
+  permalink: /sxsw
+  description: Posts related to SXSW events and activities
