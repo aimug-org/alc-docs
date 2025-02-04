@@ -23,6 +23,14 @@ Join us for our monthly showcase and mixer! For more details and to RSVP, visit 
 
 Join us for our mid-month Hacky Hour! This is a great opportunity to network and connect with other community members in a relaxed setting. For more details and to RSVP, visit our [Meetup page](https://www.meetup.com/austin-langchain-ai-group/events/305585780/).
 
+### March Mixer and Showcase - Off SXSW Edition
+- **Date**: March 5, 2025
+- **Time**: 6:00 PM to 8:00 PM CST
+- **Location**: ACC - RGC 3000, 1218 West Avenue, Austin, TX
+- **After Party**: The Tavern, 922 W 12th Street, Austin, TX 78703
+
+Join us for our special Off SXSW edition of the monthly showcase and mixer! For more details and to RSVP, visit our [Meetup page](https://www.meetup.com/austin-langchain-ai-group/events/305993341/).
+
 ## Past Events
 
 ### Austin LangChain January Hacky Hour @ Kinda Tropical
