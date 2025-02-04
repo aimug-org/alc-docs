@@ -1,53 +1,143 @@
-# Events
+# 📅 Events
 
-Welcome to the Austin LangChain Events page!
+Welcome to the Austin LangChain Events page! Join our vibrant community of AI enthusiasts and developers.
 
 **Virtual Meeting Link**: [meet.google.com/txr-rque-xst](meet.google.com/txr-rque-xst)
 
 *Last updated: February 4, 2025*
 
-## Upcoming Events
+## 🎯 Featured Upcoming Events
 
-### February Showcase and Mixer
-- **Date**: February 5, 2025
-- **Time**: 6:00 PM to 8:00 PM CST
-- **Location**: ACC - RGC 3000, 1218 West Avenue, Austin, TX
-- **After Party**: The Tavern, 922 W 12th Street, Austin, TX 78703
+<div class="event-grid">
+  <div class="event-card">
+    <span class="event-badge showcase-badge">Monthly Showcase</span>
+    <h3>February Showcase and Mixer</h3>
+    <div class="event-info">
+      <i class="fas fa-calendar"></i>
+      <span>February 5, 2025</span>
+    </div>
+    <div class="event-info">
+      <i class="fas fa-clock"></i>
+      <span>6:00 PM to 8:00 PM CST</span>
+    </div>
+    <div class="event-info">
+      <i class="fas fa-map-marker-alt"></i>
+      <span>ACC - RGC 3000</span>
+    </div>
+    <div class="event-info">
+      <i class="fas fa-glass-cheers"></i>
+      <span>After Party: The Tavern</span>
+    </div>
+    <p>Join us for our monthly showcase and mixer!</p>
+    <a href="https://www.meetup.com/austin-langchain-ai-group/events/305540728/" class="button button--primary">RSVP on Meetup</a>
+  </div>
 
-Join us for our monthly showcase and mixer! For more details and to RSVP, visit our [Meetup page](https://www.meetup.com/austin-langchain-ai-group/events/305540728/).
+  <div class="event-card">
+    <span class="event-badge hacky-hour-badge">Hacky Hour</span>
+    <h3>February Hacky Hour</h3>
+    <div class="event-info">
+      <i class="fas fa-calendar"></i>
+      <span>February 19, 2025</span>
+    </div>
+    <div class="event-info">
+      <i class="fas fa-clock"></i>
+      <span>6:00 PM to 8:00 PM CST</span>
+    </div>
+    <div class="event-info">
+      <i class="fas fa-map-marker-alt"></i>
+      <span>Cosmic Coffee Salito</span>
+    </div>
+    <p>Network and connect with community members in a relaxed setting!</p>
+    <a href="https://www.meetup.com/austin-langchain-ai-group/events/305585780/" class="button button--primary">RSVP on Meetup</a>
+  </div>
 
-### February Hacky Hour @ Kinda Tropical
-- **Date**: February 19, 2025
-- **Time**: 6:00 PM to 8:00 PM CST
-- **Location**: Kinda Tropical, 3501 E. 7th · Austin, TX
+  <div class="event-card">
+    <span class="event-badge showcase-badge">Special Edition</span>
+    <h3>March Mixer - Off SXSW Edition</h3>
+    <div class="event-info">
+      <i class="fas fa-calendar"></i>
+      <span>March 5, 2025</span>
+    </div>
+    <div class="event-info">
+      <i class="fas fa-clock"></i>
+      <span>6:00 PM to 8:00 PM CST</span>
+    </div>
+    <div class="event-info">
+      <i class="fas fa-map-marker-alt"></i>
+      <span>ACC - RGC 3000</span>
+    </div>
+    <div class="event-info">
+      <i class="fas fa-glass-cheers"></i>
+      <span>After Party: The Tavern</span>
+    </div>
+    <p>Join us for our special Off SXSW edition!</p>
+    <a href="https://www.meetup.com/austin-langchain-ai-group/events/305993341/" class="button button--primary">RSVP on Meetup</a>
+  </div>
+</div>
 
-Join us for our mid-month Hacky Hour! This is a great opportunity to network and connect with other community members in a relaxed setting. For more details and to RSVP, visit our [Meetup page](https://www.meetup.com/austin-langchain-ai-group/events/305585780/).
+## 📚 Past Events
 
-### March Mixer and Showcase - Off SXSW Edition
-- **Date**: March 5, 2025
-- **Time**: 6:00 PM to 8:00 PM CST
-- **Location**: ACC - RGC 3000, 1218 West Avenue, Austin, TX
-- **After Party**: The Tavern, 922 W 12th Street, Austin, TX 78703
+<div class="event-card">
+  <span class="event-badge hacky-hour-badge">Hacky Hour</span>
+  <h3>January Hacky Hour</h3>
+  <div class="event-info">
+    <i class="fas fa-calendar"></i>
+    <span>January 22, 2025</span>
+  </div>
+  <div class="event-info">
+    <i class="fas fa-clock"></i>
+    <span>6:00 PM to 8:00 PM CST</span>
+  </div>
+  <div class="event-info">
+    <i class="fas fa-map-marker-alt"></i>
+    <span>Kinda Tropical</span>
+  </div>
+</div>
 
-Join us for our special Off SXSW edition of the monthly showcase and mixer! For more details and to RSVP, visit our [Meetup page](https://www.meetup.com/austin-langchain-ai-group/events/305993341/).
+<p class="text-center">
+  <a href="https://www.meetup.com/austin-langchain-ai-group/events/past/" class="button button--secondary">View All Past Events</a>
+</p>
 
-## Past Events
+## 📅 Regular Events
 
-### Austin LangChain January Hacky Hour @ Kinda Tropical
-- **Date**: January 22, 2025
-- **Time**: 6:00 PM to 8:00 PM CST
-- **Location**: Kinda Tropical, 3501 E. 7th · Austin, TX
+We host several regular events to keep our community engaged and connected. Mark your calendars!
 
+### <i class="fas fa-calendar-alt"></i> Monthly Mixer and Showcase
 
-For a complete list of our past events, please visit our [Meetup page](https://www.meetup.com/austin-langchain-ai-group/events/past/).
+<table class="schedule-table">
+  <tr>
+    <th>Event Type</th>
+    <th>Schedule</th>
+    <th>Time</th>
+    <th>Location</th>
+  </tr>
+  <tr>
+    <td><span class="event-badge showcase-badge">Monthly Showcase</span></td>
+    <td>First Wednesday</td>
+    <td>6:00 PM CST</td>
+    <td>ACC - RGC 3000</td>
+  </tr>
+  <tr>
+    <td><span class="event-badge hacky-hour-badge">Hacky Hour</span></td>
+    <td>Third Wednesday</td>
+    <td>6:00 PM CST</td>
+    <td>Cosmic Coffee Salito</td>
+  </tr>
+  <tr>
+    <td><i class="fas fa-users"></i> Office Hours</td>
+    <td>Every Tuesday</td>
+    <td>2:00 PM CST</td>
+    <td>Discord</td>
+  </tr>
+  <tr>
+    <td><i class="fas fa-comments"></i> Community Call</td>
+    <td>Every Thursday</td>
+    <td>2:00 PM CST</td>
+    <td>Google Meet</td>
+  </tr>
+</table>
 
-## Regular Events
-
-We host several regular events to keep our community engaged and connected:
-
-### Monthly Mixer and Showcase (First Wednesday of Each Month)
-
-#### 2025 Schedule:
+### <i class="fas fa-calendar-check"></i> 2025 Monthly Showcase Schedule
 - January 8, 2025 (Wednesday)
 - February 5, 2025 (Wednesday)
 - March 5, 2025 (Wednesday) - Branded as "Off SXSW"
@@ -81,42 +171,79 @@ This event combines networking, learning, and showcasing. It's our primary month
 
 **Parking**: The parking garage is free, but please note that the metal doors shut and lock at 9 PM. If you plan to stay later for conversations after the event, we recommend parking your car for free on the street. Street parking is free after 6 PM.
 
-### Mid-Month Happy Hour ("Hacky Hour") (Third Wednesday of Each Month)
+### <i class="fas fa-beer"></i> Hacky Hour Schedule
 
-#### 2025 Schedule:
-- January 22, 2025 (Wednesday)
-- February 19, 2025 (Wednesday)
-- March 19, 2025 (Wednesday) - Branded as "Off SXSW"
-- April 16, 2025 (Wednesday)
-- May 21, 2025 (Wednesday)
-- June 18, 2025 (Wednesday)
-- July 16, 2025 (Wednesday)
-- August 20, 2025 (Wednesday)
-- September 17, 2025 (Wednesday)
-- October 15, 2025 (Wednesday)
-- November 19, 2025 (Wednesday)
-- December 17, 2025 (Wednesday)
+<div class="event-card">
+  <span class="event-badge hacky-hour-badge">Hacky Hour</span>
+  <p>Join us every third Wednesday for casual networking and discussions!</p>
+  <div class="event-info">
+    <i class="fas fa-clock"></i>
+    <span>6:00 PM to 8:00 PM CST</span>
+  </div>
+  <div class="event-info">
+    <i class="fas fa-map-marker-alt"></i>
+    <span>Cosmic Coffee Salito</span>
+  </div>
+</div>
 
-These social gatherings are a great way to network and connect with other community members in a relaxed setting. Check our [Meetup page](https://www.meetup.com/austin-langchain-ai-group/) for specific times and locations.
+#### 2025 Dates:
+<div class="schedule-item">
+  <i class="fas fa-calendar-check"></i>
+  <span>January 22 • February 19 • March 19 (Off SXSW) • April 16 • May 21 • June 18 • July 16 • August 20 • September 17 • October 15 • November 19 • December 17</span>
+</div>
 
-### Weekly Office Hours
-- **When**: Every Tuesday at 2 PM Central
-- **Where**: [Discord Meeting Room](https://discord.com/channels/1149779360178524272/1149779360967045170)
+### <i class="fas fa-handshake"></i> Weekly Community Events
 
-This is a great opportunity to ask questions, get help with your projects, or just chat with other community members.
+<table class="schedule-table">
+  <tr>
+    <th>Event</th>
+    <th>Schedule</th>
+    <th>Platform</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><i class="fas fa-users"></i> Office Hours</td>
+    <td>Tuesdays @ 2 PM CST</td>
+    <td><a href="https://discord.com/channels/1149779360178524272/1149779360967045170">Discord Room</a></td>
+    <td>Get help with projects and chat with the community</td>
+  </tr>
+  <tr>
+    <td><i class="fas fa-comments"></i> Community Call</td>
+    <td>Thursdays @ 2 PM CST</td>
+    <td><a href="https://meet.google.com/fsm-nawg-cng">Google Meet</a></td>
+    <td>Event planning and open forum discussions</td>
+  </tr>
+</table>
 
-### Weekly Community Calls
-- **When**: Every Thursday at 2 PM Central
-- **Where**: [https://meet.google.com/fsm-nawg-cng](https://meet.google.com/fsm-nawg-cng)
+## <i class="fas fa-link"></i> Connect With Us
 
-During these calls, we plan our events and then break into an open forum. Everyone is welcome to join and contribute ideas!
-
-For more information on our regular events and other upcoming activities, please check our [Meetup page](https://www.meetup.com/austin-langchain-ai-group/events/).
-
-If you have any questions or would like to propose an event, please reach out to us through our community channels:
-
-- Website: [https://aimug.org](https://aimug.org)
-- GitHub: [https://github.com/aimug-org/austin_langchain](https://github.com/aimug-org/austin_langchain)
-- Twitter: [https://twitter.com/AustinLangChain](https://twitter.com/AustinLangChain)
-- Discord: [https://discord.gg/JzWgadPFQd](https://discord.gg/JzWgadPFQd)
-- YouTube: [https://www.youtube.com/channel/UC03IXA4KU6hOQ_3YPTbS0ig](https://www.youtube.com/channel/UC03IXA4KU6hOQ_3YPTbS0ig)
+<div class="event-grid">
+  <div class="event-card">
+    <div class="event-info">
+      <i class="fas fa-globe"></i>
+      <a href="https://aimug.org">aimug.org</a>
+    </div>
+    <div class="event-info">
+      <i class="fab fa-github"></i>
+      <a href="https://github.com/aimug-org/austin_langchain">GitHub</a>
+    </div>
+    <div class="event-info">
+      <i class="fab fa-twitter"></i>
+      <a href="https://twitter.com/AustinLangChain">Twitter</a>
+    </div>
+  </div>
+  <div class="event-card">
+    <div class="event-info">
+      <i class="fab fa-discord"></i>
+      <a href="https://discord.gg/JzWgadPFQd">Discord</a>
+    </div>
+    <div class="event-info">
+      <i class="fab fa-youtube"></i>
+      <a href="https://www.youtube.com/channel/UC03IXA4KU6hOQ_3YPTbS0ig">YouTube</a>
+    </div>
+    <div class="event-info">
+      <i class="fab fa-meetup"></i>
+      <a href="https://www.meetup.com/austin-langchain-ai-group/events/">Meetup</a>
+    </div>
+  </div>
+</div>
