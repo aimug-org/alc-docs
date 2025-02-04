@@ -29,12 +29,121 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+/* Event page styles */
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .event-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.event-card {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-card-border-radius);
+  padding: 1.5rem;
+  background: var(--ifm-background-surface-color);
+  box-shadow: var(--ifm-global-shadow-lw);
+  transition: transform 0.2s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+.event-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.showcase-badge {
+  background: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-primary-darkest);
+}
+
+.hacky-hour-badge {
+  background: var(--ifm-color-info-lightest);
+  color: var(--ifm-color-info-darkest);
+}
+
+.event-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.event-info i {
+  width: 1.25rem;
+  color: var(--ifm-color-primary);
+}
+
+.schedule-table {
+  width: 100%;
+  margin: 1rem 0;
+  border-collapse: collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.schedule-table th {
+  background: var(--ifm-color-emphasis-100);
+  font-weight: 600;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.button--secondary {
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-800);
+  margin: 1rem 0;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  transition: all 0.2s ease;
+}
+
+.button--secondary:hover {
+  background: var(--ifm-color-emphasis-300);
+  color: var(--ifm-color-emphasis-900);
+  text-decoration: none;
+}
+
+/* Event schedule styles */
+.schedule-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.schedule-item i {
+  color: var(--ifm-color-primary);
+  width: 1.25rem;
+}
+
 /* Custom styles for the landing page */
 .hero {
   background-color: #f0f4f8;
   color: #333;
   padding: 4rem 0;
-  margin-bottom: 2rem; /* Add space between hero and features */
+  margin-bottom: 2rem;
 }
 
 .hero__title {
@@ -65,47 +174,6 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.features {
-  display: flex;
-  align-items: center;
-  padding: 4rem 0;
-  width: 100%;
-  background-color: #ffffff; /* Light background for features section */
-}
-
-.featureIcon {
-  font-size: 3rem;
-  color: #205d3b; /* Darker color for better contrast */
-  margin-bottom: 1rem;
-}
-
-.features h3 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: #2e8555; /* Match with primary color */
-}
-
-.features p {
-  font-size: 1rem;
-  color: #666;
-}
-
-/* Responsive adjustments */
-@media screen and (max-width: 996px) {
-  .hero__title {
-    font-size: 2.5rem;
-  }
-
-  .hero__subtitle {
-    font-size: 1.2rem;
-  }
-
-  .features h3 {
-    font-size: 1.3rem;
-  }
-}
-
 /* Add Font Awesome for icons */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
@@ -114,76 +182,29 @@
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* Styles for navbar links */
-.navbar__items .navbar__item.navbar__link {
-  color: #0a3622; /* Even darker green color for better readability */
-  font-weight: 700; /* Make the text bolder */
-  font-size: 1.1rem; /* Slightly larger font size */
-}
-
-.navbar__items .navbar__item.navbar__link:hover,
-.navbar__items .navbar__item.navbar__link--active {
-  color: #2e8555; /* Use primary color on hover and for active link */
-}
-
-/* Updated footer styles */
-.footer {
-  background-color: #f0f4f8;
-  color: #333; /* Darker text color for better readability */
-}
-
-.footer__title {
-  color: #0a3622; /* Dark green color for category titles */
-  font-weight: 700; /* Make the text bolder */
-  font-size: 1.2rem; /* Slightly larger font size */
-}
-
-.footer__item {
-  font-weight: 500; /* Make the text slightly bolder */
-}
-
-.footer__link-item {
-  color: #205d3b; /* Darker green color for better readability */
-  font-weight: 500; /* Make the text slightly bolder */
-}
-
-.footer__link-item:hover {
-  color: #2e8555; /* Lighter green on hover */
-  text-decoration: underline; /* Add underline on hover for better visibility */
-}
-
-/* Add a subtle hover effect to feature items */
-.col.col--4 {
-  transition: transform 0.3s ease;
-}
-
-.col.col--4:hover {
-  transform: translateY(-5px);
-}
-
 /* Dark mode adjustments */
 [data-theme='dark'] .navbar__items .navbar__item.navbar__link {
-  color: #a3f7e0; /* Lighter and more vibrant color for dark mode */
+  color: #a3f7e0;
 }
 
 [data-theme='dark'] .navbar__items .navbar__item.navbar__link:hover,
 [data-theme='dark'] .navbar__items .navbar__item.navbar__link--active {
-  color: #25c2a0; /* Use primary color for dark mode on hover and for active link */
+  color: #25c2a0;
 }
 
 [data-theme='dark'] .footer {
-  background-color: #1a2b42; /* Darker background for footer in dark mode */
-  color: #e0e0e0; /* Lighter text color for better readability in dark mode */
+  background-color: #1a2b42;
+  color: #e0e0e0;
 }
 
 [data-theme='dark'] .footer__title {
-  color: #a3f7e0; /* Light green color for category titles in dark mode */
+  color: #a3f7e0;
 }
 
 [data-theme='dark'] .footer__link-item {
-  color: #7de2c9; /* Lighter green color for better readability in dark mode */
+  color: #7de2c9;
 }
 
 [data-theme='dark'] .footer__link-item:hover {
-  color: #25c2a0; /* Even lighter green on hover in dark mode */
+  color: #25c2a0;
 }
