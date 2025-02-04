@@ -2,20 +2,34 @@
 
 Welcome to the Austin LangChain Events page!
 
-**Virtual Meeting Link**: [https://meet.google.com/ohc-uugq-wrq](https://meet.google.com/ohc-uugq-wrq)
+**Virtual Meeting Link**: [meet.google.com/txr-rque-xst](meet.google.com/txr-rque-xst)
 
-*Last updated: January 9, 2024*
+*Last updated: February 4, 2025*
 
 ## Upcoming Events
+
+### February Showcase and Mixer
+- **Date**: February 5, 2025
+- **Time**: 6:00 PM to 8:00 PM CST
+- **Location**: ACC - RGC 3000, 1218 West Avenue, Austin, TX
+- **After Party**: The Tavern, 922 W 12th Street, Austin, TX 78703
+
+Join us for our monthly showcase and mixer! For more details and to RSVP, visit our [Meetup page](https://www.meetup.com/austin-langchain-ai-group/events/305540728/).
+
+### February Hacky Hour @ Kinda Tropical
+- **Date**: February 19, 2025
+- **Time**: 6:00 PM to 8:00 PM CST
+- **Location**: Kinda Tropical, 3501 E. 7th · Austin, TX
+
+Join us for our mid-month Hacky Hour! This is a great opportunity to network and connect with other community members in a relaxed setting. For more details and to RSVP, visit our [Meetup page](https://www.meetup.com/austin-langchain-ai-group/events/305585780/).
+
+## Past Events
 
 ### Austin LangChain January Hacky Hour @ Kinda Tropical
 - **Date**: January 22, 2025
 - **Time**: 6:00 PM to 8:00 PM CST
 - **Location**: Kinda Tropical, 3501 E. 7th · Austin, TX
 
-Join us for our mid-month Hacky Hour! This is a great opportunity to network and connect with other community members in a relaxed setting.
-
-## Past Events
 
 For a complete list of our past events, please visit our [Meetup page](https://www.meetup.com/austin-langchain-ai-group/events/past/).
 
