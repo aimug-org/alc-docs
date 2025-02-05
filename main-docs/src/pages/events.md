@@ -2,7 +2,7 @@
 
 Welcome to the Austin LangChain Events page! Join our vibrant community of AI enthusiasts and developers.
 
-**Virtual Meeting Link**: [meet.google.com/txr-rque-xst](meet.google.com/txr-rque-xst)
+**Virtual Meeting Link**: [meet.google.com/txr-rque-xst](https://meet.google.com/txr-rque-xst)
 
 *Last updated: February 4, 2025*
 
