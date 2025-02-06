@@ -162,4 +162,4 @@ gantt
 
 ---
 
-_Join us in building the future of AI in Austin! Connect with our community on Discord at [discord.gg/austinlangchain](https://discord.gg/austinlangchain) and stay tuned for updates on our SXSW event and upcoming technical showcases._
+_Join us in building the future of AI in Austin! Connect with our community on Discord at [discord.gg/JzWgadPFQd](https://discord.gg/JzWgadPFQd) and stay tuned for updates on our SXSW event and upcoming technical showcases._
