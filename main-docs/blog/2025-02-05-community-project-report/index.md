@@ -3,6 +3,7 @@ slug: austin-langchain-community-project-report
 title: "Austin LangChain Community Project Report: January-February 2025"
 authors: [colinmcnamara]
 tags: [community, ai-development, sxsw, tools, mcp, workflows]
+image: ./img/project-status-banner.png
 ---
 
 The Austin LangChain community has been making significant strides in technical development, community growth, and event planning. This comprehensive report outlines our key initiatives, progress, and future directions from mid-January through early February 2025.
