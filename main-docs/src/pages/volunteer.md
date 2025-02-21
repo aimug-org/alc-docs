@@ -22,8 +22,10 @@ Welcome to the Austin LangChain AIMUG volunteering page! Our events are made suc
 - **Unlock Doors**: Ensure venue doors are unlocked for attendees.
 
 #### AV System
-- **PC/Bridge Operator**: Log into the system PC, open the bridge for remote attendees, and manage recording.
-- **Equipment Setup**: Connect and test AV components (camera, mic, projector).
+- **PC/Bridge Operator**:
+  - Log into the system PC, open the bridge for remote attendees, and manage recording.
+  - Center podium camera to ensure speakers are visible at all times over bridge.
+- **Equipment Setup**: Connect and test AV components (camera, mic, projector). 
 - **Music Setup**: Log into Spotify and play the pre-approved playlist during entry.
 
 #### Food and Drink
