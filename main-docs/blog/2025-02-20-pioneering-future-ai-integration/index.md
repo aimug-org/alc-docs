@@ -210,9 +210,9 @@ graph TD
 ```
 
 ### Ready to Jump In?
-1. Come hang out with us at our [MCP Hacky Hour](https://www.meetup.com/austin-langchain-ai-group/events/) on February 26th at Cosmic Coffee Saltillo - bring your laptop and your curiosity!
+1. Come hang out with us at our [MCP Hacky Hour](https://www.meetup.com/austin-langchain-ai-group/events/305585780/) on February 26th at Cosmic Coffee Saltillo - bring your laptop and your curiosity!
 2. Got ideas? We'd love to see them! Contribute to our growing ecosystem on [GitHub](https://github.com/aimug-org)
-3. Show off your work at our upcoming [Community Showcase](https://www.meetup.com/austin-langchain-ai-group/events/) - we celebrate both victories and valuable learning experiences
+3. Show off your work at our upcoming [Community Showcase](https://www.meetup.com/austin-langchain-ai-group/events/305993341/) - we celebrate both victories and valuable learning experiences
 4. Join the conversation on [Discord](https://discord.gg/JzWgadPFQd) - our community is always buzzing with exciting discussions and collaborations
 
 ## Looking Forward
