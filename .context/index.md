@@ -1,71 +1,35 @@
-# Codebase Context
+# ALC-Docs Project Context
 
-## Project Overview
-- **Name**: alc-docs
-- **Description**: Documentation and event management system for Austin LangChain AI Middleware User Group
-- **Main Technologies**: 
-  - Docusaurus
-  - React
-  - Markdown
-  - Python
-  - Node.js >= 20.0
+This project contains documentation and blog posts for the Austin LangChain AI Middleware User Group.
 
-## Directory Structure
-```
-/
-├── main-docs/               # Main documentation site
-│   ├── docs/               # Core documentation content
-│   │   └── {month}-{year}/ # Monthly content directories
-│   ├── blog/               # Blog posts and announcements
-│   └── src/
-│       └── pages/          # Static pages
-├── scripts/                # Utility scripts
-└── .context/              # AI assistance files
-```
+## Project Structure
 
-## Conventions
+- `/main-docs` - Main Docusaurus site
+  - `/blog` - Blog posts and announcements
+  - `/docs` - Technical documentation organized by month/year
+  - `/src` - React components and customizations
+  - `/static` - Static assets like images
 
-### Documentation
-- All content written in Markdown
-- Monthly organization in /main-docs/docs/{month}-{year}/
-- Event pages auto-generated using Python scripts
+## Recent Updates
 
-### File Naming
-- Use kebab-case for file names
-- Python scripts use snake_case
-- React components use PascalCase
-- CSS modules use camelCase
+- Added blog post: "Austin LangChain Office Hours: Sonnet 3.7 Impresses, AI Simulations Develop Social Media Addiction, and Custom Inference Engines Unlock New Possibilities" (2025-02-26)
+  - Located at: `/main-docs/blog/2025-02-26-langchain-office-hours-sonnet-37/`
+  - Covers Claude Sonnet 3.7, Pixel Valley AI simulation, and custom inference engines
+  - Source: Office Hours meeting (2025-02-25)
 
-### Blog Posts
-- Truncation marker (<!-- truncate -->) after first paragraph
-- Only use tags from /main-docs/blog/tags.yml
-- Link authors to GitHub profiles
-- Include proper frontmatter (slug, title, authors, tags)
+## Main Technologies
 
-### Development
-- Node.js version 20+ required
-- npm for package management
-- Python for automation scripts
-- React for custom components
+- Docusaurus (React-based documentation framework)
+- Markdown for content
+- Python scripts for automation (event management, etc.)
+
+## Development Guidelines
+
+- Blog posts should include a truncation marker (`<!-- truncate -->`) after the introduction
+- All content should be organized according to the conventions in `.context.md`
+- For new blog posts, create a `.context.md` file to document purpose and related content
+- Check tags against the defined tags in `/main-docs/blog/tags.yml`
 
 ## Related Resources
-- [Docusaurus Documentation](https://docusaurus.io/docs)
-- [LangChain Documentation](https://python.langchain.com/docs/get_started/introduction)
-- [Austin LangChain Community](https://aimug.org)
-- [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html)
 
-## Excluded from Analysis
-- Build outputs (main-docs/build/, .docusaurus/)
-- Dependencies (node_modules/)
-- Environment files (.env*)
-- IDE and editor files
-- Temporary and cache files
-- Generated files (except specific images)
-
-## Notes for AI Assistance
-- Use update_events.py for modifying event pages
-- Follow monthly directory structure for new docs
-- Maintain consistent Markdown formatting
-- Verify tags exist in tags.yml before use
-- Ensure Node.js 20+ compatibility
-- Check .contextignore for excluded patterns
+For more detailed project conventions and guidelines, see the root `.context.md` file.
