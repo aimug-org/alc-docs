@@ -2,57 +2,15 @@
 
 Welcome to the Austin LangChain Events page! Join our vibrant community of AI enthusiasts and developers.
 
-**Virtual Meeting Link**: [meet.google.com/txr-rque-xst](https://meet.google.com/txr-rque-xst)
+**Virtual Meeting Link**: [Zoom Meeting](https://us06web.zoom.us/j/87616196733?pwd=fRonx1va43mHYpj7fy9mdrjHG6awxp.1)
 
-*Last updated: February 4, 2025*
+*Last updated: March 5, 2025*
 
 ## 🎯 Featured Upcoming Events
 
 <div class="event-grid">
   <div class="event-card">
-    <span class="event-badge showcase-badge">Monthly Showcase</span>
-    <h3>February Showcase and Mixer</h3>
-    <div class="event-info">
-      <i class="fas fa-calendar"></i>
-      <span>February 5, 2025</span>
-    </div>
-    <div class="event-info">
-      <i class="fas fa-clock"></i>
-      <span>6:00 PM to 8:00 PM CST</span>
-    </div>
-    <div class="event-info">
-      <i class="fas fa-map-marker-alt"></i>
-      <span>ACC - RGC 3000</span>
-    </div>
-    <div class="event-info">
-      <i class="fas fa-glass-cheers"></i>
-      <span>After Party: The Tavern</span>
-    </div>
-    <p>Join us for our monthly showcase and mixer!</p>
-    <a href="https://www.meetup.com/austin-langchain-ai-group/events/305540728/" class="button button--primary">RSVP on Meetup</a>
-  </div>
-
-  <div class="event-card">
-    <span class="event-badge hacky-hour-badge">Hacky Hour</span>
-    <h3>February Hacky Hour</h3>
-    <div class="event-info">
-      <i class="fas fa-calendar"></i>
-      <span>February 19, 2025</span>
-    </div>
-    <div class="event-info">
-      <i class="fas fa-clock"></i>
-      <span>6:00 PM to 8:00 PM CST</span>
-    </div>
-    <div class="event-info">
-      <i class="fas fa-map-marker-alt"></i>
-      <span>Cosmic Coffee Salito</span>
-    </div>
-    <p>Network and connect with community members in a relaxed setting!</p>
-    <a href="https://www.meetup.com/austin-langchain-ai-group/events/305585780/" class="button button--primary">RSVP on Meetup</a>
-  </div>
-
-  <div class="event-card">
-    <span class="event-badge showcase-badge">Special Edition</span>
+    <span class="event-badge showcase-badge">TONIGHT! Special Edition</span>
     <h3>March Mixer - Off SXSW Edition</h3>
     <div class="event-info">
       <i class="fas fa-calendar"></i>
@@ -60,7 +18,7 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
     </div>
     <div class="event-info">
       <i class="fas fa-clock"></i>
-      <span>6:00 PM to 8:00 PM CST</span>
+      <span>6:00 PM to 8:30 PM CST</span>
     </div>
     <div class="event-info">
       <i class="fas fa-map-marker-alt"></i>
@@ -68,10 +26,20 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
     </div>
     <div class="event-info">
       <i class="fas fa-glass-cheers"></i>
-      <span>After Party: The Tavern</span>
+      <span>After Party: The Tavern (8:30 - 9:00 PM)</span>
     </div>
-    <p>Join us for our special Off SXSW edition!</p>
+    <p>Join us tonight for our special Off SXSW edition featuring:</p>
+    <ul>
+      <li>Student Showcase - Cancer Research using AI/ML</li>
+      <li>MCP Cloud usage with Cloudflare</li>
+      <li>MCP + Open-WebUI + Pipelines + LangGraph</li>
+    </ul>
+    <div class="event-info">
+      <i class="fas fa-video"></i>
+      <span>Remote Option Available</span>
+    </div>
     <a href="https://www.meetup.com/austin-langchain-ai-group/events/305993341/" class="button button--primary">RSVP on Meetup</a>
+    <a href="https://us06web.zoom.us/j/87616196733?pwd=fRonx1va43mHYpj7fy9mdrjHG6awxp.1" class="button button--secondary">Join Zoom Meeting</a>
   </div>
 
   <div class="event-card">
@@ -91,9 +59,62 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
     </div>
     <p>Save the date for our special SXSW rooftop celebration!</p>
   </div>
+  
+  <div class="event-card">
+    <span class="event-badge hacky-hour-badge">Hacky Hour</span>
+    <h3>March Hacky Hour</h3>
+    <div class="event-info">
+      <i class="fas fa-calendar"></i>
+      <span>March 19, 2025</span>
+    </div>
+    <div class="event-info">
+      <i class="fas fa-clock"></i>
+      <span>6:00 PM to 8:00 PM CST</span>
+    </div>
+    <div class="event-info">
+      <i class="fas fa-map-marker-alt"></i>
+      <span>Cosmic Coffee Salito</span>
+    </div>
+    <p>Network and connect with community members in a relaxed setting!</p>
+    <a href="https://www.meetup.com/austin-langchain-ai-group/" class="button button--primary">RSVP on Meetup</a>
+  </div>
 </div>
 
 ## 📚 Past Events
+
+<div class="event-card">
+  <span class="event-badge showcase-badge">Monthly Showcase</span>
+  <h3>February Showcase and Mixer</h3>
+  <div class="event-info">
+    <i class="fas fa-calendar"></i>
+    <span>February 5, 2025</span>
+  </div>
+  <div class="event-info">
+    <i class="fas fa-clock"></i>
+    <span>6:00 PM to 8:00 PM CST</span>
+  </div>
+  <div class="event-info">
+    <i class="fas fa-map-marker-alt"></i>
+    <span>ACC - RGC 3000</span>
+  </div>
+</div>
+
+<div class="event-card">
+  <span class="event-badge hacky-hour-badge">Hacky Hour</span>
+  <h3>February Hacky Hour</h3>
+  <div class="event-info">
+    <i class="fas fa-calendar"></i>
+    <span>February 19, 2025</span>
+  </div>
+  <div class="event-info">
+    <i class="fas fa-clock"></i>
+    <span>6:00 PM to 8:00 PM CST</span>
+  </div>
+  <div class="event-info">
+    <i class="fas fa-map-marker-alt"></i>
+    <span>Cosmic Coffee Salito</span>
+  </div>
+</div>
 
 <div class="event-card">
   <span class="event-badge hacky-hour-badge">Hacky Hour</span>

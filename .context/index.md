@@ -12,6 +12,11 @@ This project contains documentation and blog posts for the Austin LangChain AI M
 
 ## Recent Updates
 
+- Updated events page with Zoom link for March 5, 2025 "March Mixer - Off SXSW Edition" event (2025-03-05)
+  - Located at: `/main-docs/src/pages/events.md`
+  - Updated virtual meeting link to Zoom: https://us06web.zoom.us/j/87616196733?pwd=fRonx1va43mHYpj7fy9mdrjHG6awxp.1
+  - Added detailed schedule for tonight's event
+
 - Added blog post: "Austin LangChain Office Hours: Sonnet 3.7 Impresses, AI Simulations Develop Social Media Addiction, and Custom Inference Engines Unlock New Possibilities" (2025-02-26)
   - Located at: `/main-docs/blog/2025-02-26-langchain-office-hours-sonnet-37/`
   - Covers Claude Sonnet 3.7, Pixel Valley AI simulation, and custom inference engines
