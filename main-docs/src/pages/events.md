@@ -4,7 +4,7 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
 
 **Virtual Meeting Link**: [Zoom Meeting](https://us06web.zoom.us/j/87616196733?pwd=fRonx1va43mHYpj7fy9mdrjHG6awxp.1)
 
-*Last updated: March 5, 2025*
+*Last updated: March 8, 2025*
 
 ## 🎯 Featured Upcoming Events
 
@@ -44,20 +44,34 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
 
   <div class="event-card">
     <span class="event-badge showcase-badge">Special Event</span>
-    <h3>SXSW Rooftop Party</h3>
+    <h3>SXSW Lightning Talks Party</h3>
     <div class="event-info">
       <i class="fas fa-calendar"></i>
       <span>March 12, 2025</span>
     </div>
     <div class="event-info">
-      <i class="fas fa-clock"></i>
-      <span>Time TBA</span>
-    </div>
-    <div class="event-info">
       <i class="fas fa-map-marker-alt"></i>
-      <span>Location TBA</span>
+      <span>Hosted by Cloudflare</span>
     </div>
-    <p>Save the date for our special SXSW rooftop celebration!</p>
+    <p>Join us for an electrifying evening hosted by Cloudflare as we celebrate innovation, community, and the rapid evolution of AI in Austin. With over 1,100 members in our community, this night promises an exceptional blend of learning, networking, and fun.</p>
+    
+    <h4>Lightning Talks</h4>
+    <p>We're thrilled to announce a series of quick, insightful presentations from community members including Ryan, Collier, Scott, Kareem, Colin, and Joseph.</p>
+    
+    <h4>Topics Include:</h4>
+    <ul>
+      <li>Distributed AI integrations on Cloudflare's edge</li>
+      <li>AI-driven software development and pipelines</li>
+      <li>AI-powered data science</li>
+      <li>AI-driven art</li>
+      <li>Integrations with Obsidian and more</li>
+    </ul>
+    
+    <p>Each presentation ties back to the LangChain project—a journey of learning and growth that has been a cornerstone of our community for nearly two years.</p>
+    
+    <p><strong>Please register on both platforms:</strong></p>
+    <a href="https://lu.ma/ibqo2o69" class="button button--primary">Register on Lu.ma</a>
+    <a href="https://www.meetup.com/austin-langchain-ai-group/events/306612411/" class="button button--secondary">RSVP on Meetup</a>
   </div>
   
   <div class="event-card">

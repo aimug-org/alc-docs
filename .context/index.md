@@ -12,6 +12,13 @@ This project contains documentation and blog posts for the Austin LangChain AI M
 
 ## Recent Updates
 
+- Updated events page with SXSW Lightning Talks Party information (2025-03-08)
+  - Located at: `/main-docs/src/pages/events.md`
+  - Replaced "SXSW Rooftop Party" with "SXSW Lightning Talks Party" on March 12, 2025
+  - Added registration links for Lu.ma and Meetup
+  - Added detailed event description and speaker information
+  - Updated "Last updated" date to March 8, 2025
+
 - Updated events page with Zoom link for March 5, 2025 "March Mixer - Off SXSW Edition" event (2025-03-05)
   - Located at: `/main-docs/src/pages/events.md`
   - Updated virtual meeting link to Zoom: https://us06web.zoom.us/j/87616196733?pwd=fRonx1va43mHYpj7fy9mdrjHG6awxp.1
