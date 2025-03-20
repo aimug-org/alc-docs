@@ -11,6 +11,30 @@ Welcome to Austin LangChain! We're a vibrant community of AI enthusiasts, develo
 
 ## 🌟 Connect & Engage
 
+### Subscribe to Our Newsletter
+<div className={styles.row}>
+  <div className={styles.col}>
+    <div className={styles.card}>
+      <div className={styles.cardHeader}>
+        <h3>📧 Mailing List</h3>
+      </div>
+      <div className={styles.cardBody}>
+        <p>Get updates, event announcements, and community news</p>
+        <form
+          action="https://buttondown.com/api/emails/embed-subscribe/aimug.org"
+          method="post"
+          target="popupwindow"
+          onsubmit="window.open('https://newsletter.aimug.org', 'popupwindow')"
+          className={styles.subscribeForm}
+        >
+          <input type="email" name="email" id="bd-email" placeholder="Enter your email" />
+          <input type="submit" value="Subscribe" className="button button--primary" />
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 ### Join Our Online Communities
 <div className={styles.row}>
   <div className={styles.col}>
@@ -49,30 +73,6 @@ Welcome to Austin LangChain! We're a vibrant community of AI enthusiasts, develo
         <div className={styles.buttonContainer}>
           <a href="https://www.youtube.com/channel/UC03IXA4KU6hOQ_3YPTbS0ig" className="button button--primary">Subscribe</a>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-### Subscribe to Our Newsletter
-<div className={styles.row}>
-  <div className={styles.col}>
-    <div className={styles.card}>
-      <div className={styles.cardHeader}>
-        <h3>📧 Mailing List</h3>
-      </div>
-      <div className={styles.cardBody}>
-        <p>Get updates, event announcements, and community news</p>
-        <form
-          action="https://buttondown.com/api/emails/embed-subscribe/aimug.org"
-          method="post"
-          target="popupwindow"
-          onsubmit="window.open('https://newsletter.aimug.org', 'popupwindow')"
-          className={styles.subscribeForm}
-        >
-          <input type="email" name="email" id="bd-email" placeholder="Enter your email" />
-          <input type="submit" value="Subscribe" className="button button--primary" />
-        </form>
       </div>
     </div>
   </div>

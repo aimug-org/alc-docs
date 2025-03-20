@@ -19,8 +19,8 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--primary button--lg"
-            to="/docs/Austin-LangChain-AIMUG-Introduction">
-            Get Started
+            to="/community">
+            Join Our Community
           </Link>
         </div>
       </div>

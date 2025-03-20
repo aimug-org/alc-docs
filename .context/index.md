@@ -12,6 +12,12 @@ This project contains documentation and blog posts for the Austin LangChain AI M
 
 ## Recent Updates
 
+- Added newsletter subscription forms to improve community engagement (2025-03-20)
+  - Added to homepage with prominent styling
+  - Made the mailing list the first option on the community page
+  - Connected to Buttondown for email management
+  - Updated main navigation to direct users to community page
+
 - Added March 2025 documentation for AI Cancer Detection (2025-03-20)
   - Located at: `/main-docs/docs/mar-2025/`
   - Contains technical details on Venika Kakarla's multi-algorithm machine learning approach
