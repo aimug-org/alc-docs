@@ -39,7 +39,7 @@ function FeedbackSection() {
                 we'd appreciate knowing why you decided to unsubscribe:
               </p>
               <div className={styles.feedbackOptions}>
-                <Link to="https://forms.gle/YourFeedbackFormURL" className="button button--outline button--primary">
+                <Link to="https://docs.google.com/forms/d/e/1FAIpQLSc6He6SQ0sqsrAKpRFkOy1ib479xyWjeAIiuisqKyYc9ZAhcQ/viewform?usp=header" className="button button--outline button--primary">
                   Share Your Feedback
                 </Link>
               </div>
