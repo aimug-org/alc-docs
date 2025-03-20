@@ -41,7 +41,7 @@ flowchart TB
 
 # High School Sophomore's AI Cancer Detection Breakthrough
 
-At our March Austin LangChain meeting, we witnessed an extraordinary presentation from Vinika Kakarla, a sophomore at Round Rock High School, who developed a sophisticated machine learning model to detect and analyze hepatocellular carcinoma (HTC)—the fatal liver cancer that claimed her grandfather's life. Her innovative approach combines deep neural networks, XGBoost regression, and graph convolutional networks to predict protein stability and DNA binding affinity in cancer cells with unprecedented efficiency.
+At our March Austin LangChain meeting, we witnessed an extraordinary presentation from Venika Kakarla, a sophomore at Round Rock High School, who developed a sophisticated machine learning model to detect and analyze hepatocellular carcinoma (HTC)—the fatal liver cancer that claimed her grandfather's life. Her innovative approach combines deep neural networks, XGBoost regression, and graph convolutional networks to predict protein stability and DNA binding affinity in cancer cells with unprecedented efficiency.
 
 <!-- truncate -->
 
