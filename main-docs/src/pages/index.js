@@ -85,6 +85,46 @@ function HomepageFeatures() {
   );
 }
 
+function NewsletterSignup() {
+  return (
+    <section className={styles.newsletter}>
+      <div className="container">
+        <div className="row">
+          <div className="col col--8 col--offset-2">
+            <div className={styles.newsletterCard}>
+              <Heading as="h2" className={styles.newsletterTitle}>
+                Subscribe to Our Newsletter
+              </Heading>
+              <p className={styles.newsletterDescription}>
+                Stay up-to-date with our latest events, technical content, and community news.
+              </p>
+              <form
+                action="https://buttondown.com/api/emails/embed-subscribe/aimug.org"
+                method="post"
+                target="popupwindow"
+                onSubmit={() => window.open('https://newsletter.aimug.org', 'popupwindow')}
+                className={styles.newsletterForm}
+              >
+                <input 
+                  type="email" 
+                  name="email" 
+                  id="home-bd-email" 
+                  placeholder="Enter your email address" 
+                  className={styles.newsletterInput}
+                  required
+                />
+                <button type="submit" className="button button--primary">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -94,6 +134,7 @@ export default function Home() {
       <HomepageHeader />
       <main>
         <HomepageFeatures />
+        <NewsletterSignup />
       </main>
     </Layout>
   );

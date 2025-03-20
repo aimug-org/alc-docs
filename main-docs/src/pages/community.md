@@ -54,6 +54,30 @@ Welcome to Austin LangChain! We're a vibrant community of AI enthusiasts, develo
   </div>
 </div>
 
+### Subscribe to Our Newsletter
+<div className={styles.row}>
+  <div className={styles.col}>
+    <div className={styles.card}>
+      <div className={styles.cardHeader}>
+        <h3>📧 Mailing List</h3>
+      </div>
+      <div className={styles.cardBody}>
+        <p>Get updates, event announcements, and community news</p>
+        <form
+          action="https://buttondown.com/api/emails/embed-subscribe/aimug.org"
+          method="post"
+          target="popupwindow"
+          onsubmit="window.open('https://newsletter.aimug.org', 'popupwindow')"
+          className={styles.subscribeForm}
+        >
+          <input type="email" name="email" id="bd-email" placeholder="Enter your email" />
+          <input type="submit" value="Subscribe" className="button button--primary" />
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 ### Attend Our Events
 <div className={styles.row}>
   <div className={styles.col}>

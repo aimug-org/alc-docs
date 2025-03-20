@@ -12,6 +12,28 @@
   padding: 1rem;
 }
 
+.subscribeForm {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.subscribeForm input[type="email"] {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-button-border-radius);
+  font-size: 0.9rem;
+  min-width: 200px;
+}
+
+@media (max-width: 576px) {
+  .subscribeForm {
+    flex-direction: column;
+  }
+}
+
 .cardHeader {
   margin-bottom: 0.5rem;
 }
