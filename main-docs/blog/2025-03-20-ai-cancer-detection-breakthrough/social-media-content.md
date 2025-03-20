@@ -19,4 +19,6 @@ The original content included:
 - Short-form content for Instagram/Facebook
 - Scheduling recommendations
 
+Note: The name has been corrected to "Venika Kakarla" in the Obsidian content.
+
 <!-- truncate -->

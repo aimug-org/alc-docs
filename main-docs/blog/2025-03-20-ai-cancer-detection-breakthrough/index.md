@@ -62,7 +62,7 @@ graph TD
     style E fill:#9cf
 ```
 
-Vinika's journey into AI-powered cancer research began with a personal connection—her grandfather's battle with hepatocellular carcinoma. This form of liver cancer is the third leading cause of cancer-related deaths worldwide and presents unique challenges due to its varying nature between patients.
+Venika's journey into AI-powered cancer research began with a personal connection—her grandfather's battle with hepatocellular carcinoma. This form of liver cancer is the third leading cause of cancer-related deaths worldwide and presents unique challenges due to its varying nature between patients.
 
 Her research focuses on the P53 protein, specifically its DNA binding region, which plays a critical role in controlling tumor growth. When mutations occur in this protein—as they do in approximately 50% of HTC patients—cancer cells can replicate without bounds, leading to aggressive cancer proliferation. Even a single amino acid change in the DNA binding domain can significantly alter the protein's stability and binding affinity, dramatically affecting cancer progression.
 
@@ -102,7 +102,7 @@ flowchart TD
     style M fill:#9cf
 ```
 
-Vinika's solution is a three-part machine learning model that delivers results in minutes rather than hours:
+Venika's solution is a three-part machine learning model that delivers results in minutes rather than hours:
 
 ### 1. Data Preparation
 - Started with 1,400 cases of mutated P53 protein from the COSMIC database
@@ -139,13 +139,13 @@ The model achieved remarkable accuracy with minimal processing time:
 - 99% accuracy for numerical stability values (XGBoost)
 - Complete mutation interaction probability predictions for all 249 mutants
 
-Most significantly, while traditional computational methods would require 2,400-2,500 hours to analyze all mutations, Vinika's model completed the task in just three minutes.
+Most significantly, while traditional computational methods would require 2,400-2,500 hours to analyze all mutations, Venika's model completed the task in just three minutes.
 
 Her analysis revealed that the R249S mutation (arginine to serine) decreases both stability and binding interaction probability, and that a statistical majority of P53-related point mutations affect DNA interaction, leading to faster cancer progression.
 
 ## Future Directions
 
-Vinika's plans for this project include:
+Venika's plans for this project include:
 1. Gathering more lab data to verify and improve model accuracy
 2. Consulting with professionals to enhance the machine learning components
 3. Creating a web-based interface for researchers
@@ -155,17 +155,19 @@ The implications extend beyond hepatocellular carcinoma, as P53 is a critical pr
 
 ## An Inspiring Journey
 
-When asked about her inspiration, Vinika shared: "After I realized how machine learning and AI can help us understand more about different cancers and help researchers mostly understand more about the patterns in this cancer... I decided to try and apply all of these factors into a machine learning or AI model so that it can accurately predict patterns that maybe we were not able to see."
+When asked about her inspiration, Venika shared: "After I realized how machine learning and AI can help us understand more about different cancers and help researchers mostly understand more about the patterns in this cancer... I decided to try and apply all of these factors into a machine learning or AI model so that it can accurately predict patterns that maybe we were not able to see."
 
 Her personal connection to the disease adds particular poignancy to this research breakthrough: "A family member of mine actually had this cancer and passed away from it. So I wanted to learn more about it and try to create an impact in this field so that I can change the lives of many in the future, hopefully, so they don't meet the same fate."
 
 ## Looking Forward
 
-Vinika's work represents a perfect intersection of personal motivation, scientific inquiry, and technological innovation. By creating a P53-specific machine learning model that predicts stability and binding affinity in minutes rather than hours, she has developed a tool that could significantly advance cancer research while making it more accessible to researchers worldwide.
+Venika's work represents a perfect intersection of personal motivation, scientific inquiry, and technological innovation. By creating a P53-specific machine learning model that predicts stability and binding affinity in minutes rather than hours, she has developed a tool that could significantly advance cancer research while making it more accessible to researchers worldwide.
 
 The Austin LangChain community was deeply impressed by this remarkable achievement from such a young innovator. As Colin McNamara noted during the presentation, "You did amazing work with great results on zero resources. So terribly impressive."
 
-For more information on this project, you can watch the full presentation on our [YouTube channel](https://www.youtube.com/watch?v=ArqkC5sQjEY).
+## Watch the Full Presentation
+
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/ArqkC5sQjEY" title="Venika Kakarla: AI Cancer Detection Breakthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Join Our Community
 
