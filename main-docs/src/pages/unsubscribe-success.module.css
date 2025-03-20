@@ -1,0 +1,208 @@
+/**
+ * Unsubscribe Success page styles
+ */
+
+/* Header Section */
+.unsubscribeBanner {
+  padding: 3rem 0;
+  text-align: center;
+  position: relative;
+  background-color: var(--ifm-color-emphasis-100);
+  margin-bottom: 2rem;
+}
+
+.unsubscribeIcon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* Feedback Section */
+.feedbackSection {
+  padding: 2rem 0;
+}
+
+.feedbackCard {
+  background-color: var(--ifm-background-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.feedbackCard h2 {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.feedbackCard p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.feedbackOptions {
+  display: flex;
+  justify-content: center;
+}
+
+/* Resubscribe Section */
+.resubscribeSection {
+  padding: 2rem 0 3rem;
+}
+
+.resubscribeCard {
+  background-color: var(--ifm-color-primary-lightest);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.resubscribeCard h2 {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--ifm-color-primary-dark);
+}
+
+.resubscribeCard p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.resubscribeButton {
+  display: flex;
+  justify-content: center;
+}
+
+/* Alternative Connection Section */
+.alternativeSection {
+  padding: 3rem 0;
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.sectionDescription {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--ifm-color-emphasis-700);
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.alternativeCards {
+  margin-bottom: 3rem;
+}
+
+.card {
+  background-color: var(--ifm-background-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  height: 100%;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-color: var(--ifm-color-primary);
+}
+
+.cardHeader {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.cardHeader i {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--ifm-color-primary);
+}
+
+.cardHeader h3 {
+  margin-bottom: 0;
+}
+
+.cardBody {
+  text-align: center;
+}
+
+.cardBody p {
+  margin-bottom: 1.5rem;
+  min-height: 3rem;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.eventsTeaser {
+  text-align: center;
+  background-color: var(--ifm-background-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.eventsTeaser h3 {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.eventsTeaser p {
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+}
+
+.eventsButtonContainer {
+  margin-top: 1.5rem;
+}
+
+/* Return Home Section */
+.returnSection {
+  padding: 3rem 0;
+}
+
+.returnContainer {
+  display: flex;
+  justify-content: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 996px) {
+  .alternativeCards .col {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .unsubscribeBanner {
+    padding: 2rem 0;
+  }
+  
+  .feedbackCard,
+  .resubscribeCard {
+    padding: 1.5rem;
+  }
+}
