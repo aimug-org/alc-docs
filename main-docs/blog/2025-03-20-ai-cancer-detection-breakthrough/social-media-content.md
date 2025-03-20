@@ -1,4 +1,15 @@
+---
+slug: ai-cancer-detection-social-media
+title: "Social Media Content for AI Cancer Detection Presentation"
+authors: [colinmcnamara]
+tags: [ai, langchain, ai-development]
+---
+
 # Social Media Content for Vinika Kakarla's AI Cancer Detection Presentation
+
+This document contains promotional content for sharing Vinika Kakarla's AI cancer detection presentation across various social media platforms.
+
+<!-- truncate -->
 
 ## Twitter Thread
 
