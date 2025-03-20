@@ -13,14 +13,21 @@ flowchart TB
     classDef dna fill:#9c6, stroke:#333, stroke-width:2px
     classDef result fill:#c9f, stroke:#333, stroke-width:2px
 
-    A[Mutated P53\nProtein] --> B[Data Processing]
-    B --> C[AlphaFold\nStructure Prediction]
-    B --> D[Adjacency\nMatrices]
+    A["Mutated P53
+Protein"] --> B[Data Processing]
+    B --> C["AlphaFold
+Structure Prediction"]
+    B --> D["Adjacency
+Matrices"]
     
     subgraph ML["AI/ML Model"]
-        E[Deep Neural\nNetwork] --> H[Stability\nClassification]
-        F[XGBoost] --> I[Thermostability\nValue]
-        G[Graph Convolutional\nNetwork]
+        E["Deep Neural
+Network"] --> H["Stability
+Classification"]
+        F[XGBoost] --> I["Thermostability
+Value"]
+        G["Graph Convolutional
+Network"]
         H --> G
         I --> G
     end
@@ -28,10 +35,14 @@ flowchart TB
     C --> ML
     D --> ML
     
-    G --> J[DNA Binding\nAffinity Prediction]
-    J --> K[Cancer\nProgression\nInsights]
+    G --> J["DNA Binding
+Affinity Prediction"]
+    J --> K["Cancer
+Progression
+Insights"]
     
-    L[3 Minutes vs.\n2,500 Hours] -.- K
+    L["3 Minutes vs.
+2,500 Hours"] -.- K
     
     class A protein
     class ML ml
@@ -49,15 +60,15 @@ At our March Austin LangChain meeting, we witnessed an extraordinary presentatio
 
 ```mermaid
 graph TD
-    A[Hepatocellular Carcinoma] --> B[3rd Leading Cause of Cancer Deaths]
-    A --> C[Difficult to Diagnose]
-    A --> D[Varies Between Patients]
-    E[P53 Protein] --> F[DNA Binding Domain]
-    E --> G[Controls Tumor Growth]
-    E --> H[Mutated in 50% of HTC Cases]
-    H --> I[Single Amino Acid Changes]
-    I --> J[Altered Protein Function]
-    J --> K[Aggressive Cancer Growth]
+    A["Hepatocellular Carcinoma"] --> B["3rd Leading Cause of Cancer Deaths"]
+    A --> C["Difficult to Diagnose"]
+    A --> D["Varies Between Patients"]
+    E["P53 Protein"] --> F["DNA Binding Domain"]
+    E --> G["Controls Tumor Growth"]
+    E --> H["Mutated in 50% of HTC Cases"]
+    H --> I["Single Amino Acid Changes"]
+    I --> J["Altered Protein Function"]
+    J --> K["Aggressive Cancer Growth"]
     style A fill:#f99
     style E fill:#9cf
 ```
@@ -81,21 +92,21 @@ This inefficient analysis contributes to slow diagnosis and an incomplete unders
 
 ```mermaid
 flowchart TD
-    A[1,400 Mutated P53 Cases] --> B[Pre-processing]
-    B --> C[249 Significant Point Mutations]
-    C --> D[Python Scripting]
-    D --> E[AlphaFold Structure Prediction]
-    D --> F[Adjacency Matrices Creation]
+    A["1,400 Mutated P53 Cases"] --> B["Pre-processing"]
+    B --> C["249 Significant Point Mutations"]
+    C --> D["Python Scripting"]
+    D --> E["AlphaFold Structure Prediction"]
+    D --> F["Adjacency Matrices Creation"]
 
-    G[Machine Learning Framework] --> H[Deep Neural Network]
-    G --> I[XGBoost Regression]
-    G --> J[Graph Convolutional Network]
+    G["Machine Learning Framework"] --> H["Deep Neural Network"]
+    G --> I["XGBoost Regression"]
+    G --> J["Graph Convolutional Network"]
     
-    H --> K[Stability Classification]
-    I --> L[Numerical Stability Value]
+    H --> K["Stability Classification"]
+    I --> L["Numerical Stability Value"]
     K --> J
     L --> J
-    J --> M[DNA Binding Affinity Prediction]
+    J --> M["DNA Binding Affinity Prediction"]
     
     style G fill:#9cf
     style J fill:#9cf

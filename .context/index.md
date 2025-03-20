@@ -19,7 +19,7 @@ This project contains documentation and blog posts for the Austin LangChain AI M
 
 - Added blog post: "High School Sophomore Creates Groundbreaking AI Solution for Detecting Fatal Liver Cancer" (2025-03-20)
   - Located at: `/main-docs/blog/2025-03-20-ai-cancer-detection-breakthrough/`
-  - Covers Vinika Kakarla's presentation on using AI/ML to detect hepatocellular carcinoma
+  - Covers Venika Kakarla's presentation on using AI/ML to detect hepatocellular carcinoma
   - Features interactive Mermaid diagrams to visualize the ML model architecture
   - Includes social media content for promotion
   - Source: March meeting presentation, YouTube video: https://www.youtube.com/watch?v=ArqkC5sQjEY

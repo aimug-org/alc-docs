@@ -4,14 +4,21 @@ flowchart TB
     classDef dna fill:#9c6, stroke:#333, stroke-width:2px
     classDef result fill:#c9f, stroke:#333, stroke-width:2px
 
-    A[Mutated P53\nProtein] --> B[Data Processing]
-    B --> C[AlphaFold\nStructure Prediction]
-    B --> D[Adjacency\nMatrices]
+    A["Mutated P53
+Protein"] --> B[Data Processing]
+    B --> C["AlphaFold
+Structure Prediction"]
+    B --> D["Adjacency
+Matrices"]
     
     subgraph ML["AI/ML Model"]
-        E[Deep Neural\nNetwork] --> H[Stability\nClassification]
-        F[XGBoost] --> I[Thermostability\nValue]
-        G[Graph Convolutional\nNetwork]
+        E["Deep Neural
+Network"] --> H["Stability
+Classification"]
+        F[XGBoost] --> I["Thermostability
+Value"]
+        G["Graph Convolutional
+Network"]
         H --> G
         I --> G
     end
@@ -19,10 +26,14 @@ flowchart TB
     C --> ML
     D --> ML
     
-    G --> J[DNA Binding\nAffinity Prediction]
-    J --> K[Cancer\nProgression\nInsights]
+    G --> J["DNA Binding
+Affinity Prediction"]
+    J --> K["Cancer
+Progression
+Insights"]
     
-    L[3 Minutes vs.\n2,500 Hours] -.- K
+    L["3 Minutes vs.
+2,500 Hours"] -.- K
     
     class A protein
     class ML ml
