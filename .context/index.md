@@ -12,6 +12,12 @@ This project contains documentation and blog posts for the Austin LangChain AI M
 
 ## Recent Updates
 
+- Added blog post: "High School Sophomore Creates Groundbreaking AI Solution for Detecting Fatal Liver Cancer" (2025-03-20)
+  - Located at: `/main-docs/blog/2025-03-20-ai-cancer-detection-breakthrough/`
+  - Covers Vinika Kakarla's presentation on using AI/ML to detect hepatocellular carcinoma
+  - Includes social media content for promotion
+  - Source: March meeting presentation, YouTube video: https://www.youtube.com/watch?v=ArqkC5sQjEY
+
 - Updated events page with SXSW Lightning Talks Party information (2025-03-08)
   - Located at: `/main-docs/src/pages/events.md`
   - Replaced "SXSW Rooftop Party" with "SXSW Lightning Talks Party" on March 12, 2025

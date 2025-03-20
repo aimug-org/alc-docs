@@ -9,38 +9,6 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
 ## 🎯 Featured Upcoming Events
 
 <div class="event-grid">
-  <div class="event-card">
-    <span class="event-badge showcase-badge">TONIGHT! Special Edition</span>
-    <h3>March Mixer - Off SXSW Edition</h3>
-    <div class="event-info">
-      <i class="fas fa-calendar"></i>
-      <span>March 5, 2025</span>
-    </div>
-    <div class="event-info">
-      <i class="fas fa-clock"></i>
-      <span>6:00 PM to 8:30 PM CST</span>
-    </div>
-    <div class="event-info">
-      <i class="fas fa-map-marker-alt"></i>
-      <span>ACC - RGC 3000</span>
-    </div>
-    <div class="event-info">
-      <i class="fas fa-glass-cheers"></i>
-      <span>After Party: The Tavern (8:30 - 9:00 PM)</span>
-    </div>
-    <p>Join us tonight for our special Off SXSW edition featuring:</p>
-    <ul>
-      <li>Student Showcase - Cancer Research using AI/ML</li>
-      <li>MCP Cloud usage with Cloudflare</li>
-      <li>MCP + Open-WebUI + Pipelines + LangGraph</li>
-    </ul>
-    <div class="event-info">
-      <i class="fas fa-video"></i>
-      <span>Remote Option Available</span>
-    </div>
-    <a href="https://www.meetup.com/austin-langchain-ai-group/events/305993341/" class="button button--primary">RSVP on Meetup</a>
-    <a href="https://us06web.zoom.us/j/87616196733?pwd=fRonx1va43mHYpj7fy9mdrjHG6awxp.1" class="button button--secondary">Join Zoom Meeting</a>
-  </div>
 
   <div class="event-card">
     <span class="event-badge showcase-badge">Special Event</span>
@@ -95,6 +63,27 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
 </div>
 
 ## 📚 Past Events
+
+<div class="event-card">
+  <span class="event-badge showcase-badge">Special Edition</span>
+  <h3>March Mixer - Off SXSW Edition</h3>
+  <div class="event-info">
+    <i class="fas fa-calendar"></i>
+    <span>March 5, 2025</span>
+  </div>
+  <div class="event-info">
+    <i class="fas fa-clock"></i>
+    <span>6:00 PM to 8:30 PM CST</span>
+  </div>
+  <div class="event-info">
+    <i class="fas fa-map-marker-alt"></i>
+    <span>ACC - RGC 3000</span>
+  </div>
+  <div class="event-info">
+    <i class="fas fa-glass-cheers"></i>
+    <span>After Party: The Tavern (8:30 - 9:00 PM)</span>
+  </div>
+</div>
 
 <div class="event-card">
   <span class="event-badge showcase-badge">Monthly Showcase</span>
