@@ -12,6 +12,12 @@ This project contains documentation and blog posts for the Austin LangChain AI M
 
 ## Recent Updates
 
+- Added March 2025 documentation for AI Cancer Detection (2025-03-20)
+  - Located at: `/main-docs/docs/mar-2025/`
+  - Contains technical details on Venika Kakarla's multi-algorithm machine learning approach
+  - Includes Mermaid diagrams visualizing the ML architecture
+  - Links to related blog post and resources
+
 - Added Mermaid diagram utilities for blog post visualizations (2025-03-20)
   - Located at: `/scripts/mermaid-utilities/`
   - Includes tools for generating PNG images from Mermaid diagrams
