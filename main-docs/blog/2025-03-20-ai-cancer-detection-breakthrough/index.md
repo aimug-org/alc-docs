@@ -3,7 +3,41 @@ slug: ai-cancer-detection-breakthrough-high-school-student
 title: "High School Sophomore Creates Groundbreaking AI Solution for Detecting Fatal Liver Cancer"
 authors: [colinmcnamara]
 tags: [ai, langchain, ai-development, models, tools]
+image: ./img/thumbnail.png
 ---
+
+```mermaid
+flowchart TB
+    classDef protein fill:#f96, stroke:#333, stroke-width:2px
+    classDef ml fill:#58f, stroke:#333, stroke-width:2px
+    classDef dna fill:#9c6, stroke:#333, stroke-width:2px
+    classDef result fill:#c9f, stroke:#333, stroke-width:2px
+
+    A[Mutated P53\nProtein] --> B[Data Processing]
+    B --> C[AlphaFold\nStructure Prediction]
+    B --> D[Adjacency\nMatrices]
+    
+    subgraph ML["AI/ML Model"]
+        E[Deep Neural\nNetwork] --> H[Stability\nClassification]
+        F[XGBoost] --> I[Thermostability\nValue]
+        G[Graph Convolutional\nNetwork]
+        H --> G
+        I --> G
+    end
+    
+    C --> ML
+    D --> ML
+    
+    G --> J[DNA Binding\nAffinity Prediction]
+    J --> K[Cancer\nProgression\nInsights]
+    
+    L[3 Minutes vs.\n2,500 Hours] -.- K
+    
+    class A protein
+    class ML ml
+    class J dna
+    class K,L result
+```
 
 # High School Sophomore's AI Cancer Detection Breakthrough
 

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Cancer Detection Model Diagram</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f7f7f7;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .mermaid {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        .instructions {
+            background-color: #f0f7ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Cancer Detection Model Visualization</h1>
+        
+        <div class="mermaid">
+flowchart TB
+    classDef protein fill:#f96, stroke:#333, stroke-width:2px
+    classDef ml fill:#58f, stroke:#333, stroke-width:2px
+    classDef dna fill:#9c6, stroke:#333, stroke-width:2px
+    classDef result fill:#c9f, stroke:#333, stroke-width:2px
+
+    A[Mutated P53\nProtein] --> B[Data Processing]
+    B --> C[AlphaFold\nStructure Prediction]
+    B --> D[Adjacency\nMatrices]
+    
+    subgraph ML["AI/ML Model"]
+        E[Deep Neural\nNetwork] --> H[Stability\nClassification]
+        F[XGBoost] --> I[Thermostability\nValue]
+        G[Graph Convolutional\nNetwork]
+        H --> G
+        I --> G
+    end
+    
+    C --> ML
+    D --> ML
+    
+    G --> J[DNA Binding\nAffinity Prediction]
+    J --> K[Cancer\nProgression\nInsights]
+    
+    L[3 Minutes vs.\n2,500 Hours] -.- K
+    
+    class A protein
+    class ML ml
+    class J dna
+    class K,L result
+        </div>
+        
+        <div class="instructions">
+            <h3>Instructions:</h3>
+            <p>This is a visualization of Vinika Kakarla's AI model for cancer detection.</p>
+            <p>To generate a PNG image from this diagram:</p>
+            <ol>
+                <li>Make sure Node.js is installed on your system</li>
+                <li>Run the generate-thumbnail.sh script in the terminal: <code>cd img && ./generate-thumbnail.sh</code></li>
+                <li>The script will generate a thumbnail.png file that can be used in the blog post</li>
+            </ol>
+            <p>You can also save this diagram as an image by using your browser's screenshot functionality or by right-clicking on the diagram and selecting "Save image as..."</p>
+        </div>
+    </div>
+
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'default',
+            securityLevel: 'loose'
+        });
+    </script>
+</body>
+</html>

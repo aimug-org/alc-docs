@@ -12,9 +12,15 @@ This project contains documentation and blog posts for the Austin LangChain AI M
 
 ## Recent Updates
 
+- Added Mermaid diagram utilities for blog post visualizations (2025-03-20)
+  - Located at: `/scripts/mermaid-utilities/`
+  - Includes tools for generating PNG images from Mermaid diagrams
+  - Provides a workflow for creating visual content for blog posts and documentation
+
 - Added blog post: "High School Sophomore Creates Groundbreaking AI Solution for Detecting Fatal Liver Cancer" (2025-03-20)
   - Located at: `/main-docs/blog/2025-03-20-ai-cancer-detection-breakthrough/`
   - Covers Vinika Kakarla's presentation on using AI/ML to detect hepatocellular carcinoma
+  - Features interactive Mermaid diagrams to visualize the ML model architecture
   - Includes social media content for promotion
   - Source: March meeting presentation, YouTube video: https://www.youtube.com/watch?v=ArqkC5sQjEY
 
