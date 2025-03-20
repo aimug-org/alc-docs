@@ -12,6 +12,18 @@ This project contains documentation and blog posts for the Austin LangChain AI M
 
 ## Recent Updates
 
+- Added subscription confirmation page (2025-03-20)
+  - Created a dedicated page at /subscribe-success
+  - Includes email verification instructions and steps
+  - Provides quick access to other community platforms
+  - Designed for redirect from Buttondown subscription form
+
+- Improved feature card usability on homepage (2025-03-20)
+  - Added visual indicators for clickable cards
+  - Enhanced hover effects with shadow and transformation
+  - Added "Learn more →" text that appears on hover
+  - Improved color contrast for better accessibility
+
 - Added newsletter subscription forms to improve community engagement (2025-03-20)
   - Added to homepage with prominent styling
   - Made the mailing list the first option on the community page

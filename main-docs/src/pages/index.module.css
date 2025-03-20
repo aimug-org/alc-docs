@@ -35,19 +35,44 @@
   text-decoration: none;
   transition: all 0.3s ease;
   display: block;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 8px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  background-color: var(--ifm-background-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+  margin-bottom: 1rem;
+  overflow: hidden;
 }
 
 .featureLink:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.02);
   transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-color: var(--ifm-color-primary);
+}
+
+.featureLink:after {
+  content: "Learn more →";
+  position: absolute;
+  bottom: 1rem;
+  right: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--ifm-color-primary);
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+}
+
+.featureLink:hover:after {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .featureIcon {
   font-size: 3rem;
   padding-bottom: 1rem;
+  color: var(--ifm-color-primary);
 }
 
 /* Newsletter Section Styles */
