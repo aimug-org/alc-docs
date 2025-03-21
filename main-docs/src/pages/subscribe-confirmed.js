@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -186,6 +186,13 @@ function ReturnHomeSection() {
 
 export default function SubscribeConfirmed() {
   const {siteConfig} = useDocusaurusContext();
+  
+  // Mark user as subscribed in localStorage when they reach this page
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.localStorage) {
+      window.localStorage.setItem('alcNewsletterSubscribed', 'true');
+    }
+  }, []);
   return (
     <Layout
       title="Subscription Confirmed"

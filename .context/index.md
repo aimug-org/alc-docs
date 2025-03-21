@@ -13,6 +13,13 @@ This project contains documentation and blog posts for the Austin LangChain AI M
 
 ## Recent Updates
 
+- Added blog newsletter popup for mailing list subscriptions (2025-03-21)
+  - Created popup that appears when users scroll to 50% of blog posts
+  - Implemented localStorage tracking to avoid showing to existing subscribers
+  - Added combined messaging about learning, events, and innovation
+  - Integrated with existing subscription confirmation workflow
+  - Created with responsive design for all device sizes
+
 - Added email drip campaign sequence (2025-03-21)
   - Created 4-email onboarding sequence for new subscribers
   - Designed to send over a 2-week period at strategic intervals

@@ -1,0 +1,161 @@
+.popupContainer {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 380px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translateY(20px);
+  opacity: 0;
+  pointer-events: none;
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.popupVisible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.popupHeader {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popupTitle {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.closeButton:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.popupContent {
+  padding: 20px;
+}
+
+.popupMessage {
+  margin-bottom: 15px;
+  color: var(--ifm-color-emphasis-800);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.subscribeForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.emailInput {
+  padding: 10px 15px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+.emailInput:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px rgba(46, 133, 85, 0.2);
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.subscribeButton {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.subscribeButton:hover {
+  background-color: var(--ifm-color-primary-dark);
+}
+
+.dismissText {
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.85rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.dismissText:hover {
+  color: var(--ifm-color-emphasis-800);
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .popupContainer {
+  background-color: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .popupHeader {
+  background-color: var(--ifm-color-primary-darker);
+}
+
+[data-theme='dark'] .popupMessage {
+  color: var(--ifm-color-emphasis-600);
+}
+
+[data-theme='dark'] .emailInput {
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .emailInput:focus {
+  border-color: var(--ifm-color-primary-lighter);
+  box-shadow: 0 0 0 2px rgba(37, 194, 160, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .popupContainer {
+    width: calc(100% - 40px);
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
