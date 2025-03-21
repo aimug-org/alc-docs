@@ -123,8 +123,36 @@ Files with the `-md` suffix use only standard Markdown formatting without HTML e
 
 These templates use Buttondown's templating syntax for personalization:
 
-- `{{ subscriber.first_name | default: "there" }}` - Displays the subscriber's first name if available, or "there" if not
+### Subscriber Variables
+- `{{ subscriber.metadata.first_name | default: "there" }}` - Displays the subscriber's first name if available, or "there" if not
+- `{{ subscriber.email }}` - The subscriber's email address
+- `{{ subscriber.tags }}` - List of tags assigned to the subscriber
+- `{{ subscriber.can_be_upsold }}` - Boolean indicating if subscriber can be prompted to upgrade
+- `{{ subscriber.subscriber_type }}` - Type of subscription (e.g., "premium", "regular")
+
+### Email Variables
+- `{{ email.subject }}` - The subject of the email
+- `{{ email.secondary_id }}` - The issue number of the email
+- `{{ email.publish_date }}` - The date the email is published
+- `{{ email_url }}` - The permalink to view the email in a browser
+
+### RSS Feed Variables
+- `{{ item }}` - The first item in the digest
+- `{{ item.title }}` - Title of the post
+- `{{ item.url }}` - URL of the post
+- `{{ item.description }}` - Summary of the post
+- `{{ item.content }}` - Full content of the post
+- `{{ item.author }}` - Author of the post (if available)
+- `{{ item.publish_date }}` - Date the post was published
+- `{{ items }}` - A list of items on which to iterate
+
+### Utility Variables
 - `{{ unsubscribe_url }}` - Automatically inserts the unsubscribe link
+- `{{ subscribe_url }}` - URL for new subscribers to sign up
+- `{{ upgrade_url }}` - URL for subscribers to upgrade to paid tier
+- `{{ medium }}` - Either 'email' (for emails) or 'web' (for web views)
+- `{{ subscribe_form }}` - Embedded subscribe form (only appears in web view)
+- `{{ month }}` - The current month (e.g., "March")
 
 Check [Buttondown's documentation](https://buttondown.email/features/templating) for more details on available variables and functions.
 

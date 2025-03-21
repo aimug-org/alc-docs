@@ -13,6 +13,13 @@ This project contains documentation and blog posts for the Austin LangChain AI M
 
 ## Recent Updates
 
+- Added weekly RSS digest email templates (2025-03-21)
+  - Created comprehensive and simple versions for weekly content roundups
+  - Implemented Buttondown RSS feed variable integration
+  - Added content categorization, community spotlight, and personalized sections
+  - Designed for sending every Sunday with latest community content
+  - Updated README.md and .context.md with detailed documentation
+
 - Added blog newsletter popup for mailing list subscriptions (2025-03-21)
   - Created popup that appears when users scroll to 50% of blog posts
   - Implemented localStorage tracking to avoid showing to existing subscribers
