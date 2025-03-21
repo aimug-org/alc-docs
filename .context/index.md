@@ -12,6 +12,18 @@ This project contains documentation and blog posts for the Austin LangChain AI M
 
 ## Recent Updates
 
+- Added email-optimized assets for marketing communications (2025-03-20)
+  - Created dedicated email-assets directory structure
+  - Added optimized logo (192px) and social media icons (32px)
+  - Provided comprehensive documentation for each asset type
+  - Designed for maximum email client compatibility
+
+- Added email templates for mailing list (2025-03-20)
+  - Created welcome email template with Buttondown integration
+  - Updated to use HTML formatting for better email client compatibility
+  - Added documentation for template usage and maintenance
+  - Created in new `/main-docs/email-templates/` directory
+
 - Added confirmed subscription page (2025-03-20)
   - Created a dedicated page at /subscribe-confirmed
   - Shows post-verification success message and welcome
