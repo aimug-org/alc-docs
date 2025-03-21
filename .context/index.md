@@ -12,17 +12,23 @@ This project contains documentation and blog posts for the Austin LangChain AI M
 
 ## Recent Updates
 
+- Added confirmed subscription page (2025-03-20)
+  - Created a dedicated page at /subscribe-confirmed
+  - Shows post-verification success message and welcome
+  - Highlights newsletter benefits and community resources
+  - Features social media links and next steps guidance
+
 - Added unsubscribe confirmation page (2025-03-20)
   - Created a dedicated page at /unsubscribe-success
   - Offers feedback collection option and easy resubscribe path
   - Provides alternative ways to stay connected
-  - Matches design language of subscribe confirmation page
+  - Matches design language of subscription pages
 
-- Added subscription confirmation page (2025-03-20)
-  - Created a dedicated page at /subscribe-success
+- Added unconfirmed subscription page (2025-03-20)
+  - Repurposed page at /subscribe-success for pending subscriptions
   - Includes email verification instructions and steps
   - Provides quick access to other community platforms
-  - Designed for redirect from Buttondown subscription form
+  - Designed for redirect after initial Buttondown form submission
 
 - Improved feature card usability on homepage (2025-03-20)
   - Added visual indicators for clickable cards
