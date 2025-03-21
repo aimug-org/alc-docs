@@ -65,6 +65,34 @@ The following sequence of emails is designed to be sent over a 2-week period to 
   - Opportunity to present at future events
   - Conclusion of the welcome sequence
 
+### Weekly RSS Digest Emails
+
+The following templates are designed for weekly newsletters that automatically pull content from your RSS feed:
+
+#### Comprehensive Weekly Digest
+- **File:** [weekly-rss-digest-md.md](./weekly-rss-digest-md.md)
+- **When to Send:** Every Sunday
+- **Purpose:** Provide a comprehensive weekly roundup of community content and AI news
+- **Key Features:**
+  - Featured article highlight
+  - Content categorized by type (Technical, Learning, Projects)
+  - Community spotlight section
+  - "From the Archives" section for older relevant content
+  - AI industry news roundup
+  - Interactive elements (challenges, polls)
+  - Personalized content recommendations based on subscriber tags
+  - Upcoming events and quick links
+
+#### Simple Weekly Digest
+- **File:** [weekly-rss-digest-simple-md.md](./weekly-rss-digest-simple-md.md)
+- **When to Send:** Alternative to comprehensive digest when a simpler format is desired
+- **Purpose:** Provide a streamlined weekly content update
+- **Key Features:**
+  - Top story highlight
+  - List of recent content
+  - Upcoming events
+  - Quick links to community resources
+
 ## Format Versions
 
 Each drip email template is available in two formats:
