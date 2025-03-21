@@ -13,6 +13,76 @@ This directory contains email templates for various communications with the Aust
   - Links to community resources
   - Call to action for getting involved
 
+### Drip Campaign Emails
+
+The following sequence of emails is designed to be sent over a 2-week period to new subscribers:
+
+#### 1. Welcome & Introduction
+- **Files:** 
+  - HTML/MD Hybrid: [drip-email-1-welcome.md](./drip-email-1-welcome.md)
+  - Pure Markdown: [drip-email-1-welcome-md.md](./drip-email-1-welcome-md.md)
+- **When to Send:** Immediately after subscription confirmation
+- **Purpose:** Welcome new subscribers and provide an introduction to the community
+- **Key Features:**
+  - Warm welcome to the community
+  - Overview of community values and mission
+  - Preview of upcoming emails in the sequence
+  - Quick-start links to engage immediately
+
+#### 2. Learning Resources
+- **Files:** 
+  - HTML/MD Hybrid: [drip-email-2-resources.md](./drip-email-2-resources.md)
+  - Pure Markdown: [drip-email-2-resources-md.md](./drip-email-2-resources-md.md)
+- **When to Send:** 3 days after Email 1
+- **Purpose:** Provide educational resources for different skill levels
+- **Key Features:**
+  - Learning paths for beginners, intermediate, and advanced users
+  - Monthly labs timeline and progression
+  - Featured recent tutorial
+  - Weekly learning opportunities
+
+#### 3. Community Engagement
+- **Files:** 
+  - HTML/MD Hybrid: [drip-email-3-community.md](./drip-email-3-community.md)
+  - Pure Markdown: [drip-email-3-community-md.md](./drip-email-3-community-md.md)
+- **When to Send:** 5 days after Email 2
+- **Purpose:** Highlight ways to engage with the community
+- **Key Features:**
+  - In-person events information
+  - Virtual engagement opportunities
+  - Online communities (Discord, YouTube)
+  - Ways to contribute to the community
+
+#### 4. Recent Showcase & Invitation
+- **Files:** 
+  - HTML/MD Hybrid: [drip-email-4-showcase.md](./drip-email-4-showcase.md)
+  - Pure Markdown: [drip-email-4-showcase-md.md](./drip-email-4-showcase-md.md)
+- **When to Send:** 7 days after Email 3
+- **Purpose:** Highlight a recent innovation and invite to upcoming events
+- **Key Features:**
+  - Featured showcase of a community member's project
+  - Invitation to the next monthly meetup
+  - Opportunity to present at future events
+  - Conclusion of the welcome sequence
+
+## Format Versions
+
+Each drip email template is available in two formats:
+
+### HTML/Markdown Hybrid
+Files without the `-md` suffix use a hybrid of Markdown and HTML formatting for better email client compatibility, particularly for:
+- Centering images
+- Creating styled containers and cards
+- Formatting buttons with background colors
+- Creating advanced layouts like side-by-side columns
+
+### Pure Markdown
+Files with the `-md` suffix use only standard Markdown formatting without HTML elements. These are useful for:
+- Email clients that strip HTML formatting
+- Platforms that only accept plain Markdown
+- Better accessibility for screen readers
+- Easier editing without dealing with HTML syntax
+
 ## Using These Templates
 
 1. Copy the content of the desired template

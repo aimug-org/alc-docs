@@ -9,8 +9,16 @@ This project contains documentation and blog posts for the Austin LangChain AI M
   - `/docs` - Technical documentation organized by month/year
   - `/src` - React components and customizations
   - `/static` - Static assets like images
+  - `/email-templates` - Email templates for mailing list communications
 
 ## Recent Updates
+
+- Added email drip campaign sequence (2025-03-21)
+  - Created 4-email onboarding sequence for new subscribers
+  - Designed to send over a 2-week period at strategic intervals
+  - Structured to build engagement and community participation
+  - Includes welcome, resources, community, and showcase emails
+  - Added `.context.md` file with detailed template guidelines
 
 - Added email-optimized assets for marketing communications (2025-03-20)
   - Created dedicated email-assets directory structure
@@ -18,7 +26,7 @@ This project contains documentation and blog posts for the Austin LangChain AI M
   - Provided comprehensive documentation for each asset type
   - Designed for maximum email client compatibility
 
-- Added email templates for mailing list (2025-03-20)
+- Added welcome email template for mailing list (2025-03-20)
   - Created welcome email template with Buttondown integration
   - Updated to use HTML formatting for better email client compatibility
   - Added documentation for template usage and maintenance
