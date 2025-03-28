@@ -13,6 +13,14 @@ This project contains documentation and blog posts for the Austin LangChain AI M
 
 ## Recent Updates
 
+- Added blog post: "Integrating AI Workflows: Karim Lalani's Deep Dive into MCP, OpenWeb UI, LangChain, and LangGraph" (2025-03-28)
+  - Located at: `/main-docs/blog/2025-03-05-integrating-ai-workflows-karim-lalani/`
+  - Covers Karim Lalani's presentation on integrating various AI tools and technologies
+  - Includes embedded YouTube video of the full presentation
+  - Highlights MCP, OpenWeb UI pipelines, LangGraph, and LangChain integration
+  - Set as draft for review before publication
+  - Source: March 5, 2025 Meeting - "March Mixer - Off SXSW Edition"
+
 - Added weekly RSS digest email templates (2025-03-21)
   - Created comprehensive and simple versions for weekly content roundups
   - Implemented Buttondown RSS feed variable integration
