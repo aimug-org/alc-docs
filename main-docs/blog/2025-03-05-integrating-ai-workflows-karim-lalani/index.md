@@ -6,7 +6,6 @@ authors:
     title: Community Contributor
     url: https://github.com/colinmcnamara
 tags: [ai, langchain, workflows, tools, mcp, models]
-draft: true
 ---
 
 At a recent Austin Lane Chain AI Mug event, Karim Lalani presented an innovative talk on integrating the Model Context Protocol (MCP), OpenWeb UI pipelines, and the agentic workflow capabilities provided by LangGraph—core elements of a broader ecosystem that also includes LangChain for managing language model interactions.
