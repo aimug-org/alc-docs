@@ -13,6 +13,14 @@ This project contains documentation and blog posts for the Austin LangChain AI M
 
 ## Recent Updates
 
+- Added blog post: "Austin LangChain Office Hours Recap: MCP Architecture, A2A Protocol, and Voice Applications" (2025-04-23)
+  - Located at: `/main-docs/blog/2025-04-23-langchain-office-hours-recap/`
+  - Covers the April 22nd office hours discussion on emerging AI middleware technologies
+  - Includes a mermaid diagram visualizing key concepts
+  - Highlights discussions on MCP architecture, A2A protocol, and voice applications
+  - Features direct quotes from participants and action items
+  - Source: April 22nd, 2025 Office Hours meeting
+
 - Added blog post: "Integrating AI Workflows: Karim Lalani's Deep Dive into MCP, OpenWeb UI, LangChain, and LangGraph" (2025-03-28)
   - Located at: `/main-docs/blog/2025-03-05-integrating-ai-workflows-karim-lalani/`
   - Covers Karim Lalani's presentation on integrating various AI tools and technologies
