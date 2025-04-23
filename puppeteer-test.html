@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puppeteer MCP Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            min-height: 100px;
+            background-color: #f9f9f9;
+        }
+        input {
+            padding: 8px;
+            width: 100%;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        select {
+            padding: 8px;
+            width: 100%;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Puppeteer MCP Server Test</h1>
+        <p>This page demonstrates the capabilities of the Puppeteer MCP server by providing interactive elements that can be controlled through the Puppeteer API.</p>
+        
+        <h2>Input Field Test</h2>
+        <input type="text" id="textInput" placeholder="Type something here...">
+        
+        <h2>Button Click Test</h2>
+        <button id="clickButton">Click Me</button>
+        
+        <h2>Hover Test</h2>
+        <div id="hoverTest" style="background-color: #e0e0e0; padding: 10px; border-radius: 4px; cursor: pointer;">
+            Hover over me to change my color
+        </div>
+        
+        <h2>Select Test</h2>
+        <select id="selectTest">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select>
+        
+        <h2>Console Log Test</h2>
+        <button id="logButton">Generate Console Logs</button>
+        
+        <h2>Output</h2>
+        <div id="output">Interaction results will appear here</div>
+    </div>
+
+    <script>
+        // Button click test
+        document.getElementById('clickButton').addEventListener('click', function() {
+            document.getElementById('output').textContent = 'Button was clicked at: ' + new Date().toLocaleTimeString();
+            console.log('Button click event triggered');
+        });
+        
+        // Input field test
+        document.getElementById('textInput').addEventListener('input', function(e) {
+            document.getElementById('output').textContent = 'Input value: ' + e.target.value;
+            console.log('Input changed to: ' + e.target.value);
+        });
+        
+        // Hover test
+        const hoverElement = document.getElementById('hoverTest');
+        hoverElement.addEventListener('mouseenter', function() {
+            this.style.backgroundColor = '#007bff';
+            this.style.color = 'white';
+            document.getElementById('output').textContent = 'Hover detected at: ' + new Date().toLocaleTimeString();
+            console.log('Hover event triggered');
+        });
+        
+        hoverElement.addEventListener('mouseleave', function() {
+            this.style.backgroundColor = '#e0e0e0';
+            this.style.color = 'black';
+            console.log('Hover event ended');
+        });
+        
+        // Select test
+        document.getElementById('selectTest').addEventListener('change', function(e) {
+            document.getElementById('output').textContent = 'Selected: ' + e.target.value;
+            console.log('Selection changed to: ' + e.target.value);
+        });
+        
+        // Console log test
+        document.getElementById('logButton').addEventListener('click', function() {
+            console.log('This is a log message');
+            console.info('This is an info message');
+            console.warn('This is a warning message');
+            console.error('This is an error message');
+            document.getElementById('output').textContent = 'Console logs generated at: ' + new Date().toLocaleTimeString();
+        });
+    </script>
+</body>
+</html>
