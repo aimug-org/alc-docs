@@ -13,6 +13,15 @@ This project contains documentation and blog posts for the Austin LangChain AI M
 
 ## Recent Updates
 
+- Added blog post: "AIMUG Office Hours Recap - Model Context Protocol (MCP) and Agent Architectures" (2025-04-30)
+  - Located at: `/main-docs/blog/2025-04-30-aimug-office-hours-mcp-agent-architectures/`
+  - Covers discussions on MCP implementations and agent-to-agent interactions
+  - Highlights insights on deploying MCP beyond local implementations
+  - Features alternative agent frameworks like Lindy
+  - Discusses observability and governance in agent ecosystems
+  - Includes featured image in the img directory
+  - Updated newsletter link to newsletter.aimug.org/#subscribe-form
+
 - Added blog post: "Austin LangChain Office Hours Recap: MCP Architecture, A2A Protocol, and Voice Applications" (2025-04-23)
   - Located at: `/main-docs/blog/2025-04-23-langchain-office-hours-recap/`
   - Covers the April 22nd office hours discussion on emerging AI middleware technologies
