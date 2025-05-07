@@ -13,6 +13,14 @@ This project contains documentation and blog posts for the Austin LangChain AI M
 
 ## Recent Updates
 
+- Added blog post: "Tonight @ AIMUG: Lightning Talks, LangChain Voice-Agent Lab & Mixer" (2025-05-07)
+  - Located at: `/main-docs/blog/2025-05-07-tonight-aimug-lightning-talks-langchain-voice-agent-lab/`
+  - Announces the May 7th AIMUG event featuring community lightning talks and a hands-on lab
+  - Provides detailed agenda, lab resources, and logistics information
+  - Features lightning talks on AI automation for ERP tasks and Agent-to-Agent (A2A) interactions
+  - Includes hands-on lab for building voice agents with FastRTC and Jupyter
+  - Highlights both in-person and remote attendance options
+
 - Added blog post: "AIMUG Office Hours Recap - Model Context Protocol (MCP) and Agent Architectures" (2025-04-30)
   - Located at: `/main-docs/blog/2025-04-30-aimug-office-hours-mcp-agent-architectures/`
   - Covers discussions on MCP implementations and agent-to-agent interactions
