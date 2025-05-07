@@ -2,7 +2,8 @@
 
 Welcome to the Austin LangChain Events page! Join our vibrant community of AI enthusiasts and developers.
 
-**Virtual Meeting Link**: [Google Meet](https://meet.google.com/fsm-nawg-cng)
+**Weekly Office Hours**: Tuesdays @ 5 PM CT - [Google Meet](https://meet.google.com/fsm-nawg-cng)  
+*(Note: Special events like showcases and mixers have their own meeting links listed with each event)*
 
 *Last updated: May 7, 2025*
 
