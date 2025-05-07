@@ -2,52 +2,19 @@
 
 Welcome to the Austin LangChain Events page! Join our vibrant community of AI enthusiasts and developers.
 
-**Virtual Meeting Link**: [Zoom Meeting](https://us06web.zoom.us/j/87616196733?pwd=fRonx1va43mHYpj7fy9mdrjHG6awxp.1)
+**Virtual Meeting Link**: [Google Meet](https://meet.google.com/fsm-nawg-cng)
 
-*Last updated: March 8, 2025*
+*Last updated: May 7, 2025*
 
 ## 🎯 Featured Upcoming Events
 
 <div class="event-grid">
-
   <div class="event-card">
-    <span class="event-badge showcase-badge">Special Event</span>
-    <h3>SXSW Lightning Talks Party</h3>
+    <span class="event-badge showcase-badge">Monthly Showcase</span>
+    <h3>AIMUG: Lightning Talks, LangChain Voice-Agent Lab & Mixer</h3>
     <div class="event-info">
       <i class="fas fa-calendar"></i>
-      <span>March 12, 2025</span>
-    </div>
-    <div class="event-info">
-      <i class="fas fa-map-marker-alt"></i>
-      <span>Hosted by Cloudflare</span>
-    </div>
-    <p>Join us for an electrifying evening hosted by Cloudflare as we celebrate innovation, community, and the rapid evolution of AI in Austin. With over 1,100 members in our community, this night promises an exceptional blend of learning, networking, and fun.</p>
-    
-    <h4>Lightning Talks</h4>
-    <p>We're thrilled to announce a series of quick, insightful presentations from community members including Ryan, Collier, Scott, Kareem, Colin, and Joseph.</p>
-    
-    <h4>Topics Include:</h4>
-    <ul>
-      <li>Distributed AI integrations on Cloudflare's edge</li>
-      <li>AI-driven software development and pipelines</li>
-      <li>AI-powered data science</li>
-      <li>AI-driven art</li>
-      <li>Integrations with Obsidian and more</li>
-    </ul>
-    
-    <p>Each presentation ties back to the LangChain project—a journey of learning and growth that has been a cornerstone of our community for nearly two years.</p>
-    
-    <p><strong>Please register on both platforms:</strong></p>
-    <a href="https://lu.ma/ibqo2o69" class="button button--primary">Register on Lu.ma</a>
-    <a href="https://www.meetup.com/austin-langchain-ai-group/events/306612411/" class="button button--secondary">RSVP on Meetup</a>
-  </div>
-  
-  <div class="event-card">
-    <span class="event-badge hacky-hour-badge">Hacky Hour</span>
-    <h3>March Hacky Hour</h3>
-    <div class="event-info">
-      <i class="fas fa-calendar"></i>
-      <span>March 19, 2025</span>
+      <span>May 7, 2025 (Tonight!)</span>
     </div>
     <div class="event-info">
       <i class="fas fa-clock"></i>
@@ -55,10 +22,33 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
     </div>
     <div class="event-info">
       <i class="fas fa-map-marker-alt"></i>
-      <span>Cosmic Coffee Salito</span>
+      <span>ACC - RGC 3000</span>
     </div>
-    <p>Network and connect with community members in a relaxed setting!</p>
-    <a href="https://www.meetup.com/austin-langchain-ai-group/" class="button button--primary">RSVP on Meetup</a>
+    <div class="event-info">
+      <i class="fas fa-glass-cheers"></i>
+      <span>After Party: The Tavern (8:00 - 8:30 PM)</span>
+    </div>
+    <p>Join us tonight for an exciting AIMUG event featuring community lightning talks, a hands-on LangChain Voice Agent lab with FastRTC, and a mixer at The Tavern to wrap up the evening.</p>
+    
+    <h4>Agenda:</h4>
+    <ul>
+      <li><strong>6:00 – 6:20 PM:</strong> Welcome Reception</li>
+      <li><strong>6:20 – 6:40 PM:</strong> News & Updates</li>
+      <li><strong>6:40 – 7:20 PM:</strong> Lightning Talks by Joseph and Colin</li>
+      <li><strong>7:20 – 7:55 PM:</strong> Hands-On Voice Agent Lab with FastRTC</li>
+      <li><strong>8:00 – 8:30 PM:</strong> Mixer at The Tavern</li>
+    </ul>
+    
+    <h4>Lab Resources:</h4>
+    <p>If you're planning to code along during the Voice Agent Lab, bring your laptop and check out these resources:</p>
+    <ul>
+      <li><a href="https://github.com/aimug-org/austin_langchain/blob/main/labs/LangChain_112/Building_Voice_Agents_with_FastRTC.ipynb">Lab Notebook</a></li>
+      <li><a href="https://github.com/aimug-org/austin_langchain/blob/main/resources/presentations/Austin%20LangChain%205-7-2025%20-%20Building%20Voice%20Agents.pdf">Lab Presentation</a></li>
+    </ul>
+    
+    <p><strong>RSVP Options:</strong></p>
+    <a href="https://www.meetup.com/austin-langchain-ai-group/events/307461776/" class="button button--primary">In-Person RSVP</a>
+    <a href="https://lu.ma/zbkjwj2x" class="button button--secondary">Remote RSVP (Zoom)</a>
   </div>
 </div>
 
@@ -168,13 +158,7 @@ We host several regular events to keep our community engaged and connected. Mark
   <tr>
     <td><i class="fas fa-users"></i> Office Hours</td>
     <td>Every Tuesday</td>
-    <td>2:00 PM CST</td>
-    <td>Discord</td>
-  </tr>
-  <tr>
-    <td><i class="fas fa-comments"></i> Community Call</td>
-    <td>Every Thursday</td>
-    <td>2:00 PM CST</td>
+    <td>5:00 PM CST</td>
     <td>Google Meet</td>
   </tr>
 </table>
@@ -245,15 +229,9 @@ This event combines networking, learning, and showcasing. It's our primary month
   </tr>
   <tr>
     <td><i class="fas fa-users"></i> Office Hours</td>
-    <td>Tuesdays @ 2 PM CST</td>
-    <td><a href="https://discord.com/channels/1149779360178524272/1149779360967045170">Discord Room</a></td>
-    <td>Get help with projects and chat with the community</td>
-  </tr>
-  <tr>
-    <td><i class="fas fa-comments"></i> Community Call</td>
-    <td>Thursdays @ 2 PM CST</td>
+    <td>Tuesdays @ 5 PM CST</td>
     <td><a href="https://meet.google.com/fsm-nawg-cng">Google Meet</a></td>
-    <td>Event planning and open forum discussions</td>
+    <td>Connect & collaborate with other builders, work through labs, chat about tools, and plan future events</td>
   </tr>
 </table>
 
