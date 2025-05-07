@@ -151,12 +151,6 @@ We host several regular events to keep our community engaged and connected. Mark
     <td>ACC - RGC 3000</td>
   </tr>
   <tr>
-    <td><span class="event-badge hacky-hour-badge">Hacky Hour</span></td>
-    <td>Third Wednesday</td>
-    <td>6:00 PM CST</td>
-    <td>Cosmic Coffee Salito</td>
-  </tr>
-  <tr>
     <td><i class="fas fa-users"></i> Office Hours</td>
     <td>Every Tuesday</td>
     <td>5:00 PM CST</td>
@@ -198,25 +192,12 @@ This event combines networking, learning, and showcasing. It's our primary month
 
 **Parking**: The parking garage is free, but please note that the metal doors shut and lock at 9 PM. If you plan to stay later for conversations after the event, we recommend parking your car for free on the street. Street parking is free after 6 PM.
 
-### <i class="fas fa-beer"></i> Hacky Hour Schedule
+### <i class="fas fa-beer"></i> Hacky Hours
 
 <div class="event-card">
   <span class="event-badge hacky-hour-badge">Hacky Hour</span>
-  <p>Join us every third Wednesday for casual networking and discussions!</p>
-  <div class="event-info">
-    <i class="fas fa-clock"></i>
-    <span>6:00 PM to 8:00 PM CST</span>
-  </div>
-  <div class="event-info">
-    <i class="fas fa-map-marker-alt"></i>
-    <span>Cosmic Coffee Salito</span>
-  </div>
-</div>
-
-#### 2025 Dates:
-<div class="schedule-item">
-  <i class="fas fa-calendar-check"></i>
-  <span>January 22 • February 19 • March 19 (Off SXSW) • April 16 • May 21 • June 18 • July 16 • August 20 • September 17 • October 15 • November 19 • December 17</span>
+  <p>Hacky Hours are now scheduled on an ad-hoc basis. Check our <a href="https://www.meetup.com/austin-langchain-ai-group/events/">Meetup page</a> or <a href="https://discord.gg/JzWgadPFQd">Discord</a> for announcements about upcoming Hacky Hours.</p>
+  <p>These casual networking events provide an opportunity to connect with other community members, collaborate on projects, and discuss the latest in AI and LangChain.</p>
 </div>
 
 ### <i class="fas fa-handshake"></i> Weekly Community Events
