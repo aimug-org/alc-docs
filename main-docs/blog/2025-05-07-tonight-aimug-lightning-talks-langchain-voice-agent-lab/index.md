@@ -26,7 +26,7 @@ Join us tonight for an exciting AIMUG event featuring community lightning talks,
 | **6:00 – 6:20 PM** | Welcome Reception – light refreshments & mingling |
 | **6:10 – 6:20 PM** | Intro to LangChain video (plays during reception) |
 | **6:20 – 6:40 PM** | News & Updates – the latest in LangChain + AI middleware |
-| **6:40 – 7:20 PM** | ⚡ **Lightning Talks** <br> • **Joseph** – Using AI to automate Payroll and other ERP tasks <br> • **Colin** – How Agent-to-Agent (A2A) fits into LangGraph, Smol, LlamaIndex, plus MCP <br> • *We still have room for 1-2 more!* Drop your idea in **#meeting-plans** on Discord or raise your hand on-site. |
+| **6:40 – 7:20 PM** | ⚡ **Lightning Talks** <br /> • **Joseph** – Using AI to automate Payroll and other ERP tasks <br /> • **Colin** – How Agent-to-Agent (A2A) fits into LangGraph, Smol, LlamaIndex, plus MCP <br /> • *We still have room for 1-2 more!* Drop your idea in **#meeting-plans** on Discord or raise your hand on-site. |
 | **7:20 – 7:55 PM** | 🛠️ **Hands-On LangChain Lab** – Karim leads a Voice Agent Lab (FastRTC + Jupyter) |
 | **7:55 – 8:00 PM** | Wrap-up & next steps |
 | **8:00 – 8:30 PM** | 🚶 Walk to **The Tavern** for the mixer |
