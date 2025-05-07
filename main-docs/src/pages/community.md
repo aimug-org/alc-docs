@@ -111,27 +111,17 @@ Welcome to Austin LangChain! We're a vibrant community of AI enthusiasts, develo
   <div className={styles.col}>
     <div className={styles.card}>
       <div className={styles.cardHeader}>
-        <h3>🎯 Office Hours</h3>
+        <h3>🚀 Office Hours</h3>
       </div>
       <div className={styles.cardBody}>
-        <p>Every Tuesday at 2 PM Central</p>
-        <p>Get help with your projects and ask questions</p>
+        <p>Every Tuesday at 5 PM Central</p>
+        <p>• Connect & collaborate with other builders</p>
+        <p>• Work through labs and troubleshoot live</p>
+        <p>• Chat about the latest tools we're using</p>
+        <p>• Sync on current projects & quick-plan future events</p>
+        <p>Bring questions, code, or ideas—stay for as much or as little as you like. All skill levels welcome.</p>
         <div className={styles.buttonContainer}>
-          <a href="https://discord.com/events/1149779360178524272/1320831868496773174" className="button button--secondary">Join Session</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div className={styles.col}>
-    <div className={styles.card}>
-      <div className={styles.cardHeader}>
-        <h3>🗣️ Community Call</h3>
-      </div>
-      <div className={styles.cardBody}>
-        <p>Every Thursday at 2 PM Central</p>
-        <p>Plan events and share ideas together</p>
-        <div className={styles.buttonContainer}>
-          <a href="https://discord.com/events/1149779360178524272/1320832033768865802" className="button button--secondary">Join Call</a>
+          <a href="https://meet.google.com/fsm-nawg-cng" className="button button--secondary">Join Session</a>
         </div>
       </div>
     </div>

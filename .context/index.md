@@ -13,6 +13,14 @@ This project contains documentation and blog posts for the Austin LangChain AI M
 
 ## Recent Updates
 
+- Updated community page with consolidated weekly office hours (2025-05-07)
+  - Located at: `/main-docs/src/pages/community.md`
+  - Consolidated Tuesday and Thursday sessions into a single weekly session
+  - Changed office hours to Tuesdays at 5 PM CT (from 2 PM)
+  - Updated meeting link to Google Meet (from Discord)
+  - Enhanced description with more details about session activities
+  - Removed the separate Community Call session
+
 - Added blog post: "Tonight @ AIMUG: Lightning Talks, LangChain Voice-Agent Lab & Mixer" (2025-05-07)
   - Located at: `/main-docs/blog/2025-05-07-tonight-aimug-lightning-talks-langchain-voice-agent-lab/`
   - Announces the May 7th AIMUG event featuring community lightning talks and a hands-on lab
