@@ -13,6 +13,13 @@ This project contains documentation and blog posts for the Austin LangChain AI M
 
 ## Recent Updates
 
+- Updated events page with June Monthly Showcase information (2025-05-08)
+  - Located at: `/main-docs/src/pages/events.md`
+  - Added June 4, 2025 "June Monthly Showcase: Multimodal AI & Agents" to Featured Upcoming Events
+  - Moved May 7, 2025 event to Past Events section
+  - Updated "Last updated" date to May 8, 2025
+  - Added RSVP links for in-person, remote, and Meetup attendance options
+
 - Updated community page with consolidated weekly office hours (2025-05-07)
   - Located at: `/main-docs/src/pages/community.md`
   - Consolidated Tuesday and Thursday sessions into a single weekly session

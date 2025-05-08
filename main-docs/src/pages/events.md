@@ -5,55 +5,73 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
 **Weekly Office Hours**: Tuesdays @ 5 PM CT - [Google Meet](https://meet.google.com/fsm-nawg-cng)  
 *(Note: Special events like showcases and mixers have their own meeting links listed with each event)*
 
-*Last updated: May 7, 2025*
+*Last updated: May 8, 2025*
 
 ## 🎯 Featured Upcoming Events
 
 <div class="event-grid">
   <div class="event-card">
     <span class="event-badge showcase-badge">Monthly Showcase</span>
-    <h3>AIMUG: Lightning Talks, LangChain Voice-Agent Lab & Mixer</h3>
+    <h3>June Monthly Showcase: Multimodal AI & Agents</h3>
     <div class="event-info">
       <i class="fas fa-calendar"></i>
-      <span>May 7, 2025 (Tonight!)</span>
+      <span>June 4, 2025</span>
     </div>
     <div class="event-info">
       <i class="fas fa-clock"></i>
-      <span>6:00 PM to 8:00 PM CST</span>
+      <span>6:00 PM to 9:00 PM CDT</span>
     </div>
     <div class="event-info">
       <i class="fas fa-map-marker-alt"></i>
-      <span>ACC - RGC 3000</span>
+      <span>ACC - RGC 3000, 1218 West Avenue, Austin, TX</span>
     </div>
     <div class="event-info">
       <i class="fas fa-glass-cheers"></i>
-      <span>After Party: The Tavern (8:00 - 8:30 PM)</span>
+      <span>After Party: The Tavern, 922 W 12th St, Austin, TX 78703</span>
     </div>
-    <p>Join us tonight for an exciting AIMUG event featuring community lightning talks, a hands-on LangChain Voice Agent lab with FastRTC, and a mixer at The Tavern to wrap up the evening.</p>
+    <p>Join us for our June showcase featuring presentations on multimodal AI applications and agent architectures. We'll have demos of vision-enabled agents, audio processing pipelines, and cross-modal reasoning systems.</p>
     
     <h4>Agenda:</h4>
     <ul>
-      <li><strong>6:00 – 6:20 PM:</strong> Welcome Reception</li>
-      <li><strong>6:20 – 6:40 PM:</strong> News & Updates</li>
-      <li><strong>6:40 – 7:20 PM:</strong> Lightning Talks by Joseph and Colin</li>
-      <li><strong>7:20 – 7:55 PM:</strong> Hands-On Voice Agent Lab with FastRTC</li>
-      <li><strong>8:00 – 8:30 PM:</strong> Mixer at The Tavern</li>
-    </ul>
-    
-    <h4>Lab Resources:</h4>
-    <p>If you're planning to code along during the Voice Agent Lab, bring your laptop and check out these resources:</p>
-    <ul>
-      <li><a href="https://github.com/aimug-org/austin_langchain/blob/main/labs/LangChain_112/Building_Voice_Agents_with_FastRTC.ipynb">Lab Notebook</a></li>
-      <li><a href="https://github.com/aimug-org/austin_langchain/blob/main/resources/presentations/Austin%20LangChain%205-7-2025%20-%20Building%20Voice%20Agents.pdf">Lab Presentation</a></li>
+      <li><strong>6:00 - 6:20 PM:</strong> Welcome Reception - light refreshments & networking</li>
+      <li><strong>6:10 - 6:20 PM:</strong> Intro to LangChain video (loops during reception)</li>
+      <li><strong>6:20 - 6:40 PM:</strong> News & Updates - latest in LangChain / AI middleware</li>
+      <li><strong>6:40 - 7:20 PM:</strong> Lightning Talks - three 7-min presentations + 15-min group Q&A</li>
+      <li><strong>7:20 - 7:55 PM:</strong> Showcase / Hands-On Lab / Panel (TBD) - deeper dive & audience interaction</li>
+      <li><strong>7:55 - 8:00 PM:</strong> Wrap-up & next steps</li>
+      <li><strong>8:00 - 8:30 PM:</strong> Walk to The Tavern for the mixer</li>
     </ul>
     
     <p><strong>RSVP Options:</strong></p>
-    <a href="https://www.meetup.com/austin-langchain-ai-group/events/307461776/" class="button button--primary">In-Person RSVP</a>
-    <a href="https://lu.ma/zbkjwj2x" class="button button--secondary">Remote RSVP (Zoom)</a>
+    <a href="https://lu.ma/oknk1vty" class="button button--primary">In-Person RSVP</a>
+    <a href="https://us06web.zoom.us/j/83055251635?pwd=9guINZ3AbkPLjaG4aFCa3UXr7HQu.1" class="button button--secondary">Remote RSVP (Zoom)</a>
+    <a href="https://www.meetup.com/austin-langchain-ai-group/events/307462561/" class="button button--secondary">Meetup RSVP</a>
   </div>
 </div>
 
 ## 📚 Past Events
+
+<div class="event-card">
+  <span class="event-badge showcase-badge">Monthly Showcase</span>
+  <h3>AIMUG: Lightning Talks, LangChain Voice-Agent Lab & Mixer</h3>
+  <div class="event-info">
+    <i class="fas fa-calendar"></i>
+    <span>May 7, 2025</span>
+  </div>
+  <div class="event-info">
+    <i class="fas fa-clock"></i>
+    <span>6:00 PM to 8:00 PM CST</span>
+  </div>
+  <div class="event-info">
+    <i class="fas fa-map-marker-alt"></i>
+    <span>ACC - RGC 3000</span>
+  </div>
+  <div class="event-info">
+    <i class="fas fa-glass-cheers"></i>
+    <span>After Party: The Tavern (8:00 - 8:30 PM)</span>
+  </div>
+  <p>An exciting AIMUG event featuring community lightning talks, a hands-on LangChain Voice Agent lab with FastRTC, and a mixer at The Tavern.</p>
+</div>
 
 <div class="event-card">
   <span class="event-badge showcase-badge">Special Edition</span>
