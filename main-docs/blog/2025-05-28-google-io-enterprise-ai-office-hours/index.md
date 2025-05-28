@@ -27,7 +27,7 @@ A standout mention was Google's Jules (jules.google.com) - their genetic develop
 
 ## LangChain Interrupt: Validating Community-Driven Best Practices
 
-The [LangChain Interrupt conference](https://www.langchain.com/interrupt) provided validation that the Austin LangChain community has been on the right track. [Paul Phelps](https://www.linkedin.com/in/mrpaulphelps/) and [Karim Lalani](https://www.linkedin.com/in/-karim-lalani) shared their insights from seeing major companies present their AI implementations.
+The [LangChain Interrupt conference](https://interrupt.langchain.com/video) provided validation that the Austin LangChain community has been on the right track. [Paul Phelps](https://www.linkedin.com/in/mrpaulphelps/) and [Karim Lalani](https://www.linkedin.com/in/-karim-lalani) shared their insights from seeing major companies present their AI implementations.
 
 "We had independently discovered many best practices months before the conference," reflected [Karim](https://www.linkedin.com/in/-karim-lalani), a software engineer and data scientist who actively contributes to the Austin LangChain community. The conference featured presentations from JP Morgan, Cisco, Uber, LinkedIn, Monday.com, and BlackRock - all validating approaches that the Austin community had already been exploring.
 
@@ -161,5 +161,5 @@ As we look toward the future of AI development, the patterns emerging from commu
 - [Jeff's AI Code Review Tool](https://www.jefflinwood.com/2025/05/local-code-review-with-ai/)
 - [OpenTelemetry Project](https://opentelemetry.io/)
 - [Google Jules](https://jules.google.com/)
-- [LangChain Interrupt Conference](https://www.langchain.com/interrupt)
+- [LangChain Interrupt Conference](https://interrupt.langchain.com/video)
 - [CNCF OpenTelemetry](https://www.cncf.io/projects/opentelemetry/)
