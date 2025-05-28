@@ -27,7 +27,7 @@ A standout mention was Google's Jules (jules.google.com) - their genetic develop
 
 ## LangChain Interrupt: Validating Community-Driven Best Practices
 
-The [LangChain Interrupt conference](https://www.langchain.com/interrupt) provided validation that the Austin LangChain community has been on the right track. [Paul Phelps](https://www.linkedin.com/in/paulphelps/) and [Karim Lalani](https://www.linkedin.com/in/-karim-lalani) shared their insights from seeing major companies present their AI implementations.
+The [LangChain Interrupt conference](https://www.langchain.com/interrupt) provided validation that the Austin LangChain community has been on the right track. [Paul Phelps](https://www.linkedin.com/in/mrpaulphelps/) and [Karim Lalani](https://www.linkedin.com/in/-karim-lalani) shared their insights from seeing major companies present their AI implementations.
 
 "We had independently discovered many best practices months before the conference," reflected [Karim](https://www.linkedin.com/in/-karim-lalani), a software engineer and data scientist who actively contributes to the Austin LangChain community. The conference featured presentations from JP Morgan, Cisco, Uber, LinkedIn, Monday.com, and BlackRock - all validating approaches that the Austin community had already been exploring.
 
@@ -153,7 +153,7 @@ As we look toward the future of AI development, the patterns emerging from commu
 - [Colin McNamara](https://www.linkedin.com/in/colinmcnamara/) - AIMUG Co-organizer, LangChain Ambassador
 - [Jeff Linwood](https://www.linkedin.com/in/jefflinwood/) - Developer, Author, UT Lecturer
 - [Karim Lalani](https://www.linkedin.com/in/-karim-lalani) - Software Engineer, Data Scientist
-- [Paul Phelps](https://www.linkedin.com/in/paulphelps/) - Business Analysis & Project Management
+- [Paul Phelps](https://www.linkedin.com/in/mrpaulphelps/) - Business Analysis & Project Management
 - [Kai Joshi](https://www.linkedin.com/in/kaiwalyajoshi/) - Observability & Infrastructure Expert
 - [Riccardo Pirruccio](https://www.linkedin.com/in/riccardopirruccio/) - Applied Materials, AI/ML Specialist
 
