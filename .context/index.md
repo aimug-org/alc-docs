@@ -13,6 +13,12 @@ This project contains documentation and blog posts for the Austin LangChain AI M
 
 ## Recent Updates
 
+- Added April and May 2025 documentation folders with placeholder content (2025-06-03)
+  - Created `/main-docs/docs/apr-2025/` with MCP architecture, A2A protocol, and agent architectures content
+  - Created `/main-docs/docs/may-2025/` with voice agent lab and Google I/O Enterprise AI content
+  - All placeholders reference existing blog posts and provide structure for future content processing
+  - Maintains consistency with established documentation patterns
+
 - Updated events page with June Monthly Showcase information (2025-05-08)
   - Located at: `/main-docs/src/pages/events.md`
   - Added June 4, 2025 "June Monthly Showcase: Multimodal AI & Agents" to Featured Upcoming Events
