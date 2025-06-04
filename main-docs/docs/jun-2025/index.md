@@ -8,6 +8,10 @@ Welcome to the June 2025 Austin LangChain & AI MUG documentation. This month fea
 
 ## 📁 **Documentation Sections**
 
+### **[📰 News & Updates](./news/)**
+*Latest developments and breaking news from the AI ecosystem*
+- **[LangChain Ecosystem News: June 2025](./news/langchain-ecosystem-news-june-2025.md)** - 🔥 **MAJOR MILESTONE!** LangChain exceeds OpenAI SDK downloads - ecosystem transformation analysis
+
 ### **[⚡ Lightning Talks](./lightning-talks/)**
 *Quick, focused presentations covering cutting-edge AI topics*
 - **[AG-UI: Agent-User Interaction Protocol](./lightning-talks/ag-ui-agent-user-interaction-protocol.md)** - The "USB-C for AI agents" revolutionizing human-AI collaboration
