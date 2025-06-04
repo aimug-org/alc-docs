@@ -8,18 +8,16 @@ Welcome to the June 2025 Austin LangChain & AI MUG documentation. This month fea
 
 ## 📁 **Documentation Sections**
 
-### **[📅 Sessions](./sessions/)**
-*Community presentations and conference insights*
-- **[Interrupt Conference Takeaways](./sessions/interrupt-conference-takeaways.md)** - Key insights from industry conference
-- **[MCP Testing Showcase](./sessions/mcp-testing-showcase.md)** - Advanced Model Context Protocol testing methodologies  
-- **[AI Finetuning for Nuclear Regulatory](./sessions/ai-finetuning-nuclear-regulatory.md)** - Specialized AI applications in regulated industries
+### **[⚡ Lightning Talks](./lightning-talks/)**
+*Quick, focused presentations covering cutting-edge AI topics*
+- **[AG-UI: Agent-User Interaction Protocol](./lightning-talks/ag-ui-agent-user-interaction-protocol.md)** - The "USB-C for AI agents" revolutionizing human-AI collaboration
+- **[AI Finetuning for Nuclear Regulatory](./lightning-talks/ai-finetuning-nuclear-regulatory.md)** - Specialized AI applications in regulated industries
+- **[AI Ecosystem 2025 Overview](./lightning-talks/ai-ecosystem-2025/)** - Comprehensive analysis of the modern AI development stack
 
-### **[🌐 AI Ecosystem 2025](./ai-ecosystem-2025/)**
-*Colin McNamara's comprehensive analysis of the modern AI development stack*
-- **[Research Guide](./ai-ecosystem-2025/research-guide.md)** - Authoritative industry analysis with detailed citations
-- **[Lightning Talk Guide](./ai-ecosystem-2025/lightning-talk-guide.md)** - Presentation script optimized for audience engagement
-- **[📥 Download Files](./ai-ecosystem-2025/index.md#-download-ready-to-use-files)** - PowerPoint, PDF, and presentation materials
-- **[Quick Start Guide](./ai-ecosystem-2025/index.md#-quick-start-guide)** - Choose the right format for your needs
+### **[🎯 Full Sessions](./full-sessions/)**
+*In-depth technical deep dives and comprehensive workshops*
+- **[Interrupt Conference Takeaways](./full-sessions/interrupt-conference-takeaways.md)** - Key insights from industry conference
+- **[MCP Testing Showcase](./full-sessions/mcp-testing-showcase.md)** - Advanced Model Context Protocol testing methodologies
 
 ### **[🛠️ Resources](./resources/)**
 *Implementation guides and practical tools*
@@ -50,14 +48,15 @@ Welcome to the June 2025 Austin LangChain & AI MUG documentation. This month fea
 ## 🚀 **Quick Navigation**
 
 ### **For Immediate Use**
-- **Present AI Ecosystem 2025**: Start with [AI Ecosystem 2025](./ai-ecosystem-2025/) → [Quick Start Guide](./ai-ecosystem-2025/index.md#-quick-start-guide)
-- **Learn from Sessions**: Browse [Sessions](./sessions/) for community insights and technical deep-dives
-- **Get Implementation Help**: Check [Resources](./resources/) for practical guides and tools
+- **Quick Overviews**: Start with [Lightning Talks](./lightning-talks/) for fast, focused insights
+- **Present AI Ecosystem 2025**: Check [AI Ecosystem 2025](./lightning-talks/ai-ecosystem-2025/) for presentation materials
+- **Get Implementation Help**: Browse [Resources](./resources/) for practical guides and tools
 
 ### **For Deep Research**
-- **Comprehensive Analysis**: [AI Ecosystem Research Guide](./ai-ecosystem-2025/research-guide.md)
-- **Technical Sessions**: [MCP Testing Showcase](./sessions/mcp-testing-showcase.md)
-- **Industry Applications**: [Nuclear Regulatory AI](./sessions/ai-finetuning-nuclear-regulatory.md)
+- **Technical Deep Dives**: Explore [Full Sessions](./full-sessions/) for comprehensive coverage
+- **MCP Advanced Testing**: [MCP Testing Showcase](./full-sessions/mcp-testing-showcase.md)
+- **Industry Applications**: [Nuclear Regulatory AI](./lightning-talks/ai-finetuning-nuclear-regulatory.md)
+- **Conference Insights**: [Interrupt Conference Takeaways](./full-sessions/interrupt-conference-takeaways.md)
 
 ## 🔗 **Connect & Contribute**
 
