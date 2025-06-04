@@ -72,23 +72,23 @@ Welcome to the June 2025 Austin LangChain & AI MUG documentation. This month fea
 - **[Blog](https://colinmcnamara.com)** - Latest insights and technical tutorials
 
 #### **Ryan Booth** - *Community Contributor*
-- **[LinkedIn](https://www.linkedin.com/in/ryan-booth/)** - Connect for AI and tech discussions
+- **[LinkedIn](https://www.linkedin.com/in/ryan-booth-46470a5/)** - Connect for AI and tech discussions
 
 #### **Rob Whelan** - *Community Contributor*
-- **[LinkedIn](https://www.linkedin.com/in/rob-whelan/)** - Professional networking and insights
+- **[LinkedIn](https://www.linkedin.com/in/rob-whelan-036b905/)** - Professional networking and insights
 
 #### **Ricky Pirruccio** - *Community Contributor*
-- **[LinkedIn](https://www.linkedin.com/in/ricky-pirruccio/)** - Professional connections
+- **[LinkedIn](https://www.linkedin.com/in/riccardopirruccio/)** - Professional connections
 - **[Blog - RickysTech](https://rickystech.com)** - Technical insights and tutorials
 
 #### **Collier King** - *Community Contributor*
-- **[LinkedIn](https://www.linkedin.com/in/collier-king/)** - Connect for AI and technology discussions
+- **[LinkedIn](https://www.linkedin.com/in/collierking/)** - Connect for AI and technology discussions
 
 #### **Cameron Rohn** - *Community Contributor*
 - **[LinkedIn](https://www.linkedin.com/in/cameron-rohn/)** - Professional networking and tech insights
 
 #### **Paul Phelps** - *Community Contributor*
-- **[LinkedIn](https://www.linkedin.com/in/paul-phelps/)** - Connect for AI and development discussions
+- **[LinkedIn](https://www.linkedin.com/in/mrpaulphelps/)** - Connect for AI and development discussions
 
 ---
 
