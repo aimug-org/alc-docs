@@ -39,6 +39,7 @@ The framework wars? **Over.** Tool integration chaos? **Solved.** The "what shou
 
 #### 🔧 **LangChain** - The Swiss Army Knife
 - **What it is**: The original "dumping ground" for integrations (their words, not ours!)
+- **Ecosystem**: 700+ integrations (LLMs, vector DBs, etc.) as of 2025
 - **Best for**: Maximum flexibility and complex workflows
 - **Sweet spot**: Teams with strong dev resources using modern AI IDEs
 
@@ -54,6 +55,7 @@ The framework wars? **Over.** Tool integration chaos? **Solved.** The "what shou
 
 #### ☁️ **Google ADK** - The Production Beast
 - **What it is**: Cloud-native with transparent Cloud Run integration
+- **Milestone**: Stable v1.0 for Python released May 2025
 - **Best for**: Production deployments with cost optimization
 - **Sweet spot**: Pay-per-execution, async-first architectures
 
@@ -97,10 +99,10 @@ The framework wars? **Over.** Tool integration chaos? **Solved.** The "what shou
 
 ### 🏆 **The IDE Champions**
 
-**Cursor** → Most popular choice  
-**Cline** → Austin LangChain community favorite  
+**Cursor** → Most popular choice (SOC 2 certified)  
+**Cline** → Austin LangChain community favorite (1.6+ million installs)  
 **Roo Code** → Experimental Cline fork  
-**Windsurf** → Emerging dark horse  
+**Windsurf** → Emerging dark horse (OpenAI acquisition rumors)
 
 ### 🧠 **The Documentation Revolution**
 
@@ -329,9 +331,10 @@ The framework wars? **Over.** Tool integration chaos? **Solved.** The "what shou
 ## 🔗 **Connect & Collaborate**
 
 **Find Colin:**
-- **LinkedIn** → Colin McNamara
-- **Blog** → colin.com
-- **Discord** → aimug.org
+- **LinkedIn** → https://www.linkedin.com/in/colinmcnamara/
+- **Blog** → https://colinmcnamara.com
+- **Twitter/X** → https://x.com/colinmcnamara
+- **Discord** → AIMUG Discord https://discord.gg/JzWgadPFQd
 
 **Join the Community:**
 - **Austin LangChain AI Middleware User Group**
@@ -368,3 +371,37 @@ The framework wars? **Over.** Tool integration chaos? **Solved.** The "what shou
 ---
 
 *This lightning talk guide captures Colin McNamara's comprehensive tour of the 2025 AI ecosystem, optimized for engaging presentation and maximum audience impact.*
+
+---
+
+## 📚 **Related Resources**
+
+### **📖 Deep Dive Research**
+For comprehensive industry analysis and detailed technical information, see:
+**[AI Ecosystem Landscape 2025: Comprehensive Research Guide](./ai-ecosystem-landscape-2025.md)**
+
+### **🎯 Presentation Materials**
+
+#### **📊 Ready-to-Use Slides (RECOMMENDED)**
+**[Concise Slide Deck](./ai-ecosystem-slides-concise.md)** - 16 presentation-optimized slides
+- ✅ One key point per slide
+- ✅ Large fonts, no content overflow
+- ✅ Ready for Google Slides import
+- 📁 **PowerPoint File**: `presentation-materials/ai-ecosystem-slides-concise.pptx`
+
+#### **📚 Detailed Slide Deck**
+**[Comprehensive Slides](./ai-ecosystem-presentation-slides.md)** - Full slide deck with presenter notes
+- 📖 Complete content with timing guides
+- 🎯 Visual cues and interaction prompts
+- 📊 Mermaid diagrams and detailed layouts
+
+#### **🔧 Conversion Guide**
+**[Google Slides Conversion Guide](./google-slides-conversion-guide.md)** - Step-by-step import instructions
+- 🚀 Quick import methods
+- 🎨 Branding and customization tips
+- 📋 File format options
+
+### **🔗 Document Navigation**
+- **This Document**: Lightning talk script and presenter guide
+- **Research Guide**: Authoritative industry analysis with detailed citations
+- **Slide Deck**: Visual presentation materials with timing and notes
