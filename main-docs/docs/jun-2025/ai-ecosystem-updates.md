@@ -292,7 +292,7 @@ Colin's framework for thinking about observability:
 #### **Modern Additions**
 - **OpenTelemetry**: Standardized telemetry collection
 - **ClickHouse**: High-performance analytical database
-- **Hotel Collector**: Centralized telemetry processing
+- **Otel Collector**: Centralized telemetry processing
 
 ### Enterprise Observability Architecture
 
@@ -324,7 +324,7 @@ Colin emphasizes building to federal standards:
 
 ### The Immutable Database Principle
 
-> "At some point, either you get hacked or your team's gonna lose their mind and hack you. How are you gonna know what your business is doing? How are you gonna draw the line?"
+> "At some point your AI (LLM) is going to lose its mind and hack you. How are you gonna know what your business is doing? How are you gonna draw the line?"
 
 **Implementation strategy:**
 - **Immutable logging**: Write-once, read-many log storage
@@ -332,30 +332,7 @@ Colin emphasizes building to federal standards:
 - **Compliance reporting**: Automated compliance documentation
 - **Incident response**: Historical data for forensic analysis
 
-## 8. Technology Deep Dives
-
-### ClickHouse in AI Infrastructure
-
-**Why ClickHouse matters:**
-- **Column-based storage**: Optimized for analytical workloads
-- **High-speed ingestion**: Real-time AI system log processing
-- **Cost effectiveness**: Competitive alternative to traditional solutions
-- **Enterprise adoption**: Major companies leveraging for AI infrastructure
-
-**Use cases:**
-- **AI log aggregation**: Massive volumes of agent interaction data
-- **Real-time monitoring**: Live system performance tracking
-- **Analytics**: Historical analysis of AI system behavior
-- **Integration**: Works with Prometheus, Grafana, and observability stacks
-
-### Development Tool Ecosystem
-
-**Current landscape:**
-- **Cline vs Cursor vs Windsurf**: Leading AI coding assistants
-- **MCP implementations**: Growing ecosystem of protocol-compliant tools
-- **Agent development platforms**: Evolution toward standardized frameworks
-
-## 9. Practical Implementation Guide
+## 8. Practical Implementation Guide
 
 ### Getting Started Checklist
 
@@ -373,7 +350,7 @@ Colin emphasizes building to federal standards:
 - **Security as afterthought**: Implement security patterns early
 - **Cost blindness**: Monitor and optimize AI usage costs
 
-## 10. Future Outlook
+## 9. Future Outlook
 
 ### Emerging Trends
 
