@@ -18,7 +18,7 @@ Welcome to the June 2025 Austin LangChain & AI MUG documentation. This month fea
 *Colin McNamara's comprehensive analysis of the modern AI development stack*
 - **[Research Guide](./ai-ecosystem-2025/research-guide.md)** - Authoritative industry analysis with detailed citations
 - **[Lightning Talk Guide](./ai-ecosystem-2025/lightning-talk-guide.md)** - Presentation script optimized for audience engagement
-- **[Presentation Materials](./ai-ecosystem-2025/)** - Multiple slide formats and ready-to-use files
+- **[📥 Download Files](./ai-ecosystem-2025/index.md#-download-ready-to-use-files)** - PowerPoint, PDF, and presentation materials
 - **[Quick Start Guide](./ai-ecosystem-2025/index.md#-quick-start-guide)** - Choose the right format for your needs
 
 ### **[🛠️ Resources](./resources/)**

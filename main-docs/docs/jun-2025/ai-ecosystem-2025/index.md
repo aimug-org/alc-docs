@@ -46,11 +46,15 @@ This section contains the complete AI Ecosystem 2025 content suite - from detail
 - Version controllable and customizable
 - **Best for**: Technical teams, open-source presentations
 
-### **[Presentation Files](./presentation-materials/)**
-*Ready-to-use PowerPoint and PDF files*
-- Immediate download and use
-- Multiple format options
-- **Best for**: Quick deployment, offline presentations
+### **📥 Download Ready-to-Use Files**
+*Immediate download and deployment*
+
+- **[📊 PowerPoint - Full Deck](./presentation-materials/ai-ecosystem-slides.pptx)** - Complete presentation with all slides
+- **[📊 PowerPoint - Concise](./presentation-materials/ai-ecosystem-slides-concise.pptx)** - Streamlined version for lightning talks
+- **[📄 PDF Version](./presentation-materials/ai-ecosystem-slides.pdf)** - Universal format for viewing and sharing
+- **[📁 All Files](./presentation-materials/)** - Browse complete presentation materials folder
+
+**Best for**: Quick deployment, offline presentations, immediate use
 
 ## 🚀 **Quick Start Guide**
 
