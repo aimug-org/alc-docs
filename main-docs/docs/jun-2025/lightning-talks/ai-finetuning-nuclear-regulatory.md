@@ -2,170 +2,165 @@
 sidebar_position: 5
 ---
 
-# AI Fine-tuning for Nuclear Regulatory Work
+# Fine-tuning Embeddings for Nuclear Power
 
-A specialized session exploring the unique challenges and approaches for fine-tuning AI models for use in nuclear regulatory environments and other highly regulated industries.
+A lightning talk by Rob Whelan from Gridway AI demonstrating how to fine-tune embeddings models specifically for nuclear power domain language and improve search accuracy in nuclear regulatory documents.
 
 ## Overview
 
-This session addressed the complex requirements for deploying AI systems in nuclear regulatory contexts, where safety, compliance, and accuracy are paramount. The discussion covered specialized fine-tuning approaches, regulatory considerations, and best practices for AI in critical infrastructure.
+This session presented a practical approach to fine-tuning embeddings for the nuclear power industry, addressing the challenge of domain-specific jargon and terminology. Rob Whelan demonstrated how better embeddings lead to better search results when working with nuclear regulatory documents and technical specifications.
 
-## Regulatory Context
+## Presentation Materials
 
-### Nuclear Industry Requirements
+Access the complete presentation materials from this lightning talk:
 
-The nuclear regulatory environment presents unique challenges for AI deployment:
+- 📄 [Presentation Slides (PDF)](./Fine%20tuning%20embeddings%20for%20nuclear%20power.pdf) - Full presentation deck on fine-tuning embeddings for nuclear power applications
+- 📓 [Jupyter Notebook](./finetune-embeddings-notebook.ipynb) - Complete code implementation for fine-tuning embeddings
+- 📊 [Training Data](./embedding_data_hard_negs_4.jsonl) - Sample training data with hard negatives for embedding fine-tuning
 
-- **Safety-critical applications** - AI systems that impact nuclear safety must meet the highest standards
-- **Regulatory oversight** - Multiple agencies and international bodies govern AI use in nuclear contexts
-- **Documentation requirements** - Extensive documentation and audit trails required for all AI systems
-- **Validation and verification** - Rigorous testing and validation processes for AI model deployment
+## The Challenge: Nuclear Domain Jargon
 
-### Compliance Frameworks
+### Why Nuclear Needs Specialized Embeddings
 
-Key regulatory frameworks affecting AI in nuclear applications:
+The nuclear industry is filled with domain-specific terminology and acronyms that general-purpose embeddings models don't understand well:
 
-- **Nuclear Regulatory Commission (NRC)** - US federal oversight of nuclear facilities
-- **International Atomic Energy Agency (IAEA)** - Global nuclear safety standards
-- **IEEE Standards** - Technical standards for AI in safety-critical systems
-- **ISO 26262** - Functional safety standards applicable to AI systems
+- **Acronyms galore** - The industry uses countless specialized acronyms
+- **Context-specific meanings** - Terms like "LWR" (Light Water Reactors) have completely different meanings than "GEN4+" reactors
+- **Technical precision** - Words like "coolant" and "moderator" have very specific nuclear meanings different from general usage
 
-## Fine-tuning Challenges
+### The Impact on Search
 
-### Data Sensitivity
+When embeddings don't understand nuclear terminology:
+- Search results are less relevant
+- Important documents may be missed
+- Users need to know exact terminology to find information
 
-Nuclear regulatory data presents unique challenges:
+## Better Embeddings = Better Search
 
-- **Classified information** - Many datasets contain sensitive or classified material
-- **Limited data availability** - Regulatory data is often scarce and highly controlled
-- **Data quality requirements** - Extremely high standards for data accuracy and completeness
-- **Privacy and security** - Strict controls on data access and handling
+### Understanding Embeddings
 
-### Model Requirements
+Embeddings are vector representations of words and phrases - arrays of floats like `[0.133, -1.533, 2.122, 0.001,...]`. The quality of search depends on how well these vectors capture semantic meaning in your specific domain.
 
-AI models for nuclear applications must meet stringent requirements:
+### Before and After Fine-tuning
 
-- **Explainability** - Models must provide clear reasoning for their decisions
-- **Reliability** - Extremely low tolerance for errors or unexpected behavior
-- **Robustness** - Models must perform consistently under various conditions
-- **Auditability** - Complete traceability of model decisions and training processes
+The presentation showed dramatic improvements in semantic understanding:
 
-## Technical Approaches
+**Before fine-tuning:**
+- "coolant" was too far from nuclear-specific terms like "moderator"
+- General embeddings didn't understand nuclear context
 
-### Specialized Fine-tuning Methods
+**After fine-tuning:**
+- "coolant" and "moderator" are properly related in nuclear context
+- The model understands domain-specific relationships
+- Search results become much more relevant
 
-Approaches tailored for regulatory environments:
-
-- **Domain-specific pre-training** - Training on nuclear engineering and regulatory texts
-- **Few-shot learning** - Maximizing performance with limited training data
-- **Transfer learning** - Adapting models from related technical domains
-- **Ensemble methods** - Combining multiple models for increased reliability
-
-### Validation Strategies
-
-Comprehensive validation approaches for regulatory AI:
-
-- **Cross-validation with expert review** - Human experts validate model outputs
-- **Stress testing** - Testing models under extreme or edge-case scenarios
-- **Adversarial testing** - Evaluating model robustness against adversarial inputs
-- **Continuous monitoring** - Ongoing validation of model performance in production
-
-## Implementation Considerations
+## Technical Implementation
 
 ### Infrastructure Requirements
 
-Technical infrastructure for regulatory AI systems:
+The fine-tuning process requires:
+- **GPU with plenty of memory** - Used AWS `ml.g6.16xlarge` instance
+- **PyTorch** - For model training
+- **Base embeddings model** - Started with `BAAI/bge-base-en-v1.5` (768 dimensions)
 
-- **Air-gapped environments** - Isolated systems for sensitive applications
-- **Redundant systems** - Multiple backup systems for critical applications
-- **Secure data handling** - Encrypted storage and transmission of all data
-- **Audit logging** - Comprehensive logging of all system activities
+### Training Approach
 
-### Quality Assurance
+The implementation used:
+- **MultipleNegativesRankingLoss** - Loss function for training
+- **Positive and negative pairs** - Including "hard negatives" that are difficult to differentiate
+- **80/20 train/validation split** - Standard ML practice
+- **10,000 training examples** - Generated using GPT-4o-mini from regulatory source texts
 
-Quality management for AI in nuclear applications:
+### Training Data Generation
 
-- **Version control** - Strict versioning of models, data, and code
-- **Change management** - Formal processes for any system modifications
-- **Testing protocols** - Comprehensive testing at every stage of development
-- **Documentation standards** - Detailed documentation of all processes and decisions
+The training data (`embedding_data_hard_negs_4.jsonl`) was created by:
+1. Using dozens of regulatory source texts
+2. Generating positive and negative pairs with GPT-4o-mini
+3. Including "hard negatives" - similar but importantly different examples
 
-## Use Cases
+## Using the Fine-tuned Model
 
-### Regulatory Document Analysis
+### Code Example
 
-AI applications in document processing:
+```python
+from sentence_transformers import SentenceTransformer, util
 
-- **Compliance checking** - Automated review of regulatory submissions
-- **Document classification** - Categorizing regulatory documents by type and priority
-- **Information extraction** - Extracting key data from technical reports
-- **Anomaly detection** - Identifying unusual patterns in regulatory filings
+# Load the fine-tuned model
+model = SentenceTransformer("gridwayai/nuclear-licensing-embeddings-768")
 
-### Safety Analysis
+# Example nuclear-specific sentences
+sentences = [
+    'What is the purpose of the Rapid Borate Stop Valve in Reactor Control?',
+    'Locates and discusses opening 1CV175, Rapid Borate Stop Valve by disengaging clutch and rotating handwheel (counterclockwise).',
+    'CLOSE the Air Supply Isolation Valve, 12CV160 A/S, AIR SUPPLY FOR 12CV160.',
+]
 
-AI support for safety assessments:
+# Generate embeddings
+embeddings = model.encode(sentences)
+# Returns a list of vector arrays
+```
 
-- **Risk assessment** - AI-assisted evaluation of safety risks
-- **Incident analysis** - Automated analysis of safety incidents and near-misses
-- **Predictive maintenance** - AI-driven maintenance scheduling for critical systems
-- **Emergency response** - AI support for emergency planning and response
+### Model Availability
 
-## Best Practices
+The fine-tuned model is publicly available:
+- **Hugging Face**: [gridwayai/nuclear-licensing-embeddings-768](https://huggingface.co/gridwayai/nuclear-licensing-embeddings-768)
+- **Gridway AI SDK**: [GitHub Repository](https://github.com/gridwayai/gridwayai-sdk)
 
-### Development Process
+## Practical Applications
 
-Recommended practices for regulatory AI development:
+### Improved Search Capabilities
 
-1. **Start with regulatory requirements** - Understand compliance needs before technical development
-2. **Engage regulators early** - Involve regulatory bodies in the development process
-3. **Implement rigorous testing** - Test extensively before deployment
-4. **Plan for audits** - Design systems with auditability in mind
-5. **Maintain human oversight** - Ensure human experts remain in the decision loop
+With fine-tuned embeddings, nuclear organizations can:
+- **Find relevant procedures faster** - Better understanding of technical queries
+- **Improve compliance searches** - More accurate retrieval of regulatory documents
+- **Enable natural language queries** - Users don't need to know exact terminology
+- **Cross-reference related concepts** - Automatically find related safety procedures
 
-### Risk Management
+### Example Use Cases
 
-Strategies for managing AI risks in regulatory contexts:
+Real-world applications include:
+- **Operator training** - Finding relevant procedures and documentation
+- **Regulatory compliance** - Searching through vast regulatory databases
+- **Incident investigation** - Quickly finding related historical events
+- **Maintenance planning** - Locating specific technical specifications
 
-- **Fail-safe design** - Systems that fail to a safe state
-- **Human-in-the-loop** - Maintaining human oversight and control
-- **Gradual deployment** - Phased rollout with careful monitoring
-- **Contingency planning** - Backup procedures if AI systems fail
+## Key Insights from the Presentation
 
-## Future Directions
+### Why This Matters
 
-### Emerging Trends
+1. **Domain specificity is crucial** - General embeddings miss nuclear-specific meanings
+2. **Better search saves time and improves safety** - Operators find the right information faster
+3. **Accessible technology** - Fine-tuning is now practical with modern tools
+4. **Open source contribution** - The model is freely available for the nuclear community
 
-Developments shaping the future of regulatory AI:
+### Technical Takeaways
 
-- **Regulatory AI frameworks** - New guidelines specifically for AI in regulated industries
-- **Standardization efforts** - Industry-wide standards for AI in safety-critical applications
-- **International cooperation** - Global coordination on AI safety standards
-- **Technology advancement** - New AI techniques designed for high-reliability applications
+- **Start with a good base model** - BAAI/bge-base-en-v1.5 provides solid foundation
+- **Quality training data is key** - Even 10,000 examples can make a significant difference
+- **Hard negatives improve performance** - Include challenging examples in training
+- **GPU requirements are manageable** - AWS instances make this accessible
 
-### Research Opportunities
+## About the Speaker
 
-Areas for continued research and development:
-
-- **Explainable AI for safety** - Improving AI transparency in safety-critical applications
-- **Robust AI systems** - Developing more reliable and predictable AI models
-- **Automated compliance** - AI systems that can verify their own compliance
-- **Human-AI collaboration** - Optimizing the interaction between human experts and AI systems
-
-## Key Takeaways
-
-1. **Regulatory requirements drive technical decisions** - Compliance needs must shape AI system design
-2. **Safety is paramount** - All technical decisions must prioritize safety and reliability
-3. **Documentation is critical** - Comprehensive documentation is essential for regulatory approval
-4. **Human expertise remains essential** - AI augments but does not replace human judgment
-5. **Gradual adoption is prudent** - Careful, phased deployment reduces risks
+**Rob Whelan** - Gridway AI
+- Presented at AIMUG (AI Model User Group) in Austin, TX
+- June 4, 2025
+- Focused on practical applications of AI in nuclear power
 
 ## Resources and Next Steps
 
-- Continued collaboration with regulatory experts
-- Development of industry-specific best practices
-- Exploration of emerging regulatory frameworks
-- Community knowledge sharing on compliance approaches
+### Available Resources
+- **Model on Hugging Face**: [gridwayai/nuclear-licensing-embeddings-768](https://huggingface.co/gridwayai/nuclear-licensing-embeddings-768)
+- **Gridway AI SDK**: [GitHub Repository](https://github.com/gridwayai/gridwayai-sdk)
+- **Training notebook**: Available in the presentation materials
+- **Sample training data**: 10,000 examples with hard negatives
+
+### Getting Started
+1. Try the model on Hugging Face
+2. Explore the Jupyter notebook for implementation details
+3. Adapt the approach for your specific nuclear domain needs
+4. Consider contributing improvements back to the community
 
 ---
 
-*This session highlighted the unique challenges and opportunities for AI in nuclear regulatory work, emphasizing the critical importance of safety, compliance, and reliability in AI system design and deployment.*
+*This lightning talk demonstrated how fine-tuning embeddings for nuclear-specific language can dramatically improve search and information retrieval in nuclear power applications. The open-source model and implementation details are available for the community to use and improve.*

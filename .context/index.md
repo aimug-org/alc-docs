@@ -13,6 +13,14 @@ This project contains documentation and blog posts for the Austin LangChain AI M
 
 ## Recent Updates
 
+- Added Nuclear AI Lightning Talk materials and documentation (2025-06-06)
+  - Integrated PR #7 materials from Robert Whelan's presentation on fine-tuning embeddings for nuclear power
+  - Located at: `/main-docs/docs/jun-2025/lightning-talks/`
+  - Added presentation materials section with links to PDF, Jupyter notebook, and training data
+  - Updated documentation to reflect actual presentation content about domain-specific embeddings
+  - Demonstrates practical approach to improving search in nuclear regulatory documents
+  - Includes open-source model available on Hugging Face: gridwayai/nuclear-licensing-embeddings-768
+
 - Added April and May 2025 documentation folders with placeholder content (2025-06-03)
   - Created `/main-docs/docs/apr-2025/` with MCP architecture, A2A protocol, and agent architectures content
   - Created `/main-docs/docs/may-2025/` with voice agent lab and Google I/O Enterprise AI content
