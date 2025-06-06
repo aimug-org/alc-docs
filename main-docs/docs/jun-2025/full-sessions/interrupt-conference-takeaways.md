@@ -6,6 +6,10 @@ sidebar_position: 2
 
 The energy at the Interrupt Conference was palpable. AI agents are not just on the horizon; they're being built, deployed, and iterated upon at lightning speed. Several members of our own Austin LangChain & AI MUG were right there in the thick of it, and they recently came together for a fantastic panel to share their biggest insights. This is a distillation of practical wisdom from the front lines, for our community, designed to help us all **build better, smarter, and more reliable AI that truly delivers value.**
 
+## 📹 Video Recording
+
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/Owvcy7GIvEY?start=3999" title="June 2025 AIMUG - Interrupt Conference Panel Discussion" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 **Our Panelists on the Ground:**
 
 - **Colin McNamara** - Moderator

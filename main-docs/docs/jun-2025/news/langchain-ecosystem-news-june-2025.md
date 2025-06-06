@@ -6,6 +6,10 @@ sidebar_position: 4
 
 *From Prototyping to Production - The Ecosystem Matures*
 
+## 📹 **Video Recording**
+
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/Owvcy7GIvEY?start=772" title="June 2025 AIMUG - News and Updates" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## 🚀 **The Big Picture**
 
 The LangChain ecosystem has reached a pivotal milestone in June 2025 - **LangChain now exceeds the OpenAI SDK in monthly Python downloads**, marking its evolution from a popular prototyping framework to the central integration hub for production AI systems. This transformation reflects the broader industry shift from experimental chaos to production-ready maturity.

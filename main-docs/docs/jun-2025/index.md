@@ -6,6 +6,10 @@ sidebar_position: 1
 
 Welcome to the June 2025 Austin LangChain & AI MUG documentation. This month featured comprehensive coverage of the AI ecosystem landscape, conference insights, advanced MCP testing, and specialized industry applications.
 
+## 📹 **June 2025 Session Recording**
+
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/Owvcy7GIvEY" title="June 2025 AIMUG Session" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## 📁 **Documentation Sections**
 
 ### **[📰 News & Updates](./news/)**

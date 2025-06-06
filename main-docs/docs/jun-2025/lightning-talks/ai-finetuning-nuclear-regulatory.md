@@ -10,6 +10,10 @@ A lightning talk by Rob Whelan from Gridway AI demonstrating how to fine-tune em
 
 This session presented a practical approach to fine-tuning embeddings for the nuclear power industry, addressing the challenge of domain-specific jargon and terminology. Rob Whelan demonstrated how better embeddings lead to better search results when working with nuclear regulatory documents and technical specifications.
 
+## 📹 Video Recording
+
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/Owvcy7GIvEY?start=2053" title="June 2025 AIMUG - Fine-tuning Embeddings for Nuclear Power" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Presentation Materials
 
 Access the complete presentation materials from this lightning talk:
