@@ -20,18 +20,6 @@ Comprehensive analysis and key insights from the Interrupt Conference, covering 
 - Actionable insights for practitioners
 - Future implications for AI development
 
-### **[MCP Testing & Showcase](./mcp-testing-showcase.md)**
-*30 minutes*
-
-Deep dive into Model Context Protocol (MCP) testing strategies, implementation patterns, and real-world showcase of MCP integrations.
-
-**Key Topics:**
-- MCP architecture and protocol details
-- Testing methodologies and best practices
-- Integration patterns and examples
-- Troubleshooting common issues
-- Performance optimization techniques
-
 ## 📋 **Full Session Format**
 
 - **Duration**: 30-45 minutes presentation + 15 minutes Q&A

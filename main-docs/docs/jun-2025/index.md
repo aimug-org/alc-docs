@@ -21,7 +21,6 @@ Welcome to the June 2025 Austin LangChain & AI MUG documentation. This month fea
 ### **[🎯 Full Sessions](./full-sessions/)**
 *In-depth technical deep dives and comprehensive workshops*
 - **[Interrupt Conference Takeaways](./full-sessions/interrupt-conference-takeaways.md)** - Key insights from industry conference
-- **[MCP Testing Showcase](./full-sessions/mcp-testing-showcase.md)** - Advanced Model Context Protocol testing methodologies
 
 ### **[🛠️ Resources](./resources/)**
 *Implementation guides and practical tools*
@@ -58,7 +57,6 @@ Welcome to the June 2025 Austin LangChain & AI MUG documentation. This month fea
 
 ### **For Deep Research**
 - **Technical Deep Dives**: Explore [Full Sessions](./full-sessions/) for comprehensive coverage
-- **MCP Advanced Testing**: [MCP Testing Showcase](./full-sessions/mcp-testing-showcase.md)
 - **Industry Applications**: [Nuclear Regulatory AI](./lightning-talks/ai-finetuning-nuclear-regulatory.md)
 - **Conference Insights**: [Interrupt Conference Takeaways](./full-sessions/interrupt-conference-takeaways.md)
 

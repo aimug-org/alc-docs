@@ -18,9 +18,7 @@ function generateSidebar() {
     ...folders.map(folder => ({
       type: 'category',
       label: formatFolderName(folder),
-      items: fs.readdirSync(path.join(docsPath, folder))
-        .filter(file => file.endsWith('.md'))
-        .map(file => `${folder}/${path.parse(file).name}`),
+      items: generateFolderItems(path.join(docsPath, folder), folder),
     })),
   ];
 
@@ -29,9 +27,124 @@ function generateSidebar() {
   };
 }
 
+function generateFolderItems(folderPath, basePath) {
+  const items = [];
+  const entries = fs.readdirSync(folderPath, { withFileTypes: true });
+  
+  // First, add all markdown files in the current directory
+  const mdFiles = entries
+    .filter(entry => entry.isFile() && entry.name.endsWith('.md'))
+    .map(entry => entry.name)
+    .sort((a, b) => {
+      // Put index.md first
+      if (a === 'index.md') return -1;
+      if (b === 'index.md') return 1;
+      return a.localeCompare(b);
+    });
+  
+  mdFiles.forEach(file => {
+    const fileName = path.parse(file).name;
+    items.push(`${basePath}/${fileName}`);
+  });
+  
+  // Then, add subdirectories as categories
+  const subdirs = entries
+    .filter(entry => entry.isDirectory())
+    .map(entry => entry.name)
+    .sort();
+  
+  subdirs.forEach(subdir => {
+    const subdirPath = path.join(folderPath, subdir);
+    const subdirItems = generateSubdirectoryItems(subdirPath, `${basePath}/${subdir}`);
+    
+    if (subdirItems.length > 0) {
+      items.push({
+        type: 'category',
+        label: formatSubdirectoryName(subdir),
+        items: subdirItems,
+        collapsible: true,
+        collapsed: true,
+      });
+    }
+  });
+  
+  return items;
+}
+
+function generateSubdirectoryItems(folderPath, basePath) {
+  const items = [];
+  
+  try {
+    const entries = fs.readdirSync(folderPath, { withFileTypes: true });
+    
+    // Add markdown files
+    const mdFiles = entries
+      .filter(entry => entry.isFile() && entry.name.endsWith('.md'))
+      .map(entry => entry.name)
+      .sort((a, b) => {
+        // Put index.md first
+        if (a === 'index.md') return -1;
+        if (b === 'index.md') return 1;
+        return a.localeCompare(b);
+      });
+    
+    mdFiles.forEach(file => {
+      const fileName = path.parse(file).name;
+      items.push(`${basePath}/${fileName}`);
+    });
+    
+    // Recursively add subdirectories
+    const subdirs = entries
+      .filter(entry => entry.isDirectory())
+      .map(entry => entry.name)
+      .sort();
+    
+    subdirs.forEach(subdir => {
+      const subdirPath = path.join(folderPath, subdir);
+      const subdirItems = generateSubdirectoryItems(subdirPath, `${basePath}/${subdir}`);
+      
+      if (subdirItems.length > 0) {
+        items.push({
+          type: 'category',
+          label: formatSubdirectoryName(subdir),
+          items: subdirItems,
+          collapsible: true,
+          collapsed: true,
+        });
+      }
+    });
+  } catch (error) {
+    console.error(`Error reading directory ${folderPath}:`, error);
+  }
+  
+  return items;
+}
+
 function formatFolderName(folder) {
   const [month, year] = folder.split('-');
   return `${month.charAt(0).toUpperCase() + month.slice(1)} ${year}`;
+}
+
+function formatSubdirectoryName(name) {
+  // Special formatting for known subdirectory names
+  const nameMap = {
+    'news': '📰 News & Updates',
+    'lightning-talks': '⚡ Lightning Talks',
+    'full-sessions': '🎯 Full Sessions',
+    'resources': '📚 Resources',
+    'ai-ecosystem-2025': '🌐 AI Ecosystem 2025',
+    'presentation-materials': '📊 Presentation Materials',
+  };
+  
+  if (nameMap[name]) {
+    return nameMap[name];
+  }
+  
+  // Default formatting: capitalize words and replace hyphens with spaces
+  return name
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
 }
 
 module.exports = generateSidebar();
