@@ -1,7 +1,7 @@
 ---
 slug: interrupt-conference-enterprise-insights-series-part-3
 title: "Enterprise AI Insights from the Interrupt Conference: Real-World Deployment Strategies (June 2025 Series - Part 3)"
-date: 2025-06-17
+date: 2025-06-12
 authors: [colinmcnamara, collierking, cam, paul, RPirruccio, lalanikarim]
 tags: ["interrupt-conference", "enterprise-ai", "deployment", "evaluation", "observability", "production", "agents"]
 featured_image: "./img/banner.png"
@@ -381,8 +381,12 @@ The Interrupt Conference revealed that enterprise AI success isn't about having 
 
 This is the third post in our comprehensive June 2025 series. Coming next:
 
-- **Part 4**: Specialized AI Applications - From nuclear regulatory compliance to advanced testing methodologies
-- **Part 5**: AI Ecosystem 2025 - The complete development landscape and future trends
+- **[Part 4](/blog/specialized-ai-applications-series-part-4)**: Specialized AI Applications - From nuclear regulatory compliance to advanced testing methodologies
+- **[Part 5](/blog/ai-ecosystem-2025-complete-landscape-series-part-5)**: AI Ecosystem 2025 - The complete development landscape and future trends
+
+**Previous in this series:**
+- **[Part 1](/blog/langchain-ecosystem-milestone-series-part-1)**: LangChain Surpasses OpenAI SDK - The AI ecosystem reaches production maturity
+- **[Part 2](/blog/ag-ui-protocol-series-part-2)**: AG-UI Protocol - The "USB-C for AI Agents" revolutionizing human-AI collaboration
 
 ---
 

@@ -53,8 +53,6 @@ const config = {
             '**/*.test.{js,jsx,ts,tsx}',
             '**/__tests__/**',
           ],
-          // Only show posts with dates <= current date
-          onlyIncludeCurrentPosts: true,
         },
         theme: {
           customCss: './src/css/custom.css',

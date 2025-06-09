@@ -1,7 +1,7 @@
 ---
 slug: specialized-ai-applications-series-part-4
 title: "Specialized AI Applications: From Nuclear Regulatory Compliance to Advanced Testing Methodologies (June 2025 Series - Part 4)"
-date: 2025-06-18
+date: 2025-06-13
 authors: [colinmcnamara, RPirruccio]
 tags: ["specialized-ai", "nuclear-regulatory", "testing", "compliance", "domain-specific", "applications", "mcp"]
 featured_image: "./img/banner.png"
@@ -551,7 +551,12 @@ Our community is actively working to democratize specialized AI knowledge:
 
 This is the fourth post in our comprehensive June 2025 series. Coming next:
 
-- **Part 5**: AI Ecosystem 2025 - The complete development landscape, emerging tools, and future trends shaping the industry
+- **[Part 5](/blog/ai-ecosystem-2025-complete-landscape-series-part-5)**: AI Ecosystem 2025 - The complete development landscape, emerging tools, and future trends shaping the industry
+
+**Previous in this series:**
+- **[Part 1](/blog/langchain-ecosystem-milestone-series-part-1)**: LangChain Surpasses OpenAI SDK - The AI ecosystem reaches production maturity
+- **[Part 2](/blog/ag-ui-protocol-series-part-2)**: AG-UI Protocol - The "USB-C for AI Agents" revolutionizing human-AI collaboration
+- **[Part 3](/blog/interrupt-conference-enterprise-insights-series-part-3)**: Enterprise AI Insights from the Interrupt Conference - Real-world deployment strategies
 
 ---
 

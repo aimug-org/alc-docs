@@ -1,7 +1,7 @@
 ---
 slug: ai-ecosystem-2025-complete-landscape-series-part-5
 title: "AI Ecosystem 2025: The Complete Development Landscape and Future Trends (June 2025 Series - Part 5)"
-date: 2025-06-19
+date: 2025-06-14
 authors: [colinmcnamara, RPirruccio]
 tags: ["ai-ecosystem", "2025", "development-landscape", "future-trends", "tools", "frameworks", "enterprise"]
 featured_image: "./img/banner.png"

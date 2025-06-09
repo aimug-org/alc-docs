@@ -1,7 +1,7 @@
 ---
 slug: ag-ui-protocol-series-part-2
 title: "AG-UI Protocol: The 'USB-C for AI Agents' Revolutionizing Human-AI Collaboration (June 2025 Series - Part 2)"
-date: 2025-06-16
+date: 2025-06-11
 authors: [colinmcnamara, RPirruccio]
 tags: ["ag-ui", "protocol", "human-ai-collaboration", "real-time", "agents", "standards", "interoperability"]
 featured_image: "./img/banner.png"
@@ -325,8 +325,12 @@ AG-UI represents a fundamental shift in how we think about human-AI collaboratio
 
 This is the second post in our comprehensive June 2025 series. Coming next:
 
-- **Part 3**: Enterprise AI Insights from the Interrupt Conference - Real-world deployment strategies and lessons learned
-- **Part 4**: Specialized AI Applications - From nuclear regulatory compliance to advanced testing methodologies
+- **[Part 3](/blog/interrupt-conference-enterprise-insights-series-part-3)**: Enterprise AI Insights from the Interrupt Conference - Real-world deployment strategies and lessons learned
+- **[Part 4](/blog/specialized-ai-applications-series-part-4)**: Specialized AI Applications - From nuclear regulatory compliance to advanced testing methodologies
+- **[Part 5](/blog/ai-ecosystem-2025-complete-landscape-series-part-5)**: AI Ecosystem 2025 - The complete development landscape and future trends
+
+**Previous in this series:**
+- **[Part 1](/blog/langchain-ecosystem-milestone-series-part-1)**: LangChain Surpasses OpenAI SDK - The AI ecosystem reaches production maturity
 
 ---
 

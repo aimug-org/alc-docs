@@ -1,11 +1,10 @@
 ---
 slug: langchain-ecosystem-milestone-series-part-1
 title: "LangChain Surpasses OpenAI SDK: The AI Ecosystem Reaches Production Maturity (June 2025 Series - Part 1)"
-date: 2025-06-15
-authors: [colinmcnamara]
-tags: ["langchain", "ai-ecosystem", "production", "enterprise", "agents", "development", "milestone"]
+date: 2025-06-09
+authors: [colinmcnamara, RPirruccio]
+tags: ["ai-ecosystem", "production", "enterprise", "agents", "development", "milestone"]
 featured_image: "./img/banner.png"
-draft: true
 ---
 
 # LangChain Surpasses OpenAI SDK: The AI Ecosystem Reaches Production Maturity
@@ -209,9 +208,10 @@ The LangChain ecosystem's evolution reflects the broader maturation of AI develo
 
 This is the first post in our comprehensive June 2025 series. Coming next:
 
-- **Part 2**: AG-UI Protocol - The "USB-C for AI Agents" revolutionizing human-AI collaboration
-- **Part 3**: Enterprise AI Insights from the Interrupt Conference - Real-world deployment strategies
-- **Part 4**: Specialized AI Applications - From nuclear regulatory to advanced testing methodologies
+- **[Part 2](/blog/ag-ui-protocol-series-part-2)**: AG-UI Protocol - The "USB-C for AI Agents" revolutionizing human-AI collaboration
+- **[Part 3](/blog/interrupt-conference-enterprise-insights-series-part-3)**: Enterprise AI Insights from the Interrupt Conference - Real-world deployment strategies
+- **[Part 4](/blog/specialized-ai-applications-series-part-4)**: Specialized AI Applications - From nuclear regulatory to advanced testing methodologies
+- **[Part 5](/blog/ai-ecosystem-2025-complete-landscape-series-part-5)**: AI Ecosystem 2025 - The complete development landscape and future trends
 
 ---
 
