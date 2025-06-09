@@ -43,6 +43,18 @@ const config = {
             xslt: true,
           },
           editUrl: 'https://github.com/aimug-org/alc-docs/tree/main/main-docs/',
+          blogSidebarCount: 'ALL',
+          blogSidebarTitle: 'All posts',
+          // Hide future-dated posts
+          include: ['**/*.{md,mdx}'],
+          exclude: [
+            '**/_*.{js,jsx,ts,tsx,md,mdx}',
+            '**/_*/**',
+            '**/*.test.{js,jsx,ts,tsx}',
+            '**/__tests__/**',
+          ],
+          // Only show posts with dates <= current date
+          onlyIncludeCurrentPosts: true,
         },
         theme: {
           customCss: './src/css/custom.css',

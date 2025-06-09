@@ -1,0 +1,95 @@
+name: Auto-publish scheduled blog posts
+
+on:
+  schedule:
+    # Run daily at 9 AM UTC (4 AM CDT / 3 AM CST)
+    - cron: '0 9 * * *'
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  publish-posts:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Check and publish scheduled posts
+        run: |
+          #!/bin/bash
+          set -e
+          
+          # Get current date in YYYY-MM-DD format
+          CURRENT_DATE=$(date -u +%Y-%m-%d)
+          echo "Current date: $CURRENT_DATE"
+          
+          # Track if any changes were made
+          CHANGES_MADE=false
+          
+          # Find all blog post index.md files with draft: true
+          find main-docs/blog -name "index.md" -type f | while read -r file; do
+            echo "Checking file: $file"
+            
+            # Check if file has draft: true
+            if grep -q "^draft: true" "$file"; then
+              echo "Found draft post: $file"
+              
+              # Extract the date from front matter
+              POST_DATE=$(grep "^date: " "$file" | sed 's/date: //' | tr -d ' ')
+              echo "Post date: $POST_DATE"
+              
+              # Compare dates (if post date <= current date, publish it)
+              if [[ "$POST_DATE" <= "$CURRENT_DATE" ]]; then
+                echo "Publishing post: $file (date: $POST_DATE)"
+                
+                # Remove the draft: true line
+                sed -i '/^draft: true$/d' "$file"
+                
+                CHANGES_MADE=true
+                echo "✅ Published: $file"
+              else
+                echo "⏳ Not yet time to publish: $file (scheduled for $POST_DATE)"
+              fi
+            fi
+          done
+          
+          # Check if any files were modified
+          if git diff --quiet; then
+            echo "No posts were published today."
+            echo "CHANGES_MADE=false" >> $GITHUB_ENV
+          else
+            echo "Posts were published!"
+            echo "CHANGES_MADE=true" >> $GITHUB_ENV
+          fi
+
+      - name: Commit and push changes
+        if: env.CHANGES_MADE == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Auto-publish scheduled blog posts for $(date -u +%Y-%m-%d)"
+          git push
+
+      - name: Create summary
+        run: |
+          echo "## Auto-publish Summary" >> $GITHUB_STEP_SUMMARY
+          echo "Date: $(date -u +%Y-%m-%d)" >> $GITHUB_STEP_SUMMARY
+          if [[ "$CHANGES_MADE" == "true" ]]; then
+            echo "✅ Blog posts were published today!" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "### Published Posts:" >> $GITHUB_STEP_SUMMARY
+            git log -1 --name-only --pretty=format:"" | grep "main-docs/blog" | sed 's/^/- /' >> $GITHUB_STEP_SUMMARY
+          else
+            echo "ℹ️ No posts were scheduled for publication today." >> $GITHUB_STEP_SUMMARY
+          fi
