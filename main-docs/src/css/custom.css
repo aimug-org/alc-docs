@@ -72,8 +72,13 @@
 }
 
 .hacky-hour-badge {
-  background: var(--ifm-color-info-lightest);
-  color: var(--ifm-color-info-darkest);
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  color: white;
+}
+
+.field-trip-badge {
+  background: linear-gradient(135deg, #9c88ff, #8c7ae6);
+  color: white;
 }
 
 .event-info {

@@ -2,24 +2,89 @@
 
 Welcome to the Austin LangChain Events page! Join our vibrant community of AI enthusiasts and developers.
 
-**Weekly Office Hours**: Tuesdays @ 5 PM CT - [Google Meet](https://meet.google.com/fsm-nawg-cng)  
-*(Note: Special events like showcases and mixers have their own meeting links listed with each event)*
+*Last updated: June 9, 2025*
 
-*Last updated: May 8, 2025*
+## 🎯 Weekly Office Hours
+
+<div class="event-card">
+  <span class="event-badge showcase-badge">Weekly Event</span>
+  <h3><i class="fas fa-users"></i> AIMUG Office Hours</h3>
+  <div class="event-info">
+    <i class="fas fa-calendar-week"></i>
+    <span><strong>Every Tuesday</strong></span>
+  </div>
+  <div class="event-info">
+    <i class="fas fa-clock"></i>
+    <span><strong>5:00 PM CT</strong></span>
+  </div>
+  <div class="event-info">
+    <i class="fas fa-video"></i>
+    <span><strong>Google Meet</strong></span>
+  </div>
+  <p>Connect & collaborate with other builders, work through labs, chat about tools, and plan future events. This is our weekly community gathering where everyone is welcome!</p>
+  
+  <p><strong>What to expect:</strong></p>
+  <ul>
+    <li>Community updates and announcements</li>
+    <li>Collaborative problem-solving and debugging</li>
+    <li>Discussion of latest AI/LangChain developments</li>
+    <li>Planning for upcoming events and showcases</li>
+    <li>Networking with fellow AI enthusiasts</li>
+  </ul>
+  
+  <a href="https://meet.google.com/fsm-nawg-cng" class="button button--primary">Join Office Hours</a>
+  
+  <p><em>Note: Special events like showcases and mixers have their own meeting links listed with each event</em></p>
+</div>
 
 ## 🎯 Featured Upcoming Events
 
 <div class="event-grid">
   <div class="event-card">
-    <span class="event-badge showcase-badge">Monthly Showcase</span>
-    <h3>June Monthly Showcase: Multimodal AI & Agents</h3>
+    <span class="event-badge field-trip-badge">Field Trip</span>
+    <h3>AIMUG Field Trip - Your Startup Sucks Comedy Show</h3>
     <div class="event-info">
       <i class="fas fa-calendar"></i>
-      <span>June 4, 2025</span>
+      <span>June 26, 2025</span>
     </div>
     <div class="event-info">
       <i class="fas fa-clock"></i>
-      <span>6:00 PM to 9:00 PM CDT</span>
+      <span>6:30 PM to 9:00 PM CDT</span>
+    </div>
+    <div class="event-info">
+      <i class="fas fa-map-marker-alt"></i>
+      <span>Tequila 512, 2201 Lake Austin Blvd, Austin, TX</span>
+    </div>
+    <div class="event-info">
+      <i class="fas fa-comedy-masks"></i>
+      <span>Austin's only pitch-roast comedy show!</span>
+    </div>
+    <p>We're ditching the terminal and grabbing cocktails at <strong>Your Startup Sucks</strong>—Austin's only pitch-roast comedy show! Founders brave the stage, VCs fire back, and Tequila 512 keeps the drinks (and jokes) flowing.</p>
+    
+    <h4>Why AIMUG is going:</h4>
+    <ul>
+      <li>Laugh at bad prompts <em>and</em> bad pitches</li>
+      <li>Network with founders, VCs, and fellow AI tinkerers</li>
+      <li>$10 entry (open bar) —or pitch for FREE if you're feeling bold</li>
+    </ul>
+    
+    <p><strong>Important:</strong> AIMUG isn't producing this show—we're just attending together. You must still purchase (or claim) your ticket on the main event page.</p>
+    
+    <p><strong>RSVP Options:</strong></p>
+    <a href="https://lu.ma/1iwozsl3" class="button button--primary">Get Your Ticket</a>
+    <a href="https://www.meetup.com/austin-langchain-ai-group/events/308259404/" class="button button--secondary">Meetup RSVP</a>
+  </div>
+
+  <div class="event-card">
+    <span class="event-badge showcase-badge">Monthly Showcase</span>
+    <h3>July Monthly Mixer & Showcase</h3>
+    <div class="event-info">
+      <i class="fas fa-calendar"></i>
+      <span>July 2, 2025</span>
+    </div>
+    <div class="event-info">
+      <i class="fas fa-clock"></i>
+      <span>6:00 PM to 8:00 PM CDT</span>
     </div>
     <div class="event-info">
       <i class="fas fa-map-marker-alt"></i>
@@ -29,7 +94,7 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
       <i class="fas fa-glass-cheers"></i>
       <span>After Party: The Tavern, 922 W 12th St, Austin, TX 78703</span>
     </div>
-    <p>Join us for our June showcase featuring presentations on multimodal AI applications and agent architectures. We'll have demos of vision-enabled agents, audio processing pipelines, and cross-modal reasoning systems.</p>
+    <p>Join us for our July monthly mixer and showcase featuring the latest in LangChain and AI middleware. The AI Middleware Users Group believes in "Learning in the Open" - we experiment together with LangChain, LangGraph, LangSmith, and the broader AI stack.</p>
     
     <h4>Agenda:</h4>
     <ul>
@@ -43,13 +108,35 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
     </ul>
     
     <p><strong>RSVP Options:</strong></p>
-    <a href="https://lu.ma/oknk1vty" class="button button--primary">In-Person RSVP</a>
-    <a href="https://us06web.zoom.us/j/83055251635?pwd=9guINZ3AbkPLjaG4aFCa3UXr7HQu.1" class="button button--secondary">Remote RSVP (Zoom)</a>
-    <a href="https://www.meetup.com/austin-langchain-ai-group/events/307462561/" class="button button--secondary">Meetup RSVP</a>
+    <a href="https://lu.ma/zs6j5w1a" class="button button--primary">In-Person RSVP</a>
+    <a href="https://us06web.zoom.us/j/83055251635?pwd=9guINZ3AbkPJLjaG4aFCa3UXr7HtQu.1" class="button button--secondary">Remote RSVP (Zoom)</a>
+    <a href="https://www.meetup.com/austin-langchain-ai-group/events/307462604/" class="button button--secondary">Meetup RSVP</a>
   </div>
 </div>
 
 ## 📚 Past Events
+
+<div class="event-card">
+  <span class="event-badge showcase-badge">Monthly Showcase</span>
+  <h3>June Monthly Showcase: Multimodal AI & Agents</h3>
+  <div class="event-info">
+    <i class="fas fa-calendar"></i>
+    <span>June 4, 2025</span>
+  </div>
+  <div class="event-info">
+    <i class="fas fa-clock"></i>
+    <span>6:00 PM to 9:00 PM CDT</span>
+  </div>
+  <div class="event-info">
+    <i class="fas fa-map-marker-alt"></i>
+    <span>ACC - RGC 3000</span>
+  </div>
+  <div class="event-info">
+    <i class="fas fa-glass-cheers"></i>
+    <span>After Party: The Tavern</span>
+  </div>
+  <p>Featured presentations on multimodal AI applications and agent architectures with demos of vision-enabled agents, audio processing pipelines, and cross-modal reasoning systems.</p>
+</div>
 
 <div class="event-card">
   <span class="event-badge showcase-badge">Monthly Showcase</span>
