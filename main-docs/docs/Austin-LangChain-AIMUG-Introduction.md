@@ -1,23 +1,24 @@
-# Welcome to Austin LangChain: Learning AI Together
+# Welcome to AI Middleware Users Group: Learning AI Together
 
 ## Learning in the Open
 
-Welcome to Austin LangChain, a community dedicated to exploring and understanding AI through the lens of LangChain! We believe in "Learning in the Open" - sharing our discoveries, challenges, and successes as we navigate the rapidly evolving world of AI together.
+Welcome to the AI Middleware Users Group (Austin LangChain AIMUG), a community dedicated to exploring and understanding AI through the lens of LangChain and other AI middleware technologies! We believe in "Learning in the Open" - sharing our discoveries, challenges, and successes as we navigate the rapidly evolving world of AI together.
 
-## What is LangChain?
+## What is AI Middleware?
 
-LangChain is more than just a framework - it's a bridge that connects various AI technologies, making them accessible and practical. Think of it as a Swiss Army knife for AI development, bringing together:
+AI middleware technologies like LangChain, LangGraph, and emerging frameworks serve as bridges that connect various AI technologies, making them accessible and practical. Think of them as Swiss Army knives for AI development, bringing together:
 
 - Large Language Models (like GPT-4, Claude, and local models)
 - Vector Databases
 - Document Processing
 - Memory Systems
+- Agent Architectures
+- Model Context Protocol (MCP)
 - And much more!
 
 <img width="397" alt="image" src="https://github.com/user-attachments/assets/d8ff1710-1099-4e5c-b02e-52bdadbed544" />
 
-
-Through LangChain's integrations, we can explore the entire AI ecosystem while building practical applications.
+Through these middleware integrations, we can explore the entire AI ecosystem while building practical applications. While we started with LangChain, our community now explores the full spectrum of AI middleware technologies.
 
 ## Our Learning Journey
 
