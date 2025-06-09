@@ -158,6 +158,41 @@
   color: #666;
 }
 
+/* Mobile optimizations for hero section */
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 1rem;
+  }
+  
+  .hero__title {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
+  }
+  
+  .hero__subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+  }
+  
+  .hero p {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: 1.8rem;
+  }
+  
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+}
+
 .button--primary {
   background-color: #2e8555;
   color: white;
@@ -357,4 +392,118 @@
 
 [data-theme='dark'] .footer__link-item:hover {
   color: #25c2a0;
+}
+
+/* Responsive YouTube embed styles */
+.video-responsive {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.video-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border: none;
+  border-radius: 8px;
+}
+
+/* Mobile-specific video adjustments */
+@media (max-width: 768px) {
+  .video-responsive {
+    margin: 1rem 0;
+    padding-bottom: 56.25%; /* Maintain 16:9 on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .video-responsive {
+    margin: 0.75rem 0;
+    border-radius: 4px;
+  }
+}
+
+/* Fix for existing YouTube iframes that don't use the wrapper */
+iframe[src*="youtube.com"] {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+@media (max-width: 768px) {
+  iframe[src*="youtube.com"] {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  iframe[src*="youtube.com"] {
+    min-height: 180px;
+  }
+}
+
+/* Additional mobile optimizations */
+@media (max-width: 768px) {
+  /* Make tables responsive */
+  .schedule-table {
+    font-size: 0.9rem;
+    overflow-x: auto;
+    display: block;
+    white-space: nowrap;
+  }
+  
+  .schedule-table th,
+  .schedule-table td {
+    padding: 0.5rem;
+  }
+  
+  /* Improve button spacing on mobile */
+  .button {
+    margin: 0.5rem 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Better spacing for event cards */
+  .event-card {
+    margin-bottom: 1rem;
+  }
+  
+  /* Improve sidebar navigation on mobile */
+  .menu__list-item {
+    margin: 0.25rem 0;
+  }
+  
+  .menu__link {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* iPhone specific optimizations */
+@media (max-width: 480px) {
+  /* Ensure proper touch targets */
+  .button {
+    min-height: 44px;
+    padding: 0.75rem 1rem;
+  }
+  
+  /* Better text readability */
+  body {
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+  
+  /* Improve form inputs */
+  input, textarea {
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
 }
