@@ -21,48 +21,55 @@ Help us build Austin's premier AI middleware community! Your support enables us 
 
 **Every contribution helps sustain AIMUG, no matter the size!** Your support keeps our events free, our content accessible, and our community thriving.
 
-### 🚀 **Quick Donate**
+### 🚀 **Quick Donate – Impact Menu**
 
-| Amount | What It Enables |
-|--------|-----------------|
-| [**$10**](#) | 1 month of website hosting |
-| [**$25**](#) | Pizza for 5 attendees at an event |
-| [**$50**](#) | 1 month of streaming services |
-| [**$100**](#) | API credits for a full workshop |
-| [**$200**](#) | Guest speaker travel support |
-| [**Custom Amount**](#) | Your choice! |
+| Amount | Core Thing It Pays For | Extra Impact Examples |
+|--------|------------------------|----------------------|
+| [**$10**](#) | AI tokens for website updates | Domain renewal (aimug.org) • 50 name-badge inserts • Replacement HDMI/USB-C adapter |
+| [**$25**](#) | Pizza for 5 attendees | One month of Zoom Pro • Case of sodas/coffee • Meetup.com organizer fee (prorated) |
+| [**$50**](#) | One month of streaming services | YouTube/Twitch streaming tools • 100 stickers or 25 pins • Extra wireless mic rental |
+| [**$100**](#) | API credits for a full workshop | Scholarship seat for a student • Tripod + capture card upgrade • Targeted ads reaching ~2k Austinites |
+| [**$200**](#) | Guest speaker travel support | Professional venue rental for special events • 4K webcam + key-light kit • Gas + hotel from Dallas/Houston |
+| [**Custom Amount**](#) | Your choice! | Every dollar maps to a real line item on AIMUG's monthly budget |
+
+*Every dollar maps to a real line item on AIMUG's monthly budget, so you always know where your support lands.*
 
 ### 🎯 **Monthly Community Membership**
 
 Join our sustaining members and help us plan for the future!
 
-#### ☕ **Coffee Supporter** - $5/month
-- Keep our office hours caffeinated!
-- Recognition in monthly newsletter
+| Tier | Monthly | Benefits |
+|------|---------|----------|
+| ☕ **Coffee Supporter** | $5 | Keep our office hours caffeinated! + Newsletter recognition |
+| 🍕 **Community Sustainer** | $15 | Help provide pizza at events + Newsletter recognition + Early event access |
+| 🎪 **Event Champion** | $25 | Support streaming & educational tools + All above + Special Discord role |
+| 💻 **Tech Advocate** | $50 | Enable API access for workshops + All above + Quarterly supporter office hours |
+| 🌟 **Community Leader** | $100 | Make special events possible + All above + Event planning input + Annual appreciation event |
 
-#### 🍕 **Community Sustainer** - $15/month  
-- Help provide pizza at our events
-- **Perks**: Newsletter recognition + early event access
+#### **Choose Your Membership Level:**
 
-#### 🎪 **Event Champion** - $25/month
-- Support our streaming and educational tools
-- **Perks**: Early event access + newsletter recognition + special Discord role
+**☕ [Become a Coffee Supporter - $5/month](YOUR_STRIPE_LINK_COFFEE)**
+*Keep our office hours caffeinated! + Newsletter recognition*
 
-#### 💻 **Tech Advocate** - $50/month
-- Enable API access for workshops and demos
-- **Perks**: All above + quarterly supporter office hours
+**🍕 [Become a Community Sustainer - $15/month](YOUR_STRIPE_LINK_SUSTAINER)**
+*Help provide pizza at events + Newsletter recognition + Early event access*
 
-#### 🌟 **Community Leader** - $100/month
-- Make special events and guest speakers possible
-- **Perks**: All above + input on event planning + annual supporter appreciation event
+**🎪 [Become an Event Champion - $25/month](YOUR_STRIPE_LINK_CHAMPION)**
+*Support streaming & educational tools + All above + Special Discord role*
 
-### 💳 **How to Donate**
+**💻 [Become a Tech Advocate - $50/month](YOUR_STRIPE_LINK_ADVOCATE)**
+*Enable API access for workshops + All above + Quarterly supporter office hours*
+
+**🌟 [Become a Community Leader - $100/month](YOUR_STRIPE_LINK_LEADER)**
+*Make special events possible + All above + Event planning input + Annual appreciation event*
+
+### 💳 **Other Ways to Support**
 
 #### **One-Time Donations**
 - **PayPal**: [Donate via PayPal](#) *(Link to be added)*
 - **Stripe**: [Secure Credit Card Donation](#) *(Link to be added)*
 
-#### **Monthly Support**
+#### **Alternative Monthly Support**
 - **GitHub Sponsors**: [Sponsor us on GitHub](#) *(Link to be added)*
 - **Patreon**: [Monthly Community Support](#) *(Link to be added)*
 
