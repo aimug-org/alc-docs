@@ -13,18 +13,63 @@ function generateSidebar() {
       return new Date(`${aMonth} 1, ${aYear}`) - new Date(`${bMonth} 1, ${bYear}`);
     });
 
+  // Group folders by year
+  const foldersByYear = groupFoldersByYear(folders);
+  
+  // Get current year and month
+  const now = new Date();
+  const currentYear = now.getFullYear().toString();
+  const currentMonth = now.toLocaleDateString('en-US', { month: 'short' }).toLowerCase();
+  const currentFolderName = `${currentMonth}-${currentYear}`;
+  
+  // Build year-based sidebar structure
+  const yearCategories = Object.keys(foldersByYear)
+    .sort((a, b) => parseInt(b) - parseInt(a)) // Most recent year first
+    .map(year => ({
+      type: 'category',
+      label: `📅 ${year}${year === currentYear ? ' (Current)' : ''}`,
+      items: foldersByYear[year].map(folder => ({
+        type: 'category',
+        label: formatFolderName(folder, folder === currentFolderName),
+        items: generateFolderItems(path.join(docsPath, folder), folder),
+        collapsible: true,
+        collapsed: folder !== currentFolderName, // Only current month expanded
+      })),
+      collapsible: true,
+      collapsed: year !== currentYear, // Only current year expanded by default
+    }));
+
   const sidebar = [
     'Austin-LangChain-AIMUG-Introduction',
-    ...folders.map(folder => ({
-      type: 'category',
-      label: formatFolderName(folder),
-      items: generateFolderItems(path.join(docsPath, folder), folder),
-    })),
+    ...yearCategories,
   ];
 
   return {
     tutorialSidebar: sidebar,
   };
+}
+
+function groupFoldersByYear(folders) {
+  const foldersByYear = {};
+  
+  folders.forEach(folder => {
+    const [month, year] = folder.split('-');
+    if (!foldersByYear[year]) {
+      foldersByYear[year] = [];
+    }
+    foldersByYear[year].push(folder);
+  });
+  
+  // Sort months within each year chronologically
+  Object.keys(foldersByYear).forEach(year => {
+    foldersByYear[year].sort((a, b) => {
+      const [aMonth] = a.split('-');
+      const [bMonth] = b.split('-');
+      return new Date(`${aMonth} 1, ${year}`) - new Date(`${bMonth} 1, ${year}`);
+    });
+  });
+  
+  return foldersByYear;
 }
 
 function generateFolderItems(folderPath, basePath) {
@@ -120,9 +165,12 @@ function generateSubdirectoryItems(folderPath, basePath) {
   return items;
 }
 
-function formatFolderName(folder) {
+function formatFolderName(folder, isCurrentMonth = false) {
   const [month, year] = folder.split('-');
-  return `${month.charAt(0).toUpperCase() + month.slice(1)} ${year}`;
+  const monthName = month.charAt(0).toUpperCase() + month.slice(1);
+  
+  // Add indicator for current month
+  return isCurrentMonth ? `${monthName} (Current)` : monthName;
 }
 
 function formatSubdirectoryName(name) {
