@@ -1,90 +1,151 @@
 # Volunteering at Austin LangChain AIMUG
 
-Welcome to the Austin LangChain AIMUG volunteering page! Our events are made successful by the amazing contributions of our volunteers. Whether you're helping set up, running AV, or ensuring our attendees have food and drinks, there's a role for everyone. Join us in creating an engaging and smooth experience for our community.
+Help make our events successful! Our monthly showcases run smoothly thanks to dedicated volunteers who handle the technical, logistical, and hospitality aspects of each event. Whether you're interested in learning AV systems, helping with setup, or ensuring everyone is fed, there's a meaningful role for you.
 
 ---
 
 ## Why Volunteer?
-- **Community Impact**: Be part of a collaborative community advancing open-source AI learning.
-- **Skill Building**: Gain experience with event planning, AV systems, and team coordination.
-- **Networking Opportunities**: Connect with like-minded individuals and make lasting connections.
-- **Perks**: Volunteers receive priority access to events, recognition, and exclusive AIMUG swag.
+- **Learn by Doing**: Shadow experienced team members and gain hands-on experience with event production
+- **Community Impact**: Be part of Austin's premier AI middleware community
+- **Networking**: Connect with speakers, organizers, and fellow AI enthusiasts
+- **Recognition**: Active volunteers receive AIMUG swag and special recognition
 
 ---
 
-## Volunteer Roles
+## Key Volunteer Roles
 
-### **Setup Roles**
+### 🎥 **AV Team** ⭐ *High Impact Role*
+**Perfect for non-presenters who want to learn event production**
 
-#### Wayfinding and Entry
-- **Breadboard Sign Manager**: Place the AIMUG directional sign outside and remove it post-event.
-- **Badge Table Setup**: Arrange name tags, pens, and check-in materials.
-- **Unlock Doors**: Ensure venue doors are unlocked for attendees.
+**What you'll do:**
+- Shadow experienced AV team members during the event
+- Switch between cameras to keep speakers in frame
+- Monitor Zoom chat and relay important questions to speakers
+- Assist with audio/visual troubleshooting
+- Learn the technical side of hybrid event production
 
-#### AV System
-- **PC/Bridge Operator**:
-  - Log into the system PC, open the bridge for remote attendees, and manage recording.
-  - Center podium camera to ensure speakers are visible at all times over bridge.
-- **Equipment Setup**: Connect and test AV components (camera, mic, projector). 
-- **Music Setup**: Log into Spotify and play the pre-approved playlist during entry.
+**Why this role matters:** The AV team ensures our remote attendees have a great experience and can fully participate in Q&A sessions. It's an excellent learning opportunity for anyone interested in event tech.
 
-#### Food and Drink
-- **Food Manager**: Meet the pizza delivery driver and set up food on the designated table.
-- **Drink Station Setup**: Arrange drinks and snacks for attendees.
-
-#### Room Arrangement
-- **Furniture Setup**: Arrange chairs and desks to optimize the space for attendees and speakers.
-- **Accessibility Check**: Ensure pathways, seating, and materials accommodate all attendees.
+**Time commitment:** Arrive 30 minutes early, stay through event
 
 ---
 
-### **Teardown Roles**
+### 🔧 **Runner/Technical Support**
+**Keep the tech running smoothly**
 
-#### Wayfinding and Entry
-- **Breadboard Sign Manager**: Bring the sign back inside.
-- **Badge Table Cleanup**: Collect unused name tags, pens, and check-in materials.
+**What you'll do:**
+- Adjust sound levels at the Crestron control system
+- Turn projector on/off between talks and panels
+- Handle quick technical fixes during presentations
+- Assist speakers with microphone and presentation setup
+- Be the go-to person for any technical issues
 
-#### AV System
-- **Shut Down Equipment**: Disconnect and power off AV components, and log out of systems.
-- **Stop Bridge Recording**: Finalize and save recordings and transcription.
+**Time commitment:** Arrive 30 minutes early, stay through event
 
-#### Food and Drink
-- **Food Cleanup**: Pack up leftovers, dispose of trash responsibly, and clean the area.
+---
 
-#### Room Reset
-- **Furniture Reset**: Return chairs and desks to their original configuration.
-- **Final Check**: Ensure all areas are clean and organized.
+### 🍕 **Food & Beverage Coordinator**
+**Make sure everyone is well-fed and hydrated**
+
+**What you'll do:**
+- Pick up pizza from Domino's at **5:30 PM** (location near campus)
+- Bring **two bags of ice** to the event
+- Coordinate with venue for food and beverage setup area
+- Set up food service area and beverage station before attendees arrive
+- Ensure drinks stay cold throughout the event
+- Handle any food or beverage-related questions or issues
+- Assist with food and beverage cleanup
+
+**Time commitment:** 5:30 PM pickup, setup before 6:00 PM event start
+
+---
+
+### 📋 **Setup & Signage**
+**First impressions matter**
+
+**What you'll do:**
+- Put up AIMUG directional signs and standups
+- Set out name badges for attendees
+- Ensure venue is ready for arrivals
+- Take down signage after event
+
+**Time commitment:** Arrive 30 minutes early, stay 15 minutes after for teardown
+
+---
+
+## Event Day Timeline
+
+### **5:30 PM** - Food & Beverage Coordinator
+- Pick up pizza from Domino's (near campus)
+- Bring ice to venue
+
+### **5:30 PM** - Setup Team Arrives
+- AV Team, Runner, Setup volunteers arrive
+- Begin venue preparation and equipment checks
+
+### **5:45 PM** - Final Setup
+- Food & Beverage Coordinator arrives with pizza and ice
+- Name badges set out
+- Final AV checks and camera positioning
+- Food and beverage stations set up
+
+### **6:00 PM** - Event Begins
+- AV Team manages cameras and Zoom interaction
+- Runner handles any technical issues
+- Food and beverage service begins
+
+### **8:00 PM** - Event Ends
+- Quick teardown of signage and cleanup
+- AV Team secures equipment
+- Food and beverage cleanup
 
 ---
 
 ## How to Sign Up
 
-### **Discord Signup Thread**
-Join our Discord server and head to the "volunteering" channel. Here, you can sign up for specific roles by adding your name next to the task or reacting with an emoji to claim it. Keep an eye on announcements for updates and reminders.
+### **Discord Volunteer Channel**
+Join our [Discord server](https://discord.gg/JzWgadPFQd) and look for the **#volunteering** channel. Each event will have a signup thread where you can:
+- React with emojis to claim specific roles
+- Ask questions about volunteer responsibilities
+- Coordinate with other volunteers
+
+### **Contact the Volunteer Coordinator**
+Have questions or want to get more involved? Reach out to our Volunteer Coordinator through Discord or at our weekly office hours (Tuesdays @ 5 PM CT).
 
 ---
 
-## Event Day Volunteer Workflow
+## Volunteer Coordinator
 
-1. **Arrive Early**: Volunteers should arrive 30 minutes before the event starts to complete their assigned setup tasks.
-2. **Check-In with Coordinator**: Find the Volunteer Coordinator on-site for instructions and assistance.
-3. **Complete Tasks**: Follow your role’s checklist to ensure everything runs smoothly.
-4. **Enjoy the Event**: Once your tasks are done, relax and enjoy the event. Thank you for your help!
-5. **Teardown**: Assist with teardown tasks if you’re available after the event.
+We have a dedicated **Volunteer Coordinator** who:
+- Manages volunteer signups and scheduling
+- Provides training and support for new volunteers
+- Coordinates with venue and vendors
+- Ensures all volunteer roles are covered for each event
 
----
-
-## Volunteer Coordinator Contact
-If you have any questions or concerns, feel free to contact our Volunteer Coordinator on Discord or via [email].
+**Find them on Discord or at Tuesday office hours for questions!**
 
 ---
 
-## Recognition and Perks
-- **Monthly Volunteer Highlight**: We recognize a standout volunteer in our newsletter and social media.
-- **Exclusive Swag**: Active volunteers receive stickers, T-shirts, and other goodies.
-- **Networking Perks**: Enjoy exclusive networking opportunities with AIMUG leadership and speakers.
+## Recognition & Perks
+
+- **Monthly Volunteer Spotlight**: Featured in our newsletter and social media
+- **Exclusive AIMUG Swag**: Stickers, t-shirts, and other community gear
+- **Priority Event Access**: First to know about special events and workshops
+- **Learning Opportunities**: Gain experience with event production, AV systems, and community management
+- **Networking**: Connect with AIMUG leadership, speakers, and active community members
 
 ---
 
-We’re excited to have you on board and can’t wait to see the impact you’ll make! Together, let’s keep Austin LangChain AIMUG events thriving.
+## Special Notes
 
+- **AV Team Training Available**: New to AV? No problem! Experienced team members will show you the ropes
+- **Flexible Commitment**: Volunteer for one event or become a regular - every contribution helps
+- **Team Effort**: All roles work together to create an amazing experience for our community
+
+---
+
+Ready to get involved? Join our Discord and sign up for the next event. Thank you for helping make Austin LangChain AIMUG events successful! 🚀
+
+---
+
+*Questions? Contact our Volunteer Coordinator on [Discord](https://discord.gg/JzWgadPFQd) or join our Tuesday office hours at 5 PM CT.*
