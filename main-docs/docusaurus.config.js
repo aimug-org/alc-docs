@@ -4,7 +4,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'AI Middleware Users Group',
-  tagline: 'Learn, Connect, and Build in the open with Austin LangChain',
+  tagline: 'Learn, Connect, and Build in the open',
   favicon: 'img/favicon.ico',
 
   url: 'https://aimug.org',
@@ -129,7 +129,7 @@ const config = {
             ],
           },
         ],
-        copyright: `© ${new Date().getFullYear()} Austin LangChain AIMUG. Creative Commons Attribution 4.0.`,
+        copyright: `© ${new Date().getFullYear()} AI Middleware Users Group. Creative Commons Attribution 4.0.`,
       },
       prism: {
         theme: prismThemes.github,
