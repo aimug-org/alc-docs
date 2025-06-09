@@ -3,7 +3,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Austin LangChain',
+  title: 'AI Middleware Users Group',
   tagline: 'Learn, Connect, and Build in the open with Austin LangChain',
   favicon: 'img/favicon.ico',
 
@@ -56,7 +56,7 @@ const config = {
     ({
       image: 'img/alc-docs-social-card.jpg',
       navbar: {
-        title: 'Austin LangChain',
+        title: 'AI Middleware Users Group',
         logo: {
           alt: 'Austin LangChain Logo',
           src: 'img/austin_langchain-192x192.png',

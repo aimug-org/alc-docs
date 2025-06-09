@@ -12,9 +12,9 @@ function HomepageHeader() {
     <header className={clsx('hero', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          {siteConfig.title} AIMUG
+          {siteConfig.title}
         </Heading>
-        <p className="hero__subtitle">AI Middleware Users Group</p>
+        <p className="hero__subtitle">Austin LangChain AIMUG</p>
         <p>{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
