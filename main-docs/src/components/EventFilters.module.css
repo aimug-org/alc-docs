@@ -1,0 +1,350 @@
+.filterContainer {
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filterHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.filterTitle {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-800);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filterTitle i {
+  color: var(--ifm-color-primary);
+}
+
+.viewToggle {
+  display: flex;
+  background: var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  padding: 4px;
+  gap: 2px;
+}
+
+.viewButton {
+  background: transparent;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--ifm-color-emphasis-700);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+}
+
+.viewButton:hover {
+  background: var(--ifm-color-emphasis-300);
+  color: var(--ifm-color-emphasis-800);
+}
+
+.viewButton.active {
+  background: var(--ifm-color-primary);
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filterControls {
+  margin-bottom: 1rem;
+}
+
+.filterRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filterLabel {
+  font-weight: 500;
+  color: var(--ifm-color-emphasis-700);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.filterLabel i {
+  color: var(--ifm-color-primary);
+  width: 1rem;
+}
+
+.filterSelect {
+  padding: 0.75rem;
+  border: 2px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  background: var(--ifm-background-color);
+  color: var(--ifm-color-emphasis-800);
+  font-size: 0.9rem;
+  transition: border-color 0.2s ease;
+  cursor: pointer;
+}
+
+.filterSelect:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 3px rgba(46, 133, 85, 0.1);
+}
+
+.filterSelect:hover {
+  border-color: var(--ifm-color-primary-light);
+}
+
+.filterActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.clearButton {
+  background: var(--ifm-color-emphasis-200);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  color: var(--ifm-color-emphasis-700);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.clearButton:hover {
+  background: var(--ifm-color-emphasis-300);
+  color: var(--ifm-color-emphasis-800);
+  transform: translateY(-1px);
+}
+
+.resultCount {
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quickFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.quickFilter {
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  color: var(--ifm-color-emphasis-700);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.quickFilter:hover {
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-800);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.quickFilter.active {
+  background: var(--ifm-color-primary);
+  color: white;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 2px 8px rgba(46, 133, 85, 0.3);
+}
+
+.quickFilter i {
+  font-size: 0.8rem;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .filterContainer {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .filterHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .filterRow {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .filterActions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .clearButton {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .quickFilters {
+    gap: 0.5rem;
+  }
+  
+  .quickFilter {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .viewToggle {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .viewButton {
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .filterContainer {
+    padding: 0.75rem;
+  }
+  
+  .filterTitle {
+    font-size: 1.1rem;
+  }
+  
+  .filterSelect {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+  }
+  
+  .quickFilters {
+    justify-content: center;
+  }
+  
+  .quickFilter {
+    flex: 1;
+    min-width: 0;
+    justify-content: center;
+  }
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .filterContainer {
+  background: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-400);
+}
+
+[data-theme='dark'] .filterTitle {
+  color: var(--ifm-color-emphasis-900);
+}
+
+[data-theme='dark'] .filterLabel {
+  color: var(--ifm-color-emphasis-800);
+}
+
+[data-theme='dark'] .filterSelect {
+  background: var(--ifm-background-color);
+  border-color: var(--ifm-color-emphasis-400);
+  color: var(--ifm-color-emphasis-900);
+}
+
+[data-theme='dark'] .viewToggle {
+  background: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .viewButton {
+  color: var(--ifm-color-emphasis-800);
+}
+
+[data-theme='dark'] .viewButton:hover {
+  background: var(--ifm-color-emphasis-400);
+  color: var(--ifm-color-emphasis-900);
+}
+
+[data-theme='dark'] .clearButton {
+  background: var(--ifm-color-emphasis-300);
+  border-color: var(--ifm-color-emphasis-400);
+  color: var(--ifm-color-emphasis-800);
+}
+
+[data-theme='dark'] .clearButton:hover {
+  background: var(--ifm-color-emphasis-400);
+  color: var(--ifm-color-emphasis-900);
+}
+
+[data-theme='dark'] .quickFilter {
+  background: var(--ifm-color-emphasis-200);
+  border-color: var(--ifm-color-emphasis-400);
+  color: var(--ifm-color-emphasis-800);
+}
+
+[data-theme='dark'] .quickFilter:hover {
+  background: var(--ifm-color-emphasis-300);
+  color: var(--ifm-color-emphasis-900);
+}
+
+/* Animation for filter changes */
+.filterContainer {
+  transition: all 0.3s ease;
+}
+
+.filterSelect {
+  transition: all 0.2s ease;
+}
+
+.quickFilter {
+  transition: all 0.2s ease;
+}
+
+/* Focus states for accessibility */
+.filterSelect:focus,
+.clearButton:focus,
+.quickFilter:focus,
+.viewButton:focus {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .filterContainer {
+    display: none;
+  }
+}

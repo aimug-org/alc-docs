@@ -1,0 +1,207 @@
+.eventCard {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 12px;
+  padding: 1.5rem;
+  background: var(--ifm-background-surface-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.eventCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: var(--ifm-color-primary-light);
+}
+
+.eventHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.eventTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  line-height: 1.3;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.eventMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.eventDescription {
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.speakers {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
+}
+
+.speakers h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  color: var(--ifm-color-primary);
+}
+
+.speakers ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.speakers li {
+  margin-bottom: 0.25rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.eventActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.eventActions .button {
+  flex: 1;
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.eventActions .button i {
+  font-size: 0.85rem;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .eventCard {
+    padding: 1.25rem;
+  }
+  
+  .eventHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .eventActions {
+    flex-direction: column;
+  }
+  
+  .eventActions .button {
+    width: 100%;
+    min-width: auto;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  
+  .eventTitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .eventCard {
+    padding: 1rem;
+  }
+  
+  .eventTitle {
+    font-size: 1rem;
+  }
+  
+  .eventMeta {
+    gap: 0.75rem;
+  }
+  
+  .speakers {
+    padding: 0.75rem;
+  }
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .eventCard {
+  background: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-400);
+}
+
+[data-theme='dark'] .eventTitle {
+  color: var(--ifm-color-emphasis-900);
+}
+
+[data-theme='dark'] .eventDescription {
+  color: var(--ifm-color-emphasis-800);
+}
+
+[data-theme='dark'] .speakers {
+  background: var(--ifm-color-emphasis-200);
+}
+
+[data-theme='dark'] .speakers li {
+  color: var(--ifm-color-emphasis-800);
+}
+
+/* Animation for loading state */
+.eventCard.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.eventCard.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid var(--ifm-color-primary);
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Focus states for accessibility */
+.eventCard:focus-within {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .eventCard {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  
+  .eventActions {
+    display: none;
+  }
+}

@@ -1,0 +1,460 @@
+.pathGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.pathCard {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 12px;
+  padding: 2rem;
+  background: var(--ifm-background-surface-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pathCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.pathCard h3 {
+  margin-top: 0;
+  color: var(--ifm-color-primary);
+  font-size: 1.5rem;
+}
+
+.pathCard ul {
+  margin: 1.5rem 0;
+  padding-left: 1.25rem;
+}
+
+.pathCard li {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.pathActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.pathActions .button {
+  flex: 1;
+  min-width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.pathActions .button i {
+  font-size: 0.9rem;
+}
+
+.checklist {
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-left: 4px solid var(--ifm-color-primary);
+}
+
+.checklist ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.checklist li {
+  margin: 0.75rem 0;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.eventTypes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.eventType {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: var(--ifm-background-surface-color);
+  transition: transform 0.2s ease;
+}
+
+.eventType:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.eventType h3 {
+  margin-top: 0;
+  color: var(--ifm-color-primary);
+  font-size: 1.25rem;
+}
+
+.eventType ul {
+  margin: 1rem 0 0 0;
+  padding-left: 1.25rem;
+}
+
+.eventType li {
+  margin-bottom: 0.5rem;
+}
+
+.guidelines {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.guideline {
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border-top: 3px solid var(--ifm-color-primary);
+}
+
+.guideline h3 {
+  margin-top: 0;
+  color: var(--ifm-color-primary);
+  font-size: 1.2rem;
+}
+
+.guideline ul {
+  margin: 1rem 0 0 0;
+  padding-left: 1.25rem;
+}
+
+.guideline li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.faq {
+  margin: 2rem 0;
+}
+
+.faqItem {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  background: var(--ifm-background-surface-color);
+  transition: box-shadow 0.2s ease;
+}
+
+.faqItem:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faqItem h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary);
+  font-size: 1.1rem;
+}
+
+.faqItem p {
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.faqItem ul {
+  margin: 0.5rem 0 0 0;
+  padding-left: 1.25rem;
+}
+
+.faqItem li {
+  margin-bottom: 0.25rem;
+}
+
+.helpGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.helpCard {
+  text-align: center;
+  padding: 1.5rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  background: var(--ifm-background-surface-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.helpCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.helpCard h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary);
+  font-size: 1.2rem;
+}
+
+.helpCard p {
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.helpCard .button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.welcomeMessage {
+  background: linear-gradient(135deg, var(--ifm-color-primary-lightest), var(--ifm-color-primary-light));
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  margin: 3rem 0;
+  border: 1px solid var(--ifm-color-primary-light);
+}
+
+.welcomeMessage p {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--ifm-color-primary-darkest);
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .pathGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .pathCard {
+    padding: 1.5rem;
+  }
+  
+  .pathActions {
+    flex-direction: column;
+  }
+  
+  .pathActions .button {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .checklist {
+    padding: 1.25rem;
+  }
+  
+  .eventTypes {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .eventType {
+    padding: 1.25rem;
+  }
+  
+  .guidelines {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .guideline {
+    padding: 1.25rem;
+  }
+  
+  .helpGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .helpCard {
+    padding: 1.25rem;
+  }
+  
+  .welcomeMessage {
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+  
+  .welcomeMessage p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pathCard {
+    padding: 1rem;
+  }
+  
+  .pathCard h3 {
+    font-size: 1.3rem;
+  }
+  
+  .checklist {
+    padding: 1rem;
+  }
+  
+  .checklist li {
+    font-size: 1rem;
+  }
+  
+  .eventType {
+    padding: 1rem;
+  }
+  
+  .eventType h3 {
+    font-size: 1.1rem;
+  }
+  
+  .guideline {
+    padding: 1rem;
+  }
+  
+  .guideline h3 {
+    font-size: 1.1rem;
+  }
+  
+  .faqItem {
+    padding: 1rem;
+  }
+  
+  .faqItem h3 {
+    font-size: 1rem;
+  }
+  
+  .helpCard {
+    padding: 1rem;
+  }
+  
+  .helpCard h3 {
+    font-size: 1.1rem;
+  }
+  
+  .welcomeMessage {
+    padding: 1rem;
+  }
+  
+  .welcomeMessage p {
+    font-size: 1rem;
+  }
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .pathCard {
+  background: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-400);
+}
+
+[data-theme='dark'] .checklist {
+  background: var(--ifm-color-emphasis-200);
+}
+
+[data-theme='dark'] .eventType {
+  background: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-400);
+}
+
+[data-theme='dark'] .guideline {
+  background: var(--ifm-color-emphasis-200);
+}
+
+[data-theme='dark'] .faqItem {
+  background: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-400);
+}
+
+[data-theme='dark'] .helpCard {
+  background: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-400);
+}
+
+[data-theme='dark'] .welcomeMessage {
+  background: linear-gradient(135deg, rgba(37, 194, 160, 0.2), rgba(37, 194, 160, 0.3));
+  border-color: var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .welcomeMessage p {
+  color: var(--ifm-color-primary-lightest);
+}
+
+/* Focus states for accessibility */
+.pathCard:focus-within,
+.eventType:focus-within,
+.faqItem:focus-within,
+.helpCard:focus-within {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .pathGrid,
+  .eventTypes,
+  .guidelines,
+  .helpGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .pathCard,
+  .eventType,
+  .guideline,
+  .faqItem,
+  .helpCard {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  
+  .pathActions,
+  .helpCard .button {
+    display: none;
+  }
+}
+
+/* Animation for interactive elements */
+.pathCard,
+.eventType,
+.guideline,
+.faqItem,
+.helpCard {
+  transition: all 0.3s ease;
+}
+
+/* Improved button styling within cards */
+.pathActions .button:hover,
+.helpCard .button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Enhanced visual hierarchy */
+.pathCard p strong,
+.eventType p strong {
+  color: var(--ifm-color-emphasis-800);
+}
+
+[data-theme='dark'] .pathCard p strong,
+[data-theme='dark'] .eventType p strong {
+  color: var(--ifm-color-emphasis-900);
+}

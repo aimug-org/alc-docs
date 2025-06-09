@@ -99,19 +99,62 @@ function SupportCallout() {
           <div className="col col--10 col--offset-1">
             <div className={styles.supportCard}>
               <div className="text--center">
-                <i className="fas fa-heart" style={{fontSize: '3rem', color: '#e74c3c', marginBottom: '1rem'}}></i>
+                <div className={styles.supportIcon}>
+                  <i className="fas fa-heart"></i>
+                </div>
                 <Heading as="h2" className={styles.supportTitle}>
                   Help Us Grow Austin's AI Community
                 </Heading>
+                
+                {/* Impact Stats */}
+                <div className={styles.impactStats}>
+                  <div className={styles.statItem}>
+                    <div className={styles.statNumber}>1200+</div>
+                    <div className={styles.statLabel}>Active Members</div>
+                  </div>
+                  <div className={styles.statItem}>
+                    <div className={styles.statNumber}>50+</div>
+                    <div className={styles.statLabel}>Events Hosted</div>
+                  </div>
+                  <div className={styles.statItem}>
+                    <div className={styles.statNumber}>100%</div>
+                    <div className={styles.statLabel}>Free to Attend</div>
+                  </div>
+                </div>
+
                 <p className={styles.supportDescription}>
-                  AIMUG serves <strong>1200+ members</strong> as a public good, bringing AI middleware skills to our community. 
-                  Your support helps us provide free events, educational content, and networking opportunities.
+                  AIMUG operates as a <strong>public good</strong>, bringing cutting-edge AI middleware skills to our community. 
+                  Your donations enable us to provide <strong>free events</strong>, <strong>educational content</strong>, and 
+                  <strong>networking opportunities</strong> that advance Austin's AI ecosystem.
                 </p>
+
+                {/* Value Proposition */}
+                <div className={styles.valueProps}>
+                  <div className={styles.valueProp}>
+                    <i className="fas fa-graduation-cap"></i>
+                    <span>Expert-led workshops & tutorials</span>
+                  </div>
+                  <div className={styles.valueProp}>
+                    <i className="fas fa-network-wired"></i>
+                    <span>Connect with AI professionals</span>
+                  </div>
+                  <div className={styles.valueProp}>
+                    <i className="fas fa-code-branch"></i>
+                    <span>Open-source project collaboration</span>
+                  </div>
+                </div>
+
+                <div className={styles.donationCallout}>
+                  <p className={styles.donationText}>
+                    <strong>Every donation helps keep our events free for everyone</strong>
+                  </p>
+                </div>
+
                 <div className={styles.supportButtons}>
                   <Link
-                    className="button button--primary button--lg"
+                    className={`button button--primary button--lg ${styles.donateButton}`}
                     to="/support">
-                    💝 Support AIMUG
+                    💰 Donate Now
                   </Link>
                   <Link
                     className="button button--secondary button--lg"
@@ -119,11 +162,18 @@ function SupportCallout() {
                     🤝 Volunteer
                   </Link>
                 </div>
-                <p className={styles.supportNote}>
-                  <small>
-                    <i className="fas fa-tv"></i> Broadcasting on YouTube, Austin Public Access (Ch 11 & 16), and Austin Community College TV
-                  </small>
-                </p>
+
+                {/* Social Proof */}
+                <div className={styles.socialProof}>
+                  <p className={styles.broadcastNote}>
+                    <i className="fas fa-tv"></i>
+                    <strong>Reaching thousands:</strong> Broadcasting on YouTube, Austin Public Access (Ch 11 & 16), and Austin Community College TV
+                  </p>
+                  <div className={styles.testimonial}>
+                    <p>"AIMUG has been instrumental in advancing Austin's AI community. The quality of content and networking opportunities is unmatched."</p>
+                    <cite>— Community Member</cite>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
