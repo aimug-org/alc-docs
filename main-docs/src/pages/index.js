@@ -12,7 +12,7 @@ function HomepageHeader() {
     <header className={clsx('hero', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          {siteConfig.title}
+          AI Middleware Users Group
         </Heading>
         <p className="hero__subtitle">Austin LangChain AIMUG</p>
         <p>{siteConfig.tagline}</p>
@@ -129,8 +129,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Welcome to AIMUG - ${siteConfig.title}`}
-      description="AIMUG - AI Middleware Users Group - Learn, Connect, and Build with LangChain">
+      title="AI Middleware Users Group - Austin LangChain AIMUG"
+      description="AI Middleware Users Group (AIMUG) - Austin's premier community for LangChain developers, AI researchers, and middleware enthusiasts. Learn, Connect, and Build with cutting-edge AI technologies.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

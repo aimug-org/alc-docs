@@ -58,7 +58,7 @@ const config = {
       navbar: {
         title: 'AI Middleware Users Group',
         logo: {
-          alt: 'Austin LangChain Logo',
+          alt: 'AIMUG - AI Middleware Users Group Logo',
           src: 'img/austin_langchain-192x192.png',
         },
         items: [
