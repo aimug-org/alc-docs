@@ -1,77 +1,132 @@
 # Support Austin LangChain AIMUG
 
-Help us build Austin's premier AI middleware community! Your support enables us to provide high-quality events, cutting-edge content, and valuable networking opportunities for AI practitioners, developers, and enthusiasts across Central Texas.
+**Help us build Austin's premier AI middleware community!** Your support keeps our events free, content accessible, and community thriving.
 
-**We are organized as a public good, dedicated to bringing AI middleware skills into the communities we serve.**
-
----
-
-## Our Impact
-
-- **1200+ Community Members** across Austin and beyond
-- **Monthly Showcases** featuring the latest in AI middleware and LangChain developments
-- **Weekly Office Hours** providing hands-on support and collaboration
-- **Educational Content** including workshops, lightning talks, and technical deep-dives
-- **Industry Connections** bridging academia, startups, and enterprise
-- **Multi-Channel Broadcasting** reaching audiences through YouTube, Austin Public Access (channels 11 & 16), and soon Austin Community College TV
+*We are organized as a public good, dedicated to bringing AI middleware skills into the communities we serve.*
 
 ---
 
-## 💝 Individual Support
+## 🌟 **New: Monthly Membership Program**
 
-**Every contribution helps sustain AIMUG, no matter the size!** Your support keeps our events free, our content accessible, and our community thriving.
+After 18 months of community-driven growth, we're launching monthly memberships to ensure AIMUG's sustainable future.
 
-### 🚀 **Quick Donate – Impact Menu**
+**By the numbers:**
+- 🎯 **1,281 community members**
+- 📅 **40+ events hosted** since October 2023
+- 🚀 **18 months** of consistent growth
 
-| Amount | Core Thing It Pays For | Extra Impact Examples |
-|--------|------------------------|----------------------|
-| [**$10**](#) | AI tokens for website updates | Domain renewal (aimug.org) • 50 name-badge inserts • Replacement HDMI/USB-C adapter |
-| [**$25**](#) | Pizza for 5 attendees | One month of Zoom Pro • Case of sodas/coffee • Meetup.com organizer fee (prorated) |
-| [**$50**](#) | One month of streaming services | YouTube/Twitch streaming tools • 100 stickers or 25 pins • Extra wireless mic rental |
-| [**$100**](#) | API credits for a full workshop | Scholarship seat for a student • Tripod + capture card upgrade • Targeted ads reaching ~2k Austinites |
-| [**$200**](#) | Guest speaker travel support | Professional venue rental for special events • 4K webcam + key-light kit • Gas + hotel from Dallas/Houston |
-| [**Custom Amount**](#) | Your choice! | Every dollar maps to a real line item on AIMUG's monthly budget |
+**Be a Founding Member!**
+Help us transition from event-by-event funding to predictable monthly support. After 18 months of growth, help us scale sustainably.
+
+### **Our Goal: 25 Founding Members by July** 🎯
+**Current: Launching our membership program!**
+
+<div class="progress-bar">
+  <div class="progress-fill"></div>
+</div>
+
+<div class="donation-grid">
+
+<div class="donation-card">
+<h3>☕ $5/month</h3>
+<p>Coffee Supporter</p>
+<p><small>Keep our office hours caffeinated! + Newsletter recognition</small></p>
+<a href="https://buy.stripe.com/4gMbJ12fbdsJcjF9Cn57W07" class="donation-btn btn-blue">Become a Founding Member</a>
+</div>
+
+<div class="donation-card popular">
+<h3>🍕 $15/month</h3>
+<p>Community Sustainer</p>
+<p><small>Help provide pizza at events + Newsletter recognition + Early event access</small></p>
+<a href="https://donate.stripe.com/bJe5kD7zv4WderN5m757W08" class="donation-btn btn-orange">Become a Founding Member</a>
+</div>
+
+<div class="donation-card">
+<h3>🎪 $25/month</h3>
+<p>Event Champion</p>
+<p><small>Support streaming & educational tools + All above + Special Discord role</small></p>
+<a href="https://donate.stripe.com/3cI8wP1b73S983p4i357W09" class="donation-btn btn-green">Become a Founding Member</a>
+</div>
+
+<div class="donation-card">
+<h3>💻 $50/month</h3>
+<p>Tech Advocate</p>
+<p><small>Enable API access for workshops + All above + Quarterly supporter office hours</small></p>
+<a href="https://donate.stripe.com/4gM14naLH74lgzV29V57W0b" class="donation-btn btn-purple">Become a Founding Member</a>
+</div>
+
+<div class="donation-card">
+<h3>🌟 $100/month</h3>
+<p>Community Leader</p>
+<p><small>Make special events possible + All above + Event planning input + Annual appreciation event</small></p>
+<a href="https://donate.stripe.com/cNi14ncTPdsJ3N98yj57W0c" class="donation-btn btn-red">Become a Founding Member</a>
+</div>
+
+</div>
+
+### **Why Monthly Support?**
+- 🎯 **Predictable planning** - We can commit to regular venues, speakers, and tools
+- 🍕 **Better events** - Guaranteed pizza, professional streaming, quality AV
+- 🚀 **Community growth** - Invest in workshops, educational content, and member perks
+- 💝 **Exclusive benefits** - Early access, special Discord roles, supporter office hours
 
 *Every dollar maps to a real line item on AIMUG's monthly budget, so you always know where your support lands.*
 
-### 🎯 **Monthly Community Membership**
+---
 
-Join our sustaining members and help us plan for the future!
+## 💝 **Prefer a One-Time Gift?**
 
-| Tier | Monthly | Benefits |
-|------|---------|----------|
-| ☕ **Coffee Supporter** | $5 | Keep our office hours caffeinated! + Newsletter recognition |
-| 🍕 **Community Sustainer** | $15 | Help provide pizza at events + Newsletter recognition + Early event access |
-| 🎪 **Event Champion** | $25 | Support streaming & educational tools + All above + Special Discord role |
-| 💻 **Tech Advocate** | $50 | Enable API access for workshops + All above + Quarterly supporter office hours |
-| 🌟 **Community Leader** | $100 | Make special events possible + All above + Event planning input + Annual appreciation event |
+*Not ready for monthly? You can still make a huge impact with a one-time donation!*
 
-#### **Choose Your Membership Level:**
+<details>
+<summary><strong>🚀 Click to see one-time donation options</strong></summary>
 
-**☕ [Become a Coffee Supporter - $5/month](YOUR_STRIPE_LINK_COFFEE)**
-*Keep our office hours caffeinated! + Newsletter recognition*
+### **Monthly Goal: $500** *(Covers basic operations)*
+**Progress: 60% funded** - Help us reach our goal! 🎯
 
-**🍕 [Become a Community Sustainer - $15/month](YOUR_STRIPE_LINK_SUSTAINER)**
-*Help provide pizza at events + Newsletter recognition + Early event access*
+<div class="donation-grid">
 
-**🎪 [Become an Event Champion - $25/month](YOUR_STRIPE_LINK_CHAMPION)**
-*Support streaming & educational tools + All above + Special Discord role*
+<div class="donation-card">
+<h3>💡 $10</h3>
+<p>AI tokens for website updates</p>
+<a href="https://buy.stripe.com/9B628raLHagxgzV3dZ57W01" class="donation-btn btn-blue">Donate $10</a>
+</div>
 
-**💻 [Become a Tech Advocate - $50/month](YOUR_STRIPE_LINK_ADVOCATE)**
-*Enable API access for workshops + All above + Quarterly supporter office hours*
+<div class="donation-card">
+<h3>🍕 $25</h3>
+<p>Pizza for 5 attendees</p>
+<a href="https://buy.stripe.com/cNi3cvf1XewNbfB29V57W02" class="donation-btn btn-orange">Donate $25</a>
+</div>
 
-**🌟 [Become a Community Leader - $100/month](YOUR_STRIPE_LINK_LEADER)**
-*Make special events possible + All above + Event planning input + Annual appreciation event*
+<div class="donation-card">
+<h3>📺 $50</h3>
+<p>One month of streaming services</p>
+<a href="https://buy.stripe.com/28EfZh0734Wd0AX4i357W03" class="donation-btn btn-green">Donate $50</a>
+</div>
 
-### 💳 **Other Ways to Support**
+<div class="donation-card">
+<h3>🎓 $100</h3>
+<p>API credits for a full workshop</p>
+<a href="https://buy.stripe.com/7sY00jf1XbkBabxeWH57W04" class="donation-btn btn-purple">Donate $100</a>
+</div>
 
-#### **One-Time Donations**
-- **PayPal**: [Donate via PayPal](#) *(Link to be added)*
-- **Stripe**: [Secure Credit Card Donation](#) *(Link to be added)*
+<div class="donation-card">
+<h3>✈️ $200</h3>
+<p>Guest speaker travel support</p>
+<a href="https://buy.stripe.com/9B6bJ1g61fARcjF9Cn57W05" class="donation-btn btn-red">Donate $200</a>
+</div>
 
-#### **Alternative Monthly Support**
-- **GitHub Sponsors**: [Sponsor us on GitHub](#) *(Link to be added)*
-- **Patreon**: [Monthly Community Support](#) *(Link to be added)*
+<div class="donation-card">
+<h3>💰 Custom</h3>
+<p>Your choice!</p>
+<a href="https://donate.stripe.com/dRmeVd3jfdsJ1F1cOz57W06" class="donation-btn btn-gray">Custom Amount</a>
+</div>
+
+</div>
+
+*Every dollar maps to a real line item on AIMUG's monthly budget, so you always know where your support lands.*
+
+</details>
 
 ---
 
