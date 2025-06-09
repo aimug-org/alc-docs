@@ -2,7 +2,7 @@
 slug: ag-ui-protocol-series-part-2
 title: "AG-UI Protocol: The 'USB-C for AI Agents' Revolutionizing Human-AI Collaboration (June 2025 Series - Part 2)"
 date: 2025-06-16
-authors: [colinmcnamara]
+authors: [colinmcnamara, RPirruccio]
 tags: ["ag-ui", "protocol", "human-ai-collaboration", "real-time", "agents", "standards", "interoperability"]
 featured_image: "./img/banner.png"
 ---

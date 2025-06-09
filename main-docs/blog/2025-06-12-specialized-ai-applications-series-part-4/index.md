@@ -2,7 +2,7 @@
 slug: specialized-ai-applications-series-part-4
 title: "Specialized AI Applications: From Nuclear Regulatory to Advanced Testing (June 2025 Series - Part 4)"
 date: 2025-06-18
-authors: [colinmcnamara]
+authors: [colinmcnamara, robwhelan]
 tags: ["specialized-ai", "nuclear-regulatory", "embeddings", "finetuning", "domain-specific", "compliance", "testing"]
 featured_image: "./img/banner.png"
 ---

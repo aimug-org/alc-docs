@@ -2,7 +2,7 @@
 slug: interrupt-conference-enterprise-insights-series-part-3
 title: "Enterprise AI Insights from the Interrupt Conference: Real-World Deployment Strategies (June 2025 Series - Part 3)"
 date: 2025-06-17
-authors: [colinmcnamara]
+authors: [colinmcnamara, collierking, cam, paul, RPirruccio, lalanikarim]
 tags: ["interrupt-conference", "enterprise-ai", "deployment", "evaluation", "observability", "production", "agents"]
 featured_image: "./img/banner.png"
 ---

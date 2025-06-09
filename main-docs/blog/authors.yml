@@ -281,3 +281,149 @@ that1guy15:
     linkedin: ryan-booth-46470a5
     x: that1guy_15
     huggingface: that1guy15
+robwhelan:
+  name: Rob Whelan
+  title: Speaker - Gridway AI
+  url: https://www.linkedin.com/in/rob-whelan-036b905/
+  image_url: https://ui-avatars.com/api/?name=R&background=0D8ABC&color=fff&size=400
+  page: true
+  description: 'Key Contributions to Austin LangChain AIMUG:
+
+
+    Nuclear power domain specialist at Gridway AI, focusing on fine-tuning embeddings for specialized technical domains.
+
+
+    Notable Contributions:
+
+    • Presented "Fine-tuning Embeddings for Nuclear Power" lightning talk
+
+    • Demonstrated domain-specific embedding optimization techniques
+
+    • Open-sourced nuclear-licensing-embeddings-768 model on Hugging Face
+
+    • Created practical training methodologies for technical domain adaptation
+
+
+    Technical Expertise:
+
+    • Fine-tuning embeddings for domain-specific applications
+
+    • Nuclear regulatory document processing and search optimization
+
+    • PyTorch model training and deployment
+
+    • Semantic search improvement for technical domains
+
+
+    Open Source Contributions:
+
+    • Published gridwayai/nuclear-licensing-embeddings-768 on Hugging Face
+
+    • Shared training notebooks and methodologies
+
+    • Contributed to Gridway AI SDK development'
+  socials:
+    linkedin: rob-whelan-036b905
+    website: https://gridwayai.com
+collierking:
+  name: Collier King
+  title: Contributor - Austin LangChain AIMUG
+  url: https://www.linkedin.com/in/collierking/
+  image_url: https://ui-avatars.com/api/?name=C&background=0D8ABC&color=fff&size=400
+  page: true
+  description: 'Key Contributions to Austin LangChain AIMUG:
+
+
+    Active community member and Interrupt Conference attendee, contributing insights from cutting-edge AI development practices.
+
+
+    Notable Contributions:
+
+    • Participated in Interrupt Conference 2025 panel discussion
+
+    • Shared insights on enterprise AI deployment strategies
+
+    • Contributed to community knowledge sharing on production AI systems
+
+    • Helped bridge conference learnings with local community needs
+
+
+    Conference Insights:
+
+    • Enterprise AI architecture patterns
+
+    • Production deployment best practices
+
+    • Evaluation and observability strategies
+
+    • Human-in-the-loop AI system design'
+  socials:
+    linkedin: collierking
+cam:
+  name: Cameron Rohn
+  title: Contributor - Austin LangChain AIMUG
+  url: https://www.linkedin.com/in/cameron-rohn/
+  image_url: https://ui-avatars.com/api/?name=C&background=0D8ABC&color=fff&size=400
+  page: true
+  description: 'Key Contributions to Austin LangChain AIMUG:
+
+
+    Community member and Interrupt Conference attendee, bringing practical AI development experience to the group.
+
+
+    Notable Contributions:
+
+    • Participated in Interrupt Conference 2025 panel discussion
+
+    • Shared real-world AI implementation experiences
+
+    • Contributed to discussions on agent architecture patterns
+
+    • Helped translate conference insights for community application
+
+
+    Focus Areas:
+
+    • AI agent development and deployment
+
+    • Production system reliability
+
+    • Community knowledge sharing
+
+    • Practical AI implementation strategies'
+  socials:
+    linkedin: cameron-rohn
+paul:
+  name: Paul Phelps
+  title: Contributor - Austin LangChain AIMUG
+  url: https://www.linkedin.com/in/mrpaulphelps/
+  image_url: https://ui-avatars.com/api/?name=P&background=0D8ABC&color=fff&size=400
+  page: true
+  description: 'Key Contributions to Austin LangChain AIMUG:
+
+
+    Experienced AI practitioner and Interrupt Conference attendee, contributing enterprise-focused insights to the community.
+
+
+    Notable Contributions:
+
+    • Participated in Interrupt Conference 2025 panel discussion
+
+    • Shared enterprise AI deployment experiences
+
+    • Contributed insights on scalable AI system architecture
+
+    • Helped document conference learnings for community benefit
+
+
+    Expertise Areas:
+
+    • Enterprise AI system design
+
+    • Scalable agent architectures
+
+    • Production AI deployment
+
+    • AI system observability and monitoring'
+  socials:
+    linkedin: mrpaulphelps
