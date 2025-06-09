@@ -89,13 +89,33 @@ P.S. This receipt serves as your donation record for tax purposes.
 Replace placeholder links in `/src/pages/support.md` with actual Stripe payment links:
 
 ```markdown
-| [**$10**](https://buy.stripe.com/YOUR_LINK_HERE) | AI tokens for website updates | ... |
-| [**$25**](https://buy.stripe.com/YOUR_LINK_HERE) | Pizza for 5 attendees | ... |
-| [**$50**](https://buy.stripe.com/YOUR_LINK_HERE) | One month of streaming services | ... |
-| [**$100**](https://buy.stripe.com/YOUR_LINK_HERE) | API credits for a full workshop | ... |
-| [**$200**](https://buy.stripe.com/YOUR_LINK_HERE) | Guest speaker travel support | ... |
-| [**Custom Amount**](https://buy.stripe.com/YOUR_LINK_HERE) | Your choice! | ... |
+| [**$10**](https://buy.stripe.com/9B628raLHagxgzV3dZ57W01) | AI tokens for website updates | ... |
+| [**$25**](https://buy.stripe.com/cNi3cvf1XewNbfB29V57W02) | Pizza for 5 attendees | ... |
+| [**$50**](https://buy.stripe.com/28EfZh0734Wd0AX4i357W03) | One month of streaming services | ... |
+| [**$100**](https://buy.stripe.com/7sY00jf1XbkBabxeWH57W04) | API credits for a full workshop | ... |
+| [**$200**](https://buy.stripe.com/9B6bJ1g61fARcjF9Cn57W05) | Guest speaker travel support | ... |
+| [**Custom Amount**](https://donate.stripe.com/dRmeVd3jfdsJ1F1cOz57W06) | Your choice! | ... |
 ```
+## Analytics & Tracking
+🎯 Monthly Community Membership
+Join our sustaining members and help us plan for the future!
+
+Tier	Monthly	Benefits
+☕ Coffee Supporter	$5	Keep our office hours caffeinated! + Newsletter recognition
+https://buy.stripe.com/4gMbJ12fbdsJcjF9Cn57W07
+
+🍕 Community Sustainer	$15	Help provide pizza at events + Newsletter recognition + Early event access
+https://donate.stripe.com/bJe5kD7zv4WderN5m757W08
+
+🎪 Event Champion	$25	Support streaming & educational tools + All above + Special Discord role
+https://donate.stripe.com/3cI8wP1b73S983p4i357W09
+
+💻 Tech Advocate	$50	Enable API access for workshops + All above + Quarterly supporter office hours
+https://donate.stripe.com/4gM14naLH74lgzV29V57W0b
+
+🌟 Community Leader	$100	Make special events possible + All above + Event planning input + Annual appreciation event
+https://donate.stripe.com/cNi14ncTPdsJ3N98yj57W0c
+
 
 ## Analytics & Tracking
 

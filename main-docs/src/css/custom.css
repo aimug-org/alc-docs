@@ -512,3 +512,123 @@ iframe[src*="youtube.com"] {
     font-size: 16px; /* Prevent zoom on iOS */
   }
 }
+
+/* Support page donation cards */
+.donation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.donation-card {
+  border: 2px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  background: var(--ifm-background-surface-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.donation-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+.donation-card.popular {
+  border: 3px solid #ff9800;
+  background: #fff3e0;
+  position: relative;
+}
+
+.donation-card.popular::before {
+  content: "MOST POPULAR";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff9800;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.donation-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+}
+
+.donation-card p {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.donation-btn {
+  display: inline-block;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.donation-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  color: white;
+}
+
+.donation-btn.btn-blue { background: #1976d2; }
+.donation-btn.btn-orange { background: #f57c00; }
+.donation-btn.btn-green { background: #388e3c; }
+.donation-btn.btn-purple { background: #7b1fa2; }
+.donation-btn.btn-red { background: #d32f2f; }
+.donation-btn.btn-gray { background: #455a64; }
+
+.progress-bar {
+  background: var(--ifm-color-emphasis-200);
+  border-radius: 10px;
+  height: 20px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, var(--ifm-color-primary), var(--ifm-color-primary-light));
+  height: 100%;
+  width: 60%;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+/* Dark mode adjustments for donation cards */
+[data-theme='dark'] .donation-card {
+  background: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-400);
+}
+
+[data-theme='dark'] .donation-card.popular {
+  background: rgba(255, 152, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .donation-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin: 15px 0;
+  }
+  
+  .donation-card {
+    padding: 15px;
+  }
+  
+  .donation-btn {
+    width: 100%;
+    padding: 15px 20px;
+  }
+}
