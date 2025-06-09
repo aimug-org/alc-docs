@@ -75,6 +75,70 @@
   color: var(--ifm-color-primary);
 }
 
+/* Support Callout Section Styles */
+.supportCallout {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, var(--ifm-color-primary-lightest) 0%, var(--ifm-color-secondary-lightest) 100%);
+  position: relative;
+}
+
+.supportCard {
+  background-color: var(--ifm-background-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 3rem 2rem;
+  text-align: center;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  position: relative;
+  overflow: hidden;
+}
+
+.supportCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--ifm-color-primary), var(--ifm-color-secondary));
+}
+
+.supportTitle {
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+  color: var(--ifm-color-emphasis-900);
+  font-weight: 700;
+}
+
+.supportDescription {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  color: var(--ifm-color-emphasis-700);
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.supportButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.supportNote {
+  margin-bottom: 0;
+  color: var(--ifm-color-emphasis-600);
+  font-style: italic;
+}
+
+.supportNote i {
+  margin-right: 0.5rem;
+  color: var(--ifm-color-primary);
+}
+
 /* Newsletter Section Styles */
 .newsletter {
   padding: 3rem 0;
@@ -170,6 +234,31 @@
   .featureLink p {
     font-size: 0.9rem;
     line-height: 1.4;
+  }
+  
+  /* Support callout responsive styles */
+  .supportCallout {
+    padding: 3rem 0;
+  }
+  
+  .supportCard {
+    padding: 2rem 1.5rem;
+    margin: 0 1rem;
+  }
+  
+  .supportTitle {
+    font-size: 1.8rem;
+  }
+  
+  .supportDescription {
+    max-width: 100%;
+    font-size: 1.1rem;
+  }
+  
+  .supportButtons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
   }
 }
 

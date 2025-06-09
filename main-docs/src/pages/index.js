@@ -65,6 +65,12 @@ function HomepageFeatures() {
       link: 'https://github.com/aimug-org',
     },
     {
+      title: 'Support',
+      icon: 'fas fa-heart',
+      description: 'Help sustain our community through sponsorships, donations, or partnerships. Every contribution matters!',
+      link: '/support',
+    },
+    {
       title: 'Volunteer',
       icon: 'fas fa-hands-helping',
       description: 'Join our team of volunteers and help make our events successful while gaining valuable experience.',
@@ -79,6 +85,48 @@ function HomepageFeatures() {
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function SupportCallout() {
+  return (
+    <section className={styles.supportCallout}>
+      <div className="container">
+        <div className="row">
+          <div className="col col--10 col--offset-1">
+            <div className={styles.supportCard}>
+              <div className="text--center">
+                <i className="fas fa-heart" style={{fontSize: '3rem', color: '#e74c3c', marginBottom: '1rem'}}></i>
+                <Heading as="h2" className={styles.supportTitle}>
+                  Help Us Grow Austin's AI Community
+                </Heading>
+                <p className={styles.supportDescription}>
+                  AIMUG serves <strong>1200+ members</strong> as a public good, bringing AI middleware skills to our community. 
+                  Your support helps us provide free events, educational content, and networking opportunities.
+                </p>
+                <div className={styles.supportButtons}>
+                  <Link
+                    className="button button--primary button--lg"
+                    to="/support">
+                    💝 Support AIMUG
+                  </Link>
+                  <Link
+                    className="button button--secondary button--lg"
+                    to="/volunteer">
+                    🤝 Volunteer
+                  </Link>
+                </div>
+                <p className={styles.supportNote}>
+                  <small>
+                    <i className="fas fa-tv"></i> Broadcasting on YouTube, Austin Public Access (Ch 11 & 16), and Austin Community College TV
+                  </small>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -134,6 +182,7 @@ export default function Home() {
       <HomepageHeader />
       <main>
         <HomepageFeatures />
+        <SupportCallout />
         <NewsletterSignup />
       </main>
     </Layout>
