@@ -65,6 +65,10 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: 'img/alc-docs-social-card.jpg',
+      gtag: {
+        trackingID: 'G-EVEGH4FBSL',
+        anonymizeIP: true,
+      },
       navbar: {
         title: 'AI Middleware Users Group',
         logo: {
