@@ -5,7 +5,6 @@ date: 2025-06-12
 authors: [colinmcnamara, collierking, cam, paul, RPirruccio, lalanikarim]
 tags: ["interrupt-conference", "enterprise-ai", "deployment", "evaluation", "observability", "production", "agents"]
 featured_image: "./img/banner.png"
-draft: true
 ---
 
 # Enterprise AI Insights from the Interrupt Conference: Real-World Deployment Strategies
