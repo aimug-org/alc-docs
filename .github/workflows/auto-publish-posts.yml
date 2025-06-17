@@ -32,166 +32,89 @@ jobs:
           # Initialize variables
           CURRENT_DATE=$(date -u +%Y-%m-%d)
           CHANGES_COUNT=0
-          PUBLISHED_POSTS=()
-          SKIPPED_POSTS=()
-          ERROR_POSTS=()
           
-          echo "🗓️  Current date: $CURRENT_DATE"
-          echo "🔍 Scanning for draft posts to publish..."
-          
-          # Validate date format function
-          validate_date() {
-              local date="$1"
-              if [[ $date =~ ^[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]$ ]]; then
-                  return 0
-              else
-                  return 1
-              fi
-          }
+          echo "Current date: $CURRENT_DATE"
+          echo "Scanning for draft posts to publish..."
           
           # Process each blog post file using process substitution
           while IFS= read -r file; do
-              echo "📄 Checking file: $file"
+              echo "Checking file: $file"
               
               # Check if file has draft: true
               if grep -q "^draft: true" "$file"; then
-                  echo "📋 Found draft post: $file"
+                  echo "Found draft post: $file"
                   
-                  # Extract the date from front matter with better error handling
-                  if POST_DATE=$(grep "^date: " "$file" | sed 's/date: //' | tr -d ' ' | head -1); then
-                      if [[ -n "$POST_DATE" ]]; then
-                          echo "📅 Post date: $POST_DATE"
+                  # Extract the date from front matter
+                  POST_DATE=$(grep "^date: " "$file" | sed 's/date: //' | tr -d ' ' | head -1)
+                  
+                  if [ -n "$POST_DATE" ]; then
+                      echo "Post date: $POST_DATE"
+                      
+                      # Compare dates (if post date <= current date, publish it)
+                      if [ "$POST_DATE" \< "$CURRENT_DATE" ] || [ "$POST_DATE" = "$CURRENT_DATE" ]; then
+                          echo "Publishing post: $file (scheduled: $POST_DATE)"
                           
-                          # Validate date format
-                          if validate_date "$POST_DATE"; then
-                              # Compare dates (if post date <= current date, publish it)
-                              if [[ "$POST_DATE" <= "$CURRENT_DATE" ]]; then
-                                  echo "🚀 Publishing post: $file (scheduled: $POST_DATE)"
-                                  
-                                  # Create backup before modification
-                                  cp "$file" "$file.backup"
-                                  
-                                  # Remove the draft: true line
-                                  if sed -i '/^draft: true$/d' "$file"; then
-                                      # Verify the change was successful
-                                      if ! grep -q "^draft: true" "$file"; then
-                                          rm "$file.backup"
-                                          ((CHANGES_COUNT++))
-                                          PUBLISHED_POSTS+=("$file")
-                                          echo "✅ Successfully published: $file"
-                                      else
-                                          # Restore backup if sed didn't work
-                                          mv "$file.backup" "$file"
-                                          ERROR_POSTS+=("$file (sed failed to remove draft line)")
-                                          echo "❌ Failed to remove draft line from: $file"
-                                      fi
-                                  else
-                                      # Restore backup if sed command failed
-                                      mv "$file.backup" "$file"
-                                      ERROR_POSTS+=("$file (sed command failed)")
-                                      echo "❌ sed command failed for: $file"
-                                  fi
-                              else
-                                  SKIPPED_POSTS+=("$file (scheduled for $POST_DATE)")
-                                  echo "⏳ Not yet time to publish: $file (scheduled for $POST_DATE)"
-                              fi
+                          # Remove the draft: true line
+                          sed -i '/^draft: true$/d' "$file"
+                          
+                          # Verify the change was successful
+                          if ! grep -q "^draft: true" "$file"; then
+                              CHANGES_COUNT=$((CHANGES_COUNT + 1))
+                              echo "Successfully published: $file"
                           else
-                              ERROR_POSTS+=("$file (invalid date format: $POST_DATE)")
-                              echo "❌ Invalid date format in $file: $POST_DATE"
+                              echo "Failed to remove draft line from: $file"
                           fi
                       else
-                          ERROR_POSTS+=("$file (empty date field)")
-                          echo "❌ Empty date field in: $file"
+                          echo "Not yet time to publish: $file (scheduled for $POST_DATE)"
                       fi
                   else
-                      ERROR_POSTS+=("$file (no date field found)")
-                      echo "❌ No date field found in: $file"
+                      echo "No date found in: $file"
                   fi
               else
-                  echo "ℹ️  Not a draft: $file"
+                  echo "Not a draft: $file"
               fi
           done < <(find main-docs/blog -name "index.md" -type f)
           
           # Report results
           echo ""
-          echo "📊 PUBLISHING SUMMARY"
-          echo "===================="
-          echo "📅 Date: $CURRENT_DATE"
-          echo "✅ Posts published: $CHANGES_COUNT"
-          echo "⏳ Posts skipped (future dates): ${#SKIPPED_POSTS[@]}"
-          echo "❌ Posts with errors: ${#ERROR_POSTS[@]}"
+          echo "PUBLISHING SUMMARY"
+          echo "=================="
+          echo "Date: $CURRENT_DATE"
+          echo "Posts published: $CHANGES_COUNT"
           
           # Set environment variable for next step
           echo "CHANGES_COUNT=$CHANGES_COUNT" >> $GITHUB_ENV
-          echo "PUBLISHED_POSTS_COUNT=${#PUBLISHED_POSTS[@]}" >> $GITHUB_ENV
-          
-          # Create arrays for summary step
-          {
-              echo "PUBLISHED_POSTS<<EOF"
-              printf '%s\n' "${PUBLISHED_POSTS[@]}"
-              echo "EOF"
-          } >> $GITHUB_ENV
-          
-          {
-              echo "ERROR_POSTS<<EOF"
-              printf '%s\n' "${ERROR_POSTS[@]}"
-              echo "EOF"
-          } >> $GITHUB_ENV
           
           # Check if any files were modified using git
           if git diff --quiet; then
-              echo "ℹ️  No files were actually modified."
+              echo "No files were actually modified."
               echo "GIT_CHANGES=false" >> $GITHUB_ENV
           else
-              echo "✅ Git detected file changes."
+              echo "Git detected file changes."
               echo "GIT_CHANGES=true" >> $GITHUB_ENV
           fi
 
       - name: Commit and push changes
         if: env.GIT_CHANGES == 'true' && env.CHANGES_COUNT != '0'
         run: |
-          echo "📝 Committing changes..."
+          echo "Committing changes..."
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
-          git commit -m "🚀 Auto-publish scheduled blog posts for $(date -u +%Y-%m-%d)
-
-          Published ${{ env.PUBLISHED_POSTS_COUNT }} post(s):
-          $(echo "${{ env.PUBLISHED_POSTS }}" | sed 's/^/- /')"
+          git commit -m "Auto-publish scheduled blog posts for $(date -u +%Y-%m-%d)"
           git push
-          echo "✅ Changes committed and pushed successfully!"
+          echo "Changes committed and pushed successfully!"
 
       - name: Create summary
         run: |
-          echo "## 🚀 Auto-publish Summary" >> $GITHUB_STEP_SUMMARY
+          echo "## Auto-publish Summary" >> $GITHUB_STEP_SUMMARY
           echo "**Date:** $(date -u +%Y-%m-%d)" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           
-          if [[ "${{ env.CHANGES_COUNT }}" != "0" ]]; then
-              echo "### ✅ Published Posts (${{ env.PUBLISHED_POSTS_COUNT }})" >> $GITHUB_STEP_SUMMARY
-              echo "" >> $GITHUB_STEP_SUMMARY
-              if [[ -n "${{ env.PUBLISHED_POSTS }}" ]]; then
-                  echo "${{ env.PUBLISHED_POSTS }}" | while read -r post; do
-                      if [[ -n "$post" ]]; then
-                          echo "- \`$post\`" >> $GITHUB_STEP_SUMMARY
-                      fi
-                  done
-              fi
-              echo "" >> $GITHUB_STEP_SUMMARY
-              echo "🎉 **${{ env.PUBLISHED_POSTS_COUNT }} blog post(s) were successfully published!**" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ env.CHANGES_COUNT }}" != "0" ]; then
+              echo "**${{ env.CHANGES_COUNT }} blog post(s) were successfully published!**" >> $GITHUB_STEP_SUMMARY
           else
-              echo "ℹ️ **No posts were scheduled for publication today.**" >> $GITHUB_STEP_SUMMARY
-          fi
-          
-          if [[ -n "${{ env.ERROR_POSTS }}" ]]; then
-              echo "" >> $GITHUB_STEP_SUMMARY
-              echo "### ❌ Posts with Errors" >> $GITHUB_STEP_SUMMARY
-              echo "" >> $GITHUB_STEP_SUMMARY
-              echo "${{ env.ERROR_POSTS }}" | while read -r error; do
-                  if [[ -n "$error" ]]; then
-                      echo "- \`$error\`" >> $GITHUB_STEP_SUMMARY
-                  fi
-              done
+              echo "**No posts were scheduled for publication today.**" >> $GITHUB_STEP_SUMMARY
           fi
           
           echo "" >> $GITHUB_STEP_SUMMARY
