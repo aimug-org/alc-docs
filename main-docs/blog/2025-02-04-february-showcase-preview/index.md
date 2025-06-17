@@ -9,6 +9,8 @@ description: "Join us for an evening of AI innovation featuring cloud & local GP
 
 Join us tomorrow evening for our February Showcase and Mixer! We're excited to present a lineup of practical AI implementations and tool integrations that push the boundaries of what's possible with modern AI workflows.
 
+<!-- truncate -->
+
 ## 🎯 Event Details
 
 **Date**: February 5, 2025  

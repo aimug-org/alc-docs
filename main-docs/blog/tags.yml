@@ -107,3 +107,158 @@ sxsw:
   label: SXSW
   permalink: /sxsw
   description: Posts related to SXSW events and activities
+
+community-call:
+  label: Community Call
+  permalink: /community-call
+  description: Updates and recaps from community calls and discussions
+
+showcase:
+  label: Showcase
+  permalink: /showcase
+  description: Highlights and demonstrations of AI projects and achievements
+
+ai-workflows:
+  label: AI Workflows
+  permalink: /ai-workflows
+  description: Content about AI workflow design, implementation, and optimization
+
+ag-ui:
+  label: AG-UI
+  permalink: /ag-ui
+  description: Agent-User Interaction Protocol and related technologies
+
+protocol:
+  label: Protocol
+  permalink: /protocol
+  description: Communication protocols and standards in AI systems
+
+human-ai-collaboration:
+  label: Human-AI Collaboration
+  permalink: /human-ai-collaboration
+  description: Topics about collaborative interaction between humans and AI systems
+
+real-time:
+  label: Real-time
+  permalink: /real-time
+  description: Real-time AI applications and live interaction systems
+
+agents:
+  label: Agents
+  permalink: /agents
+  description: AI agents, multi-agent systems, and agent-based architectures
+
+standards:
+  label: Standards
+  permalink: /standards
+  description: Industry standards and best practices in AI development
+
+interoperability:
+  label: Interoperability
+  permalink: /interoperability
+  description: System integration and cross-platform compatibility in AI
+
+specialized-ai:
+  label: Specialized AI
+  permalink: /specialized-ai
+  description: Domain-specific AI applications and specialized use cases
+
+nuclear-regulatory:
+  label: Nuclear Regulatory
+  permalink: /nuclear-regulatory
+  description: AI applications in nuclear regulatory compliance and safety
+
+testing:
+  label: Testing
+  permalink: /testing
+  description: AI testing methodologies, validation, and quality assurance
+
+compliance:
+  label: Compliance
+  permalink: /compliance
+  description: Regulatory compliance and governance in AI systems
+
+domain-specific:
+  label: Domain-Specific
+  permalink: /domain-specific
+  description: Industry-specific AI applications and solutions
+
+applications:
+  label: Applications
+  permalink: /applications
+  description: Practical AI applications and real-world implementations
+
+interrupt-conference:
+  label: Interrupt Conference
+  permalink: /interrupt-conference
+  description: Content related to the Interrupt Conference and enterprise AI insights
+
+enterprise-ai:
+  label: Enterprise AI
+  permalink: /enterprise-ai
+  description: Enterprise-grade AI solutions and deployment strategies
+
+deployment:
+  label: Deployment
+  permalink: /deployment
+  description: AI system deployment, production, and scaling strategies
+
+evaluation:
+  label: Evaluation
+  permalink: /evaluation
+  description: AI model evaluation, testing, and performance assessment
+
+observability:
+  label: Observability
+  permalink: /observability
+  description: AI system monitoring, logging, and observability practices
+
+production:
+  label: Production
+  permalink: /production
+  description: Production AI systems and enterprise deployment
+
+ai-ecosystem:
+  label: AI Ecosystem
+  permalink: /ai-ecosystem
+  description: The broader AI development ecosystem and industry landscape
+
+milestone:
+  label: Milestone
+  permalink: /milestone
+  description: Significant achievements and milestones in AI development
+
+2025:
+  label: "2025"
+  permalink: /2025
+  description: AI developments and trends in 2025
+
+development-landscape:
+  label: Development Landscape
+  permalink: /development-landscape
+  description: The evolving landscape of AI development tools and practices
+
+future-trends:
+  label: Future Trends
+  permalink: /future-trends
+  description: Emerging trends and future directions in AI technology
+
+frameworks:
+  label: Frameworks
+  permalink: /frameworks
+  description: AI development frameworks and platforms
+
+google-io:
+  label: Google I/O
+  permalink: /google-io
+  description: Content related to Google I/O and Google's AI announcements
+
+enterprise:
+  label: Enterprise
+  permalink: /enterprise
+  description: Enterprise-level solutions and implementations
+
+development:
+  label: Development
+  permalink: /development
+  description: Development practices and methodologies

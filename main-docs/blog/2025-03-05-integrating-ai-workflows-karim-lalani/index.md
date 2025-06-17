@@ -1,10 +1,7 @@
 ---
 slug: integrating-ai-workflows-karim-lalani
 title: Integrating AI Workflows - Karim Lalani's Deep Dive into MCP, OpenWeb UI, LangChain, and LangGraph
-authors:
-  - name: Colin McNamara
-    title: Community Contributor
-    url: https://github.com/colinmcnamara
+authors: [colinmcnamara, lalanikarim]
 tags: [ai, langchain, workflows, tools, mcp, models]
 date: 2025-03-31
 ---
