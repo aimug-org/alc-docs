@@ -5,7 +5,6 @@ date: 2025-06-13
 authors: [colinmcnamara, RPirruccio]
 tags: ["specialized-ai", "nuclear-regulatory", "testing", "compliance", "domain-specific", "applications", "mcp"]
 featured_image: "./img/banner.png"
-draft: true
 ---
 
 # Specialized AI Applications: From Nuclear Regulatory to Advanced Testing
