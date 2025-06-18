@@ -891,3 +891,106 @@ textarea:focus {
     padding: 15px 20px;
   }
 }
+
+/* ===== MOBILE NAVIGATION FIXES ===== */
+/* Force proper hamburger menu behavior on mobile */
+@media (max-width: 768px) {
+  /* Hide main navigation items on mobile - they should be in hamburger menu */
+  .navbar__items .navbar__item:not(.navbar__toggle) {
+    display: none !important;
+  }
+  
+  /* Ensure only hamburger toggle is visible on mobile */
+  .navbar__toggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .navbar__toggle:hover,
+  .navbar__toggle:focus {
+    background-color: var(--ifm-color-emphasis-200);
+  }
+  
+  /* Fix navbar items container on mobile */
+  .navbar__items--right {
+    display: none !important;
+  }
+  
+  .navbar__items--left .navbar__item:not(.navbar__toggle) {
+    display: none !important;
+  }
+  
+  /* Ensure proper mobile sidebar behavior */
+  .navbar-sidebar {
+    z-index: 200;
+  }
+  
+  .navbar-sidebar__backdrop {
+    z-index: 199;
+  }
+  
+  /* Mobile menu items styling when sidebar is open */
+  .navbar-sidebar .navbar__items {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .navbar-sidebar .navbar__item {
+    display: flex !important;
+    border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  }
+  
+  .navbar-sidebar .navbar__item:last-child {
+    border-bottom: none;
+  }
+  
+  .navbar-sidebar .navbar__link {
+    padding: 0.75rem 1rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transition: background-color 0.2s ease;
+  }
+  
+  .navbar-sidebar .navbar__link:hover {
+    background-color: var(--ifm-color-emphasis-100);
+  }
+}
+
+/* Additional mobile navbar optimizations for smaller screens */
+@media (max-width: 480px) {
+  .navbar__brand {
+    flex: 1;
+  }
+  
+  .navbar__title {
+    font-size: 1rem;
+  }
+  
+  .navbar__logo {
+    max-height: 32px;
+  }
+  
+  /* Ensure hamburger button is easily tappable */
+  .navbar__toggle {
+    min-width: 48px;
+    min-height: 48px;
+  }
+}
+
+/* Dark mode adjustments for mobile navigation */
+[data-theme='dark'] .navbar__toggle:hover,
+[data-theme='dark'] .navbar__toggle:focus {
+  background-color: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .navbar-sidebar .navbar__link:hover {
+  background-color: var(--ifm-color-emphasis-200);
+}
