@@ -1,0 +1,33 @@
+.countdown {
+  color: #d73527;
+  font-weight: 600;
+  background: linear-gradient(45deg, #002868, #bf0a30);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.1em;
+}
+
+.today {
+  color: #bf0a30;
+  font-weight: bold;
+  font-size: 1.2em;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.countdown strong {
+  color: #002868;
+  font-size: 1.2em;
+}

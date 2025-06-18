@@ -1,3 +1,9 @@
+---
+title: Support Austin LangChain AIMUG
+---
+
+import IndependenceDayCountdown from '@site/src/components/IndependenceDayCountdown';
+
 # Support Austin LangChain AIMUG
 
 **Help us build Austin's premier AI middleware community!** Your support keeps our events free, content accessible, and community thriving.
@@ -18,8 +24,13 @@ After 18 months of community-driven growth, we're launching monthly memberships 
 **Be a Founding Member!**
 Help us transition from event-by-event funding to predictable monthly support. After 18 months of growth, help us scale sustainably.
 
-### **Our Goal: 25 Founding Members by July** 🎯
-**Current: Launching our membership program!**
+### **🇺🇸 Our Goal: 25 Founding Members by July 4th - Making AIMUG an Independent, Sustainable Organization** 🎯
+
+**Help us achieve community independence by Independence Day!**
+
+<IndependenceDayCountdown />
+
+**Current: Building toward independence** - Every founding member brings us closer to organizational freedom and sustainability.
 
 <div class="progress-bar">
   <div class="progress-fill"></div>
@@ -64,6 +75,19 @@ Help us transition from event-by-event funding to predictable monthly support. A
 
 </div>
 
+### **🇺🇸 What Community Independence Looks Like**
+
+When we reach 25 founding members by Independence Day, AIMUG becomes truly independent and self-sustaining:
+
+- **🏛️ Organizational Freedom** - No reliance on external funding cycles or grant applications
+- **📅 Consistent Programming** - Guaranteed monthly events, workshops, and educational content
+- **🎯 Community-Driven Decisions** - Members shape our direction, not external sponsors
+- **🚀 Sustainable Growth** - Reinvest surplus into better venues, equipment, and opportunities
+- **💪 Resilient Future** - Weather economic changes while continuing to serve our community
+- **🎓 Educational Excellence** - Fund advanced workshops, bring in expert speakers, and expand learning resources
+
+**Independence means we answer only to our community - exactly as it should be.**
+
 ### **Why Monthly Support?**
 - 🎯 **Predictable planning** - We can commit to regular venues, speakers, and tools
 - 🍕 **Better events** - Guaranteed pizza, professional streaming, quality AV
@@ -81,8 +105,8 @@ Help us transition from event-by-event funding to predictable monthly support. A
 <details>
 <summary><strong>🚀 Click to see one-time donation options</strong></summary>
 
-### **Monthly Goal: $500** *(Covers basic operations)*
-**Progress: 60% funded** - Help us reach our goal! 🎯
+### **Monthly Goal: $500** *(Building toward independence)*
+**Progress: 60% funded** - Help us achieve organizational independence! 🇺🇸
 
 <div class="donation-grid">
 
@@ -193,8 +217,8 @@ We're grateful for the support of our amazing sponsors:
 - **10%** - Marketing and community outreach
 - **5%** - Administrative costs
 
-### **Monthly Goal: $500** *(Covers basic operations)*
-**Progress: 60% funded** - Help us reach our goal!
+### **Monthly Goal: $500** *(Building toward independence)*
+**Progress: 60% funded** - Help us achieve organizational independence by July 4th! 🇺🇸
 
 ### **Recent Achievements**
 - Upgraded to professional streaming equipment
