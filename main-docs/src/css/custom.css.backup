@@ -198,13 +198,34 @@
   }
 }
 
-/* Basic touch targets for mobile - let Docusaurus handle navigation */
+/* Improved touch targets for mobile */
 @media (max-width: 768px) {
   .button {
     min-height: 44px;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
     touch-action: manipulation;
+  }
+  
+  .navbar__toggle {
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navbar__item {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar__link {
+    padding: 0.75rem 1rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -493,6 +514,15 @@ iframe[src*="youtube.com"] {
     margin-bottom: 1rem;
   }
   
+  /* Improve sidebar navigation on mobile */
+  .menu__list-item {
+    margin: 0.25rem 0;
+  }
+  
+  .menu__link {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
 }
 
 /* Accessibility improvements */
@@ -862,29 +892,110 @@ textarea:focus {
   }
 }
 
-/* MOBILE NAVIGATION FIX - Minimal override to fix positioning only */
-@media (max-width: 996px) {
-  /* Only fix the positioning issue, let Docusaurus handle everything else */
-  .navbar-sidebar {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    width: 100vw !important;
-    height: 100vh !important;
-    z-index: 200 !important;
-  }
-  
-  /* Ensure toggle button is visible */
+/* ===== MOBILE NAVIGATION FIXES ===== */
+/* Simplified mobile navigation for Docusaurus 3.6.3 */
+@media (max-width: 768px) {
+  /* Ensure hamburger toggle is properly styled and accessible */
   .navbar__toggle {
-    display: block !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
   }
   
-  /* Hide desktop nav items on mobile */
-  @media (max-width: 996px) {
-    .navbar__items--right .navbar__item:not(.navbar__toggle) {
-      display: none !important;
-    }
+  .navbar__toggle:hover,
+  .navbar__toggle:focus {
+    background-color: var(--ifm-color-emphasis-200);
   }
+  
+  /* Ensure mobile sidebar navigation items are visible and properly styled */
+  .navbar-sidebar .menu__list {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar-sidebar .menu__list-item {
+    display: flex !important;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .navbar-sidebar .menu__link {
+    padding: 0.75rem 1rem;
+    min-height: 44px;
+    display: flex !important;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid var(--ifm-color-emphasis-200);
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+    color: var(--ifm-color-emphasis-800);
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .navbar-sidebar .menu__link:hover {
+    background-color: var(--ifm-color-emphasis-100);
+    text-decoration: none;
+    color: var(--ifm-color-primary);
+  }
+  
+  /* Ensure dropdown functionality works in mobile sidebar */
+  .navbar-sidebar .dropdown__menu {
+    position: static;
+    background: var(--ifm-color-emphasis-50);
+    box-shadow: none;
+    border: none;
+    margin: 0;
+    border-radius: 0;
+    padding-left: 1rem;
+    width: 100%;
+  }
+  
+  .navbar-sidebar .dropdown__link {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid var(--ifm-color-emphasis-100);
+    color: var(--ifm-color-emphasis-700);
+    display: flex;
+    width: 100%;
+  }
+  
+  .navbar-sidebar .dropdown__link:hover {
+    background-color: var(--ifm-color-emphasis-200);
+  }
+}
+
+/* Additional mobile navbar optimizations for smaller screens */
+@media (max-width: 480px) {
+  .navbar__brand {
+    flex: 1;
+  }
+  
+  .navbar__title {
+    font-size: 1rem;
+  }
+  
+  .navbar__logo {
+    max-height: 32px;
+  }
+  
+  /* Ensure hamburger button is easily tappable */
+  .navbar__toggle {
+    min-width: 48px;
+    min-height: 48px;
+  }
+}
+
+/* Dark mode adjustments for mobile navigation */
+[data-theme='dark'] .navbar__toggle:hover,
+[data-theme='dark'] .navbar__toggle:focus {
+  background-color: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .navbar-sidebar .navbar__link:hover {
+  background-color: var(--ifm-color-emphasis-200);
 }

@@ -33,10 +33,10 @@ function generateSidebar() {
         label: formatFolderName(folder, folder === currentFolderName),
         items: generateFolderItems(path.join(docsPath, folder), folder),
         collapsible: true,
-        collapsed: folder !== currentFolderName, // Only current month expanded
+        collapsed: true, // All months collapsed by default
       })),
       collapsible: true,
-      collapsed: year !== currentYear, // Only current year expanded by default
+      collapsed: true, // All years collapsed by default
     }));
 
   const sidebar = [
