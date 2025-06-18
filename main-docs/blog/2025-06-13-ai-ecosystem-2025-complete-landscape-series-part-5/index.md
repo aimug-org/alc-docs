@@ -9,7 +9,7 @@ featured_image: "./img/banner.png"
 
 # AI Ecosystem 2025: The Complete Development Landscape and Future Trends
 
-*June 13, 2025 | Austin LangChain AI Middleware Users Group (AIMUG)*
+*June 13, 2025 | tin AI Middleware Users Group (AIMUG)*
 
 We've reached a pivotal moment in AI development. The "framework wars" are ending—not because one tool won, but because the ecosystem has evolved to make tool choice less critical. Universal standards like MCP (Model Context Protocol) are enabling seamless integration, while AI IDEs are revolutionizing how we build intelligent applications.
 
