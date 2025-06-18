@@ -76,8 +76,6 @@ const config = {
           src: 'img/austin_langchain-192x192.png',
         },
         items: [
-          {to: '/events', label: 'Events', position: 'left'},
-          {to: '/community', label: 'Community', position: 'left'},
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
@@ -85,6 +83,8 @@ const config = {
             label: 'Learn',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/events', label: 'Events', position: 'left'},
+          {to: '/community', label: 'Community', position: 'left'},
           {to: '/support', label: 'Support', position: 'left'},
           {
             href: 'https://github.com/aimug-org/austin_langchain',
