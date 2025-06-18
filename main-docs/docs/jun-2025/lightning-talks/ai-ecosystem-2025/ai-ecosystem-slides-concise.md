@@ -51,9 +51,9 @@ Austin LangChain AI Middleware User Group
 
 # The Big Question Changed
 
-<div class="big-text">❌ "What framework should I use?"</div>
+<div className="big-text">❌ "What framework should I use?"</div>
 
-<div class="big-text">✅ "What are you going to build?"</div>
+<div className="big-text">✅ "What are you going to build?"</div>
 
 ---
 
@@ -70,7 +70,7 @@ Austin LangChain AI Middleware User Group
 
 # MCP Won
 
-<div class="quote">"Everyone has switched to MCP. It is kind of the standard."<br/>- Colin McNamara</div>
+<div className="quote">"Everyone has switched to MCP. It is kind of the standard."<br/>- Colin McNamara</div>
 
 ## Universal tool integration across everything
 
@@ -87,7 +87,7 @@ Austin LangChain AI Middleware User Group
 
 # Google's Plot Twist
 
-<div class="big-text">Google endorsed n8n</div>
+<div className="big-text">Google endorsed n8n</div>
 
 ## Nobody saw that coming
 
@@ -95,7 +95,7 @@ Austin LangChain AI Middleware User Group
 
 # Orchestration Winner
 
-<div class="quote">"LangGraph is the winner"<br/>- Colin McNamara</div>
+<div className="quote">"LangGraph is the winner"<br/>- Colin McNamara</div>
 
 ## Why?
 Native Python + built-in observability + A2A ready
@@ -104,13 +104,13 @@ Native Python + built-in observability + A2A ready
 
 # The Economics Shift
 
-<div class="quote">"I want to pay for agents when they're executed, especially now that things are moving async."<br/>- Colin McNamara</div>
+<div className="quote">"I want to pay for agents when they're executed, especially now that things are moving async."<br/>- Colin McNamara</div>
 
 ---
 
 # Async Is Inevitable
 
-<div class="big-text">"Get back to me in 20 minutes. I don't care."</div>
+<div className="big-text">"Get back to me in 20 minutes. I don't care."</div>
 
 ## 20-minute response times are the new normal
 
@@ -118,13 +118,13 @@ Native Python + built-in observability + A2A ready
 
 # Monitor Everything
 
-<div class="quote">"Think of my entire application stack as A through Z. My agents are like LMNOP."<br/>- Colin McNamara</div>
+<div className="quote">"Think of my entire application stack as A through Z. My agents are like LMNOP."<br/>- Colin McNamara</div>
 
 ---
 
 # Security Reality Check
 
-<div class="quote">"At some point your AI is going to lose its mind and hack you. How are you gonna know?"</div>
+<div className="quote">"At some point your AI is going to lose its mind and hack you. How are you gonna know?"</div>
 
 ## Build to federal standards
 
@@ -132,7 +132,7 @@ Native Python + built-in observability + A2A ready
 
 # Agent Mesh Future
 
-<div class="quote">"The future of asynchronous development agents collaborating together and orchestrating these complex graphs together."<br/>- Colin McNamara</div>
+<div className="quote">"The future of asynchronous development agents collaborating together and orchestrating these complex graphs together."<br/>- Colin McNamara</div>
 
 ---
 
@@ -148,9 +148,9 @@ Native Python + built-in observability + A2A ready
 
 # Key Takeaway
 
-<div class="big-text">The infrastructure is being built NOW.</div>
+<div className="big-text">The infrastructure is being built NOW.</div>
 
-<div class="big-text">Will you be ready?</div>
+<div className="big-text">Will you be ready?</div>
 
 ---
 
@@ -167,4 +167,4 @@ Native Python + built-in observability + A2A ready
 
 # Questions?
 
-<div class="big-text">🚀 What are YOU going to build?</div>
+<div className="big-text">🚀 What are YOU going to build?</div>

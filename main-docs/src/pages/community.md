@@ -24,7 +24,7 @@ Welcome to Austin LangChain! We're a vibrant community of AI enthusiasts, develo
           action="https://buttondown.com/api/emails/embed-subscribe/aimug.org"
           method="post"
           target="popupwindow"
-          onsubmit="window.open('https://newsletter.aimug.org', 'popupwindow')"
+          onSubmit={() => window.open('https://newsletter.aimug.org', 'popupwindow')}
           className={styles.subscribeForm}
         >
           <input type="email" name="email" id="bd-email" placeholder="Enter your email" />

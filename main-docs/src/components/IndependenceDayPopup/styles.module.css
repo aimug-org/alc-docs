@@ -1,0 +1,390 @@
+/* Independence Day Popup Styles */
+
+.popupContainer {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 420px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translateY(20px);
+  opacity: 0;
+  pointer-events: none;
+  border: 2px solid #002868; /* Patriotic blue border */
+}
+
+.popupVisible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.popupHeader {
+  background: linear-gradient(135deg, #DC143C 0%, #B22234 50%, #002868 100%);
+  color: white;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+}
+
+.popupHeader::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpolygon points='20,0 24,16 40,16 28,24 32,40 20,32 8,40 12,24 0,16 16,16'/%3E%3C/g%3E%3C/svg%3E") repeat;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.headerContent {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.popupTitle {
+  margin: 0 0 8px 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.countdown {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FFD700; /* Gold color for countdown */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.closeButton:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.popupContent {
+  padding: 22px;
+  background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+}
+
+.popupMessage {
+  margin-bottom: 18px;
+  color: #2c3e50;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 500;
+  text-align: center;
+}
+
+.goalProgress {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  border: 2px solid #2196f3;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.progressText {
+  font-weight: 700;
+  color: #1565c0;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.progressNote {
+  font-size: 0.85rem;
+  color: #1976d2;
+  font-weight: 500;
+}
+
+.actionButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.primaryButton {
+  background: linear-gradient(135deg, #DC143C 0%, #B22234 100%);
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(220, 20, 60, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.primaryButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.primaryButton:hover::before {
+  left: 100%;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(220, 20, 60, 0.4);
+}
+
+.quickDonateSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.quickDonateLabel {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #495057;
+  text-align: center;
+}
+
+.donateButtons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.donateButton {
+  flex: 1;
+  background: linear-gradient(135deg, #002868 0%, #1565c0 100%);
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 40, 104, 0.3);
+}
+
+.donateButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 40, 104, 0.4);
+  background: linear-gradient(135deg, #1565c0 0%, #1976d2 100%);
+}
+
+.dismissContainer {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.dismissText {
+  color: #6c757d;
+  font-size: 0.85rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.dismissText:hover {
+  color: #495057;
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .popupContainer {
+  background-color: #1e2125;
+  border-color: #4a90e2;
+}
+
+[data-theme='dark'] .popupContent {
+  background: linear-gradient(to bottom, #1e2125 0%, #2d3748 100%);
+}
+
+[data-theme='dark'] .popupMessage {
+  color: #e2e8f0;
+}
+
+[data-theme='dark'] .goalProgress {
+  background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+  border-color: #4a90e2;
+}
+
+[data-theme='dark'] .progressText {
+  color: #90cdf4;
+}
+
+[data-theme='dark'] .progressNote {
+  color: #bee3f8;
+}
+
+[data-theme='dark'] .quickDonateLabel {
+  color: #a0aec0;
+}
+
+[data-theme='dark'] .dismissText {
+  color: #a0aec0;
+}
+
+[data-theme='dark'] .dismissText:hover {
+  color: #e2e8f0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .popupContainer {
+    width: calc(100% - 30px);
+    bottom: 20px;
+    right: 15px;
+    left: 15px;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+  
+  .popupHeader {
+    padding: 15px 18px;
+  }
+  
+  .popupTitle {
+    font-size: 1.2rem;
+  }
+  
+  .countdown {
+    font-size: 0.9rem;
+  }
+  
+  .popupContent {
+    padding: 18px;
+  }
+  
+  .donateButtons {
+    gap: 8px;
+  }
+  
+  .donateButton {
+    padding: 12px 8px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .popupContainer {
+    bottom: 15px;
+    right: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+  }
+  
+  .popupTitle {
+    font-size: 1.1rem;
+  }
+  
+  .primaryButton {
+    padding: 12px 18px;
+    font-size: 1rem;
+  }
+  
+  .donateButtons {
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .donateButton {
+    padding: 10px 16px;
+  }
+}
+
+/* Animation for entrance */
+@keyframes slideInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Focus states for accessibility */
+.primaryButton:focus,
+.donateButton:focus,
+.closeButton:focus,
+.dismissText:focus {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .popupContainer {
+    border-width: 3px;
+  }
+  
+  .primaryButton,
+  .donateButton {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .popupContainer {
+    transition: opacity 0.2s ease;
+  }
+  
+  .countdown {
+    animation: none;
+  }
+  
+  .primaryButton::before {
+    transition: none;
+  }
+  
+  .primaryButton:hover,
+  .donateButton:hover {
+    transform: none;
+  }
+}

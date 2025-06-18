@@ -32,45 +32,45 @@ Help us transition from event-by-event funding to predictable monthly support. A
 
 **Current: Building toward independence** - Every founding member brings us closer to organizational freedom and sustainability.
 
-<div class="progress-bar">
-  <div class="progress-fill"></div>
+<div className="progress-bar">
+  <div className="progress-fill"></div>
 </div>
 
-<div class="donation-grid">
+<div className="donation-grid">
 
-<div class="donation-card">
+<div className="donation-card">
 <h3>☕ $5/month</h3>
 <p>Coffee Supporter</p>
 <p><small>Keep our office hours caffeinated! + Newsletter recognition</small></p>
-<a href="https://buy.stripe.com/4gMbJ12fbdsJcjF9Cn57W07" class="donation-btn btn-blue">Become a Founding Member</a>
+<a href="https://buy.stripe.com/4gMbJ12fbdsJcjF9Cn57W07" className="donation-btn btn-blue">Become a Founding Member</a>
 </div>
 
-<div class="donation-card popular">
+<div className="donation-card popular">
 <h3>🍕 $15/month</h3>
 <p>Community Sustainer</p>
 <p><small>Help provide pizza at events + Newsletter recognition + Early event access</small></p>
-<a href="https://donate.stripe.com/bJe5kD7zv4WderN5m757W08" class="donation-btn btn-orange">Become a Founding Member</a>
+<a href="https://donate.stripe.com/bJe5kD7zv4WderN5m757W08" className="donation-btn btn-orange">Become a Founding Member</a>
 </div>
 
-<div class="donation-card">
+<div className="donation-card">
 <h3>🎪 $25/month</h3>
 <p>Event Champion</p>
 <p><small>Support streaming & educational tools + All above + Special Discord role</small></p>
-<a href="https://donate.stripe.com/3cI8wP1b73S983p4i357W09" class="donation-btn btn-green">Become a Founding Member</a>
+<a href="https://donate.stripe.com/3cI8wP1b73S983p4i357W09" className="donation-btn btn-green">Become a Founding Member</a>
 </div>
 
-<div class="donation-card">
+<div className="donation-card">
 <h3>💻 $50/month</h3>
 <p>Tech Advocate</p>
 <p><small>Enable API access for workshops + All above + Quarterly supporter office hours</small></p>
-<a href="https://donate.stripe.com/4gM14naLH74lgzV29V57W0b" class="donation-btn btn-purple">Become a Founding Member</a>
+<a href="https://donate.stripe.com/4gM14naLH74lgzV29V57W0b" className="donation-btn btn-purple">Become a Founding Member</a>
 </div>
 
-<div class="donation-card">
+<div className="donation-card">
 <h3>🌟 $100/month</h3>
 <p>Community Leader</p>
 <p><small>Make special events possible + All above + Event planning input + Annual appreciation event</small></p>
-<a href="https://donate.stripe.com/cNi14ncTPdsJ3N98yj57W0c" class="donation-btn btn-red">Become a Founding Member</a>
+<a href="https://donate.stripe.com/cNi14ncTPdsJ3N98yj57W0c" className="donation-btn btn-red">Become a Founding Member</a>
 </div>
 
 </div>
@@ -108,42 +108,42 @@ When we reach 25 founding members by Independence Day, AIMUG becomes truly indep
 ### **Monthly Goal: $500** *(Building toward independence)*
 **Progress: 60% funded** - Help us achieve organizational independence! 🇺🇸
 
-<div class="donation-grid">
+<div className="donation-grid">
 
-<div class="donation-card">
+<div className="donation-card">
 <h3>💡 $10</h3>
 <p>AI tokens for website updates</p>
-<a href="https://buy.stripe.com/9B628raLHagxgzV3dZ57W01" class="donation-btn btn-blue">Donate $10</a>
+<a href="https://buy.stripe.com/9B628raLHagxgzV3dZ57W01" className="donation-btn btn-blue">Donate $10</a>
 </div>
 
-<div class="donation-card">
+<div className="donation-card">
 <h3>🍕 $25</h3>
 <p>Pizza for 5 attendees</p>
-<a href="https://buy.stripe.com/cNi3cvf1XewNbfB29V57W02" class="donation-btn btn-orange">Donate $25</a>
+<a href="https://buy.stripe.com/cNi3cvf1XewNbfB29V57W02" className="donation-btn btn-orange">Donate $25</a>
 </div>
 
-<div class="donation-card">
+<div className="donation-card">
 <h3>📺 $50</h3>
 <p>One month of streaming services</p>
-<a href="https://buy.stripe.com/28EfZh0734Wd0AX4i357W03" class="donation-btn btn-green">Donate $50</a>
+<a href="https://buy.stripe.com/28EfZh0734Wd0AX4i357W03" className="donation-btn btn-green">Donate $50</a>
 </div>
 
-<div class="donation-card">
+<div className="donation-card">
 <h3>🎓 $100</h3>
 <p>API credits for a full workshop</p>
-<a href="https://buy.stripe.com/7sY00jf1XbkBabxeWH57W04" class="donation-btn btn-purple">Donate $100</a>
+<a href="https://buy.stripe.com/7sY00jf1XbkBabxeWH57W04" className="donation-btn btn-purple">Donate $100</a>
 </div>
 
-<div class="donation-card">
+<div className="donation-card">
 <h3>✈️ $200</h3>
 <p>Guest speaker travel support</p>
-<a href="https://buy.stripe.com/9B6bJ1g61fARcjF9Cn57W05" class="donation-btn btn-red">Donate $200</a>
+<a href="https://buy.stripe.com/9B6bJ1g61fARcjF9Cn57W05" className="donation-btn btn-red">Donate $200</a>
 </div>
 
-<div class="donation-card">
+<div className="donation-card">
 <h3>💰 Custom</h3>
 <p>Your choice!</p>
-<a href="https://donate.stripe.com/dRmeVd3jfdsJ1F1cOz57W06" class="donation-btn btn-gray">Custom Amount</a>
+<a href="https://donate.stripe.com/dRmeVd3jfdsJ1F1cOz57W06" className="donation-btn btn-gray">Custom Amount</a>
 </div>
 
 </div>

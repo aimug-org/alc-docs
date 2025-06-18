@@ -89,7 +89,7 @@ June 2025
 # The MCP Revolution
 
 ## Model Context Protocol (MCP)
-<div class="quote">"Everyone has switched to MCP. It is kind of the standard."<br/>- Colin McNamara</div>
+<div className="quote">"Everyone has switched to MCP. It is kind of the standard."<br/>- Colin McNamara</div>
 
 ### 🎯 What MCP Solved:
 • Framework chaos
@@ -139,7 +139,7 @@ Enables true agent mesh architectures
 
 ## 💰 Deployment Economics
 
-<div class="quote">"I want to pay for agents when they're executed, especially now that things are moving async."<br/>- Colin McNamara</div>
+<div className="quote">"I want to pay for agents when they're executed, especially now that things are moving async."<br/>- Colin McNamara</div>
 
 ### 🚀 Async-First Benefits:
 • **Cost optimization** → Cheaper infrastructure
@@ -155,7 +155,7 @@ Enables true agent mesh architectures
 
 ## Monitor Your Full Stack
 
-<div class="quote">"Think of my entire application stack as A through Z. My agents are like LMNOP."<br/>- Colin McNamara</div>
+<div className="quote">"Think of my entire application stack as A through Z. My agents are like LMNOP."<br/>- Colin McNamara</div>
 
 ### Traditional Monitoring (A-Z)
 Prometheus + ELK + Grafana
@@ -171,10 +171,10 @@ LangSmith vs LangFuse
 
 ## 🔒 Federal Standards Approach
 
-<div class="quote">"I really do think you should build applications to federal standards"<br/>- Colin McNamara</div>
+<div className="quote">"I really do think you should build applications to federal standards"<br/>- Colin McNamara</div>
 
 ### ⚠️ AI Security Warning:
-<div class="quote">"At some point your AI is going to lose its mind and hack you. How are you gonna know?"</div>
+<div className="quote">"At some point your AI is going to lose its mind and hack you. How are you gonna know?"</div>
 
 ### 🛡️ The Solution:
 • TLS everywhere • External authentication  
@@ -202,7 +202,7 @@ LangSmith vs LangFuse
 
 ## The Coming Revolution
 
-<div class="quote">"The future of asynchronous development agents collaborating together and orchestrating these complex graphs together."<br/>- Colin McNamara</div>
+<div className="quote">"The future of asynchronous development agents collaborating together and orchestrating these complex graphs together."<br/>- Colin McNamara</div>
 
 ### What's Coming:
 • **Cross-Platform Collaboration** → n8n + LangGraph + MCP
@@ -237,7 +237,7 @@ LangSmith vs LangFuse
 ## 🤝 Join the Community:
 **Austin LangChain AI Middleware User Group**
 
-<div class="quote">"Please feel free to collaborate, comment on LinkedIn"<br/>- Colin McNamara</div>
+<div className="quote">"Please feel free to collaborate, comment on LinkedIn"<br/>- Colin McNamara</div>
 
 **The infrastructure is being built NOW. Will you be ready?**
 
