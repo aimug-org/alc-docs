@@ -37,35 +37,48 @@ Just like PBS combines member support with corporate underwriting, we're buildin
 - ✅ **Keep Austin's AI leadership local and independent**
 - ✅ Sustainable growth and community development
 
-## Founding Member Benefits: Permanent Recognition
+## Choose Your Founding Member Level
 
 **Only 25 spots remaining** for founding member status with permanent recognition:
 
-### ☕ **$5/month - Coffee Supporter**
-*Less than one coffee - maximum accessibility*
-- Newsletter recognition
-- Founding member status
+<div class="donation-grid">
 
-### 🍕 **$15/month - Community Sustainer**  
-- Newsletter recognition
-- Early event access
-- Founding member status
+<div class="donation-card">
+<h3>☕ $5/month</h3>
+<p>Coffee Supporter</p>
+<p><small>Keep our office hours caffeinated! + Newsletter recognition + Founding member status</small></p>
+<a href="https://buy.stripe.com/4gMbJ12fbdsJcjF9Cn57W07" class="donation-btn btn-blue">Become a Founding Member</a>
+</div>
 
-### 🎪 **$25/month - Event Champion**
-- All above benefits
-- Special Discord role
-- Founding member status
+<div class="donation-card popular">
+<h3>🍕 $15/month</h3>
+<p>Community Sustainer</p>
+<p><small>Help provide pizza at events + Newsletter recognition + Early event access + Founding member status</small></p>
+<a href="https://donate.stripe.com/bJe5kD7zv4WderN5m757W08" class="donation-btn btn-orange">Become a Founding Member</a>
+</div>
 
-### 💻 **$50/month - Tech Advocate**
-- All above benefits
-- Quarterly supporter office hours
-- Founding member status
+<div class="donation-card">
+<h3>🎪 $25/month</h3>
+<p>Event Champion</p>
+<p><small>Support streaming & educational tools + All above + Special Discord role + Founding member status</small></p>
+<a href="https://donate.stripe.com/3cI8wP1b73S983p4i357W09" class="donation-btn btn-green">Become a Founding Member</a>
+</div>
 
-### 🌟 **$100/month - Community Leader**
-- All above benefits
-- Event planning input
-- Annual appreciation event
-- Founding member status
+<div class="donation-card">
+<h3>💻 $50/month</h3>
+<p>Tech Advocate</p>
+<p><small>Enable API access for workshops + All above + Quarterly supporter office hours + Founding member status</small></p>
+<a href="https://donate.stripe.com/4gM14naLH74lgzV29V57W0b" class="donation-btn btn-purple">Become a Founding Member</a>
+</div>
+
+<div class="donation-card">
+<h3>🌟 $100/month</h3>
+<p>Community Leader</p>
+<p><small>Make special events possible + All above + Event planning input + Annual appreciation event + Founding member status</small></p>
+<a href="https://donate.stripe.com/cNi14ncTPdsJ3N98yj57W0c" class="donation-btn btn-red">Become a Founding Member</a>
+</div>
+
+</div>
 
 ## Corporate Partners: Welcome and Valued
 
