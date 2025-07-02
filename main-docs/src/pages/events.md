@@ -4,6 +4,90 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
 
 *Last updated: June 9, 2025*
 
+## 🎯 Featured Upcoming Events
+
+<div className="event-grid">
+  <div className="event-card">
+    <span className="event-badge showcase-badge">Monthly Showcase</span>
+    <h3>July Monthly Mixer & Showcase</h3>
+    <div className="event-info">
+      <i className="fas fa-calendar"></i>
+      <span>July 2, 2025</span>
+    </div>
+    <div className="event-info">
+      <i className="fas fa-clock"></i>
+      <span>6:00 PM to 8:00 PM CDT</span>
+    </div>
+    <div className="event-info">
+      <i className="fas fa-map-marker-alt"></i>
+      <span>ACC - RGC 3000, 1218 West Avenue, Austin, TX</span>
+    </div>
+    <div className="event-info">
+      <i className="fas fa-glass-cheers"></i>
+      <span>After Party: The Tavern, 922 W 12th St, Austin, TX 78703</span>
+    </div>
+    <p>Join us for our July monthly mixer and showcase featuring the latest in LangChain and AI middleware. The AI Middleware Users Group believes in "Learning in the Open" - we experiment together with LangChain, LangGraph, LangSmith, and the broader AI stack.</p>
+    
+    <h4>Agenda:</h4>
+    <ul>
+      <li><strong>6:00 - 6:20 PM:</strong> Welcome Reception - light refreshments & networking</li>
+      <li><strong>6:20 - 6:40 PM:</strong> News & Updates - latest in LangChain / AI middleware</li>
+      <li><strong>6:40 - 7:20 PM:</strong> Lightning Talks - three 7-min presentations + 15-min group Q&A</li>
+      <li><strong>7:20 - 7:55 PM:</strong> Showcase / Hands-On Lab / Panel (TBD) - deeper dive & audience interaction</li>
+      <li><strong>7:55 - 8:00 PM:</strong> Wrap-up & next steps</li>
+      <li><strong>8:00 - 8:30 PM:</strong> Walk to The Tavern for the mixer</li>
+    </ul>
+    
+    <p><strong>RSVP Options:</strong></p>
+    <a href="https://lu.ma/zs6j5w1a" className="button button--primary">In-Person RSVP</a>
+    <a href="https://us06web.zoom.us/j/83055251635?pwd=9guINZ3AbkPJLjaG4aFCa3UXr7HtQu.1" className="button button--secondary">Remote RSVP (Zoom)</a>
+    <a href="https://www.meetup.com/austin-langchain-ai-group/events/307462604/" className="button button--secondary">Meetup RSVP</a>
+  </div>
+
+  <div className="event-card">
+    <span className="event-badge hacky-hour-badge">Hacky Hour</span>
+    <h3>Austin AIMUG Hacky Hour @ Cosmic Coffee – Saltillo</h3>
+    <div className="event-info">
+      <i className="fas fa-calendar"></i>
+      <span>July 22, 2025</span>
+    </div>
+    <div className="event-info">
+      <i className="fas fa-clock"></i>
+      <span>6:00 PM to 8:00 PM CDT</span>
+    </div>
+    <div className="event-info">
+      <i className="fas fa-map-marker-alt"></i>
+      <span>Cosmic Coffee + Beer Garden — Saltillo, 1300 E 4th St, Austin, TX</span>
+    </div>
+    <div className="event-info">
+      <i className="fas fa-laptop-code"></i>
+      <span>Code, caffeine, and community—come hang, hack, or just vibe</span>
+    </div>
+    <p>Totally free-form coding session under the patio lights. Whether you're working with Claude Code, Cursor, Gemini-CLI, Cline, or Roo-Code—building LangGraph agent-graphs, tinkering with AG-UI, or exploring MCP and A2A demos—this is your sandbox.</p>
+    
+    <h4>What to bring:</h4>
+    <ul>
+      <li>Laptop + charger (if you plan to hack)</li>
+      <li>Any repo, dataset, or half-baked idea you're itching to test</li>
+      <li>A thirst for coffee/beer and casual conversation</li>
+    </ul>
+    
+    <h4>Perfect for:</h4>
+    <ul>
+      <li>Builders using Claude Code, Cursor, Gemini-CLI, Cline, or Roo-Code</li>
+      <li>LangChain/LangGraph experimenters</li>
+      <li>Anyone prototyping UIs with AG-UI</li>
+      <li>Folks who learn by hacking—or just want a chill place to talk AI</li>
+    </ul>
+    
+    <p><strong>Venue Features:</strong> Amazing taco shop, great bar with coffee and non-alcoholic options, excellent Wi-Fi, some plugs available (charge your battery just in case). It's just a really great venue!</p>
+    
+    <p><strong>RSVP Options:</strong></p>
+    <a href="https://www.meetup.com/austin-langchain-ai-group/events/308790099/" className="button button--primary">RSVP on Meetup</a>
+    <a href="https://lu.ma/zuae1hhd" className="button button--secondary">RSVP on Lu.ma</a>
+  </div>
+</div>
+
 ## 🎯 Weekly Office Hours
 
 <div className="event-card">
@@ -37,84 +121,29 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
   <p><em>Note: Special events like showcases and mixers have their own meeting links listed with each event</em></p>
 </div>
 
-## 🎯 Featured Upcoming Events
-
-<div className="event-grid">
-  <div className="event-card">
-    <span className="event-badge field-trip-badge">Field Trip</span>
-    <h3>AIMUG Field Trip - Your Startup Sucks Comedy Show</h3>
-    <div className="event-info">
-      <i className="fas fa-calendar"></i>
-      <span>June 26, 2025</span>
-    </div>
-    <div className="event-info">
-      <i className="fas fa-clock"></i>
-      <span>6:30 PM to 9:00 PM CDT</span>
-    </div>
-    <div className="event-info">
-      <i className="fas fa-map-marker-alt"></i>
-      <span>Tequila 512, 2201 Lake Austin Blvd, Austin, TX</span>
-    </div>
-    <div className="event-info">
-      <i className="fas fa-comedy-masks"></i>
-      <span>Austin's only pitch-roast comedy show!</span>
-    </div>
-    <p>We're ditching the terminal and grabbing cocktails at <strong>Your Startup Sucks</strong>—Austin's only pitch-roast comedy show! Founders brave the stage, VCs fire back, and Tequila 512 keeps the drinks (and jokes) flowing.</p>
-    
-    <h4>Why AIMUG is going:</h4>
-    <ul>
-      <li>Laugh at bad prompts <em>and</em> bad pitches</li>
-      <li>Network with founders, VCs, and fellow AI tinkerers</li>
-      <li>$10 entry (open bar) —or pitch for FREE if you're feeling bold</li>
-    </ul>
-    
-    <p><strong>Important:</strong> AIMUG isn't producing this show—we're just attending together. You must still purchase (or claim) your ticket on the main event page.</p>
-    
-    <p><strong>RSVP Options:</strong></p>
-    <a href="https://lu.ma/1iwozsl3" className="button button--primary">Get Your Ticket</a>
-    <a href="https://www.meetup.com/austin-langchain-ai-group/events/308259404/" className="button button--secondary">Meetup RSVP</a>
-  </div>
-
-  <div className="event-card">
-    <span className="event-badge showcase-badge">Monthly Showcase</span>
-    <h3>July Monthly Mixer & Showcase</h3>
-    <div className="event-info">
-      <i className="fas fa-calendar"></i>
-      <span>July 2, 2025</span>
-    </div>
-    <div className="event-info">
-      <i className="fas fa-clock"></i>
-      <span>6:00 PM to 8:00 PM CDT</span>
-    </div>
-    <div className="event-info">
-      <i className="fas fa-map-marker-alt"></i>
-      <span>ACC - RGC 3000, 1218 West Avenue, Austin, TX</span>
-    </div>
-    <div className="event-info">
-      <i className="fas fa-glass-cheers"></i>
-      <span>After Party: The Tavern, 922 W 12th St, Austin, TX 78703</span>
-    </div>
-    <p>Join us for our July monthly mixer and showcase featuring the latest in LangChain and AI middleware. The AI Middleware Users Group believes in "Learning in the Open" - we experiment together with LangChain, LangGraph, LangSmith, and the broader AI stack.</p>
-    
-    <h4>Agenda:</h4>
-    <ul>
-      <li><strong>6:00 - 6:20 PM:</strong> Welcome Reception - light refreshments & networking</li>
-      <li><strong>6:10 - 6:20 PM:</strong> Intro to LangChain video (loops during reception)</li>
-      <li><strong>6:20 - 6:40 PM:</strong> News & Updates - latest in LangChain / AI middleware</li>
-      <li><strong>6:40 - 7:20 PM:</strong> Lightning Talks - three 7-min presentations + 15-min group Q&A</li>
-      <li><strong>7:20 - 7:55 PM:</strong> Showcase / Hands-On Lab / Panel (TBD) - deeper dive & audience interaction</li>
-      <li><strong>7:55 - 8:00 PM:</strong> Wrap-up & next steps</li>
-      <li><strong>8:00 - 8:30 PM:</strong> Walk to The Tavern for the mixer</li>
-    </ul>
-    
-    <p><strong>RSVP Options:</strong></p>
-    <a href="https://lu.ma/zs6j5w1a" className="button button--primary">In-Person RSVP</a>
-    <a href="https://us06web.zoom.us/j/83055251635?pwd=9guINZ3AbkPJLjaG4aFCa3UXr7HtQu.1" className="button button--secondary">Remote RSVP (Zoom)</a>
-    <a href="https://www.meetup.com/austin-langchain-ai-group/events/307462604/" className="button button--secondary">Meetup RSVP</a>
-  </div>
-</div>
-
 ## 📚 Past Events
+
+<div className="event-card">
+  <span className="event-badge field-trip-badge">Field Trip</span>
+  <h3>AIMUG Field Trip - Your Startup Sucks Comedy Show</h3>
+  <div className="event-info">
+    <i className="fas fa-calendar"></i>
+    <span>June 26, 2025</span>
+  </div>
+  <div className="event-info">
+    <i className="fas fa-clock"></i>
+    <span>6:30 PM to 9:00 PM CDT</span>
+  </div>
+  <div className="event-info">
+    <i className="fas fa-map-marker-alt"></i>
+    <span>Tequila 512, 2201 Lake Austin Blvd, Austin, TX</span>
+  </div>
+  <div className="event-info">
+    <i className="fas fa-comedy-masks"></i>
+    <span>Austin's only pitch-roast comedy show!</span>
+  </div>
+  <p>We ditched the terminal and grabbed cocktails at <strong>Your Startup Sucks</strong>—Austin's only pitch-roast comedy show! Founders braved the stage, VCs fired back, and Tequila 512 kept the drinks (and jokes) flowing.</p>
+</div>
 
 <div className="event-card">
   <span className="event-badge showcase-badge">Monthly Showcase</span>
@@ -275,8 +304,8 @@ We host several regular events to keep our community engaged and connected. Mark
 - May 7, 2025 (Wednesday)
 - June 4, 2025 (Wednesday)
 - July 2, 2025 (Wednesday)
-- August 6, 2025 (Wednesday)
-- September 3, 2025 (Wednesday)
+- August 14, 2025 (Thursday)
+- September 9, 2025 (Tuesday)
 - October 1, 2025 (Wednesday)
 - November 5, 2025 (Wednesday)
 - December 3, 2025 (Wednesday)
