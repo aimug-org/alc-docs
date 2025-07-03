@@ -2,37 +2,74 @@
 sidebar_position: 2
 ---
 
-# Ryan Booth Showcase
+# Ryan Booth Showcase: AI Development Workflows
 
 *Presenter: Ryan Booth*  
 *Main Event - July 2025 AIMUG Session*
 
-## 🎯 **Featured Main Event**
+## 🎯 **AI Development Workflows - Thunderstorm Talk**
 
 ### **Presentation Overview**
-Ryan Booth presents the featured showcase for the July 2025 AIMUG session, delivering comprehensive insights into cutting-edge AI technologies and practical implementation strategies.
+Ryan Booth delivered a comprehensive thunderstorm talk on **AI Development Workflows**, sharing insights and practical strategies for effectively managing AI development projects. As a founding member of AIMUG, Ryan brought extensive experience in AI development and implementation to this featured presentation.
 
 **Session Details:**
-- **📅 Date**: July 2025 AIMUG Session
-- **⏱️ Duration**: 30-45 minute presentation + Q&A
-- **🎯 Format**: Technical deep dive with interactive discussion
-- **👥 Audience**: AIMUG community members and AI enthusiasts
+- **📅 Date**: July 1st, 2025 AIMUG Session
+- **⏱️ Duration**: 15-20 minute thunderstorm presentation + Q&A
+- **🎯 Format**: Technical deep dive with practical workflow strategies
+- **👥 Audience**: AIMUG community members and AI development practitioners
 
-## 📋 **Content Placeholder**
+## 🏗️ **AI Development Workflow Strategies**
 
-*Content for this showcase presentation will be added following the July 2025 session.*
+### **Core Workflow Principles**
+Ryan's presentation focused on establishing effective workflows for AI development projects, covering:
 
-### **What to Expect**
-- **🔧 Technical Deep Dive**: Comprehensive exploration of advanced AI concepts
-- **💡 Practical Implementation**: Real-world applications and use cases
-- **🚀 Innovation Showcase**: Latest developments and emerging technologies
-- **🤝 Community Engagement**: Interactive Q&A and discussion
+**🔄 Development Process Management**
+- **Iterative Development**: Structured approaches to AI project iteration
+- **Testing and Validation**: Frameworks for validating AI model performance
+- **Deployment Pipelines**: Streamlined paths from development to production
+- **Monitoring and Maintenance**: Ongoing AI system management
 
-### **Presentation Materials**
-- **📊 Slides**: Will be available after the presentation
-- **💻 Code Examples**: Implementation samples and repositories
-- **📚 Resources**: Additional reading and reference materials
-- **🎥 Recording**: Session recording for community access
+**🛠️ **Tool Integration**
+- **Development Environment**: Optimizing AI development setups
+- **Version Control**: Managing AI models and datasets effectively
+- **Collaboration**: Team coordination in AI development projects
+- **Documentation**: Maintaining comprehensive project documentation
+
+### **Practical Implementation**
+Ryan shared real-world insights on:
+- **Project Structure**: Organizing AI development projects effectively
+- **Workflow Automation**: Reducing manual overhead in AI development
+- **Quality Assurance**: Ensuring reliability in AI systems
+- **Team Coordination**: Managing AI development teams efficiently
+
+## 🎯 **Key Insights and Best Practices**
+
+### **Development Efficiency**
+- **🚀 Streamlined Processes**: Optimizing development workflows for AI projects
+- **⚡ Rapid Iteration**: Techniques for faster development cycles
+- **📊 Performance Tracking**: Monitoring development progress and outcomes
+- **🔧 Tool Optimization**: Selecting and configuring development tools
+
+### **Team Collaboration**
+- **👥 Communication**: Effective team coordination strategies
+- **📝 Documentation**: Maintaining clear project documentation
+- **🔄 Knowledge Sharing**: Distributing AI development knowledge across teams
+- **🎯 Goal Alignment**: Ensuring team alignment on AI project objectives
+
+## 🔧 **Technical Implementation**
+
+### **Workflow Architecture**
+Ryan discussed structuring AI development workflows to include:
+- **Development Phase**: Initial model development and experimentation
+- **Testing Phase**: Comprehensive validation and testing procedures
+- **Deployment Phase**: Production deployment and monitoring
+- **Maintenance Phase**: Ongoing system updates and optimization
+
+### **Tool Stack Considerations**
+- **Development Tools**: IDE configuration and AI development extensions
+- **Testing Frameworks**: Automated testing for AI models
+- **Deployment Infrastructure**: Production deployment strategies
+- **Monitoring Systems**: Real-time AI system monitoring
 
 ## 👤 **About the Presenter**
 
@@ -43,7 +80,7 @@ Ryan Booth is a valued member of the AIMUG community, bringing extensive experie
 **Community Involvement:**
 - **🌟 Founding Member**: Charter supporter of AIMUG's mission
 - **🎯 Regular Contributor**: Active participant in community discussions
-- **🔧 Technical Expertise**: Deep knowledge of AI technologies and frameworks
+- **🔧 Technical Expertise**: Deep knowledge of AI development workflows and best practices
 - **🤝 Collaboration**: Open to partnerships and knowledge sharing
 
 ## 🔗 **Connect & Follow-up**
@@ -54,49 +91,38 @@ Ryan Booth is a valued member of the AIMUG community, bringing extensive experie
 - **🤝 Technical Discussions**: Available for follow-up conversations
 - **🚀 Collaboration**: Open to project partnerships and consultations
 
-### **Post-Presentation Resources**
-*Following the July session, this section will include:*
-- **📊 Presentation slides and materials**
-- **💻 Code repositories and examples**
-- **📚 Additional resources and references**
-- **🎥 Session recording link**
-- **💬 Discussion summary and key takeaways**
+### **Discussion Points**
+Following the presentation, key discussion topics included:
+- **Workflow optimization strategies** for different AI project types
+- **Tool selection criteria** for AI development environments
+- **Team coordination techniques** for distributed AI development
+- **Quality assurance approaches** for AI systems
 
 ## 🎓 **Learning Opportunities**
 
 ### **For Attendees**
-- **📝 Take Notes**: Comprehensive technical content
-- **❓ Ask Questions**: Interactive Q&A session
-- **🔗 Network**: Connect with presenter and community
-- **📚 Follow Up**: Explore provided resources and materials
+- **📝 Process Improvement**: Insights into optimizing AI development workflows
+- **🔧 Tool Selection**: Guidance on choosing appropriate development tools
+- **👥 Team Management**: Strategies for effective AI development teams
+- **📊 Quality Assurance**: Approaches to ensuring AI system reliability
 
 ### **For the Community**
-- **💡 Knowledge Sharing**: Learn from practical experience
-- **🤝 Collaboration**: Identify partnership opportunities
-- **🚀 Innovation**: Discover new approaches and technologies
-- **📈 Growth**: Continue advancing AI development skills
+- **💡 Best Practices**: Shared knowledge from practical AI development experience
+- **🤝 Collaboration**: Opportunities for workflow improvement discussions
+- **🚀 Innovation**: Exploring new approaches to AI development challenges
+- **📈 Growth**: Advancing collective AI development capabilities
 
 ## 🎉 **Recognition**
 
-**Thank you to Ryan Booth** for contributing to the AIMUG community as both a founding member and featured presenter. Your dedication to sharing knowledge and advancing AI development in Austin is greatly appreciated!
+**Thank you to Ryan Booth** for contributing to the AIMUG community as both a founding member and featured presenter. Your dedication to sharing knowledge and advancing AI development practices in Austin is greatly appreciated!
 
 ## 🔗 **Related Content**
 
 - **[Main Event Overview](./index.md)** - July 2025 main event information
 - **[Lightning Talks](../lightning-talks/)** - Quick technical presentations
-- **[News & Updates](../news/)** - Community announcements and updates
+- **[EmoJourn Case Study](../lightning-talks/emojourn-case-study.md)** - AI development lessons learned
 - **[July 2025 Overview](../index.md)** - Complete monthly documentation
-
-## 📅 **Coming Soon**
-
-*This page will be updated with complete presentation content, materials, and resources following the July 2025 AIMUG session. Check back after the event for:*
-
-- **Complete presentation summary**
-- **Technical deep-dive content**
-- **Implementation examples and code**
-- **Resource links and references**
-- **Community discussion highlights**
 
 ---
 
-*The main event showcase represents the pinnacle of each AIMUG session, featuring comprehensive presentations that advance our understanding and application of AI technologies.*
+*Effective AI development workflows are essential for successful AI project delivery. Ryan's insights provide practical guidance for teams looking to optimize their AI development processes.*

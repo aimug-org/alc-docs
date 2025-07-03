@@ -22,7 +22,11 @@ Welcome to the July 2025 Austin LangChain & AI MUG documentation. This month fea
 - **[Toolhouse Fastlane Worker](./lightning-talks/toolhouse-fastlane-worker.md)** - Orlie presents high-speed web automation for AI agents
 - **[Cloudflare Containers](./lightning-talks/cloudflare-containers.md)** - Collier King explores container deployment strategies
 - **[Slack Integration with Cursor AI](./lightning-talks/slack-cursor-integration.md)** - Joseph Fluckiger demonstrates mobile programming capabilities
-- **[EmoJourn: Learning in the Open](./lightning-talks/emojourn-case-study.md)** - Robert Davis shares a mental health AI case study
+
+### **[⛈️ Thunderstorm Talks](./thunderstorm-talks/)**
+*Extended technical presentations with comprehensive deep dives*
+- **[EmoJourn: Lessons Learned](./thunderstorm-talks/emojourn-lessons-learned.md)** - Robert Davis presents comprehensive AI agent architecture case study
+- **[Advanced AI Development Workflows](./thunderstorm-talks/ai-development-workflows.md)** - Ryan Booth explores SaaS development and automation patterns
 
 ### **[🎯 Main Event](./main-event/)**
 *Featured showcase presentation*
@@ -63,6 +67,7 @@ Welcome to the July 2025 Austin LangChain & AI MUG documentation. This month fea
 
 ### **For Deep Research**
 - **LangChain Roadmap**: [LangChain Ambassadors Updates](./news/langchain-ambassadors-july-2025.md)
+- **Technical Deep Dives**: [Thunderstorm Talks](./thunderstorm-talks/) for comprehensive case studies
 - **Main Showcase**: [Ryan Booth Presentation](./main-event/ryan-booth-showcase.md)
 - **Tool Integrations**: Explore the lightning talks for practical implementations
 
@@ -109,7 +114,7 @@ Thank you to our corporate partners:
 - **Lightning Talk**: Slack Integration with Cursor AI
 
 #### **Robert Davis** - *Community Contributor*
-- **Lightning Talk**: EmoJourn case study and lessons learned
+- **Thunderstorm Talk**: EmoJourn case study and lessons learned
 
 ---
 

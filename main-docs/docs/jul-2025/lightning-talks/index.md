@@ -9,7 +9,7 @@ Quick, focused presentations covering cutting-edge AI topics and practical imple
 ## ⚡ **Featured Lightning Talks**
 
 ### **[Toolhouse Fastlane Worker](./toolhouse-fastlane-worker.md)**
-*Presenter: Orlie from Toolhouse*
+*Presenter: Orlando from Toolhouse*
 
 **High-Speed Web Automation for AI Agents**
 
@@ -24,11 +24,11 @@ The internet was designed for humans in the 60s and 70s, but now AI agents, bots
 ---
 
 ### **[Cloudflare Containers](./cloudflare-containers.md)**
-*Presenter: Collier King*
+*Presenter: Collier*
 
-**Container Deployment Strategies with Cloudflare**
+**Edge Computing with Cloudflare Containers**
 
-Explore modern container deployment approaches using Cloudflare's infrastructure, focusing on scalability, performance, and global distribution for AI applications.
+Explore modern container deployment approaches using Cloudflare's edge infrastructure, focusing on scalability, performance, and global distribution for AI applications.
 
 **Key Topics:**
 - **☁️ Container Orchestration**: Cloudflare's container platform capabilities
@@ -38,33 +38,18 @@ Explore modern container deployment approaches using Cloudflare's infrastructure
 
 ---
 
-### **[Slack Integration with Cursor AI](./slack-cursor-integration.md)**
-*Presenter: Joseph Fluckiger*
+### **[Slack + Cursor Integration](./slack-cursor-integration.md)**
+*Presenter: Joseph*
 
-**Mobile Programming: Code from Anywhere**
+**Mobile Development Workflow Integration**
 
-Discover how the integration between Slack and Cursor AI creates powerful mobile development capabilities, enabling you to program and build applications directly from your phone, wherever you are.
+Discover how the integration between Slack and Cursor creates powerful mobile development capabilities, enabling streamlined workflows and improved team collaboration.
 
 **Key Topics:**
-- **📱 Mobile Development**: Programming workflows on mobile devices
-- **🔗 Slack Integration**: Using Slack as a development interface
-- **🤖 Cursor AI Power**: AI-assisted coding from anywhere
+- **📱 Mobile Development**: Programming workflows and mobile team coordination
+- **🔗 Slack Integration**: Using Slack for development team communication
+- **🤖 Cursor AI Power**: AI-assisted coding and development efficiency
 - **⚡ Workflow Efficiency**: Streamlined development processes
-
----
-
-### **[EmoJourn: Learning in the Open](./emojourn-case-study.md)**
-*Presenter: Robert Davis*
-
-**A Mental Health AI Case Study - What Not to Do**
-
-An honest case study of building EmoJourn, a mental health AI application. Learn from real mistakes, challenges, and lessons learned in developing AI agents for sensitive applications.
-
-**Key Topics:**
-- **🧠 Mental Health AI**: Challenges in sensitive application domains
-- **🏗️ Architecture Lessons**: What worked and what didn't in agent design
-- **⚠️ Common Pitfalls**: Mistakes to avoid in AI agent development
-- **📊 Production Reality**: Scaling agents and supporting multiple users
 
 ---
 
@@ -100,10 +85,15 @@ Each lightning talk is designed to:
 
 ## 🔗 **Related Content**
 
+- **[Thunderstorm Talks](../thunderstorm-talks/)** - Extended technical presentations with comprehensive deep dives
 - **[News & Updates](../news/)** - Community announcements and ecosystem updates
 - **[Main Event](../main-event/)** - Ryan Booth's featured showcase
 - **[Resources](../resources/)** - Implementation guides and tools
 - **[July 2025 Overview](../index.md)** - Complete monthly documentation
+
+### **For Deeper Technical Analysis**
+- **[EmoJourn: Lessons Learned](../thunderstorm-talks/emojourn-lessons-learned.md)** - Comprehensive AI agent architecture case study by Robert Davis
+- **[Advanced AI Development Workflows](../thunderstorm-talks/ai-development-workflows.md)** - SaaS development and automation patterns by Ryan Booth
 
 ## 👥 **Connect with Presenters**
 
