@@ -236,7 +236,6 @@ Each agent serves a specific therapeutic purpose with distinct personalities:
 
 - **[Thunderstorm Talks Overview](./index.md)** - All July 2025 extended technical presentations
 - **[AI Development Workflows](./ai-development-workflows.md)** - Ryan Booth's development automation insights
-- **[Main Event](../main-event/)** - Featured showcase presentations
 - **[Lightning Talks](../lightning-talks/)** - Quick technical presentations
 
 ---

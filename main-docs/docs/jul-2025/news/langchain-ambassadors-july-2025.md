@@ -258,7 +258,7 @@ Direct insights from Harrison Chase and the LangChain team about major product u
 
 - **[AIMUG July 2025 Overview](../index.md)** - Complete monthly documentation
 - **[Lightning Talks](../lightning-talks/)** - Technical presentations and demonstrations
-- **[Main Event](../main-event/)** - Ryan Booth's featured showcase
+
 - **[LangChain Official Documentation](https://docs.langchain.com)** - Latest framework documentation
 - **[LangSmith Platform](https://smith.langchain.com)** - Observability and analytics platform
 

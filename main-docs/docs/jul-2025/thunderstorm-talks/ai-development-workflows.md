@@ -284,7 +284,6 @@ Developed comprehensive debugging scripts and procedures:
 
 - **[Thunderstorm Talks Overview](./index.md)** - All July 2025 extended technical presentations
 - **[EmoJourn Lessons Learned](./emojourn-lessons-learned.md)** - Rob Davis's multi-agent architecture insights
-- **[Main Event](../main-event/)** - Featured showcase presentations
 - **[Lightning Talks](../lightning-talks/)** - Quick technical presentations
 
 ---

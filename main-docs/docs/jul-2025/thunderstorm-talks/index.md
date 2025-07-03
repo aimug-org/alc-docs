@@ -98,7 +98,6 @@ Explore advanced development workflows through the lens of an Artist Dashboard S
 ## 🔗 **Related Content**
 
 - **[Lightning Talks](../lightning-talks/)** - Quick technical presentations
-- **[Main Event](../main-event/)** - Ryan Booth's featured showcase
 - **[News & Updates](../news/)** - Community announcements and ecosystem updates
 - **[July 2025 Overview](../index.md)** - Complete monthly documentation
 

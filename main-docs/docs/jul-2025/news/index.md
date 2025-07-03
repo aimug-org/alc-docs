@@ -43,7 +43,7 @@ Direct insights from Harrison Chase and the LangChain team about major product u
 ## 🔗 **Related Content**
 
 - **[Lightning Talks](../lightning-talks/)** - Technical presentations and tool demonstrations
-- **[Main Event](../main-event/)** - Ryan Booth's featured showcase
+
 - **[Resources](../resources/)** - Implementation guides and community tools
 - **[July 2025 Overview](../index.md)** - Complete monthly documentation
 - **[Support AIMUG](https://aimug.org/support)** - Join our Independence Day contribution drive

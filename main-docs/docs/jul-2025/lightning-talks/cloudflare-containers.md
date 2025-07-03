@@ -94,7 +94,7 @@ From Collier's presentation:
 - **[Lightning Talks Overview](./index.md)** - All July 2025 lightning presentations
 - **[Toolhouse Fastlane Worker](./toolhouse-fastlane-worker.md)** - Web automation for AI agents
 - **[EmoJourn Case Study](./emojourn-case-study.md)** - Mental health AI lessons learned
-- **[Main Event](../main-event/)** - Ryan Booth's featured showcase
+
 
 ---
 

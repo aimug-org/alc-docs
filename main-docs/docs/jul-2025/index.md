@@ -28,10 +28,6 @@ Welcome to the July 2025 Austin LangChain & AI MUG documentation. This month fea
 - **[EmoJourn: Lessons Learned](./thunderstorm-talks/emojourn-lessons-learned.md)** - Robert Davis presents comprehensive AI agent architecture case study
 - **[Advanced AI Development Workflows](./thunderstorm-talks/ai-development-workflows.md)** - Ryan Booth explores SaaS development and automation patterns
 
-### **[🎯 Main Event](./main-event/)**
-*Featured showcase presentation*
-- **[Ryan Booth Showcase](./main-event/ryan-booth-showcase.md)** - Main event presentation
-
 ### **[🛠️ Resources](./resources/)**
 *Implementation guides and practical tools*
 - **[Support AIMUG](https://aimug.org/support)** - Contribute to our community
@@ -68,7 +64,6 @@ Welcome to the July 2025 Austin LangChain & AI MUG documentation. This month fea
 ### **For Deep Research**
 - **LangChain Roadmap**: [LangChain Ambassadors Updates](./news/langchain-ambassadors-july-2025.md)
 - **Technical Deep Dives**: [Thunderstorm Talks](./thunderstorm-talks/) for comprehensive case studies
-- **Main Showcase**: [Ryan Booth Presentation](./main-event/ryan-booth-showcase.md)
 - **Tool Integrations**: Explore the lightning talks for practical implementations
 
 ## 🎉 **Founding Members Recognition**

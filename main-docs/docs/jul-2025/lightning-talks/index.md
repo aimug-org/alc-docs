@@ -87,7 +87,6 @@ Each lightning talk is designed to:
 
 - **[Thunderstorm Talks](../thunderstorm-talks/)** - Extended technical presentations with comprehensive deep dives
 - **[News & Updates](../news/)** - Community announcements and ecosystem updates
-- **[Main Event](../main-event/)** - Ryan Booth's featured showcase
 - **[Resources](../resources/)** - Implementation guides and tools
 - **[July 2025 Overview](../index.md)** - Complete monthly documentation
 

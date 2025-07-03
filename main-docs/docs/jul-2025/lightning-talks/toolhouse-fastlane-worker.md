@@ -90,7 +90,7 @@ From Orlando's presentation, the main insights were:
 
 - **[Lightning Talks Overview](./index.md)** - All July 2025 lightning presentations
 - **[News & Updates](../news/)** - Community announcements and partner news
-- **[Main Event](../main-event/)** - Ryan Booth's featured showcase
+
 - **[July 2025 Overview](../index.md)** - Complete monthly documentation
 
 ---
