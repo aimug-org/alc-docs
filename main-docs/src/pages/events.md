@@ -116,6 +116,46 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
 ## 📚 Past Events
 
 <div className="event-card">
+  <span className="event-badge showcase-badge">Monthly Showcase</span>
+  <h3>August Monthly Showcase</h3>
+  <div className="event-info">
+    <i className="fas fa-calendar"></i>
+    <span>August 14, 2025</span>
+  </div>
+  <div className="event-info">
+    <i className="fas fa-clock"></i>
+    <span>6:00 PM to 8:30 PM CDT</span>
+  </div>
+  <div className="event-info">
+    <i className="fas fa-map-marker-alt"></i>
+    <span>ACC - RGC 3000</span>
+  </div>
+  <p>Featured presentations on Agent-to-Agent (A2A) communication protocols, with lightning talks and implementation guides.</p>
+</div>
+
+<div className="event-card">
+  <span className="event-badge showcase-badge">Monthly Showcase</span>
+  <h3>July Monthly Mixer & Showcase</h3>
+  <div className="event-info">
+    <i className="fas fa-calendar"></i>
+    <span>July 2, 2025</span>
+  </div>
+  <div className="event-info">
+    <i className="fas fa-clock"></i>
+    <span>6:00 PM to 8:30 PM CDT</span>
+  </div>
+  <div className="event-info">
+    <i className="fas fa-map-marker-alt"></i>
+    <span>ACC - RGC 3000</span>
+  </div>
+  <div className="event-info">
+    <i className="fas fa-glass-cheers"></i>
+    <span>After Party: The Tavern</span>
+  </div>
+  <p>Lightning talks featuring AI development workflows, Cloudflare containers, Slack-Cursor integration, and lessons learned from building Emojourn.</p>
+</div>
+
+<div className="event-card">
   <span className="event-badge field-trip-badge">Field Trip</span>
   <h3>AIMUG Field Trip - Your Startup Sucks Comedy Show</h3>
   <div className="event-info">
