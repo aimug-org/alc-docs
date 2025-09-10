@@ -196,6 +196,10 @@ Adopt content blocks in your renderers/logging
 - [Data storage and privacy](https://docs.langchain.com/langgraph-platform/data-storage-and-privacy)
 - [HITL implementation guide](https://docs.langchain.com/oss/javascript/langgraph/add-human-in-the-loop)
 
+## Presentation Slides
+
+📊 [View the full presentation slides (PDF)](https://github.com/aimug-org/austin_langchain/blob/main/resources/presentations/2025-09-10-Austin-LangChain-AIMUG%20.pdf)
+
 ## About the Speaker
 
 Colin McNamara is an active contributor to the LangChain ecosystem and organizer of the Austin LangChain AI Middleware User Group (AIMUG). He regularly engages with Harrison's team to bring the latest updates and best practices to the Austin AI community.
