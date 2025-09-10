@@ -427,3 +427,53 @@ paul:
     • AI system observability and monitoring'
   socials:
     linkedin: mrpaulphelps
+aimugteam:
+  name: AIMUG Team
+  title: AI Middleware Users Group
+  url: https://aimug.org
+  image_url: /img/austin_aimug-192x192.png
+  page: true
+  description: 'The official team account for Austin LangChain & AI Middleware User Group (AIMUG).
+    
+    
+    About AIMUG:
+    
+    
+    Austin LangChain & AI Middleware User Group is a community of developers, data scientists, and AI enthusiasts focused on building and deploying production AI systems using LangChain, LangGraph, and related technologies.
+    
+    
+    Our Mission:
+    
+    • Foster collaborative learning and knowledge sharing
+    
+    • Build practical AI applications and tools
+    
+    • Support the growth of the AI ecosystem in Austin
+    
+    • Create accessible educational resources
+    
+    
+    Community Values:
+    
+    • Learning in the open
+    
+    • Be cool to each other
+    
+    • Share knowledge freely
+    
+    • Build together
+    
+    
+    What We Do:
+    
+    • Monthly showcases and technical presentations
+    
+    • Hands-on labs and workshops
+    
+    • Open source contributions
+    
+    • Community support and mentorship'
+  socials:
+    website: https://aimug.org
+    github: aimug-org
+    x: AIMUG_org

@@ -33,10 +33,10 @@ function generateSidebar() {
         label: formatFolderName(folder, folder === currentFolderName),
         items: generateFolderItems(path.join(docsPath, folder), folder),
         collapsible: true,
-        collapsed: true, // All months collapsed by default
+        collapsed: folder !== currentFolderName, // Current month expanded, others collapsed
       })),
       collapsible: true,
-      collapsed: true, // All years collapsed by default
+      collapsed: year !== currentYear, // Current year expanded, others collapsed
     }));
 
   const sidebar = [
@@ -178,6 +178,7 @@ function formatSubdirectoryName(name) {
   const nameMap = {
     'news': '📰 News & Updates',
     'lightning-talks': '⚡ Lightning Talks',
+    'thunderstorm-talks': '⛈️ Thunderstorm Talks',
     'full-sessions': '🎯 Full Sessions',
     'resources': '📚 Resources',
     'ai-ecosystem-2025': '🌐 AI Ecosystem 2025',

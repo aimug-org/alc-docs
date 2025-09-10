@@ -262,3 +262,23 @@ development:
   label: Development
   permalink: /development
   description: Development practices and methodologies
+
+independence:
+  label: Independence
+  permalink: /independence
+  description: Independence Day celebrations and related community events
+
+founding-members:
+  label: Founding Members
+  permalink: /founding-members
+  description: Recognition and content related to AIMUG founding members
+
+austin:
+  label: Austin
+  permalink: /austin
+  description: Austin-specific content and local community events
+
+membership:
+  label: Membership
+  permalink: /membership
+  description: AIMUG membership programs and benefits

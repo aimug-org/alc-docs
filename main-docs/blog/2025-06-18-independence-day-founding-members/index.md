@@ -1,11 +1,7 @@
 ---
 slug: independence-day-founding-members
 title: "Making AIMUG Independent by Independence Day: Only 25 Founding Member Spots Available"
-authors:
-  - name: AIMUG Team
-    title: AI Middleware Users Group
-    url: https://aimug.org
-    image_url: /img/austin_aimug-192x192.png
+authors: [aimugteam]
 tags: [community, independence, founding-members, austin, ai, membership]
 image: /img/alc-docs-social-card-aimug.jpg
 description: "Join the final 25 founding members to make AIMUG truly independent by July 4th. Starting at just $5/month - help keep Austin's AI leadership local and independent."
