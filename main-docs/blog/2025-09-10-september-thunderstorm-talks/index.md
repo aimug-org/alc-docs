@@ -1,9 +1,8 @@
 ---
 slug: september-2025-thunderstorm-talks
 title: "🌩️ Tonight at AIMUG: Thunderstorm Talks + Afterparty"
-authors: [colin]
-tags: [events, langchain, langgraph, claude, agents, streamlit, robotics]
-image: ./thunderstorm-banner.jpg
+authors: [colinmcnamara]
+tags: [langchain, agents, ai]
 ---
 
 # 🌩️ Tonight at AIMUG: Thunderstorm Talks + Afterparty
