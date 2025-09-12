@@ -14,12 +14,16 @@ sidebar_label: LangChain/LangGraph Update
 
 Colin shares insights from Harrison's team on the upcoming LangGraph 1.0 and LangChain 1.0 releases, focusing on the new architecture, migration strategies, and production-ready features that make these the default choices for building agentic systems.
 
+## 📺 Watch the Talk
+
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/N_WTAYVderI" title="LangChain/LangGraph 1.0 Alpha Update - Colin McNamara at AIMUG September 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Key Updates
 
 ### Why This Matters Now
 
 - **Alpha releases** for both LangGraph and LangChain in Python & JavaScript
-- **Target release:** Late October 2024 for official 1.0
+- **Target release:** Late October 2025 for official 1.0
 - **Core philosophy:** Shrink surface area, harden the runtime → ship faster with more reliability
 - **Alpha notice:** Docs/content are evolving; treat as "try now, production-gate later"
 
@@ -196,9 +200,10 @@ Adopt content blocks in your renderers/logging
 - [Data storage and privacy](https://docs.langchain.com/langgraph-platform/data-storage-and-privacy)
 - [HITL implementation guide](https://docs.langchain.com/oss/javascript/langgraph/add-human-in-the-loop)
 
-## Presentation Slides
+## Presentation Slides & Video
 
-📊 [View the full presentation slides (PDF)](https://github.com/aimug-org/austin_langchain/blob/main/resources/presentations/2025-09-10-Austin-LangChain-AIMUG%20.pdf)
+- [📺 Watch Colin's LangGraph/LangChain Update on YouTube](https://www.youtube.com/watch?v=N_WTAYVderI)
+- [📊 View the full presentation slides (PDF)](https://github.com/aimug-org/austin_langchain/blob/main/resources/presentations/2025-09-10-Austin-LangChain-AIMUG%20.pdf)
 
 ## About the Speaker
 

@@ -1,12 +1,14 @@
 ---
-id: index
-title: September 2025 Thunderstorm Talks
-sidebar_label: Thunderstorm Talks
+sidebar_position: 1
 ---
 
 # September 2025 Thunderstorm Talks
 
 Quick 15-minute deep dives into cutting-edge AI topics. Each talk is designed to deliver maximum value in a focused timeframe.
+
+## 📺 Watch the Full Recording
+
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/ztp7JNP-C0I" title="AIMUG September 2025 - Thunderstorm Talks" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Talk Schedule
 

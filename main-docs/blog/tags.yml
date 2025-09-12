@@ -282,3 +282,18 @@ membership:
   label: Membership
   permalink: /membership
   description: AIMUG membership programs and benefits
+
+langgraph:
+  label: LangGraph
+  permalink: /langgraph
+  description: Topics related to LangGraph framework for building stateful applications
+
+claude:
+  label: Claude
+  permalink: /claude
+  description: Content about Claude AI and Anthropic's tools
+
+video:
+  label: Video
+  permalink: /video
+  description: Video recordings and replays of events
