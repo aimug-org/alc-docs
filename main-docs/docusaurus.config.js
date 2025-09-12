@@ -27,6 +27,20 @@ const config = {
   },
   themes: ['@docusaurus/theme-mermaid'],
 
+  plugins: [
+    ...(process.env.NODE_ENV === 'production' 
+      ? [
+          [
+            '@docusaurus/plugin-google-gtag',
+            {
+              trackingID: 'G-EVEGH4FBSL',
+              anonymizeIP: true,
+            },
+          ],
+        ]
+      : []),
+  ],
+
   presets: [
     [
       'classic',
@@ -56,10 +70,6 @@ const config = {
         },
         theme: {
           customCss: './src/css/custom.css',
-        },
-        gtag: {
-          trackingID: 'G-EVEGH4FBSL',
-          anonymizeIP: true,
         },
       }),
     ],
