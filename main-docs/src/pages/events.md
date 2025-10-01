@@ -2,49 +2,13 @@
 
 Welcome to the Austin LangChain Events page! Join our vibrant community of AI enthusiasts and developers.
 
-*Last updated: September 10, 2025*
+*Last updated: October 1, 2025*
 
 ## 🎯 Featured Upcoming Events
 
 <div className="event-grid">
   <div className="event-card">
-    <span className="event-badge showcase-badge">Tonight!</span>
-    <h3>🌩️ September Thunderstorm Talks</h3>
-    <div className="event-info">
-      <i className="fas fa-calendar"></i>
-      <span>September 10, 2025 (TODAY)</span>
-    </div>
-    <div className="event-info">
-      <i className="fas fa-clock"></i>
-      <span>6:00 PM to 8:30 PM CDT</span>
-    </div>
-    <div className="event-info">
-      <i className="fas fa-map-marker-alt"></i>
-      <span>ACC - RGC 3000, 1218 West Avenue, Austin, TX</span>
-    </div>
-    <div className="event-info">
-      <i className="fas fa-glass-cheers"></i>
-      <span>After Party: The Tavern, 922 W 12th St, Austin, TX 78703</span>
-    </div>
-    <p>Join us TONIGHT for 5 rapid-fire Thunderstorm Talks (15 min each) covering the latest in AI agents and LangChain ecosystem!</p>
-    
-    <h4>Featured Talks:</h4>
-    <ul>
-      <li><strong>LangChain/LangGraph 1.0 Alpha Update</strong> - Colin McNamara</li>
-      <li><strong>Claude Code & Custom Agents</strong> - Sal</li>
-      <li><strong>Deep Agents Architecture</strong> - Collier</li>
-      <li><strong>Rosie the Robot Demo</strong> - James</li>
-      <li><strong>Streamlit for AI Dashboards</strong> - Jeff</li>
-    </ul>
-    
-    <p><strong>RSVP Options:</strong></p>
-    <a href="https://www.meetup.com/austin-langchain-ai-group/events/307462681/" className="button button--primary">Meetup RSVP</a>
-    <a href="https://us06web.zoom.us/j/83055251635?pwd=9guINZ3AbkPJLjaG4aFCa3UXr7HtQu.1" className="button button--secondary">Remote RSVP (Zoom)</a>
-    <a href="/blog/september-2025-thunderstorm-talks" className="button button--info">Read Full Details</a>
-  </div>
-
-  <div className="event-card">
-    <span className="event-badge showcase-badge">Monthly Showcase</span>
+    <span className="event-badge showcase-badge">Next Event</span>
     <h3>October Monthly Mixer & Showcase</h3>
     <div className="event-info">
       <i className="fas fa-calendar"></i>
@@ -63,7 +27,7 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
       <span>After Party: The Tavern, 922 W 12th St, Austin, TX 78703</span>
     </div>
     <p>Our October monthly showcase featuring the latest developments in AI agents, LangChain ecosystem updates, and community presentations.</p>
-    
+
     <h4>Agenda:</h4>
     <ul>
       <li><strong>6:00 - 6:20 PM:</strong> Welcome Reception - networking & refreshments</li>
@@ -72,9 +36,43 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
       <li><strong>7:55 - 8:00 PM:</strong> Wrap-up & next steps</li>
       <li><strong>8:00 - 8:30 PM:</strong> Walk to The Tavern for the mixer</li>
     </ul>
-    
+
     <p><strong>RSVP Options:</strong></p>
     <a href="https://www.meetup.com/austin-langchain-ai-group/events/310971734/" className="button button--primary">Meetup RSVP</a>
+    <a href="https://us06web.zoom.us/j/83055251635?pwd=9guINZ3AbkPJLjaG4aFCa3UXr7HtQu.1" className="button button--secondary">Remote RSVP (Zoom)</a>
+  </div>
+
+  <div className="event-card">
+    <span className="event-badge showcase-badge">Monthly Showcase</span>
+    <h3>November Monthly Mixer & Showcase</h3>
+    <div className="event-info">
+      <i className="fas fa-calendar"></i>
+      <span>November 5, 2025</span>
+    </div>
+    <div className="event-info">
+      <i className="fas fa-clock"></i>
+      <span>6:00 PM to 9:00 PM CST</span>
+    </div>
+    <div className="event-info">
+      <i className="fas fa-map-marker-alt"></i>
+      <span>ACC - RGC 3000, 1218 West Avenue, Austin, TX</span>
+    </div>
+    <div className="event-info">
+      <i className="fas fa-glass-cheers"></i>
+      <span>After Party: The Tavern, 922 W 12th St, Austin, TX 78703</span>
+    </div>
+    <p>Join us for our November showcase exploring the latest in AI middleware, LangChain, LangGraph, and community innovations.</p>
+
+    <h4>Agenda:</h4>
+    <ul>
+      <li><strong>6:00 PM:</strong> Networking & Welcome</li>
+      <li><strong>6:20 PM:</strong> Introductions & Kickoff</li>
+      <li><strong>6:30 PM:</strong> Thunderstorm Talks</li>
+      <li><strong>8:00 - 8:30 PM:</strong> Walk to The Tavern for the mixer</li>
+    </ul>
+
+    <p><strong>RSVP Options:</strong></p>
+    <a href="https://www.meetup.com/austin-langchain-ai-group/events/311326010/" className="button button--primary">Meetup RSVP</a>
     <a href="https://us06web.zoom.us/j/83055251635?pwd=9guINZ3AbkPJLjaG4aFCa3UXr7HtQu.1" className="button button--secondary">Remote RSVP (Zoom)</a>
   </div>
 </div>
@@ -114,6 +112,29 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
 </div>
 
 ## 📚 Past Events
+
+<div className="event-card">
+  <span className="event-badge showcase-badge">Thunderstorm Talks</span>
+  <h3>🌩️ September Thunderstorm Talks</h3>
+  <div className="event-info">
+    <i className="fas fa-calendar"></i>
+    <span>September 10, 2025</span>
+  </div>
+  <div className="event-info">
+    <i className="fas fa-clock"></i>
+    <span>6:00 PM to 8:30 PM CDT</span>
+  </div>
+  <div className="event-info">
+    <i className="fas fa-map-marker-alt"></i>
+    <span>ACC - RGC 3000</span>
+  </div>
+  <div className="event-info">
+    <i className="fas fa-glass-cheers"></i>
+    <span>After Party: The Tavern</span>
+  </div>
+  <p>5 rapid-fire Thunderstorm Talks featuring LangChain/LangGraph 1.0 Alpha, Claude Code & Custom Agents, Deep Agents, Rosie the Robot, and Streamlit for AI Dashboards.</p>
+  <a href="/docs/sep-2025/" className="button button--info">View Full Event Recap</a>
+</div>
 
 <div className="event-card">
   <span className="event-badge showcase-badge">Monthly Showcase</span>
@@ -337,9 +358,9 @@ We host several regular events to keep our community engaged and connected. Mark
 - June 4, 2025 (Wednesday) ✅
 - July 2, 2025 (Wednesday) ✅
 - August 14, 2025 (Thursday) ✅
-- **September 10, 2025 (Tuesday) - Thunderstorm Talks** 🌩️ TODAY
-- **October 1, 2025 (Wednesday)** - Next Event
-- November 5, 2025 (Wednesday)
+- September 10, 2025 (Tuesday) - Thunderstorm Talks ✅
+- **October 1, 2025 (Wednesday)** - Next Event 🎯
+- **November 5, 2025 (Wednesday)** - Upcoming
 - December 3, 2025 (Wednesday)
 
 **Time**: Starts at 6:00 PM
