@@ -35,9 +35,12 @@ Connect with fellow AI practitioners and grab refreshments.
 
 ### 6:30 PM - Thunderstorm Talks (15 minutes each)
 
-#### ⚡ [LangChain / LangGraph 1.0 Alpha Update](./thunderstorm-talks/langchain-langgraph-update)
-**Speaker:** Colin McNamara  
+> 💡 **Click each talk title below for detailed notes, slides, and resources**
+
+#### ⚡ [LangChain / LangGraph 1.0 Alpha Update](./thunderstorm-talks/langchain-langgraph-update) 📝
+**Speaker:** Colin McNamara
 **Time:** 6:30 - 6:45 PM
+**[→ View full presentation notes and resources](./thunderstorm-talks/langchain-langgraph-update)**
 
 Key Points from the Talk:
 - LangGraph 1.0: Almost no breaking changes, production-ready
@@ -46,9 +49,10 @@ Key Points from the Talk:
 - Standard content blocks for provider-agnostic development
 - Migration requirements: Python ≥3.10, Node ≥20
 
-#### ⚡ [Claude Code & Custom Agents](./thunderstorm-talks/claude-code-custom-agents)
-**Speaker:** Sal Castoro  
+#### ⚡ [Claude Code & Custom Agents](./thunderstorm-talks/claude-code-custom-agents) 📝
+**Speaker:** Sal Castoro
 **Time:** 6:45 - 7:00 PM
+**[→ View full presentation notes and resources](./thunderstorm-talks/claude-code-custom-agents)**
 
 Key Points from the Talk:
 - Evolution from prompt engineering to context engineering
@@ -57,9 +61,10 @@ Key Points from the Talk:
 - Parallel execution patterns for complex workflows
 - Practical example: Building an Astro blog with multiple agents
 
-#### ⚡ [Deep Agents Architecture](./thunderstorm-talks/deep-agents)
-**Speaker:** Collier King  
+#### ⚡ [Deep Agents Architecture](./thunderstorm-talks/deep-agents) 📝
+**Speaker:** Collier King
 **Time:** 7:00 - 7:15 PM
+**[→ View full presentation notes and resources](./thunderstorm-talks/deep-agents)**
 
 Key Points from the Talk:
 - Deep Agents: Harrison's new framework inspired by Claude Code
@@ -68,9 +73,10 @@ Key Points from the Talk:
 - Live demo: Product manager research agent analyzing marketing vs social media
 - 126 seconds execution time with Sonnet
 
-#### ⚡ [Rosie the Robot Demo](./thunderstorm-talks/rosie-robot-demo)
-**Speaker:** James Coffey  
+#### ⚡ [Rosie the Robot Demo](./thunderstorm-talks/rosie-robot-demo) 📝
+**Speaker:** James Coffey
 **Time:** 7:15 - 7:30 PM
+**[→ View full presentation notes and resources](./thunderstorm-talks/rosie-robot-demo)**
 
 Key Points from the Talk:
 - Desktop organization assistant using deterministic clustering
@@ -79,9 +85,10 @@ Key Points from the Talk:
 - HDB scan and TF-IDF for intelligent file grouping
 - Building from deterministic core, adding LLM capabilities later
 
-#### ⚡ [Streamlit for AI Dashboards](./thunderstorm-talks/streamlit-dashboards)
-**Speaker:** Jeff Linwood  
+#### ⚡ [Streamlit for AI Dashboards](./thunderstorm-talks/streamlit-dashboards) 📝
+**Speaker:** Jeff Linwood
 **Time:** 7:30 - 7:45 PM
+**[→ View full presentation notes and resources](./thunderstorm-talks/streamlit-dashboards)**
 
 Key Points from the Talk:
 - Building interactive dashboards in 126 lines of Python
@@ -114,14 +121,19 @@ Casual hangs, cold beer, hot wings, and podcast interviews with speakers.
 
 ## 📊 Resources
 
-- **Presentation Slides**: [View PDF](https://github.com/aimug-org/austin_langchain/blob/main/resources/presentations/2025-09-10-Austin-LangChain-AIMUG%20.pdf)
+### 📄 Presentation Materials
+**[→ Download Full Presentation Slides (PDF)](https://github.com/aimug-org/austin_langchain/blob/main/resources/presentations/2025-09-10-Austin-LangChain-AIMUG%20.pdf)**
+
+### 🌐 Community Links
 - **Community Site**: [AIMUG.org](https://aimug.org)
 - **Discord**: Join our active community discussions
 - **Newsletter**: [Subscribe for updates](https://newsletter.aimug.org)
 
 ## 🎬 Recording
 
-The full session recording is available on our [YouTube channel](https://www.youtube.com/watch?v=ztp7JNP-C0I).
+**[→ Watch Full Session on YouTube](https://www.youtube.com/watch?v=ztp7JNP-C0I)**
+
+The complete 2+ hour session includes all five Thunderstorm Talks, Q&A, and community discussions.
 
 ## 💡 Key Takeaways
 
