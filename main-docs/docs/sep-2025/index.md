@@ -42,6 +42,8 @@ Connect with fellow AI practitioners and grab refreshments.
 **Time:** 6:30 - 6:45 PM
 **[→ View full presentation notes and resources](./thunderstorm-talks/langchain-langgraph-update)**
 
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/N_WTAYVderI" title="LangChain/LangGraph 1.0 Alpha Update" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 Key Points from the Talk:
 - LangGraph 1.0: Almost no breaking changes, production-ready
 - LangChain 1.0: Now just 10 lines to create an agent (built on LangGraph)
@@ -53,6 +55,8 @@ Key Points from the Talk:
 **Speaker:** Sal Castoro
 **Time:** 6:45 - 7:00 PM
 **[→ View full presentation notes and resources](./thunderstorm-talks/claude-code-custom-agents)**
+
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/HI8PBSPr6Qk" title="Claude Code & Custom Agents" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Key Points from the Talk:
 - Evolution from prompt engineering to context engineering
@@ -66,6 +70,8 @@ Key Points from the Talk:
 **Time:** 7:00 - 7:15 PM
 **[→ View full presentation notes and resources](./thunderstorm-talks/deep-agents)**
 
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/q9uR4YD3I6E" title="Deep Agents Architecture" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 Key Points from the Talk:
 - Deep Agents: Harrison's new framework inspired by Claude Code
 - Four core components: Planning tool, sub-agents, system prompts, virtual file system
@@ -78,6 +84,8 @@ Key Points from the Talk:
 **Time:** 7:15 - 7:30 PM
 **[→ View full presentation notes and resources](./thunderstorm-talks/rosie-robot-demo)**
 
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/-TgsPm_54so" title="Rosie the Robot Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 Key Points from the Talk:
 - Desktop organization assistant using deterministic clustering
 - LangGraph-ready architecture with human-in-the-loop gates
@@ -89,6 +97,8 @@ Key Points from the Talk:
 **Speaker:** Jeff Linwood
 **Time:** 7:30 - 7:45 PM
 **[→ View full presentation notes and resources](./thunderstorm-talks/streamlit-dashboards)**
+
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/qoLINgx8edQ" title="Streamlit for AI Dashboards" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Key Points from the Talk:
 - Building interactive dashboards in 126 lines of Python
@@ -131,7 +141,9 @@ Casual hangs, cold beer, hot wings, and podcast interviews with speakers.
 
 ## 🎬 Recording
 
-**[→ Watch Full Session on YouTube](https://www.youtube.com/watch?v=ztp7JNP-C0I)**
+<iframe width="100%" height="415" src="https://www.youtube.com/embed/ztp7JNP-C0I" title="September 10th 2025 - Thunderstorm Talks & LangGraph 1.0 Alpha" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+**[→ Watch on YouTube](https://www.youtube.com/watch?v=ztp7JNP-C0I)**
 
 The complete 2+ hour session includes all five Thunderstorm Talks, Q&A, and community discussions.
 
