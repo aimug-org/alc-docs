@@ -888,3 +888,99 @@ textarea:focus {
     }
   }
 }
+
+/* Docs Search Button */
+.docs-search-button {
+  background: transparent;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ifm-navbar-link-color);
+  transition: opacity 0.2s;
+  margin-left: 0.5rem;
+}
+
+.docs-search-button:hover {
+  opacity: 0.7;
+}
+
+.docs-search-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Docs Search Widget Styles */
+#docs-search-container {
+  position: relative;
+}
+
+/* Make the search dropdown much wider and more readable */
+#docs-search-container > div,
+#docs-search-container .nlweb-dropdown,
+#docs-search-container .nlweb-chat-container {
+  min-width: 500px !important;
+  max-width: 600px !important;
+  width: 500px !important;
+}
+
+/* Position the dropdown properly */
+#docs-search-container .nlweb-dropdown {
+  position: absolute !important;
+  right: 0 !important;
+  left: auto !important;
+  top: 100% !important;
+  margin-top: 0.5rem !important;
+}
+
+/* Make search results more readable */
+#docs-search-container .nlweb-message,
+#docs-search-container .nlweb-result {
+  max-width: 100% !important;
+  word-wrap: break-word !important;
+}
+
+/* Fix input padding to prevent icon overlap */
+#docs-search-container input {
+  padding-left: 2.5rem !important;
+}
+
+/* Position the search icon properly */
+#docs-search-container .nlweb-icon,
+#docs-search-container svg {
+  position: absolute !important;
+  left: 0.75rem !important;
+  pointer-events: none !important;
+}
+
+/* Hide broken image placeholders in search results */
+#docs-search-container img {
+  display: none !important;
+}
+
+/* Clean up search result text formatting */
+#docs-search-container .nlweb-result,
+#docs-search-container .nlweb-message {
+  line-height: 1.6 !important;
+}
+
+/* Add some spacing between search results */
+#docs-search-container .nlweb-result + .nlweb-result {
+  margin-top: 1rem !important;
+  padding-top: 1rem !important;
+  border-top: 1px solid var(--ifm-color-emphasis-200) !important;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  #docs-search-container > div,
+  #docs-search-container .nlweb-dropdown,
+  #docs-search-container .nlweb-chat-container {
+    min-width: 90vw !important;
+    max-width: 95vw !important;
+    width: 90vw !important;
+    right: -10px !important;
+  }
+}

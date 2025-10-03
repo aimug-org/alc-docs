@@ -28,7 +28,7 @@ const config = {
   themes: ['@docusaurus/theme-mermaid'],
 
   plugins: [
-    ...(process.env.NODE_ENV === 'production' 
+    ...(process.env.NODE_ENV === 'production'
       ? [
           [
             '@docusaurus/plugin-google-gtag',
@@ -39,6 +39,15 @@ const config = {
           ],
         ]
       : []),
+  ],
+
+  stylesheets: [
+    'https://plain-frost-e011-nlweb.colin-eb5.workers.dev/nlweb-dropdown-chat.css',
+    'https://plain-frost-e011-nlweb.colin-eb5.workers.dev/common-chat-styles.css',
+  ],
+
+  clientModules: [
+    require.resolve('./src/components/DocsSearch/clientModule.js'),
   ],
 
   presets: [
