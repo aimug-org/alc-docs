@@ -69,10 +69,16 @@ if (ExecutionEnvironment.canUseDOM) {
     container.style.alignItems = 'center';
     navbar.insertBefore(container, navbar.firstChild);
 
-    // Load and initialize widget
-    import('https://plain-frost-e011-nlweb.colin-eb5.workers.dev/nlweb-dropdown-chat.js')
-      .then(({ NLWebDropdownChat }) => {
+    // Load and initialize widget (construct URL dynamically to avoid webpack bundling)
+    const widgetUrl = 'https:' + '//' + 'plain-frost-e011-nlweb.colin-eb5.workers.dev/nlweb-dropdown-chat.js';
+
+    // Use Function constructor to create import at runtime
+    const loadModule = new Function('url', 'return import(url)');
+
+    loadModule(widgetUrl)
+      .then((module) => {
         try {
+          const { NLWebDropdownChat } = module;
           searchWidgetInstance = new NLWebDropdownChat({
             containerId: 'docs-search-container',
             site: 'https://plain-frost-e011-nlweb.colin-eb5.workers.dev',
