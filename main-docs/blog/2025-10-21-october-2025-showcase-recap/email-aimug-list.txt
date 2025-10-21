@@ -1,0 +1,186 @@
+# AIMUG Email List - October 2025 Showcase Recap
+
+**Subject:** 🎯 October Showcase Recap: LangGraph 1.0, Agent Protocols & Cancer Detection AI
+
+---
+
+**Preview Text:** LangGraph 1.0 middleware, A2A/AP2 protocols, Stanford cancer research, and LLM inference optimization - all the highlights from our October showcase!
+
+---
+
+## Email Body
+
+Hi AIMUG Community!
+
+What an incredible October showcase! With 60+ attendees and presentations ranging from production middleware patterns to groundbreaking medical research, our community continues to push the boundaries of what's possible with AI agents.
+
+### 🎬 **Watch the Full Recording**
+
+Missed the event or want to revisit the presentations? The full recording is now available:
+
+**[Watch on YouTube →](https://youtu.be/RvG3KXRiURQ)**
+
+### 📚 **Four Cutting-Edge Presentations**
+
+#### 🔧 LangGraph 1.0 Alpha & Middleware (Colin McNamara)
+
+LangGraph is moving to stable 1.0 releases with a powerful new middleware architecture. Three hooks give you unprecedented control over your agents:
+
+- **before_model**: Context management, token limits, guardrails
+- **model**: Dynamic model swapping, caching, tool control
+- **after_model**: Human-in-the-loop, circuit breakers, validation
+
+**Real-world impact:** Colin shared his production FinOps use case processing EDI orders with human approval for capacity-exceeding transactions.
+
+**Companies using it:** JPMorgan Chase, NuvoBank, LinkedIn
+
+**[Read the deep dive →](https://aimug.org/docs/oct-2025/langgraph-middleware)**
+
+---
+
+#### 🤝 A2A/AP2: The Future of Agent Commerce (Ryan Booth)
+
+Google's Agent-to-Agent protocol and OpenAI's Agent Payment Protocol are here, enabling:
+
+- **Agent discovery**: Like SEO, but for AI agents finding services
+- **Capability negotiation**: Automated contract discussions
+- **Payment processing**: Transactions within chat interfaces
+
+Ryan demonstrated his Corvara marketplace where agents bid on software projects, negotiate contracts, and complete work autonomously.
+
+**Key insight:** Businesses must now optimize for "Agent Engine Optimization" (AEO) to remain discoverable in an AI-first world.
+
+**[Explore the protocols →](https://aimug.org/docs/oct-2025/a2a-ap2-protocols)**
+
+---
+
+#### 🧬 AI Cancer Detection Research (Venika Kakarla)
+
+Our mentored high school student shared her Stanford internship research on hepatocellular carcinoma (liver cancer):
+
+- **Dataset:** 1.4 million cells across 124+ tumor regions
+- **Methods:** Spatial analysis, Voronoi tessellation clustering, MVD analysis
+- **Tools:** Python, Pandas, Matplotlib, SciPy
+- **Future:** Graph Attention Networks for recurrence prediction
+
+From reducing 2,500 hours of compute to 5 minutes in Google Colab to presenting at Stanford's School of Medicine - Venika's journey exemplifies the democratizing power of AI tools.
+
+**[Read the research presentation →](https://aimug.org/docs/oct-2025/cancer-detection-research)**
+
+---
+
+#### ⚡ LLM Inference Provider Comparison (Dmitri Iourovitski)
+
+Dmitri provided a practical guide to choosing local LLM inference providers:
+
+**Ollama/Llama.cpp:** Best for quick demos and macOS development
+- ✅ Easy setup, no GPU required
+- ❌ No batching, opaque memory management
+
+**Hugging Face Transformers:** Best for flexibility and latest models
+- ✅ Day-one model access, Flash Attention since 2023
+- ❌ Steep learning curve
+
+**VLLM:** Best for production scale
+- ✅ Paged attention, automatic batching
+- ❌ Requires high-end GPUs (12GB+ VRAM)
+
+**Performance benchmark:** 35 minutes (Ollama) → 8 minutes (Transformers) for same OCR task!
+
+**[Read the full comparison →](https://aimug.org/docs/oct-2025/inference-providers)**
+
+---
+
+### 🗓️ **Upcoming Events**
+
+**Tuesday Office Hours**
+- Every Tuesday at 5:00 PM Central
+- Google Meet (link in Discord)
+- Open Q&A and collaboration
+
+**Hacky Hour**
+- Date TBD (watch Discord/Meetup)
+- Social coding session
+- Bring your projects!
+
+**November Showcase**
+- First Wednesday of November
+- Austin Community College RGC 3000
+- Submit your presentation ideas!
+
+**[Join our Discord →](https://aimug.org/discord)**
+
+---
+
+### 📖 **All Documentation Available**
+
+Every presentation is fully documented with:
+- Technical details and code examples
+- Q&A highlights
+- Resource links
+- Implementation guidance
+
+**[Browse October 2025 docs →](https://aimug.org/docs/oct-2025/)**
+
+---
+
+### 🎤 **Want to Present?**
+
+Have you been working on something interesting? We're always looking for community members to share their learning and innovations at our monthly showcases.
+
+Topics we love:
+- Production AI deployments
+- Novel agent architectures
+- Tool integrations (MCPs, APIs)
+- Research projects
+- Learning journeys
+
+**Reply to this email or ping us on Discord if you'd like to present!**
+
+---
+
+### 💬 **Join the Conversation**
+
+Our community thrives on open knowledge sharing and collaboration:
+
+- **Discord:** [aimug.org/discord](https://aimug.org/discord)
+- **Meetup:** [aimug.org](https://aimug.org)
+- **GitHub:** [github.com/aimug-org](https://github.com/aimug-org)
+- **YouTube:** [Full playlist of presentations](https://youtube.com/@aimug)
+
+---
+
+### 🙏 **Thank You to Our Supporters**
+
+- **Space Sponsor:** Center for Government and Civic Service
+- **Corporate Underwriters:** LangChain AI, Always Cool Brands, Toolhouse
+- **Community Members:** Your support keeps us independent and intellectually honest
+
+---
+
+### 📢 **Community Highlights**
+
+- **60+ attendees** with 6 first-time members
+- **1,600+ members** in the AIMUG community
+- **2+ years** of monthly showcases and learning together
+- **100% community-driven** - no sales pitches, just learning
+
+---
+
+See you at Tuesday office hours and the November showcase!
+
+Keep building amazing things,
+
+**Colin McNamara**
+Founder, Austin LangChain AIMUG
+[colin@aimug.org](mailto:colin@aimug.org)
+
+P.S. If you found this valuable, forward it to someone who'd benefit from joining our community!
+
+---
+
+**[Watch the Recording](https://youtu.be/RvG3KXRiURQ)** | **[Read the Docs](https://aimug.org/docs/oct-2025/)** | **[Join Discord](https://aimug.org/discord)**
+
+---
+
+*You're receiving this because you're subscribed to the AIMUG community email list. [Update preferences](#) | [Unsubscribe](#)*

@@ -1,0 +1,191 @@
+# Social Media Posts - October 2025 Showcase
+
+## Twitter/X Post 1 (Main Announcement)
+
+🎯 October AIMUG Showcase Recap! 60+ attendees explored:
+
+🔧 LangGraph 1.0 middleware (3 game-changing hooks!)
+🤝 A2A/AP2 agent marketplaces
+🧬 AI cancer detection at Stanford
+⚡ LLM inference optimization
+
+📺 Full recording + docs:
+https://aimug.org/blog/october-2025-showcase-recap
+
+#AI #LangChain #LangGraph #AgenticAI
+
+---
+
+## Twitter/X Post 2 (LangGraph Focus)
+
+LangGraph 1.0 is HERE! 🚀
+
+New middleware architecture gives you control at 3 critical points:
+✅ before_model - Context & guardrails
+✅ model - Swapping & caching
+✅ after_model - HITL & validation
+
+JPMorgan, NuvoBank & LinkedIn already in production.
+
+Deep dive: https://aimug.org/docs/oct-2025/langgraph-middleware
+
+---
+
+## Twitter/X Post 3 (A2A/AP2)
+
+The future of AI commerce is here 🤖💰
+
+Agent-to-Agent (A2A) + Agent Payment Protocol (AP2) = automated service marketplaces
+
+Agents can now:
+🔍 Discover services
+💼 Negotiate contracts
+💵 Complete transactions
+
+Live demo included!
+
+https://aimug.org/docs/oct-2025/a2a-ap2-protocols
+
+---
+
+## Twitter/X Post 4 (Student Research)
+
+🌟 High school student @Venika presents Stanford cancer research at AIMUG!
+
+📊 1.4M cells analyzed
+🧠 Graph Attention Networks for recurrence prediction
+⚡ Reduced 2,500 hrs compute → 5 min (Google Colab)
+
+Future researchers are HERE.
+
+https://aimug.org/docs/oct-2025/cancer-detection-research
+
+---
+
+## Twitter/X Post 5 (Inference)
+
+Local LLM inference guide 📊
+
+Ollama vs Transformers vs VLLM:
+- Quick demos? Ollama
+- Latest models? Transformers
+- Production scale? VLLM
+
+Real benchmarks: 35 min → 8 min with right setup!
+
+https://aimug.org/docs/oct-2025/inference-providers
+
+---
+
+## LinkedIn Post (Professional)
+
+## October AIMUG Showcase: Enterprise AI Agent Architectures
+
+Our October monthly showcase brought together 60+ AI practitioners to explore production-ready agent architectures and emerging protocols.
+
+**Key Presentations:**
+
+🔧 **LangGraph 1.0 Middleware** - Colin McNamara demonstrated the new three-hook architecture enabling enterprise deployments at JPMorgan Chase, NuvoBank, and LinkedIn. Real-world use case: FinOps automation with human-in-the-loop approval workflows.
+
+🤝 **A2A/AP2 Protocols** - Ryan Booth explored Google's Agent-to-Agent protocol and OpenAI's Agent Payment Protocol, showcasing a live marketplace where agents discover services, negotiate contracts, and process payments.
+
+🧬 **AI Cancer Detection** - High school student Venika Kakarla presented Stanford research on hepatocellular carcinoma using spatial analysis and Graph Attention Networks across 1.4M cells.
+
+⚡ **LLM Inference Optimization** - Dmitri Iourovitski compared Ollama, Hugging Face Transformers, and VLLM with production benchmarks and deployment guidance.
+
+**Impact:**
+- Production patterns for agent middleware
+- Agent marketplace economics emerging
+- AI democratization in medical research
+- 77% performance improvement with proper inference setup
+
+Watch the full recording and explore detailed documentation:
+https://aimug.org/blog/october-2025-showcase-recap
+
+#ArtificialIntelligence #LangChain #LangGraph #AgenticAI #EnterpriseAI #Austin
+
+---
+
+## Instagram Post Caption
+
+🎯 October AIMUG Showcase Highlights!
+
+60+ AI enthusiasts gathered to explore the future of agent architectures 🤖
+
+✨ What we covered:
+• LangGraph 1.0 middleware (production-ready!)
+• Agent-to-agent marketplaces
+• AI cancer detection breakthrough
+• Local LLM optimization strategies
+
+🎓 Special shoutout to our high school researcher presenting Stanford findings! The future is bright 🌟
+
+📺 Full recording + docs at aimug.org
+
+#AIMUG #AustinTech #AIcommunity #LangChain #MachineLearning #AustinEvents #TechMeetup #AIresearch
+
+---
+
+## Facebook Post
+
+🚀 October AIMUG Showcase Recap!
+
+What an incredible evening with 60+ AI enthusiasts exploring cutting-edge agent architectures! Here's what went down:
+
+🔧 **LangGraph 1.0 Middleware** - Colin showed us how three simple hooks are changing enterprise AI deployments. Companies like JPMorgan and LinkedIn are already using this in production!
+
+🤝 **Agent Marketplaces** - Ryan demoed a live system where AI agents discover services, negotiate, and even handle payments. The future of AI commerce is closer than you think!
+
+🧬 **Cancer Detection Research** - High school student Venika blew us away with her Stanford research analyzing 1.4 million cells to predict liver cancer recurrence. Talk about inspiration!
+
+⚡ **LLM Performance** - Dmitri shared the secrets to optimizing local AI models, with some setups running 77% faster!
+
+📺 Watch the full recording: https://youtu.be/RvG3KXRiURQ
+📚 Read the docs: https://aimug.org/blog/october-2025-showcase-recap
+
+Can't wait to see you at next month's showcase!
+
+Join our community:
+💬 Discord: aimug.org/discord
+📅 Meetup: aimug.org
+
+#AustinLangChain #AIMUG #AIcommunity #MachineLearning #AustinEvents
+
+---
+
+## Reddit Post (r/MachineLearning, r/LangChain, r/Austin)
+
+**Title:** October AIMUG Showcase: LangGraph 1.0 Middleware, A2A/AP2 Protocols, and AI Cancer Research [Discussion]
+
+Hey everyone!
+
+Just wanted to share highlights from our Austin LangChain AI Middleware User Group (AIMUG) October showcase. We had 60+ attendees exploring some really exciting developments in agent architectures.
+
+**Four main presentations:**
+
+1. **LangGraph 1.0 Middleware** - New three-hook architecture (before_model, model, after_model) that makes production agent deployment significantly easier. Real production use case in FinOps with human-in-the-loop workflows.
+
+2. **Agent-to-Agent (A2A) & Agent Payment Protocol (AP2)** - Google's A2A protocol + OpenAI's AP2 for agent discovery and transactions. Live demo of an agent marketplace for software development services.
+
+3. **AI Cancer Detection** - Stanford research on hepatocellular carcinoma using spatial analysis and Graph Attention Networks. High school student analyzing 1.4M cells - pretty inspiring!
+
+4. **LLM Inference Providers** - Practical comparison of Ollama, Hugging Face Transformers, and VLLM with real benchmarks (35min → 8min optimization on same hardware).
+
+Full recording + detailed documentation: https://aimug.org/blog/october-2025-showcase-recap
+
+Happy to answer questions about any of the presentations!
+
+---
+
+## Mastodon/Bluesky Post
+
+🎯 October AIMUG Showcase was 🔥!
+
+LangGraph 1.0 middleware: 3 hooks to control your agents
+A2A/AP2: Agent marketplaces are real
+AI cancer detection: HS student doing Stanford research
+LLM inference: 77% speedup with right setup
+
+📺 Recording + docs: aimug.org/blog/october-2025-showcase-recap
+
+#AI #LangChain #OpenSource #AgenticAI

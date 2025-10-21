@@ -1,0 +1,143 @@
+# Meetup Announcement - October 2025 Showcase Recap
+
+**Title:** October Showcase Recording + Docs: LangGraph 1.0, Agent Protocols, Cancer Detection AI
+
+---
+
+## Meetup Announcement Body
+
+### 🎬 October Showcase Recording Now Available!
+
+Thanks to everyone who joined us for our October monthly showcase! With 60+ attendees, we explored cutting-edge topics from production middleware to medical AI research.
+
+**[Watch the Full Recording on YouTube →](https://youtu.be/RvG3KXRiURQ)**
+
+---
+
+### 📚 What We Covered
+
+#### 🔧 **LangGraph 1.0 Middleware**
+Colin McNamara demonstrated the new middleware architecture with three powerful hooks for controlling agent behavior. Production deployments at JPMorgan, NuvoBank, and LinkedIn validate these patterns.
+
+**[Read the details →](https://aimug.org/docs/oct-2025/langgraph-middleware)**
+
+---
+
+#### 🤝 **Agent-to-Agent (A2A) & Payment Protocol (AP2)**
+Ryan Booth showcased agent discovery and transaction protocols with a live marketplace demo. The future of AI commerce is here!
+
+**[Explore A2A/AP2 →](https://aimug.org/docs/oct-2025/a2a-ap2-protocols)**
+
+---
+
+#### 🧬 **AI Cancer Detection at Stanford**
+High school student Venika Kakarla presented her Stanford research analyzing 1.4M cells for liver cancer recurrence prediction. Absolutely inspiring!
+
+**[See the research →](https://aimug.org/docs/oct-2025/cancer-detection-research)**
+
+---
+
+#### ⚡ **LLM Inference Optimization**
+Dmitri Iourovitski compared Ollama, Transformers, and VLLM with real benchmarks showing 77% performance improvements with the right setup.
+
+**[Read the comparison →](https://aimug.org/docs/oct-2025/inference-providers)**
+
+---
+
+### 🗓️ **Upcoming Events**
+
+#### **Tuesday Office Hours**
+Every Tuesday at 5:00 PM Central on Google Meet
+- Open Q&A
+- Collaboration time
+- Project help
+- [Join via Discord](https://aimug.org/discord)
+
+#### **Next Hacky Hour**
+Date TBD - Watch Meetup for updates!
+- Social coding
+- Project collaboration
+- Networking
+
+#### **November Monthly Showcase**
+First Wednesday of November at Austin Community College RGC 3000
+- New presentations
+- Community demos
+- Networking
+
+**[RSVP for Future Events →](https://aimug.org)**
+
+---
+
+### 💡 **Want to Present at a Future Event?**
+
+We're always looking for community members to share their:
+- AI projects and experiments
+- Production deployments
+- Learning journeys
+- Tool integrations
+- Research findings
+
+**No sales pitches, just authentic learning and knowledge sharing.**
+
+Message us here on Meetup or join our Discord to discuss presentation ideas!
+
+---
+
+### 🌟 **Why Join AIMUG?**
+
+✅ Learn from real practitioners building with AI
+✅ No vendor pitches - community-driven content
+✅ Hands-on labs and code examples
+✅ Supportive community ("be cool to each other")
+✅ Free to attend - supported by members and sponsors
+
+**1,600+ members learning AI together since 2023**
+
+---
+
+### 📖 **All Resources Available**
+
+- **Full Documentation:** [aimug.org/docs/oct-2025](https://aimug.org/docs/oct-2025/)
+- **Video Recording:** [YouTube](https://youtu.be/RvG3KXRiURQ)
+- **Discord Community:** [aimug.org/discord](https://aimug.org/discord)
+- **GitHub Labs:** [github.com/aimug-org](https://github.com/aimug-org)
+
+---
+
+### 📍 **Location Info**
+
+Austin Community College - Rio Grande Campus
+Room RGC 3000 (Historic Austin High School Gym)
+1212 Rio Grande St, Austin, TX 78701
+
+**Parking:** Street parking available (check signs)
+**Transit:** Walking distance from downtown
+
+---
+
+### 🎯 **New to AIMUG?**
+
+Join us for:
+- **Monthly Showcases** (First Wednesday)
+- **Tuesday Office Hours** (5 PM Central)
+- **Hacky Hours** (Social coding sessions)
+- **Discord Community** (24/7 collaboration)
+
+**Two rules:**
+1. Be cool to each other
+2. Don't be gross
+
+Everyone's learning, everyone's welcome!
+
+---
+
+See you at the next event!
+
+**AIMUG Organizers**
+
+P.S. Know someone who'd love this community? Share this Meetup group with them!
+
+---
+
+**[Watch October Recording](https://youtu.be/RvG3KXRiURQ)** | **[Join Discord](https://aimug.org/discord)** | **[RSVP for November](https://aimug.org)**

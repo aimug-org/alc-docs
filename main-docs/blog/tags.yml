@@ -297,3 +297,43 @@ video:
   label: Video
   permalink: /video
   description: Video recordings and replays of events
+
+middleware:
+  label: Middleware
+  permalink: /middleware
+  description: Middleware patterns and architectures in AI systems
+
+a2a:
+  label: A2A
+  permalink: /a2a
+  description: Agent-to-Agent communication protocol and agent discovery
+
+ap2:
+  label: AP2
+  permalink: /ap2
+  description: Agent Payment Protocol for automated transactions
+
+cancer-research:
+  label: Cancer Research
+  permalink: /cancer-research
+  description: AI applications in cancer detection and medical research
+
+inference:
+  label: Inference
+  permalink: /inference
+  description: LLM inference optimization and deployment strategies
+
+vllm:
+  label: VLLM
+  permalink: /vllm
+  description: VLLM inference provider for production deployments
+
+ollama:
+  label: Ollama
+  permalink: /ollama
+  description: Ollama local LLM deployment platform
+
+transformers:
+  label: Transformers
+  permalink: /transformers
+  description: Hugging Face Transformers and model implementations
