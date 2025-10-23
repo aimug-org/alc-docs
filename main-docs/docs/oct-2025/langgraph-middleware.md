@@ -12,6 +12,12 @@ sidebar_position: 1
 
 Colin McNamara presented an exploration of LangGraph 1.0 alpha features, with a focus on the new middleware functionality that enables sophisticated agent control and optimization patterns.
 
+**Update**: The LangChain Middleware API is now officially released! Watch the official release video:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/en_kBBZCRdM" title="LangChain Middleware API Release" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[Read the release blog post →](/blog/langchain-middleware-api-release)
+
 ## Key Topics
 
 ### LangGraph 1.0 Transition

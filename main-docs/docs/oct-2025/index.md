@@ -57,6 +57,7 @@ Location: Austin Community College RGC 3000
 - New middleware architecture
 - Three hook system: before_model, model, after_model
 - Production deployment considerations
+- **NEW**: [Official Middleware API Release](https://www.youtube.com/watch?v=en_kBBZCRdM) - [Read the announcement →](/blog/langchain-middleware-api-release)
 
 ### Agent Communication
 - Google's A2A protocol for agent discovery
