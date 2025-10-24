@@ -1,0 +1,11 @@
+langgraph>=1.0.0
+langchain>=1.0.0
+langchain-anthropic>=0.3.0
+langsmith>=0.2.0
+pydantic>=2.10.0
+python-dotenv>=1.0.0
+requests>=2.32.0
+pillow>=11.0.0
+openai-whisper>=20231117
+yt-dlp>=2024.0.0
+pytest>=8.0.0

@@ -15,6 +15,17 @@ This repository contains the documentation and blog posts for the Austin LangCha
   - `/mcps` - Model Context Protocol servers
   - `/resources` - Meeting notes, presentations, and community resources
 - `/scripts` - Utility scripts for automation and content generation
+  - `/video-pipeline` - Video content pipeline (Python with venv)
+
+## Video Pipeline Development
+
+**Python Virtual Environment:**
+This worktree uses a Python virtual environment for the video pipeline:
+- Location: `scripts/video-pipeline/venv`
+- Auto-activation: `.envrc` file (requires direnv)
+- Manual activation: `source scripts/video-pipeline/venv/bin/activate`
+
+**All Python commands MUST be run from the activated venv.**
 
 ## Technologies
 
