@@ -117,7 +117,8 @@ def main():
     input_state = {
         "video_url": args.video_url,
         "video_type": video_type,
-        "transcript": transcript
+        "transcript": transcript,
+        "dry_run": args.dry_run
     }
 
     # Configure execution

@@ -6,6 +6,7 @@ from .state import PipelineState, InputState, OutputState
 from .nodes.input_node import input_node
 from .nodes.video_analysis_node import video_analysis_node
 from .nodes.image_decision_node import image_decision_node
+from .nodes.extract_images_node import extract_images_node
 from .nodes.content_generation_node import content_generation_node
 from .nodes.fact_check_node import fact_check_node
 from .nodes.human_review_node import human_review_node
@@ -29,8 +30,7 @@ def build_graph():
     builder.add_node("input", input_node)
     builder.add_node("video_analysis", video_analysis_node)
     builder.add_node("image_decision", image_decision_node)
-    # Stub node for future image extraction
-    builder.add_node("extract_images", lambda state: {"extracted_images": []})
+    builder.add_node("extract_images", extract_images_node)
     builder.add_node("content_generation", content_generation_node)
     builder.add_node("fact_check", fact_check_node)
     builder.add_node("human_review", human_review_node)

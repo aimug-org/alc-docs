@@ -7,6 +7,7 @@ class InputState(TypedDict):
     video_url: str
     video_type: Literal["full_meeting", "individual_session"]
     transcript: Optional[str]
+    dry_run: bool
 
 
 class OutputState(TypedDict):

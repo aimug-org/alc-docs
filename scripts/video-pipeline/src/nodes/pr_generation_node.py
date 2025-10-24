@@ -41,6 +41,9 @@ def pr_generation_node(state: Dict[str, Any]) -> Dict[str, Any]:
         - git add, commit, push
         - gh pr create with social content in comments
     """
+    # Check if this is a dry run
+    dry_run = state.get("dry_run", False)
+
     video_analysis = state["video_analysis"]
     meeting_date = video_analysis["meeting_metadata"]["date"]
     video_type = state["video_type"]
@@ -56,24 +59,38 @@ def pr_generation_node(state: Dict[str, Any]) -> Dict[str, Any]:
     # git add, commit, push
     # gh pr create
 
-    # Simulate PR creation
-    pr_number = 999  # Mock PR number
-    pr_url = f"https://github.com/aimug-org/alc-docs/pull/{pr_number}"
+    if dry_run:
+        pr_url = "https://github.com/aimug-org/alc-docs/pull/DRY-RUN"
+        print(f"\n{'='*60}")
+        print("DRY RUN MODE - PR GENERATION SKIPPED")
+        print(f"{'='*60}")
+        print(f"Would create branch: {branch_name}")
+        print(f"\nFiles that would be created:")
+        if video_type == "full_meeting":
+            month_folder = get_month_folder(meeting_date)
+            print(f"  - docs/{month_folder}/index.md")
+        print(f"  - blog/{meeting_date}-title/index.md")
+        print(f"\nSocial content ready but not posted")
+        print(f"{'='*60}\n")
+    else:
+        # Simulate PR creation
+        pr_number = 999  # Mock PR number
+        pr_url = f"https://github.com/aimug-org/alc-docs/pull/{pr_number}"
 
-    print(f"\n{'='*60}")
-    print("PR GENERATION (SIMULATED)")
-    print(f"{'='*60}")
-    print(f"Branch: {branch_name}")
-    print(f"PR URL: {pr_url}")
-    print(f"\nFiles to be created:")
+        print(f"\n{'='*60}")
+        print("PR GENERATION (SIMULATED)")
+        print(f"{'='*60}")
+        print(f"Branch: {branch_name}")
+        print(f"PR URL: {pr_url}")
+        print(f"\nFiles to be created:")
 
-    if video_type == "full_meeting":
-        month_folder = get_month_folder(meeting_date)
-        print(f"  - docs/{month_folder}/index.md")
+        if video_type == "full_meeting":
+            month_folder = get_month_folder(meeting_date)
+            print(f"  - docs/{month_folder}/index.md")
 
-    print(f"  - blog/{meeting_date}-title/index.md")
-    print(f"\nSocial content available in PR comments")
-    print(f"{'='*60}\n")
+        print(f"  - blog/{meeting_date}-title/index.md")
+        print(f"\nSocial content available in PR comments")
+        print(f"{'='*60}\n")
 
     return {
         "pr_url": pr_url
