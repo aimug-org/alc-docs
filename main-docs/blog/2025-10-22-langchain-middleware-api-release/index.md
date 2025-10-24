@@ -32,7 +32,7 @@ The final hook allows you to inspect and validate responses before they're retur
 
 ## Why This Matters for Production
 
-At our [October 2025 showcase](/blog/october-2025-showcase-recap), we demonstrated real-world use cases where middleware transforms agent deployments from experimental prototypes into production-ready systems.
+At our [October 2025 showcase](/blog/2025-10-21-october-2025-showcase-recap), we demonstrated real-world use cases where middleware transforms agent deployments from experimental prototypes into production-ready systems.
 
 ### Enterprise Adoption
 

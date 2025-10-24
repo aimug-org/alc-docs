@@ -64,6 +64,7 @@ Location: Austin Community College RGC 3000
 - OpenAI's Agent Payment Protocol (AP2)
 - Marketplace concepts for agent services
 - Contract-based agent workflows
+- **NEW**: [Ryan's Full A2A/AP2 Presentation](https://www.youtube.com/watch?v=d5l0D7h5bI4) - [Read the deep dive →](/blog/a2a-ap2-agent-protocols-video)
 
 ### AI in Medical Research
 - Spatial analysis of tumor microenvironments

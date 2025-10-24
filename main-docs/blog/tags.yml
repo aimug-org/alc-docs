@@ -337,3 +337,8 @@ transformers:
   label: Transformers
   permalink: /transformers
   description: Hugging Face Transformers and model implementations
+
+marketplace:
+  label: Marketplace
+  permalink: /marketplace
+  description: Agent marketplaces, service discovery, and autonomous commerce platforms
