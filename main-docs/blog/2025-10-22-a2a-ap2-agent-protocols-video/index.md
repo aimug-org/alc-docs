@@ -14,7 +14,7 @@ Ryan Booth's presentation on Agent-to-Agent (A2A) communication and the Agent Pa
 
 ## The Vision: Agent Marketplaces
 
-Ryan's presentation, delivered at our [October 2025 showcase](/blog/2025-10-21-october-2025-showcase-recap), demonstrates how Google's Agent-to-Agent protocol and OpenAI's Agent Payment Protocol are creating the foundation for autonomous agent economies. This isn't science fiction—it's infrastructure being deployed today.
+Ryan's presentation, delivered at our [October 2025 showcase](/blog/october-2025-showcase-recap), demonstrates how Google's Agent-to-Agent protocol and OpenAI's Agent Payment Protocol are creating the foundation for autonomous agent economies. This isn't science fiction—it's infrastructure being deployed today.
 
 ### The Fundamental Shift
 
@@ -195,12 +195,13 @@ The tools exist. The protocols are live. The market is emerging. The only questi
 - [Full October Showcase Recording](https://www.youtube.com/watch?v=RvG3KXRiURQ)
 
 **Protocol Documentation**
-- [A2A Protocol Specification](https://a2a.to/)
+- [A2A Protocol Specification](https://a2a-protocol.org/latest/specification/)
+- [Google A2A Documentation](https://google.github.io/adk-docs/a2a/)
 - OpenAI Agent Payment Protocol Documentation
 
 **AIMUG Resources**
 - [Detailed A2A/AP2 Documentation](/docs/oct-2025/a2a-ap2-protocols)
-- [October 2025 Showcase Recap](/blog/2025-10-21-october-2025-showcase-recap)
+- [October 2025 Showcase Recap](/blog/october-2025-showcase-recap)
 - [Join Discord Community](https://discord.gg/JzWgadPFQd)
 - [Austin LangChain GitHub](https://github.com/aimug-org/austin_langchain)
 
