@@ -201,7 +201,7 @@ The tools exist. The protocols are live. The market is emerging. The only questi
 **AIMUG Resources**
 - [Detailed A2A/AP2 Documentation](/docs/oct-2025/a2a-ap2-protocols)
 - [October 2025 Showcase Recap](/blog/2025-10-21-october-2025-showcase-recap)
-- [Join Discord Community](https://aimug.org/discord)
+- [Join Discord Community](https://discord.gg/JzWgadPFQd)
 - [Austin LangChain GitHub](https://github.com/aimug-org/austin_langchain)
 
 **Related Topics**

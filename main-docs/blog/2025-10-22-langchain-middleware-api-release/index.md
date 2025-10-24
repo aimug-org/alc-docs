@@ -144,11 +144,11 @@ The tools are here. The patterns are emerging. The community is ready. Let's bui
 **AIMUG Community**
 - [October Showcase Deep Dive](/docs/oct-2025/langgraph-middleware)
 - [Full October Recording](https://youtu.be/RvG3KXRiURQ)
-- [Join Discord](https://aimug.org/discord)
+- [Join Discord](https://discord.gg/JzWgadPFQd)
 - [Austin LangChain GitHub](https://github.com/aimug-org/austin_langchain)
 
 **Related Posts**
-- [October 2025 Showcase Recap](/blog/october-2025-showcase-recap)
+- [October 2025 Showcase Recap](/blog/2025-10-21-october-2025-showcase-recap)
 - [A2A/AP2 Agent Protocols](/docs/oct-2025/a2a-ap2-protocols)
 
 ---
