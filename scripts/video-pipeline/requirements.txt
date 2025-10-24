@@ -9,3 +9,7 @@ pillow>=11.0.0
 openai-whisper>=20231117
 yt-dlp>=2024.0.0
 pytest>=8.0.0
+
+# Video processing (Phase 2A additions)
+ffmpeg-python>=0.2.0
+ollama>=0.1.0
