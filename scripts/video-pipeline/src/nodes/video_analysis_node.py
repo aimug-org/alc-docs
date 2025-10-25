@@ -26,6 +26,9 @@ def video_analysis_node(state: Dict[str, Any]) -> Dict[str, Any]:
     video_url = state["video_url"]
     provided_transcript = state.get("transcript")
 
+    # Initialize temp_dir before try block to prevent NameError in finally
+    temp_dir = None
+
     # Create temp directory
     temp_dir = Path(tempfile.mkdtemp(prefix="video-pipeline-"))
 
@@ -83,8 +86,18 @@ def video_analysis_node(state: Dict[str, Any]) -> Dict[str, Any]:
 
         # Step 5: Extract metadata
         print("[5/5] Extracting metadata...")
-        metadata = extract_metadata(video_url)
-        print("✓ Complete\n")
+        try:
+            metadata = extract_metadata(video_url)
+            print("✓ Complete\n")
+        except Exception as e:
+            logger.warning(f"Metadata extraction failed: {e}")
+            metadata = {
+                'title': 'Unknown',
+                'description': '',
+                'duration': 0,
+                'upload_date': None
+            }
+            print("⚠ Metadata extraction failed, using defaults\n")
 
         print("Analysis complete!")
         print("=" * 60 + "\n")
@@ -110,6 +123,6 @@ def video_analysis_node(state: Dict[str, Any]) -> Dict[str, Any]:
 
     finally:
         # Cleanup temp files
-        if temp_dir.exists():
+        if temp_dir is not None and temp_dir.exists():
             shutil.rmtree(temp_dir)
             logger.info(f"Cleaned up temp files at {temp_dir}")
