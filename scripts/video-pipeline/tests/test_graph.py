@@ -35,9 +35,44 @@ def test_build_graph_has_nodes():
         assert node in node_names, f"Missing node: {node}"
 
 
+@patch('src.nodes.video_analysis_node.download_video')
+@patch('src.nodes.video_analysis_node.transcribe_audio')
+@patch('src.nodes.video_analysis_node.extract_keyframes')
+@patch('src.nodes.video_analysis_node.analyze_frames_with_ollama')
+@patch('src.nodes.video_analysis_node.extract_metadata')
 @patch('builtins.input', return_value='approve')
-def test_graph_invoke_full_meeting(mock_input):
+def test_graph_invoke_full_meeting(
+    mock_input,
+    mock_metadata,
+    mock_ollama,
+    mock_frames,
+    mock_transcribe,
+    mock_download
+):
     """Test graph can be invoked with full meeting input."""
+    # Setup mocks
+    mock_download.return_value = '/tmp/video.mp4'
+    mock_transcribe.return_value = {
+        'text': 'Test transcript',
+        'language': 'en',
+        'duration': 2700.0
+    }
+    mock_frames.return_value = ['/tmp/frame1.jpg']
+    mock_ollama.return_value = {
+        'has_slides': True,
+        'has_diagrams': False,
+        'has_code_examples': False,
+        'frame_descriptions': [
+            {'frame_num': 1, 'description': 'Test', 'content_type': 'slide'}
+        ]
+    }
+    mock_metadata.return_value = {
+        'title': 'Test Meeting',
+        'date': '2025-10-24',
+        'duration': '45min',
+        'video_id': 'abc123'
+    }
+
     graph = build_graph()
 
     input_state = {
