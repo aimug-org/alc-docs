@@ -3,6 +3,15 @@ import pytest
 from unittest.mock import patch, MagicMock
 from src.nodes.video_analysis_node import video_analysis_node
 
+# Check if Ollama is available
+OLLAMA_AVAILABLE = False
+try:
+    import ollama
+    ollama.chat(model='llama3.2-vision', messages=[{'role': 'user', 'content': 'test'}])
+    OLLAMA_AVAILABLE = True
+except:
+    pass
+
 
 @patch('src.nodes.video_analysis_node.download_video')
 @patch('src.nodes.video_analysis_node.transcribe_audio')
@@ -219,3 +228,52 @@ def test_video_analysis_node_ollama_unavailable(
     assert "video_analysis" in result
     # Visual content should have all False flags
     assert result["video_analysis"]["visual_content"]["has_slides"] is False
+
+
+@pytest.mark.integration
+@pytest.mark.skipif(not OLLAMA_AVAILABLE, reason="Ollama not running")
+@pytest.mark.slow
+def test_video_analysis_real_short_video():
+    """Test with actual short YouTube video.
+
+    Uses a short public domain video for testing.
+    This test actually downloads, transcribes, and analyzes a real video.
+    """
+    # Use a short (< 1 min) Creative Commons video
+    # Example: YouTube's test video or a known short public video
+    test_video_url = "https://www.youtube.com/watch?v=aqz-KE-bpKQ"  # "Big Buck Bunny" trailer (33 seconds)
+
+    state = {
+        "video_url": test_video_url,
+        "video_type": "individual_session",
+        "transcript": None
+    }
+
+    result = video_analysis_node(state)
+
+    # Verify structure
+    assert "video_analysis" in result
+    analysis = result["video_analysis"]
+
+    # Verify transcript exists and is reasonable
+    assert "transcript" in analysis
+    assert len(analysis["transcript"]) > 50  # Should have some content
+
+    # Verify metadata
+    assert "meeting_metadata" in analysis
+    assert "title" in analysis["meeting_metadata"]
+    assert "date" in analysis["meeting_metadata"]
+    assert "duration" in analysis["meeting_metadata"]
+
+    # Verify visual content structure
+    assert "visual_content" in analysis
+    assert "has_slides" in analysis["visual_content"]
+    assert "has_diagrams" in analysis["visual_content"]
+    assert "has_code_examples" in analysis["visual_content"]
+    assert "frame_descriptions" in analysis["visual_content"]
+
+    print(f"\nIntegration Test Results:")
+    print(f"  Title: {analysis['meeting_metadata']['title']}")
+    print(f"  Duration: {analysis['meeting_metadata']['duration']}")
+    print(f"  Transcript length: {len(analysis['transcript'])} chars")
+    print(f"  Frames analyzed: {len(analysis['visual_content']['frame_descriptions'])}")
