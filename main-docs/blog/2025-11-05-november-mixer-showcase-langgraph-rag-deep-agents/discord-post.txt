@@ -1,0 +1,97 @@
+DISCORD ANNOUNCEMENT - November 5th Event Recap
+
+🎉 **November Mixer & Showcase Recap: LangGraph, RAG Failures, and Deep Agents**
+
+What a night! 50+ builders joined us for honest production talk—no marketing BS, just real lessons from the trenches.
+
+---
+
+## 📺 Watch the Full Recording
+
+https://www.youtube.com/watch?v=JOiUYZhGhH8
+
+---
+
+## 🎤 The Talks
+
+**Colin McNamara - LangGraph Fundamentals**
+• Controllability: balancing autonomy with control
+• Running 5 production apps including FDA compliance
+• State persistence for long-running processes
+• "People can die if you screw up... I want to make sure it does every step every time"
+
+**Anupama Garani (PIMCO) - RAG Failures in Enterprise**
+• 42% of enterprise AI failed in 2025
+• 51% were RAG implementations
+• Only 200/1000 companies succeeded (S&P Global)
+• The goldfish vs elephant memory problem
+• State = Context + Memory + orchestration
+
+**Collier King (Cloudflare) - Deep Agents in Production**
+• $80, 3.5-hour pipeline analyzing 400 companies
+• 11M tokens → 244 pages of analysis
+• Middleware as control: validation, logging, error feedback
+• "LLMs take shortcuts. You have to be very explicit"
+• Code: https://github.com/CollierKing/langchain-deepagents-examples
+
+**Paul Phelps (AIMUG Panama) - AI Project Management**
+• 95% of AI pilots fail due to organizational approach
+• PMs using legacy SaaS mental models
+• AI is non-deterministic—requirements should evolve
+• Scope changes = signals the system is working
+
+---
+
+## 🔑 Key Takeaways
+
+**Decision Matrix:**
+✅ **LangGraph** → Deterministic workflows, compliance, cost efficiency
+✅ **Deep Agents** → Research, planning, large context management
+
+**State Management:**
+• Context = current conversation
+• Memory = conversation history
+• State = orchestration layer
+
+**Enterprise Success Factors:**
+• Developer involvement from day one
+• Accept non-deterministic behavior
+• Iterative discovery > upfront requirements
+• Golden datasets for evaluation
+• Audit trails for compliance
+
+---
+
+## 📚 Resources
+
+**Blog Post:** https://aimug.org/blog/november-mixer-showcase-langgraph-rag-deep-agents
+
+**Speaker Profiles:**
+• Colin McNamara: https://linkedin.com/in/colinmcnamara
+• Anupama Garani: https://linkedin.com/in/anupama-garani
+• Collier King: https://linkedin.com/in/collierking
+• Paul Phelps: https://linkedin.com/in/mrpaulphelps
+
+**Learn More:**
+• LangChain Academy: https://academy.langchain.com
+• Anupama's Blog: https://agarani95.medium.com
+• LangSmith: https://smith.langchain.com
+
+---
+
+## 🗓️ What's Next
+
+**Tuesday Office Hours** - Every Tuesday @ 5pm Central
+Drop in with questions, projects, or just to hang out
+
+**December Showcase** - First Wednesday (12/3)
+Want to present? Drop a message in #meeting-plans!
+
+**Hacky Hour** - Mid-month (TBD)
+Check #events for updates
+
+---
+
+🙏 **Huge thanks** to @LangChainAI for training materials & pizza, and all our speakers for sharing real production experiences!
+
+💬 Have questions about anything from the talks? Drop them in this thread!

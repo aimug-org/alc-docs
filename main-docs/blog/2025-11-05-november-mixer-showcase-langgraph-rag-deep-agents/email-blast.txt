@@ -1,0 +1,183 @@
+SUBJECT LINE: November Recap: LangGraph, RAG Failures & $80 Deep Agent Pipelines
+
+---
+
+# November Mixer & Showcase: Real Production Insights from the Trenches
+
+Hi AIMUG Community,
+
+Our November 5th Mixer brought together 50+ AI practitioners for an evening of honest technical deep dives—no marketing fluff, just real lessons from production systems.
+
+[Watch the Full Recording →](https://www.youtube.com/watch?v=JOiUYZhGhH8)
+
+---
+
+## 🎤 The Talks
+
+### Colin McNamara: Introduction to LangGraph
+
+Colin (Always Cool Brands) walked us through LangGraph fundamentals using community training materials from the LangChain team.
+
+**Key Points:**
+- Controllability through graph structures (nodes, edges, state)
+- State persistence in Postgres/Redis for long-running processes
+- Running 5 production apps including FDA compliance
+- Human-in-the-loop native support
+
+> "People can die if you screw up, right? And I'm legally liable as an officer in the company... I want to make sure that it does every step every time and I want to make sure that's logged."
+
+**When to use:** Compliance requirements, repeatability, cost efficiency
+
+[LinkedIn Profile →](https://linkedin.com/in/colinmcnamara)
+
+---
+
+### Anupama Garani: Why RAG Use Cases Crash and Burn
+
+Anupama (PIMCO Data Specialist) shared hard truths from her team's Microsoft-featured RAG success story.
+
+**The Numbers:**
+- 42% of enterprise AI use cases failed in 2025
+- 51% of failures were RAG implementations
+- Only 200 out of 1,000 companies successfully deployed RAG (S&P Global)
+
+**The Problem:** Most chatbots have "goldfish memory"—they forget context between conversations.
+
+**The Solution:** LangGraph enables "elephant memory" through state persistence.
+
+**State Architecture:**
+- Context = current conversation
+- Memory = conversation history
+- State = orchestration layer that persists both
+
+[LinkedIn Profile →](https://linkedin.com/in/anupama-garani) | [Medium Blog →](https://agarani95.medium.com)
+
+---
+
+### Collier King: Deep Agents in Production
+
+Collier (Cloudflare ML Engineer) shared unvarnished experience running an $80, 3.5-hour deep agent pipeline.
+
+**The Pipeline:**
+Analyze Jensen Huang's GTC keynote → Extract themes → Match 400 companies → Validate with press releases → Rank top 100
+
+**Performance:**
+- Runtime: 3.5 hours
+- Tokens: 11 million
+- Cost: $80
+- Output: 244 pages
+- Success: 87/100 companies ranked
+
+**Critical Learning:** Middleware is essential for control.
+
+> "These LLMs are fine-tuned to save tokens. They will just naturally take shortcuts. Even the good ones like Google Gemini or Claude, they'll do this. You have to be very explicit."
+
+**Middleware Solutions:**
+- Validation tracking (before/after tool hooks)
+- Logging for debugging long runs
+- Error feedback for self-correction
+
+[LinkedIn Profile →](https://linkedin.com/in/collierking) | [GitHub Code →](https://github.com/CollierKing/langchain-deepagents-examples)
+
+---
+
+### Paul Phelps: AI Project Management Anti-Patterns
+
+Paul (freelance AI consultant) presented remotely from AIMUG Panama (100 members!) on why 95% of AI projects fail.
+
+**The Problem:**
+> "The constraint for AI getting into production is not the model, but the organizational approach. Product/Project Managers still use legacy SaaS/ERP mental models."
+
+**AI Reality vs Traditional Software:**
+- Traditional: Predictable, complete requirements upfront, same input = same output
+- AI: Non-deterministic, requirements evolve, scope changes = system working
+
+**Red Flags:**
+- PMs demanding complete requirements before code
+- No developer involvement in requirements
+- Treating AI like traditional software delivery
+
+[LinkedIn Profile →](https://linkedin.com/in/mrpaulphelps)
+
+---
+
+## 🔑 Key Takeaways
+
+### Decision Matrix: LangGraph vs Deep Agents
+
+**Use LangGraph when:**
+- Deterministic workflows required
+- Compliance/safety requirements
+- Cost efficiency critical
+- Repeatability needed
+
+**Use Deep Agents when:**
+- Open-ended research tasks
+- Complex multi-step planning
+- Managing large context
+- Long-term memory required
+
+### Enterprise AI Success Factors
+
+1. Developer involvement from day one
+2. Accept non-deterministic behavior
+3. Iterative discovery vs complete upfront requirements
+4. Cross-functional collaboration
+5. Golden datasets for evaluation
+6. User feedback loops
+7. Audit trails for compliance
+
+---
+
+## 📚 Resources
+
+**Full Blog Post:** [Read the complete recap →](https://aimug.org/blog/november-mixer-showcase-langgraph-rag-deep-agents)
+
+**Learning Resources:**
+- [LangChain Academy](https://academy.langchain.com) - Free courses
+- [LangSmith](https://smith.langchain.com) - Observability platform
+- [Collier's Deep Agents Code](https://github.com/CollierKing/langchain-deepagents-examples)
+- [Anupama's RAG Articles](https://agarani95.medium.com)
+
+---
+
+## 🗓️ What's Next
+
+**Tuesday Office Hours** - Every Tuesday at 5:00 PM Central
+Join us on Discord for Q&A, project help, or just hanging out.
+
+**Hacky Hour** - Mid-month (check Discord/Meetup for date)
+Casual coding and conversation at a local venue.
+
+**December Showcase** - First Wednesday, December 3rd
+ACC Rio Grande Campus RGC 3000
+
+**Want to present?** We structure talks as 15-minute "thunderstorm talks" (12 min + 3 min Q&A). Just ask!
+
+---
+
+## 🤝 Thank You
+
+Special thanks to:
+- **LangChain AI** for community training materials and pizza
+- **All our speakers** for sharing honest production insights
+- **Center for Government & Civic Service** for hosting us at ACC
+- **Always Cool Brands** for ongoing support
+
+---
+
+## 💬 Stay Connected
+
+- **Website:** [aimug.org](https://aimug.org)
+- **Discord:** [Join the conversation](https://discord.com/invite/JzWgadPFQd)
+- **GitHub:** [github.com/aimug-org](https://github.com/aimug-org)
+- **YouTube:** [Watch past events](https://youtube.com/@aimug-org)
+
+---
+
+**Learning in the Open,**
+The AIMUG Team
+
+---
+
+*You're receiving this because you're part of the AIMUG community. Want to adjust your email preferences? [Manage subscription](https://newsletter.aimug.org) | [Unsubscribe](https://newsletter.aimug.org/unsubscribe)*

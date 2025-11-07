@@ -1,0 +1,102 @@
+TWITTER THREAD - November 5th AIMUG Event
+(240 character limit per tweet)
+
+TWEET 1:
+Our Nov 5 Mixer brought 50+ builders for real talk on LangGraph, RAG failures & $80 deep agent pipelines. No marketing fluff—just production lessons. 🧵
+
+📹 https://youtube.com/watch?v=JOiUYZhGhH8
+#LangChain #LangGraph #AI
+
+---
+
+TWEET 2:
+@colinmcnamara kicked off with LangGraph fundamentals: controllability, state persistence, human-in-the-loop. Running 5 production apps including FDA compliance where "people can die if you screw up."
+
+#LangGraph #AI
+
+---
+
+TWEET 3:
+@anupama_garani (PIMCO) dropped the stats: 42% of enterprise AI failed in 2025. 51% of those? RAG implementations. Only 200/1000 companies succeeded.
+
+The goldfish vs elephant memory problem is real.
+
+#RAG #EnterpriseAI
+
+---
+
+TWEET 4:
+5 pillars of RAG failure:
+• Strategy failures
+• Data quality issues
+• Prompt engineering gaps
+• Evaluation blind spots
+• Governance catastrophes
+
+State = Context + Memory + orchestration layer
+
+#RAG #AI
+
+---
+
+TWEET 5:
+@CollierKing (Cloudflare) ran an $80, 3.5hr deep agent pipeline analyzing Jensen's keynote → 400 companies → 244 pages.
+
+11M tokens. 87/100 companies ranked.
+
+"LLMs are fine-tuned to save tokens. They'll take shortcuts."
+
+#DeepAgents
+
+---
+
+TWEET 6:
+Middleware is critical for agent control:
+• Validation tracking
+• Logging for 3.5hr runs
+• Before/after tool hooks
+• "Like having a toddler—let it fall, give error messages, watch it course correct"
+
+Code: https://github.com/CollierKing/langchain-deepagents-examples
+
+---
+
+TWEET 7:
+Paul Phelps from AIMUG Panama: "95% of AI pilots fail—not the model, but organizational approach. PMs still use legacy SaaS mental models."
+
+AI is non-deterministic. Requirements evolve. Scope changes = signals it works.
+
+#ProjectManagement
+
+---
+
+TWEET 8:
+Decision matrix:
+LangGraph → deterministic, compliance, cost efficiency
+Deep Agents → research, planning, large context
+
+State matters: Context (now) + Memory (history) + State (orchestration)
+
+#LangGraph #AI
+
+---
+
+TWEET 9:
+Full recap on our blog with speaker profiles, code repos & key takeaways.
+
+Next: Office Hours Tuesdays 5pm, December Showcase 12/3
+
+📖 https://aimug.org/blog/november-mixer-showcase-langgraph-rag-deep-agents
+💬 https://discord.com/invite/JzWgadPFQd
+
+---
+
+TWEET 10:
+Thanks to:
+• @LangChainAI for training materials & pizza
+• All speakers for honest production insights
+• 50+ attendees for great questions
+
+Want to present? DM us!
+
+#AustinTech #AIcommunity #LearningInTheOpen

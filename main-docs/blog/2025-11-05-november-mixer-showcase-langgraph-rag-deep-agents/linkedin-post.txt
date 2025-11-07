@@ -1,0 +1,38 @@
+LINKEDIN POST - November 5th AIMUG Event
+
+---
+
+Our November AIMUG Mixer brought together 50+ AI practitioners for real production talk—no marketing fluff, just honest lessons from the trenches.
+
+Four speakers, four perspectives on building production AI systems:
+
+🎯 **Colin McNamara** walked us through LangGraph fundamentals with a critical lens: when you're building FDA compliance systems where "people can die if you screw up," you need controllability, state persistence, and audit trails. He's running 5 production LangGraph apps at Always Cool Brands.
+
+📊 **Anupama Garani** (PIMCO) shared the hard truth: 42% of enterprise AI failed in 2025, and 51% of those failures were RAG implementations. Only 200 out of 1,000 companies successfully deployed RAG (S&P Global). Her team's solution? Treating state management seriously: Context (current conversation) + Memory (history) + State (orchestration layer).
+
+⚙️ **Collier King** (Cloudflare) ran an $80, 3.5-hour deep agent pipeline that burned 11M tokens to analyze Jensen Huang's keynote and rank 400 companies. His key insight? "LLMs are fine-tuned to save tokens—they'll take shortcuts. Middleware is essential for control." He open-sourced the entire implementation.
+
+🎯 **Paul Phelps** (AIMUG Panama) tackled why 95% of AI pilots fail: "The constraint isn't the model—it's organizational approach. PMs are still using legacy SaaS mental models." AI is non-deterministic. Requirements evolve. Scope changes signal the system is working.
+
+**Key Decision Matrix:**
+✅ LangGraph → Deterministic workflows, compliance, cost efficiency
+✅ Deep Agents → Research, planning, large context
+
+The quality of this community continues to blow me away. Real code, real costs, real lessons.
+
+📺 Watch: https://youtube.com/watch?v=JOiUYZhGhH8
+📖 Full recap: https://aimug.org/blog/november-mixer-showcase-langgraph-rag-deep-agents
+
+Thanks to @LangChain AI for training materials, and to all our speakers for the transparency.
+
+---
+
+**TAG SUGGESTIONS FOR LINKEDIN:**
+- Colin McNamara: @colinmcnamara
+- Anupama Garani: @anupama-garani
+- Collier King: @collierking
+- Paul Phelps: @mrpaulphelps
+- LangChain: @langchain (if company page exists)
+
+**HASHTAGS:**
+#LangChain #LangGraph #MachineLearning #AI #EnterpriseAI #RAG #Austin #AIEngineering #ProductionAI #DeepAgents #ProjectManagement #TechCommunity

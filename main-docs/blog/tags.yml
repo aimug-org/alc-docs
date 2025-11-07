@@ -342,3 +342,18 @@ marketplace:
   label: Marketplace
   permalink: /marketplace
   description: Agent marketplaces, service discovery, and autonomous commerce platforms
+
+deep-agents:
+  label: Deep Agents
+  permalink: /deep-agents
+  description: Deep Agents framework for complex multi-step AI tasks with planning and delegation
+
+rag:
+  label: RAG
+  permalink: /rag
+  description: Retrieval-Augmented Generation systems and enterprise implementations
+
+project-management:
+  label: Project Management
+  permalink: /project-management
+  description: AI project management practices, frameworks, and organizational approaches
