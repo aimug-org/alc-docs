@@ -2,52 +2,17 @@
 
 Welcome to the Austin LangChain Events page! Join our vibrant community of AI enthusiasts and developers.
 
-*Last updated: October 1, 2025*
+*Last updated: November 7, 2025*
 
 ## 🎯 Featured Upcoming Events
 
 <div className="event-grid">
   <div className="event-card">
     <span className="event-badge showcase-badge">Next Event</span>
-    <h3>October Monthly Mixer & Showcase</h3>
+    <h3>December Monthly Mixer & Showcase</h3>
     <div className="event-info">
       <i className="fas fa-calendar"></i>
-      <span>October 1, 2025</span>
-    </div>
-    <div className="event-info">
-      <i className="fas fa-clock"></i>
-      <span>6:00 PM to 8:30 PM CDT</span>
-    </div>
-    <div className="event-info">
-      <i className="fas fa-map-marker-alt"></i>
-      <span>ACC - RGC 3000, 1218 West Avenue, Austin, TX</span>
-    </div>
-    <div className="event-info">
-      <i className="fas fa-glass-cheers"></i>
-      <span>After Party: The Tavern, 922 W 12th St, Austin, TX 78703</span>
-    </div>
-    <p>Our October monthly showcase featuring the latest developments in AI agents, LangChain ecosystem updates, and community presentations.</p>
-
-    <h4>Agenda:</h4>
-    <ul>
-      <li><strong>6:00 - 6:20 PM:</strong> Welcome Reception - networking & refreshments</li>
-      <li><strong>6:20 - 6:40 PM:</strong> News & Updates - latest in AI middleware</li>
-      <li><strong>6:40 - 7:55 PM:</strong> Featured Presentations & Demos</li>
-      <li><strong>7:55 - 8:00 PM:</strong> Wrap-up & next steps</li>
-      <li><strong>8:00 - 8:30 PM:</strong> Walk to The Tavern for the mixer</li>
-    </ul>
-
-    <p><strong>RSVP Options:</strong></p>
-    <a href="https://www.meetup.com/austin-langchain-ai-group/events/310971734/" className="button button--primary">Meetup RSVP</a>
-    <a href="https://us06web.zoom.us/j/83055251635?pwd=9guINZ3AbkPJLjaG4aFCa3UXr7HtQu.1" className="button button--secondary">Remote RSVP (Zoom)</a>
-  </div>
-
-  <div className="event-card">
-    <span className="event-badge showcase-badge">Monthly Showcase</span>
-    <h3>November Monthly Mixer & Showcase</h3>
-    <div className="event-info">
-      <i className="fas fa-calendar"></i>
-      <span>November 5, 2025</span>
+      <span>December 3, 2025</span>
     </div>
     <div className="event-info">
       <i className="fas fa-clock"></i>
@@ -61,19 +26,53 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
       <i className="fas fa-glass-cheers"></i>
       <span>After Party: The Tavern, 922 W 12th St, Austin, TX 78703</span>
     </div>
-    <p>Join us for our November showcase exploring the latest in AI middleware, LangChain, LangGraph, and community innovations.</p>
+    <p>Join us for an evening of hands-on demos, short deep-dives, and community networking. Learn practical patterns for LangGraph and agent stacks, share war stories, and meet local builders.</p>
 
     <h4>Agenda:</h4>
     <ul>
-      <li><strong>6:00 PM:</strong> Networking & Welcome</li>
-      <li><strong>6:20 PM:</strong> Introductions & Kickoff</li>
-      <li><strong>6:30 PM:</strong> Thunderstorm Talks</li>
+      <li><strong>6:00 - 6:20 PM:</strong> Networking & Welcome</li>
+      <li><strong>6:20 - 6:30 PM:</strong> Introductions & Kickoff</li>
+      <li><strong>6:30 - 6:50 PM:</strong> Talk 1 (20 min) - Community topic</li>
+      <li><strong>6:50 - 7:05 PM:</strong> Talk 2 (15 min Thunderstorm)</li>
+      <li><strong>7:05 - 7:25 PM:</strong> Talk 3 (20 min)</li>
+      <li><strong>7:25 - 7:40 PM:</strong> Talk 4 (15 min Thunderstorm)</li>
+      <li><strong>7:40 - 8:00 PM:</strong> Buffer & Open Q&A</li>
       <li><strong>8:00 - 8:30 PM:</strong> Walk to The Tavern for the mixer</li>
     </ul>
 
     <p><strong>RSVP Options:</strong></p>
-    <a href="https://www.meetup.com/austin-langchain-ai-group/events/311326010/" className="button button--primary">Meetup RSVP</a>
+    <a href="https://www.meetup.com/austin-langchain-ai-group/events/311899965/" className="button button--primary">Meetup RSVP</a>
     <a href="https://us06web.zoom.us/j/83055251635?pwd=9guINZ3AbkPJLjaG4aFCa3UXr7HtQu.1" className="button button--secondary">Remote RSVP (Zoom)</a>
+  </div>
+
+  <div className="event-card">
+    <span className="event-badge hacky-hour-badge">Upcoming Hacky Hour</span>
+    <h3>November Hacky Hour @ Cosmic Coffee Saltillo</h3>
+    <div className="event-info">
+      <i className="fas fa-calendar"></i>
+      <span>November 18, 2025</span>
+    </div>
+    <div className="event-info">
+      <i className="fas fa-clock"></i>
+      <span>6:00 PM to 8:00 PM CST</span>
+    </div>
+    <div className="event-info">
+      <i className="fas fa-map-marker-alt"></i>
+      <span>Cosmic Saltillo, 1300 E 4th Street, Austin, TX</span>
+    </div>
+    <p>🌟 Code, caffeine, and community — come hang, hack, or just vibe. Free-form AI sandbox under the patio lights.</p>
+
+    <h4>What's Happening:</h4>
+    <ul>
+      <li>💻 Show off something you've been building or exploring</li>
+      <li>⚡ Spin up new LangGraph or LangChain 1.0 projects with friends</li>
+      <li>🧠 DeepAgents on LangGraph experiments</li>
+      <li>🔌 MCP + A2A demos and collaboration</li>
+      <li>🍻 Or just chill, swap ideas, and see what others are creating</li>
+    </ul>
+
+    <p><strong>RSVP:</strong></p>
+    <a href="https://www.meetup.com/austin-langchain-ai-group/events/311900027/" className="button button--primary">Meetup RSVP</a>
   </div>
 </div>
 
@@ -112,6 +111,53 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
 </div>
 
 ## 📚 Past Events
+
+<div className="event-card">
+  <span className="event-badge showcase-badge">Past Event</span>
+  <h3>November Monthly Mixer & Showcase</h3>
+  <div className="event-info">
+    <i className="fas fa-calendar"></i>
+    <span>November 5, 2025</span>
+  </div>
+  <div className="event-info">
+    <i className="fas fa-clock"></i>
+    <span>6:00 PM to 8:30 PM CST</span>
+  </div>
+  <div className="event-info">
+    <i className="fas fa-map-marker-alt"></i>
+    <span>ACC - RGC 3000</span>
+  </div>
+  <div className="event-info">
+    <i className="fas fa-glass-cheers"></i>
+    <span>After Party: The Tavern</span>
+  </div>
+  <p>Featured talks on LangGraph fundamentals, enterprise RAG failures, Deep Agents in production, and AI project management anti-patterns.</p>
+  <a href="/blog/november-mixer-showcase-langgraph-rag-deep-agents" className="button button--info">View Full Event Recap</a>
+  <a href="/docs/nov-2025/" className="button button--secondary">View Documentation</a>
+</div>
+
+<div className="event-card">
+  <span className="event-badge showcase-badge">Past Event</span>
+  <h3>October Monthly Mixer & Showcase</h3>
+  <div className="event-info">
+    <i className="fas fa-calendar"></i>
+    <span>October 1, 2025</span>
+  </div>
+  <div className="event-info">
+    <i className="fas fa-clock"></i>
+    <span>6:00 PM to 8:30 PM CDT</span>
+  </div>
+  <div className="event-info">
+    <i className="fas fa-map-marker-alt"></i>
+    <span>ACC - RGC 3000</span>
+  </div>
+  <div className="event-info">
+    <i className="fas fa-glass-cheers"></i>
+    <span>After Party: The Tavern</span>
+  </div>
+  <p>Featured presentations on LangGraph 1.0 middleware, A2A/AP2 protocols, cancer detection research, and inference providers.</p>
+  <a href="/docs/oct-2025/" className="button button--info">View Full Event Recap</a>
+</div>
 
 <div className="event-card">
   <span className="event-badge showcase-badge">Thunderstorm Talks</span>
@@ -359,9 +405,9 @@ We host several regular events to keep our community engaged and connected. Mark
 - July 2, 2025 (Wednesday) ✅
 - August 14, 2025 (Thursday) ✅
 - September 10, 2025 (Tuesday) - Thunderstorm Talks ✅
-- **October 1, 2025 (Wednesday)** - Next Event 🎯
-- **November 5, 2025 (Wednesday)** - Upcoming
-- December 3, 2025 (Wednesday)
+- October 1, 2025 (Wednesday) ✅
+- November 5, 2025 (Wednesday) ✅
+- **December 3, 2025 (Wednesday)** - Next Event 🎯
 
 **Time**: Starts at 6:00 PM
 **Location**: ACC - RGC 3000, 1218 West Avenue, Austin, TX
