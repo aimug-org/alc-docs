@@ -109,7 +109,7 @@ function SupportCallout() {
                 {/* Impact Stats */}
                 <div className={styles.impactStats}>
                   <div className={styles.statItem}>
-                    <div className={styles.statNumber}>1600+</div>
+                    <div className={styles.statNumber}>1700+</div>
                     <div className={styles.statLabel}>Active Members</div>
                   </div>
                   <div className={styles.statItem}>
