@@ -14,7 +14,7 @@ function HomepageHeader() {
         <Heading as="h1" className="hero__title">
           AI Middleware Users Group
         </Heading>
-        <p className="hero__subtitle">Austin LangChain AIMUG</p>
+        <p className="hero__subtitle">Austin LangChain · AIMUG</p>
         <p>{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
@@ -22,9 +22,42 @@ function HomepageHeader() {
             to="/community">
             Join Our Community
           </Link>
+          <Link
+            className="button button--outline button--lg"
+            style={{color: '#94a3b8', borderColor: 'rgba(148,163,184,0.4)', borderRadius: '50px'}}
+            to="/events">
+            Upcoming Events
+          </Link>
         </div>
       </div>
     </header>
+  );
+}
+
+function StatsBar() {
+  return (
+    <section className={styles.statsBar}>
+      <div className="container">
+        <div className={styles.statsBarInner}>
+          <div className={styles.statBarItem}>
+            <div className={styles.statBarNumber}>1,700+</div>
+            <div className={styles.statBarLabel}>Active Members</div>
+          </div>
+          <div className={styles.statBarItem}>
+            <div className={styles.statBarNumber}>50+</div>
+            <div className={styles.statBarLabel}>Events Hosted</div>
+          </div>
+          <div className={styles.statBarItem}>
+            <div className={styles.statBarNumber}>100%</div>
+            <div className={styles.statBarLabel}>Free to Attend</div>
+          </div>
+          <div className={styles.statBarItem}>
+            <div className={styles.statBarNumber}>2023</div>
+            <div className={styles.statBarLabel}>Founded in Austin</div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -33,7 +66,7 @@ function Feature({title, description, icon, link}) {
     <div className={clsx('col col--4')}>
       <Link to={link} className={styles.featureLink}>
         <div className="text--center">
-          <i className={`featureIcon ${icon}`}></i>
+          <i className={`featureIcon ${icon} ${styles.featureIcon}`}></i>
         </div>
         <div className="text--center padding-horiz--md">
           <Heading as="h3">{title}</Heading>
@@ -55,14 +88,20 @@ function HomepageFeatures() {
     {
       title: 'Connect',
       icon: 'fas fa-users',
-      description: 'Join our vibrant AIMUG community of developers, researchers, and enthusiasts in Austin and abroad.',
+      description: 'Join our vibrant community of developers, researchers, and AI enthusiasts in Austin and worldwide.',
       link: '/community',
     },
     {
       title: 'Build',
       icon: 'fas fa-code',
-      description: 'Create innovative applications and contribute to open-source projects using LangChain ',
+      description: 'Create innovative AI applications and contribute to open-source projects using LangChain and more.',
       link: 'https://github.com/aimug-org',
+    },
+    {
+      title: 'Events',
+      icon: 'fas fa-calendar-alt',
+      description: 'Attend monthly showcases, office hours, hacky hours, and special AI field trips across Austin.',
+      link: '/events',
     },
     {
       title: 'Support',
@@ -81,6 +120,14 @@ function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
+        <div className="text--center margin-bottom--xl">
+          <Heading as="h2" style={{fontSize: '2rem', fontWeight: 800}}>
+            Everything you need to level up with AI
+          </Heading>
+          <p style={{fontSize: '1.1rem', color: 'var(--ifm-color-emphasis-600)', maxWidth: '600px', margin: '0.75rem auto 0'}}>
+            Austin's premier community for AI middleware developers, builders, and enthusiasts.
+          </p>
+        </div>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
@@ -105,8 +152,7 @@ function SupportCallout() {
                 <Heading as="h2" className={styles.supportTitle}>
                   Help Us Grow Austin's AI Community
                 </Heading>
-                
-                {/* Impact Stats */}
+
                 <div className={styles.impactStats}>
                   <div className={styles.statItem}>
                     <div className={styles.statNumber}>1700+</div>
@@ -123,24 +169,23 @@ function SupportCallout() {
                 </div>
 
                 <p className={styles.supportDescription}>
-                  AIMUG operates as a <strong>public good</strong>, bringing cutting-edge AI middleware skills to our community. 
-                  Your donations enable us to provide <strong>free events</strong>, <strong>educational content</strong>, and 
-                  <strong>networking opportunities</strong> that advance Austin's AI ecosystem.
+                  AIMUG operates as a <strong>public good</strong>, bringing cutting-edge AI middleware skills to our community.
+                  Your donations enable us to provide <strong>free events</strong>, <strong>educational content</strong>, and
+                  <strong> networking opportunities</strong> that advance Austin's AI ecosystem.
                 </p>
 
-                {/* Value Proposition */}
                 <div className={styles.valueProps}>
                   <div className={styles.valueProp}>
                     <i className="fas fa-graduation-cap"></i>
-                    <span>Expert-led workshops & tutorials</span>
+                    <span>Expert-led workshops</span>
                   </div>
                   <div className={styles.valueProp}>
                     <i className="fas fa-network-wired"></i>
-                    <span>Connect with AI professionals</span>
+                    <span>Connect with AI pros</span>
                   </div>
                   <div className={styles.valueProp}>
                     <i className="fas fa-code-branch"></i>
-                    <span>Open-source project collaboration</span>
+                    <span>Open-source collaboration</span>
                   </div>
                 </div>
 
@@ -163,7 +208,6 @@ function SupportCallout() {
                   </Link>
                 </div>
 
-                {/* Social Proof */}
                 <div className={styles.socialProof}>
                   <p className={styles.broadcastNote}>
                     <i className="fas fa-tv"></i>
@@ -191,10 +235,10 @@ function NewsletterSignup() {
           <div className="col col--8 col--offset-2">
             <div className={styles.newsletterCard}>
               <Heading as="h2" className={styles.newsletterTitle}>
-                Subscribe to Our Newsletter
+                Stay in the loop 🚀
               </Heading>
               <p className={styles.newsletterDescription}>
-                Stay up-to-date with our latest events, technical content, and community news.
+                Get updates on our latest events, technical content, and community news — straight to your inbox.
               </p>
               <form
                 action="https://buttondown.com/api/emails/embed-subscribe/aimug.org"
@@ -203,15 +247,15 @@ function NewsletterSignup() {
                 onSubmit={() => window.open('https://newsletter.aimug.org', 'popupwindow')}
                 className={styles.newsletterForm}
               >
-                <input 
-                  type="email" 
-                  name="email" 
-                  id="home-bd-email" 
-                  placeholder="Enter your email address" 
+                <input
+                  type="email"
+                  name="email"
+                  id="home-bd-email"
+                  placeholder="Enter your email address"
                   className={styles.newsletterInput}
                   required
                 />
-                <button type="submit" className="button button--primary">
+                <button type="submit" className="button button--primary" style={{borderRadius: '50px', padding: '0.875rem 2rem'}}>
                   Subscribe
                 </button>
               </form>
@@ -230,6 +274,7 @@ export default function Home() {
       title="AI Middleware Users Group - Austin LangChain AIMUG"
       description="AI Middleware Users Group (AIMUG) - Austin's premier community for LangChain developers, AI researchers, and middleware enthusiasts. Learn, Connect, and Build with cutting-edge AI technologies.">
       <HomepageHeader />
+      <StatsBar />
       <main>
         <HomepageFeatures />
         <SupportCallout />

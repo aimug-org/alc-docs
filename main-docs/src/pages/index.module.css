@@ -1,7 +1,10 @@
 /**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
+ * AIMUG Homepage Module CSS - Modern Austin Tech Design
  */
+
+/* ============================================
+   Hero Banner
+   ============================================ */
 
 .heroBanner {
   padding: 4rem 0;
@@ -20,12 +23,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
+
+/* ============================================
+   Features Section
+   ============================================ */
 
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 4rem 0;
   width: 100%;
 }
 
@@ -35,21 +44,31 @@
   text-decoration: none;
   transition: all 0.3s ease;
   display: block;
-  padding: 1.5rem;
-  border-radius: 8px;
-  border: 1px solid var(--ifm-color-emphasis-300);
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   background-color: var(--ifm-background-color);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   position: relative;
   margin-bottom: 1rem;
   overflow: hidden;
 }
 
+[data-theme='dark'] .featureLink {
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
 .featureLink:hover {
-  background-color: rgba(0, 0, 0, 0.02);
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  border-color: var(--ifm-color-primary);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  border-color: var(--ifm-color-primary-light);
+  text-decoration: none;
+  color: inherit;
+}
+
+[data-theme='dark'] .featureLink:hover {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
 }
 
 .featureLink:after {
@@ -59,6 +78,7 @@
   right: 1.5rem;
   font-size: 0.9rem;
   color: var(--ifm-color-primary);
+  font-weight: 600;
   opacity: 0;
   transform: translateX(-10px);
   transition: all 0.3s ease;
@@ -70,27 +90,94 @@
 }
 
 .featureIcon {
-  font-size: 3rem;
+  font-size: 2.75rem;
   padding-bottom: 1rem;
-  color: var(--ifm-color-primary);
+  display: block;
+  background: linear-gradient(135deg, #0d9488 0%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-/* Support Callout Section Styles */
+/* ============================================
+   Stats Bar
+   ============================================ */
+
+.statsBar {
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+}
+
+.statsBarInner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.statBarItem {
+  text-align: center;
+}
+
+.statBarNumber {
+  font-size: 2.75rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #2dd4bf 0%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.statBarLabel {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* ============================================
+   Support Callout Section
+   ============================================ */
+
 .supportCallout {
-  padding: 4rem 0;
-  background: linear-gradient(135deg, var(--ifm-color-primary-lightest) 0%, var(--ifm-color-secondary-lightest) 100%);
+  padding: 5rem 0;
+  background: var(--ifm-background-color);
   position: relative;
+}
+
+.supportCallout::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 10% 50%, rgba(13, 148, 136, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 90% 50%, rgba(99, 102, 241, 0.05) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .supportCard {
-  background-color: var(--ifm-background-color);
-  border-radius: var(--ifm-card-border-radius);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  padding: 3rem 2rem;
+  background: var(--ifm-background-color);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  padding: 3.5rem 2.5rem;
   text-align: center;
-  border: 1px solid var(--ifm-color-emphasis-200);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   position: relative;
   overflow: hidden;
+}
+
+[data-theme='dark'] .supportCard {
+  background: #1e293b;
+  border-color: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 .supportCard::before {
@@ -100,37 +187,38 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--ifm-color-primary), var(--ifm-color-secondary));
+  background: linear-gradient(90deg, #0d9488, #6366f1);
 }
 
 .supportIcon {
   font-size: 3rem;
-  color: #e74c3c;
-  margin-bottom: 1rem;
+  color: #ef4444;
+  margin-bottom: 1.25rem;
   animation: heartbeat 2s ease-in-out infinite;
 }
 
 @keyframes heartbeat {
-  0% { transform: scale(1); }
-  14% { transform: scale(1.1); }
-  28% { transform: scale(1); }
-  42% { transform: scale(1.1); }
-  70% { transform: scale(1); }
+  0%, 70%, 100% { transform: scale(1); }
+  14%, 42% { transform: scale(1.1); }
 }
 
 .supportTitle {
   margin-bottom: 2rem;
-  font-size: 2.2rem;
+  font-size: 2.25rem;
   color: var(--ifm-color-emphasis-900);
-  font-weight: 700;
+  font-weight: 800;
+}
+
+[data-theme='dark'] .supportTitle {
+  color: #f1f5f9;
 }
 
 /* Impact Stats */
 .impactStats {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  margin-bottom: 2rem;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
   flex-wrap: wrap;
 }
 
@@ -140,7 +228,7 @@
 }
 
 .statNumber {
-  font-size: 2.5rem;
+  font-size: 2.75rem;
   font-weight: 800;
   color: var(--ifm-color-primary);
   line-height: 1;
@@ -148,28 +236,30 @@
 }
 
 .statLabel {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color: var(--ifm-color-emphasis-600);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   font-weight: 600;
 }
 
 .supportDescription {
-  margin-bottom: 2rem;
-  font-size: 1.2rem;
+  margin: 0 auto 2rem auto;
+  font-size: 1.15rem;
   color: var(--ifm-color-emphasis-700);
-  max-width: 85%;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.6;
+  max-width: 80%;
+  line-height: 1.7;
+}
+
+[data-theme='dark'] .supportDescription {
+  color: #94a3b8;
 }
 
 /* Value Propositions */
 .valueProps {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1.25rem;
   margin-bottom: 2.5rem;
   flex-wrap: wrap;
 }
@@ -178,32 +268,31 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.75rem 1rem;
-  background-color: var(--ifm-color-emphasis-100);
-  border-radius: 20px;
+  padding: 0.6rem 1.25rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 50px;
   font-size: 0.9rem;
   color: var(--ifm-color-emphasis-800);
   border: 1px solid var(--ifm-color-emphasis-200);
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .valueProp:hover {
-  background-color: var(--ifm-color-primary-lightest);
+  background: var(--ifm-color-primary-lightest);
   border-color: var(--ifm-color-primary);
   transform: translateY(-2px);
 }
 
 .valueProp i {
   color: var(--ifm-color-primary);
-  font-size: 1rem;
 }
 
 /* Donation Callout */
 .donationCallout {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background: linear-gradient(135deg, rgba(13, 148, 136, 0.05), rgba(99, 102, 241, 0.05));
   border: 2px solid var(--ifm-color-primary);
   border-radius: 12px;
-  padding: 1rem 1.5rem;
+  padding: 1.25rem 2rem;
   margin: 1.5rem auto 2rem auto;
   max-width: 500px;
 }
@@ -212,50 +301,20 @@
   margin: 0;
   color: var(--ifm-color-primary-dark);
   font-size: 1.1rem;
-  text-align: center;
 }
 
 .supportButtons {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   flex-wrap: wrap;
 }
 
-/* Enhanced Donate Button */
 .donateButton {
-  position: relative;
   font-weight: 700;
   font-size: 1.1rem;
   padding: 1rem 2rem;
-  box-shadow: 0 4px 12px rgba(var(--ifm-color-primary-rgb), 0.3);
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-}
-
-.donateButton:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(var(--ifm-color-primary-rgb), 0.4);
-  border-color: var(--ifm-color-primary-dark);
-}
-
-.donateButton::after {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(45deg, var(--ifm-color-primary), var(--ifm-color-secondary));
-  border-radius: inherit;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.donateButton:hover::after {
-  opacity: 1;
 }
 
 /* Social Proof */
@@ -277,8 +336,8 @@
 }
 
 .testimonial {
-  background-color: var(--ifm-color-emphasis-100);
-  padding: 1.5rem;
+  background: var(--ifm-color-emphasis-100);
+  padding: 1.5rem 2rem;
   border-radius: 12px;
   border-left: 4px solid var(--ifm-color-primary);
   margin: 0 auto;
@@ -286,10 +345,13 @@
   font-style: italic;
 }
 
+[data-theme='dark'] .testimonial {
+  background: rgba(255, 255, 255, 0.05);
+}
+
 .testimonial p {
   margin-bottom: 0.5rem;
   color: var(--ifm-color-emphasis-800);
-  font-size: 1rem;
 }
 
 .testimonial cite {
@@ -298,29 +360,30 @@
   font-weight: 600;
 }
 
-/* Newsletter Section Styles */
+/* ============================================
+   Newsletter Section
+   ============================================ */
+
 .newsletter {
-  padding: 3rem 0;
-  background-color: var(--ifm-color-emphasis-100);
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
 }
 
 .newsletterCard {
-  background-color: var(--ifm-background-color);
-  border-radius: var(--ifm-card-border-radius);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-  padding: 2rem;
   text-align: center;
 }
 
 .newsletterTitle {
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  margin-bottom: 0.75rem;
 }
 
 .newsletterDescription {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   font-size: 1.1rem;
-  color: var(--ifm-color-emphasis-700);
+  color: #94a3b8;
   max-width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -337,25 +400,100 @@
   flex: 1;
   min-width: 250px;
   max-width: 400px;
-  padding: 0.75rem 1rem;
+  padding: 0.875rem 1.25rem;
   font-size: 1rem;
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: var(--ifm-button-border-radius);
-  background-color: var(--ifm-background-color);
-  transition: border-color 0.2s;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all 0.2s;
+}
+
+.newsletterInput::placeholder {
+  color: #94a3b8;
 }
 
 .newsletterInput:focus {
   outline: none;
-  border-color: var(--ifm-color-primary);
+  border-color: #2dd4bf;
+  background: rgba(255, 255, 255, 0.15);
 }
 
+/* ============================================
+   Responsive - Mobile
+   ============================================ */
+
 @media (max-width: 768px) {
-  .newsletterDescription {
+  .features {
+    padding: 2rem 0;
+  }
+
+  .featureLink {
+    padding: 1.5rem;
+  }
+
+  .featureIcon {
+    font-size: 2.25rem;
+  }
+
+  .supportCallout {
+    padding: 3rem 0;
+  }
+
+  .supportCard {
+    padding: 2rem 1.25rem;
+  }
+
+  .supportTitle {
+    font-size: 1.75rem;
+  }
+
+  .supportDescription {
     max-width: 100%;
     font-size: 1rem;
   }
-  
+
+  .impactStats {
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .statNumber {
+    font-size: 2rem;
+  }
+
+  .valueProps {
+    gap: 0.75rem;
+  }
+
+  .valueProp {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .supportButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial {
+    padding: 1.25rem;
+  }
+
+  .newsletter {
+    padding: 2.5rem 0;
+  }
+
+  .newsletterTitle {
+    font-size: 1.5rem;
+  }
+
+  .newsletterDescription {
+    max-width: 100%;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
   .newsletterForm {
     flex-direction: column;
     align-items: center;
@@ -366,145 +504,12 @@
     max-width: none;
     min-width: auto;
   }
-  
-  .newsletterTitle {
-    font-size: 1.5rem;
-  }
-  
-  .features {
-    padding: 1.5rem 0;
-  }
-  
-  .featureLink {
-    padding: 1rem;
-    margin-bottom: 0.75rem;
-  }
-  
-  .featureIcon {
-    font-size: 2.5rem;
-    padding-bottom: 0.75rem;
-  }
-  
-  .featureLink h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .featureLink p {
-    font-size: 0.9rem;
-    line-height: 1.4;
-  }
-  
-  /* Support callout responsive styles */
-  .supportCallout {
-    padding: 3rem 0;
-  }
-  
-  .supportCard {
-    padding: 2rem 1.5rem;
-    margin: 0 1rem;
-  }
-  
-  .supportTitle {
-    font-size: 1.8rem;
-  }
-  
-  .supportDescription {
-    max-width: 100%;
-    font-size: 1.1rem;
-  }
-  
-  .supportButtons {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
-  }
-  
-  /* Impact stats mobile */
-  .impactStats {
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .statNumber {
-    font-size: 2rem;
-  }
-  
-  .statLabel {
-    font-size: 0.8rem;
-  }
-  
-  /* Value props mobile */
-  .valueProps {
-    gap: 0.75rem;
-    margin-bottom: 2rem;
-  }
-  
-  .valueProp {
-    font-size: 0.85rem;
-    padding: 0.5rem 0.75rem;
-  }
-  
-  /* Donation callout mobile */
-  .donationCallout {
-    margin: 1rem auto 1.5rem auto;
-    padding: 0.75rem 1rem;
-    max-width: 90%;
-  }
-  
-  .donationText {
-    font-size: 1rem;
-  }
-  
-  .donateButton {
-    font-size: 1rem;
-    padding: 0.875rem 1.5rem;
-  }
-  
-  /* Social proof mobile */
-  .testimonial {
-    padding: 1rem;
-    margin: 0 0.5rem;
-  }
-  
-  .testimonial p {
-    font-size: 0.9rem;
-  }
-}
 
-@media (max-width: 480px) {
-  .newsletterCard {
-    padding: 1.5rem;
-    margin: 0 0.5rem;
+  .statsBarInner {
+    gap: 2rem;
   }
-  
-  .newsletterTitle {
-    font-size: 1.3rem;
-  }
-  
-  .newsletterDescription {
-    font-size: 0.95rem;
-  }
-  
-  .featureLink {
-    padding: 0.75rem;
-  }
-  
-  .featureIcon {
+
+  .statBarNumber {
     font-size: 2rem;
-  }
-  
-  .featureLink h3 {
-    font-size: 1rem;
-  }
-  
-  .featureLink p {
-    font-size: 0.85rem;
-  }
-  
-  .featureLink:after {
-    font-size: 0.8rem;
-    bottom: 0.75rem;
-    right: 1rem;
   }
 }
