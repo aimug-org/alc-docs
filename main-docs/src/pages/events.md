@@ -9,7 +9,66 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
 <div className="event-grid">
   <div className="event-card">
     <span className="event-badge showcase-badge">Next Event</span>
-    <h3>December Monthly Mixer & Showcase</h3>
+    <h3>June Monthly Mixer & Showcase: Agentic AI & Security</h3>
+    <div className="event-info">
+      <i className="fas fa-calendar"></i>
+      <span>June 3, 2026</span>
+    </div>
+    <div className="event-info">
+      <i className="fas fa-clock"></i>
+      <span>6:00 PM to 9:00 PM CDT</span>
+    </div>
+    <div className="event-info">
+      <i className="fas fa-map-marker-alt"></i>
+      <span>ACC - RGC 3000</span>
+    </div>
+    <div className="event-info">
+      <i className="fas fa-glass-cheers"></i>
+      <span>After Party: The Tavern</span>
+    </div>
+    <p>Join us for talks on autonomous cyber defense, recursive self-improvement, and edge deployments. Featuring community demos on agent SOC operations, ICler breakthroughs, and production-ready agent architectures.</p>
+
+    <h4>Agenda:</h4>
+    <ul>
+      <li><strong>6:00 - 6:45 PM:</strong> Networking & Welcome</li>
+      <li><strong>6:45 - 7:00 PM:</strong> Introductions & Kickoff</li>
+      <li><strong>7:00 - 7:20 PM:</strong> Talk 1 (20 min)</li>
+      <li><strong>7:20 - 7:35 PM:</strong> Talk 2 (15 min)</li>
+      <li><strong>7:35 - 7:55 PM:</strong> Talk 3 (20 min)</li>
+      <li><strong>7:55 - 8:10 PM:</strong> Buffer & Open Q&A</li>
+      <li><strong>8:10 - 8:30 PM:</strong> Walk to The Tavern for the mixer</li>
+    </ul>
+
+    <p><strong>RSVP Options:</strong></p>
+    <a href="https://www.meetup.com/austin-langchain-ai-group/events/" className="button button--primary">Meetup RSVP</a>
+    <a href="https://us06web.zoom.us/j/83055251635?pwd=9guINZ3AbkPJLjaG4aFCa3UXr7HtQu.1" className="button button--secondary">Remote RSVP (Zoom)</a>
+  </div>
+
+  <div className="event-card">
+    <span className="event-badge placeholder-badge">TBD</span>
+    <h3>July Monthly Mixer & Showcase</h3>
+    <div className="event-info">
+      <i className="fas fa-calendar"></i>
+      <span>July 1, 2026</span>
+    </div>
+    <div className="event-info">
+      <i className="fas fa-clock"></i>
+      <span>6:00 PM to 9:00 PM CDT</span>
+    </div>
+    <div className="event-info">
+      <i className="fas fa-map-marker-alt"></i>
+      <span>ACC - RGC 3000</span>
+    </div>
+    <div className="event-info">
+      <i className="fas fa-glass-cheers"></i>
+      <span>After Party: The Tavern</span>
+    </div>
+    <p>Speaker TBC — Topics TBD. Please reach out via Discord or office hours to propose a talk or demo!</p>
+
+    <p><strong>RSVP Options:</strong></p>
+    <a href="https://www.meetup.com/austin-langchain-ai-group/events/" className="button button--primary">RSVP</a>
+  </div>
+</div>
     <div className="event-info">
       <i className="fas fa-calendar"></i>
       <span>December 3, 2025</span>
@@ -114,14 +173,14 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
 
 <div className="event-card">
   <span className="event-badge showcase-badge">Past Event</span>
-  <h3>November Monthly Mixer & Showcase</h3>
+  <h3>May Monthly Mixer & Showcase</h3>
   <div className="event-info">
     <i className="fas fa-calendar"></i>
-    <span>November 5, 2025</span>
+    <span>May 7, 2026</span>
   </div>
   <div className="event-info">
     <i className="fas fa-clock"></i>
-    <span>6:00 PM to 8:30 PM CST</span>
+    <span>6:00 PM to 8:00 PM CST</span>
   </div>
   <div className="event-info">
     <i className="fas fa-map-marker-alt"></i>
@@ -131,9 +190,31 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
     <i className="fas fa-glass-cheers"></i>
     <span>After Party: The Tavern</span>
   </div>
-  <p>Featured talks on LangGraph fundamentals, enterprise RAG failures, Deep Agents in production, and AI project management anti-patterns.</p>
-  <a href="/blog/november-mixer-showcase-langgraph-rag-deep-agents" className="button button--info">View Full Event Recap</a>
-  <a href="/docs/nov-2025/" className="button button--secondary">View Documentation</a>
+  <p>Community spotlight on agentic SOC operations, ICler insights on recursive self-improvement, and production deployments on Cloudflare edge. Featured autonomous cyber defense demos, agent-based offensive/defensive tools, and ephemeral worker architectures.</p>
+  <a href="/blog/2026-05-18-may-mixer-showcase-recap" className="button button--info">View Full Event Recap</a>
+</div>
+
+<div className="event-card">
+  <span className="event-badge showcase-badge">Past Event</span>
+  <h3>April Monthly Mixer & Showcase</h3>
+  <div className="event-info">
+    <i className="fas fa-calendar"></i>
+    <span>April 2, 2026</span>
+  </div>
+  <div className="event-info">
+    <i className="fas fa-clock"></i>
+    <span>6:00 PM to 8:30 PM CDT</span>
+  </div>
+  <div className="event-info">
+    <i className="fas fa-map-marker-alt"></i>
+    <span>ACC - RGC 3000</span>
+  </div>
+  <div className="event-info">
+    <i className="fas fa-glass-cheers"></i>
+    <span>After Party: The Tavern</span>
+  </div>
+  <p>Featured presentations on LangGraph 1.0 middleware, A2A/AP2 protocols, cancer detection research, and inference providers.</p>
+  <a href="/blog/april-mixer-recap" className="button button--info">View Full Event Recap</a>
 </div>
 
 <div className="event-card">
@@ -395,19 +476,14 @@ We host several regular events to keep our community engaged and connected. Mark
   </tbody>
 </table>
 
-### <i className="fas fa-calendar-check"></i> 2025 Monthly Showcase Schedule
-- January 8, 2025 (Wednesday) ✅
-- February 5, 2025 (Wednesday) ✅
-- March 5, 2025 (Wednesday) - Off SXSW ✅
-- April 2, 2025 (Wednesday) ✅
-- May 7, 2025 (Wednesday) ✅
-- June 4, 2025 (Wednesday) ✅
-- July 2, 2025 (Wednesday) ✅
-- August 14, 2025 (Thursday) ✅
-- September 10, 2025 (Tuesday) - Thunderstorm Talks ✅
-- October 1, 2025 (Wednesday) ✅
-- November 5, 2025 (Wednesday) ✅
-- **December 3, 2025 (Wednesday)** - Next Event 🎯
+### <i className="fas fa-calendar-check"></i> 2026 Monthly Showcase Schedule
+- January 7, 2026 (Wednesday) ✅
+- February 4, 2026 (Wednesday) ✅
+- March 4, 2026 (Wednesday) ✅
+- April 1, 2026 (Wednesday) ✅
+- May 7, 2026 (Wednesday) ✅ (See recap above)
+- **June 3, 2026 (Wednesday)** - Next Event 🎯
+- July 1, 2026 (Wednesday) - TBD
 
 **Time**: Starts at 6:00 PM
 **Location**: ACC - RGC 3000, 1218 West Avenue, Austin, TX
