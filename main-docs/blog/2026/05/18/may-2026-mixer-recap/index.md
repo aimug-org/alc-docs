@@ -1,7 +1,7 @@
 ---
-title: "AI MUG May 2026 Recap: Agentic SOC Ops, ICLR Insights, and Recursive Self-Improvement"
-date: 2026-06-01
-author: AI MUG Core Team
+title: "AI MUG May 2026 Recap: Agentic SOC Ops, ICLR Insights, and Production Edge Deployments"
+date: 2026-05-18
+authors: [johnvanlowe]
 tags: [meetup, recap, security, iclr, self-improvement, agentic-ai, blue-team, red-team, cloudflare]
 ---
 
@@ -96,4 +96,5 @@ A huge thank you to John, Julian, and Jordann for their presentations, and to ev
 
 We are planning our June meetup. If you have a project, a research paper synthesis, or a deployment war story you want to share with the group, reach out via Discord or join our office hours to grab a speaking slot!
 
-*See you at the next meetup!*
+*See you at the next meetup!
+<!-- truncate -->*
