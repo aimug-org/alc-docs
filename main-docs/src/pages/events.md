@@ -68,7 +68,7 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
     <p><strong>RSVP Options:</strong></p>
     <a href="https://www.meetup.com/austin-langchain-ai-group/events/" className="button button--primary">RSVP</a>
   </div>
-</div>
+  <div className="event-card">
     <div className="event-info">
       <i className="fas fa-calendar"></i>
       <span>December 3, 2025</span>
@@ -195,7 +195,7 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
     <span>After Party: The Tavern</span>
   </div>
   <p>Community spotlight on agentic SOC operations, ICler insights on recursive self-improvement, and production deployments on Cloudflare edge. Featured autonomous cyber defense demos, agent-based offensive/defensive tools, and ephemeral worker architectures.</p>
-  <a href="/blog/2026-05-18-may-mixer-showcase-recap" className="button button--info">View Full Event Recap</a>
+  <a href="/blog/2026/05/18/may-2026-mixer-recap" className="button button--info">View Full Event Recap</a>
 </div>
 
 <div className="event-card">
