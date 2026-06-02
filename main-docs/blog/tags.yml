@@ -213,6 +213,41 @@ observability:
   permalink: /observability
   description: AI system monitoring, logging, and observability practices
 
+security:
+  label: Security
+  permalink: /security
+  description: Cybersecurity, blue/red team operations, and threat defense systems
+
+iclr:
+  label: ICLR
+  permalink: /iclr
+  description: International Conference on Learning Representations proceedings and insights
+
+self-improvement:
+  label: Self-Improvement
+  permalink: /self-improvement
+  description: Systems that can autonomously improve through self-critique and iteration
+
+agentic-ai:
+  label: Agentic AI
+  permalink: /agentic-ai
+  description: Autonomous AI agents and multi-agent systems
+
+blue-team:
+  label: Blue Team
+  permalink: /blue-team
+  description: Defensive cybersecurity, threat detection, and incident response
+
+red-team:
+  label: Red Team
+  permalink: /red-team
+  description: Offensive security, penetration testing, and exploitation techniques
+
+cloudflare:
+  label: Cloudflare
+  permalink: /cloudflare
+  description: Edge computing, Cloudflare Workers, and global edge infrastructure
+
 production:
   label: Production
   permalink: /production

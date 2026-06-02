@@ -9,7 +9,7 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
 <div className="event-grid">
   <div className="event-card">
     <span className="event-badge showcase-badge">Next Event</span>
-    <h3>June Monthly Mixer & Showcase: Agentic AI & Security</h3>
+    <h3>June Monthly Mixer & Showcase</h3>
     <div className="event-info">
       <i className="fas fa-calendar"></i>
       <span>June 3, 2026</span>
@@ -83,8 +83,12 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
     </div>
     <div className="event-info">
       <i className="fas fa-glass-cheers"></i>
-      <span>After Party: The Tavern, 922 W 12th St, Austin, TX 78703</span>
+      <span>After Party: The Tavern</span>
     </div>
+    <p>Speaker TBC — Topics TBD. Please reach out via Discord or office hours to propose a talk or demo!</p>
+
+    <p><strong>RSVP Options:</strong></p>
+    <a href="https://www.meetup.com/austin-langchain-ai-group/events/" className="button button--primary">RSVP</a>
     <p>Join us for an evening of hands-on demos, short deep-dives, and community networking. Learn practical patterns for LangGraph and agent stacks, share war stories, and meet local builders.</p>
 
     <h4>Agenda:</h4>
@@ -213,16 +217,18 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
     <i className="fas fa-glass-cheers"></i>
     <span>After Party: The Tavern</span>
   </div>
+  <p>Community spotlight on agentic SOC operations, insights on recursive self-improvement, and production deployments on Cloudflare edge. Featured open source autonomous tooling, agent-based offensive/defensive tools, and ephemeral worker architectures.</p>
+  <a href="/blog/2026/05/18/may-2026-mixer-recap" className="button button--info">View Full Event Recap</a>
   <p>Featured presentations on LangGraph 1.0 middleware, A2A/AP2 protocols, cancer detection research, and inference providers.</p>
   <a href="/blog/april-mixer-recap" className="button button--info">View Full Event Recap</a>
 </div>
 
 <div className="event-card">
   <span className="event-badge showcase-badge">Past Event</span>
-  <h3>October Monthly Mixer & Showcase</h3>
+  <h3>April Monthly Mixer & Showcase</h3>
   <div className="event-info">
     <i className="fas fa-calendar"></i>
-    <span>October 1, 2025</span>
+    <span>April 1, 2026</span>
   </div>
   <div className="event-info">
     <i className="fas fa-clock"></i>
@@ -237,144 +243,15 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
     <span>After Party: The Tavern</span>
   </div>
   <p>Featured presentations on LangGraph 1.0 middleware, A2A/AP2 protocols, cancer detection research, and inference providers.</p>
-  <a href="/docs/oct-2025/" className="button button--info">View Full Event Recap</a>
-</div>
-
-<div className="event-card">
-  <span className="event-badge showcase-badge">Thunderstorm Talks</span>
-  <h3>🌩️ September Thunderstorm Talks</h3>
-  <div className="event-info">
-    <i className="fas fa-calendar"></i>
-    <span>September 10, 2025</span>
-  </div>
-  <div className="event-info">
-    <i className="fas fa-clock"></i>
-    <span>6:00 PM to 8:30 PM CDT</span>
-  </div>
-  <div className="event-info">
-    <i className="fas fa-map-marker-alt"></i>
-    <span>ACC - RGC 3000</span>
-  </div>
-  <div className="event-info">
-    <i className="fas fa-glass-cheers"></i>
-    <span>After Party: The Tavern</span>
-  </div>
-  <p>5 rapid-fire Thunderstorm Talks featuring LangChain/LangGraph 1.0 Alpha, Claude Code & Custom Agents, Deep Agents, Rosie the Robot, and Streamlit for AI Dashboards.</p>
-  <a href="/docs/sep-2025/" className="button button--info">View Full Event Recap</a>
+  <a href="/blog/april-mixer-recap" className="button button--info">View Full Event Recap</a>
 </div>
 
 <div className="event-card">
   <span className="event-badge showcase-badge">Monthly Showcase</span>
-  <h3>August Monthly Showcase</h3>
+  <h3>March Monthly Showcase</h3>
   <div className="event-info">
     <i className="fas fa-calendar"></i>
-    <span>August 14, 2025</span>
-  </div>
-  <div className="event-info">
-    <i className="fas fa-clock"></i>
-    <span>6:00 PM to 8:30 PM CDT</span>
-  </div>
-  <div className="event-info">
-    <i className="fas fa-map-marker-alt"></i>
-    <span>ACC - RGC 3000</span>
-  </div>
-  <p>Featured presentations on Agent-to-Agent (A2A) communication protocols, with lightning talks and implementation guides.</p>
-</div>
-
-<div className="event-card">
-  <span className="event-badge showcase-badge">Monthly Showcase</span>
-  <h3>July Monthly Mixer & Showcase</h3>
-  <div className="event-info">
-    <i className="fas fa-calendar"></i>
-    <span>July 2, 2025</span>
-  </div>
-  <div className="event-info">
-    <i className="fas fa-clock"></i>
-    <span>6:00 PM to 8:30 PM CDT</span>
-  </div>
-  <div className="event-info">
-    <i className="fas fa-map-marker-alt"></i>
-    <span>ACC - RGC 3000</span>
-  </div>
-  <div className="event-info">
-    <i className="fas fa-glass-cheers"></i>
-    <span>After Party: The Tavern</span>
-  </div>
-  <p>Lightning talks featuring AI development workflows, Cloudflare containers, Slack-Cursor integration, and lessons learned from building Emojourn.</p>
-</div>
-
-<div className="event-card">
-  <span className="event-badge field-trip-badge">Field Trip</span>
-  <h3>AIMUG Field Trip - Your Startup Sucks Comedy Show</h3>
-  <div className="event-info">
-    <i className="fas fa-calendar"></i>
-    <span>June 26, 2025</span>
-  </div>
-  <div className="event-info">
-    <i className="fas fa-clock"></i>
-    <span>6:30 PM to 9:00 PM CDT</span>
-  </div>
-  <div className="event-info">
-    <i className="fas fa-map-marker-alt"></i>
-    <span>Tequila 512, 2201 Lake Austin Blvd, Austin, TX</span>
-  </div>
-  <div className="event-info">
-    <i className="fas fa-comedy-masks"></i>
-    <span>Austin's only pitch-roast comedy show!</span>
-  </div>
-  <p>We ditched the terminal and grabbed cocktails at <strong>Your Startup Sucks</strong>—Austin's only pitch-roast comedy show! Founders braved the stage, VCs fired back, and Tequila 512 kept the drinks (and jokes) flowing.</p>
-</div>
-
-<div className="event-card">
-  <span className="event-badge showcase-badge">Monthly Showcase</span>
-  <h3>June Monthly Showcase: Multimodal AI & Agents</h3>
-  <div className="event-info">
-    <i className="fas fa-calendar"></i>
-    <span>June 4, 2025</span>
-  </div>
-  <div className="event-info">
-    <i className="fas fa-clock"></i>
-    <span>6:00 PM to 9:00 PM CDT</span>
-  </div>
-  <div className="event-info">
-    <i className="fas fa-map-marker-alt"></i>
-    <span>ACC - RGC 3000</span>
-  </div>
-  <div className="event-info">
-    <i className="fas fa-glass-cheers"></i>
-    <span>After Party: The Tavern</span>
-  </div>
-  <p>Featured presentations on multimodal AI applications and agent architectures with demos of vision-enabled agents, audio processing pipelines, and cross-modal reasoning systems.</p>
-</div>
-
-<div className="event-card">
-  <span className="event-badge showcase-badge">Monthly Showcase</span>
-  <h3>AIMUG: Lightning Talks, LangChain Voice-Agent Lab & Mixer</h3>
-  <div className="event-info">
-    <i className="fas fa-calendar"></i>
-    <span>May 7, 2025</span>
-  </div>
-  <div className="event-info">
-    <i className="fas fa-clock"></i>
-    <span>6:00 PM to 8:00 PM CST</span>
-  </div>
-  <div className="event-info">
-    <i className="fas fa-map-marker-alt"></i>
-    <span>ACC - RGC 3000</span>
-  </div>
-  <div className="event-info">
-    <i className="fas fa-glass-cheers"></i>
-    <span>After Party: The Tavern (8:00 - 8:30 PM)</span>
-  </div>
-  <p>An exciting AIMUG event featuring community lightning talks, a hands-on LangChain Voice Agent lab with FastRTC, and a mixer at The Tavern.</p>
-</div>
-
-<div className="event-card">
-  <span className="event-badge showcase-badge">Special Edition</span>
-  <h3>March Mixer - Off SXSW Edition</h3>
-  <div className="event-info">
-    <i className="fas fa-calendar"></i>
-    <span>March 5, 2025</span>
+    <span>March 4, 2026</span>
   </div>
   <div className="event-info">
     <i className="fas fa-clock"></i>
@@ -386,7 +263,7 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
   </div>
   <div className="event-info">
     <i className="fas fa-glass-cheers"></i>
-    <span>After Party: The Tavern (8:30 - 9:00 PM)</span>
+    <span>After Party: The Tavern</span>
   </div>
 </div>
 
@@ -395,7 +272,7 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
   <h3>February Showcase and Mixer</h3>
   <div className="event-info">
     <i className="fas fa-calendar"></i>
-    <span>February 5, 2025</span>
+    <span>February 4, 2026</span>
   </div>
   <div className="event-info">
     <i className="fas fa-clock"></i>

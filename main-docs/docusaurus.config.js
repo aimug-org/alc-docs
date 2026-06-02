@@ -15,17 +15,18 @@ const config = {
   deploymentBranch: 'gh-pages',
 
   onBrokenLinks: 'ignore',
-  onBrokenMarkdownLinks: 'ignore',
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'ignore',
+    },
+    mermaid: true,
+  },
 
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
-  markdown: {
-    mermaid: true,
-  },
-  themes: ['@docusaurus/theme-mermaid'],
 
   plugins: [
     ...(process.env.NODE_ENV === 'production'

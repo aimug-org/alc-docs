@@ -19,53 +19,23 @@ colinmcnamara:
 
     Notable Contributions:
 
+
     • Created the initial LangServe and Streamlit integration labs
 
     • Developed the LangGraph introduction and customer support tutorials
-
-    • Implemented Neo4j graph database integration examples
-
-    • Pioneered the Google Colab integration strategy for accessible learning
 
 
     LangChain Development:
 
     • Created foundational tutorials and labs for LangChain implementation
 
-    • Developed practical examples for real-world applications
-
-
-    RAG Implementations:
-
-    • Built advanced retrieval-augmented generation systems
-
-    • Integrated RAG with various data sources and storage solutions
-
-
-    LangGraph Projects:
-
-    • Developed complex LangGraph applications
-
-    • Created tutorials for graph-based AI implementations
-
-
-    Streamlit Applications:
-
-    • Built interactive web interfaces for AI applications
-
-    • Created user-friendly demonstration platforms
-
-
-    Google Colab Integration:
-
-    • Enhanced accessibility through Colab integration
-
-    • Maintained cross-platform compatibility'
+    • Developed practical examples for real-world applications'
   socials:
     github: colinmcnamara
     x: colinmcnamara
     website: https://colinmcnamara.com
     linkedin: colinmcnamara
+
 RPirruccio:
   name: Riccardo Pirruccio (Ricky)
   title: Contributor - Austin LangChain AIMUG
@@ -81,51 +51,18 @@ RPirruccio:
 
     Notable Contributions:
 
+
     • Developed the LangGraph Manufacturing BOM Analyzer
 
     • Created the RAG implementation with Google Drive integration
 
     • Built the AI Data Scientist report writer using LangGraph
 
-    • Authored comprehensive Docker deployment tutorials
-
-
-    LangChain Development:
-
-    • Created foundational tutorials and labs for LangChain implementation
-
-    • Developed practical examples for real-world applications
-
-
-    RAG Implementations:
-
-    • Built advanced retrieval-augmented generation systems
-
-    • Integrated RAG with various data sources and storage solutions
-
-
-    LangGraph Projects:
-
-    • Developed complex LangGraph applications
-
-    • Created tutorials for graph-based AI implementations
-
-
-    Streamlit Applications:
-
-    • Built interactive web interfaces for AI applications
-
-    • Created user-friendly demonstration platforms
-
-
-    Google Colab Integration:
-
-    • Enhanced accessibility through Colab integration
-
-    • Maintained cross-platform compatibility'
+    • Authored comprehensive Docker deployment tutorials'
   socials:
     github: RPirruccio
     linkedin: riccardopirruccio
+
 lalanikarim:
   name: Karim Lalani
   title: Contributor - Austin LangChain AIMUG
@@ -141,37 +78,18 @@ lalanikarim:
 
     Notable Contributions:
 
+
     • Created the WebRTC AI voice chat implementation
 
     • Developed Ollama and Bakllava integration tutorials
 
     • Built the Mistral chatbot implementation
 
-    • Pioneered local LLM deployment strategies
-
-
-    LangChain Development:
-
-    • Created foundational tutorials and labs for LangChain implementation
-
-    • Developed practical examples for real-world applications
-
-
-    Ollama Integration:
-
-    • Implemented local LLM solutions using Ollama
-
-    • Created guides for efficient model deployment
-
-
-    Google Colab Integration:
-
-    • Enhanced accessibility through Colab integration
-
-    • Maintained cross-platform compatibility'
+    • Pioneered local LLM deployment strategies'
   socials:
     github: lalanikarim
     website: https://medium.com/@klcoder
+
 saskinosie:
   name: Scott Askinosie
   title: Contributor - Austin LangChain AIMUG
@@ -187,23 +105,18 @@ saskinosie:
 
     Notable Contributions:
 
+
     • Created the Pandas DataFrame Agent tutorial series
 
     • Developed AI-powered data scientist implementations
 
     • Built practical examples for business analytics
 
-    • Authored comprehensive data processing guides
-
-
-    LangChain Development:
-
-    • Created foundational tutorials and labs for LangChain implementation
-
-    • Developed practical examples for real-world applications'
+    • Authored comprehensive data processing guides'
   socials:
     github: saskinosie
     linkedin: scott-askinosie
+
 saurabhlalsaxena:
   name: saurabhlalsaxena
   title: Contributor - Austin LangChain AIMUG
@@ -218,29 +131,17 @@ saurabhlalsaxena:
 
     Notable Contributions:
 
+
     • Created the Perplexity Clone implementation
 
     • Developed advanced RAG architectures
 
     • Built complex document processing systems
 
-    • Implemented efficient search strategies
-
-
-    LangChain Development:
-
-    • Created foundational tutorials and labs for LangChain implementation
-
-    • Developed practical examples for real-world applications
-
-
-    Google Colab Integration:
-
-    • Enhanced accessibility through Colab integration
-
-    • Maintained cross-platform compatibility'
+    • Implemented efficient search strategies'
   socials:
     github: saurabhlalsaxena
+
 that1guy15:
   name: Ryan Booth
   title: Contributor - Austin LangChain AIMUG
@@ -255,32 +156,20 @@ that1guy15:
 
     Notable Contributions:
 
+
     • Delivered AI Driven Development Presentation
 
     • Created LangGraph APIChain integration demo
 
     • Developed LangChain GitHub integration demo
 
-    • Contributed to advanced integration strategies
-
-
-    LangChain Development:
-
-    • Implemented practical integration examples
-
-    • Created tutorials for AI-driven development workflows
-
-
-    LangGraph Projects:
-
-    • Developed APIChain integration solutions
-
-    • Built demonstration projects for practical applications'
+    • Contributed to advanced integration strategies'
   socials:
     github: that1guy15
     linkedin: ryan-booth-46470a5
     x: that1guy_15
     huggingface: that1guy15
+
 robwhelan:
   name: Rob Whelan
   title: Speaker - Gridway AI
@@ -295,36 +184,18 @@ robwhelan:
 
     Notable Contributions:
 
+
     • Presented "Fine-tuning Embeddings for Nuclear Power" lightning talk
 
     • Demonstrated domain-specific embedding optimization techniques
 
     • Open-sourced nuclear-licensing-embeddings-768 model on Hugging Face
 
-    • Created practical training methodologies for technical domain adaptation
-
-
-    Technical Expertise:
-
-    • Fine-tuning embeddings for domain-specific applications
-
-    • Nuclear regulatory document processing and search optimization
-
-    • PyTorch model training and deployment
-
-    • Semantic search improvement for technical domains
-
-
-    Open Source Contributions:
-
-    • Published gridwayai/nuclear-licensing-embeddings-768 on Hugging Face
-
-    • Shared training notebooks and methodologies
-
-    • Contributed to Gridway AI SDK development'
+    • Created practical training methodologies for technical domain adaptation'
   socials:
     linkedin: rob-whelan-036b905
     website: https://gridwayai.com
+
 collierking:
   name: Collier King
   title: Contributor - Austin LangChain AIMUG
@@ -339,26 +210,17 @@ collierking:
 
     Notable Contributions:
 
+
     • Participated in Interrupt Conference 2025 panel discussion
 
     • Shared insights on enterprise AI deployment strategies
 
     • Contributed to community knowledge sharing on production AI systems
 
-    • Helped bridge conference learnings with local community needs
-
-
-    Conference Insights:
-
-    • Enterprise AI architecture patterns
-
-    • Production deployment best practices
-
-    • Evaluation and observability strategies
-
-    • Human-in-the-loop AI system design'
+    • Helped bridge conference learnings with local community needs'
   socials:
     linkedin: collierking
+
 cam:
   name: Cameron Rohn
   title: Contributor - Austin LangChain AIMUG
@@ -373,26 +235,17 @@ cam:
 
     Notable Contributions:
 
+
     • Participated in Interrupt Conference 2025 panel discussion
 
     • Shared real-world AI implementation experiences
 
     • Contributed to discussions on agent architecture patterns
 
-    • Helped translate conference insights for community application
-
-
-    Focus Areas:
-
-    • AI agent development and deployment
-
-    • Production system reliability
-
-    • Community knowledge sharing
-
-    • Practical AI implementation strategies'
+    • Helped translate conference insights for community application'
   socials:
     linkedin: cameron-rohn
+
 paul:
   name: Paul Phelps
   title: Contributor - Austin LangChain AIMUG
@@ -407,26 +260,17 @@ paul:
 
     Notable Contributions:
 
+
     • Participated in Interrupt Conference 2025 panel discussion
 
     • Shared enterprise AI deployment experiences
 
     • Contributed insights on scalable AI system architecture
 
-    • Helped document conference learnings for community benefit
-
-
-    Expertise Areas:
-
-    • Enterprise AI system design
-
-    • Scalable agent architectures
-
-    • Production AI deployment
-
-    • AI system observability and monitoring'
+    • Helped document conference learnings for community benefit'
   socials:
     linkedin: mrpaulphelps
+
 aimugteam:
   name: AIMUG Team
   title: AI Middleware Users Group
@@ -434,46 +278,95 @@ aimugteam:
   image_url: /img/austin_aimug-192x192.png
   page: true
   description: 'The official team account for Austin LangChain & AI Middleware User Group (AIMUG).
-    
-    
+
+
+
     About AIMUG:
-    
-    
+
+
+
     Austin LangChain & AI Middleware User Group is a community of developers, data scientists, and AI enthusiasts focused on building and deploying production AI systems using LangChain, LangGraph, and related technologies.
-    
-    
+
+
+
     Our Mission:
-    
+
+
+
     • Foster collaborative learning and knowledge sharing
-    
+
+
     • Build practical AI applications and tools
-    
+
+
     • Support the growth of the AI ecosystem in Austin
-    
+
+
     • Create accessible educational resources
-    
-    
+
+
+
     Community Values:
-    
+
+
+
     • Learning in the open
-    
+
+
     • Be cool to each other
-    
+
+
     • Share knowledge freely
-    
+
+
     • Build together
-    
-    
+
+
+
     What We Do:
-    
+
+
+
     • Monthly showcases and technical presentations
-    
+
+
     • Hands-on labs and workshops
-    
+
+
     • Open source contributions
-    
+
+
     • Community support and mentorship'
   socials:
     website: https://aimug.org
     github: aimug-org
     x: AIMUG_org
+
+aimugcoreteam:
+  name: AI MUG Core Team
+  title: Austin LangChain & AI Middleware User Group
+  url: https://aimug.org
+  image_url: /img/austin_aimug-192x192.png
+  page: true
+  description: 'The core team organizing monthly showcases, coordinating speakers, and managing community events for Austin LangChain AIMUG.'
+  socials:
+    website: https://aimug.org
+    github: aimug-org
+    x: AIMUG_org
+
+johnvanlowe:
+  name: John Van Lowe
+  title: Contributor - Austin LangChain AIMUG
+  url: https://github.com/johnvanlowe
+  image_url: https://ui-avatars.com/api/?name=J+V&background=0D8ABC&color=fff&size=400
+  page: true
+  description: 'Security Operations specialist at Austin LangChain AIMUG, focusing on agentic SOC operations, blue/red team automation, and AI-driven cyber defense.
+  
+  Key Contributions:
+  - Presentations on Autonomous SOC Operations for Blue/Red Teams
+  - Demonstrations of VIGIL, PentAGI, and other autonomous agent frameworks
+  - Research into agent-based offensive and defensive cyber operations'
+  socials:
+    github: johnvanlowe
+    linkedin: johnvl
+    website: https://retroencabulation.com/
