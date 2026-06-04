@@ -9,6 +9,8 @@ tags: [meetup, recap, security, iclr, self-improvement, agentic-ai, blue-team, r
 
 It was a busy first Wednesday with numerous community events taking place at the same time but we still had a great turnout for our May 2026 AI MUG meetup! We had several speakers and covered autonomous cyber defense, deployments on edge with CloudFlare, and some of the latest theoretical breakthroughs in recursive self-improvement fresh out of Rio.
 
+<!--truncate-->
+
 For those who missed it, or for attendees looking to revisit the resources shared, here is a complete breakdown of the presentations and links from our latest gathering.
 
 ---
