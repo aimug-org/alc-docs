@@ -86,5 +86,4 @@ This was the first Monday-night AIMUG, noted by our CGCS host. The after-party m
 ## Next Steps
 
 - Add the public video link once it's archived
-- Optional: refresh from a Krisp export if one lands
 - Community: post to Discord and Meetup once the public page is live
