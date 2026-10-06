@@ -6,14 +6,12 @@ sidebar_position: 1
 
 Builder night and our first Monday-night AIMUG. The talks covered routing requests across a mixture of models, calibrated decision models for agent workflows, evals for coding-agent harnesses, a spec-driven "coding factory," and graph-based dependency tracing. The thread through all of them: use the smallest thing that does the job, and measure it.
 
-> **Source note:** Deepened from the Zoom VTT transcript, checked against the Zoom AI summary. ASR was noisy, so uncertain names and numbers are hedged or left out. Krisp export is optional. Public video link is TBD. No Zoom passcode is posted.
-
 ## Event Details
 
 **Date:** Monday, October 5th, 2026  
 **Format:** Monthly meeting, in person plus Zoom, with lightning-style talks (~15–20 min) and Q&A  
 **Host:** AIMUG with CGCS (Center for Government and Civic Service)  
-**Recording:** Public link TBD. We are not posting the Zoom cloud share or passcode.
+**Recording:** Public link TBD — will be linked here once archived.
 
 ## Talks
 

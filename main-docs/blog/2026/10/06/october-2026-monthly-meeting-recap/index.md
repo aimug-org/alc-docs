@@ -12,8 +12,6 @@ Our first Monday-night AIMUG was a builder night. One theme kept coming up: **us
 
 <!-- truncate -->
 
-> **Source note:** Deepened from the Zoom VTT transcript of the 2026-10-05 meeting, checked against the Zoom AI summary. The ASR was noisy, with mangled product names and speaker labels that drift, so we kept claims that were clearly stated or repeated and flagged the shaky ones. A Krisp export can tighten this further if one shows up (optional). Public video link is TBD. We are not posting the Zoom cloud share or passcode.
-
 ## Opening
 
 - Format: lightning-style talks of about 15–20 minutes, then Q&A. Sessions can end up on Austin public television, so talks have **no calls to action**.
