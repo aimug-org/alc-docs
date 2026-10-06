@@ -3,7 +3,7 @@ slug: october-2026-monthly-meeting-recap
 title: "October 2026 Monthly Meeting Recap — Semantic Routing, Grokbot + JEV, Harbor Evals, Coding Factory, Korvik AI"
 date: 2026-10-06
 authors: [colinmcnamara]
-tags: [meetup, recap, agents, semantic-routing, mixture-of-models, grokbot, decision-models, harbor, evals, coding-agents, specs, graph]
+tags: [meetup, recap, agents, evaluation, mcp, langgraph, middleware]
 ---
 
 # October 2026 Monthly Meeting Recap
