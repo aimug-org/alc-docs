@@ -110,7 +110,7 @@ Join our [Discord server](https://discord.gg/JzWgadPFQd) and look for the **#vol
 - Coordinate with other volunteers
 
 ### **Contact the Volunteer Coordinator**
-Have questions or want to get more involved? Reach out to our Volunteer Coordinator through Discord or at our weekly office hours (Tuesdays @ 5 PM CT).
+Have questions or want to get more involved? Reach out to our Volunteer Coordinator through Discord or at Office Hours (2nd, 3rd, and 4th Mondays · 5:00 PM CT).
 
 ---
 
@@ -122,7 +122,7 @@ We have a dedicated **Volunteer Coordinator** who:
 - Coordinates with venue and vendors
 - Ensures all volunteer roles are covered for each event
 
-**Find them on Discord or at Tuesday office hours for questions!**
+**Find them on Discord or at Monday Office Hours for questions!**
 
 ---
 
@@ -148,4 +148,4 @@ Ready to get involved? Join our Discord and sign up for the next event. Thank yo
 
 ---
 
-*Questions? Contact our Volunteer Coordinator on [Discord](https://discord.gg/JzWgadPFQd) or join our Tuesday office hours at 5 PM CT.*
+*Questions? Contact our Volunteer Coordinator on [Discord](https://discord.gg/JzWgadPFQd) or join Office Hours on the 2nd, 3rd, and 4th Mondays at 5:00 PM CT.*

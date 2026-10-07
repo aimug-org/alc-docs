@@ -131,7 +131,7 @@ You might be interested in:
 ## 📅 Upcoming Events
 
 - **Community Call**: Thursday at 2 PM Central
-- **Office Hours**: Tuesday at 2 PM Central
+- **Office Hours**: 2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet
 - **Monthly Meetup**: First Wednesday of {{ month }}
 
 [View All Events](https://www.meetup.com/austin-langchain-ai-group/events/)

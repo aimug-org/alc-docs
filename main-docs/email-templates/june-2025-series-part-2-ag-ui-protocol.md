@@ -111,7 +111,7 @@ This is Part 2 of our June 2025 deep dive. Still coming this week:
 ## 📅 Come hang out with us
 
 - **Community Call**: Thursday at 2 PM Central - We'll probably end up talking about AG-UI
-- **Office Hours**: Tuesday at 2 PM Central - Bring your implementation questions
+- **Office Hours**: 2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet - Bring your implementation questions
 - **Monthly Meetup**: First Wednesday - Always something new to discuss
 
 [See all our events →](https://www.meetup.com/austin-langchain-ai-group/events/)

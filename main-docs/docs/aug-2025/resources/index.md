@@ -89,7 +89,7 @@ Implementation guides, tools, and community resources for August 2025.
 **Format**: Casual networking, all levels welcome
 
 ### Virtual Syncs
-**When**: Tuesdays at 5 PM CT  
+**When**: 2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet  
 **Where**: Discord voice channel
 
 ## Contributing

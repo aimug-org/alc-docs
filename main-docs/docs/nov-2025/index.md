@@ -161,7 +161,7 @@ Location: Austin Community College RGC 3000
 8. Audit trails for compliance
 
 ## Next Events
-- **Tuesday Office Hours**: Every Tuesday at 5:00 PM Central on Discord
+- **Office Hours**: 2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet
 - **Hacky Hour**: Mid-month (check Discord/Meetup for updates)
 - **December Showcase**: First Wednesday of December
 

@@ -160,7 +160,7 @@ The community is actively exploring several critical questions:
 
 ## Community Exploration
 
-AIMUG provides a collaborative environment for exploring these questions. Our Tuesday office hours feature ongoing discussions about A2A and AP2 implementation strategies. Community members are building prototype marketplaces, experimenting with capability schemas, and sharing lessons from early deployments.
+AIMUG provides a collaborative environment for exploring these questions. Our Office Hours (2nd, 3rd, and 4th Mondays · 5:00 PM CT) feature ongoing discussions about A2A and AP2 implementation strategies. Community members are building prototype marketplaces, experimenting with capability schemas, and sharing lessons from early deployments.
 
 ### Historical Context
 
@@ -174,7 +174,7 @@ This isn't AIMUG's first exploration of agent purchasing protocols. A year and a
 
 **Join the Discussion** - Our Discord community hosts ongoing conversations about A2A and AP2 implementation patterns. Share your experiments, ask questions, and learn from others building in this space.
 
-**Tuesday Office Hours** - Every Tuesday at 5 PM Central, we gather to discuss agent architectures, marketplace design, and protocol implementation challenges.
+**Office Hours** - 2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet. We gather to discuss agent architectures, marketplace design, and protocol implementation challenges. (1st Monday is the in-person Mixer & Showcase.)
 
 **Build and Share** - The best way to understand these protocols is to build with them. Implement a simple capability catalog, experiment with agent discovery, and share your findings with the community.
 

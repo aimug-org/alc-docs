@@ -267,7 +267,7 @@ The **AI Middleware Users Group** believes in "Learning in the Open." We explore
 
 **Meeting Schedule:**
 - **Monthly Showcases:** First Wednesday of each month at ACC Rio Grande Campus
-- **Office Hours:** Tuesdays at 5 PM on Discord
+- **Office Hours:** 2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet (1st Monday is the Mixer & Showcase)
 - **Hacky Hours:** Mid-month meetups at local venues
 
 **Supporting Members:** ~25 monthly supporters

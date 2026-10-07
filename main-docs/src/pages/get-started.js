@@ -103,7 +103,7 @@ export default function GetStarted() {
                   <li>Duration: 2-3 hours</li>
                   <li>Format: Hybrid (in-person + virtual)</li>
                   <li>Best for: Learning about practical AI applications</li>
-                  <li>When: First Wednesday of each month</li>
+                  <li>When: 1st Monday of each month (in person at ACC)</li>
                 </ul>
               </div>
 
@@ -112,9 +112,9 @@ export default function GetStarted() {
                 <p><strong>Informal Q&A sessions with AI experts</strong></p>
                 <ul>
                   <li>Duration: 1 hour</li>
-                  <li>Format: Virtual</li>
+                  <li>Format: Virtual (Google Meet)</li>
                   <li>Best for: Getting help with specific challenges</li>
-                  <li>When: Every other Wednesday</li>
+                  <li>When: 2nd, 3rd, and 4th Mondays · 5:00 PM CT (1st Monday is the Mixer &amp; Showcase)</li>
                 </ul>
               </div>
 

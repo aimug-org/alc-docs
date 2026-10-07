@@ -111,7 +111,7 @@ This is Part 4 of our June 2025 deep dive. One more to go:
 ## 📅 Come talk about high-stakes AI
 
 - **Community Call**: Thursday at 2 PM Central - Let's discuss specialized AI applications
-- **Office Hours**: Tuesday at 2 PM Central - Bring your domain-specific questions
+- **Office Hours**: 2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet - Bring your domain-specific questions
 - **Monthly Meetup**: First Wednesday - Maybe we need more specialized AI talks?
 
 [Join us for any of these →](https://www.meetup.com/austin-langchain-ai-group/events/)

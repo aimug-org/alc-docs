@@ -27,7 +27,7 @@ Key highlights:
 
 ### Upcoming Events
 - **Hacky Hour @ Kinda Cosmic** - Wednesday, August 27
-- **Weekly Virtual Syncs** - Tuesdays at 5 PM CT
+- **Office Hours** - 2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet
 
 ### Membership Drive
 - Join 1,400+ members in our growing community

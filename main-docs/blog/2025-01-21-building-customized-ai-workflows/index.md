@@ -11,7 +11,7 @@ tags: [ai, workflows, models, tools, openwebui]
 
 This week's Austin LangChain AI Group Office Hours focused on advancing AI development workflows through three key areas: model distillation techniques, tool management strategies, and the emerging Open Web UI ecosystem. Participants shared experiences with running large language models locally, discussed the benefits of model distillation for practical applications, and explored how Open Web UI is revolutionizing the way we build AI-powered applications. The session highlighted a growing trend toward more efficient, customizable AI solutions that can run on consumer hardware while maintaining enterprise-grade capabilities.
 
-*(Join our weekly discussions every Tuesday at 2 pm Central on our [Discord server](https://discord.com/invite/JzWgadPFQd). All experience levels welcome!)*
+*(Join Office Hours on the 2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet. All experience levels welcome!)*
 
 <!-- truncate -->
 
@@ -87,7 +87,7 @@ As the discussion drew to a close, participants left with a sense of optimism ab
   - What are the best practices for securely managing credentials and secrets across multiple pipelines and plugins?  
 
 - **Join the Conversation**  
-  This community continues to experiment and share insights every week. **If you're curious about these topics—or have your own experiences to add—come join us on our [Discord server](https://discord.com/invite/JzWgadPFQd) for Office Hours every Tuesday at 2 pm Central**. Bring your questions about AI model setups, pipeline orchestration, code generation, or anything else under the AI sun.
+  This community continues to experiment and share insights every week. **If you're curious about these topics—or have your own experiences to add—come join us on our [Discord server](https://discord.com/invite/JzWgadPFQd) for Office Hours on the 2nd, 3rd, and 4th Mondays · 5:00 PM CT**. Bring your questions about AI model setups, pipeline orchestration, code generation, or anything else under the AI sun.
 
 ### **Reflecting on the Broader Implications**
 
@@ -97,4 +97,4 @@ The future of AI is not just in bigger and bigger models. It lies in **smarter, 
 
 ---
 
-*Ready to explore these ideas further? Don't forget to drop by our [Discord server](https://discord.com/invite/JzWgadPFQd) every Tuesday at 2 pm Central for Office Hours. We'll be there discussing local model performance, advanced plugin development, best practices for open-source AI, and much more.*
+*Ready to explore these ideas further? Don't forget to drop by our [Discord server](https://discord.com/invite/JzWgadPFQd) on the 2nd, 3rd, and 4th Mondays · 5:00 PM CT for Office Hours. We'll be there discussing local model performance, advanced plugin development, best practices for open-source AI, and much more.*

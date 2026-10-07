@@ -136,7 +136,7 @@ The difference? Flash Attention and proper optimization.
 
 ### Upcoming Events
 
-- **Tuesday Office Hours**: Every Tuesday at 5 PM Central on Google Meet
+- **Office Hours**: 2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet
 - **Hacky Hour**: Check Discord/Meetup for the next social coding session
 - **November Showcase**: First Wednesday of November - mark your calendars!
 

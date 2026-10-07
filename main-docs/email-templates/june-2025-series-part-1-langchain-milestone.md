@@ -135,7 +135,7 @@ This is Part 1 of our comprehensive June 2025 series. Coming this week:
 ## 📅 Upcoming Events
 
 - **Community Call**: Thursday at 2 PM Central - Discussing the milestone implications
-- **Office Hours**: Tuesday at 2 PM Central - LangChain implementation Q&A
+- **Office Hours**: 2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet - LangChain implementation Q&A
 - **Monthly Meetup**: First Wednesday - June 2025 Session Recap
 
 [View All Events](https://www.meetup.com/austin-langchain-ai-group/events/)
