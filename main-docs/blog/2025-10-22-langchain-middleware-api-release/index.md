@@ -100,7 +100,7 @@ We're building a library of reusable middleware patterns that solve common produ
 
 ### Upcoming Sessions
 
-**Tuesday Office Hours** - Every Tuesday at 5 PM Central, we gather on Google Meet to discuss implementation challenges, share solutions, and collaborate on middleware patterns. Bring your questions about production deployments and optimization strategies.
+**Office Hours** - 2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet. We gather to discuss implementation challenges, share solutions, and collaborate on middleware patterns. Bring your questions about production deployments and optimization strategies. (1st Monday is the Mixer & Showcase, not virtual OH.)
 
 **November Showcase** - Our first Wednesday of November event will feature community members sharing their middleware implementations, production case studies, and lessons learned from real-world deployments.
 
@@ -126,7 +126,7 @@ The middleware revolution is just beginning. We're actively building patterns, s
 
 **Share Your Story** - Have you implemented middleware in production? We'd love to hear about your patterns, challenges, and successes. Join our Discord community and contribute to the collective knowledge.
 
-**Tuesday Office Hours** - Every Tuesday at 5 PM Central on Google Meet. Drop in for real-time discussions about middleware implementation, troubleshooting, and best practices.
+**Office Hours** - 2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet. Drop in for real-time discussions about middleware implementation, troubleshooting, and best practices.
 
 **Contribute Patterns** - Share your middleware implementations on GitHub. The community benefits when we build on each other's work.
 

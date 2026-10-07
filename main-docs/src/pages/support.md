@@ -241,7 +241,7 @@ We're grateful for the support of our amazing sponsors:
 
 ### **Community Building**
 - Join our [Discord server](https://discord.gg/JzWgadPFQd)
-- Attend weekly office hours (Tuesdays @ 5 PM CT)
+- Attend Office Hours (2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet)
 - Help mentor new community members
 
 ---
@@ -253,11 +253,11 @@ Ready to partner with AIMUG? We'd love to discuss how we can work together!
 
 - **Email**: [sponsors@aimug.org](mailto:sponsors@aimug.org)
 - **Discord**: Join our [Discord server](https://discord.gg/JzWgadPFQd) and message the organizers
-- **Office Hours**: Tuesdays @ 5 PM CT - drop by to chat in person
+- **Office Hours**: 2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet (1st Monday is the in-person Mixer & Showcase)
 
 ### **Questions About Donations**
 - **Discord**: #general channel in our [Discord server](https://discord.gg/JzWgadPFQd)
-- **Office Hours**: Tuesdays @ 5 PM CT
+- **Office Hours**: 2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet
 
 ---
 

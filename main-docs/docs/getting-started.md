@@ -29,9 +29,10 @@ Welcome to Austin LangChain! We're excited to have you join our community of AI 
 
 ## 2. Attend Our Regular Events
 
-### Weekly Office Hours
-- Every Tuesday at 2 PM Central
-- Join us in the [Discord Meeting Room](https://discord.com/channels/1149779360178524272/1149779360967045170)
+### Office Hours
+- **2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet**
+- Join via [Google Meet](https://meet.google.com/fsm-nawg-cng) (also linked from Discord)
+- The **1st Monday** is our in-person Mixer & Showcase at ACC — not a virtual Office Hours session
 - Perfect for:
   - Getting help with your projects
   - Asking questions about LangChain
@@ -39,7 +40,7 @@ Welcome to Austin LangChain! We're excited to have you join our community of AI 
   - Learning about AI and LLMs
 
 ### Monthly Mixers and Showcases
-- First Wednesday of each month
+- 1st Monday of each month
 - In-person events at ACC RGC 3000
 - Network with other members
 - See exciting project demonstrations

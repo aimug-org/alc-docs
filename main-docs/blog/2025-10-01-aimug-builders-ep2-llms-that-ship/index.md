@@ -63,7 +63,7 @@ Want to be part of Austin's most active AI developer community?
 👉 **Join us at [AIMUG.org](https://aimug.org)**
 
 ### Upcoming Events
-- **Weekly Office Hours**: Every Tuesday, 5 PM CT
+- **Office Hours**: 2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet
 - **October Showcase**: Wednesday, October 1st at ACC RGC 3000
 - **November Showcase**: Wednesday, November 5th at ACC RGC 3000
 

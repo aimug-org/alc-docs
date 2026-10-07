@@ -325,7 +325,7 @@ A: The state persists in your database. If you're running on Cloud Run or Lambda
 
 1. **Try LangChain Academy** - Start with quickstart courses
 2. **Explore examples** - Check AIMUG GitHub for production patterns
-3. **Join office hours** - Tuesdays at 5pm for Q&A
+3. **Join office hours** - 2nd, 3rd, and 4th Mondays · 5:00 PM CT for Q&A
 4. **Build something** - Best way to learn is by doing
 
 ---

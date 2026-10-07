@@ -40,14 +40,14 @@ Casual networking and project collaboration in a relaxed setting. Bring your lap
 
 Not in Austin? No problem! Our community extends well beyond the city limits:
 
-### 🎯 Weekly Office Hours
-**Every Tuesday at 2 PM Central**
+### 🎯 Office Hours
+**2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet**
 - Get help with your projects
 - Ask questions about LangChain, AI, or middleware
 - Troubleshoot issues with community support
 - Learn about new tools and techniques
 
-[Join Tuesday Office Hours](https://discord.com/events/1149779360178524272/1320831868496773174)
+[Join Office Hours (Google Meet)](https://meet.google.com/fsm-nawg-cng)
 
 ### 🗣️ Community Calls
 **Every Thursday at 2 PM Central**

@@ -16,7 +16,7 @@ Our first Monday-night AIMUG was a builder night. One theme kept coming up: **us
 
 - Format: lightning-style talks of about 15–20 minutes, then Q&A. Sessions can end up on Austin public television, so talks have **no calls to action**.
 - Ground rules: Learning in the Open. Be kind, no nerd sniping, and give constructive feedback.
-- We now meet the **first Monday of every month**. Office hours: **Tuesdays, 5–6 PM CT**, on Google Meet (link in Discord events). Hacky hours are coming back.
+- We now meet the **first Monday of every month** (in-person Mixer & Showcase at ACC). Virtual Office Hours: **2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet** ([meet.google.com/fsm-nawg-cng](https://meet.google.com/fsm-nawg-cng); also in Discord events). Hacky hours are coming back.
 - The Zoom link lives on [aimug.org](https://aimug.org) and the Meetup page.
 
 ## Talks
@@ -162,7 +162,7 @@ That was a wrap on our first Monday-night AIMUG, noted by our CGCS host. Thanks 
   - [What Breaks If We Turn This Off? (James Coffey / Corvic)](/docs/oct-2026/presentation-materials/james-coffey-what-breaks-if-we-turn-this-off.pdf)
 - **Recording:** Recording will be linked here once archived.
 - **Follow-ups we heard:** Colin will test PII and injection protections after routing. Joseph will prototype JEV on fraud workflows. Jeff will ship the short-instruction Mac app update. Jake will open-source his skills and CLI once the test harness is solid. James will set up Corvic demo access.
-- **Office hours:** Tuesdays, 5–6 PM CT. Link in Discord.
+- **Office hours:** 2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet ([link](https://meet.google.com/fsm-nawg-cng)). 1st Monday is the Mixer & Showcase (in person), not virtual OH.
 
 ## Join in
 

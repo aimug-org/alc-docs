@@ -41,7 +41,7 @@ Here's your weekly roundup of the latest content from the Austin LangChain commu
 
 - **Monthly Meetup**: First Wednesday of {{ month }} at 6:00 PM
 - **Community Call**: Every Thursday at 2:00 PM
-- **Office Hours**: Every Tuesday at 2:00 PM
+- **Office Hours**: 2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet
 
 [View All Events](https://www.meetup.com/austin-langchain-ai-group/events/)
 

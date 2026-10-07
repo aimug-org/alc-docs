@@ -112,7 +112,7 @@ Location: Austin Community College RGC 3000
 - [Colin's Blog Post on Middleware](https://colinmcnamara.com)
 
 ## Next Events
-- **Tuesday Office Hours**: Every Tuesday at 5:00 PM Central on Google Meet
+- **Office Hours**: 2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet (1st Monday is the Mixer & Showcase)
 - **Hacky Hour**: TBD (check Discord/Meetup for updates)
 - **November Showcase**: First Wednesday of November
 

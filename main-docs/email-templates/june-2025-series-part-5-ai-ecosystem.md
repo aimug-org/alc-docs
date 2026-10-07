@@ -131,7 +131,7 @@ Each piece connects to the others, showing how rapidly this space is maturing an
 ## 📅 What's next for our community
 
 - **Community Call**: Thursday at 2 PM Central - Let's discuss the ecosystem and where we fit
-- **Office Hours**: Tuesday at 2 PM Central - Bring your ecosystem navigation questions
+- **Office Hours**: 2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet - Bring your ecosystem navigation questions
 - **Monthly Meetup**: First Wednesday - July planning session
 
 [Join us for any of these →](https://www.meetup.com/austin-langchain-ai-group/events/)

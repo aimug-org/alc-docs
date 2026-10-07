@@ -114,7 +114,7 @@ This is Part 3 of our June 2025 deep dive. Still coming this week:
 ## 📅 Let's talk about this stuff
 
 - **Community Call**: Thursday at 2 PM Central - We'll definitely be talking about enterprise patterns
-- **Office Hours**: Tuesday at 2 PM Central - Bring your production questions
+- **Office Hours**: 2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet - Bring your production questions
 - **Monthly Meetup**: First Wednesday - Maybe we should do an enterprise-focused session?
 
 [Join us at any of these →](https://www.meetup.com/austin-langchain-ai-group/events/)

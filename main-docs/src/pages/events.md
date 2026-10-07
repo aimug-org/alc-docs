@@ -46,14 +46,14 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
 </div>
 
 
-## 🎯 Weekly Office Hours
+## 🎯 Office Hours
 
 <div className="event-card">
-  <span className="event-badge showcase-badge">Weekly Event</span>
+  <span className="event-badge showcase-badge">Regular Event</span>
   <h3><i className="fas fa-users"></i> AIMUG Office Hours</h3>
   <div className="event-info">
     <i className="fas fa-calendar-week"></i>
-    <span><strong>Every Tuesday</strong></span>
+    <span><strong>2nd, 3rd, and 4th Mondays</strong></span>
   </div>
   <div className="event-info">
     <i className="fas fa-clock"></i>
@@ -63,7 +63,7 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
     <i className="fas fa-video"></i>
     <span><strong>Google Meet</strong></span>
   </div>
-  <p>Connect & collaborate with other builders, work through labs, chat about tools, and plan future events. This is our weekly community gathering where everyone is welcome!</p>
+  <p>Connect & collaborate with other builders, work through labs, chat about tools, and plan future events. Virtual Office Hours meet on the <strong>2nd, 3rd, and 4th Mondays</strong> at <strong>5:00 PM CT</strong> on Google Meet. The <strong>1st Monday</strong> is our in-person Mixer &amp; Showcase at ACC — not a virtual Office Hours session.</p>
 
   <p><strong>What to expect:</strong></p>
   <ul>
@@ -597,7 +597,7 @@ We host several regular events to keep our community engaged and connected. Mark
     </tr>
     <tr>
       <td><i className="fas fa-users"></i> Office Hours</td>
-      <td>Every Tuesday</td>
+      <td>2nd, 3rd, and 4th Mondays</td>
       <td>5:00 PM CT</td>
       <td>Google Meet</td>
     </tr>
@@ -660,7 +660,7 @@ This event combines networking, learning, and showcasing. It's our primary month
   <p>These casual networking events provide an opportunity to connect with other community members, collaborate on projects, and discuss the latest in AI and LangChain.</p>
 </div>
 
-### <i className="fas fa-handshake"></i> Weekly Community Events
+### <i className="fas fa-handshake"></i> Community Events
 
 <table className="schedule-table">
   <thead>
@@ -674,9 +674,9 @@ This event combines networking, learning, and showcasing. It's our primary month
   <tbody>
     <tr>
       <td><i className="fas fa-users"></i> Office Hours</td>
-      <td>Tuesdays @ 5 PM CT</td>
+      <td>2nd, 3rd, and 4th Mondays · 5:00 PM CT</td>
       <td><a href="https://meet.google.com/fsm-nawg-cng">Google Meet</a></td>
-      <td>Connect & collaborate with other builders, work through labs, chat about tools, and plan future events</td>
+      <td>Connect &amp; collaborate with other builders, work through labs, chat about tools, and plan future events. (1st Monday is the in-person Mixer &amp; Showcase at ACC, not virtual OH.)</td>
     </tr>
   </tbody>
 </table>

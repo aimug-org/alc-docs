@@ -120,7 +120,7 @@ Casual hangs, cold beer, hot wings, and podcast interviews with speakers.
 
 ### Regular Events
 - **Monthly Showcases**: First Wednesday at ACC RGC
-- **Office Hours**: Tuesdays at 5 PM CT (10+ regular attendees)
+- **Office Hours**: 2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet (10+ regular attendees)
 - **Hacky Hours**: Various locations around Austin
 
 ### Founding Members & Sponsors
@@ -158,7 +158,7 @@ The complete 2+ hour session includes all five Thunderstorm Talks, Q&A, and comm
 ## 🚀 Next Steps
 
 - **October Showcase**: Wednesday, October 1st at ACC RGC 3000
-- **Office Hours**: Every Tuesday at 5 PM CT on Zoom
+- **Office Hours**: 2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet
 - **Join Discord**: Connect with 1,500+ AI builders
 
 ---

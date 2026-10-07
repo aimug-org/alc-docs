@@ -106,7 +106,7 @@ Welcome to Austin LangChain! We're a vibrant community of AI enthusiasts, develo
   <a href="https://www.meetup.com/austin-langchain-ai-group/events/" className="button button--secondary">View Schedule</a>
 </div>
 
-### Weekly Sessions
+### Office Hours
 <div className={styles.row}>
   <div className={styles.col}>
     <div className={styles.card}>
@@ -114,7 +114,8 @@ Welcome to Austin LangChain! We're a vibrant community of AI enthusiasts, develo
         <h3>🚀 Office Hours</h3>
       </div>
       <div className={styles.cardBody}>
-        <p>Every Tuesday at 5 PM Central</p>
+        <p><strong>2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet</strong></p>
+        <p>1st Monday is the in-person Mixer &amp; Showcase at ACC (not virtual Office Hours).</p>
         <p>• Connect & collaborate with other builders</p>
         <p>• Work through labs and troubleshoot live</p>
         <p>• Chat about the latest tools we're using</p>

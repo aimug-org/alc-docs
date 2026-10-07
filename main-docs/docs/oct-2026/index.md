@@ -103,7 +103,7 @@ This was the first Monday-night AIMUG, noted by our CGCS host. The after-party m
 - [Jake Cukjati — Forge with Rigor](https://byteofcode.io/presentations/forge-with-rigor/)
 - [What Breaks If We Turn This Off? (James Coffey / Corvic)](./presentation-materials/james-coffey-what-breaks-if-we-turn-this-off.pdf)
 - Blog recap: [/blog/october-2026-monthly-meeting-recap](/blog/october-2026-monthly-meeting-recap)
-- Office hours: Tuesdays, 5–6 PM CT (link in Discord)
+- Office hours: 2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet (1st Monday is the Mixer & Showcase at ACC)
 
 ## Next Steps
 

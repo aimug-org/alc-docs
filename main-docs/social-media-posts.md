@@ -328,7 +328,7 @@ The businesses that figure out capability schemas, agent-readable documentation,
 
 **We're exploring this together:**
 
-Every Tuesday at 5 PM Central, we gather for office hours to dig into these protocols. Community members are building prototype marketplaces, experimenting with capability schemas, and sharing what they're learning.
+On the 2nd, 3rd, and 4th Mondays at 5:00 PM CT, we gather for Office Hours to dig into these protocols. Community members are building prototype marketplaces, experimenting with capability schemas, and sharing what they're learning.
 
 The infrastructure exists today. The only question is whether you're going to build in this space or watch it happen.
 
@@ -385,7 +385,7 @@ The infrastructure exists today. The only question is whether you're going to bu
 • OpenAI AP2 Documentation
 
 **Join Our Community**:
-• Tuesday Office Hours: Every Tuesday 5 PM CT
+• Office Hours: 2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet
 • Discord: https://discord.gg/JzWgadPFQd
 • Website: https://aimug.org
 
@@ -394,10 +394,10 @@ The infrastructure exists today. The only question is whether you're going to bu
 ## Comment Response Templates
 
 **For Technical Questions**:
-"Great question about [topic]! Ryan's full presentation at [timestamp] covers this in detail. The key insight is [brief answer]. We also discuss implementation patterns during our Tuesday office hours—would love to explore this with you there. Join us at 5 PM CT: https://discord.gg/JzWgadPFQd"
+"Great question about [topic]! Ryan's full presentation at [timestamp] covers this in detail. The key insight is [brief answer]. We also discuss implementation patterns during Monday Office Hours—would love to explore this with you there. Join us 2nd/3rd/4th Mondays at 5:00 PM CT: https://meet.google.com/fsm-nawg-cng"
 
 **For Implementation Help**:
-"We have a fantastic community of practitioners working with A2A and AP2 in production. I'd recommend joining our Discord and sharing your specific use case—the community has been incredibly helpful with implementation challenges. Also, our Tuesday office hours are great for live troubleshooting: https://discord.gg/JzWgadPFQd"
+"We have a fantastic community of practitioners working with A2A and AP2 in production. I'd recommend joining our Discord and sharing your specific use case—the community has been incredibly helpful with implementation challenges. Also, our Monday Office Hours are great for live troubleshooting: https://meet.google.com/fsm-nawg-cng"
 
 **For Enterprise Interest**:
 "Excellent question about enterprise deployment. Several of our community members are exploring production A2A/AP2 implementations and would be happy to share their experiences. Would you be interested in joining our next showcase event? We regularly feature case studies from companies implementing these protocols. Let's connect on Discord: https://discord.gg/JzWgadPFQd"
@@ -421,7 +421,7 @@ The infrastructure exists today. The only question is whether you're going to bu
 
 **Community Metrics**:
 - Discord joins from post: 15+
-- Tuesday office hours attendance boost: 8+
+- Office hours attendance boost: 8+
 - Newsletter signups: 20+
 
 ---
@@ -519,10 +519,10 @@ I've written a comprehensive technical breakdown covering:
 
 **Join the Discussion**
 
-We're actively exploring A2A and AP2 implementation patterns every Tuesday at our office hours. Community members are building prototype marketplaces, experimenting with capability schemas, and sharing lessons from early deployments.
+We're actively exploring A2A and AP2 implementation patterns at Office Hours (2nd, 3rd, and 4th Mondays · 5:00 PM CT). Community members are building prototype marketplaces, experimenting with capability schemas, and sharing lessons from early deployments.
 
-📅 **Tuesday Office Hours**: Every Tuesday at 5:00 PM Central
-🔗 **Google Meet Link**: [Your recurring office hours link]
+📅 **Office Hours**: 2nd, 3rd, and 4th Mondays · 5:00 PM CT
+🔗 **Google Meet Link**: https://meet.google.com/fsm-nawg-cng
 💬 **Discord Community**: https://discord.gg/JzWgadPFQd
 
 **What's Next**
@@ -531,7 +531,7 @@ The infrastructure for autonomous agent economies exists today. The businesses t
 
 The only question is: will you build in this space, or watch from the sidelines?
 
-See you Tuesday,
+See you at Office Hours,
 
 Colin McNamara
 Austin LangChain AIMUG
@@ -557,7 +557,7 @@ Austin LangChain AIMUG
 **Target Audience**: AIMUG community members, AI practitioners, developers
 **Length**: 3,127 characters
 **Tone**: Community-focused, educational, action-oriented
-**Call-to-Action**: Watch video, read blog, join Tuesday office hours, engage on Discord
+**Call-to-Action**: Watch video, read blog, join Monday Office Hours, engage on Discord
 **Key Themes**: Agent marketplaces, autonomous commerce, community collaboration
 
 ---
@@ -610,10 +610,10 @@ Covers A2A capability discovery, AP2 payment integration, contract-based workflo
 **Join Our Community**
 
 💬 **Discord**: https://discord.gg/JzWgadPFQd
-📅 **Tuesday Office Hours**: Every Tuesday at 5:00 PM Central
+📅 **Office Hours**: 2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet
 🌐 **Website**: https://aimug.org
 
-We explore these protocols every Tuesday, with community members building prototype marketplaces and sharing implementation experiences.
+We explore these protocols at Monday Office Hours, with community members building prototype marketplaces and sharing implementation experiences.
 
 **Next Event**
 

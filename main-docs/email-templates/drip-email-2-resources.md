@@ -74,7 +74,7 @@ This timeline is perfect for systematic learning - start with the fundamentals a
 
 Don't learn alone! Join these regular sessions to enhance your skills:
 
-- **Tuesday Office Hours (2 PM Central)** - Get your questions answered and troubleshoot your projects
+- **Office Hours (2nd, 3rd, and 4th Mondays · 5:00 PM CT · Google Meet)** - Get your questions answered and troubleshoot your projects
 - **Thursday Community Call (2 PM Central)** - Learn what others are building and share your progress
 
 Both sessions are hosted on our Discord server. They're casual, supportive environments perfect for learning.

@@ -113,7 +113,7 @@ The full showcase recording captures the energy, Q&A sessions, and community dis
 
 ## Join the Conversation
 
-### Tuesday Office Hours - Every Week at 5 PM Central
+### Office Hours — 2nd, 3rd, and 4th Mondays · 5:00 PM CT
 
 Drop in for real-time discussions about:
 - Middleware implementation patterns
@@ -121,7 +121,7 @@ Drop in for real-time discussions about:
 - Production deployment strategies
 - Your specific implementation challenges
 
-**Google Meet Link:** Available in our Discord #office-hours channel
+**Google Meet Link:** https://meet.google.com/fsm-nawg-cng (1st Monday is the in-person Mixer & Showcase, not virtual OH)
 
 ### Discord Community - Always Active
 
@@ -188,7 +188,7 @@ Whether you're just getting started with LangChain or deploying production agent
 - [Full October Showcase Recording](https://www.youtube.com/watch?v=RvG3KXRiURQ)
 
 **Community Resources:**
-- [Tuesday Office Hours Info](https://aimug.org/events)
+- [Office Hours Info](https://aimug.org/events)
 - [AIMUG GitHub Labs](https://github.com/aimug-org/austin_langchain)
 - [Documentation Portal](https://aimug.org/docs)
 - [Upcoming Events Calendar](https://www.meetup.com/austin-langchain-ai-group/events/)
@@ -223,7 +223,7 @@ Whether you're just getting started with LangChain or deploying production agent
 
 The infrastructure for production AI agents and autonomous marketplaces is here. The question isn't whether these technologies will transform how we build and deploy AI—it's whether you'll be part of defining how that transformation unfolds.
 
-Watch the videos. Read the deep dives. Join us Tuesday. Build something amazing.
+Watch the videos. Read the deep dives. Join us at Monday Office Hours. Build something amazing.
 
 We can't wait to see what you create.
 
