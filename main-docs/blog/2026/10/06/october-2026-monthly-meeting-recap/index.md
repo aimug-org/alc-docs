@@ -17,11 +17,16 @@ Our first Monday-night AIMUG was a builder night. One theme kept coming up: **us
 - Format: lightning-style talks of about 15–20 minutes, then Q&A. Sessions can end up on Austin public television, so talks have **no calls to action**.
 - Ground rules: Learning in the Open. Be kind, no nerd sniping, and give constructive feedback.
 - We now meet the **first Monday of every month**. Office hours: **Tuesdays, 5–6 PM CT**, on Google Meet (link in Discord events). Hacky hours are coming back.
-- The Zoom link lives on [aimug.org](https://aimug.org) and the Meetup page. aimug.org needs a refresh, and Colin plans to add Grokbot and related links.
+- The Zoom link lives on [aimug.org](https://aimug.org) and the Meetup page.
 
 ## Talks
 
 ### Mixture of models and semantic routing — Colin McNamara
+
+![Colin McNamara — Mixture of models and semantic routing](./img/01-colin-semantic-routing.png)
+
+**Slides:** [Mixture of Models](https://www.colinmcnamara.com/talks/mixture-of-models)  
+**Project:** [vLLM Semantic Router](https://vllm-sr.ai/)
 
 **The problem:** every request goes to the same model. That includes easy questions, hard ones, PII, healthcare data, and prompt injections. With one model you pay more, give up some privacy, and take on security risk. Colin found this out the hard way when a token-spend report put him near the top of his company's list.
 
@@ -48,6 +53,8 @@ Our first Monday-night AIMUG was a builder night. One theme kept coming up: **us
 
 ### Grokbot and JEV, a decision model — Joseph Fluckiger
 
+![Joseph Fluckiger — Grokbot and JEV](./img/02-joseph-grokbot-jev.png)
+
 **Slides:** [Joseph’s deck — GrokBot and Jev](https://share.fluckiger.org/aimug)
 
 Joseph builds fraud agents at eBay with LangGraph. For personal agents he has used OpenClaw, Hermes, and now **Grokbot**.
@@ -69,6 +76,10 @@ He also gave a plug for **MLflow** tracing next to LangSmith and Langfuse. Once 
 **Next step:** prototype JEV in the eBay fraud-agent workflows and measure latency and cost.
 
 ### Harbor evals for coding agents — Jeff Linwood
+
+![Jeff Linwood — Harbor evals for coding agents](./img/03-jeff-harbor.png)
+
+**Slides:** [Agent evals with Harbor](https://www.jefflinwood.com/2026/10/agent-evals-with-harbor/)
 
 **The problem:** Jeff's macOS agent workspace exposes a task board to coding agents over MCP. The connection worked and the tools showed up, but when asked to pull a task off the board, the agents skipped the tools and went straight to grep. The fix is "a couple of lines in `agents.md` / `CLAUDE.md`." But which lines?
 
@@ -94,9 +105,13 @@ It runs locally with Docker, or on a cloud sandbox like Daytona when you need sc
 - Small models did worse than medium ones.
 - **Shorter beat longer.** The detailed tool descriptions didn't help, so the next Mac app version ships the short instruction.
 
-**Try it yourself:** A/B test your own `agents.md` changes, use evals to work on MCP tool names and descriptions, and build an internal benchmark of where your team stands on agentic coding. Jeff is posting slides and links to Discord.
+**Try it yourself:** A/B test your own `agents.md` changes, use evals to work on MCP tool names and descriptions, and build an internal benchmark of where your team stands on agentic coding. Additional links may also appear in Discord.
 
 ### The coding factory: canonical specs and sequential agents — Jake Cukjati
+
+![Jake Cukjati — The coding factory (Forge with Rigor)](./img/04-jake-coding-factory.png)
+
+**Slides:** [Forge with Rigor](https://byteofcode.io/presentations/forge-with-rigor/)
 
 Jake has spent most of the past year with Claude Code. His point: if your agents sit idle every 30 minutes waiting for you, **you're the bottleneck.** Stop prompting agents to write code. Have them work from specs. His runs now go for hours (his longest was about 23.8 hours), and one slide showed 100+ agents over about 16 hours turning out tens of thousands of lines.
 
@@ -117,6 +132,8 @@ Jake has spent most of the past year with Claude Code. His point: if your agents
 
 ### Korvik AI: graph analytics and dependency tracing — James Coffey
 
+![James Coffey — Korvik AI graph analytics and dependency tracing](./img/05-james-korvik.png)
+
 *Disclosure:* James knows the Korvik AI team and said so up front. The company is an early seed-stage startup. The host noted the talk sits near our no-pitch line and invited it anyway because James knows graphs and data.
 
 **Why graphs:** embedding a PDF and pulling the nearest chunk by cosine similarity loses relationships. GraphRAG and entity graphs keep them, and enforce them, which James called "keeping your agent honest." Korvik's predecessor worked out a way to shard graph databases so analytics stay fast without exploding compute.
@@ -135,9 +152,13 @@ That was a wrap on our first Monday-night AIMUG, noted by our CGCS host. Thanks 
 
 ## What's next
 
-- **Slides:** [Joseph Fluckiger — GrokBot and Jev](https://share.fluckiger.org/aimug)
-- **Video:** public link TBD. We'll add it here once it's archived.
-- **Follow-ups we heard:** Colin will test PII and injection protections after routing and refresh aimug.org with Grokbot links. Joseph will prototype JEV on fraud workflows. Jeff will ship the short-instruction Mac app update and post slides to Discord. Jake will open-source his skills and CLI once the test harness is solid. James will set up Korvik demo access.
+- **Slides:**
+  - [Colin McNamara — Mixture of Models](https://www.colinmcnamara.com/talks/mixture-of-models)
+  - [Joseph Fluckiger — GrokBot and Jev](https://share.fluckiger.org/aimug)
+  - [Jeff Linwood — Agent evals with Harbor](https://www.jefflinwood.com/2026/10/agent-evals-with-harbor/)
+  - [Jake Cukjati — Forge with Rigor](https://byteofcode.io/presentations/forge-with-rigor/)
+- **Recording:** Recording will be linked here once archived.
+- **Follow-ups we heard:** Colin will test PII and injection protections after routing. Joseph will prototype JEV on fraud workflows. Jeff will ship the short-instruction Mac app update. Jake will open-source his skills and CLI once the test harness is solid. James will set up Korvik demo access.
 - **Office hours:** Tuesdays, 5–6 PM CT. Link in Discord.
 
 ## Join in
