@@ -41,6 +41,7 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
 
     <p><strong>RSVP:</strong></p>
     <a href="https://www.meetup.com/austin-langchain-ai-group/events/ffldbvyjcpbgb/" className="button button--primary">Meetup RSVP</a>
+    <a href="https://luma.com/rh5iht5h" className="button button--secondary">Luma RSVP</a>
   </div>
 </div>
 
