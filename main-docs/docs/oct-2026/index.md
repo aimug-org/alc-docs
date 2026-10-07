@@ -11,12 +11,17 @@ Builder night and our first Monday-night AIMUG. The talks covered routing reques
 **Date:** Monday, October 5th, 2026  
 **Format:** Monthly meeting, in person plus Zoom, with lightning-style talks (~15–20 min) and Q&A  
 **Host:** AIMUG with CGCS (Center for Government and Civic Service)  
-**Recording:** Public link TBD — will be linked here once archived.
+**Recording:** Recording will be linked here once archived.
 
 ## Talks
 
 ### Mixture of models and semantic routing
 **Speaker:** Colin McNamara  
+
+![Colin McNamara — Mixture of models and semantic routing](./img/01-colin-semantic-routing.png)
+
+**Slides:** [Mixture of Models](https://www.colinmcnamara.com/talks/mixture-of-models)  
+**Project:** [vLLM Semantic Router](https://vllm-sr.ai/)
 
 Sending every request to one model costs more, weakens privacy, and widens the prompt-injection surface. A mixture of models exposes one blended API and routes each request by policy: local model for tiny or private work, an open-weights mid-size model, or a hosted frontier API.
 
@@ -27,10 +32,12 @@ Sending every request to one model costs more, weakens privacy, and widens the p
 - **Rough laptop latency:** about 240 ms at session start for vLLM Semantic Router, about 1 s for Switchyard.
 - Anthropic `v1/messages` support was missing across routers. Colin is filing bugs and PRs upstream, and some merged vLLM fixes are already moving into downstream packages.
 - **Takeaways:** start with middleware in your graph, add a router as a secondary control (Kubernetes or a local container), and turn on OTEL at more than one point so you can compare.
-- **Follow-up:** test whether PII and injection protections stay active after routing, and patch if not. Refresh aimug.org with Grokbot links.
+- **Follow-up:** test whether PII and injection protections stay active after routing, and patch if not.
 
 ### Grokbot and JEV, a decision model
 **Speaker:** Joseph Fluckiger  
+
+![Joseph Fluckiger — Grokbot and JEV](./img/02-joseph-grokbot-jev.png)
 
 **Slides:** [Joseph’s deck — GrokBot and Jev](https://share.fluckiger.org/aimug)
 
@@ -44,15 +51,23 @@ Sending every request to one model costs more, weakens privacy, and widens the p
 ### Harbor evals for coding agents
 **Speaker:** Jeff Linwood  
 
+![Jeff Linwood — Harbor evals for coding agents](./img/03-jeff-harbor.png)
+
+**Slides:** [Agent evals with Harbor](https://www.jefflinwood.com/2026/10/agent-evals-with-harbor/)
+
 - **The problem:** coding agents ignored the MCP task-board tools in his macOS agent workspace and fell back to grep.
 - **Harbor** (open source, from the Terminal-Bench team) breaks an eval into task folder (`instruction.md`, environment, tests), agent under test, model, verifier, and trials. It runs locally in Docker or on Daytona. Jeff used API keys instead of subscriptions.
 - **Experiment:** 120 runs covering 5 fixtures × Claude Code/Codex × small/medium tiers × 3 conditions (none, short instruction, the long instructions shipped in the Mac app).
 - **Results:** all runs passed the coding tests. The control didn't use the tools. The short instruction got 10/10 (Claude Code, medium) and 8/10 (Codex, medium). The shipped long instructions got about 0–3/10. Small models did worse than medium.
 - **Takeaways:** A/B test your `agents.md`, design MCP tool names and descriptions with evals, and build an internal agentic-coding benchmark.
-- **Follow-up:** the next Mac app version ships the short instruction. Slides and links go to Discord.
+- **Follow-up:** the next Mac app version ships the short instruction.
 
 ### The coding factory: canonical specs and sequential agents
 **Speaker:** Jake Cukjati  
+
+![Jake Cukjati — The coding factory (Forge with Rigor)](./img/04-jake-coding-factory.png)
+
+**Slides:** [Forge with Rigor](https://byteofcode.io/presentations/forge-with-rigor/)
 
 - Stop prompting agents to write code. Have them work from specs. Runs now last hours (his longest was about 23.8 h).
 - Specs are canonical and verifiable. Agents check them when they hit a bug, and Jake reviews specs instead of every line.
@@ -64,6 +79,8 @@ Sending every request to one model costs more, weakens privacy, and widens the p
 
 ### Korvik AI: graph analytics and dependency tracing
 **Speaker:** James Coffey  
+
+![James Coffey — Korvik AI graph analytics and dependency tracing](./img/05-james-korvik.png)
 
 - Graphs keep and enforce relationships that embedding plus cosine similarity loses. Direction of dependency matters.
 - **Demo:** Korvik read an architecture diagram image, built a graph, and traced what breaks when pricing goes down. The quote path breaks right away; browsing survives until its ~5-minute cache window runs out.
@@ -78,12 +95,14 @@ This was the first Monday-night AIMUG, noted by our CGCS host. The after-party m
 
 ## Resources
 
+- [Colin McNamara — Mixture of Models](https://www.colinmcnamara.com/talks/mixture-of-models)
 - [Joseph Fluckiger — GrokBot and Jev (deck)](https://share.fluckiger.org/aimug)
+- [Jeff Linwood — Agent evals with Harbor](https://www.jefflinwood.com/2026/10/agent-evals-with-harbor/)
+- [Jake Cukjati — Forge with Rigor](https://byteofcode.io/presentations/forge-with-rigor/)
 - Blog recap: [/blog/october-2026-monthly-meeting-recap](/blog/october-2026-monthly-meeting-recap)
-- Harbor, plus speaker slides and links: shared in Discord
 - Office hours: Tuesdays, 5–6 PM CT (link in Discord)
 
 ## Next Steps
 
-- Add the public video link once it's archived
+- Recording will be linked here once archived
 - Community: post to Discord and Meetup once the public page is live
