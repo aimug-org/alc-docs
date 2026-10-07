@@ -100,7 +100,7 @@ Welcome to the Austin LangChain Events page! Join our vibrant community of AI en
     <i className="fas fa-glass-cheers"></i>
     <span>After Party: The Tavern</span>
   </div>
-  <p>First Monday-night AIMUG. Talks on semantic routing / mixture of models (Colin), Grokbot + JEV decision models (Joseph), Harbor evals for coding-agent <code>agents.md</code> wording (Jeff), a spec-driven coding factory (Jake), and Korvik AI graph dependency tracing (James).</p>
+  <p>First Monday-night AIMUG. Talks on semantic routing / mixture of models (Colin), Grokbot + JEV decision models (Joseph), Harbor evals for coding-agent <code>agents.md</code> wording (Jeff), a spec-driven coding factory (Jake), and Corvic AI graph dependency tracing (James).</p>
   <a href="/blog/october-2026-monthly-meeting-recap" className="button button--info">View Full Event Recap</a>
   <a href="/docs/oct-2026/" className="button button--secondary">View Documentation</a>
 </div>

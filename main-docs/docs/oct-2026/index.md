@@ -77,16 +77,18 @@ Sending every request to one model costs more, weakens privacy, and widens the p
 - **Scale:** 80–90 specs of 400–500 lines each (under 1,000). A commit-pinned manifest and a scheduler create batches that record the commit hash, files, and blockers. He plans a domain split as the codebase approaches 200K lines.
 - **Follow-up:** open-source the skills and CLI once the test-harness rigor is where he wants it.
 
-### Korvik AI: graph analytics and dependency tracing
+### Corvic AI: graph analytics and dependency tracing
 **Speaker:** James Coffey  
 
-![James Coffey — Korvik AI graph analytics and dependency tracing](./img/05-james-korvik.png)
+![James Coffey — Corvic AI graph analytics and dependency tracing](./img/05-james-corvic.png)
+
+**Slides:** [What Breaks If We Turn This Off? (James Coffey / Corvic)](./presentation-materials/james-coffey-what-breaks-if-we-turn-this-off.pdf)
 
 - Graphs keep and enforce relationships that embedding plus cosine similarity loses. Direction of dependency matters.
-- **Demo:** Korvik read an architecture diagram image, built a graph, and traced what breaks when pricing goes down. The quote path breaks right away; browsing survives until its ~5-minute cache window runs out.
+- **Demo:** Corvic read an architecture diagram image, built a graph, and traced what breaks when pricing goes down. The quote path breaks right away; browsing survives until its ~5-minute cache window runs out.
 - **Platform:** rooms, live apps, templates and playbooks, MCP access, pipelines, embeddings and clustering.
 - **Fits:** engineering prints, financial and parts lineage, medical ontologies and drug interactions. Compare against LlamaParse and Neo4j. For small graphs, something simpler is probably fine.
-- **Disclosure:** James knows the team. Korvik is an early seed-stage startup.
+- **Disclosure:** James knows the team. Corvic is an early seed-stage startup.
 - **Follow-up:** demo access for interested attendees. Credits are possible, but terms aren't final.
 
 ## Closing
@@ -99,6 +101,7 @@ This was the first Monday-night AIMUG, noted by our CGCS host. The after-party m
 - [Joseph Fluckiger — GrokBot and Jev (deck)](https://share.fluckiger.org/aimug)
 - [Jeff Linwood — Agent evals with Harbor](https://www.jefflinwood.com/2026/10/agent-evals-with-harbor/)
 - [Jake Cukjati — Forge with Rigor](https://byteofcode.io/presentations/forge-with-rigor/)
+- [What Breaks If We Turn This Off? (James Coffey / Corvic)](./presentation-materials/james-coffey-what-breaks-if-we-turn-this-off.pdf)
 - Blog recap: [/blog/october-2026-monthly-meeting-recap](/blog/october-2026-monthly-meeting-recap)
 - Office hours: Tuesdays, 5–6 PM CT (link in Discord)
 

@@ -1,6 +1,6 @@
 ---
 slug: october-2026-monthly-meeting-recap
-title: "October 2026 Monthly Meeting Recap — Semantic Routing, Grokbot + JEV, Harbor Evals, Coding Factory, Korvik AI"
+title: "October 2026 Monthly Meeting Recap — Semantic Routing, Grokbot + JEV, Harbor Evals, Coding Factory, Corvic AI"
 date: 2026-10-06
 authors: [colinmcnamara]
 tags: [meetup, recap, agents, evaluation, mcp, langgraph, middleware]
@@ -8,7 +8,7 @@ tags: [meetup, recap, agents, evaluation, mcp, langgraph, middleware]
 
 # October 2026 Monthly Meeting Recap
 
-Our first Monday-night AIMUG was a builder night. One theme kept coming up: **use the smallest thing that does the job, and measure it.** Colin routed requests across a mixture of models to cut token spend and add a second layer of PII and prompt-injection defense. Joseph swapped slow LLM routing steps for a calibrated decision model (JEV). Jeff used Harbor evals to find out which `agents.md` wording actually gets coding agents to use MCP tools. Jake showed a spec-driven "coding factory" that runs sequential agents for hours. James showed Korvik AI tracing dependencies through a graph instead of guessing from embeddings.
+Our first Monday-night AIMUG was a builder night. One theme kept coming up: **use the smallest thing that does the job, and measure it.** Colin routed requests across a mixture of models to cut token spend and add a second layer of PII and prompt-injection defense. Joseph swapped slow LLM routing steps for a calibrated decision model (JEV). Jeff used Harbor evals to find out which `agents.md` wording actually gets coding agents to use MCP tools. Jake showed a spec-driven "coding factory" that runs sequential agents for hours. James showed Corvic AI tracing dependencies through a graph instead of guessing from embeddings.
 
 <!-- truncate -->
 
@@ -130,21 +130,23 @@ Jake has spent most of the past year with Claude Code. His point: if your agents
 
 **Takeaways:** keep specs as the canonical truth, turn your skills into CLIs, and compound everything. Jake plans to **open-source the skills and CLI** once the test-harness piece is as rigorous as he wants.
 
-### Korvik AI: graph analytics and dependency tracing — James Coffey
+### Corvic AI: graph analytics and dependency tracing — James Coffey
 
-![James Coffey — Korvik AI graph analytics and dependency tracing](./img/05-james-korvik.png)
+![James Coffey — Corvic AI graph analytics and dependency tracing](./img/05-james-corvic.png)
 
-*Disclosure:* James knows the Korvik AI team and said so up front. The company is an early seed-stage startup. The host noted the talk sits near our no-pitch line and invited it anyway because James knows graphs and data.
+**Slides:** [What Breaks If We Turn This Off? (James Coffey / Corvic)](/docs/oct-2026/presentation-materials/james-coffey-what-breaks-if-we-turn-this-off.pdf)
 
-**Why graphs:** embedding a PDF and pulling the nearest chunk by cosine similarity loses relationships. GraphRAG and entity graphs keep them, and enforce them, which James called "keeping your agent honest." Korvik's predecessor worked out a way to shard graph databases so analytics stay fast without exploding compute.
+*Disclosure:* James knows the Corvic AI team and said so up front. The company is an early seed-stage startup. The host noted the talk sits near our no-pitch line and invited it anyway because James knows graphs and data.
 
-**The demo:** a made-up e-commerce architecture with browsing, checkout, a quote service, and pricing. Browsing can run off a cache for about 5 minutes; quoting needs pricing to be live. The question: **if pricing goes down, what breaks?** Korvik read the architecture diagram as an image, pulled out the entities and relationships into a native graph, and traced the outage path to customers. Browsing keeps working until the cache window runs out. **The direction of each dependency matters.** A similarity-only approach can get cause and effect backwards. James's personal agent built the demo over the weekend.
+**Why graphs:** embedding a PDF and pulling the nearest chunk by cosine similarity loses relationships. GraphRAG and entity graphs keep them, and enforce them, which James called "keeping your agent honest." Corvic's predecessor worked out a way to shard graph databases so analytics stay fast without exploding compute.
+
+**The demo:** a made-up e-commerce architecture with browsing, checkout, a quote service, and pricing. Browsing can run off a cache for about 5 minutes; quoting needs pricing to be live. The question: **if pricing goes down, what breaks?** Corvic read the architecture diagram as an image, pulled out the entities and relationships into a native graph, and traced the outage path to customers. Browsing keeps working until the cache window runs out. **The direction of each dependency matters.** A similarity-only approach can get cause and effect backwards. James's personal agent built the demo over the weekend.
 
 **The platform:** rooms for your data, live apps, chat history, templates and playbooks for repeatable processing, plus MCP access, data pipelines, embeddings, and clustering for people building their own context graphs.
 
-**Where it fits:** engineering prints, financial lineage, and any "prove the lineage" problem. James's background includes aviation parts traceability. In Q&A he gave the example of medical ontologies: linking conditions, genes, and medications so a physician or pharmacist can spot risky drug interactions. Closest comparisons are LlamaParse (mostly embeddings) and graph databases like Neo4j. Graphs still have the "hairball" visualization problem, but an agent querying through tools doesn't care what the graph looks like. James's honest advice: Korvik is strongest for quickly building graphs from images, PDFs, and tables, for agent-facing graph analytics, and for very large graphs. If your graph is small, something simpler is probably fine.
+**Where it fits:** engineering prints, financial lineage, and any "prove the lineage" problem. James's background includes aviation parts traceability. In Q&A he gave the example of medical ontologies: linking conditions, genes, and medications so a physician or pharmacist can spot risky drug interactions. Closest comparisons are LlamaParse (mostly embeddings) and graph databases like Neo4j. Graphs still have the "hairball" visualization problem, but an agent querying through tools doesn't care what the graph looks like. James's honest advice: Corvic is strongest for quickly building graphs from images, PDFs, and tables, for agent-facing graph analytics, and for very large graphs. If your graph is small, something simpler is probably fine.
 
-**Offer:** if you want to try Korvik on your project, write it up, or demo it, talk to James. Credits are possible, but the terms aren't final.
+**Offer:** if you want to try Corvic on your project, write it up, or demo it, talk to James. Credits are possible, but the terms aren't final.
 
 ## Closing
 
@@ -157,8 +159,9 @@ That was a wrap on our first Monday-night AIMUG, noted by our CGCS host. Thanks 
   - [Joseph Fluckiger — GrokBot and Jev](https://share.fluckiger.org/aimug)
   - [Jeff Linwood — Agent evals with Harbor](https://www.jefflinwood.com/2026/10/agent-evals-with-harbor/)
   - [Jake Cukjati — Forge with Rigor](https://byteofcode.io/presentations/forge-with-rigor/)
+  - [What Breaks If We Turn This Off? (James Coffey / Corvic)](/docs/oct-2026/presentation-materials/james-coffey-what-breaks-if-we-turn-this-off.pdf)
 - **Recording:** Recording will be linked here once archived.
-- **Follow-ups we heard:** Colin will test PII and injection protections after routing. Joseph will prototype JEV on fraud workflows. Jeff will ship the short-instruction Mac app update. Jake will open-source his skills and CLI once the test harness is solid. James will set up Korvik demo access.
+- **Follow-ups we heard:** Colin will test PII and injection protections after routing. Joseph will prototype JEV on fraud workflows. Jeff will ship the short-instruction Mac app update. Jake will open-source his skills and CLI once the test harness is solid. James will set up Corvic demo access.
 - **Office hours:** Tuesdays, 5–6 PM CT. Link in Discord.
 
 ## Join in
