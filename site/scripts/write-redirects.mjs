@@ -2,6 +2,11 @@
 // with and without the trailing slash, then remove moves.json. Run from site/.
 import fs from 'node:fs';
 
+if (!fs.existsSync('dist/moves.json')) {
+  // Already run on this dist (it deletes moves.json); a fresh astro build writes it again.
+  if (fs.readFileSync('dist/_redirects', 'utf8').includes('scripts/write-redirects.mjs')) process.exit(0);
+  throw new Error('dist/moves.json is missing: run astro build first');
+}
 const pairs = JSON.parse(fs.readFileSync('dist/moves.json', 'utf8'));
 const lines = pairs.flatMap(([from, to]) => {
   const bare = from.replace(/\/$/, '');

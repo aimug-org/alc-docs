@@ -60,6 +60,10 @@ export async function posts(): Promise<Post[]> {
 
 // Notes pages that are a night's overview but aren't named index.
 const OVERVIEWS = new Set(['oct-2024/introduction-to-110', 'dec-2024/showcase-and-mixer']);
+// A month's overview and its talk-list section pages move to the night; other nested index pages are guides and stay.
+const overview = (id: string) => OVERVIEWS.has(id) || /^[a-z]{3}-\d{4}\/(index|(lightning-talks|thunderstorm-talks|full-sessions)\/index)$/.test(id);
+// Shared folders whose notes say which night they belong to, where the talk count would pick the other one.
+const OWNERS: Record<string, string> = { 'jan-2024': '2024-01-17' };
 export const nightUrl = (id: string) => `/events/${id}/`;
 const folderOf = (e: Event) => e.data.docs?.replace(/^\/docs\/|\/$/g, '');
 
@@ -79,13 +83,14 @@ async function computeMoves(): Promise<Moves> {
     const f = folderOf(e);
     if (f && (!owner.has(f) || score(e) > score(owner.get(f)!))) owner.set(f, e);
   }
+  for (const [f, id] of Object.entries(OWNERS)) owner.set(f, events.find((e) => e.id === id)!);
   const nights = events.filter((e) => count(e.id) > 0 || e.data.recap || owner.get(folderOf(e) ?? '') === e || (e.data.end >= now && e.data.kind !== 'hacky-hour'));
   const docs = new Map<string, string>();
   for (const t of live) if (t.data.writeup) docs.set(t.data.writeup, `/talks/${t.id}/`);
   for (const d of await getCollection('docs')) {
     const ev = owner.get(d.id.split('/')[0]);
     if (docs.has(d.id) || !ev) continue;
-    if (/(^|\/)(index|README)$/.test(d.id) || OVERVIEWS.has(d.id)) docs.set(d.id, nightUrl(ev.id));
+    if (overview(d.id)) docs.set(d.id, nightUrl(ev.id));
   }
   const recaps = new Map<string, string>();
   for (const e of nights) if (e.data.recap) recaps.set(e.data.recap, nightUrl(e.id));

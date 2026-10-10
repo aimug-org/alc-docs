@@ -18,10 +18,11 @@ const upcoming = e.end >= now;
 const { owner, recaps } = await moves();
 
 const talks = [...(await publicTalks()), ...(await upcomingTalks())].filter((t) => t.data.event === ev.id);
-// The full-night upload shows as the night's recording, not as one more talk: talks are cut from it, or it has chapters
-// while the night's talks also came out on their own.
+// The full-night upload shows as the night's recording, not as one more talk: talks are cut from it, or it runs over
+// an hour with chapters while the night's talks also came out on their own.
 const isFull = (t: (typeof talks)[number]) => t.data.start === undefined &&
-  (talks.some((s) => s.data.start !== undefined && s.data.youtubeId === t.data.youtubeId) || (t.data.chapters.length >= 2 && talks.length >= 3));
+  (talks.some((s) => s.data.start !== undefined && s.data.youtubeId === t.data.youtubeId) ||
+    (t.data.chapters.length >= 2 && (t.data.duration ?? 0) >= 3600 && talks.length >= 3));
 const full = talks.filter(isFull);
 const cards = talks.filter((t) => !isFull(t)).sort((a, b) => (a.data.start ?? 1e9) - (b.data.start ?? 1e9) || +a.data.date - +b.data.date);
 

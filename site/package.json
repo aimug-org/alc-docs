@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "node scripts/check-data.mjs && node scripts/check-releases.mjs && astro check && astro build && node scripts/write-redirects.mjs && node scripts/check-urls.mjs && pagefind --site dist",
+    "build": "node scripts/check-data.mjs && node scripts/check-releases.mjs && astro check && astro build && node scripts/write-redirects.mjs && pagefind --site dist && node scripts/check-urls.mjs",
     "preview": "wrangler pages dev dist",
     "check": "astro check"
   },

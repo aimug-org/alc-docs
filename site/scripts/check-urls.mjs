@@ -50,4 +50,9 @@ for (const [t, froms] of broken) {
   console.log(`  ${mine(t) ? '' : '(not mine) '}${t}  <- ${f.slice(0, 3).join(', ')}${f.length > 3 ? ` and ${f.length - 3} more` : ''}`);
 }
 
-process.exit(missing.length ? 1 : 0);
+// Every internal redirect must land on a built page (that also rules out loops).
+const deadEnds = rules.filter((r) => r.to.startsWith('/') && !r.to.includes('*') && !r.to.includes(':') && !built(r.to.split(/[?#]/)[0]));
+console.log(`\nRedirects to pages that aren't built: ${deadEnds.length}`);
+for (const r of deadEnds) console.log(`  ${r.from} -> ${r.to}`);
+
+process.exit(missing.length || deadEnds.length || broken.size ? 1 : 0);
