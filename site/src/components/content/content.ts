@@ -58,8 +58,6 @@ export async function posts(): Promise<Post[]> {
 /* Nights: one page per meetup night at /events/<id>/. A talk's write-up shows on its talk page, and a night's notes
    overview and recap show on its night page; the old URLs redirect (see scripts/write-redirects.mjs). */
 
-// ponytail: Colin's 2026 recaps and notes stay where they are until the local legal-tech screen passes them; remove an id once it does.
-export const HELD = new Set(['2026-05-06', '2026-10-05']);
 // Notes pages that are a night's overview but aren't named index.
 const OVERVIEWS = new Set(['oct-2024/introduction-to-110', 'dec-2024/showcase-and-mixer']);
 export const nightUrl = (id: string) => `/events/${id}/`;
@@ -86,11 +84,11 @@ async function computeMoves(): Promise<Moves> {
   for (const t of live) if (t.data.writeup) docs.set(t.data.writeup, `/talks/${t.id}/`);
   for (const d of await getCollection('docs')) {
     const ev = owner.get(d.id.split('/')[0]);
-    if (docs.has(d.id) || !ev || HELD.has(ev.id)) continue;
+    if (docs.has(d.id) || !ev) continue;
     if (/(^|\/)(index|README)$/.test(d.id) || OVERVIEWS.has(d.id)) docs.set(d.id, nightUrl(ev.id));
   }
   const recaps = new Map<string, string>();
-  for (const e of nights) if (e.data.recap && !HELD.has(e.id)) recaps.set(e.data.recap, nightUrl(e.id));
+  for (const e of nights) if (e.data.recap) recaps.set(e.data.recap, nightUrl(e.id));
   return { nights, owner, docs, recaps };
 }
 
