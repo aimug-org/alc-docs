@@ -3,8 +3,10 @@
   "speakers": [
     "paul-phelps"
   ],
-  "date": "2025-11-14",
+  "date": "2025-11-05",
+  "event": "2025-11-05",
   "youtubeId": "w4oFDqL0MO0",
+  "publishAt": "2025-11-14T12:00:00-05:00",
   "duration": 987,
   "summary": "Paul Phelps (experienced project & product manager) explains why AI projects stall in organizations, which legacy PM assumptions break for AI, and practical patterns to increase the odds of actually getting AI into production.",
   "topics": [],

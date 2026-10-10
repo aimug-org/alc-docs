@@ -3,8 +3,10 @@
   "speakers": [
     "colin-mcnamara"
   ],
-  "date": "2025-09-18",
+  "date": "2025-09-10",
+  "event": "2025-09-10",
   "youtubeId": "N_WTAYVderI",
+  "publishAt": "2025-09-18T12:00:00-05:00",
   "duration": 1328,
   "topics": [
     "LangGraph"

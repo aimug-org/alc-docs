@@ -1,7 +1,296 @@
 # Every AIMUG event, oldest first. The home page and header show the next one that hasn't ended.
 # Times carry their UTC offset: CDT is -05:00, CST is -06:00. Give lineupDate a time too: a bare date is UTC midnight, the evening before in Austin.
-# Copied from the old events page. Where the page gave no end time, the end follows its standard
+# 2023-2024 from the Meetup group's past events; 2025 on copied from the old events page. Where the page gave no end time, the end follows its standard
 # schedule (6:00 to 8:30 PM, then The Tavern for 2025; 6:00 to 9:00 PM for 2026).
+
+- id: "2023-10-12"
+  title: LangChain 101
+  start: 2023-10-12T18:00:00-05:00
+  end: 2023-10-12T20:00:00-05:00
+  venue: { name: "1204 San Antonio St", address: "1204 San Antonio St, Austin, TX" } # Meetup gives only the address; decks credit Amini & Conant (Lynx Ventures in Jul and Aug 2024)
+  online: false
+  docs: /docs/oct-2023/
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/296499443/" }
+  summary: "First in-person LangChain 101 meetup, with a mixer, news and a hands-on lab using the ChatGPT API and a custom web interface."
+
+- id: "2023-11-01"
+  title: LangChain 101 Live Remote Recap
+  start: 2023-11-01T19:00:00-05:00
+  end: 2023-11-01T21:00:00-05:00
+  venue: { name: Online }
+  docs: /docs/nov-2023/
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/296856859/" }
+  summary: "Live remote recap of the LangChain 101 lecture and lab for people who could not attend in person."
+
+- id: "2023-11-14"
+  title: "LangChain 102: LangServe and LangSmith"
+  start: 2023-11-14T18:00:00-06:00
+  end: 2023-11-14T21:00:00-06:00
+  venue: { name: "1204 San Antonio St", address: "1204 San Antonio St, Austin, TX" } # Meetup gives only the address; decks credit Amini & Conant (Lynx Ventures in Jul and Aug 2024)
+  online: false
+  docs: /docs/nov-2023/
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/297140581/" }
+  summary: "Mixer, a community showcase of a local Mistral 7b model, and a lecture and lab on LangServe and LangSmith."
+
+- id: "2023-11-30"
+  title: Mixer at Central Machine Works
+  kind: hacky-hour
+  start: 2023-11-30T17:30:00-06:00
+  end: 2023-11-30T19:30:00-06:00
+  venue: { name: "Central Machine Works", address: "4824 E Cesar Chavez St, Austin, TX" }
+  online: false
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/297407244/" }
+  summary: "Casual end-of-year mixer for AI and LLM enthusiasts to network and swap project ideas."
+
+- id: "2023-12-14"
+  title: "LangChain 103: AI Web Architecture"
+  start: 2023-12-14T18:00:00-06:00
+  end: 2023-12-14T21:00:00-06:00
+  venue: { name: "1204 San Antonio St", address: "1204 San Antonio St, Austin, TX" } # Meetup gives only the address; decks credit Amini & Conant (Lynx Ventures in Jul and Aug 2024)
+  online: false
+  docs: /docs/dec-2023/
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/297837958/" }
+  summary: "News, two member showcases and a lab on building a multi-tier AI web app with Streamlit, LangServe and Docker."
+
+- id: "2024-01-10"
+  title: LangChain 101 Virtual Edition
+  start: 2024-01-10T19:00:00-06:00
+  end: 2024-01-10T21:00:00-06:00
+  venue: { name: Online }
+  docs: /docs/jan-2024/
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/298154332/" }
+  summary: "Virtual kickoff for 2024 with the LangChain basics and hands-on labs from a first agent to a local-LLM chatbot."
+
+- id: "2024-01-17"
+  title: Turbocharge Your AI with RAG
+  start: 2024-01-17T18:00:00-06:00
+  end: 2024-01-17T21:00:00-06:00
+  venue: { name: "1204 San Antonio St", address: "1204 San Antonio St, Austin, TX" } # Meetup gives only the address; decks credit Amini & Conant (Lynx Ventures in Jul and Aug 2024)
+  online: false
+  docs: /docs/jan-2024/
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/298155051/" }
+  summary: "In-person evening with a mixer, news and labs on retrieval augmented generation, including a LangServe and Docker deployment."
+
+- id: "2024-02-07"
+  title: Turbocharging RAG with Google Drive (Virtual)
+  start: 2024-02-07T19:00:00-06:00
+  end: 2024-02-07T21:00:00-06:00
+  venue: { name: Online }
+  docs: /docs/feb-2024/
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/298740501/" }
+  summary: "Virtual workshop with four labs on RAG over Google Drive data, from Colab to Docker, multimodal Ollama and Pandas."
+
+- id: "2024-02-21"
+  title: Exploring LangGraph
+  start: 2024-02-21T18:00:00-06:00
+  end: 2024-02-21T21:00:00-06:00
+  venue: { name: "1204 San Antonio St", address: "1204 San Antonio St, Austin, TX" } # Meetup gives only the address; decks credit Amini & Conant (Lynx Ventures in Jul and Aug 2024)
+  online: false
+  docs: /docs/feb-2024/
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/299060502/" }
+  summary: "Mixer on the patio, then LangGraph theory and labs on agent supervisors, multi-agent work, a local RAG agent and a parts-list analyzer."
+
+- id: "2024-02-28"
+  title: Hacky Hour
+  kind: hacky-hour
+  start: 2024-02-28T18:00:00-06:00
+  end: 2024-02-28T20:00:00-06:00
+  venue: { name: "Central Machine Works", address: "4824 E Cesar Chavez St, Austin, TX" }
+  online: false
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/299335712/" }
+  summary: "Casual hacky hour for networking and working on LangChain projects together."
+
+- id: "2024-03-07"
+  title: LangGraph Virtual Meetup
+  start: 2024-03-07T19:00:00-06:00
+  end: 2024-03-07T21:00:00-06:00
+  venue: { name: Online }
+  docs: /docs/mar-2024/
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/299537118/" }
+  summary: "Virtual session on LangGraph cyclical graphs with labs on a local RAG agent and a manufacturing parts-list analyzer."
+
+- id: "2024-04-03"
+  title: Hosted GPUs, AI Imagery and AI Gaming
+  start: 2024-04-03T18:00:00-05:00
+  end: 2024-04-03T21:00:00-05:00
+  venue: { name: "1204 San Antonio St", address: "1204 San Antonio St, Austin, TX" } # Meetup gives only the address; decks credit Amini & Conant (Lynx Ventures in Jul and Aug 2024)
+  docs: /docs/apr-2024/
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/299824423/" }
+  summary: "Hybrid night with a 101 quickstart and talks on hosted GPU access, AI image generation and LLM-driven NPCs in games."
+
+- id: "2024-04-17"
+  title: Hacky Hour
+  kind: hacky-hour
+  start: 2024-04-17T18:00:00-05:00
+  end: 2024-04-17T20:00:00-05:00
+  venue: { name: "Central Machine Works", address: "4824 E Cesar Chavez St, Austin, TX" }
+  online: false
+  docs: /docs/apr-2024/
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/299873427/" }
+  summary: "Casual hacky hour with open lab time and networking."
+
+- id: "2024-05-01"
+  title: "May Showcase: AI Data Scientist and Panel"
+  start: 2024-05-01T18:00:00-05:00
+  end: 2024-05-01T21:00:00-05:00
+  venue: { name: "1204 San Antonio St", address: "1204 San Antonio St, Austin, TX" } # Meetup gives only the address; decks credit Amini & Conant (Lynx Ventures in Jul and Aug 2024)
+  docs: /docs/may-2024/
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/300590454/" }
+  summary: "Hybrid night with a quickstart, an AI data scientist demo and lab, a lessons-learned panel and voice-controlled crypto agents."
+
+- id: "2024-05-15"
+  title: Hacky Hour
+  kind: hacky-hour
+  start: 2024-05-15T18:00:00-05:00
+  end: 2024-05-15T20:00:00-05:00
+  venue: { name: "Lustre Pearl East", address: "114 Linden St, Austin, TX" }
+  online: false
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/300593457/" }
+  summary: "Casual hacky hour for networking and project collaboration."
+
+- id: "2024-05-29"
+  title: "May 29 Showcase: LangGraph Reporting and WebRTC"
+  start: 2024-05-29T18:00:00-05:00
+  end: 2024-05-29T21:00:00-05:00
+  venue: { name: "1204 San Antonio St", address: "1204 San Antonio St, Austin, TX" } # Meetup gives only the address; decks credit Amini & Conant (Lynx Ventures in Jul and Aug 2024)
+  docs: /docs/may-2024/
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/301087679/" }
+  summary: "Hybrid night with a mixer exercise, a LangGraph data scientist report writer and a voice-enabled WebRTC agent."
+
+- id: "2024-06-19"
+  title: Hacky Hour
+  kind: hacky-hour
+  start: 2024-06-19T18:00:00-05:00
+  end: 2024-06-19T20:00:00-05:00
+  venue: { name: "Lustre Pearl East", address: "114 Linden St, Austin, TX" }
+  online: false
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/301087611/" }
+  summary: "Casual hacky hour with open lab time and networking."
+
+- id: "2024-07-10"
+  title: "July Showcase: NVIDIA Contest Entries"
+  start: 2024-07-10T19:00:00-05:00
+  end: 2024-07-10T22:00:00-05:00
+  venue: { name: "1204 San Antonio St", address: "1204 San Antonio St, Austin, TX" } # Meetup gives only the address; decks credit Amini & Conant (Lynx Ventures in Jul and Aug 2024)
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/301903091/" }
+  summary: "Hybrid night with a quickstart and showcases of NVIDIA and LangChain contest entries, then a mixer."
+
+- id: "2024-07-24"
+  title: Hacky Hour
+  kind: hacky-hour
+  start: 2024-07-24T18:00:00-05:00
+  end: 2024-07-24T20:00:00-05:00
+  venue: { name: "Lustre Pearl East", address: "114 Linden St, Austin, TX" }
+  online: false
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/302162630/" }
+  summary: "Casual hacky hour for networking and project collaboration."
+
+- id: "2024-08-07"
+  title: August Showcase
+  start: 2024-08-07T18:15:00-05:00
+  end: 2024-08-07T21:15:00-05:00
+  venue: { name: "1204 San Antonio St", address: "1204 San Antonio St, Austin, TX" } # Meetup gives only the address; decks credit Amini & Conant (Lynx Ventures in Jul and Aug 2024)
+  docs: /docs/jun-2024/
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/302530348/" }
+  summary: "Hybrid night with a quickstart and member showcases on GitHub code generation, Python tool calling and a financial analysis experiment."
+
+- id: "2024-08-21"
+  title: Hacky Hour
+  kind: hacky-hour
+  start: 2024-08-21T18:00:00-05:00
+  end: 2024-08-21T20:00:00-05:00
+  venue: { name: "Skinny's Off Track Bar", address: "1806 E 12th St, Austin, TX" }
+  online: false
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/302580770/" }
+  summary: "Casual hacky hour for networking and project collaboration."
+
+- id: "2024-09-11"
+  title: September Showcase and Mixer
+  start: 2024-09-11T18:00:00-05:00
+  end: 2024-09-11T21:00:00-05:00
+  venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  docs: /docs/sep-2024/
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/303065879/" }
+  summary: "Hybrid showcase night with a 101 quickstart and member demos on API automation, sales call analytics and agents on Cloudflare."
+
+- id: "2024-09-25"
+  title: "Hacky Hour: Claude-Dev"
+  kind: hacky-hour
+  start: 2024-09-25T18:00:00-05:00
+  end: 2024-09-25T20:00:00-05:00
+  venue: { name: "Skinny's Off Track Bar", address: "1806 E 12th St, Austin, TX" }
+  online: false
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/303396926/" }
+  summary: "Hacky hour focused on AI-assisted coding with Claude-Dev."
+
+- id: "2024-10-02"
+  title: October Showcase and Panel
+  start: 2024-10-02T18:00:00-05:00
+  end: 2024-10-02T21:00:00-05:00
+  venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  docs: /docs/oct-2024/
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/303569533/" }
+  summary: "Hybrid night with a 101 quickstart, showcases of a search clone and email RAG, and a panel on AI-accelerated software development."
+
+- id: "2024-10-16"
+  title: Hacky Hour
+  kind: hacky-hour
+  start: 2024-10-16T18:00:00-05:00
+  end: 2024-10-16T20:00:00-05:00
+  venue: { name: "Skinny's Off Track Bar", address: "1806 E 12th St, Austin, TX" }
+  online: false
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/303825248/" }
+  summary: "Casual hacky hour for open lab time and networking."
+
+- id: "2024-11-07"
+  title: MLOps World Community Corner
+  kind: special
+  start: 2024-11-07T09:00:00-06:00 # time assumed (conference days Nov 7-8)
+  end: 2024-11-07T17:00:00-06:00 # time assumed
+  venue: { name: "Renaissance Austin Hotel" } # per docs nov-2024/MLOPS-World-GenAI-Summit.md
+  online: false
+  docs: /docs/nov-2024/
+  summary: "Community members presented projects in the AIMUG Community Corner at the MLOps World and Generative AI World conference."
+
+- id: "2024-11-13"
+  title: November Showcase and 2025 Planning
+  start: 2024-11-13T18:00:00-06:00
+  end: 2024-11-13T21:00:00-06:00
+  venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" } # per Meetup description
+  docs: /docs/nov-2024/
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/304169365/" }
+  summary: "Hybrid night with showcases on Open WebUI to LangGraph pipelines and Claude computer use, plus a group workshop on 2025 topics."
+
+- id: "2024-11-20"
+  title: Hacky Hour
+  kind: hacky-hour
+  start: 2024-11-20T18:00:00-06:00
+  end: 2024-11-20T20:00:00-06:00
+  venue: { name: "Kinda Tropical", address: "3501 E 7th St, Austin, TX" }
+  online: false
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/304170533/" }
+  summary: "Casual hacky hour for experiments, brainstorming and networking."
+
+- id: "2024-12-04"
+  title: Hacky Hour
+  kind: hacky-hour
+  start: 2024-12-04T18:00:00-06:00
+  end: 2024-12-04T20:00:00-06:00
+  venue: { name: "Kinda Tropical", address: "3501 E 7th St, Austin, TX" }
+  online: false
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/304172493/" }
+  summary: "Holiday hacky hour for experiments, brainstorming and networking."
+
+- id: "2024-12-19"
+  title: December Showcase and Mixer
+  start: 2024-12-19T18:00:00-06:00
+  end: 2024-12-19T21:00:00-06:00
+  venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" } # per Meetup description
+  docs: /docs/dec-2024/
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/304169482/" }
+  summary: "Year-end hybrid night with a lab on edge computing with Gradio and Cloudflare, a full-stack app built in five days and community updates."
 
 - id: "2025-01-08"
   title: January Monthly Showcase

@@ -28,7 +28,7 @@ const parent = segment ? sameVideo.find((t) => t.data.start === undefined) : und
 const segments = sameVideo.filter((t) => t.data.start !== undefined).sort((a, b) => a.data.start! - b.data.start!);
 const sameNight = [
   ...segments,
-  ...(d.event ? [...(await publicTalks()), ...(await upcomingTalks())].filter((t) => t.data.event === d.event && t.id !== talk.id && !segments.includes(t)) : []),
+  ...(d.event ? [...(await publicTalks()), ...(await upcomingTalks())].filter((t) => t.data.event === d.event && t.id !== talk.id && !segments.some((x) => x.id === t.id)) : []),
 ];
 const shown = new Set([talk.id, ...sameNight.map((t) => t.id)]);
 // Related: other public talks that share a topic (any position), ranked by shared topics, then same speaker, then closest date.
@@ -52,7 +52,7 @@ const ev = d.event ? (await getCollection('events')).find((e) => e.id === d.even
 const stub = !!d.backfill;
 const showTranscript = !d.backfill && d.transcript.length > 0;
 // A full night with no chapters of its own gets one per segment.
-const chapters = d.chapters.length ? d.chapters : segments.map((t) => ({ t: t.data.start!, title: t.data.title }));
+const chapters = d.chapters.length || segment ? d.chapters : segments.map((t) => ({ t: t.data.start!, title: t.data.title }));
 const recent = stub
   ? (await publicTalks()).filter((t) => !shown.has(t.id) && !more.some((m) => m.id === t.id)).sort((a, b) => +b.data.date - +a.data.date).slice(0, 3)
   : [];

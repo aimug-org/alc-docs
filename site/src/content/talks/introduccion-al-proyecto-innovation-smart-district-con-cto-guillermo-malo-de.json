@@ -1,8 +1,11 @@
 {
   "title": "Introducción al proyecto Innovation Smart District con CTO Guillermo Malo de Molina",
-  "speakers": [],
-  "date": "2026-02-10",
+  "speakers": [
+    "guillermo-malo-de-molina"
+  ],
+  "date": "2026-01-21",
   "youtubeId": "GoomWjVHYK8",
+  "publishAt": "2026-02-10T12:00:00-05:00",
   "duration": 943,
   "summary": "El director de tecnología, Guillermo Malo de Molina, presentará el tema Innovation Smart District durante la reunión de Panama AI/MUG el 21 de enero de 2026.",
   "topics": [],

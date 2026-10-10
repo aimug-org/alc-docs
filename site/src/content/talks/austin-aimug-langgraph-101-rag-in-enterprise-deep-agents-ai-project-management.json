@@ -1,13 +1,41 @@
 {
   "title": "Austin AIMUG: LangGraph 101, RAG in Enterprise, Deep Agents & AI Project Management (Nov 2025)",
   "speakers": [],
-  "date": "2025-11-06",
+  "date": "2025-11-05",
+  "event": "2025-11-05",
   "youtubeId": "JOiUYZhGhH8",
+  "publishAt": "2025-11-06T12:00:00-05:00",
   "duration": 5924,
   "topics": [
     "LangGraph",
     "RAG",
     "Agents"
+  ],
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Welcome and news"
+    },
+    {
+      "t": 456,
+      "title": "Intro to LangGraph: Controllability, Persistence & Human-in-the-Loop"
+    },
+    {
+      "t": 1820,
+      "title": "RAG on LangGraph: Avoiding Silent Failures, State vs. Memory & a Travel-Agent Demo (Anupama Garani)"
+    },
+    {
+      "t": 3056,
+      "title": "Deep Agents: Deep Research, Subagents & Middleware (Collier King)"
+    },
+    {
+      "t": 4848,
+      "title": "AI Project Management: Shipping AI into Production (Paul Phelps)"
+    },
+    {
+      "t": 5834,
+      "title": "Q&A and wrap-up"
+    }
   ],
   "backfill": true
 }

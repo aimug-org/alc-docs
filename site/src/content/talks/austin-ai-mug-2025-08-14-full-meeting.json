@@ -1,12 +1,32 @@
 {
   "title": "Austin AI MUG 2025 08 14 full meeting",
   "speakers": [],
-  "date": "2025-08-27",
+  "date": "2025-08-14",
+  "event": "2025-08-14",
   "youtubeId": "4jqNhJgxhFo",
+  "publishAt": "2025-08-27T12:00:00-05:00",
   "duration": 5410,
   "topics": [
     "LangGraph",
     "Coding agents"
+  ],
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Welcome and news"
+    },
+    {
+      "t": 1278,
+      "title": "Enabling A2A on Astro Blogs: Results"
+    },
+    {
+      "t": 2505,
+      "title": "Claude Code - Nate (Nate Little)"
+    },
+    {
+      "t": 5206,
+      "title": "Q&A and wrap-up"
+    }
   ],
   "backfill": true
 }

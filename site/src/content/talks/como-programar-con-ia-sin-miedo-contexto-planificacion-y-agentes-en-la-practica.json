@@ -1,8 +1,11 @@
 {
   "title": "Cómo Programar con IA sin Miedo: Contexto, Planificación y Agentes en la Práctica",
-  "speakers": [],
-  "date": "2026-02-17",
+  "speakers": [
+    "andy-caballero"
+  ],
+  "date": "2026-01-21",
   "youtubeId": "KWAIN3wVMA0",
+  "publishAt": "2026-02-17T12:00:00-05:00",
   "duration": 1080,
   "topics": [
     "Agents"

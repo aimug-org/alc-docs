@@ -3,9 +3,10 @@
   "speakers": [
     "sal-castoro"
   ],
-  "date": "2025-09-30",
+  "date": "2025-09-10",
   "event": "2025-09-10",
   "youtubeId": "HI8PBSPr6Qk",
+  "publishAt": "2025-09-30T12:00:00-05:00",
   "duration": 953,
   "summary": "In this session from the Austin AI Middleware Users Group (AIMUG) September Showcase, Sal Castoro explores the power of Claude Code and how to design custom agents for advanced development workflows.",
   "topics": [
@@ -354,11 +355,11 @@
       "text": ">> right, Jeff? Y I heard it from >> it's fun."
     }
   ],
-  "backfill": true,
   "links": [
     {
       "label": "Slides",
       "url": "https://github.com/aimug-org/austin_langchain/blob/main/resources/presentations/2025-09-10-Austin-LangChain-Claude-Code-Custom-Agents.pdf"
     }
-  ]
+  ],
+  "backfill": true
 }

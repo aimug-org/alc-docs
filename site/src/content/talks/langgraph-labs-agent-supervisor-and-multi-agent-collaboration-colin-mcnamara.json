@@ -1,0 +1,17 @@
+{
+  "title": "LangGraph Labs: Agent Supervisor and Multi-Agent Collaboration",
+  "speakers": [
+    "colin-mcnamara"
+  ],
+  "date": "2024-03-07",
+  "event": "2024-03-07",
+  "youtubeId": "c-7xpl7ahZw",
+  "duration": 3030,
+  "start": 0,
+  "end": 3030,
+  "topics": [
+    "LangGraph",
+    "Agents"
+  ],
+  "backfill": true
+}

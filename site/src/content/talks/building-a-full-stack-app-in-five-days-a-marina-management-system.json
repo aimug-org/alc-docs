@@ -3,8 +3,10 @@
   "speakers": [
     "riccardo-pirruccio"
   ],
-  "date": "2024-12-24",
+  "date": "2024-12-19",
+  "event": "2024-12-19",
   "youtubeId": "a4VnImAMhLQ",
+  "publishAt": "2024-12-24T12:00:00-05:00",
   "duration": 2313,
   "summary": "Explore the fascinating world of AI-powered development with Ricky Pirruccio at the Austin LangChain December Meeting!",
   "topics": [],

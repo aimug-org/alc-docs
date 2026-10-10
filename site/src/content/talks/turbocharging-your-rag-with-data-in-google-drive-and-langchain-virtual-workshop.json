@@ -1,11 +1,39 @@
 {
   "title": "Turbocharging Your RAG with Data in Google Drive and LangChain: Virtual Workshop",
   "speakers": [],
-  "date": "2024-02-21",
+  "date": "2024-02-07",
+  "event": "2024-02-07",
   "youtubeId": "ZQnOEPArIcI",
+  "publishAt": "2024-02-21T12:00:00-05:00",
   "duration": 7181,
   "topics": [
     "RAG"
+  ],
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Welcome and news"
+    },
+    {
+      "t": 841,
+      "title": "RAG Lab 1: A Basic RAG Pipeline"
+    },
+    {
+      "t": 1584,
+      "title": "RAG Lab 2: Microservices with Docker and a Google Drive Loader"
+    },
+    {
+      "t": 3244,
+      "title": "RAG Lab 3: Multimodal RAG with Ollama"
+    },
+    {
+      "t": 4673,
+      "title": "RAG Lab 4: Pandas DataFrame Agents"
+    },
+    {
+      "t": 6632,
+      "title": "Q&A and wrap-up"
+    }
   ],
   "backfill": true
 }

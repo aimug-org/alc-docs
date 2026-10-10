@@ -1,9 +1,29 @@
 {
   "title": "LangChain 101: Austin LangChain Virtual Edition Kickoff 2024",
   "speakers": [],
-  "date": "2024-01-12",
+  "date": "2024-01-10",
+  "event": "2024-01-10",
   "youtubeId": "P3DGZvuSdeE",
+  "publishAt": "2024-01-12T12:00:00-05:00",
   "duration": 6521,
   "topics": [],
+  "chapters": [
+    {
+      "t": 0,
+      "title": "LangChain 101, Lab 1: Introduction to LangChain"
+    },
+    {
+      "t": 3130,
+      "title": "LangChain 101, Labs 2 and 3: Chat Models and Streamlit Interfaces"
+    },
+    {
+      "t": 4800,
+      "title": "LangChain 101, Lab 4: A Local LLM with Mistral and Streamlit"
+    },
+    {
+      "t": 6030,
+      "title": "Q&A and wrap-up"
+    }
+  ],
   "backfill": true
 }

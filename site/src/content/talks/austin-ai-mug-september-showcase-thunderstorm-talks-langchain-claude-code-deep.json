@@ -1,12 +1,44 @@
 {
   "title": "Austin AI MUG: September Showcase | Thunderstorm Talks (LangChain, Claude Code, Deep Agents & More)",
   "speakers": [],
-  "date": "2025-09-11",
+  "date": "2025-09-10",
+  "event": "2025-09-10",
   "youtubeId": "ztp7JNP-C0I",
+  "publishAt": "2025-09-11T12:00:00-05:00",
   "duration": 5815,
   "topics": [
     "Coding agents",
     "Agents"
+  ],
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Welcome and news"
+    },
+    {
+      "t": 592,
+      "title": "LangChain & LangGraph 1.0 Alpha Update"
+    },
+    {
+      "t": 1916,
+      "title": "Claude Code & Custom Agents (Sal Castoro)"
+    },
+    {
+      "t": 2853,
+      "title": "Deep Agents Architecture (Collier King)"
+    },
+    {
+      "t": 3757,
+      "title": "Rosie the Robot: Desktop Automation with Agents (James Coffey)"
+    },
+    {
+      "t": 4774,
+      "title": "Streamlit for AI Dashboards (Jeff Linwood)"
+    },
+    {
+      "t": 5788,
+      "title": "Q&A and wrap-up"
+    }
   ],
   "backfill": true
 }

@@ -1,0 +1,16 @@
+{
+  "title": "LangChain 101, Lab 4: A Local LLM with Mistral and Streamlit",
+  "speakers": [
+    "karim-lalani"
+  ],
+  "date": "2024-01-10",
+  "event": "2024-01-10",
+  "youtubeId": "P3DGZvuSdeE",
+  "duration": 1230,
+  "start": 4800,
+  "end": 6030,
+  "topics": [
+    "Inference"
+  ],
+  "backfill": true
+}

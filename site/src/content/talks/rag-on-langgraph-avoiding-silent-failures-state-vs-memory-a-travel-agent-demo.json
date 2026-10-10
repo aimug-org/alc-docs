@@ -1,8 +1,12 @@
 {
   "title": "RAG on LangGraph: Avoiding Silent Failures, State vs. Memory & a Travel-Agent Demo",
-  "speakers": [],
-  "date": "2025-11-10",
+  "speakers": [
+    "anupama-garani"
+  ],
+  "date": "2025-11-05",
+  "event": "2025-11-05",
   "youtubeId": "5XKYweuFh9g",
+  "publishAt": "2025-11-10T12:00:00-05:00",
   "duration": 1253,
   "summary": "Anupama Garani (Pimco) walks through why many enterprise RAG projects fail, the critical difference between context, memory, and state, and how LangGraph helps prevent silent failures, plus a live travel-agent demo that shows state persistence in action.",
   "topics": [

@@ -1,9 +1,37 @@
 {
   "title": "2025 07 03 Austin AI MUG meeting full recording",
   "speakers": [],
-  "date": "2025-08-28",
+  "date": "2025-07-02",
+  "event": "2025-07-02",
   "youtubeId": "Gc5YB-G_Sx0",
+  "publishAt": "2025-08-28T12:00:00-05:00",
   "duration": 9439,
   "topics": [],
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Welcome and news"
+    },
+    {
+      "t": 1841,
+      "title": "Toolhouse Fastlane (lightning talk)"
+    },
+    {
+      "t": 2884,
+      "title": "CloudFlare Containers (Collier King)"
+    },
+    {
+      "t": 4012,
+      "title": "Cursor tips and tricks (Joseph Fluckiger)"
+    },
+    {
+      "t": 4863,
+      "title": "LangChain based mental health - Robert Davis - Sir Muzz"
+    },
+    {
+      "t": 7131,
+      "title": "AI Development: Advanced Workflow Lessons Learned (Ryan Booth)"
+    }
+  ],
   "backfill": true
 }

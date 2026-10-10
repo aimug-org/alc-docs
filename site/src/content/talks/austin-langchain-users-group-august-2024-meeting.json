@@ -1,9 +1,25 @@
 {
   "title": "Austin LangChain Users Group - August 2024 Meeting",
   "speakers": [],
-  "date": "2024-08-22",
+  "date": "2024-08-07",
+  "event": "2024-08-07",
   "youtubeId": "2PcmbU34yp0",
+  "publishAt": "2024-08-22T12:00:00-05:00",
   "duration": 7985,
   "topics": [],
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Welcome and news"
+    },
+    {
+      "t": 1850,
+      "title": "The AI Software Development Lifecycle: LangChain and GitHub Code Generation"
+    },
+    {
+      "t": 4400,
+      "title": "Tool Calling with Python: LLMs and Tool Use"
+    }
+  ],
   "backfill": true
 }

@@ -1,12 +1,32 @@
 {
   "title": "October 2024 Austin LangChain - Full meeting OutlookRAG Perplexity Clone Expert Panel",
   "speakers": [],
-  "date": "2024-10-21",
+  "date": "2024-10-02",
+  "event": "2024-10-02",
   "youtubeId": "1WYQNkNMMyg",
+  "publishAt": "2024-10-21T12:00:00-05:00",
   "duration": 4610,
   "topics": [
     "RAG",
     "Agents"
+  ],
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Welcome and news"
+    },
+    {
+      "t": 294,
+      "title": "10 24 2024 Austin LangChain Showcase OutlookRAG (Jackson Arnold, Cameron Rohn)"
+    },
+    {
+      "t": 2234,
+      "title": "10 24 2024 Austin LangChain Showcase Expert Panel (Karim Lalani, Robert Kessler, Jackson Arnold, Ryan Booth)"
+    },
+    {
+      "t": 4034,
+      "title": "10 24 2024 Austin LangChain Showcase Perplexity Clone (Saurabh Lal Saxena)"
+    }
   ],
   "backfill": true
 }

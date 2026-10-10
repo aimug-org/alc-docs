@@ -1,8 +1,12 @@
 {
   "title": "Intro to LangGraph: Controllability, Persistence & Human-in-the-Loop",
-  "speakers": [],
-  "date": "2025-11-07",
+  "speakers": [
+    "colin-mcnamara"
+  ],
+  "date": "2025-11-05",
+  "event": "2025-11-05",
   "youtubeId": "sAUdzFOVh28",
+  "publishAt": "2025-11-07T12:00:00-05:00",
   "duration": 1414,
   "topics": [
     "LangGraph"

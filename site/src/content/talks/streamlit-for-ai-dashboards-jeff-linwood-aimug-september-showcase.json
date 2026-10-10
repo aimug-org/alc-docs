@@ -3,9 +3,10 @@
   "speakers": [
     "jeff-linwood"
   ],
-  "date": "2025-09-30",
+  "date": "2025-09-10",
   "event": "2025-09-10",
   "youtubeId": "qoLINgx8edQ",
+  "publishAt": "2025-09-30T12:00:00-05:00",
   "duration": 1015,
   "summary": "In this beginner-friendly session from the Austin AI Middleware Users Group (AIMUG) September Showcase, Jeff Linwood demonstrates how to quickly build interactive dashboards using Streamlit, integrate LangChain, and chat with your data.",
   "topics": [],

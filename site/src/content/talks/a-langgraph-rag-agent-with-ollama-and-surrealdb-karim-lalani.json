@@ -1,0 +1,18 @@
+{
+  "title": "A LangGraph RAG Agent with Ollama and SurrealDB",
+  "speakers": [
+    "karim-lalani"
+  ],
+  "date": "2024-03-07",
+  "event": "2024-03-07",
+  "youtubeId": "c-7xpl7ahZw",
+  "duration": 3000,
+  "start": 3030,
+  "end": 6030,
+  "topics": [
+    "LangGraph",
+    "RAG",
+    "Inference"
+  ],
+  "backfill": true
+}

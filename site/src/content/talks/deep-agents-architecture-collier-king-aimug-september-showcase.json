@@ -3,9 +3,10 @@
   "speakers": [
     "collier-king"
   ],
-  "date": "2025-09-18",
+  "date": "2025-09-10",
   "event": "2025-09-10",
   "youtubeId": "q9uR4YD3I6E",
+  "publishAt": "2025-09-18T12:00:00-05:00",
   "duration": 921,
   "summary": "In this talk from the Austin AI Middleware Users Group (AIMUG) September Showcase, Collier King introduces Deep Agents, a batteries-included deep research framework inspired by Claude Code and built on top of LangGraph.",
   "topics": [
@@ -345,11 +346,11 @@
       "text": "[01:15:02:23 - 01:15:05:03] Colin McNamara Awesome. Well, thank you so much. Yep. [01:15:11:20 - 01:15:12:14] Colin McNamara And [01:15:12:14 - 01:15:12:14]"
     }
   ],
-  "backfill": true,
   "links": [
     {
       "label": "Slides",
       "url": "https://github.com/aimug-org/austin_langchain/blob/main/resources/presentations/2025-09-10%20Austin%20LangChain%20-%20DeepAgents.pdf"
     }
-  ]
+  ],
+  "backfill": true
 }

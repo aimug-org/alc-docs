@@ -3,8 +3,10 @@
   "speakers": [
     "karim-lalani"
   ],
-  "date": "2025-03-31",
+  "date": "2025-03-05",
+  "event": "2025-03-05",
   "youtubeId": "rq69zhxZS-8",
+  "publishAt": "2025-03-31T12:00:00-05:00",
   "duration": 3932,
   "summary": "Dive into the integration of advanced AI workflows with Karim Lalani as he explores the Model Context Protocol (MCP), OpenWeb UI pipelines, LangChain, and LangGraph, all designed to streamline everything from prompt refinement to image generation using ComfyUI’s API mode.",
   "topics": [

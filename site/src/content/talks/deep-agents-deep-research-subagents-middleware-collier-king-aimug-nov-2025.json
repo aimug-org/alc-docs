@@ -3,8 +3,10 @@
   "speakers": [
     "collier-king"
   ],
-  "date": "2025-11-12",
+  "date": "2025-11-05",
+  "event": "2025-11-05",
   "youtubeId": "cB9uiy5Tja0",
+  "publishAt": "2025-11-12T12:00:00-05:00",
   "duration": 1771,
   "topics": [
     "Agents"
@@ -627,11 +629,11 @@
       "text": "middleware and I gave it S3 middleware so it would be able to access stuff on S3. So um we could probably do a whole talk on just middleware. Anyway, thank you so much. Uh appreciate it."
     }
   ],
-  "backfill": true,
   "links": [
     {
       "label": "Repo",
       "url": "https://github.com/CollierKing/langchain-deepagents-examples/tree/main/examples/ai_theme_plays"
     }
-  ]
+  ],
+  "backfill": true
 }
