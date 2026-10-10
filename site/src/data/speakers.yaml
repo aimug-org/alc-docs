@@ -151,6 +151,7 @@
 - id: rob-whelan
   name: Rob Whelan
   links:
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/rob-whelan-036b905/" }
     - { label: GitHub, url: "https://github.com/robwhelan" }
 
 - id: robert-kessler
@@ -184,7 +185,15 @@
     - { label: GitHub, url: "https://github.com/mjaenvargas" }
 
 - id: victor-rodriguez
+  name: Victor Rodriguez
+
+- id: alejandro-mo
+  name: Alejandro Mo
+
+- id: victor-rodriguez-hypernova
   name: Victor Rodríguez
+  title: "Developer"
+  company: "Hypernova Labs"
 
 - id: max-phelps
   name: Max Phelps
