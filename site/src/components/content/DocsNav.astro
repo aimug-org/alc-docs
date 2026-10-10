@@ -1,0 +1,21 @@
+---
+import type { NavItem } from './content';
+
+interface Props { items: NavItem[]; current: string; depth?: number }
+const { items, current, depth = 0 } = Astro.props;
+const has = (i: NavItem): boolean => i.href === current || !!i.items?.some(has);
+---
+<ul class:list={['m-0 list-none p-0', depth > 0 && 'ml-3 border-l border-line pl-3']}>
+  {items.map((i, n) => (
+    <li>
+      {i.items ? (
+        <details open={(depth === 0 && n === 0) || has(i)}>
+          <summary class:list={['flex min-h-[44px] cursor-pointer items-center rounded-lg px-2 py-1.5 hover:text-gold', depth === 0 ? 'font-mono text-sm tracking-[0.1em] text-gold uppercase' : 'font-semibold text-text']}>{i.label}</summary>
+          <Astro.self items={i.items} current={current} depth={depth + 1} />
+        </details>
+      ) : (
+        <a href={i.href} aria-current={i.href === current ? 'page' : undefined} class:list={['flex min-h-[44px] items-center rounded-lg px-2 py-1.5 text-[15px] leading-snug no-underline', i.href === current ? 'bg-panel font-semibold text-gold' : 'text-soft hover:text-gold']}>{i.label}</a>
+      )}
+    </li>
+  ))}
+</ul>

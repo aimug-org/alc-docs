@@ -1,0 +1,19 @@
+---
+import Prose from '../components/events/Prose.astro';
+import { links } from '../data/site';
+---
+<Prose title="Subscription confirmed" lead="You're now subscribed to the AIMUG newsletter." noindex>
+  <p>Thank you for subscribing. You'll get about two emails a month:</p>
+  <ul>
+    <li><strong>Before each meetup:</strong> the date, the lineup and how to join, in person or on Zoom</li>
+    <li><strong>After it:</strong> the talks once they premiere, the recap and the next pitch deadline</li>
+  </ul>
+  <h2>Next steps</h2>
+  <ul>
+    <li><a href={links.discord}>Join the Discord</a> to chat with members, get help, and share your projects</li>
+    <li><a href="/events/">RSVP for the next meetup</a></li>
+    <li><a href="/talks/">Watch the talks</a> or browse the <a href="/docs/">notes</a></li>
+    <li>Follow us on <a href={links.x}>X</a>, <a href={links.youtube}>YouTube</a> and <a href={links.github}>GitHub</a></li>
+  </ul>
+  <p><a href="/">Return to the homepage</a></p>
+</Prose>

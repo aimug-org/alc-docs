@@ -1,0 +1,713 @@
+{
+  "title": "¿Cómo Funciona Realmente Una Empresa Nativa de IA? Andy Caballero - Ketzai",
+  "speakers": [],
+  "date": "2026-08-27",
+  "youtubeId": "12nhZ4b2u_8",
+  "duration": 1773,
+  "summary": "El peor momento de un docente llega un domingo a las 9 de la noche. Ketzai convirtió ese dolor en una empresa que hoy corre sobre agentes de IA de punta a punta, y Andy Caballero, su CEO, abrió el capó en vivo en Panama AIMUG.",
+  "topics": [
+    "LangGraph",
+    "Graphs",
+    "MCP"
+  ],
+  "transcript": [
+    {
+      "t": 0,
+      "text": "Bueno, gracias a todos por estar acá. Hoy les quiero conversar algo interesante. Bienvenidos a los que están están llegando. Eh, nosotros somos Ketai. Mi nombre es Andy. Yo soy el CEO,"
+    },
+    {
+      "t": 11,
+      "text": "lidero todo lo que es la visión y y hacia dónde va la bola y cómo mantenemos lo que está andando, ¿no? Eh, esta es la segunda vez que presento acá ante ante la comunidad. La primera vez, bueno, ya"
+    },
+    {
+      "t": 23,
+      "text": "está ahí en en YouTube. Eh, hace como 7 meses revelamos cómo funcionaba la empresa, porque nosotros estamos construyendo esto en público, porque no hay libros o universidad que te enseñe"
+    },
+    {
+      "t": 36,
+      "text": "esta locura que está pasando con AI en el coding, en bueno, a través de toda la empresa, que es lo que vamos a ver hoy."
+    },
+    {
+      "t": 43,
+      "text": "En ese momento estamos utilizando AI exclusivamente para el coding, pero lo hemos extendido a más aspectos de la compañía y esa es la parte que quiero mostrarles hoy. todo el potencial que un"
+    },
+    {
+      "t": 53,
+      "text": "startup que puede fallar bastante está logrando para que si ustedes tienen startup o tienen una compañía puedan ir agarrando ideas para atreverse y inventar pues cosas nuevas, ¿no? Así que"
+    },
+    {
+      "t": 64,
+      "text": "eso fue como un preview de el capítulo anterior, ¿no? Vamos a arrancar con qué es lo que hacemos para los que no nos conocen aún. Somos Ketsi, somos una plataforma que ayuda a los docentes en"
+    },
+    {
+      "t": 76,
+      "text": "el dolor más grande. El dolor más grande de los docentes sucede a las 9 de la noche un domingo cuando están planificando sus clases para la semana."
+    },
+    {
+      "t": 83,
+      "text": "Y esto está backdoph que de verdad el pico de usuarios de que sales a las 9 de la noche los domingos. Ese es el momento donde hay más dolor y eso obviamente te habilita tomar muchas decisiones de"
+    },
+    {
+      "t": 95,
+      "text": "producto, de capacidad, de soporte, de marketing, el saber estas cosas, ¿no?"
+    },
+    {
+      "t": 102,
+      "text": "Eh, al ayudar a los profesores a hacer sus planificaciones y sus recursos didácticos, podemos hacer que las cosas que antes les tomaban 3 horas hacer les tome 15 minutos. Y esta data también es"
+    },
+    {
+      "t": 113,
+      "text": "contrastada con data real de posock porque en pues nuestro Tooling hemos habilitado que se puedan hacer preguntas en tiempo real a los usuarios. Entonces siempre estamos agarrando datas de los"
+    },
+    {
+      "t": 123,
+      "text": "usuarios con service y también estamos eh teniendo un tracking de medición de dónde les está costando y todo esto, ¿no? Entonces, gracias a esto hemos logrado hacer que este proceso tan"
+    },
+    {
+      "t": 134,
+      "text": "tedioso para ellos ya sea una cuestión de un par de minutos. tienen el fin de semana libre y pues nuestro end goal es que todo lo que suceda afuera del salón de clases que se encargue y el profesor"
+    },
+    {
+      "t": 145,
+      "text": "nada más llegue a utilizar su energía limitada como la que todos tenemos eh, solamente para brillar en lo que es dar clases, porque ellos al final estudiaron es para estar en el salón de clases, no"
+    },
+    {
+      "t": 154,
+      "text": "para estar calificando, para estar preparando tantas cosas que son importantísimas, porque la planificación es importante. hacer estas diapositivas, preparar un evento como este lleva"
+    },
+    {
+      "t": 164,
+      "text": "planificación, por eso es un éxito, pero pues se tiene que hacer y en la medida de lo que podamos queremos solucionarlo."
+    },
+    {
+      "t": 171,
+      "text": "El resultado de la atracción que tenemos en Ketsai a día de hoy es que tenemos ya, bueno, en lo que va de este año, que es cuando arrancamos ya 3,000 usuarios de pago que pagan mes a mes una"
+    },
+    {
+      "t": 181,
+      "text": "suscripción para poder utilizar la plataforma. Este año hemos hecho más de 135,000 planificaciones, que para mí es una absoluta locura entender ese número."
+    },
+    {
+      "t": 191,
+      "text": "Eh, y eh en estos días nos hemos estado dando la tarea de hacer más analíticas, hacer más tracking y ver el impacto real que está teniendo, ¿no? Entonces, con nuestro cruzado con datos públicos y los"
+    },
+    {
+      "t": 204,
+      "text": "datos internos de lo que tenemos, podemos asegurar que este trimestre nuestras planificaciones han impactado a más de 100,000 estudiantes en el país, que para mí es me encanta esa parte"
+    },
+    {
+      "t": 216,
+      "text": "porque en cierta forma la calidad de sus clases está subiendo porque los profesores tienen más energía y también porque somos muy cuidadosos a la hora de hacer la planificación para que se haga"
+    },
+    {
+      "t": 226,
+      "text": "muy bien. tenemos docentes que nos ayudan a eh medir los outputs que nos está dando el AI para que las planificaciones sean de calidad. Y ahí, bueno, se puede ver un, no sé si pueden"
+    },
+    {
+      "t": 237,
+      "text": "verlo, pero hay como un pequeño mapita de hasta dónde estamos llegando. Y me parece increíble cuando hacemos webinars que tenemos profesores conectándose en la comarca en Starlink, metidos en un"
+    },
+    {
+      "t": 246,
+      "text": "bucito para escuchar nuestros webinars porque les gusta mucho utilizar nuestra plataforma, ¿no? Ahora bien, como esta es una comunidad tech y aquí también me gustaría preguntar si aquí todos son"
+    },
+    {
+      "t": 258,
+      "text": "tech background o hay alguien más de lado business o a ver quién usa IA."
+    },
+    {
+      "t": 264,
+      "text": "día a día, daily. ¿Quién paga por?"
+    },
+    {
+      "t": 268,
+      "text": "¿Quién no paga por bien? Excelente."
+    },
+    {
+      "t": 273,
+      "text": "Hay que pagar por de verdad es una un porcentaje muy pequeño de personas están pagando por que somos los que estamos aquí y estamos sacándole el verdadero provecho a lo que lo que ella te da,"
+    },
+    {
+      "t": 283,
+      "text": "¿no? Entonces, eh eso es lo que venimos a explicar hoy. ¿Por qué somos y native?"
+    },
+    {
+      "t": 289,
+      "text": "¿Qué es lo que sucede? Bueno, yo lo quise poner en una analogía así como ha sucedido con mi hijo que va para 3 años en el que poquito a poquito una de las aventuras más interesantes que ha tenido"
+    },
+    {
+      "t": 298,
+      "text": "es cómo él aprendió a comer y cómo él es tan independiente ahora. Y la analogía tiene que ver con eh cómo nosotros utilizamos la IA para programar. Y bueno, si ustedes son usuarios de de día"
+    },
+    {
+      "t": 310,
+      "text": "uno, quizás recuerden que era como darle papilla al bebé, ¿no? Tú querías un código y la ella te iba a dar un output que era un código válido o por lo menos te daba una idea de cómo hacer el"
+    },
+    {
+      "t": 321,
+      "text": "código. Con el tiempo agarraste confianza y te llevabas los los pedacitos de código y le ibas poniendo tú mismo de de la ventana del chat en tu respuesta, ¿no? En 2023 es como cuando"
+    },
+    {
+      "t": 331,
+      "text": "ya el bebé aprende a comer comida sólida. Pero, ¿cómo pasa ese cambio cuando tú vas preparándote? Tú vas cada vez exigiéndole, por ejemplo, a un bebé un poquito más, ¿no? Tú quieres que el"
+    },
+    {
+      "t": 341,
+      "text": "bebé eh vaya podiendo comer cosas más duras, vas poniéndole variedad de cosas."
+    },
+    {
+      "t": 346,
+      "text": "Es lo mismo que va pasando con los modelos, a medida van creciendo, ¿no? Que es lo que para mí es el equivalente cuando salió Cursor y ya él podía entrar directo en el Codebase y empezar con"
+    },
+    {
+      "t": 356,
+      "text": "replacements en el código, quitar pedazos de código y meterlos, ¿no?"
+    },
+    {
+      "t": 360,
+      "text": "Cuando salió cloud code también, ¿no? Eh, luego en el 2024 es como cuando ya el niño está en la en la mesa, ¿no? Y ya está comiendo contigo, ¿no? Es como cuando ya el agent ya está programando"
+    },
+    {
+      "t": 372,
+      "text": "más contigo, ya tú le das más confianza y le das acceso al Ripo para que esté trabajando, ya te tira tus reviews en GitHub con los plugins, estas cosas, ¿no? Ya cuando el niño empieza a usar"
+    },
+    {
+      "t": 383,
+      "text": "cubiertos es como pasó, bueno, justo el año pasado que ya él te está tirando PRs y ya tú nada más estás revisándolo, ¿no?"
+    },
+    {
+      "t": 389,
+      "text": "Y a día de hoy ya tú tienes suficiente confianza como para darle el cuchillo, ¿no? Que es como cuando ya el niño ya puede manejar herramientas, ¿no? Y bueno, lastimosamente no estamos en el"
+    },
+    {
+      "t": 401,
+      "text": "punto todavía en el que puede cocinar solo, que estamos en cell driving mode, aunque te lo quieran pintar mucho en Silicon Val y todo esto, eh, pero pues la clave de ver esa progresión es como"
+    },
+    {
+      "t": 411,
+      "text": "que ir siempre exigiendo un poquito más y monitoreando qué tanto puede hacer el modelo, ¿no? Y eso es exactamente lo que hacemos en Ketsite."
+    },
+    {
+      "t": 419,
+      "text": "Otro de esos modes que tenemos es que desde el principio nos pusimos nombre y apellido, dijimos que íbamos a hacer AI Native y por ende hicimos un esfuerzo muy grande para que toda la superficie"
+    },
+    {
+      "t": 430,
+      "text": "de nuestra empresa fuera consultable por AI. Eso quiere decir que hoy en día cualquier agente en cualquier ADNES eh puede consultar cosas como la operación, cómo hacemos el código y cómo lo"
+    },
+    {
+      "t": 442,
+      "text": "mandamos en linear. Eh, los la misma infraestructura de calendario, mensajes y estas cosas es consultable por los agentes con los que trabajo. Eh, incluso el marketing, las campañas que se están"
+    },
+    {
+      "t": 454,
+      "text": "trackando se pueden hacer por conector MCP. Tú puedes entrar y ir analizando con la data que tienes cómo te está yendo en tus campañas, si están convirtiendo, si no."
+    },
+    {
+      "t": 464,
+      "text": "Eh, la gente entra en posthw directo por MCP también a analizar producto y métricas y ahí puedes ver cómo empiezas a cruzar cosas, ¿no? Si ya yo tengo el código, ya tengo posthw y tengo metaads,"
+    },
+    {
+      "t": 475,
+      "text": "ya yo puedo hacer un tracking más completo de dónde va el funnel de de conversión, ¿no? Esto a nosotros, de hecho, nos ha habilitado que podamos ver cuando mostramos un anuncio a un docente"
+    },
+    {
+      "t": 486,
+      "text": "un domingo a las 9 de la noche, por ejemplo, que es cuando está el dolor y poder trackar momento a momento cuando entra al sitio web. cuando entra a la página de checkout, cuando ve el precio,"
+    },
+    {
+      "t": 497,
+      "text": "cuando está pensando si lo va a comprar o no y cuando ya decide hacer la compra."
+    },
+    {
+      "t": 501,
+      "text": "Este tipo de tracking nos ha permitido eso de eh poder ver en to cuál es nuestro cliente ideal para poder ofrecer nuestro producto a otras personas desde desde la casa, por decirlo así. Pues a"
+    },
+    {
+      "t": 513,
+      "text": "nivel de ingeniería el agente puede acceder a GitHub, a verse Langsmith porque una de las cosas y esto tiene que ver con lo que hizo Pitt Seber cuando hizo esta locura que fue Open Club a"
+    },
+    {
+      "t": 523,
+      "text": "principio de año, es que él en esa cosa tan frágil que hizo, pero que que se volvió superviral y abrió muchas ideas, él quería que la gente se consultara a sí mismo. Entonces a su agente lo hizo"
+    },
+    {
+      "t": 534,
+      "text": "accesible por CLI, por Command Lline Interface para que él mismo verificara sus propios outputs, que es lo que se le llama más ahora como lo de cerrar el loop, ¿no? Como que la gente pueda"
+    },
+    {
+      "t": 543,
+      "text": "consultar y verificarse a sí mismo. Entonces, pues con estas cosas en mente, nosotros fuimos abriendo estas cosas poco a poco, a medida vamos eh agarrando confianza, facturación, todas estas"
+    },
+    {
+      "t": 554,
+      "text": "cosas para mantener tu finance ready, tus transacciones, tus refund, incluso tu soporte. No sé si algunos han tenido la oportunidad de ver que ya Meta tiene como un agente de WhatsApp, como que es"
+    },
+    {
+      "t": 566,
+      "text": "con una que se entrena con chats anteriores y te atiende a las personas que están interesadas. Bueno, nosotros fuimos un paso más allá y hicimos nuestro propio desarrollo con Full Observability, con Langrafth para poder"
+    },
+    {
+      "t": 579,
+      "text": "atender a los profesores, porque algo que descubrimos en KSI es que los profes hacen muchas preguntas y a nosotros nos encanta responder preguntas pero no podemos, a veces son demasiadas."
+    },
+    {
+      "t": 588,
+      "text": "Entonces, lo que hacemos es que tenemos un agente en Langraft que tiene una base de datos de conocimiento escrita por un humano, mantenida por nosotros y en vez de nuestro soporte estar atendiendo"
+    },
+    {
+      "t": 600,
+      "text": "individualmente a cada persona, él está prácticamente haciendo los artículos de conocimiento que alimentan a la gente que los atiende. Una vez él encuentra lo que de verdad no puede responder, qué s"
+    },
+    {
+      "t": 611,
+      "text": "yo, un reembolso, por ejemplo, entonces es que el agente de Iga escala al humano y el humano pues por ende baja su la cantidad de cosas que tiene que hacer, ¿no? ¿Qué otras cosas habilita esto?"
+    },
+    {
+      "t": 623,
+      "text": "Bueno, que la empresa ha cambiado el enfoque a hacer experimentos. Entonces, en el momento nosotros creamos una pieza de contenido para dar difusión, por ejemplo, todo lo tenemos con un"
+    },
+    {
+      "t": 634,
+      "text": "experimento que podemos medir end to end para saber cuál va a ser la siguiente pieza de contenido que vamos a hacer o incluso el siguiente feature que vamos a habilitarle a eh los profes."
+    },
+    {
+      "t": 647,
+      "text": "Otra lección aprendida acá es que, bueno, al principio cuando empezamos la empresa éramos tres, era superfácil coordinar y era superfácil mantenernos comunicados, pero a medida la empresa va"
+    },
+    {
+      "t": 657,
+      "text": "creciendo, y como lo está haciendo ahora, pues hay más personas trabajando en el Codebase. Entonces, ahora más que nunca recuerdo cuando me tocó, porque vengo del interior, me tocó venir a"
+    },
+    {
+      "t": 667,
+      "text": "terminar la universidad acá a la ciudad y me tocó vivir en esos esas casas compartidas donde se comparten los cuartos, pero hay áreas comunes, ¿no? Y algo que siempre me recuerdo es que"
+    },
+    {
+      "t": 677,
+      "text": "había como un un postit con la lista de reglas de cómo manejar la cocina. Eso pasa en todos lados. Quizás aquí en esta oficina también la cafetería o el comedor tiene sus reglas. Para nosotros"
+    },
+    {
+      "t": 688,
+      "text": "el repoleo y el lugar donde lo mantenemos que es en linear para nuestra comunicación entre nosotros es como eso que ven allí abajo, ¿no? Es como un lugar donde todos eh donde todos estamos"
+    },
+    {
+      "t": 701,
+      "text": "trabajando y comiendo. Entonces, queremos mantenerlo limpio y ordenado y que sigan las reglas. ¿Qué son las reglas? involucran cosas como las convenciones de código, pero incluso un"
+    },
+    {
+      "t": 711,
+      "text": "poco más allá, porque hasta la misma redacción de issues en linear, cuando los agentes la hacen y no sé si han visto ahora con Opus y Fable que les empieza a dar como yo le llamo una"
+    },
+    {
+      "t": 721,
+      "text": "verborrea porque no sé qué otro nombre tiene, pero a veces hablan de forma demasiado como extraña y eso es pues parte de las de los skills que vamos haciendo para que una vez se suba un"
+    },
+    {
+      "t": 732,
+      "text": "issue en linear o se documente algo, esté escrito en un lenguaje para humano y que no la carga cognitiva sea buena, no sea un montón de texto que sea incomprensible y que me baje me voy a"
+    },
+    {
+      "t": 743,
+      "text": "pasar más tiempo leyendo que resolviendo, ¿no? Entonces, idealmente, como todos están tinkering en sus lugares con sus agentes y breaking things, eh, eso es pues higiene de cada lugar. Cada uno tiene su"
+    },
+    {
+      "t": 757,
+      "text": "forma de trabajar, pero el repositorio que es es eh de producción, production ready, tiene que mantenerse limpio y tiene que tener a alguien que se dedica a enforzar las reglas también y hacer"
+    },
+    {
+      "t": 769,
+      "text": "pushback cuando me estás mandando slot, ¿no? Eso es otra de de las cosas interesantes que suceden, ¿no?"
+    },
+    {
+      "t": 778,
+      "text": "Otra cosa que hemos habilitado en Ketsai para poder tomar mejores decisiones es el concepto del company Brain, que en el Mirup anterior de hecho Paul habló de cómo funcionaba esto del company Brain,"
+    },
+    {
+      "t": 789,
+      "text": "¿no? Y hay varias formas de pensamiento que pueden seguir para decidir cómo quieren trabajarlo. Les quiero compartir las que estoy usando a nivel personal y"
+    },
+    {
+      "t": 801,
+      "text": "estoy probando y me está funcionando bastante bien, pero todavía no puedo dar el veredicto, ¿no?"
+    },
+    {
+      "t": 806,
+      "text": "Yo yo esta idea nació y fue concebida por un tweet que mandó Andrew Scarpati, que es el el que él lideró como la parte de desarrollo en en Tesla, si no recuerdo,"
+    },
+    {
+      "t": 819,
+      "text": "ahorita está trabajando en Antropic, ahí les dejo el QR y si necesitan el el tweet se los consigo. De hecho, yo agarré eso y lo volví como una especie de MVP en el que se volvió prácticamente"
+    },
+    {
+      "t": 829,
+      "text": "una wiki interna de todo el conocimiento que yo iba agarrando. se involucraba hacer varios cambios en la empresa, como por ejemplo empezar a grabar todo lo las comunicaciones, los meetings que"
+    },
+    {
+      "t": 840,
+      "text": "tenemos, las decisiones que acordamos para eh poder tener un lugar en el que podamos darle ese cerebro a la gente, porque este cerebro no es no es necesariamente para ti, no reemplaza el"
+    },
+    {
+      "t": 850,
+      "text": "tuyo, tú te vas a acordar, pero es para poner a la gente up to date, servir el contexto que él necesita en el momento correcto."
+    },
+    {
+      "t": 858,
+      "text": "Entonces, de aquí nace pues esta esta idea de hacer como un company brain y luego veo que hay una abstracción interesante que que se llama Gbrain, que es hecha por el CEO de de White"
+    },
+    {
+      "t": 871,
+      "text": "Combinator. Me parece que es algo bien estilo open clock, que es como bastante frágil, pero es como un experimento de fin de semana."
+    },
+    {
+      "t": 879,
+      "text": "¿Y cómo funciona ese company brain? Bueno, de todos los lugares donde él ha agarrado, reuniones, transcript, chat, issues que han pasado, en la noche él tiene un crun job,"
+    },
+    {
+      "t": 891,
+      "text": "todo el rad de queda eh embebido, ¿no?, para que se pueda buscar por vectores, pero él en la noche empieza a hacer eh con la debida calibración, porque también te presenta opciones para que tú"
+    },
+    {
+      "t": 903,
+      "text": "calibres las respuestas y los takes que tiene. él empieza a hacer síntesis de las cosas que estás haciendo, que cuando empiezan a aparecer muchas veces se convierten en páginas, que luego se"
+    },
+    {
+      "t": 915,
+      "text": "convierten en entidades y al final se vuelven consultables. Entonces, en cierta forma es como una wiki que está evolucionando. Este es como el holy grail para muchas empresas de consultoría que tenían estas knowledge"
+    },
+    {
+      "t": 927,
+      "text": "bases gigantes. Y esto es como una versión muy muy temprana de esto que se va a poder lograr, que es una base de datos de conocimiento que va evolucionando con el"
+    },
+    {
+      "t": 939,
+      "text": "tiempo, ¿no? Me parece que el potencial es muy grande. He sacado algo de valor de ello y les invito a ustedes también que vayan pensando en este concepto del company brain en la medida que que donde"
+    },
+    {
+      "t": 949,
+      "text": "trabajen pues se los permitan. Una de estas cosas también que hemos aprendido aquí es que debemos eh outsource eh bueno, el en inglés sería outsource thinking not understanding sería, o sea,"
+    },
+    {
+      "t": 963,
+      "text": "el pensamiento que ustedes tengan que sea algo sencillo, se debería poder llevar y delegar a un agente de ella."
+    },
+    {
+      "t": 970,
+      "text": "¿Qué quiere decir pensamiento en este caso? La búsqueda, la compilación de fax, redacción, cruzar datos. Las son maravillosas en eso y no vas a gastar tu energía en eso, pero el understanding de"
+    },
+    {
+      "t": 982,
+      "text": "algo es lo más importante. Eso no se lo puedes dejar a la gente porque entonces te pierdes. Por eso es que los BE Code Projects pierden sentido muy rápido porque no tienes entendimiento de la"
+    },
+    {
+      "t": 992,
+      "text": "arquitectura de tu codebase, ¿no? Y eso es algo que hemos hemos aprendido a medida hemos ido trabajando en Kets, ¿no? Lo que es outsource es el thinking, no el understanding."
+    },
+    {
+      "t": 1004,
+      "text": "Otra lección que les comparte es que cuando el output tiembla no hay que cambiar el promp. ¿Qué quiere decir eso?"
+    },
+    {
+      "t": 1009,
+      "text": "Cuando el output no sale como nosotros queremos y podemos ver el ejemplo ahí, si la hamburguesa no sale como tú querías, en vez de estar intentando cambiar el pepinillo, agregarlo uno por"
+    },
+    {
+      "t": 1020,
+      "text": "uno, pensamos más en el mecanismo que provocó ese resultado. Así podemos tener mejores resultados siempre. Entonces, esa forma de ese rewiring del cerebro ayuda a hacer outputs y a pensar más en"
+    },
+    {
+      "t": 1035,
+      "text": "no hacer hamburguesas, sino hacer McDonald's, ¿no? O sea, hacer la fábrica que produce la la hamburguesa, ¿no? Esto pues también es un working progress y espero compartirles en un par de meses"
+    },
+    {
+      "t": 1046,
+      "text": "cómo nos va con estos experimentos que estamos haciendo."
+    },
+    {
+      "t": 1050,
+      "text": "Este es un AV test que quería hacerles también para ver qué opinan, ¿no? Este es un AV test que estamos corriendo ahorita live y que también voy a reportar en el futuro. Cuando ustedes"
+    },
+    {
+      "t": 1059,
+      "text": "van al Pricem, no todos tienen tarjeta de PriceMart, ¿verdad? Eh, saben que en la puerta les piden la eh la membresía, ¿no? Para poder entrar. Entonces, mi pregunta para ustedes es,"
+    },
+    {
+      "t": 1071,
+      "text": "¿cómo ustedes o ustedes creen que Pricemark facturaría más si te pidieran esa tarjeta en la caja versus que te la pidan en la entrada? ¿Qué piensan?"
+    },
+    {
+      "t": 1081,
+      "text": "¿Dónde se factura más en Pricem? Si te pido la la tarjeta de miembro en la entrada o si te la pido en la caja cuando vas a pagar."
+    },
+    {
+      "t": 1091,
+      "text": "En la caja. En la caja. ¿Por qué? Ya tienes los productos. Al final tienes que pagar pagar como la tarjeta de una vez."
+    },
+    {
+      "t": 1099,
+      "text": "Bueno, mi hipótesis va por ahí. Yo yo estoy pensando en eso. He sentido unos puntos en contra el prestigio de entrar."
+    },
+    {
+      "t": 1106,
+      "text": "Muchas personas dicen que si te lo pide al entrar, yo voy a estar más motivado a conseguir mi membresía para ver qué hay adentro. Yo voy por esa escuela total. O sea, yo pienso que si está en la caja,"
+    },
+    {
+      "t": 1117,
+      "text": "yo ya tengo todo en la caja. Es más probable que vaya a pagar. Yo voy por la opción de que va a reducir la venta si se lo pides en la caja."
+    },
+    {
+      "t": 1126,
+      "text": "¿Por qué? Porque parte de la idea de la membresía es la exclusividad y orden del propio software de de primer como almacén."
+    },
+    {
+      "t": 1134,
+      "text": "Entonces si va un montón de personas que quizás no vayan a comprar sino solo para ver llenan y quitan esa exclusividad quitan los bienes reales."
+    },
+    {
+      "t": 1146,
+      "text": "Es un punto es un punto válido también. No tengo la respuesta clara aquí ahorita, pero estoy corriendo los números para ver qué es lo más efectivo."
+    },
+    {
+      "t": 1154,
+      "text": "Pero, ¿qué tiene que ver esto con Es prohibido, o sea, de entrar en un price sin una tarjeta aquí? Eh, no se puede, o sea, o sea, no sé si alguien se colará, pero no tengo entendido que siempre te la"
+    },
+    {
+      "t": 1164,
+      "text": "piden en la entrada. [risas] Dejan pagar sin No, eso sí no puedes. Tienes que pagar con la Sí. Entonces, ¿a qué quiero llegar con"
+    },
+    {
+      "t": 1177,
+      "text": "esto ahora? ¿Cómo aplica esto a Ketside? Este experimento es interesante y lo vamos a ver en un par de meses el resultado porque nosotros al pautar en Instagram, Facebook eh pautamos a"
+    },
+    {
+      "t": 1188,
+      "text": "nuestro sitio web, pero lo primero que ellos encuentran es como un guardia que te pide la autorización. En nuestro caso sería el sign in o el register page, ¿no? Pero nosotros hemos instrumentado"
+    },
+    {
+      "t": 1199,
+      "text": "las cosas para abrir más de Ketsite, para que las personas puedan entrar, como quien dice, a shop, o sea, a ver qué ofrece Ketsai, a hacer a mover el valor, o sea, mover el registro al punto"
+    },
+    {
+      "t": 1209,
+      "text": "de valor, o sea, a ese momento donde voy a pagar en la caja. Cuando ya tengo todo listo para hacer mi planificación, ahí es donde te quiero mostrar el botón de sign in. Modelo free premium, no modelo."
+    },
+    {
+      "t": 1221,
+      "text": "Tenemos un modelo premium. eh en el que si tienes un eh correo institucional, o sea, un correo de MeduCa, puedes utilizar la versión Fremium que tiene como un weekly cap, así como lo tienen"
+    },
+    {
+      "t": 1233,
+      "text": "chat GPT cloud, o sea, puedes usar cierta cantidad, pero si pagas la versión Pro tienes como 15 veces más allers de de usage, pues. Eh, y bueno, tú eliges, ¿no? La idea también ahí es y"
+    },
+    {
+      "t": 1245,
+      "text": "hay experimentos interesantes de conversión, ¿no? cuánto es lo suficiente para mostrar valor, pero empujando a la compra, ¿no? Entonces, todas estas cosas son posibles con la ayuda del AI y el"
+    },
+    {
+      "t": 1256,
+      "text": "tracking completo, ¿no? Y el understanding, ya ahí se va formando la figura."
+    },
+    {
+      "t": 1261,
+      "text": "Otra lección que les comparto rápidamente, que me estoy pasando un poco en el tiempo, es eh que el código vive codedir para producción y se debe considerar como si fuera una maqueta de"
+    },
+    {
+      "t": 1273,
+      "text": "un proof of concept que debe ser tirada y y hecha arquitectura desde el principio. Entonces, lo comparto públicamente porque es un learning que hemos tenido que nos ha enseñado pues"
+    },
+    {
+      "t": 1284,
+      "text": "que es mejor ir a buen ritmo apoyándose de los agentes, pero siempre manteniendo el understanding, siempre haciendo una arquitectura sólida que permita construir una casa a la que se le puedan"
+    },
+    {
+      "t": 1294,
+      "text": "poner más pisos incluso, ¿no? Eh, esa es otra de de esas lecciones aprendidas."
+    },
+    {
+      "t": 1301,
+      "text": "Eh, ¿a dónde a a dónde cambia el bottlenck? No, eh, antes era la creación de código, porque el código es increíble pensarlo, pero es que se hacía mano. El código lo escribíamos así tecla por"
+    },
+    {
+      "t": 1314,
+      "text": "tecla y y y cosas increíbles se han hecho en base a ella. Y cómo ha cambiado todo, que nosotros tenemos más de un año de que no escribimos código, sino que todo ha sido orquestado por nosotros y"
+    },
+    {
+      "t": 1326,
+      "text": "con los agentes, ¿no? Entonces hace que el meta cambie a articular, o sea, la capacidad de articular y saber cuando algo es bueno. Entonces, de hecho, hubo"
+    },
+    {
+      "t": 1338,
+      "text": "un estudio en GitLab que decía que el 85% de personas dicen que la IA movió el cuello de botella de escribir a estar revisando código. Quizás es algo que ya ustedes están experimentando,"
+    },
+    {
+      "t": 1349,
+      "text": "pero para poder articular las cosas bien, eh se destila a estos tres puntos."
+    },
+    {
+      "t": 1354,
+      "text": "Debes aprender a saber qué es bueno, o sea, algo que es bueno. Tienes que desarrollar el gusto, tienes que tener la capacidad de describirlo y por eso digo articularlo, ¿no? ¿Por qué me gusta"
+    },
+    {
+      "t": 1368,
+      "text": "este plato de comida? tengo que hacer el ejercicio con cada cosa que hago porque tengo que describir el checklist o lo que lo hace para mí algo bueno y por último tener la capacidad de"
+    },
+    {
+      "t": 1379,
+      "text": "verificarlo, ¿no? Entonces eso es lo que hace el el loop que ayuda a nosotros que nos ayuda a nosotros a llevar el código a a un nivel que es aceptable para nosotros, ¿no? Entonces, ahora el nuevo"
+    },
+    {
+      "t": 1393,
+      "text": "meta o la nueva capacidad es tener eh buen liderazgo en la empresa, que sepa qué perseguir y que sepa cuándo está bien y cuándo está bien hecho y cuando está listo, ¿no?"
+    },
+    {
+      "t": 1404,
+      "text": "Ya para sumarizar que ahora si estamos terminando las tres cosas que que concluyen este tema es primero darle acceso a sus agentes a más superficies y contexto a medida ustedes vayan"
+    },
+    {
+      "t": 1416,
+      "text": "agarrando la confianza y en la medida de lo que puedan he encontrado cruces de data increíbles que nos han ayudado a tomar muy buenas decisiones y estamos corriendo experimentos interesantes que"
+    },
+    {
+      "t": 1426,
+      "text": "antes no podíamos al abrir esta esta este acceso, ¿no? ármense su company brain, empiecen a grabar las reuniones que puedan y sus pensamientos en sí, que eso ayuda mucho a a recolectar y"
+    },
+    {
+      "t": 1439,
+      "text": "recuperar, pero no tanto para ustedes, porque ustedes puede que sí lo recuerden, pero más que todo es para la gente que va a trabajar, que empieza de cero, ¿no? Eh, y por último, si el"
+    },
+    {
+      "t": 1448,
+      "text": "output que están teniendo es inestable, cambien el mecanismo. Lo que les dije de las hamburguesas y los McDonald's, ¿no?"
+    },
+    {
+      "t": 1454,
+      "text": "No es una una ley ahorita es una hipótesis que estamos probando también y como todo esto, todo se está probando y esta es la comunidad donde podemos intercambiar estas lecciones."
+    },
+    {
+      "t": 1465,
+      "text": "Por último, eh me pide el CEO que ponga el Ask siempre en el la última diapositiva. Estamos eh eh como ya hemos sido un éxito en Panamá, estamos haciendo una expansión regional y estamos en búsqueda de un senior backend"
+    },
+    {
+      "t": 1477,
+      "text": "engineer. Así que si ustedes quieren ser parte de este viaje, están interesados, ahí les dejo mi correo o mi WhatsApp también con el QR o si conocen a alguien que tenga este rol, eh nos escriben que"
+    },
+    {
+      "t": 1489,
+      "text": "vamos a a conversar para ver si quieren ser parte pues de esta gran aventura que estamos haciendo aquí en Panamá. Así que bueno, con eso eh gracias a todos por el espacio y [aplausos]"
+    },
+    {
+      "t": 1504,
+      "text": "5 minutitos de preguntas. ¿Alguien alguna pregunta?"
+    },
+    {
+      "t": 1508,
+      "text": "Sí, alguna pregunta por ahí. Sí. ¿Cómo organiza la información que van a recibir los los docentes? O sea, yo como docente tengo un montón de libros."
+    },
+    {
+      "t": 1520,
+      "text": "Voy a hacer mi planning hoy de matemáticas, ¿sí? Para mañana lunes presentarse a unos estudiantes. ¿Qué hago yo? Busco en internet, traigo como en Google Notebook, ya la plataforma lo tiene."
+    },
+    {
+      "t": 1533,
+      "text": "Bueno, esa información es públicamente disponible y de hecho tú la puedes descargar y usarla. Muchos hacen eso, imprimen los PDFs o algunos los descargan, pero son tan complejos y la"
+    },
+    {
+      "t": 1545,
+      "text": "verdad tan mal hechos que eh no les sirve de mucho. Entonces, nosotros nos tomamos el trabajo de agarrar toda esa data y volverla nuestra con nuestro propio pipeline de datos para poder"
+    },
+    {
+      "t": 1556,
+      "text": "estructurarla y servísela a la gente. Entonces, el agente se encarga de buscar esa información que ya nosotros la alimentamos y esa es la que usan para la planificación. Para lo que ya ellos"
+    },
+    {
+      "t": 1565,
+      "text": "generan, ellos tienen su propio manejador de documentos y desde ahí ellos pueden ver sus planificaciones, editarlas, borrarlas, copiarlas, lo que deseen, ¿no? Sí. La pregunta"
+    },
+    {
+      "t": 1578,
+      "text": "de de company, pues lo que anda comentando de brastorming que hacen formar brain, ¿qué herramientas usan para construir toda esta parte, la base de datos de la empresa, o sea, cómo"
+    },
+    {
+      "t": 1590,
+      "text": "manejan todo este este esquema como tal? ¿Qué ram usas para eso?"
+    },
+    {
+      "t": 1594,
+      "text": "Bueno, el company Brain no está implementado company wire todavía, ahorita está en single player mode. El lo que estoy usando tiene la capacidad de hacerlo multiplayer, pero tengo que"
+    },
+    {
+      "t": 1603,
+      "text": "entenderlo a profundidad bien para poder pedir que otros también lo trabajen."
+    },
+    {
+      "t": 1608,
+      "text": "Pero si quisieras hacerlo por tu propia cuenta con Cloud Code tú puedes andar o puedes agarrar, por ejemplo, GBAIN y es superinstalable por Command Interface y puedes jugar con él. O sea, él es un"
+    },
+    {
+      "t": 1618,
+      "text": "comando nada más de instalación que que pones en tu terminal y él se encarga de instalarse. Él mismo, pones a tu agente a que lo configure. Pero ahí la configuración, me refiero, digamos,"
+    },
+    {
+      "t": 1628,
+      "text": "dónde documentas todo, dónde guardas todo y digamos, lo que son videos, todo esto y lo, o sea, lo segmentas todo, todo es una estructura de carpeta básicamente o al al final cuando lo lo you you you"
+    },
+    {
+      "t": 1639,
+      "text": "boil it down es eso es una estructura de carpetas con MD files, pero ellos están indexados y tienen su backlinks. Déjame ver si puedo mostrarles el Ya, ya está, ya hasta tiene grafo y todo, verad."
+    },
+    {
+      "t": 1649,
+      "text": "Déjame mostrarles. A ver, a ver, a ver."
+    },
+    {
+      "t": 1659,
+      "text": "Sí, mira que al final él se ve así. Mira, por ejemplo, átomos son unidades pequeñas de conocimiento que él todos los días cuando va a dormir genera y ellas se van generando. Al final son"
+    },
+    {
+      "t": 1669,
+      "text": "markdowns con relaciones y eh aquí puedes ver, vamos a enseñarte, por ejemplo, la wiki que se va generando sola, donde el mismo agente eh cuando"
+    },
+    {
+      "t": 1681,
+      "text": "los temas empiezan a salir overnight y tiene un proceso sofisticado ahí que eso da para una reunión completa, pero básicamente lo que él hace es que él agarra de esos temas que se repiten"
+    },
+    {
+      "t": 1691,
+      "text": "mucho y empieza a sintetizar conceptos que se vuelven artículos como estos que ves aquí."
+    },
+    {
+      "t": 1697,
+      "text": "Eh, tienen su sección. Esto es como una wi una Wikimedia, ¿no? Y cuando referencia a alguien, lo referencia, por ejemplo, cuando está hablando de mí, me referencia a mí y tiene información"
+    },
+    {
+      "t": 1706,
+      "text": "también sobre mí y tiene las reuniones que se han hecho. Y si yo quiero ver esto y puedo hacerlo. Y si yo quiero ver research que estoy haciendo, también puedo hacerlo. Ahora, si yo quiero"
+    },
+    {
+      "t": 1719,
+      "text": "también ver el grafo en sí que se ha generado, aquí se puede ver y esto, o sea, yo no he tocado nada de esto. El grafo se ha armado solo y todos los días va creciendo. Me parece interesante"
+    },
+    {
+      "t": 1728,
+      "text": "esto, o sea, todavía no está todo conectado. Los grafos son bien cool. La herramienta, ¿cómo llama?"
+    },
+    {
+      "t": 1734,
+      "text": "Eh, esto es Obsidian. Este es un manejador de de archivos markdown. Tú tienes tu ball de files, tienes su carpeta, sus markdown files y eh aquí lo puedes ver. Mira, que aquí tú puedes ver"
+    },
+    {
+      "t": 1747,
+      "text": "día a día todas las conexiones que se crearon. Entonces, en los dream cycles lo que sucede es exactamente eso, o sea, están haciend generándose esas conexiones. de nuevo. Me parece super"
+    },
+    {
+      "t": 1756,
+      "text": "cool, pero todavía necesito tiempo para darle el approval, pero el concepto en sí del company Brain a mí me parece brutal y el que lo puede figur segura va a ser mucha plata. Así que se la se las"
+    },
+    {
+      "t": 1769,
+      "text": "paso ahorita para que lo conozcan,"
+    }
+  ],
+  "language": "es",
+  "backfill": true
+}

@@ -1,0 +1,426 @@
+{
+  "title": "CloudFlare Containers",
+  "speakers": [
+    "collier-king"
+  ],
+  "date": "2025-08-28",
+  "youtubeId": "pH7JXeJGol0",
+  "duration": 1100,
+  "summary": "Collier King shares examples of using CloudFlare Containers.",
+  "topics": [],
+  "transcript": [
+    {
+      "t": 8,
+      "text": "All right. Yeah, I'm going to talk about uh Cloudflare containers. Um, so this just came out last week. It's in beta. It's brand new and um it's a milestone for Cloudflare. We don't we"
+    },
+    {
+      "t": 20,
+      "text": "haven't had a product like this yet until now. Um so you know you have like traditional hyperscalers they all have a container product of one kind or another. Um basically what containers on"
+    },
+    {
+      "t": 33,
+      "text": "cloudflare are are they're basically um serverless and they run on the edge and they're bound to a durable object."
+    },
+    {
+      "t": 41,
+      "text": "And I'm not going to go into like all the nuts and bolts behind how it works because I probably would not communicate it correctly. But um cloud developers.cloudfare.com/containers"
+    },
+    {
+      "t": 50,
+      "text": "cloudflare.com/containers. You can read a lot more."
+    },
+    {
+      "t": 55,
+      "text": "Um I'm going to show a demo."
+    },
+    {
+      "t": 59,
+      "text": "So this is I have a worker. I have a cloudflare worker and it has a binding to a durable object with a container uh instance inside of it and it also has a"
+    },
+    {
+      "t": 71,
+      "text": "secret. Um and so when I go look at what that looks like in code, I have a hono app. Is that big enough to see? Hopefully. Um, and basically"
+    },
+    {
+      "t": 84,
+      "text": "there's this new container class that you can import. And I'm just going to uh extend that. And I'm going to add a couple things like the default port that the container is going to listen on. And"
+    },
+    {
+      "t": 96,
+      "text": "then what to do after the container stops. In this case, it's going to sleep after 5 minutes. Um, and so then the rest of this is, this is just a typical worker, but it's using Hono, which is"
+    },
+    {
+      "t": 106,
+      "text": "like a very lightweight JavaScript framework. really good for scalable applications. And I'm going to bind the uh fast API container to the durable object. So if we go back to this thing,"
+    },
+    {
+      "t": 120,
+      "text": "it's just um you know, my durable object has my container bound to it and then my worker has access to that. Um, and then I'm going to basically just"
+    },
+    {
+      "t": 133,
+      "text": "proxy all of the API requests that come to my worker straight to my container, which is running fast API. And I'm going to pass in some secrets also from Cloudflare Secret Store. Um,"
+    },
+    {
+      "t": 146,
+      "text": "and so that's that's kind of like the nuts and bolts of what's going on. And this bottom part for those who have used Cloudflare workers might look a little more familiar. Um, but I'm basically"
+    },
+    {
+      "t": 156,
+      "text": "just taking the Cloudflare uh fetch handler from the Hono and I'm just sticking it in there as the the workers fetch. And then I have a scheduled parameter too, which is cool."
+    },
+    {
+      "t": 169,
+      "text": "Um, with work cloud workers, you can schedule them to run. So this this worker is acting as both an API that someone can hit send requests to and a batch job that runs and both of them are"
+    },
+    {
+      "t": 181,
+      "text": "going to call my container, which is cool. So um in this case I'm starting the container and I'm passing some environmental variables to it. Uh the interesting thing is that the way this"
+    },
+    {
+      "t": 195,
+      "text": "works. So let me show you this. This is a this is kind of the nuts and bolts of um when you deploy something on cloudflow you have these these uh bindings and I have this containers"
+    },
+    {
+      "t": 206,
+      "text": "binding right here and it's just a link or just a path to my Docker file which is right here. So when I deploy it, it's actually going to like build the Docker image locally and then push all that up"
+    },
+    {
+      "t": 217,
+      "text": "to a Cloudflare image registry and then it's going to be accessible uh by the worker. And in this case, I have 10 instances that can run at the same time."
+    },
+    {
+      "t": 226,
+      "text": "Um this is just the name of the class. Here's the durable object um secret."
+    },
+    {
+      "t": 232,
+      "text": "But the cool thing is like my here's my Docker file. Has anyone used fast API?"
+    },
+    {
+      "t": 238,
+      "text": "Um it's it's great. If you haven't, you should check it out."
+    },
+    {
+      "t": 242,
+      "text": "But uh this is like a typical Docker file you'd have with fast API. It just runs a Python API server. And the cool part is that this is what the API part of the worker is running, but on the"
+    },
+    {
+      "t": 254,
+      "text": "scheduled part, I'm actually just overwriting the entry point and I'm having it instead use the exact same Docker file, but it's going to run this process script instead. And so, um I"
+    },
+    {
+      "t": 266,
+      "text": "should have probably talked about what these scripts do, like what the API does. it uh runs a like a really crappy XG boost model I train to just like make a fake score. Um this is my team does a"
+    },
+    {
+      "t": 278,
+      "text": "lot of like ML inference. Um and so you know before we have to deploy something on Kubernetes or somewhere and and um and now we're just going to do a lot of this on Cloudflare containers instead."
+    },
+    {
+      "t": 290,
+      "text": "So the the program basically just like loads a um kind of a fake model I I trained from R2 and it's going to um select a random lead. I'm just kind of a"
+    },
+    {
+      "t": 302,
+      "text": "random piece of data and then it's going to run the the inference on it. It's going to return the data back. Um so it's going to do that when you hit it with the API and it's going to do that"
+    },
+    {
+      "t": 311,
+      "text": "on an interval too. And that's just two common use cases that we have at work."
+    },
+    {
+      "t": 316,
+      "text": "I'm sure other people have similar use cases. Um, so what does this look like in the logs? So I'm over here in the Cloudflare dashboard. I am under compute"
+    },
+    {
+      "t": 328,
+      "text": "and there's a containers section and this is my uh name of my container uh that was created. It's called containers model template and it has two instances."
+    },
+    {
+      "t": 341,
+      "text": "Um, one I think is from the API being hit."
+    },
+    {
+      "t": 346,
+      "text": "The other one's from the schedule which is interesting. It's kind they're on two different like kind of intervals being used. So there they're the algorithm behind what the thing that spins all"
+    },
+    {
+      "t": 355,
+      "text": "these up is it decided you need two instances to satisfy um you know the traffic hitting your container. Uh these are the logs. So I have uh these are logs from inside the container. So, this"
+    },
+    {
+      "t": 367,
+      "text": "is the Python code that's logging stuff out and it's just saying, \"Hey, you sent me this person or this record with annual revenue of zero, industry banking"
+    },
+    {
+      "t": 379,
+      "text": "score of zero.\" Um, so yeah, annual revenue blah blah blah score zero. So, the point is it's just like it's this is the Python code actually from inside the container. And"
+    },
+    {
+      "t": 391,
+      "text": "then over on the worker side, the workers logs, um, this is what shows the like runtime of the the API that's running, either uh the batch running or the actual API getting hit. And it's"
+    },
+    {
+      "t": 403,
+      "text": "this is the JavaScript code running. So we got the JavaScript code running here if you want to see those logs. And then you got the Python code running in your container also if you want to see those"
+    },
+    {
+      "t": 413,
+      "text": "logs. So pretty handy to just like go back and forth if you need to. Um, here are the events that have run. like I have the crown job to run every five minutes. That was in my um"
+    },
+    {
+      "t": 427,
+      "text": "that was right here. And um so yeah, I mean the point is like I'm running containers on the edge and you can hit it with a request. You can run"
+    },
+    {
+      "t": 439,
+      "text": "it on cron job and it's just it's you know it's kind of like just a random Python program but it could be any program. Anything that goes into Docker you can run on here. Um I will be I'm"
+    },
+    {
+      "t": 452,
+      "text": "getting to the end but before I wrap it up um there's a couple things that aren't there today yet. So one of them um cloud run is like a kind of a a comparison people make to to cloud for"
+    },
+    {
+      "t": 464,
+      "text": "containers. There is no autoscaling feature yet but that's coming and that would make it more like a cloud run um where you can just throw like lots of traffic at it and it'll provision"
+    },
+    {
+      "t": 474,
+      "text": "however many instances it needs to to keep up. um that doesn't exist today. Um another thing, so volumes aren't there yet, Docker volumes, but they're coming."
+    },
+    {
+      "t": 485,
+      "text": "So you would be able to um mount a like a like an R2 bucket as like a file system to your container and then you can like pull in all the files from your R2 bucket. And u for those that have"
+    },
+    {
+      "t": 498,
+      "text": "used workers before, you might know about bindings and how you can uh you know execute methods on those objects that are bound to your worker that will be available inside of your container"
+    },
+    {
+      "t": 510,
+      "text": "through the volume at some point. So you could just have your Python code execute the binding method on your R2 bucket or your D1 database or your workers AI or whatever and you don't have to keep"
+    },
+    {
+      "t": 523,
+      "text": "going back to JavaScript to do that which is pretty cool. Um, also exec, the exec command, which Docker users know, lets you just run arbitrary code inside a container. That's going to come too"
+    },
+    {
+      "t": 534,
+      "text": "eventually. Um, and there's a few other things that aren't there yet today, but the team, you know, knows about them is on the road map. Um, it probably wouldn't be a great talk if"
+    },
+    {
+      "t": 545,
+      "text": "I didn't talk about pricing at some point. Um, I don't know if these numbers are real or not. I'll just I I just kind of said perplexity. Hopefully, you can figure out. I said, um, what would it"
+    },
+    {
+      "t": 557,
+      "text": "cost to run 10 containers with half a CPU, 4 gigs each, which is the stand, that's the kind of largest, uh, container instance version we have right now. Run 10 hours a day, 5 days a week,"
+    },
+    {
+      "t": 569,
+      "text": "pretty much just like non-stop workload. >> This is these are the numbers it came back with for cloud for containers. It said $162 a month, which is not bad."
+    },
+    {
+      "t": 578,
+      "text": "It's probably on par with I I don't know. It depends on what you're doing obviously beyond that, but that's a baseline. It's not terrible. Um, Fargate, which is an AWS competitor to"
+    },
+    {
+      "t": 590,
+      "text": "to this, um, they said is like way more. Fargate with spot pricing, which has much longer cold start times, would be sort of cheap, but still more. And then Cloud Run is like way way more. So, um,"
+    },
+    {
+      "t": 604,
+      "text": "I don't know if these numbers are that accurate or not. I guess we'll find out over time, but uh I thought it was at least compelling to to bring that up because, you know, for me personally,"
+    },
+    {
+      "t": 613,
+      "text": "I'd love to put more stuff on Cloudflare containers, uh both at work and my personal stuff, too. So, um please go check it out if you want. And it's in beta. You can go in the Discord and"
+    },
+    {
+      "t": 626,
+      "text": "people will be there to answer questions and other people are in there testing it out. So, um yeah, I hope you give it a shot and let us know what you like or don't like about it. But um yeah, that's"
+    },
+    {
+      "t": 636,
+      "text": "it for me, I guess. >> Awesome stuff."
+    },
+    {
+      "t": 641,
+      "text": ">> So I I I have a question about um so so I I have this like stupid It's not even stupid. I use it. My most used graph right now is a Python langraph script"
+    },
+    {
+      "t": 654,
+      "text": "that goes and pulls in my markdown files that contain all my transcripts for my meetings and riches my notes, right? Um use it a bunch of times a day. um that's it's an obsidian. So it's back to like a"
+    },
+    {
+      "t": 667,
+      "text": "uh git repo and then I'm using um llama 318 billion parameter on there. So how can I get access using containers and cloudflare's edge to like a llama model?"
+    },
+    {
+      "t": 680,
+      "text": "How how was how does that work with these? So if you're going to do inference from inside the container um you can use right now if you want to use workers AI you would use the rest API."
+    },
+    {
+      "t": 690,
+      "text": "If you want to use chat GBT, I mean anything you can pip install. You can, you know, if you want to pip install the open AI SDK or whatever, like that'll Gemini."
+    },
+    {
+      "t": 699,
+      "text": ">> What if I want what if I wanted to run it like within that container? I I don't care how long it takes."
+    },
+    {
+      "t": 703,
+      "text": ">> Yeah. >> But I want to be I I I don't want I don't like that data getting out going anywhere. So like could can I run it inside of >> like an OAMA you're saying or something?"
+    },
+    {
+      "t": 712,
+      "text": "Oh. Oh. >> Um so there Okay, I should have mentioned this. No GPUs yet on the containers. when that comes, it'll be truly OP, but I don't think we're there yet. So, um, yeah, you're that is not"
+    },
+    {
+      "t": 726,
+      "text": "there yet, but I like the way you're thinking. It's we'd all like that, I think."
+    },
+    {
+      "t": 734,
+      "text": "Oh, no, you can you can run GPUs and um I I know a couple people here that have runa um in Docker, I think. So, and they're using GPUs, so yeah, I mean, there's certain image types you can use."
+    },
+    {
+      "t": 747,
+      "text": "Um there's some Nvidia images that you can use for CUDA and stuff."
+    },
+    {
+      "t": 751,
+      "text": ">> Okay. >> I have a question from Zoom. >> Yes. >> Robert Kesler asks, \"I use Spain with 500 containers at once. Can I now cloud?\""
+    },
+    {
+      "t": 761,
+      "text": ">> No. >> Not yet. Um so like I said, there's an autoscaling feature that is coming, but it's not there today. Uh in fact, I'll just So, uh one thing I'll mention, this"
+    },
+    {
+      "t": 774,
+      "text": "is another caveat. Um, this is a like a future enhancement. You see the locations of these like obviously we're not in Los Angeles right now, right? And I think I we just saw one that was like"
+    },
+    {
+      "t": 785,
+      "text": "Singapore. We're in Texas. So what's happening is the durable object and the worker is running in Texas because it's near us because it's you know uh colllocated closest to us. That's how"
+    },
+    {
+      "t": 797,
+      "text": "cloud works. The containers are not there yet. They will run wherever the most first available one comes up. So that's why you're getting stuff in like LA and stuff like that. We there's a"
+    },
+    {
+      "t": 808,
+      "text": "scalability factor that has to be met. Right now we're just in beta. Eventually it'll be you know ubiquitous across the network. Uh just like durable objects are but um yeah Robert not yet."
+    },
+    {
+      "t": 821,
+      "text": ">> Uh he says follow me when I have a question. So I know so you mentioned that you have a ono typescript API."
+    },
+    {
+      "t": 831,
+      "text": ">> Yeah. which then calls a fast API Python API within that's running inside a container. So yes, a hono app simply just to bootstrap it for an external API"
+    },
+    {
+      "t": 843,
+      "text": "end point. >> Well, so Cloudflare runs on JavaScript."
+    },
+    {
+      "t": 847,
+      "text": "Um it runs well you can run any Wom compatible language on Cloudflare. So you could potentially run like Rust or Golang or something that compiles to WSOM. But um most of the documentation"
+    },
+    {
+      "t": 861,
+      "text": "examples everything is really like TypeScript or JavaScript. And so that is just like your it's kind of like uh the car and then whatever you want to put in the car can be you know whatever you"
+    },
+    {
+      "t": 874,
+      "text": "want. It could be Python, it could be Go, it could be something else. But to you know get the best out of our network yeah it's it's going to be TypeScript as like the the vehicle you you know run"
+    },
+    {
+      "t": 884,
+      "text": "the request through. that that's just the glue API between uh you know the external connection that you're making to whatever is running inside container."
+    },
+    {
+      "t": 895,
+      "text": ">> Yeah. So you can see right here I'm using this get container uh method and it's basically it's it's provisioning an instance. It's like getting an instance of a container and then I'm starting the"
+    },
+    {
+      "t": 907,
+      "text": "container and I'm passing these um environmental variables to it. This part's actually optional, but to the way I was figuring out if you want to pass environmental variables in, which in"
+    },
+    {
+      "t": 916,
+      "text": "this case is like a secret, then you needed that first. And then you uh pass the fetch that came to your worker to your container to that port 880 that fast API is listening on. And so it's"
+    },
+    {
+      "t": 929,
+      "text": "just like a straight pass through. >> Fetch is what's making it happen."
+    },
+    {
+      "t": 933,
+      "text": ">> Yes. >> Interesting. Thank you. >> Yeah. on the YouTube story saying you cannot limit it to say >> not yet. So it's that's coming. That's like one of the big things they said"
+    },
+    {
+      "t": 947,
+      "text": "you know asterisk this is not available yet. Um just like with you know cloudflare you can um limit you can put stuff in different regions or you know nationalities. Um"
+    },
+    {
+      "t": 961,
+      "text": "I don't think you can do that yet with containers at all. So it's like still kind of a limited it's just because there's not that much of it yet deployed I think. So that'll change as beta goes"
+    },
+    {
+      "t": 971,
+      "text": "away and it get goes to GA."
+    },
+    {
+      "t": 982,
+      "text": ">> That is a great question. Um >> so everyone can hear it online. >> So he asked about uh if there's like an orchestration uh framework or process on the road map."
+    },
+    {
+      "t": 992,
+      "text": "Um I I think so. Um I think that so the way so what you can do in workers is you can like I said bind stuff together. You can bind one worker to another and then you"
+    },
+    {
+      "t": 1004,
+      "text": "can have um one worker call another worker's methods through something called RPC call. It's a remote procedure call. It's like a JavaScript thing. So I would imagine that that through that"
+    },
+    {
+      "t": 1016,
+      "text": "bindings and RPC method you could string together like hundreds of containers and have them like orchestrated in a way. Um I the the biggest like uh thing I have"
+    },
+    {
+      "t": 1028,
+      "text": "to compare that is Kubernetes and Kubernetes is like a a beast, right?"
+    },
+    {
+      "t": 1032,
+      "text": "There's like so much to it. Um I the Cloudflare way is usually pretty lightweight. So I would imagine they would stick to like the most lightweight elegant solution they could to do stuff"
+    },
+    {
+      "t": 1042,
+      "text": "like that versus like going out and trying to build a whole another like Kubernetes type thing. So it might be a little DIY for a while, but um you know that's like I use Kubernetes all the"
+    },
+    {
+      "t": 1054,
+      "text": "time and I would love to just use as less of it as possible. So um I think a lot of people are pushing for orchestration stuff. Um sorry that wasn't a great answer."
+    },
+    {
+      "t": 1071,
+      "text": ">> Yes. Yeah, you could like call another container running in another worker and have it fetch into that container and do stuff there. Um,"
+    },
+    {
+      "t": 1083,
+      "text": ">> yeah, I I don't have an example of that yet, but it's on my list. Yeah, it's a good question."
+    },
+    {
+      "t": 1088,
+      "text": ">> Awesome. I look forward to more questions at the after price. I want to uh please thank uh to Kier for dropping the knowledge on cloud on Cloudflare containers. I know I'm excited to use"
+    },
+    {
+      "t": 1098,
+      "text": "them. Uh, private."
+    }
+  ],
+  "backfill": true
+}

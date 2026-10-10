@@ -1,0 +1,57 @@
+---
+import Prose from '../components/events/Prose.astro';
+import { links, channels } from '../data/site';
+import Icon from '../components/Icon.astro';
+import { nextEvent, fmtDay, fmtTime } from '../lib/data';
+const next = await nextEvent();
+---
+<Prose title="Join our community" description="Connect with AI builders in Austin and online: meetup emails, Discord, YouTube, the first-Monday meetup and Office Hours." lead="AIMUG is where Austin's AI builders share new research and teach each other through short talks.">
+  <h2 id="newsletter">Meetup emails</h2>
+  <p>The lineup before each meetup, then the talks once they are up. About two emails a month.</p>
+  <form action={links.newsletter} method="post" class="flex flex-wrap gap-2.5">
+    <label for="em" class="sr-only">Email</label>
+    <input id="em" name="email" type="email" required autocomplete="email" placeholder="you@example.com" class="min-w-0 flex-[1_1_240px] rounded-xl border-2 border-edge bg-ink px-3.5 py-3 text-text placeholder:text-muted" />
+    <button type="submit" class="min-h-[52px] cursor-pointer rounded-xl border-0 bg-gold px-6 font-bold text-ink">Subscribe</button>
+  </form>
+
+  <h2>Follow AIMUG</h2>
+  <ul class="list-none pl-0">
+    {channels.filter((c) => c.key !== 'mail').map((c) => <li class="flex items-start gap-2.5"><Icon name={c.key} class="mt-1 shrink-0 text-gold" /><span><a href={c.href}>{c.label}</a>: {c.blurb}</span></li>)}
+  </ul>
+
+  <h2>Attend our events</h2>
+  <p>Join us in Austin for learning, networking, and collaboration. See the <a href="/events/">events page</a> or RSVP on <a href={links.meetup}>Meetup</a>.</p>
+
+  <h3>Monthly Mixer & Showcase</h3>
+  <p><strong>First Monday of each month</strong>, in person at ACC Rio Grande in Austin and online. Free. Short talks from 6:30, open Q&A, then an optional mixer at The Tavern.</p>
+  {next && (
+    <>
+    <p>Next up: <a href="/events/">{fmtDay(next.data.start)}, {fmtTime(next.data.start)} to {fmtTime(next.data.end)} CT</a>.</p>
+    </>
+  )}
+
+  <h3 id="office-hours">Office Hours</h3>
+  <p><strong>2nd, 3rd and 4th Mondays, 5 PM CT, Google Meet.</strong> No Office Hours on the 1st Monday: that's the meetup, at ACC or online.</p>
+  <ul>
+    <li>Connect and collaborate with other builders</li>
+    <li>Work through problems together and troubleshoot live</li>
+    <li>Chat about the latest tools we're using</li>
+    <li>Sync on current projects and quick-plan future events</li>
+  </ul>
+  <p>Bring questions, code, or ideas. Stay for as much or as little as you like. All skill levels welcome. <a href={links.officeHours}>Join the session</a>.</p>
+
+  <h3>Hacky Hours</h3>
+  <p>Casual networking, project collaboration, and knowledge sharing. Hacky Hours are scheduled as they come up and announced on <a href={`${links.meetup}events/`}>Meetup</a> and <a href={links.discord}>Discord</a>.</p>
+
+  <h2>Get involved</h2>
+  <ul>
+    <li>Share your projects during showcases</li>
+    <li>Help others in Discord channels</li>
+    <li><a href="/speak/">Present at a monthly meetup</a></li>
+    <li>Contribute to our <a href={links.github}>GitHub repositories</a></li>
+    <li>Join our <a href="/volunteer/">volunteer team</a></li>
+  </ul>
+
+  <h2>Code of conduct</h2>
+  <p>We're committed to creating a welcoming and inclusive environment for everyone. Please review our <a href="/code-of-conduct/">community standards</a>.</p>
+</Prose>

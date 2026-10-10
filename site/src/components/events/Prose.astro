@@ -1,0 +1,22 @@
+---
+// Shell for the static pages. Works as a Markdown layout (props arrive as `frontmatter`) or as a plain component.
+import Base from '../../layouts/Base.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  lead?: string;
+  noindex?: boolean;
+  frontmatter?: { title: string; description?: string; lead?: string; noindex?: boolean };
+}
+const { title, description, lead, noindex } = Astro.props.frontmatter ?? Astro.props;
+---
+<Base title={title} description={description} noindex={noindex}>
+  <div class="mx-auto max-w-[1240px] px-4 pt-12 pb-16 sm:px-8 sm:pt-16" data-pagefind-ignore={noindex ? 'all' : undefined}>
+    <h1 class="m-0 max-w-[16ch] font-display text-[clamp(48px,7.5vw,96px)] leading-[0.95] font-normal uppercase">{title}</h1>
+    {lead && <p class="m-0 mt-4 max-w-[720px] text-xl text-soft">{lead}</p>}
+    <div class="prose-aimug mt-10">
+      <slot />
+    </div>
+  </div>
+</Base>

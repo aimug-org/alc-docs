@@ -1,0 +1,60 @@
+---
+import DocsPage from '../../components/content/DocsPage.astro';
+import { noteMonths } from '../../components/content/content';
+import { allEvents, publicTalks } from '../../lib/data';
+
+// Built from the month folders, so a new meetup's notes show up here without editing this page.
+const months = await noteMonths();
+const events = await allEvents();
+const talks = await publicTalks();
+const withLinks = months.map((m) => {
+  const ev = events.find((e) => e.data.docs === `/docs/${m.folder}/`);
+  return { ...m, recap: ev?.data.recap, talks: ev ? talks.filter((t) => t.data.event === ev.id).length : 0, talksHref: ev ? `/events/#${ev.id}` : undefined };
+});
+const [latest, ...rest] = withLinks;
+const years = [...new Set(rest.map((m) => m.year))];
+const link = 'inline-flex min-h-[44px] items-center font-semibold no-underline';
+---
+<DocsPage title="Notes" description="Slides, code and write-ups from AIMUG meetups since 2023, newest first." current="/docs/">
+  <div class="flex flex-col gap-12">
+    <header class="flex flex-col gap-3">
+      <h1 class="m-0 font-display text-[clamp(52px,7vw,88px)] leading-[0.95] font-normal uppercase">Notes</h1>
+      <p class="m-0 max-w-[680px] text-xl text-soft">Slides, code and write-ups from AIMUG meetups, newest first. Watch the talk, then come here for the details.</p>
+    </header>
+
+    {latest && (
+      <section aria-labelledby="latest-h" class="flex flex-col gap-3 rounded-[22px] border-2 border-gold bg-panel p-6 sm:p-8">
+        <p class="m-0 font-mono text-sm tracking-[0.12em] text-gold uppercase">Latest · {latest.label}</p>
+        <h2 id="latest-h" class="m-0 text-[clamp(26px,3vw,34px)] leading-tight font-bold"><a href={latest.url} class="text-text no-underline hover:text-gold">{latest.title}</a></h2>
+        {latest.summary && <p class="m-0 text-lg text-soft">{latest.summary}</p>}
+        <div class="flex flex-wrap gap-x-6">
+          <a href={latest.url} class={link}>Read the notes</a>
+          {latest.talks > 0 && <a href={latest.talksHref} class={link}>Watch the {latest.talks} talks</a>}
+          {latest.recap && <a href={latest.recap} class={link}>Recap of the night</a>}
+        </div>
+      </section>
+    )}
+
+    {years.map((y) => (
+      <section aria-labelledby={`y-${y}`} class="flex flex-col gap-4">
+        <h2 id={`y-${y}`} class="m-0 font-display text-[clamp(36px,4vw,48px)] leading-none font-normal uppercase">{y}</h2>
+        <ul class="m-0 grid list-none grid-cols-[repeat(auto-fill,minmax(min(100%,280px),1fr))] gap-4 p-0">
+          {rest.filter((m) => m.year === y).map((m) => (
+            <li class="flex flex-col gap-2 rounded-[18px] border border-line bg-panel p-5">
+              <p class="m-0 font-mono text-sm tracking-[0.12em] text-muted uppercase">{m.label}</p>
+              <a href={m.url} class="text-lg leading-snug font-bold text-text no-underline hover:text-gold">{m.title}</a>
+              {m.summary && <p class="m-0 line-clamp-3 flex-1 text-soft">{m.summary}</p>}
+              <p class="m-0 flex flex-wrap gap-x-4 text-[15px]">
+                <span class="inline-flex min-h-[44px] items-center text-muted">{m.pages} {m.pages === 1 ? 'page' : 'pages'}</span>
+                {m.talks > 0 && <a href={m.talksHref} class={link}>{m.talks} {m.talks === 1 ? 'talk' : 'talks'}</a>}
+                {m.recap && <a href={m.recap} class={link}>Recap</a>}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+
+    <p class="m-0 text-muted">Early days: the LangChain lab series and our first guides from 2023 and 2024 are in the menu under Early days.</p>
+  </div>
+</DocsPage>

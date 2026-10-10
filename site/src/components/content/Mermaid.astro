@@ -1,0 +1,46 @@
+---
+// Draws ```mermaid blocks in blog and docs pages. Loads mermaid from the CDN only when the page has one.
+// If the script or a diagram fails, the code block stays as it is.
+---
+<script is:inline type="module">
+  const blocks = [...document.querySelectorAll('pre > code.language-mermaid')];
+  if (blocks.length) {
+    import('https://cdn.jsdelivr.net/npm/mermaid@11.17.2/dist/mermaid.esm.min.mjs').then(async ({ default: mermaid }) => {
+      mermaid.initialize({
+        startOnLoad: false,
+        theme: 'base',
+        themeVariables: {
+          darkMode: true,
+          fontFamily: 'Barlow, sans-serif',
+          background: '#06182b',
+          primaryColor: '#0b2540',
+          primaryTextColor: '#eef3f7',
+          primaryBorderColor: '#3d6a91',
+          secondaryColor: '#041222',
+          tertiaryColor: '#0b2540',
+          lineColor: '#a7bccd',
+          textColor: '#eef3f7',
+          clusterBkg: '#041222',
+          clusterBorder: '#1e4466',
+          edgeLabelBackground: '#06182b',
+        },
+      });
+      for (const [i, code] of blocks.entries()) {
+        const text = code.textContent;
+        if (!(await mermaid.parse(text, { suppressErrors: true }))) continue;
+        try {
+          const { svg } = await mermaid.render(`mermaid-${i}`, text);
+          const fig = document.createElement('div');
+          fig.className = 'mermaid-diagram';
+          fig.innerHTML = svg;
+          code.parentElement.replaceWith(fig);
+        } catch {}
+      }
+    }).catch(() => {});
+  }
+</script>
+
+<style>
+  :global(.mermaid-diagram) { margin: 0 0 1em; overflow-x: auto; }
+  :global(.mermaid-diagram svg) { max-width: 100%; height: auto; }
+</style>

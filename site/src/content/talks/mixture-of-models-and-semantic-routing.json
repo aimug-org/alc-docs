@@ -1,0 +1,17 @@
+{
+  "title": "Mixture of models and semantic routing",
+  "speakers": [
+    "colin-mcnamara"
+  ],
+  "date": "2026-10-05",
+  "event": "2026-10-05",
+  "youtubeId": "aDItvIXu8J4",
+  "publishAt": "2026-10-14T10:00:00-05:00",
+  "duration": 1521,
+  "thumbnail": "/talks/mixture-of-models-and-semantic-routing.jpg",
+  "topics": [
+    "Routing",
+    "Inference",
+    "Security"
+  ]
+}

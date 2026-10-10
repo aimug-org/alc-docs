@@ -1,0 +1,435 @@
+{
+  "title": "Streamlit for AI Dashboards",
+  "speakers": [
+    "jeff-linwood"
+  ],
+  "date": "2025-09-30",
+  "event": "2025-09-10",
+  "youtubeId": "qoLINgx8edQ",
+  "duration": 1015,
+  "summary": "In this beginner-friendly session from the Austin AI Middleware Users Group (AIMUG) September Showcase, Jeff Linwood demonstrates how to quickly build interactive dashboards using Streamlit, integrate LangChain, and chat with your data.",
+  "topics": [],
+  "transcript": [
+    {
+      "t": 6,
+      "text": "[Music] All right. So, I think I have everybody here. Do we have uh hopefully not too much echo? You can hear me. Uh my dashboard, I got to confess that is some"
+    },
+    {
+      "t": 18,
+      "text": "sort of Windows XP looking dashboard. I can't compete with that. Modern web technology is not quite there. All right. So, we have my slides up here. Uh I'm going to talk a little bit about"
+    },
+    {
+      "t": 30,
+      "text": "something called Streamlit. Now, who here has used Streamllet before? Okay, so everybody, well, okay, I shouldn't say everybody, a little over half the room. So, this is a beginner talk about"
+    },
+    {
+      "t": 43,
+      "text": "Streamlit, right? So, I want to introduce Streamlit to people who have never heard of it, maybe there aren't even Python programmers."
+    },
+    {
+      "t": 50,
+      "text": "going to show a little bit about dashboards, a little bit about data cleaning, not too much, and then I'll show you how to actually use an LLM with uh Streamlit so you can chat with your"
+    },
+    {
+      "t": 61,
+      "text": "data. Now, I've got some people in here that are probably a much bigger Streamllet expert than I am personally."
+    },
+    {
+      "t": 68,
+      "text": "So, if you see something here, you're like, want to try it in and be like, ha, there's this really cool way of doing it they just added in version.49, feel free. Okay. So, uh without uh any"
+    },
+    {
+      "t": 80,
+      "text": "further ado, uh this is uh Streamlit."
+    },
+    {
+      "t": 84,
+      "text": "So, let me just show you what we're building."
+    },
+    {
+      "t": 88,
+      "text": "And all of this is uh shared. I have links at the end uh to a GitHub uh repo."
+    },
+    {
+      "t": 94,
+      "text": "And there we are. Assuming it doesn't crash. So, this is the national park visitors dashboard. This is a live uh demonstration. Let me make this a little bit bigger on the screen here. So, Yeah,"
+    },
+    {
+      "t": 107,
+      "text": "that's that's uh ugly, but you can see it readable. This is an interactive dashboard. For those of you who have worked with uh Jupyter notebooks, for those of you who have worked with React"
+    },
+    {
+      "t": 120,
+      "text": "applications, Flask applications are doing a little bit of data analysis or data presentation."
+    },
+    {
+      "t": 126,
+      "text": "This is kind of the middle between those two, right? So, we have this idea of, you know, Jupyter notebooks. We can log in. We can show some stuff. We can click the run in the cell. It goes through. It"
+    },
+    {
+      "t": 138,
+      "text": "shows some charts. You know, it's cool. It's interactive. You type into it."
+    },
+    {
+      "t": 143,
+      "text": "That's great. There's another side of things, right? We could build a whole React application that has interactive charts, has fetching of data from an API. It's real slick, no limits, but it"
+    },
+    {
+      "t": 155,
+      "text": "takes a while to build. That said, of course, we could just have, you know, Claude or any of these other tools just kind of take our CSV file and uh build us a nice React dashboard out of it. But"
+    },
+    {
+      "t": 165,
+      "text": "Streamlit's kind of that thing in the middle, right? Streamlet's what you want to use for like a prototype for user experience testing. You want to do something that involves like an internal"
+    },
+    {
+      "t": 174,
+      "text": "tool. Now, would I personally build like a SAS on top of this? No. I'm sure probably somebody has, but this is not where you go for this, right? This is much more think like prototyping,"
+    },
+    {
+      "t": 186,
+      "text": "internal tools, something you can share with people internally. That's where we want to go with this. So, I took some open data. It's the visitation for national park system and I've got links"
+    },
+    {
+      "t": 197,
+      "text": "to all that and just made a really simple dashboard out of it. Right? So, I can come over here and pick a year out of this and I can see the visitor counts in 2007. Yeah, it's a little hard to"
+    },
+    {
+      "t": 207,
+      "text": "read just with uh this, but you know, I've got 400 whatever 37 national parks, whatever it is these days. Uh personal goal of mine is to actually visit all, like I said, 450 whatever it is units of"
+    },
+    {
+      "t": 220,
+      "text": "national park system. I'm up to about 300 and something of those, which is a sizable chunk. Most of the rest are really hard to get to. Uh they they tend to be very remote, but uh you can see"
+    },
+    {
+      "t": 230,
+      "text": "that the largest over here, the visitor count, it's going to be Blue Ridge Parkway, which is a it's effectively a highway. And so it's going to have a pretty big uh count. Uh some of the ones"
+    },
+    {
+      "t": 239,
+      "text": "on the right hand side, they're just not open very often. Uh they're seasonal, they're out of the way, they don't have very high visitation."
+    },
+    {
+      "t": 247,
+      "text": "So we can see that with the chart here. We can see a table with the data, right?"
+    },
+    {
+      "t": 251,
+      "text": "So we've got a table we can go through. And again, for those of you that are familiar with like the Jupyter notebook, the pandas dataf frame, this is just another way of working with dataf frames"
+    },
+    {
+      "t": 263,
+      "text": "and showing tables, right? So, we've got all that. And then the cool thing I want to show off is uh let's just make sure this works. Uh I can actually start to chat with this with this dashboard,"
+    },
+    {
+      "t": 274,
+      "text": "right? So, I can say what was the most visited park?"
+    },
+    {
+      "t": 279,
+      "text": "And this is the part where we're actually using lang chain."
+    },
+    {
+      "t": 285,
+      "text": "Now, let's see if that actually works."
+    },
+    {
+      "t": 290,
+      "text": "Okay. So, chat with my data down here. uh it's thinking and uh it's actually chatted with the data right so uh it says Blue Ridge Parkway 17,000 or 17 million rather that's the right number I"
+    },
+    {
+      "t": 303,
+      "text": "would assume uh what's cool is over here I had filtered the amount of data from like the year 2005 to the year 2007 my streamllet dashboard figured that out again for all of you that are Python"
+    },
+    {
+      "t": 316,
+      "text": "wizes this is a a data frame typical pandas dataf frame and I filtered it down based on the selection over here uh the year and I could even filter by park and drop some of these parks out if I"
+    },
+    {
+      "t": 326,
+      "text": "wanted to and it passed that chunk basically the data frame as a CSV as uh into the prompt. So very simple integration, not your production class"
+    },
+    {
+      "t": 339,
+      "text": "integration, right? Because uh this could use a bunch uh this could use a decent chunk of your context. Uh but if you're working with a data set where you can filter and that reasonably falls"
+    },
+    {
+      "t": 351,
+      "text": "into like a context limit, this is a lot simpler than setting up MCP or rag or anything like that. Right? Again, we're thinking prototype here. We're thinking internal tool, right? It may not make"
+    },
+    {
+      "t": 362,
+      "text": "sense to completely productionize this tool right away."
+    },
+    {
+      "t": 366,
+      "text": "All right. So, hopefully that covers what this is. Uh, let me talk a little bit about how to build it."
+    },
+    {
+      "t": 373,
+      "text": "I don't want to read all of these slides out to you because a lot of it's uh, quite frankly, it's a bunch of Python code about data cleaning. But, uh, you know, I do want to cover the tools that"
+    },
+    {
+      "t": 382,
+      "text": "I use to build it. Got streamlin. That's the key technology here. What makes the web uh, web framework very um, how should I say interactive uh, without a lot of work on my end. uh we're using"
+    },
+    {
+      "t": 394,
+      "text": "pandas for the data wrangling right so again typical Python data science data exploration data analysis uh but you could use almost anything else that's dataf frame compatible right so there's"
+    },
+    {
+      "t": 405,
+      "text": "a python standard I don't know I can't remember the name off top of my head but there's like a dataf frame API that they're all basically compatible with and I'm using alter for charts lang"
+    },
+    {
+      "t": 416,
+      "text": "chain of course for LLM integration and then it's got a little sidebar nav for a multi-page field here's the sample data data set. So it turns out that uh when I downloaded this from the National Park Service, it was"
+    },
+    {
+      "t": 428,
+      "text": "in a wide format. So I had columns for the years. Uh that's great, but it doesn't lend itself well to this sort of analysis. So I used uh Melt to convert that to a long format. So pretty cool"
+    },
+    {
+      "t": 442,
+      "text": "stuff. Um here's just a rough data cleaning overview. I took the raw CSV file. I dropped the average column out of it because it actually gave me the average for like each year."
+    },
+    {
+      "t": 454,
+      "text": ">> I didn't really want that. Um, I can calculate that myself if I need it. I dropped the empty year columns because the data wasn't completely clean. So, there was also some weird columns in the"
+    },
+    {
+      "t": 462,
+      "text": "middle that had no data. I don't know how it got in there. I used melt to reshape it, which was just kind of a cool little uh quirk. Uh, filled in uh anything that was didn't have data,"
+    },
+    {
+      "t": 473,
+      "text": "converted the types, and end up with the final data frame. So again, I could kind of go through this if people are curious about the pandas and the data framework, but uh it's all just sort of, you know,"
+    },
+    {
+      "t": 483,
+      "text": "here, you know, there's my data cleaning transform from wide to long. I use melt."
+    },
+    {
+      "t": 487,
+      "text": "I did a little bit more cleaning here. Uh so some sidebar filters. So this is really your streamlight stuff. The part before that was just straight up data wrangling. I've got my data cleaning."
+    },
+    {
+      "t": 497,
+      "text": "I've got my pandas data frames. This is where we're starting to get into streaml, right? And one thing I should show you is the code for this. Uh while it's not uh necessarily the cleanest, uh"
+    },
+    {
+      "t": 508,
+      "text": "I stuck everything into one app.py file. Right? So if I just make this a little bit bigger, um I've got everything in one app.py file. Again, thinking about this, you could organize this"
+    },
+    {
+      "t": 518,
+      "text": "differently, right? But we're thinking prototype. We're think internal tool. And this whole thing is uh 126 lines of code, right? Now, if you all try to build this out in React or something,"
+    },
+    {
+      "t": 530,
+      "text": "uh, talking to a backend, fetching some data, it's going to be a lot more than 126 lines of code. Um, I think we all we all know that. No shade against React, right? Just this keeps it simple and I"
+    },
+    {
+      "t": 541,
+      "text": "don't know what Streamlet's necessarily doing under the hood, but I can just declare like I've got a text input and it just reads out of it and it's reactive. It's very nice."
+    },
+    {
+      "t": 552,
+      "text": "So, just going through this as well, uh you can see that all the lines uh that I've got here. I've got the page set up."
+    },
+    {
+      "t": 558,
+      "text": "Uh that's important. I've got the sidebar navigation set up pulling in the data. And again, I could I don't have to do data clean on every single load, right? I could do some caching in here,"
+    },
+    {
+      "t": 568,
+      "text": "but you know, again, it's an exploration. Uh the cool thing is I've got multiple uh line or I've got multiple pages. So if I come back here, I can switch over to like park trends over time and see like uh you know"
+    },
+    {
+      "t": 581,
+      "text": "different type of data than maybe the dashboard overview. I've got some key performance indicators here. Uh so I'm pulling out the total visitors in 2005, the most visited park. Again, that's all"
+    },
+    {
+      "t": 592,
+      "text": "interactive. If I switch this 2010, I'll get the total visitors in 2010. So all very cool stuff. Uh just kind of coming back here, bar charts, KPI metrics, a couple things you can do. Here's how you"
+    },
+    {
+      "t": 606,
+      "text": "add navigation with sidebar. Again, I got a sidebar. I got one line of code to configure a sidebar. So, just everything in this is very concise, very tur and very easy. So, I like it."
+    },
+    {
+      "t": 621,
+      "text": "I got a line chart here using Alter. And again, just passing in a data frame. I'm selecting series out of a a data frame and passing it in, getting a chart out of it. And you don't have to use Alter."
+    },
+    {
+      "t": 632,
+      "text": "You can use pretty much anything else. All right, lang chain. How's that fit in? And again, you might be thinking to yourself, okay, I've got to integrate some chat component. I've got to bring"
+    },
+    {
+      "t": 642,
+      "text": "in some JavaScript code to get that chat to like work out cleanly. I don't need to. This is just regular Python code. I can bring in lang chain uh itself. Um we've all heard about lang chain today,"
+    },
+    {
+      "t": 653,
+      "text": "so I don't know that I need to introduce it again. But I'm using it for this chat with your CSV feature. And I'm not using a rag, not using a vector store, just using the live filtered CSV data."
+    },
+    {
+      "t": 664,
+      "text": "Uh just again want to be clear, consider your contact size, your token limits, and your pricing here. Again, depending on what you're building, it's a prototype. You're not going to go over"
+    },
+    {
+      "t": 674,
+      "text": "the limits, but be conscious. Uh lang chain integration couldn't be easier. I'm pulling in chat open AIS uh here, setting a temperature to one because that's all GBT 5 mini apparently"
+    },
+    {
+      "t": 685,
+      "text": "supports, and then it's using five mini."
+    },
+    {
+      "t": 689,
+      "text": "Here's how the data flows, right? So I've got the user putting a query into chat that goes through streamllet. It builds the prompt with a query. Uh filters the dataf frame passes that all"
+    },
+    {
+      "t": 700,
+      "text": "through lang chain to the lm and it comes all the way back. Right? So what does that actually look like in practice? It's this Python code right here. And you know again up at the top"
+    },
+    {
+      "t": 710,
+      "text": "I'm pulling in filtered_df. That's my filter data frame based on the the radio buttons and the filters I set up in the sidebar in Streamllet. Converting that to a CSV and then just dumping in a very"
+    },
+    {
+      "t": 724,
+      "text": "simple prompt. Um you are a helpful assistant. Of course it'll answer other questions but uh that's where the world of guardrails comes in which is uh you know something completely different"
+    },
+    {
+      "t": 734,
+      "text": "presentation than this. So we're filling in the context, we're filling in the query and uh that's about it. So this is how you'd invoke that using lang chain."
+    },
+    {
+      "t": 743,
+      "text": "And again, we're not doing streaming. We're not doing anything fancy. We're just doing a very simple uh chat completion."
+    },
+    {
+      "t": 751,
+      "text": "All right. So to keep this uh uh on wraps, uh I didn't want to go all the way into a whole bunch of different things, but we could use retrieval augmented generation or rag to selectively include data. Uh we could"
+    },
+    {
+      "t": 764,
+      "text": "use model context protocol, which a few other people have talked about, to go out and maybe like talk to an API to get this data. um you know just depending on if we want the LLM to ask for specific"
+    },
+    {
+      "t": 774,
+      "text": "information. So if we ask the LM, okay, what were the top visitors in 2007?"
+    },
+    {
+      "t": 778,
+      "text": "Instead of passing a data along, the LM would respond back with, okay, you know, tell me what it is and then I'll come up with a response. Uh for all of you, if you wanted to try this out, try your own"
+    },
+    {
+      "t": 789,
+      "text": "data set, try a different LLM, try your a different model, you know, just something to try out. And then uh also think about guardrails and observability. So you could use something like Langmith to do some"
+    },
+    {
+      "t": 800,
+      "text": "observability and check see what chat messages are going through. And then again, if you were to actually deploy this, think about guardrails here because, you know, you don't want some"
+    },
+    {
+      "t": 809,
+      "text": "situation where someone's chatting with this thing and asking weird stuff, right? Make sure it stays on track."
+    },
+    {
+      "t": 815,
+      "text": "Um, just some optional stuff. You could include upload your own CSV. Again, how much code is it to upload a CSV into context? Uh, you know, with Streamlit, it's not much."
+    },
+    {
+      "t": 826,
+      "text": "Uh, you could deploy it to the web. Um, I'm not going to send the LLM version over to the web because I don't feel like running through all of my um token limits or whatever. But here it is"
+    },
+    {
+      "t": 835,
+      "text": "running on the community version of Streamlit. So, this is just a public GitHub repo deployed to Streamlit Cloud."
+    },
+    {
+      "t": 841,
+      "text": "Cost me nothing to run. It fell asleep since the last time I >> worked on it, but uh popped it back up and this is just as val as as you can get. All interactive and so forth."
+    },
+    {
+      "t": 852,
+      "text": "All right. Um, some ideas here. If you want uh just consider data privacy and uh you know follow the streamllet tutorial I've got a link here integrate an LM yourself into that for the Uber data uh create a"
+    },
+    {
+      "t": 865,
+      "text": "hobby data set and chat with it like your collectible collection."
+    },
+    {
+      "t": 869,
+      "text": "And then last uh just to wrap things up uh we've got an interactive dashboard in Python. I've got some code for all of you. You got the slides. I'll figure out a way to share it through the chat. Uh,"
+    },
+    {
+      "t": 880,
+      "text": "we brought an LM chat into the application and again the chat components are built into Streamlit. So I didn't do anything to get that chat to work. Like it's built into Streamlit."
+    },
+    {
+      "t": 890,
+      "text": "Um, super simple and quite frankly I just kind of went through their tutorial and modified just a little bit to work with Lang Chain, but not a big deal."
+    },
+    {
+      "t": 900,
+      "text": "Streamlet's great for prototypes, uh, faster to build. Find your own data set."
+    },
+    {
+      "t": 904,
+      "text": "I've got some docs up here for Streamlit. I've got their chat with an LLM documentation which kind of covers the chat side of things. Uh using OpenAI with Langchain in Python. If you're new"
+    },
+    {
+      "t": 914,
+      "text": "to Langchain, that's a good way just to get started with the OpenAI API. Um you can find me at jefflimler.com. That's my email address if you want to email me instead. And uh that's my open source"
+    },
+    {
+      "t": 925,
+      "text": "project which has nothing to do with this. It's not even in Python. And then last uh this repo is up on my personal GitHub. It's public. Um this stuff's in a branch. All right. I think that uh"
+    },
+    {
+      "t": 936,
+      "text": "should cover it. Anyone have any questions? >> Questions? Um I have a comment. You know, we were playing with with Streamlit about probably two years ago when we were trying to figure out like"
+    },
+    {
+      "t": 947,
+      "text": "what the hell is this AI stuff. Our our first our first labs uh were Streamlit."
+    },
+    {
+      "t": 952,
+      "text": "We hacked we basically hacked um Google um Gosh, my brain just went um excuse me. We're running we're running uh notebooks on Google."
+    },
+    {
+      "t": 962,
+      "text": ">> Oh, sure. Yeah. and using streamlet to interact with our data and it did not look as beautiful as this."
+    },
+    {
+      "t": 968,
+      "text": ">> No, it's it's it's some really nice stuff. >> Yeah. Yeah. Like I'm really really impressed. Um >> I have not met a backend engineer that does not follow Drop those front end developers just"
+    },
+    {
+      "t": 980,
+      "text": "like you know kind of pull them out of the chain."
+    },
+    {
+      "t": 984,
+      "text": ">> I mean again just to get a simple project up, right? You know we're not talking about something you'd actually deploy, right? We're just talking about a prototype. I mean simple and"
+    },
+    {
+      "t": 992,
+      "text": "effective. >> Yeah, absolutely. >> It's really great. Well, thank you so much, Jeff. >> Sure. >> Thank you so much."
+    },
+    {
+      "t": 998,
+      "text": "And >> Jeff, James, Collier, S, thank you so much for putting the time for taking the time uh to for this."
+    },
+    {
+      "t": 1005,
+      "text": "[Applause]"
+    }
+  ],
+  "backfill": true
+}

@@ -1,0 +1,646 @@
+{
+  "title": "Building a Full-Stack App in Five Days: A Marina Management System",
+  "speakers": [
+    "riccardo-pirruccio"
+  ],
+  "date": "2024-12-24",
+  "youtubeId": "a4VnImAMhLQ",
+  "duration": 2313,
+  "summary": "Explore the fascinating world of AI-powered development with Ricky Pirruccio at the Austin LangChain December Meeting!",
+  "topics": [],
+  "transcript": [
+    {
+      "t": 0,
+      "text": "[Music] hey guys um I'm Ricky um I work as a"
+    },
+    {
+      "t": 14,
+      "text": "manufacturer engineer you want to get your microphone real quick just T it just to make it easier fore to hear yeah"
+    },
+    {
+      "t": 28,
+      "text": "hello uh you might need to speak up then for the group okay cool no problem hello guys I'm Ricky uh um I I'm a manufacturing engineer at apply"
+    },
+    {
+      "t": 40,
+      "text": "materials um actually no technical project manager now change roles recently works I think this will work test test test okay"
+    },
+    {
+      "t": 52,
+      "text": "cool um and uh I dabble in software related things U I like building application um kind of just to solve problems oh"
+    },
+    {
+      "t": 64,
+      "text": "cool we better um and uh recently had a um kind of a personal use case to uh code an application for um um my dad's"
+    },
+    {
+      "t": 78,
+      "text": "Marina business in Italy um and so I started from zero with just a empty vs code editor um"
+    },
+    {
+      "t": 90,
+      "text": "and with Klein um I and I started this like last Sunday with Klein was able to build a full stack application um up to the level of"
+    },
+    {
+      "t": 102,
+      "text": "building all the uh the public homepages um the the backend workflow um and uh it took me about I"
+    },
+    {
+      "t": 114,
+      "text": "guess five days up until now it's still not complete um but I mean this is a pretty huge justement you know for someone that doesn't really do this for a living um so um a little background the"
+    },
+    {
+      "t": 128,
+      "text": "application um it's for a marina business uh the the way this works is that the user would navigate to our web page um there there's a homepage there's"
+    },
+    {
+      "t": 140,
+      "text": "anal page and then uh there's a signin page so the purpose of the application is to um manage uh a tenant leases for the marina um so I figured okay let me"
+    },
+    {
+      "t": 154,
+      "text": "build like an authentication system with a user dashboard and admin dashboard to manage uh the the leases um there's there's also documentation"
+    },
+    {
+      "t": 166,
+      "text": "involved that uh tenants need to submit um you know to to be complying to be our tenants um so um I thought okay like let"
+    },
+    {
+      "t": 178,
+      "text": "me integrate um uh doc sign um and you know obviously recurring payments with strip um so I got as far as building the"
+    },
+    {
+      "t": 192,
+      "text": "entire front end for the public interface and the the authentication workflow um and the way this works is a user would first register in our app and"
+    },
+    {
+      "t": 206,
+      "text": "then go on three I don't know why I justed sorry okay um and then go on three different um onboarding phases um with the idea"
+    },
+    {
+      "t": 218,
+      "text": "being that uh we our business would vet these people before um before um having them lease in our business um you know we only have so"
+    },
+    {
+      "t": 231,
+      "text": "much space it's like 200 I guess 200 boat space um kind of area so um it doesn't really make sense to register"
+    },
+    {
+      "t": 243,
+      "text": "them you know by default and just have a user create in our database um so what the way I built this is okay first it said let me Define my text de"
+    },
+    {
+      "t": 256,
+      "text": "um let me use nextjs for my front end uh with react with Tailwind yeah it's just uh"
+    },
+    {
+      "t": 269,
+      "text": "it's showing the the empty screen so yeah I'm sharing on Google too um so I said um yeah let me use nextjs Tailwinds"
+    },
+    {
+      "t": 281,
+      "text": "react um and with um with typescript to build a front end and the back end um I had to do a little bit of thinking um and um I kind of settled on cloud"
+    },
+    {
+      "t": 295,
+      "text": "flare workers and super base um kind of um and the way I found out about it was actually through our um our weekly um office hours like talking to"
+    },
+    {
+      "t": 309,
+      "text": "Kareem talking other people in the group um CL player workers were very popular so I thought okay let me just look into it let me try it out um and it's kind of mind blown um by the functionality of it"
+    },
+    {
+      "t": 323,
+      "text": "how easy was to set up um super base itself um I don't think I ever wanted use another equal database ever um I was able to uh Define all my tables in their"
+    },
+    {
+      "t": 337,
+      "text": "uh no code like dashboard it kind of looks something like this you have like um a table editor here and uh you can where all my tables"
+    },
+    {
+      "t": 354,
+      "text": "go on must be in a different project okay I think this is the"
+    },
+    {
+      "t": 371,
+      "text": "project yeah probably better to see the best place to work okay"
+    },
+    {
+      "t": 385,
+      "text": "cool yeah um so I I um I made these uh five uh tables agreements documents payment methods profile subscriptions and by default on super base you get an"
+    },
+    {
+      "t": 397,
+      "text": "U uh authentication schema with a users table um so this is one advantage of super base um you get like authentication built in by default um and"
+    },
+    {
+      "t": 412,
+      "text": "um yeah so um I kind of brainstormed this like business model um I use chat gbt for doing most of the brainstorming thinking okay like what databases do I need um"
+    },
+    {
+      "t": 424,
+      "text": "what do I need um you know to to have in them for my schemas um and then um I um got Klein um"
+    },
+    {
+      "t": 436,
+      "text": "is everyone here familiar with Klein so uh Klein is a vs code extension uh that kind of lets you uh pipe in um llms you have API um with something like"
+    },
+    {
+      "t": 450,
+      "text": "open router where you get a access to a lot of the the models that are um paid for where you pay for token um and the"
+    },
+    {
+      "t": 462,
+      "text": "big kit in the block right now is claw 3.5 um which has access to your computer so um it can execute um uh CI commands it can read"
+    },
+    {
+      "t": 476,
+      "text": "your lenser um can um uh perform web searches um it's um absolutely mind-blowing"
+    },
+    {
+      "t": 488,
+      "text": "um so all looks something like this um this is kind of like the vs code extension"
+    },
+    {
+      "t": 501,
+      "text": "um and it's just this right here so if I go on V code just one cl uh"
+    },
+    {
+      "t": 514,
+      "text": "Clin us it used to be called Claud Dev um these renamed the decline um they recently added the um MV MVC um feature where um I haven't really"
+    },
+    {
+      "t": 530,
+      "text": "explored much of yet um but uh you can create servers to um uh where you define tools for your lens to use um so that's"
+    },
+    {
+      "t": 543,
+      "text": "something I'm probably going to be using in the future um yeah what's up oh yeah right okay no problem I'm just sharing like an a code"
+    },
+    {
+      "t": 555,
+      "text": "editor here um thank you for bringing that up uh let me just hear where the front"
+    },
+    {
+      "t": 577,
+      "text": "it better it's kind of"
+    },
+    {
+      "t": 589,
+      "text": "c um let's let's ask Claude to uh change my vs C theme"
+    },
+    {
+      "t": 603,
+      "text": "light color things make this bigger for you guys oh so I guess I can keep dark mode now"
+    },
+    {
+      "t": 630,
+      "text": "it's typescript everything's very in typescript even the the workers the cloud flare workers"
+    },
+    {
+      "t": 649,
+      "text": "well I guess it didn't change mype my V Go theme let me reload it oh there it is I just changed my vs code theme um not so I white color but"
+    },
+    {
+      "t": 661,
+      "text": "um now I'm going to have to change it back um but this is where the fry looks"
+    },
+    {
+      "t": 683,
+      "text": "like yeah no no no problem I can also speak up um so it looks something like"
+    },
+    {
+      "t": 695,
+      "text": "this um it also it's also responsive so you can see it in"
+    },
+    {
+      "t": 711,
+      "text": "Mobile thank you you here yeah test test um okay so it's all"
+    },
+    {
+      "t": 724,
+      "text": "good yeah so I made this mobile first um like web app and uh it's pretty cool like how it it just it created all the the"
+    },
+    {
+      "t": 738,
+      "text": "CSS to do this with Tailwinds I get these like cool like hover um buttons right here um I get these cool like animations when the page renders"
+    },
+    {
+      "t": 750,
+      "text": "um like these buttons right here flip like that and I I don't really know Jack about front and [Laughter]"
+    },
+    {
+      "t": 764,
+      "text": "development um so this uh this is huge for me um you know someone just like wants to build stuff to be usable um they kind of kind of understands you know how it works um but it was able to"
+    },
+    {
+      "t": 778,
+      "text": "like Crank It Up uh CR crank out that the front end for this at least like the public interface like I think it it took me like 30 minutes left something it was workable like"
+    },
+    {
+      "t": 795,
+      "text": "this yeah so the the business is like a marina in uh in sakuza Sicily um yeah you got a boat yeah please"
+    },
+    {
+      "t": 812,
+      "text": "uh this is our family uh it's me my brothers my dad we need a better picture but I thought this is a good place for now and then I ask Claud like make up some like story here that sounds"
+    },
+    {
+      "t": 823,
+      "text": "[Laughter] cool and then um it it really made like a professional application these are like real pictures um I plan on having"
+    },
+    {
+      "t": 836,
+      "text": "like better pictures uh just what I had for now um and then these features have we don't have like I don't know um highspeed internet surveillance and digital access"
+    },
+    {
+      "t": 849,
+      "text": "control um but you know it's this gray boiler boiler for plate that you get something out and then this is a sign in page they made this like cool CSS"
+    },
+    {
+      "t": 862,
+      "text": "animations right here just the anchor and these droplets um that you have a sign in and a register um you get these cool animations when you change"
+    },
+    {
+      "t": 875,
+      "text": "buttons um and yeah and so the way this would work is uh you would have like um do like a test"
+    },
+    {
+      "t": 887,
+      "text": "user um if I actually have to put a real phone number here but this is probably not going to work now but uh yeah like you will have U"
+    },
+    {
+      "t": 901,
+      "text": "your user register and then you'll get another page here that tells you oh like Welcome to our Marina um go in your email and um um confirm a few things and uh we'll call you and um and onboard us"
+    },
+    {
+      "t": 917,
+      "text": "next step and then the next step of this would be uh to show the user uh the authenticated user a uh page where they can upload their documents and uh confir their pavement method and then after"
+    },
+    {
+      "t": 929,
+      "text": "that they will get us access to user Dash um so yeah again Claude um was great in this and I I my intuition here is that"
+    },
+    {
+      "t": 943,
+      "text": "um using typescript really helped in in making um a very good and pro professional um application uh mainly because um when um let's say like you"
+    },
+    {
+      "t": 957,
+      "text": "ask it you know the code okay I code my about section and um it encounters some errors while it's it um compiles the code in your in your module um it's able"
+    },
+    {
+      "t": 969,
+      "text": "to read a linter so if the linter is throwing errors it's able to correct itself like right away um that's why I feel like typescript is a must if you're going to do JavaScript now uh with these"
+    },
+    {
+      "t": 980,
+      "text": "llms um especially if you have more of these um that can um access your lenser um so um I thought we like let's do an"
+    },
+    {
+      "t": 992,
+      "text": "experiment um let's let's just code a new page does anyone have any ideas for like a simple page that we can make so what do you where do you have it"
+    },
+    {
+      "t": 1005,
+      "text": "about us okay okay make this big make you about"
+    },
+    {
+      "t": 1019,
+      "text": "us page um featuring"
+    },
+    {
+      "t": 1031,
+      "text": "Ricky bario um make up a what making"
+    },
+    {
+      "t": 1044,
+      "text": "up and origin story as a"
+    },
+    {
+      "t": 1058,
+      "text": "ninja"
+    },
+    {
+      "t": 1073,
+      "text": "make make it lit so here it goes um it's asking me to read the file here you"
+    },
+    {
+      "t": 1085,
+      "text": "can actually you have this feature now Auto approve so I just Auto approved it to just read all my files and here it"
+    },
+    {
+      "t": 1097,
+      "text": "goes ninja hero session [Music]"
+    },
+    {
+      "t": 1111,
+      "text": "yeah it's adding CSS and just added it to these components to the about"
+    },
+    {
+      "t": 1124,
+      "text": "page uh it's was already serving in here but it just started serving in another URL"
+    },
+    {
+      "t": 1145,
+      "text": "oh didn't it didn't add it to Navar so let's ask it added to"
+    },
+    {
+      "t": 1166,
+      "text": "Navar no just it didn't add it to the bar no don't look at my wow okay um there it is oh I think it just modified the one"
+    },
+    {
+      "t": 1179,
+      "text": "already had yeah right here uh deep in the Eng streets of sisly"
+    },
+    {
+      "t": 1191,
+      "text": "where Shadows dance and Seekers whisper young rookie prod richs his true calling by mysterious martial arts Masters in the art physical and mental discipline he learn that true strength comes from"
+    },
+    {
+      "t": 1203,
+      "text": "within after years of vigorous training and the ancient Arts of Fitness and Wellness Ricky emerged From Shadows with a revolutionary vision and bring the ninja way of health and discipline into"
+    },
+    {
+      "t": 1212,
+      "text": "the modern world today that Vision has become Cho where ancient wisdom needs modern Fitness and every member trains like a word to become the strongest version of himself honestly really cool"
+    },
+    {
+      "t": 1224,
+      "text": "I'm not just a player like this huh no I work on"
+    },
+    {
+      "t": 1236,
+      "text": "that yes it did it tells you exactly how much it costs um here yeah for that one specific request uh it was the last"
+    },
+    {
+      "t": 1248,
+      "text": "one17 but here it tells you the overall just4 cents 14 cents yeah"
+    },
+    {
+      "t": 1260,
+      "text": "actually haven't used cursor so I have no idea 10% you are sof developer want to"
+    },
+    {
+      "t": 1281,
+      "text": "augment what did I do this last week St something stupid would haveen I was trying to"
+    },
+    {
+      "t": 1304,
+      "text": "extract and pass La specifically my neighborhood and I used CL are like I don't know for an hour watch YouTube on weekend and wrot P"
+    },
+    {
+      "t": 1320,
+      "text": "engineer their got all the backs all the documents all the"
+    },
+    {
+      "t": 1333,
+      "text": "transcripts but now I have an entire backup that I that I can run through a system so go present or challeng something or whatnot republish into a"
+    },
+    {
+      "t": 1346,
+      "text": "pod and just make fools people in charge sorry just R people in charge that was me as like I'm horrible developer it's using CL so"
+    },
+    {
+      "t": 1361,
+      "text": "I there's a group of us that we're always messing around with this and so like me personally um you can put it to J right now for"
+    },
+    {
+      "t": 1375,
+      "text": "free local local stuff really cool right now is mcps which was mentioned um you have the ability to basically create your own like npm"
+    },
+    {
+      "t": 1387,
+      "text": "library that exposes data sources or agents and so can actually create those start refer publish them so you could"
+    },
+    {
+      "t": 1399,
+      "text": "run it's really really darn extensible um I've learned a lot from whether it's big green whether it's Ricky whether it's basum yeah I don't want to Ste your here no"
+    },
+    {
+      "t": 1411,
+      "text": "problem yeah yeah I have used and I can tell you start get it to classifi"
+    },
+    {
+      "t": 1427,
+      "text": "photographs amazing so there is new tool similar to wind Bic came out yeah than wow wow"
+    },
+    {
+      "t": 1439,
+      "text": "thek of it's I have to try it out myself uh these tool just come out so fast and a lot of them seem you know equally as"
+    },
+    {
+      "t": 1451,
+      "text": "good um I guess we you know we just got to try them all and see what works for us but this for me you know was just a vs code extension I'm already familiar with vs code I use it all the time all I"
+    },
+    {
+      "t": 1461,
+      "text": "had to do is just uh use open router to connect with Claud um you know put a the API key in there and already can use you know a chat interface to code like whatever I want on my vs code and it"
+    },
+    {
+      "t": 1475,
+      "text": "seems it seems like uh Cloud itself seems pretty good at at um doing web applications with typescript I used it to do like python uh with like tkinter to do like a desk application and wasn't"
+    },
+    {
+      "t": 1488,
+      "text": "that good I'm guessing it's because it's train a lot on um on you know developing web apps"
+    },
+    {
+      "t": 1503,
+      "text": "yeah personally learn showed"
+    },
+    {
+      "t": 1538,
+      "text": "all recently with I hadn"
+    },
+    {
+      "t": 1550,
+      "text": "syrup from the designer this NYU kid that she wanted like five five picture of five six Jill light up on on the RO like Okay cool so I go down I gra the"
+    },
+    {
+      "t": 1562,
+      "text": "light box gra product from samp samples R and and I go picture like h i wonder there a lazy engineer in someone's gonna ask me bunch of pictures day so what if I do the same thing that I did for us as"
+    },
+    {
+      "t": 1575,
+      "text": "humans on the website and I just go and take like 10 to 30 different snaps of the jelly beans mix them up and all that and and so then of course it came a one more pictures the request came in and Pa"
+    },
+    {
+      "t": 1587,
+      "text": "in year busy right so I I client that connects into the cust adap models I replicate and created all the media all"
+    },
+    {
+      "t": 1602,
+      "text": "the pictures that I need for a website catalog you know that's just like one use case osstem tool together right in this case I just relay the engineer I got thousand hour right uh same thing thousand jelly"
+    },
+    {
+      "t": 1616,
+      "text": "names and I need to have one that that that show a picture showcases cut picture that showcases apple right you really want to GoLine all that stuff up make aile how about you use Python using"
+    },
+    {
+      "t": 1631,
+      "text": "fine and have connect API wherever your HS are and and store your images plus your metadata there I did the maap each one of those runs Sav me $5,600"
+    },
+    {
+      "t": 1644,
+      "text": "that that's just like one these case you know uh putting Right Out w as a tool Expos SW just because but that's just like one use"
+    },
+    {
+      "t": 1658,
+      "text": "case and I'm just so so thrilled and lucky that that I get get a chance to learn I would not have learned this online it was brought in bu our members that were like hey look at this thing I"
+    },
+    {
+      "t": 1670,
+      "text": "got working like hey got this working in this area eventually we there one of us starts somebody finds it more"
+    },
+    {
+      "t": 1683,
+      "text": "interested than the one who started it they and they run with it come back and they they insire somebody else and just keep that you know going I mean so"
+    },
+    {
+      "t": 1696,
+      "text": "like but on the top like I had to 2025 and 2026 Rue forecast for my MERS right and and so like I had update"
+    },
+    {
+      "t": 1708,
+      "text": "is like business breaks in the quarters and of business that's like PS for position centers and so in this case I of course updated all my my business"
+    },
+    {
+      "t": 1721,
+      "text": "plan documents my revisions out of my cityia database the bus business PL but then now just roll the dice and I had clim"
+    },
+    {
+      "t": 1733,
+      "text": "right python was created slxx files that I that that were the actual Financial for from my business plan and my sales right so it's like if you're a developer yeah that's great you do amazing things"
+    },
+    {
+      "t": 1745,
+      "text": "but here's dumb ass business guy you know 10% developer freaking powerful like and then if you have a group that you're passing things back and forth with yeah you st stuff but you a friend PO on"
+    },
+    {
+      "t": 1758,
+      "text": "Discord it's great made up [Laughter]"
+    },
+    {
+      "t": 1776,
+      "text": "and I can understand my my cost customer acquisition I can understand the onboard grade I can do my Cas"
+    },
+    {
+      "t": 1789,
+      "text": "projection service Market I can Define that with the fundamentals of my business which I already have inside my knowledge store and can pass those fun in either as a membr my cons about me"
+    },
+    {
+      "t": 1802,
+      "text": "class specifically as I bring in different documents describe state of business and then utilize a CME and I don't trust it fully like I I can't get to complicated right now um but"
+    },
+    {
+      "t": 1817,
+      "text": "like it is completely game changing you know I was talking with like guy who commercial for a local bank here he had got this whole conversation about the coolest here is"
+    },
+    {
+      "t": 1829,
+      "text": "reason on te we're in a global Service but you went from engineering to to business 2011 um that if you have an idea like this PL"
+    },
+    {
+      "t": 1842,
+      "text": "should be here I wish I could have it do this you have the ability as a business user to rapidly iterate crep hand off your and the same thing what we're experiencing just like just like Ricky"
+    },
+    {
+      "t": 1853,
+      "text": "was showing like hey here's a typescript there's a lot of code based out there it's all staff fors and they could do this giant danc this cool little dancing stuff exactly what I'm going to be doing"
+    },
+    {
+      "t": 1863,
+      "text": "next I'm totally ripping off your stuff us that to build out the strs G while fig"
+    },
+    {
+      "t": 1879,
+      "text": "City I don't know that's kind power yep I I'd be happy to help you with that uh that's that's kind of all I had um the other thing I kind I guess I want to"
+    },
+    {
+      "t": 1892,
+      "text": "talk a little bit about Cloud flare workers um you know the the possibilities of that unlocks the way that I configure Cloud flare workers was through the CLI through the Wrangler CLI"
+    },
+    {
+      "t": 1903,
+      "text": "so I didn't get an API token from uh from cloud flare um I use a CLI to authenticate into my cloud flare account and then use a tomel to um to basically"
+    },
+    {
+      "t": 1915,
+      "text": "um store my EMV variables and my cloud flare worker um so hey I don't know maybe I'm iterating with his saying like later on I want to uh use an AI model to do"
+    },
+    {
+      "t": 1927,
+      "text": "something straight for my worker maybe I have another second worker uh to run some AI logic and my app could be done also with super base you get access to uh um Edge uh functions that can run on"
+    },
+    {
+      "t": 1941,
+      "text": "um uh when um you know certain events happen when you update your table um like uh sending out an email to my customers uh right when they uh"
+    },
+    {
+      "t": 1953,
+      "text": "registered um so they they can go through the next onboarding stu um yeah"
+    },
+    {
+      "t": 1969,
+      "text": "H yeah could be used um it's actually free um it have a very generous free here I think that you get like 500"
+    },
+    {
+      "t": 1982,
+      "text": "megabytes uh for yeah for free um something like"
+    },
+    {
+      "t": 1996,
+      "text": "that yeah um yes B"
+    },
+    {
+      "t": 2019,
+      "text": "not that"
+    },
+    {
+      "t": 2044,
+      "text": "yeah this one oh this one yeah here it is 5"
+    },
+    {
+      "t": 2058,
+      "text": "gbb so I mean you can run a bunch of apps you can start"
+    },
+    {
+      "t": 2071,
+      "text": "feat start as your appliation you might be H here or super also has simp"
+    },
+    {
+      "t": 2083,
+      "text": "Bas so you want deoy yeah it's pretty cool tool with a combination of Cl Cloud flare"
+    },
+    {
+      "t": 2095,
+      "text": "um I will will be using this a lot yeah I guess you just get more"
+    },
+    {
+      "t": 2109,
+      "text": "storage um email support that's kind of interesting oh okay that's what I thought I"
+    },
+    {
+      "t": 2121,
+      "text": "met all right guys well that's all I have awesome thank you Ricky um so it says swapping out on the laptop you can"
+    },
+    {
+      "t": 2156,
+      "text": "it"
+    },
+    {
+      "t": 2186,
+      "text": "e"
+    },
+    {
+      "t": 2246,
+      "text": "e e"
+    },
+    {
+      "t": 2281,
+      "text": "[Music]"
+    }
+  ],
+  "backfill": true
+}

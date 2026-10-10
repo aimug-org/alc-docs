@@ -1,0 +1,30 @@
+{
+  "event": "2026-10-05",
+  "talks": {
+    "jeff-linwood": {
+      "youtubeId": "cvoYeYvLdhw",
+      "publishAt": "2026-10-08T11:00:26-05:00"
+    },
+    "jake-cukjati": {
+      "youtubeId": "-65TrkDP1jY",
+      "publishAt": "2026-10-09T10:00:00-05:00"
+    },
+    "joseph-fluckiger": {
+      "youtubeId": "YPJd-RXsWI0",
+      "publishAt": "2026-10-12T10:00:00-05:00",
+      "topics": [
+        "Agents",
+        "LangGraph"
+      ]
+    },
+    "james-coffey": {
+      "youtubeId": "FcwYnstEsJw",
+      "publishAt": "2026-10-13T10:00:00-05:00"
+    },
+    "colin-mcnamara": {
+      "youtubeId": "aDItvIXu8J4",
+      "publishAt": "2026-10-14T10:00:00-05:00"
+    },
+    "colin-intro": {}
+  }
+}

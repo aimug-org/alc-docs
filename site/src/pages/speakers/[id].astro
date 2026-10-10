@@ -1,0 +1,60 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import TalkCard from '../../components/TalkCard.astro';
+import { publicTalks, upcomingTalks, fmtDate } from '../../lib/data';
+
+export async function getStaticPaths() {
+  return (await getCollection('speakers')).map((speaker) => ({ params: { id: speaker.id }, props: { speaker } }));
+}
+
+const { speaker } = Astro.props as { speaker: CollectionEntry<'speakers'> };
+const s = speaker.data;
+const mine = (t: { data: { speakers: string[] } }) => t.data.speakers.includes(speaker.id);
+const talks = (await publicTalks()).filter(mine);
+const soon = (await upcomingTalks()).filter(mine);
+const first = talks.length ? talks.reduce((a, t) => (t.data.date < a ? t.data.date : a), talks[0].data.date) : undefined;
+const initials = s.name.split(' ').map((w) => w[0]).slice(0, 2).join('');
+const role = [s.title, s.company].filter(Boolean).join(', ');
+const site = 'https://aimug.org';
+const profileLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  mainEntity: {
+    '@type': 'Person',
+    name: s.name,
+    url: `${site}/speakers/${speaker.id}/`,
+    ...(s.photo && { image: new URL(s.photo, site).href }),
+    ...(s.links.length && { sameAs: s.links.map((l) => l.url) }),
+  },
+};
+---
+<Base title={s.name} jsonld={profileLd} description={`Talks by ${s.name} at AIMUG, the AI Middleware Users Group in Austin.`} image={s.photo}>
+  <article class="mx-auto max-w-[1240px] px-4 pt-8 pb-20 sm:px-8">
+    <a href="/speakers/" class="font-mono text-sm no-underline" data-pagefind-ignore>← All speakers</a>
+    <header class="mt-6 flex flex-wrap items-center gap-6 sm:gap-8">
+      {s.photo ? <img src={s.photo} alt={s.name} width="180" height="180" class="h-[140px] w-[140px] shrink-0 rounded-full object-cover sm:h-[180px] sm:w-[180px]" /> : <span aria-hidden="true" class="flex h-[140px] w-[140px] shrink-0 items-center justify-center rounded-full border border-line bg-panel font-display text-6xl text-gold sm:h-[180px] sm:w-[180px]">{initials}</span>}
+      <div class="flex min-w-0 flex-col gap-2">
+        <p class="m-0 font-mono text-sm tracking-[0.12em] text-gold uppercase">Speaker</p>
+        <h1 class="m-0 font-display text-[clamp(44px,6vw,80px)] leading-[0.95] font-normal break-words uppercase">{s.name}</h1>
+        {role && <p class="m-0 text-xl text-soft">{role}</p>}
+        {first && <p class="m-0 font-mono text-sm text-muted">{talks.length} {talks.length === 1 ? 'talk' : 'talks'} at AIMUG · First spoke {fmtDate(first, { weekday: undefined, day: undefined, year: 'numeric' })}</p>}
+        {s.links.length > 0 && (
+          <p class="m-0 flex flex-wrap gap-x-5 gap-y-1 text-base">{s.links.map((l) => <a href={l.url} class="font-semibold">{l.label}</a>)}</p>
+        )}
+      </div>
+    </header>
+    {s.bio && <p class="m-0 mt-6 max-w-[68ch] text-lg text-soft">{s.bio}</p>}
+
+    <section aria-labelledby="st-h" class="mt-12" data-pagefind-ignore="all">
+      <h2 id="st-h" class="m-0 mb-6 font-display text-[clamp(32px,4vw,48px)] leading-none font-normal uppercase">Talks</h2>
+      {talks.length + soon.length > 0 ? (
+        <div class="grid grid-cols-[repeat(auto-fill,minmax(min(100%,300px),1fr))] gap-7">
+          {[...talks, ...soon].map((t) => <TalkCard talk={t} size="sm" hideSpeakers />)}
+        </div>
+      ) : (
+        <p class="m-0 text-soft">No talks published yet.</p>
+      )}
+    </section>
+  </article>
+</Base>

@@ -1,0 +1,166 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { allEvents, eventLd, publicTalks, fmtDay, fmtTime, now, type Event } from '../lib/data';
+import { links } from '../data/site';
+
+const events = await allEvents();
+const upcoming = events.filter((e) => e.data.end >= now);
+const [next, ...later] = upcoming;
+const past = events.filter((e) => e.data.end < now).reverse();
+const years = [...new Set(past.map((e) => e.id.slice(0, 4)))];
+
+const talks = await publicTalks();
+const speakerName = new Map((await getCollection('speakers')).map((s) => [s.id, s.data.name]));
+const talksFor = (id: string) => talks.filter((t) => t.data.event === id);
+
+const kindLabel: Record<string, string> = { special: 'Special edition', 'hacky-hour': 'Hacky Hour', 'field-trip': 'Field trip' };
+const hours = (e: Event) => `${fmtTime(e.data.start)} to ${fmtTime(e.data.end)} CT`;
+const place = (v: { name: string; address?: string }) => (v.address ? `${v.name}, ${v.address}` : v.name);
+
+const h2 = 'm-0 font-display text-[clamp(36px,4.5vw,56px)] leading-none font-normal uppercase';
+const btn = 'rounded-full bg-gold px-6 py-3.5 text-lg font-bold text-ink no-underline hover:bg-gold-hi hover:text-ink';
+const btn2 = 'rounded-full border-2 border-text px-5 py-3 text-base font-bold text-text no-underline hover:border-gold hover:text-gold';
+---
+<Base title="Events" description="AIMUG meets the first Monday of every month at 6 PM at ACC Rio Grande in Austin and online. Free. Office Hours run the 2nd, 3rd and 4th Mondays." jsonld={upcoming.map(eventLd).filter((x) => !!x)}>
+  <section aria-labelledby="events-h" class="mx-auto max-w-[1240px] px-4 pt-12 pb-8 sm:px-8 sm:pt-16">
+    <h1 id="events-h" class="m-0 font-display text-[clamp(56px,9vw,112px)] leading-[0.92] font-normal uppercase">Events</h1>
+    <p class="m-0 mt-4 max-w-[720px] text-xl text-soft">First Monday of every month, 6 PM at ACC Rio Grande in Austin, or online. Free, and everyone is welcome.</p>
+  </section>
+
+  {next && (
+    <section aria-labelledby="next-h" class="mx-auto max-w-[1240px] px-4 pb-8 sm:px-8">
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(min(100%,460px),1fr))] gap-6 rounded-[22px] border border-line bg-panel p-6 sm:p-9">
+        <div class="flex flex-col gap-5">
+          <p class="m-0 flex items-center gap-2.5 font-mono text-sm tracking-[0.12em] text-gold"><span class="inline-block h-2.5 w-2.5 rounded-full bg-gold"></span>NEXT MEETUP</p>
+          <h2 id="next-h" class="m-0 font-display leading-[0.92] font-normal uppercase">
+            <span class="block text-[clamp(52px,8vw,104px)] text-gold">{fmtDay(next.data.start)}</span>
+            <span class="block text-[clamp(30px,4vw,48px)] text-white">{next.data.title}</span>
+          </h2>
+          {next.data.summary && <p class="m-0 text-xl text-[#dbe6ee]">{next.data.summary}</p>}
+          <dl class="m-0 grid grid-cols-[auto_1fr] gap-x-5 gap-y-2 text-base">
+            <dt class="font-mono text-sm text-muted uppercase">When</dt><dd class="m-0 font-semibold">{fmtDay(next.data.start, { weekday: 'long', year: 'numeric' })}, {hours(next)}</dd>
+            <dt class="font-mono text-sm text-muted uppercase">Where</dt><dd class="m-0 font-semibold">{place(next.data.venue)}{next.data.online && <>, and on Zoom <span class="font-normal text-soft">(the link comes with your RSVP on Luma or Meetup)</span></>}</dd>
+            {next.data.afterparty && <><dt class="font-mono text-sm text-muted uppercase">After</dt><dd class="m-0 font-semibold">{place(next.data.afterparty)}</dd></>}
+          </dl>
+          <div class="flex flex-wrap gap-3.5">
+            {next.data.rsvp.luma && <a href={next.data.rsvp.luma} class={btn}>RSVP on Luma</a>}
+            {next.data.rsvp.meetup && <a href={next.data.rsvp.meetup} class={btn2}>RSVP on Meetup</a>}
+            {!next.data.rsvp.luma && !next.data.rsvp.meetup && <a href={links.meetup} class={btn2}>Follow on Meetup for the RSVP</a>}
+            <a href={`/events/${next.id}.ics`} class={btn2}>Add to calendar</a>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3.5 rounded-[18px] border border-edge bg-ink p-6">
+          <div class="flex flex-wrap items-baseline justify-between gap-3">
+            <h3 class="m-0 font-display text-[28px] font-normal tracking-wide">LINEUP</h3>
+            {next.data.lineupDate && !next.data.lineup.length && <span class="font-mono text-sm text-muted">THE WEEK OF {fmtDay(next.data.lineupDate, { weekday: undefined }).toUpperCase()}</span>}
+          </div>
+          {next.data.lineup.length ? (
+            <ul class="m-0 grid list-none grid-cols-2 gap-2.5 p-0">
+              {next.data.lineup.map((id) => <li class="rounded-xl border border-edge p-3.5 text-base">{speakerName.get(id) ?? id}</li>)}
+            </ul>
+          ) : (
+            <p class="m-0 text-soft">{next.data.lineupDate ? `Lineup announced the week of ${fmtDay(next.data.lineupDate, { weekday: undefined })}.${next.data.pitchDeadline && next.data.pitchDeadline > now ? ` Pitches due ${fmtDay(next.data.pitchDeadline, { weekday: 'long' })}, ${fmtTime(next.data.pitchDeadline)} CT.` : ''}` : 'Lineup coming soon.'} <a href="/speak/" class="font-bold">Pitch a talk</a>.</p>
+          )}
+          {next.data.agenda.length > 0 && (
+            <>
+              <h3 class="m-0 mt-2 font-mono text-sm tracking-[0.12em] text-muted">RUN OF SHOW</h3>
+              <ol class="m-0 flex list-none flex-col p-0 text-[15px]">
+                {next.data.agenda.map((a) => <li class="grid grid-cols-[80px_1fr] gap-3 border-t border-line py-2"><span class="font-mono text-gold">{a.time}</span><span>{a.label}</span></li>)}
+              </ol>
+            </>
+          )}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section aria-label="Recording notice" class="mx-auto max-w-[1240px] px-4 pb-10 sm:px-8">
+    <p class="m-0 rounded-xl border border-gold/60 px-5 py-3.5 text-base text-soft">Talks are recorded and published on YouTube, social media, aimug.org and public-access TV. Photos may be taken.</p>
+  </section>
+
+  <section aria-label="Regular events" class="mx-auto grid max-w-[1240px] grid-cols-[repeat(auto-fit,minmax(min(100%,360px),1fr))] gap-6 px-4 pb-14 sm:px-8">
+    <div id="office-hours" class="flex scroll-mt-6 flex-col gap-3 rounded-[18px] border border-line bg-panel p-7">
+      <h2 class="m-0 text-[26px] font-bold">Office Hours</h2>
+      <p class="m-0 font-semibold">2nd, 3rd and 4th Mondays, 5 PM CT, on Google Meet</p>
+      <p class="m-0 text-soft">Connect and collaborate with other builders, work through problems together, chat about tools and plan future events. No Office Hours on the 1st Monday: that's the meetup, at ACC or online.</p>
+      <a href={links.officeHours} class:list={[btn2, 'self-start']}>Join Office Hours</a>
+    </div>
+    <div id="getting-there" class="flex flex-col gap-3 rounded-[18px] border border-line bg-panel p-7">
+      <h2 class="m-0 text-[26px] font-bold">Getting to ACC</h2>
+      <p class="m-0 text-soft">ACC Rio Grande, RGC 3000, 1218 West Ave. It's the tan brick building on your left going north on West Avenue between 12th and 13th streets. Go up the stairs to RGC 3000.</p>
+      <p class="m-0 text-soft">The parking garage is free, but its metal doors lock at 9 PM. Staying later? Street parking is free after 6 PM.</p>
+    </div>
+    <div class="flex flex-col gap-3 rounded-[18px] border border-line bg-panel p-7">
+      <h2 class="m-0 text-[26px] font-bold">Hacky Hours</h2>
+      <p class="m-0 text-soft">Casual meetups to connect, work on projects together and talk shop. They're scheduled as they come up and announced on Meetup and Discord.</p>
+      <div class="flex flex-wrap gap-3">
+        <a href={`${links.meetup}events/`} class={btn2}>Meetup</a>
+        <a href={links.discord} class={btn2}>Discord</a>
+      </div>
+    </div>
+  </section>
+
+  {later.length > 0 && (
+    <section aria-labelledby="later-h" class="mx-auto max-w-[1240px] px-4 pb-14 sm:px-8">
+      <h2 id="later-h" class:list={[h2, 'mb-6']}>Also coming up</h2>
+      <ul class="m-0 flex list-none flex-col p-0">
+        {later.map((e) => (
+          <li class="grid grid-cols-[repeat(auto-fit,minmax(min(100%,260px),1fr))] items-baseline gap-x-6 gap-y-2 border-t border-line py-5 last:border-b">
+            <span class="font-display text-[30px] leading-tight text-gold uppercase">{fmtDay(e.data.start, { year: 'numeric' })}</span>
+            <span class="flex flex-col gap-1">
+              <span class="text-xl font-bold">{e.data.title}</span>
+              <span class="text-base text-muted">{hours(e)} · {place(e.data.venue)}</span>
+            </span>
+            <span class="flex flex-wrap gap-3">
+              {e.data.rsvp.luma && <a href={e.data.rsvp.luma} class="font-bold">RSVP on Luma</a>}
+              {e.data.rsvp.meetup && <a href={e.data.rsvp.meetup} class="font-bold">RSVP on Meetup</a>}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  <section aria-labelledby="past-h" class="mx-auto max-w-[1240px] px-4 pb-16 sm:px-8">
+    <h2 id="past-h" class:list={[h2, 'mb-2']}>Past events</h2>
+    <p class="m-0 mb-8 text-soft">Recaps, slides and recorded talks where we have them.</p>
+    {years.map((y) => (
+      <section aria-labelledby={`y-${y}`} class="mb-10">
+        <h3 id={`y-${y}`} class="m-0 mb-2 font-mono text-sm tracking-[0.12em] text-muted">{y}</h3>
+        <ul class="m-0 flex list-none flex-col p-0">
+          {past.filter((e) => e.id.startsWith(y)).map((e) => {
+            const ts = talksFor(e.id);
+            return (
+              <li id={e.id} class="grid grid-cols-[repeat(auto-fit,minmax(min(100%,220px),1fr))] gap-x-8 gap-y-2 border-t border-line py-5 last:border-b">
+                <span class="flex flex-col">
+                  <span class="font-display text-[26px] leading-tight text-gold uppercase">{fmtDay(e.data.start)}</span>
+                  {kindLabel[e.data.kind] && <span class="font-mono text-sm tracking-[0.08em] text-muted uppercase">{kindLabel[e.data.kind]}</span>}
+                </span>
+                <span class="flex min-w-0 flex-col gap-1.5 sm:col-span-2">
+                  <span class="text-xl font-bold">{e.data.title}</span>
+                  <span class="text-base text-muted">{e.data.venue.name}{e.data.afterparty && `, then ${e.data.afterparty.name}`}</span>
+                  {e.data.summary && <span class="text-base text-soft">{e.data.summary}</span>}
+                  {ts.length > 0 && (
+                    <ul class="m-0 mt-1 flex list-none flex-col gap-1 p-0 text-base">
+                      {ts.map((t) => (
+                        <li><a href={`/talks/${t.id}/`}>{t.data.title}</a>{t.data.speakers.length > 0 && <span class="text-muted"> · {t.data.speakers.map((s) => speakerName.get(s) ?? s).join(', ')}</span>}</li>
+                      ))}
+                    </ul>
+                  )}
+                  {(e.data.recap || e.data.docs) && (
+                    <span class="mt-1 flex flex-wrap gap-x-5 gap-y-1 font-bold">
+                      {e.data.recap && <a href={e.data.recap}>Recap</a>}
+                      {e.data.docs && <a href={e.data.docs}>Slides and notes</a>}
+                    </span>
+                  )}
+                </span>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+    ))}
+    <a href={`${links.meetup}events/past/`} class={btn2}>All past events on Meetup</a>
+  </section>
+</Base>

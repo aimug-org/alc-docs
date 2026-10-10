@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #06182b;
+  --color-deep: #041222;
+  --color-panel: #0b2540;
+  --color-line: #1e4466;
+  --color-edge: #3d6a91;
+  --color-gold: #f5b81c;
+  --color-gold-hi: #ffd35c;
+  --color-text: #eef3f7;
+  --color-soft: #c5d4e0;
+  --color-muted: #a7bccd;
+
+  --font-display: "Anton", sans-serif;
+  --font-sans: "Barlow", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  html { background: var(--color-ink); color: var(--color-text); overflow-x: clip; }
+  body { font-family: var(--font-sans); font-size: 18px; line-height: 1.5; margin: 0; overflow-x: clip; }
+  a { color: var(--color-gold); }
+  a:hover { color: var(--color-gold-hi); }
+  :focus-visible { outline: 3px solid var(--color-gold); outline-offset: 2px; }
+}
+
+/* Long-form text (recaps, docs) */
+@layer components {
+  .prose-aimug { max-width: 72ch; color: var(--color-soft); }
+  .prose-aimug :where(h1, h2, h3, h4) { color: var(--color-text); line-height: 1.2; margin: 1.6em 0 0.5em; }
+  .prose-aimug :where(h1) { font-family: var(--font-display); font-weight: 400; font-size: 3rem; text-transform: uppercase; }
+  .prose-aimug :where(h2) { font-size: 1.8rem; font-weight: 700; margin-top: 2.2em; padding-top: 0.8em; border-top: 1px solid var(--color-line); }
+  .prose-aimug :where(h3) { font-size: 1.35rem; font-weight: 700; }
+  .prose-aimug :where(p, ul, ol, blockquote, table, pre) { margin: 0 0 1em; }
+  .prose-aimug :where(ul, ol) { padding-left: 1.4em; }
+  .prose-aimug :where(ul) { list-style: disc; }
+  .prose-aimug :where(ol) { list-style: decimal; }
+  .prose-aimug :where(li) { margin: 0.25em 0; }
+  .prose-aimug :where(img) { max-width: 100%; height: auto; border-radius: 12px; }
+  .prose-aimug :where(code) { font-family: var(--font-mono); font-size: 0.9em; background: var(--color-panel); padding: 0.1em 0.35em; border-radius: 4px; }
+  .prose-aimug :where(pre) { background: var(--color-deep); border: 1px solid var(--color-line); border-radius: 12px; padding: 1em; overflow-x: auto; }
+  .prose-aimug :where(pre code) { background: none; padding: 0; }
+  .prose-aimug :where(blockquote) { border-left: 4px solid var(--color-gold); padding-left: 1em; color: var(--color-text); }
+  .prose-aimug :where(table) { width: 100%; border-collapse: collapse; display: block; overflow-x: auto; }
+  .prose-aimug :where(th, td) { border-bottom: 1px solid var(--color-line); padding: 0.5em 0.75em; text-align: left; }
+  .prose-aimug :where(hr) { border: 0; border-top: 1px solid var(--color-line); margin: 2em 0; }
+  .prose-aimug :where(iframe) { max-width: 100%; border-radius: 12px; }
+}
+
+@layer components {
+  .btn { transition: background-color 150ms, color 150ms, border-color 150ms; }
+  .lift:focus-visible, .lift:hover { box-shadow: 0 8px 28px rgb(245 184 28 / 0.22); }
+  .navlink { background: linear-gradient(currentColor, currentColor) left bottom / 0 2px no-repeat; padding-bottom: 2px; }
+  .navlink:hover, .navlink:focus-visible { background-size: 100% 2px; }
+  @media (prefers-reduced-motion: no-preference) {
+    .lift { transition: transform 180ms ease, box-shadow 180ms ease; }
+    .lift:hover, .lift:focus-visible { transform: translateY(-3px); }
+    .navlink { transition: background-size 200ms ease, color 150ms; }
+  }
+}
+@layer components { .plate { background: var(--color-panel) url(../assets/plate.jpg) center / cover; } }

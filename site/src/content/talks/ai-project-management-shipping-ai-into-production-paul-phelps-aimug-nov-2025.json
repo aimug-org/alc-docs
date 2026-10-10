@@ -1,0 +1,342 @@
+{
+  "title": "AI Project Management: Shipping AI into Production (Paul Phelps)",
+  "speakers": [
+    "paul-phelps"
+  ],
+  "date": "2025-11-14",
+  "youtubeId": "w4oFDqL0MO0",
+  "duration": 987,
+  "summary": "Paul Phelps (experienced project & product manager) explains why AI projects stall in organizations, which legacy PM assumptions break for AI, and practical patterns to increase the odds of actually getting AI into production.",
+  "topics": [],
+  "transcript": [
+    {
+      "t": 8,
+      "text": "All right. Thank you very much. And boy, that's my worst nightmare following on call here. What an awesome presentation."
+    },
+    {
+      "t": 13,
+      "text": "Um, experienced, uh, I'm an experienced project manager. Hi, everybody. Um, uh, I'm going to use the role title project manager and product manager interchangeably, but I'll probably say"
+    },
+    {
+      "t": 25,
+      "text": "project manager more often. That's my background. uh you know prelims uh I'd ship some AI systems into production uh usually working with um uh developer teams or uh"
+    },
+    {
+      "t": 38,
+      "text": "building something small myself. I'm not a coder but I would uh muscle through some little algorithm that would do something pretty cool and pretty powerful. uh uh was uh you know again"
+    },
+    {
+      "t": 50,
+      "text": "prelims it was some heavy lifting to try to get these uh uh systems uh uh to get trusted by the uh organizations that um I was uh shipping them into. Um and that"
+    },
+    {
+      "t": 63,
+      "text": "still is a problem. This sort of uh is calling back to Anapama's presentation earlier. This is a another perspective on why AI has such a hard time getting into production reliably. Um, and in my"
+    },
+    {
+      "t": 76,
+      "text": "opinion, the constraint is not so much the model rag accepted, uh, but the organizational approach. So, I'm going to talk about the organizational approach. Uh, we're still early and"
+    },
+    {
+      "t": 88,
+      "text": "learning which patterns work. So, I just wanted to cover uh, some patterns that should increase uh, odds that your particular AI systems may be able to get"
+    },
+    {
+      "t": 100,
+      "text": "shipped into production and not get blocked. Uh so you build a model, it works perfectly in your notebook, 95% accuracy, clean code, great performance metrics, but six months later it's still"
+    },
+    {
+      "t": 112,
+      "text": "not in production. This might sound familiar. Uh the block is almost never your system. uh the bo block is organizational process and project manager assumptions because product and"
+    },
+    {
+      "t": 125,
+      "text": "project managers are still using legacy software as a service or ERP mental models. So I'm going to uh compare some frameworks that are uh available uh"
+    },
+    {
+      "t": 138,
+      "text": "going to identify some failure patterns and spot some red flags uh with the goal that uh by the end you'll be able to increase your odds of getting your AI into production in your organization."
+    },
+    {
+      "t": 153,
+      "text": "So why traditional project manager playbooks don't fit AI? So the normal playbooks are those related to software as a service s projects uh most notably"
+    },
+    {
+      "t": 166,
+      "text": "where um traditional project manager frameworks are built around the idea of trying to get a predictable and testable"
+    },
+    {
+      "t": 178,
+      "text": "software into production. Uh and AI uh doesn't really fit that pattern. Uh an example um like u might be something you something simple simple like what Colin"
+    },
+    {
+      "t": 191,
+      "text": "was talking about earlier um you know you you put in uh with the soft software you would put into an input A it's always going to give output B and AI"
+    },
+    {
+      "t": 204,
+      "text": "doesn't do that necessarily. Uh, for example, if you've got a uh categorization for um a different text, like say it's um user tickets, uh support tickets, something like that,"
+    },
+    {
+      "t": 217,
+      "text": "you could have the identical text from one uh support ticket to the next, get two different categorizations, maybe based on some very very subtle different changes in uh context. And because of"
+    },
+    {
+      "t": 232,
+      "text": "that, that makes it really difficult to pass by some of the roadblocks that happen inside an organization where uh they're going to say, but why did your system not give the predictable and"
+    },
+    {
+      "t": 245,
+      "text": "testable output we were expecting? Uh and it's because AI is different and AI requirements uh also evolve as we learn what the data can actually do. So it's"
+    },
+    {
+      "t": 257,
+      "text": "not like um we know necessarily based on all of the data that's being put into the system that you're building, we don't know that the only"
+    },
+    {
+      "t": 269,
+      "text": "possible outputs are going to be uh A, B or C. It can be all sorts of things. So um uh uh for example, if you were creating a system that's going to create categorizations"
+    },
+    {
+      "t": 281,
+      "text": "and uh you are like give me five, you may find that when you put it all all the data into AI, you may find that actually there's 12 categorizations that the system can fairly um uh fairly well"
+    },
+    {
+      "t": 296,
+      "text": "uh put it into. And so putting all this into context, so traditional project managers, they panic at stuff like this."
+    },
+    {
+      "t": 304,
+      "text": "they panic at evolving scope. But with scope, AI is a signal that system is working and it's potentially cross-dep departmental whereas in traditional uh ways we've been looking at uh software"
+    },
+    {
+      "t": 317,
+      "text": "uh scope is failure. Um bunch of other differences but uh including training and documentation requirements and blah blah blah but those are just some of the big ones. Uh so those are examples of"
+    },
+    {
+      "t": 331,
+      "text": "when your product or project manager is thinking the way they always have and not thinking about AI. So uh what I want to talk about now is the rare occasion when your product or project manager"
+    },
+    {
+      "t": 344,
+      "text": "they know that AI is different and so they've gone out and sought out a different framework uh to utilize how they're going to organize the project that you're building. And there's about"
+    },
+    {
+      "t": 356,
+      "text": "a dozen or so uh big companies that have released their different frameworks."
+    },
+    {
+      "t": 363,
+      "text": "In my opinion, not one of them yet has kind of nailed it exactly right. Uh but I wanted to bring up three of the big ones. Um first one would be Accenture."
+    },
+    {
+      "t": 374,
+      "text": "So if you're not familiar with Accenture, Accenture is a uh consulting firm that is a sort of business first uh consulting firm. They're generally um hiring MBAs straight out of college, for"
+    },
+    {
+      "t": 387,
+      "text": "example. Uh they're going to teach those guys and and young women some uh how Accenture does what they do. They're going to uh it's great training. It's great stuff, but it's coming at these"
+    },
+    {
+      "t": 402,
+      "text": "workflows, these projects from very much an MBA point of view, not a developer point of view. So inside their AI framework, uh if you were to go and read"
+    },
+    {
+      "t": 414,
+      "text": "it like I unfortunately had to do, uh you're going to find that it's mostly about the maturity of the organization."
+    },
+    {
+      "t": 421,
+      "text": "It's going to be about uh training people on AI, getting them familiar with AI, making change management easier because uh everybody in the organization has bought in to the vision and to the"
+    },
+    {
+      "t": 433,
+      "text": "potential of AI. But this really does lean heavy into what Accenture what their interest is and what their lens is which is they want to sell the programs to these big companies and they'll"
+    },
+    {
+      "t": 446,
+      "text": "charge hundreds of thousands of dollars and sometimes more uh for these programs to kind of teach and coach and and get the organization uh ready for this sort of thing. Uh my opinion it's often"
+    },
+    {
+      "t": 459,
+      "text": "unnecessary. Uh it certainly isn't the biggest priority. uh Google and Amazon uh their both of their frameworks are fairly similar. Uh Google focuses on infrastructure readiness and Amazon"
+    },
+    {
+      "t": 472,
+      "text": "focuses on data readiness and based on what it is that they're selling to these big organizations might give you a pretty good clue as to why they care about those respectively. Obviously,"
+    },
+    {
+      "t": 483,
+      "text": "Google's going to try to sell a lot of infrastructure uh to the big companies and AWS is very interested in you putting a ton of data onto their servers. Um, last one is uh IBM uh last"
+    },
+    {
+      "t": 498,
+      "text": "big one that I was going to bring up here at least. There's there's like I said nearly a dozen more. uh IBM uh it talks about like governance and documentation and compliance artifacts"
+    },
+    {
+      "t": 511,
+      "text": "and all this other stuff that um well you know IBM not exactly one of those companies that builds fast and breaks things uh that sort of leans into their past experience and and how they've"
+    },
+    {
+      "t": 522,
+      "text": "worked and perhaps part of their success. Uh but uh uh it it's certainly not moving at the speed of AI. And uh to me it sort of reminds me of like being a uh uh I can imagine most developers when"
+    },
+    {
+      "t": 534,
+      "text": "faced with uh IBM's requirements would be like a cop in one of those really bad buddy cop movies where they just want to arrest people and they don't want to do the paperwork and IBM's there going no"
+    },
+    {
+      "t": 544,
+      "text": "no no you need to do the paperwork. So anyway with all these uh frameworks uh uh each has its own lens each has its own priorities. there's different things that they ignore. None of them I feel"
+    },
+    {
+      "t": 558,
+      "text": "are prioritizing the developer and development. Um, and so I think that that's a it's a big miss. And it's also, you know, a big credit to this group actually to be hearing from you guys uh"
+    },
+    {
+      "t": 572,
+      "text": "uh sometimes weekly and sometimes monthly what your challenges are and and what you're able to build."
+    },
+    {
+      "t": 580,
+      "text": "Beer awaits everybody. Sorry, I'm going to go just a couple more minutes. Um, project management frameworks, they do share three universal assumptions. Uh, they want a well- definfined business"
+    },
+    {
+      "t": 590,
+      "text": "problem. They, uh, which makes a lot of sense. Like even if there's going to be scope creep with an AI system, you still want to start with a very specific uh, uh, well-defined business problem that"
+    },
+    {
+      "t": 602,
+      "text": "the system is going to solve. Uh, by having that, it's much more easier to get the buy in. You don't want to uh be told this is our highest priority business problem. Solve it with this AI"
+    },
+    {
+      "t": 614,
+      "text": "system and you turn in your AI system and it solves these three other problems but not that one. That's going to be a real big um hindrance to be able to get into production. Second thing is all of"
+    },
+    {
+      "t": 626,
+      "text": "these frameworks uh including the uh eight more that uh I didn't talk about in the last slide. They all are expecting a certain amount of data readiness and data clarity. uh like I"
+    },
+    {
+      "t": 639,
+      "text": "said with the AWS uh framework for example, they're much more about data quantity over data quality, but they all are talking about data and how it's needed um to certain degrees. Uh uh and"
+    },
+    {
+      "t": 654,
+      "text": "so yes, it it's going to be something that you're going to be asked about and you will need to defend with your AI system to be able to say to your project manager and and the other people who are"
+    },
+    {
+      "t": 665,
+      "text": "going to um either allow your system get into production or not uh be able to defend the data that is feeding that system and how it's the system is uh using it. Uh last thing is they all"
+    },
+    {
+      "t": 677,
+      "text": "depend on crossf functional collaboration to avoid failure. And what that is talking about is basically that role that your project product manager has or even a business analyst in your"
+    },
+    {
+      "t": 687,
+      "text": "organization has which is bridging between the administration and the rest of the business and the developer and the developer team. So um you got to have that in place. Uh and so if you're"
+    },
+    {
+      "t": 700,
+      "text": "find that you're developing in a silo and you're unable or uh to communicate with or hear from the business side of your business, then it's doomed to fail."
+    },
+    {
+      "t": 710,
+      "text": "So uh all these assumptions are not wrong. They all require uh uh active developer participation and uh yeah. So if you can make sure that these three"
+    },
+    {
+      "t": 722,
+      "text": "assumptions are being um are being prioritized by you as a developer, there's a much more likelihood that your organization should accept your uh AI development into"
+    },
+    {
+      "t": 735,
+      "text": "production. Uh so some red flags to look out for. Um I'll I'll skip through these as quickly as I can uh to avoid going long. uh you want to watch for product managers or"
+    },
+    {
+      "t": 748,
+      "text": "project managers who demand complete requirements before any code. So for example, if you've heard the organization wants this uh uh something to be developed and weeks and then months are going by and it's not being"
+    },
+    {
+      "t": 762,
+      "text": "assigned to you, it's not getting into um uh uh your scrum meetings, then that's a pretty good sign that your PM is using the old ways of doing things."
+    },
+    {
+      "t": 773,
+      "text": "What they're doing is spending weeks and months perhaps doing stakeholder analysis, doing stakeholder interviews, gathering requirements, and documenting everything so that they can give you"
+    },
+    {
+      "t": 784,
+      "text": "that same old bible that you might have received in the past so that the first version or the first version plus a little bit of iteration is going to uh uh be able to solve what it is that the"
+    },
+    {
+      "t": 798,
+      "text": "the business problem that the project has been designed to solve. But it's not necessary uh or I should say it's not as necessary with AI initiatives. So just watch out for that and watch out for PMs"
+    },
+    {
+      "t": 810,
+      "text": "who insist on one perfect predetermined solution because uh AI is is non-deterministic. So it's going to be imperfect and s part of its value is uh"
+    },
+    {
+      "t": 823,
+      "text": "in those imperfections. Watch for PMs who want enterprise infrastructure before validation. If if you find out that they uh are buying tons of more um uh Azure uh tools and"
+    },
+    {
+      "t": 838,
+      "text": "and uh doing tons of data cleaning and wanting to do all sorts of things for the infrastructure before you've even built anything, that's a sign that they uh uh that it's just not it's not going"
+    },
+    {
+      "t": 849,
+      "text": "to work and they're still thinking about things in the old uh uh uh PM playbooks."
+    },
+    {
+      "t": 855,
+      "text": "Um so if you see any of these things watch these patterns early and guide the business towards some discovery thinking. The biggest tell in all of these things is that uh it the legacy"
+    },
+    {
+      "t": 866,
+      "text": "software mel models are being applied to AI work. So just make sure that if nothing has changed between the way it used to be done and the way it's happening now uh that is a uh uh a"
+    },
+    {
+      "t": 878,
+      "text": "pretty good sign that it's not going to work. So we've covered some why uh covered why traditional PM approaches they break AI projects uh reviewed some frameworks that try to fix this but some"
+    },
+    {
+      "t": 892,
+      "text": "of the frameworks still assume a soft mental model. Um so in my opinion I think developers see the reality in the data and the discovery cycles. I think you guys are are uh able to develop"
+    },
+    {
+      "t": 904,
+      "text": "faster than ever. you're uh able to experiment and do some amazing things with AI and uh because you are better acquainted with the solutions. you are"
+    },
+    {
+      "t": 916,
+      "text": "also uh have a much more potential to be able to identify the uh uh legacy problems that previously may not have been solvable but now because of AI are"
+    },
+    {
+      "t": 930,
+      "text": "uh so because of that u yeah I'm I'm very interested in hearing from you guys uh perhaps you can reach out to me on uh LinkedIn or or whatnot because I I know we're out of time um uh and I'm happy to"
+    },
+    {
+      "t": 944,
+      "text": "answer any questions that you might have of course on top of that but uh I'm really interested in hearing from a developer point of view as to what types of blind spots uh and things that you're"
+    },
+    {
+      "t": 953,
+      "text": "seeing uh from your organizations and the way that they're approaching the um project frameworks because I'm very interested now and I've started working on a framework that I think will be much"
+    },
+    {
+      "t": 965,
+      "text": "more likely to get AI projects into production. Um so thank you very much."
+    },
+    {
+      "t": 972,
+      "text": "Yeah, >> thanks Paul."
+    },
+    {
+      "t": 978,
+      "text": "So this our"
+    }
+  ],
+  "backfill": true
+}

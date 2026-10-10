@@ -1,0 +1,341 @@
+{
+  "title": "Cursor tips and tricks",
+  "speakers": [
+    "joseph-fluckiger"
+  ],
+  "date": "2025-08-28",
+  "event": "2025-07-02",
+  "youtubeId": "GLRBWfA5p4Q",
+  "duration": 783,
+  "summary": "Joseph Fluckiger guides us through his experience using Cursor at the July AIMUG meeting",
+  "topics": [
+    "Coding agents"
+  ],
+  "transcript": [
+    {
+      "t": 9,
+      "text": "Fantastic. Okay. Along the same theme of some of those components mentioned, uh Colin mentioned that lang uh chain is adding support for integration with cursor and some other dev tools. As you"
+    },
+    {
+      "t": 21,
+      "text": "guys all know, one of the you know most popular workflows with LLMs is generation of code and uh you know using we've all used chat GBT in the browser but as you get to the next level you"
+    },
+    {
+      "t": 32,
+      "text": "want to do more interesting things and actually do more of the integrated uh cycle of software development and so cursor is one of the popular tools."
+    },
+    {
+      "t": 41,
+      "text": "Anyone used cursor here? Uh several of you it's one of the more popular ones. Um there's also Klein, there's also Windsurf which are also popular. Just this last week they added"
+    },
+    {
+      "t": 53,
+      "text": "a feature where you can integrate background workers and or background agents and you can inter interface with those via Slack. And so you can basically chat over your phone over your"
+    },
+    {
+      "t": 65,
+      "text": "Slack interface and give it tasks. Um and it's pretty powerful. So you can do things much more asynchronously. on the way while I was driving down here, I was like, uh, you know, dictating to my"
+    },
+    {
+      "t": 76,
+      "text": "phone and, uh, doing some fun stuff. So, anyway, um, let me, I guess, start out by just showing you Slack. So, here you go. It's really easy to set up. I'll show you how to set up in a minute, but um, let's"
+    },
+    {
+      "t": 90,
+      "text": "see. What should we have it do? Um, add a poem about Austin Langchain and a joke to my homepage."
+    },
+    {
+      "t": 104,
+      "text": "All right, so we'll see if that works. You know, the demo gods are happy. You can see it's acknowledged that and it started working on that. It spun up a virtual environment in the background."
+    },
+    {
+      "t": 113,
+      "text": "And so I've got this hooked up to Cloudflare. Oh, yeah."
+    },
+    {
+      "t": 117,
+      "text": "uh and merge that last change into main."
+    },
+    {
+      "t": 128,
+      "text": "All right, we'll see if that works. All right, so you can basically chat with your agent and it you have to give it access to your GitHub and then you can uh do a lot of powerful things."
+    },
+    {
+      "t": 139,
+      "text": "So what are the things it's good at? It's good it's got a whole virtual environment. It's got access to your source code. It can read and write and so you can modify, you can create poll"
+    },
+    {
+      "t": 146,
+      "text": "requests, you can have it comment on poll requests. Uh it can access the internet, it can download and check uh check in images for you. Um it can also since you're in Slack, you can have a"
+    },
+    {
+      "t": 157,
+      "text": "chat with your other co-workers and then you can do the at cursor and it will uh read the context of that conversation and then use that in its uh whatever work it does. So you can say like at"
+    },
+    {
+      "t": 166,
+      "text": "cursor fix this bug. What it has struggled with in my experience is sometimes it can't access some of like the issues in GitHub. Maybe I just didn't have it configured correctly. Sometimes it gets a little"
+    },
+    {
+      "t": 177,
+      "text": "bit too creative. Obviously, you've got to put guard rails around it. Um there are techniques that you can get around that. And then also some complex changes that you need a full IDE to to edit. Uh"
+    },
+    {
+      "t": 188,
+      "text": "the Slack integration is not really sufficient kind of limiting. Um so there are a couple commands per cursor."
+    },
+    {
+      "t": 195,
+      "text": "There's really only three. Um you can do cursor and then any prompt and it will um create a background worker and start working on it based on that prompt. You can say cursor settings and it'll show a"
+    },
+    {
+      "t": 205,
+      "text": "few settings. Uh you can do uh the options like what branch you want uh which model you specifically model you would like to use if you'd like to and you can also um uh list any of your"
+    },
+    {
+      "t": 219,
+      "text": "agents that you have running. So this was another this is an example of a team having a conversation about a specific bug and the context and then they just referenced um cursor and said"
+    },
+    {
+      "t": 231,
+      "text": "fix this which is pretty cool."
+    },
+    {
+      "t": 237,
+      "text": "This is the setup process. It's really easy. There's uh two cursor there's a cursor GitHub and a cursor Slack app that you need to integrate. Um it was very surprisingly easy to do."
+    },
+    {
+      "t": 251,
+      "text": "Um so in cursor you can actually open up these background tasks and you can see the its thought process even though it's happening remotely on the cloud in a container. Um you can open it up in"
+    },
+    {
+      "t": 263,
+      "text": "cursor which is kind of nice and so you can kind of help debug it. Sometimes it gets stuck like with merge conflicts or something. I'm happy to see that as it tries to do real developer things. Merge"
+    },
+    {
+      "t": 273,
+      "text": "conflicts are always a pain. Um and you can kind of see what's actually happening under the cover. So that's pretty cool. It's a a new command E."
+    },
+    {
+      "t": 282,
+      "text": "There's also a budget you set for your background agents. Um, so here I've set $50. I haven't actually dipped into that at all. I've been using it for a few days. Uh, but if you go above your token"
+    },
+    {
+      "t": 293,
+      "text": "limit, then you can burn down this uh additional budget."
+    },
+    {
+      "t": 298,
+      "text": "Um, so there is a mobile app also um for cursor and um this is pretty nice. So you can actually uh interface it on your phone. Um it's a little bit better than"
+    },
+    {
+      "t": 310,
+      "text": "Slack because it shows like I said all the context of the conversation that uh the agents are going and having and all the work and you can actually add additional prompts here. The way you"
+    },
+    {
+      "t": 320,
+      "text": "install this mobile app is you actually go to Safari and you pin it as a website. It's not an actual app. So just an FYI on iPhone you can't do it through Chrome. You have to go through Safari."
+    },
+    {
+      "t": 332,
+      "text": "But it's pretty easy to set up once you have that tip. And that again was nice because a lot of times I want to I have an idea, I'm on the go, I want to add something, fix something, and I can do"
+    },
+    {
+      "t": 342,
+      "text": "it right from my mobile phone. That's what it looks like. Those are the steps to uh install that mobile app."
+    },
+    {
+      "t": 349,
+      "text": "So I'm I'm currently set up on Cloudflare. U definite big shout out for Cloudflare. I was really impressed with how easy this was. So it's monitoring my GitHub repo and automatically deploying"
+    },
+    {
+      "t": 360,
+      "text": "my website. So, I've got this website out there at datadev.ai and when I make changes, it actually gets deployed out there automatically."
+    },
+    {
+      "t": 369,
+      "text": "Uh, so this is what the website looks like. And so, it's just anformational website I'm spinning up. And, uh, oh,"
+    },
+    {
+      "t": 381,
+      "text": "there we go. There's our poem. All right."
+    },
+    {
+      "t": 385,
+      "text": "So you can see just with my little prompt from Slack, I was able to modify my production website which says I don't know let's see in the realm of code where data flows lives"
+    },
+    {
+      "t": 397,
+      "text": "Austin Langchain everyone knows with chains of language models so bright he builds the future day and night from prompts to responses seamless and clean the finest AI architect we've ever seen"
+    },
+    {
+      "t": 408,
+      "text": "in Austin he dwells with tech dreams take flight lang chains pioneer coding with And a little humor. Uh, let's see. Why"
+    },
+    {
+      "t": 420,
+      "text": "don't programmers like nature? Because it has too many bugs and no Stack Overflow to debug them."
+    },
+    {
+      "t": 429,
+      "text": ">> Awesome. >> Wow. >> So, pretty funny. I had it also um on my way over here like summarize all the current AI news and add it to a um a"
+    },
+    {
+      "t": 442,
+      "text": "markdown page. And so it did this news page. And so now I've got to go read through this, but it's basically got, you know, it searched the internet. It looked at all the latest feeds and all the latest"
+    },
+    {
+      "t": 453,
+      "text": "developments for Lang Chain actually. And there's some pretty some of the things that Colin mentioned. So that was kind of fun as well. I also had it like add a picture of a puppy and for some"
+    },
+    {
+      "t": 464,
+      "text": "reason it added a picture of a cat. But uh then I um asked it to fix that. I said, \"Hey, this is a cat, not a dog.\""
+    },
+    {
+      "t": 473,
+      "text": "And it uh it fixed that. Um, so there we go. It added that dog. And I also added I asked it to like philosophize on Austin Lang Chain. And if you look"
+    },
+    {
+      "t": 485,
+      "text": "through this, this is actually kind of disturbing and kind of inspiring."
+    },
+    {
+      "t": 491,
+      "text": "So anyway, um, it's at this URL if you want to go read it. Um, but Colin, I think we need to put this on our website now. I think we need to raise the bar of what we what our aspirations are."
+    },
+    {
+      "t": 503,
+      "text": ">> We need a mission statement. >> We are right."
+    },
+    {
+      "t": 507,
+      "text": ">> According to this, we're going to solve all the world's problems."
+    },
+    {
+      "t": 512,
+      "text": ">> All right. So, just a little context of what competitor products are out there. I think this really raises the bar for a cursor. There was a product called Devon AI that came out a few months ago and"
+    },
+    {
+      "t": 526,
+      "text": "everyone was like, \"Oh, this is amazing and it costs like 500 a month and it's going to start replacing developers and everyone kind of quickly realized, well, there's a lot of times when you need an"
+    },
+    {
+      "t": 535,
+      "text": "IDE, there's sometimes when you want like a little chat interface through Slack and there's sometimes you want an IDE.\" So, I I really like the fact that cursor now gives you both options and I"
+    },
+    {
+      "t": 544,
+      "text": "think it uh enables you to both, you know, work on things in the background to check things, write unit tests, etc."
+    },
+    {
+      "t": 551,
+      "text": "uh but also have the full power of the ID. And so there's a pretty good price point. And then these are just some comparison prices. I saw that Devon AI probably in response added a cheaper"
+    },
+    {
+      "t": 561,
+      "text": "option, but there's also Replet code that's pretty popular. There's chatdev uh which is a multi-agent. There's autogen by Microsoft. There's GitHub copilot. I don't think GitHub copilot"
+    },
+    {
+      "t": 572,
+      "text": "has background workers. They just added agents, >> but they haven't added background workers."
+    },
+    {
+      "t": 578,
+      "text": "Yeah, there's like cursor I mean uh cloud code."
+    },
+    {
+      "t": 582,
+      "text": ">> Yeah, but the difference is cloud code doesn't have these background workers, right? Um but someone was telling me that they like to use cursor with cloud code."
+    },
+    {
+      "t": 590,
+      "text": ">> Yeah, >> which is he's getting better results. Uh maybe because they have higher token limits or something. So I'm going to go try that out."
+    },
+    {
+      "t": 596,
+      "text": ">> Stack >> which one? >> Stack them all on top."
+    },
+    {
+      "t": 600,
+      "text": ">> Yeah, stack them all on top of each other."
+    },
+    {
+      "t": 604,
+      "text": "So, um, yeah, this is that crazy philosophy that it came up with. All right. Well, I'll check this into the GitHub repo on AIM mug and, uh, you're welcome to follow"
+    },
+    {
+      "t": 616,
+      "text": "along, but it's super easy to set up. So, you can probably just search the public documentation. Any questions?"
+    },
+    {
+      "t": 629,
+      "text": ">> This is looks like you're using right now, but Do you know if you were building something like this"
+    },
+    {
+      "t": 641,
+      "text": "or whatever? >> Yeah. >> Would you have set up the debugged?"
+    },
+    {
+      "t": 657,
+      "text": ">> Yeah. Um it does set up an an environment and um you can actually customize that environment. There's like a JSON file that you can specify what steps, what"
+    },
+    {
+      "t": 669,
+      "text": "things it installs, what dependency it has. You can even build your own base image that it uses. I haven't done that."
+    },
+    {
+      "t": 675,
+      "text": "I've used the out of the box one. But um yeah, you you can definitely do that."
+    },
+    {
+      "t": 679,
+      "text": "And in this case in Cloudflare, which was super easy to set up, I had to specify the build command. It's a pnpm build. And so it is a JavaScript uh actually it's not it's using Starlight"
+    },
+    {
+      "t": 691,
+      "text": "Astro which converts uh MD files into HTML. Uh but it is a there actually is a build step."
+    },
+    {
+      "t": 703,
+      "text": ">> Yes. And it fixes it. It's like oh I broke it and it fixes it automatically."
+    },
+    {
+      "t": 710,
+      "text": ">> Yeah. I've seen it do that several times."
+    },
+    {
+      "t": 715,
+      "text": "probably >> Google code."
+    },
+    {
+      "t": 724,
+      "text": ">> I'm not sure."
+    },
+    {
+      "t": 728,
+      "text": ">> Client. Yeah, >> maybe. >> Uh, no. Client is a plugin. I haven't used it a ton. Colin's used it more, but um it's a plugin for VS Code, right?"
+    },
+    {
+      "t": 739,
+      "text": ">> Yeah. Root code. >> Oh, root code. Okay. It's like Klein with um orchestration with with a separation of functions inside of it."
+    },
+    {
+      "t": 749,
+      "text": ">> I'm sure they'll add it at some point, >> but I don't know right now."
+    },
+    {
+      "t": 759,
+      "text": ">> For SL MCP for Slack. >> Yeah. >> Yeah, there are."
+    },
+    {
+      "t": 768,
+      "text": ">> That'd be a fun thing to diagram. I'm kind of getting in like a a recursion loop."
+    },
+    {
+      "t": 775,
+      "text": ">> Yeah, that'd be great. Awesome. What other questions I got for for Joseph?"
+    }
+  ],
+  "backfill": true
+}

@@ -1,0 +1,797 @@
+{
+  "title": "Vaskin Kissoyan: Diffusion Models, Skills, and AI Orchestration | Builders Podcast #6",
+  "speakers": [
+    "vaskin-kissoyan"
+  ],
+  "date": "2026-01-20",
+  "youtubeId": "iSL-K4ytQNI",
+  "duration": 2242,
+  "summary": "In episode six of AIMUG Builders, recorded on Christmas Eve, Vaskin shares his journey from Beirut to Austin, driven by his passion for AI.",
+  "topics": [
+    "Coding agents",
+    "Agents"
+  ],
+  "transcript": [
+    {
+      "t": 1,
+      "text": "at that point. Hold there. Holy smokes."
+    },
+    {
+      "t": 8,
+      "text": "Extraordinarily business value."
+    },
+    {
+      "t": 14,
+      "text": "This is live and this is AI Mug Builders episode 6. We're filming this Christmas Eve. Merry Christmas to everyone in the audience who celebrates and yeah, let's get started. We met at the AI Mug"
+    },
+    {
+      "t": 27,
+      "text": "Builders Club. You were very friendly. We met very early on. And I wanted to know more about you. So, where are you from originally? Are you an Austinite or did you come here >> a while ago?"
+    },
+    {
+      "t": 39,
+      "text": ">> Be Lebanon originally. Armenian ethnically, but I grew up in Memphis, Tennessee for most of my formative years, I guess, and then DC and then Austin. That's how I landed here."
+    },
+    {
+      "t": 52,
+      "text": ">> Wow. Yeah. I think nobody's originally from Austin. Yeah, I think I haven't heard Lebanon yet, but no, I'm from Philadelphia. I think most people who are in Austin aren't from Austin"
+    },
+    {
+      "t": 62,
+      "text": "originally. >> Because it was a tech hub, so I ended up here for this reason to be around AI and not just AI at the time, but now it's a good place to be."
+    },
+    {
+      "t": 73,
+      "text": ">> Yeah, I think actually they're calling this place Silicon Ranch. And then I told somebody I was moving over to Austin to get into tech and he told he was like oh he's more like Silicon"
+    },
+    {
+      "t": 83,
+      "text": "Valley Ranch sort of like the dressing. So there but I wanted to know so how did you get into AI mug builders or >> meetup?"
+    },
+    {
+      "t": 95,
+      "text": ">> It was through the meetup.com basically I had started my own meetup when Genai was coming out like midjourney was my catalyst I guess. uh I started playing with it and I was like okay that's"
+    },
+    {
+      "t": 107,
+      "text": "interesting. I'd understood compression as a computer scientist, but hadn't seen models generating new things. And as soon as I learned that I could do that on my own computer, I went out and"
+    },
+    {
+      "t": 118,
+      "text": "bought a laptop and started generating images with staple diffusion. Uh, this is November 22."
+    },
+    {
+      "t": 125,
+      "text": ">> Um, and so from that moment forward, I've been digging into AI. So I started a meetup right after that period to try to gather other people to to gather a community and then hosting them was just"
+    },
+    {
+      "t": 140,
+      "text": "uh a lot of work. So I ran into Collins group Austin Langchain community and they were open to lang chain and other things and I was like I'm into a lot of other things. So but they're into"
+    },
+    {
+      "t": 151,
+      "text": "learning together and I want to see what this is about. So, um, that's how I landed there and I've been part of the Discord community quite a bit there and I've learned a lot from other members."
+    },
+    {
+      "t": 162,
+      "text": ">> Okay. So, you originally came into this through diffusion models. You were really into generating images. Like what were you doing beforehand and like what attracted you to these image generation"
+    },
+    {
+      "t": 173,
+      "text": "models? >> I was building e-commerce sites for most of my career. have built high availability e-commerce sites for retailers going all the way back to the late 90s."
+    },
+    {
+      "t": 184,
+      "text": "Dick Sporting Goods was one of the sites that I helped launch way back when in the early era. Most my career was built around systems integrations, e-commerce, users, a lot of personalization as well."
+    },
+    {
+      "t": 197,
+      "text": "So in that I was always curious about new technology and what the state of the art was. Things have gotten boring until Gen AI. I mean, as a computer scientist,"
+    },
+    {
+      "t": 210,
+      "text": "you don't see new things happening in your field that blow your mind very often. And being in there for 30 years in November 22, there's something about that midjourney experience and being"
+    },
+    {
+      "t": 223,
+      "text": "able to generate my own images on my own GPU was enlightening. Had a big journey since then. There's a lot of concerns about hallucination and all sorts of things that are going on right now. I'm"
+    },
+    {
+      "t": 234,
+      "text": "sure we'll talk about more, but just the fascination around the how these things could mimic neural networks. I had actually built a neural network as part of an object-oriented"
+    },
+    {
+      "t": 247,
+      "text": "programming class um taught by a graph theorist. So I got introduced to neural networks very early on. I understood it was just basically a modeling of the brain. So that has been something that's been of interest to me"
+    },
+    {
+      "t": 259,
+      "text": "for quite a long time. I minored in psychology because of it. Um when AI came around, it was like my minor and my interest in psychology was married to my"
+    },
+    {
+      "t": 272,
+      "text": "computer science at that time almost boredom, right? Everything was just I could build pretty much what I needed whenever I needed and there wasn't any magic. And something about AI has led me"
+    },
+    {
+      "t": 286,
+      "text": "to try to discover new use cases that we haven't even thought about that we can now attack with these tools. They're not perfect. They're not always right."
+    },
+    {
+      "t": 296,
+      "text": "They're not 100%. But if you take those givens, I think there is some amazing stuff that can be built still even if the models don't get any better than they are right now."
+    },
+    {
+      "t": 308,
+      "text": ">> Yeah, definitely. I really want to pick your brain. So there's a couple things you just said that immediately remind me how fortunate we are to be in an actual AI summer. Uh AI is not new. It's been"
+    },
+    {
+      "t": 322,
+      "text": "happening in the computer science space for a long time. Yeah. I mean neural networks I think they originated as hardware in the 50s and they were actually hardcoded um physical neural"
+    },
+    {
+      "t": 334,
+      "text": "networks and so it's only been recently that we've had the compute available to actually implement them at scale and do all sorts of things with these algorithms that we've had for a very"
+    },
+    {
+      "t": 345,
+      "text": "long time. um the sort of more advanced structures have only been available because we've been able to play around with them. But the concept of a perceptron is very old and it's in it's"
+    },
+    {
+      "t": 357,
+      "text": "interesting that you learned this from a graph theorist because that's currently what I'm doing. I'm doing graph analytics and doing graph retrieval augmented generation which is hot right"
+    },
+    {
+      "t": 367,
+      "text": "now for the AI space to add context and do context engineering for LLMs and agents. Now when you said psychology it's a >> big passion of mine in this context >> that yeah"
+    },
+    {
+      "t": 380,
+      "text": ">> here's something I wanted to I wanted to pick your brain so Google I remember they released a paper they had married a tokenized vision model to that of a language model and I think they embodied"
+    },
+    {
+      "t": 394,
+      "text": "this in a robot and they gave it some basic robotics tasks and they found out that the language model improved its spatial reasoning and the spatial reasoning improve the language"
+    },
+    {
+      "t": 406,
+      "text": "comprehension >> of course. Yeah. Yeah. It's still a big space of gaps in entry like there's quite a lot of learnings across the modalities in these models that language is not the"
+    },
+    {
+      "t": 420,
+      "text": "only thing that's I was like I said I was interested in the image diffusion models at first. Now we're actually seeing diffusion models that can generate language as well. the cognitive"
+    },
+    {
+      "t": 430,
+      "text": "architectures and the machine learning um explosion that has gone on in the last three years is still evolving. I I watch it very carefully for the reason of like some of these things are being"
+    },
+    {
+      "t": 442,
+      "text": "done in small language models that then get adopted into the bigger models. Once you see it working in a small language model though, you can kind of extrapolate how that will work when a"
+    },
+    {
+      "t": 453,
+      "text": "larger language model gets the larger domain of knowledge. Regardless of whether it's in different modalities or just different domains, I think the runway of different types of um"
+    },
+    {
+      "t": 464,
+      "text": "cognitive architectures, training data that can lead to use cases that can be solved is still great field."
+    },
+    {
+      "t": 473,
+      "text": "But right now we're trying to sort of guide those architectures. For example, I mean the name of the game for AI mug group here in Austin is lang chain and lang graphs. So how did you get from"
+    },
+    {
+      "t": 485,
+      "text": "diffusion models into agents and orchestration?"
+    },
+    {
+      "t": 490,
+      "text": ">> Well, the diffusion models kind of gave me the inspiration of the diffusion models came out first. They were they were more for a consumer that wasn't paying attention to AI that wasn't deep"
+    },
+    {
+      "t": 500,
+      "text": "into AI already. It's the first thing that I saw. That was prior to chat GBT being released when chat GBT came out. Then I kind of"
+    },
+    {
+      "t": 513,
+      "text": "turned my focus to language models to some degree. Then I saw how it kind of like attempted to write code and I was like, \"Oh, that's interesting. It's really not very good.\" Um and then"
+    },
+    {
+      "t": 524,
+      "text": "things changed on the coding sphere because of how you can do RL and how you can do verification loops on code and math that has changed since then. Um but that was the point at which when you"
+    },
+    {
+      "t": 537,
+      "text": "know it is the same thing chat GMT coming out specifically GBD4. So I read the sparks of AGI paper the day after or almost within within 48 hours of it"
+    },
+    {
+      "t": 550,
+      "text": "being released. I read that paper and things were already kind of hot in the AI space at that point. But that paper I think changed everything because that was the one that revealed what GBT4 was"
+    },
+    {
+      "t": 563,
+      "text": "able to do behind the scenes that we that nobody had seen yet."
+    },
+    {
+      "t": 569,
+      "text": "I think that was kind of the hook for for for everything like GBD4's abilities in that paper um changed my perception of what I thought"
+    },
+    {
+      "t": 581,
+      "text": "AI could possibly be. Before that it was toys that GBD P for sparks of AGI paper was it. It's actually probably I think it's the first article on my blog. It's"
+    },
+    {
+      "t": 593,
+      "text": "like this is the spark. >> Wow. Yeah. I think I mean I remember playing with was it GPT3O which was the first chat completion model. I think beforehand it was just"
+    },
+    {
+      "t": 607,
+      "text": "set the standard completions model. >> Yeah, GPT2 was open source and did some random language type of stuff but it was nothing that could be in in any way commercialized but three got closer and"
+    },
+    {
+      "t": 619,
+      "text": "then 35 is what we saw what most people saw."
+    },
+    {
+      "t": 623,
+      "text": "Yeah, four was the first one that could reliably generate snippets of code."
+    },
+    {
+      "t": 627,
+      "text": ">> Oh yeah. Well, I mean four was worlds different than 35. Worlds different than 35. That was the big turn that everybody's kind of I I think since then people have been hoping that there's"
+    },
+    {
+      "t": 639,
+      "text": "there would be like sign like similar factors of difference between what was at the time and still is if you look back the difference between 35 and four was just not it's it's not the same game"
+    },
+    {
+      "t": 655,
+      "text": "even. So four is what made several of the AI stalwarts say, \"Hey, let's stop training anything smarter than GPD4 for 6 months.\" I don't know if you remember that paper, but or that petition, but"
+    },
+    {
+      "t": 668,
+      "text": "that petition came out directly as soon as the Sparks of Agia paper came out because of its reasoning."
+    },
+    {
+      "t": 675,
+      "text": ">> In retrospect, that might have been a little bit too optimistic. So it turns out that getting >> back >> Yeah. They actually didn't do much better than GBD4 in that 6 months after"
+    },
+    {
+      "t": 686,
+      "text": "that. >> Yeah. I mean anybody who's programmed or done any sort of project, you know that getting 80% of the way there is usually pretty easy, pretty quick, but the last 20% and especially the last 5% is a real"
+    },
+    {
+      "t": 699,
+      "text": "pain. So yeah, what's really good about Langraph and all this orchestration is that you get to take your problem and split it up into steps and you can feed it into LLMs. You can give it access to"
+    },
+    {
+      "t": 712,
+      "text": "tools. You can make things easier and really evaluate how it's doing with one particular task instead of oneshotting it like we did when they first came out because we"
+    },
+    {
+      "t": 725,
+      "text": "thought that they could just handle anything that they can really organize their thoughts. So, Langraph helps a lot. Other orchestrators help a lot in making those problems easier for the"
+    },
+    {
+      "t": 733,
+      "text": "LLMs. Now, when it comes to tools, we've gotten MCP, I think. How that's not that old. It's less maybe a year old coming out. Could you tell me more about that?"
+    },
+    {
+      "t": 745,
+      "text": ">> Sure. So, Langraph is is kind of like the go-to framework that a lot of enterprises are using to do their proof of concepts internally these days. It has a lot of providers. It has all the"
+    },
+    {
+      "t": 758,
+      "text": "primitives that a developer would need to construct a production ready flow with AI. It's a great tool set, but it's not production ready just by downloading the open- source land graph tool set,"
+    },
+    {
+      "t": 772,
+      "text": "right? It it doesn't work that way. So the tool set around it that I think that I'm working towards is anthropic based claude code skillsbased and sub"
+    },
+    {
+      "t": 785,
+      "text": "aent-based skills got released about a couple months ago very recently and very quickly it's become an open standard just last week it was launched on agentskills.io IO, Anthropic, Cursor,"
+    },
+    {
+      "t": 800,
+      "text": "OpenAI, Microsoft, you can see all the vendors on the list on their site, but it is now an open standard. Um, I think it's important because if you look at my"
+    },
+    {
+      "t": 812,
+      "text": "contributions to the Austin Lang chain from way back, um, I started this thing called a context or a context file. This is before agents.mmd existed. Um, now most repos if you're"
+    },
+    {
+      "t": 827,
+      "text": "using agent coding have an agents.mmd at the root. That's how it starts. That's how you initiate and define a repository for the agent. Um, so that's the beginning of the context journey for"
+    },
+    {
+      "t": 841,
+      "text": "anthropic. That is the very core file that you started with whether it's an agents. MD or a cla.md. So cloud code uses cloud.MD. the industry is kind of glomming around agents.mmd construct."
+    },
+    {
+      "t": 853,
+      "text": "Skills takes that construct and just makes it a superpower by uh defining a very very simple construct that's a zip file. It's basically a folder. A skill is just a folder with a"
+    },
+    {
+      "t": 867,
+      "text": "particular set of files in it. The only requirement is that it has to have a skills.md file at the root of the folder. That's literally the only requirement. Outside of that, it has a"
+    },
+    {
+      "t": 878,
+      "text": "construct for how to arrange a set of context to be progressively discoverable by the AI agent."
+    },
+    {
+      "t": 888,
+      "text": "So, let's say I'm an AI agent. I opened up cloud.md and agents.md. I don't know anything about this repo. I see that I have some skills and it says you need to do this task."
+    },
+    {
+      "t": 901,
+      "text": "skills work by initially injecting a use blah blah skill for these types of procedures. That's literally all it puts in. It puts in like just a few tokens"
+    },
+    {
+      "t": 913,
+      "text": "unlike MCP. MCP puts in like tons of tokens worth of tool instructions and formatting and parameters. So, people have gotten away from loading in all of their MCPS. This"
+    },
+    {
+      "t": 928,
+      "text": "is why skills is taking off because people I think were pretty frustrated with how many tokens MCPs were taking and a lot of what's in MCPs should be some sort of domain knowledge"
+    },
+    {
+      "t": 942,
+      "text": "but they're two different concerns. MCPS for is for external data skills is for domain knowledge and practices and specific knowledge about something anything. So the work that I'm doing"
+    },
+    {
+      "t": 955,
+      "text": "right now is trying to figure out how to compartmentalize those properly because if you look at a world where there's all these skills and they're all folders and they all have very specific domains,"
+    },
+    {
+      "t": 967,
+      "text": "let's say a skill for deploying something to versel, let's say just as an example, you can get an off-the-shelf open source skill that is basically just"
+    },
+    {
+      "t": 980,
+      "text": "a zip file. It's a static set of assets that can uh that all all it injects at the beginning of the agent prompt whether it's cloud code or something else is use this skill when you need to"
+    },
+    {
+      "t": 993,
+      "text": "do x y and z and you give it permissions to use that skill and then within it it has basically the cheat sheet and user guide as the skills.mmd for that domain"
+    },
+    {
+      "t": 1008,
+      "text": "and then within it you can have as many references as you want."
+    },
+    {
+      "t": 1014,
+      "text": "All those references are just available to the agent rather than being injected in to the context window. They're just a defined set of available domain knowledge. And so with that construct,"
+    },
+    {
+      "t": 1029,
+      "text": "you can construct a you can have sets of skills that are for your own workflow, let's say, that are in one repository"
+    },
+    {
+      "t": 1041,
+      "text": "and some skills that are in just a public repository that you get from your vendors, like you want to for integration purposes, like you want to keep up with the latest way to deploy to"
+    },
+    {
+      "t": 1051,
+      "text": "versel, right? That changes over time. you can subscribe to a marketplace that updates your skill for that."
+    },
+    {
+      "t": 1059,
+      "text": ">> Okay, >> so something that didn't exist is these marketplaces. Now marketplaces in cloud code are not actually a construct that is an open standard. Now only the skills are which are like a subset of cloud. So"
+    },
+    {
+      "t": 1072,
+      "text": "that's why I'm align I'm excited about the open stand of the skills but also practically for enterprises anthropic has the tool set and is thinking about context more than anyone else which is"
+    },
+    {
+      "t": 1086,
+      "text": "why I lean into anthropics tool set for this and the other reason is that all these context things break down when you're not using the same tool set. So if your team is using GitHub actions or"
+    },
+    {
+      "t": 1100,
+      "text": "they're using codeex or another you know crush or open code regardless of which one of these things they're using if a team isn't using the same one they all"
+    },
+    {
+      "t": 1112,
+      "text": "do these context juggling very differently. skills is the very first thing the industry has agreed upon that can encapsulates domain knowledge into something really simple and portable and"
+    },
+    {
+      "t": 1126,
+      "text": "something that you can link to in a GitHub repo that can update."
+    },
+    {
+      "t": 1131,
+      "text": "So there's some problems with that that I pointed out I think to the awesome language chain community yesterday which is in prompt injection skills are basically prompts. So if you open up a"
+    },
+    {
+      "t": 1142,
+      "text": "GitHub repo and you're auto updating your skills all the time, then that's a vector of attack. But these are the types of problems that AI engineers have to deal with right now is taking the"
+    },
+    {
+      "t": 1155,
+      "text": "things that can work really really well, applying them to these workflows, getting acceleration, velocity higher for the teams, but with some practicality of yeah, but"
+    },
+    {
+      "t": 1167,
+      "text": "if somebody puts a website that says this on it and your clock thread hits it, it could do this. So sandbox it, put it into this container. There's a lot of other things. That's where AWS agent"
+    },
+    {
+      "t": 1180,
+      "text": "core comes in at this point for me. Whereas there's a lot of that that they take off my plate which is the whole infrastructure underneath it. Runtime for Langraph runs in the cloud."
+    },
+    {
+      "t": 1192,
+      "text": ">> You can turn on guard rails. It has an abstraction for gateways wi in AWS which had already existed but now every gateway in AWS is an MCP server"
+    },
+    {
+      "t": 1207,
+      "text": "and you can control the access to the MCP external beta through AM directly in AA agent core. So you can actually control"
+    },
+    {
+      "t": 1219,
+      "text": "different tools within the MCP servers all programmatically defined in cloud terraform etc. What I'm building is a set of skills that understands all these"
+    },
+    {
+      "t": 1232,
+      "text": "concepts that understands the langraph concepts how checkpointing works there and how to integrate that to AWS agent core memory systems. Agent core has two memory systems. It's got the session"
+    },
+    {
+      "t": 1245,
+      "text": "checkpoint memory system and it's got a uh long-term memory. So you can actually do a graph-based rag lookup per user"
+    },
+    {
+      "t": 1257,
+      "text": "personalize it. So it actually has the user separation and kind of security aspect of that built in as well. Of course AWS you get some level of vendor lock in but I haven't seen any other"
+    },
+    {
+      "t": 1270,
+      "text": "players with the entire suite for taking something that folks like us that are working in the awesome chain community and like working with prototypes and like hey I got this working and you can"
+    },
+    {
+      "t": 1282,
+      "text": "see that it does the work that it addresses the use case but how do you put it into production you're seeing everything I'm Dan saying oh last mile getting into production getting into"
+    },
+    {
+      "t": 1293,
+      "text": "production is the hard spot. Yeah, absolutely true. Um, but there are ways to get into production. It's just more costly and people have to understand that it's never going to be 100%. They"
+    },
+    {
+      "t": 1306,
+      "text": "have to hit the use cases that fit in that."
+    },
+    {
+      "t": 1310,
+      "text": ">> Okay. So, that that's interesting. I really did. They have their gateways also set up as MCP servers. Uh, >> they have the other primitives too. So they have containers so you can run code"
+    },
+    {
+      "t": 1323,
+      "text": "execution per agent. So it can have so each agent that you put in agent core can have its own little container that it can execute code in. That's a primitive in agent core. Browsers to browse are a"
+    },
+    {
+      "t": 1336,
+      "text": "primitive. Policies are a primitive. Memory is a primitive. So all those primitives are hooked and observability is a primitive that hooks directly into cloudatch. I got the AWS AI practitioner"
+    },
+    {
+      "t": 1349,
+      "text": "certification a couple weeks ago I think you saw and there's a whole breath of stuff that they have in SageMaker in bedrock and the suite around them. This Asian core thing is new. It wasn't"
+    },
+    {
+      "t": 1362,
+      "text": "covered in that certification. It's too new actually, but everything in that suite of tools seems to be incorporated really well into agent core where you can uh leverage the AWS primitives"
+    },
+    {
+      "t": 1377,
+      "text": "directly in the LAN graph world like the checkpoints are automatically linked to the short-term memory in AWS agent core."
+    },
+    {
+      "t": 1386,
+      "text": "So you don't have to do anything else other than what you've already done in Langraph."
+    },
+    {
+      "t": 1391,
+      "text": ">> All right. So skills to me sound like they're very much curated prompt, you know, they're curated prompt templates."
+    },
+    {
+      "t": 1399,
+      "text": "I guess they're sort of like the name of the game ever since these models came out, it turned out was context. Uh we don't really control the tuning that"
+    },
+    {
+      "t": 1411,
+      "text": "much except as a last resort. But for the most part, it seems to be uh how do you present context in a way that is most useful and reduces hallucinations, gets you to your goal without any of the"
+    },
+    {
+      "t": 1424,
+      "text": "side effects. And originally that was just coming up with better and better prompts, storing those as templates. And then we later moved on to doing semantic"
+    },
+    {
+      "t": 1437,
+      "text": "search. similarity kind of deals with uh vector databases. We still use those obviously and we still use prompt templates and then"
+    },
+    {
+      "t": 1449,
+      "text": ">> we need tool calling paradigm. It's all around the tool calling paradigm because like as soon as tool calling came out that's when things were like okay now that we can call tools how do we call"
+    },
+    {
+      "t": 1459,
+      "text": "tools which tools do we call and then the an you know there in lies the question of like how do you transform a world that is that has tools for humans into good tools for AI"
+    },
+    {
+      "t": 1472,
+      "text": ">> and it turns out that these AIs are actually much more prone to being distractive than humans are so they Seems like with MCP we have too many options for it to go and then skills is"
+    },
+    {
+      "t": 1485,
+      "text": "sort of what we did previously with restricting context into these specific domains and it sounds like these skills are curated."
+    },
+    {
+      "t": 1496,
+      "text": "Are they like human curated? Um because like even vector search is like the cornerstone of rag, even graph rag, it still uses vector search to searches on nodes rather than on large sentences. And so"
+    },
+    {
+      "t": 1513,
+      "text": "it seems as if like that's the fundamental strategy right now. It seems to be repeated in every single task, every single level of interaction with the LLM. We created we have land graph"
+    },
+    {
+      "t": 1526,
+      "text": "now so that we can split up our prompting to the agent. We have graph rag so we can split up the vector search for rag and now it seems as if skills is"
+    },
+    {
+      "t": 1540,
+      "text": "sort of splitting up the tool calling in a way."
+    },
+    {
+      "t": 1545,
+      "text": "So is that correct or did I miss something? Well, scales is just a just an additive across the entire ecosystem because um because at each one of those points, you"
+    },
+    {
+      "t": 1559,
+      "text": "can actually call the API when you call the anthropic API. Right now, skills are actually supported on in the anthropic ecosystem directly in the API,"
+    },
+    {
+      "t": 1571,
+      "text": "which means that you can give the skill to any API call. There's a new call where you can upload your skill because it's a static set of files like a skills.md and the artifact the it's a"
+    },
+    {
+      "t": 1584,
+      "text": "references assets and scripts directories are the main ones that you have in the top level but you can just upload that directly in the API and within the API calls it will go and"
+    },
+    {
+      "t": 1596,
+      "text": "traverse and use your skill. >> Um so they put it into the entire ecosystem. It's not necessarily just at a certain layer. Now, that's how they they've done it in their API. That's not"
+    },
+    {
+      "t": 1608,
+      "text": "to say that that that that's how cursor will do their things. There's a whole bunch of people. It's an open standard now. I guess it's interesting if if Cursor is implementing skills directly"
+    },
+    {
+      "t": 1618,
+      "text": "into Cursor and then they call the API, would they upload the skill or reference it? I don't know. But this is this is the new world we're in. This is technology that's like three months old."
+    },
+    {
+      "t": 1630,
+      "text": "What I do is I follow all the changes to the specification in the docs in git basically because since they've released it every day they've tweaked the documentation"
+    },
+    {
+      "t": 1642,
+      "text": "like oh this is actually required here in this field in the plug-in system."
+    },
+    {
+      "t": 1648,
+      "text": "So it's literally forming underneath us as we go. Um, part of my current pattern with this though, just to kind of answer your question, I think is how do you wrap it"
+    },
+    {
+      "t": 1661,
+      "text": "up in all these pieces is I currently am of the mind that pretty much every repository that I'm creating requires its own plug-in"
+    },
+    {
+      "t": 1674,
+      "text": "construct that gives you the entire breadth of claude code skill tool set within in each repo."
+    },
+    {
+      "t": 1684,
+      "text": "And so I've actually got a dom repository domain expert pattern that I've started. So every repository that I have has an expert sub aents and some skills and they know how to work"
+    },
+    {
+      "t": 1697,
+      "text": "together. So when I'm going to cloud code, every time I see it make a mistake when it's doing a again using the deployment to burcell example, it's like oh I tried to do this. Oh that call was wrong. I"
+    },
+    {
+      "t": 1710,
+      "text": "didn't get that right. I'm like, well, add that to your skill."
+    },
+    {
+      "t": 1715,
+      "text": "So, that loop I haven't perfected yet, but I've basically been building these skills and sub agents so that as they do their work and turn their reports in in the flow that anthropic has designed"
+    },
+    {
+      "t": 1728,
+      "text": "that they add a little note at the end on how to improve themselves. So, this is the self-improvement AI thing in practice within cloud code within sub agents basically. So I'm writing some"
+    },
+    {
+      "t": 1740,
+      "text": "benchmarks to eval my uh skills across a set of projects and I've asked the uh Langchain community for some Lang graph examples to do the skills"
+    },
+    {
+      "t": 1753,
+      "text": "application for an agent core deployment of Langraph. So, if you if you got a couple of ones that you want to try or know someone else, I'm looking for some guinea pigs to use the skills to then"
+    },
+    {
+      "t": 1765,
+      "text": "deploy something that I haven't seen before into Agent Core with these skills. That that's what I'm working with with the marketplace for agent sites that I'll be launching hopefully"
+    },
+    {
+      "t": 1776,
+      "text": "soon once I can validate that I can do these things. I've already got some of it working myself for my own first test, but it needs more proving out."
+    },
+    {
+      "t": 1788,
+      "text": "Okay, I'll have to think about a few skills that I need to be produced. I think I'm trying to view this conceptually. So skills are they there are like a hierarchical set of prompts"
+    },
+    {
+      "t": 1801,
+      "text": "that call each other. Like we discussed that at the top level there's a skill inside this directory, but like how once you get in that directory, what's going on?"
+    },
+    {
+      "t": 1810,
+      "text": "So once you get into that directory there's a skills.mmd and within there there's some prescriptive set of subdirectories."
+    },
+    {
+      "t": 1820,
+      "text": "One is references that's the main one. So references is a in that subdirectory in a skill you'll find a set you should find a set of documentation basically"
+    },
+    {
+      "t": 1832,
+      "text": "that's where the documentation of the skill goes. There's another subfolder called assets and that's where you put templates. So if the skill is going to be doing something often and often needs to use"
+    },
+    {
+      "t": 1845,
+      "text": "the same order form, let's say, well, you put a template of the order form in the skill so that the domain knowledge is complete. So it knows how to operate on"
+    },
+    {
+      "t": 1857,
+      "text": "an order form and it knows what an order form looks like. Here's an example. and it knows where to go to get it because it's in this progressive discoverable layout. And the progressive means what"
+    },
+    {
+      "t": 1871,
+      "text": "the language model ingests first. So the first thing it ingests is skills.md."
+    },
+    {
+      "t": 1875,
+      "text": "It's like, okay, I'm looking at skills.md. I know I'm in a skill because I've been prompted about that before. So I kind of know that there's supposed to be a references directory, assets"
+    },
+    {
+      "t": 1885,
+      "text": "directory, etc. Right? So skills.mmd starts describing how to deal with a versell deployment. Do you have a key for versell available in the environment? You know, that's the first"
+    },
+    {
+      "t": 1895,
+      "text": "thing you want to check. Well, there's a bunch of ways to check that, right? Is there a script in the skill that will help me do that?"
+    },
+    {
+      "t": 1904,
+      "text": "If there is, skills.md should point that out and make it so that my language model doesn't have to guess how to find that key at all because I've seen it do that before and I've just added that as"
+    },
+    {
+      "t": 1917,
+      "text": "a domain knowledge to my skill. So it's basically preventing all the things that it's constant context engineering to get improvement. You see where it skips and"
+    },
+    {
+      "t": 1929,
+      "text": "messes up and you build a better form around it. So to differentiate that from just simple prompts, that seems to be like a prompt is more like becoming a"
+    },
+    {
+      "t": 1941,
+      "text": "more skilled manager to try to communicate to your employee. Whereas these skills appear to be a standard operating procedure that you're going to produce around a particular task that"
+    },
+    {
+      "t": 1953,
+      "text": "you're going to do repetitively. And then whenever you discover that it's been done incorrectly, you go back, revise your standard operating procedure."
+    },
+    {
+      "t": 1963,
+      "text": ">> Well, that's where you get into a little bit of the, you know, what's missing out of this, right? What's missing out of the skills is when you said standard operating procedure, the operator is"
+    },
+    {
+      "t": 1974,
+      "text": "missing. So, anthropic and claude code have a construct for that. Langraph also has a con for that called sub aents, right? But sub aents are not an open standard right now. So everybody's doing"
+    },
+    {
+      "t": 1987,
+      "text": "their own sub agents and it's basically a sub loop that has its own context window is how cloud code defines a sub aent. Langraph I think defines a sub agent a little differently. So there's no agreed upon"
+    },
+    {
+      "t": 2002,
+      "text": "operator. So yes, the skill is kind of your SOP, but that kind of lends itself to where who's operating and where the operating instructions go. those in a"
+    },
+    {
+      "t": 2014,
+      "text": "company that has already bet on Antropic and are all in and the whole team's using it. You could use a sub agent and define it, you know, like have that be the operator and have a team define that"
+    },
+    {
+      "t": 2027,
+      "text": "operator. Skills doesn't quite get you there. Skills is like a book. So, it is the SOP, but you're handing it over to the operator. Who's the operator? Well, it's not standardized yet. the whole"
+    },
+    {
+      "t": 2038,
+      "text": "flow of what to do and who's doing it, how it's being done is still kind of gray for what the skill is. So still kind of have to design the skills so they can be useful for for both"
+    },
+    {
+      "t": 2050,
+      "text": "scenarios unless you know you're going to be in an anthropic only ecosystem. In which case in my case and that's how I design things for my customers that are already decided on anthropic"
+    },
+    {
+      "t": 2063,
+      "text": "to then go all in and design a skill and a sub agent together."
+    },
+    {
+      "t": 2070,
+      "text": "That's really powerful because then you can start separating out the operations into a set of actual steps that can be taken in the operational guide which"
+    },
+    {
+      "t": 2082,
+      "text": "would be in the sub agent abstraction not in the skill abstraction. They'd work together >> trust it. Yes. So that's that's very s there's this book it's called like the checklist manifesto. post about how"
+    },
+    {
+      "t": 2094,
+      "text": "checklists made their way out of engineering and then in the early 2000s they finally started using them in medicine. And so when they do use them inside a surgical suite, there is I"
+    },
+    {
+      "t": 2106,
+      "text": "believe one nurse whose sole job is to make sure that the operating staff are following the checklist. So in the case of anthropic with sub agents, it seems"
+    },
+    {
+      "t": 2118,
+      "text": "like you have a orchestrator. >> It's called a circulating nurse. Well, that was purely by coincidence. So, and in this case, you have circulating nurse head agent that has a whole bunch"
+    },
+    {
+      "t": 2131,
+      "text": "of sub aents that it is making sure checks off each of the tasks while it compares those tasks and the completion of those to your skills."
+    },
+    {
+      "t": 2142,
+      "text": ">> Yeah. But, you know, none of the stuff in the prompting space is an end state."
+    },
+    {
+      "t": 2147,
+      "text": "So in that sub agent, I try to give it this meta knowledge of, hey, you're also improving yourself because I've seen these sub agents. You can send them off and they'll make the same mistakes and"
+    },
+    {
+      "t": 2158,
+      "text": "they'll they'll correct them, but they'll be in a different context window. So you won't see them. If they don't report back how they can improve, then you're you're kind of wasting"
+    },
+    {
+      "t": 2168,
+      "text": "tokens and they're not you're losing observability to some degree. So it's it's it's it's all a balance in the context space, but then you get to the point of when you get a use case that"
+    },
+    {
+      "t": 2180,
+      "text": "you can measure on, you have a whole suite of things like the cloud code SDK which will allow you to automate this stuff. So I could be running these all these things headless completely as is"
+    },
+    {
+      "t": 2193,
+      "text": "with skills and sub agents etc to then compare one versus the other for actual production releases."
+    },
+    {
+      "t": 2203,
+      "text": ">> Thank you for the introduction to skills. This is something brand new I just learned here live on stream."
+    },
+    {
+      "t": 2208,
+      "text": ">> So of course >> uh >> is there any place that people can find you? Do you have a LinkedIn or Twitter?"
+    },
+    {
+      "t": 2215,
+      "text": "agenticinsights.com is my company. I've got LinkedIn and Twitter. Just Vasin on LinkedIn. Vasking K on Twitter."
+    },
+    {
+      "t": 2227,
+      "text": "Well, it's been a pleasure speaking with you. Thank you very much for meeting me this Christmas discussion about cloud code AWS and everything. Appreciate it."
+    },
+    {
+      "t": 2236,
+      "text": ">> Take care."
+    }
+  ],
+  "backfill": true
+}

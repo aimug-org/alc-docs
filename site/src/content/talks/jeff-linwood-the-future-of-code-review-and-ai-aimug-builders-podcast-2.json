@@ -1,0 +1,318 @@
+{
+  "title": "Jeff Linwood: The Future of Code Review and AI | Builders Podcast #2",
+  "speakers": [
+    "jeff-linwood"
+  ],
+  "date": "2025-10-03",
+  "youtubeId": "KVTWtS84-Zk",
+  "duration": 754,
+  "summary": "In this episode of AIMUG Builders, host James Coffey interviews Jeff Linwood, a seasoned software developer with over 25 years of experience. Jeff shares his insights on how large language models (LLMs) are revolutionizing the software development life cycle.",
+  "topics": [],
+  "transcript": [
+    {
+      "t": 0,
+      "text": "For me, this has been really interesting to see how the software development life cycle is changing because >> I like writing software, but I really like building software and I really like"
+    },
+    {
+      "t": 10,
+      "text": "building solutions. And seeing how people are using LLM to accelerate all that made me realize that this is a really interesting area and there's a lot of fun activities going on and it's"
+    },
+    {
+      "t": 22,
+      "text": "a really good place to be creative. What I realized is that I actually myself don't want my first line of defense to be the uh pull request. I want it to"
+    },
+    {
+      "t": 34,
+      "text": "actually run a code um like a code review locally before I make the pull request. Well, you know, just from talking about fuel, it's just people really resonate with the idea of getting"
+    },
+    {
+      "t": 44,
+      "text": "something to review their code before they make a pull request because that just tends to be a big block in the software development pipeline."
+    },
+    {
+      "t": 56,
+      "text": "Hello, this is the second episode of AI Mug Builders, uh, where we talk to members of AI Mug here in Austin, uh, where we use Lang Chain and Langraph to build AI agents and software. Here I'm"
+    },
+    {
+      "t": 70,
+      "text": "with Jeff Lynwood. Hi Jeff. So, um, what do you do and what brought you to AIM?"
+    },
+    {
+      "t": 76,
+      "text": ">> Yeah, that's a great question. So, I'm a software developer who's been working with software for, you know, about 25 years or so. But just like everybody else, I'm really new to LLM. I mean, I don't think"
+    },
+    {
+      "t": 88,
+      "text": "they really existed in public form up until a couple years ago. And for me, this has been really interesting to see how the software development life cycle is changing because"
+    },
+    {
+      "t": 101,
+      "text": ">> I like writing software, but I really like building software and I really like building solutions. And seeing how people are using LLM to accelerate all that made me realize that this is a"
+    },
+    {
+      "t": 110,
+      "text": "really interesting area and there's a lot of fun activities going on and it's a really good place to be creative. All right."
+    },
+    {
+      "t": 121,
+      "text": ">> So, what what were you previously like programming, right? What's an area of expertise?"
+    },
+    {
+      "t": 126,
+      "text": ">> Yeah. So, I I've done everything from enterprise Java development to uh Ruby on Rails applications for startups to building applications for museums and national parks and uh mobile apps for"
+    },
+    {
+      "t": 139,
+      "text": "everything you can think of. But uh recently I've been doing a lot more work with uh building things on top of lang using TypeScript."
+    },
+    {
+      "t": 149,
+      "text": ">> Yeah. So, um, >> what are you currently building? >> Right. So, I've got a couple projects that I'm working on, but the the one that I'm kind of most excited about is called Zap Circle. Okay."
+    },
+    {
+      "t": 159,
+      "text": ">> And it's an open- source project that I'm building uh on top of Chains. It's uh all in Typescript, but it's kind of my take on wow, there are some really interesting things happening with"
+    },
+    {
+      "t": 171,
+      "text": "software and what can I do to build a better developer software development framework on top of LM? So, how can I start to provide some orchestration? How can I start to"
+    },
+    {
+      "t": 184,
+      "text": "provide some tooling? And so, I've done a lot of different experiments inside that one framework. Um, so we had this idea of behavior-driven development about 15 years ago. It got really"
+    },
+    {
+      "t": 196,
+      "text": "popular in the Ruby on Rails community and then kind of hit a peak and then immediately dropped off. And the reason was is that we had this idea that non-technical owners were going to write"
+    },
+    {
+      "t": 205,
+      "text": "tests and developers were going to write an intermediate language that translate those tests into uh into actual code, right? And so the idea is that someone would talk about"
+    },
+    {
+      "t": 217,
+      "text": "all the behaviors that a tool would use. We'd use that to test it. And the missing step was that we didn't have LLMs to translate between these human written behaviors and code or text. And"
+    },
+    {
+      "t": 231,
+      "text": "so it just got to be the to the point where behavior driven development I think was just a lot of extra steps for people and didn't actually solve any real problems. But now that we have"
+    },
+    {
+      "t": 240,
+      "text": "LLMs, we can turn them loose on that intermediate layer, which we kind of understood what the boundaries were of that and we can say, \"Hey, what if we had a behavior-driven framework by using"
+    },
+    {
+      "t": 249,
+      "text": "LMS to translate between what people want and what uh computers can handle?\""
+    },
+    {
+      "t": 254,
+      "text": "And so, uh, that actually came out of another idea that I had, which was to build a declarative framework specifically for LOL. So I went down the path of building a completely declarative um framework"
+    },
+    {
+      "t": 269,
+      "text": "for LMS using uh vanilla JavaScript. So it was a single file component. You'd have your routes and your um you know your data validation and you'd have a description a human readable description"
+    },
+    {
+      "t": 281,
+      "text": "all in one set of code and the LLM could actually update the JavaScript part of that as you updated the single file part of it. It was pretty cool, but the tool chain turned out to be unworkable."
+    },
+    {
+      "t": 293,
+      "text": ">> Okay. >> So, and also I realized that the LMS don't understand this new framework. So, it was going to have like a little bit of like a chicken and egg thing. So, then I took that idea and I"
+    },
+    {
+      "t": 302,
+      "text": "said, well, what if I took the same approach but did React components, right? Because React components are something that LMS understand. They're baked into the history. And also, you"
+    },
+    {
+      "t": 311,
+      "text": "know, a lot of people use React. I don't know what the the the front end numbers are, but certainly if I'm looking for users, React users are a great group of people to go after."
+    },
+    {
+      "t": 320,
+      "text": ">> Okay. And how's it working? Like can you walk us like step by step? Like how do you start? Like what's the process?"
+    },
+    {
+      "t": 326,
+      "text": ">> Yeah. So uh what you do is you'd actually uh you'd actually set up your project. So you need a it's all my site is all open source. So there's no server. So you would set up like an"
+    },
+    {
+      "t": 338,
+      "text": "OpenAI API key or an anthropic API key and you'd run the little zap circle in it and you configure directory to have the right key and all that and then you could start to analyze your code files"
+    },
+    {
+      "t": 349,
+      "text": "to come up with the behaviors so it can actually read a code chunk of code and then store a toml file next to it that describes that piece of code, right? And then I can we can take that behavior and"
+    },
+    {
+      "t": 361,
+      "text": "edit it and then generate new tests from it or generate new code from it."
+    },
+    {
+      "t": 366,
+      "text": "So you can update your existing uh TypeScript classes or you can update your behaviors just whatever you want to do for the round trip. Now I don't have all the roundtrip software life cycle"
+    },
+    {
+      "t": 379,
+      "text": "complete. So I don't have like a live server yet that would show you that I'm working on things like that but uh it turned out to be a really interesting area but it didn't resonate with people"
+    },
+    {
+      "t": 389,
+      "text": "the way that something else I built did. And so I I kind of decided to focus a little bit more on building a better code review solution. Okay, >> so a lot of people use code reviews"
+    },
+    {
+      "t": 400,
+      "text": "already, right? So if you use GitHub, you've got a pull request, you can add GitHub copilot, it'll give you a really nice AI code review of your pull request and it does a great job. Uh what I"
+    },
+    {
+      "t": 412,
+      "text": "realized is that I actually myself don't want my first line of defense to be the uh pull request. I want to actually run a code um like a code review locally"
+    },
+    {
+      "t": 424,
+      "text": "before I make the pull request. So I want to take a look at all the code that I have changed, all the code I've staged, all the code I've committed on a given branch and I want to do a pull"
+    },
+    {
+      "t": 432,
+      "text": "request review on that locally, make my edits, maybe squash a commit, push it up, and then get review either from another AI or from, you know, a human reviewer or whatever. And so I've kind"
+    },
+    {
+      "t": 444,
+      "text": "of been focusing on that as a something that just seems to resonate with more people."
+    },
+    {
+      "t": 449,
+      "text": ">> And you can chain different models to go to chat against your poll request, right?"
+    },
+    {
+      "t": 453,
+      "text": ">> Yeah. Yeah. There's no reason why because this supports any any uh any lang chain supported model or a local URL. So yeah, you could chain as many as you wanted in there."
+    },
+    {
+      "t": 466,
+      "text": "So you originally started with a way of uh writing specs for your software development for the agents to check and these are rulebased systems for them to"
+    },
+    {
+      "t": 478,
+      "text": "implement uh whatever structure that you need right >> how does that compare against uh what's currently being offered with cloud code or codeex where I can write like an agents.md and I can provide uh like"
+    },
+    {
+      "t": 493,
+      "text": "English language specifications for how I want it to be. >> It's all very similar. Yeah, there's there's no I don't I don't see this as something where this is necessarily competing with those tools. I mean, this"
+    },
+    {
+      "t": 504,
+      "text": "is, you know, my project versus, you know, obviously a much larger corporation."
+    },
+    {
+      "t": 508,
+      "text": ">> Um, I went ahead and built an agent into Zap Circle as well cuz I was just very curious about it, right? And I was like, what would it take to have an agent that went out there and, you know, pulled in"
+    },
+    {
+      "t": 518,
+      "text": "a task to to work on, worked on the task, did its own code review, fixed the code review, and then ran some tests on it for an instance. So, no, I think it all makes together really well. Do I"
+    },
+    {
+      "t": 530,
+      "text": "think that um I don't necessarily think that uh you know, the agents MD or the the quad MD or anything like that, it's it's I I think it's all great. Do you notice any sort of difference in"
+    },
+    {
+      "t": 541,
+      "text": "performance? >> You know, honestly, they're all using the same underlying LLM. So, you know, in the sense of does Sonic get better performance than GPT? You know, I actually lean myself more towards using"
+    },
+    {
+      "t": 554,
+      "text": "GPT for the software. I I find that it actually generates better code than CL sonnet, but you know, that's just my personal opinion. It's an anecdotal ambassador."
+    },
+    {
+      "t": 564,
+      "text": ">> Okay. And you see you're getting a lot more traction with the uh PR review agent."
+    },
+    {
+      "t": 570,
+      "text": ">> Yeah. >> So like what sort of like feedback have you gotten?"
+    },
+    {
+      "t": 574,
+      "text": ">> Well, you know, just from talking about people, it's just people really resonate with the idea of getting something to review their code before they make a pull request because that just tends to"
+    },
+    {
+      "t": 583,
+      "text": "be a a big block in the software development pipeline. You have to, you know, typically if you're not working on a solo project, you need someone to review your pull request to make sure it"
+    },
+    {
+      "t": 593,
+      "text": "gets merged. um you know you can override that with or you can set that up with things like code owners and get that to work but if you don't have those things set up um then you know really"
+    },
+    {
+      "t": 604,
+      "text": "having this extra step of of doing the review before you get to the pull request I think helps >> yeah so um have you tested this like on simply just a personal project or using"
+    },
+    {
+      "t": 617,
+      "text": "this collaboration >> no this is just personal projects right now I'm definitely open to collaborations You know, again, this is open source."
+    },
+    {
+      "t": 625,
+      "text": "I'm open to, you know, talking to people or having people try it, but uh yeah, it's all strictly um yeah, it's all strictly at a very small level right now."
+    },
+    {
+      "t": 635,
+      "text": ">> And what what stage of development is it? Like are you finished? Are you what do you have what are you um looking to add?"
+    },
+    {
+      "t": 642,
+      "text": ">> Yeah, so the the core framework's there. You can you can you know npm install it and run it. Uh what I'm looking to add is a little bit more of line by line feedback for pull requests. And then I"
+    },
+    {
+      "t": 653,
+      "text": "also want to add a little bit more of a almost like a a centralized platform for pull requests because I think that's the other thing that people are seeing is that a lot of people are spending time"
+    },
+    {
+      "t": 664,
+      "text": "on code reviews and maybe tech leads are spending more time on code reviews."
+    },
+    {
+      "t": 671,
+      "text": "Junior developers are spending a little bit less time. But the thing is engineering managers really don't have any insight into who's doing what with code reviews. And whether that is a"
+    },
+    {
+      "t": 680,
+      "text": "separate product from GitHub or whether that's an add-on to something you could already do with GitHub, I'm not really sure, but I think that's probably the direction that that would go."
+    },
+    {
+      "t": 689,
+      "text": ">> Okay. Where uh where should listeners go first? Should they go to your GitHub? Go to do you have a docs page?"
+    },
+    {
+      "t": 695,
+      "text": ">> Sure. >> Yeah. Where do you want to look? Yeah, probably the best place to go is the docs web page which is at zapcircle.com and that'll link to the docs that I have written and it'll also link to the"
+    },
+    {
+      "t": 705,
+      "text": "GitHub repository. Yeah, so you know anybody that's working on things that are going to improve the software development life cycle with LLM, I'd be really happy to talk to you. Whether"
+    },
+    {
+      "t": 715,
+      "text": "it's something you're building on top of cloud code or something you're building on top of GitHub or something you're building on top of open AI. I think that there's a lot of different approaches. I"
+    },
+    {
+      "t": 725,
+      "text": "don't know what the best is and so I just want to talk to other people and see what they're doing."
+    },
+    {
+      "t": 729,
+      "text": ">> And where do they find me? >> Yeah, you can probably find me best at jeff lynwood.com or I'm Jeff Lynwood on LinkedIn or Twitter."
+    },
+    {
+      "t": 737,
+      "text": ">> All right. Well, be sure to follow on YouTube and follow me on XLP first."
+    },
+    {
+      "t": 743,
+      "text": "Jeff, it was so nice to speak with you. Pleasure to meet you and talk to you. >> Take care."
+    }
+  ],
+  "backfill": true
+}

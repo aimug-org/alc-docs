@@ -1,0 +1,198 @@
+{
+  "title": "10 24 2024 Austin LangChain Showcase Perplexity Clone",
+  "speakers": [],
+  "date": "2024-10-21",
+  "youtubeId": "slzOy2w-kVs",
+  "duration": 576,
+  "summary": "In this showcase, Saurabh demonstrates a clone of Perplexity, highlighting the capabilities of LangChain in creating powerful question-answering systems.",
+  "topics": [
+    "RAG"
+  ],
+  "transcript": [
+    {
+      "t": 3,
+      "text": "everyone can we hear Sor yes y okay cool why go ahead Sor show what you're doing okay cool so uh I'm going to just give a quick brief introduction about myself so I'm the co-founder of CR reporter we a"
+    },
+    {
+      "t": 18,
+      "text": "intelligence tool and we've been using laain to build entire St now being that being said jump into the perplexity FL so this is like a quick demo of what the"
+    },
+    {
+      "t": 31,
+      "text": "essentially looks like uh this is like with the front end and an API deployed with ler so I'll just quickly show you guys like a quick demo of how it works you know what are the things that you"
+    },
+    {
+      "t": 43,
+      "text": "can do with it so for example if I ask give me give me a run of the major developments open ai4 and I give it a minute so it will"
+    },
+    {
+      "t": 56,
+      "text": "basically go through the web search everything and be able to an answer so it it takes a bit longer than your regular perplexity but I think yeah given we trying to do this overlan at"
+    },
+    {
+      "t": 68,
+      "text": "minimum server capacity it does a pretty good job there so yeah so you will get real time API finding PR cash model"
+    },
+    {
+      "t": 80,
+      "text": "cation and these are top six things that you basically got through any so that that's a quick demo quickly jumping on to how and everyone this code is available on am.org you can run through"
+    },
+    {
+      "t": 93,
+      "text": "this in a repo go ahead Sally not so this is like the basic setup here so you can basically have uh you know this is something which I'll"
+    },
+    {
+      "t": 105,
+      "text": "skip for now you can go to the notebook but here is where the main of the matter right so the idea here is to basically start with a query generator which just to basically say that you give it a"
+    },
+    {
+      "t": 118,
+      "text": "query you then ask and to basically you know give you four or five different versions of the same quer from there you basically go to D search and you use search to basically search"
+    },
+    {
+      "t": 131,
+      "text": "for results across all of those three to four queres now the power of this tool is that I'm not using t or Ser a I'm using the proper Tu library to basically"
+    },
+    {
+      "t": 145,
+      "text": "get results and from there I'm basically having a web scraper that then goes through each of those results and web pages tries to generate summaries in context of the question that you ended"
+    },
+    {
+      "t": 156,
+      "text": "up asking and then finally uh compiling the generated summaries into a final result and then giving you the final answer right so if I set this up then"
+    },
+    {
+      "t": 168,
+      "text": "this is the U for T go this is like the T like basic gives you this asgs which use supp that just set up your so yeah overall State you have your search query"
+    },
+    {
+      "t": 182,
+      "text": "plus this is where you end up generating multiple queries then you have you search for those queries in the next node which is your search results node this is the weer modde where you then"
+    },
+    {
+      "t": 192,
+      "text": "end up going through each of these pages and basically downloading them once you have the content from each of these Pages you simply you simply end up using the same function from langra to"
+    },
+    {
+      "t": 206,
+      "text": "basically generate them so this is the generate sum which is which basically comes from continue to summary summarized not so you basically use the send function which goes into the"
+    },
+    {
+      "t": 216,
+      "text": "generate summary function and then you basically have your final answer so yeah this is what the graph looks like also I'm using the checkpoint like in memory checkpoint here which basically does a"
+    },
+    {
+      "t": 230,
+      "text": "very good job like just providing context if I say I want to create a quick you know quick start guide for landra you can then go ahead and just again just run this particular mode I"
+    },
+    {
+      "t": 241,
+      "text": "think there has been a particular change in the uh in laning in the laning library because of which you will now have to use import Nest IO n ASN IO to"
+    },
+    {
+      "t": 253,
+      "text": "basically run this particular step so and I make the same as well uh yeah and then you just have your output here and you can basically end up VI the result so this give you like a complete so we"
+    },
+    {
+      "t": 266,
+      "text": "ask for a start so it was able to to the you know completed get started with L and that is essentially what this does hope this was"
+    },
+    {
+      "t": 278,
+      "text": "helpful and people were able to follow and the experiment of successful prop awesome thank you so Rob and thanks everyone for working with us to deal with the remote remote connections"
+    },
+    {
+      "t": 288,
+      "text": "issues I'll ask that for questions we don't have a back microphone that's working well here I can re re relay them what questions do we have about sorup flexity clone project why why do go over"
+    },
+    {
+      "t": 300,
+      "text": "was it to or was the other one yeah so Jackson's asking why did you choose duck go over a Tav or others so U I think with Tav or you only get 200 and then"
+    },
+    {
+      "t": 316,
+      "text": "you have to start going on a boths you can basically use it for free as long as you do not uh limit uh and if you're basically just getting the top three or four searches uh and basically"
+    },
+    {
+      "t": 330,
+      "text": "know using that first mode we generating multiple multiple search queries and then getting two to three searches per search query basically getting a total of 10 search queries and you're still"
+    },
+    {
+      "t": 342,
+      "text": "getting the same in the so you can do this basically for free as compared to even in production as compared to doing it in for a service and you also get the advantage"
+    },
+    {
+      "t": 356,
+      "text": "of being a completely private uh search so yeah yes if I remember correctly from one of our office discussions I think comparison test on his I want to Echo back the question"
+    },
+    {
+      "t": 369,
+      "text": "that Rob asked so s Rob mentioned that on one of our office hours you had shown a sby side comparison of your perplexity notebook tool versus the perplexity out"
+    },
+    {
+      "t": 381,
+      "text": "Outlook uh the perplexity commercial project uh can you kind of summarize what your findings were for that sure so if we this was so on the 4th of"
+    },
+    {
+      "t": 394,
+      "text": "August is when I did this comparison and the date is very specific because the Olympics were basically going on at that time and uh I just wanted to you know get just understand what were India's"
+    },
+    {
+      "t": 408,
+      "text": "medal medal targets at that point of time and I searched it on the three version of flexity it gave me that India had Zer result zero medals in the Olympics at that point of time which was"
+    },
+    {
+      "t": 420,
+      "text": "uh incorrect India had like three medals at that point of time so uh you know and whereas when I ended up using the publicity clone that I ended up building uh that will give you the correct result"
+    },
+    {
+      "t": 432,
+      "text": "which is uh India High think so the difference was essentially if I use the the free version of perplexity a lot of times it will hallucinate because I'm guessing it's not really searching"
+    },
+    {
+      "t": 446,
+      "text": "through the web as deeply as you would wanted to which is again given that that it is for free it's probably not uh using the server or t for search and it's probably using like a free version"
+    },
+    {
+      "t": 459,
+      "text": "of something to do it uh but yeah if you if you use something like and you're able to search through the web you get all of these web pages you have much better but when you go to perity Pro I"
+    },
+    {
+      "t": 472,
+      "text": "think the results are very comparable between the perity that I just showed you versus what perity uh so thanks for sharing that what is next in your exploration of these"
+    },
+    {
+      "t": 485,
+      "text": "Technologies like you you've learned how to build a internet search agent you shared that it's in a repo it's on am am.org you can click down into October meeting there's a link to the notebook"
+    },
+    {
+      "t": 496,
+      "text": "Excel so you can run through it uh I think the one learning for us through this entire Journey has been you cannot look at all of these tools in isolation so like looking at just MRA and isol"
+    },
+    {
+      "t": 508,
+      "text": "just one framew that is going to solve all your problems combining it with existing software development knowledge and you know pairing landra and with it is a really powerful way of just"
+    },
+    {
+      "t": 520,
+      "text": "building system really fast really quick and able to get a that and I think the biggest you advantage that we feel is just being able to switch inm and switch modes very easily and just you know"
+    },
+    {
+      "t": 534,
+      "text": "chain them together and Nest them together is super easy when so y that's that's cool thank you so much S I appreciate your patience as we deal with getting our a systems figured out and"
+    },
+    {
+      "t": 547,
+      "text": "moving in this new home and I appreciate each and everyone of you for participating I'll ask you if you have a microphone in your hand or you have a a lab mic clipped on your clipped on your"
+    },
+    {
+      "t": 555,
+      "text": "shirt we can bring them back to that back the back back table there and let me see 2v2 Wednesdays from now we hanging out I think it's skinni if you want to gra beard to have a little hacky"
+    },
+    {
+      "t": 566,
+      "text": "hour hacking in the labs and thank you so much for showing up part of the community thank you"
+    }
+  ],
+  "backfill": true
+}

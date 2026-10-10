@@ -1,0 +1,627 @@
+{
+  "title": "10 24 2024 Austin LangChain Showcase Expert Panel",
+  "speakers": [],
+  "date": "2024-10-21",
+  "youtubeId": "Ufyi_dJimI8",
+  "duration": 1809,
+  "topics": [],
+  "transcript": [
+    {
+      "t": 3,
+      "text": "in the talk today some Notions of AI software development many of us here have been going down this road over the past few months here at Austin Lan chain I'd like to use uh this space"
+    },
+    {
+      "t": 15,
+      "text": "right now to kind of explore how each of you are seeing uh your software development methodologies change your viewpoints on how AI assisted coding maybe changing your world and the maybe bring it"
+    },
+    {
+      "t": 29,
+      "text": "into some autom testing debugging space if that is interesting and then project management a workflow maybe we can talk about the futures for the start let's kick it off Rob can you give just a like a"
+    },
+    {
+      "t": 41,
+      "text": "short brief about what you do what your focus is in each of you what you do what your focus is and you know what is your top of mind about this subject of aof development yeah cool so"
+    },
+    {
+      "t": 52,
+      "text": "Rob Kesler I would consider myself sort of a split brain I'm half Finance half Ai and Bic I'm trying to use Ai and everything in technology to basically reinvent the Wall Street Els which"
+    },
+    {
+      "t": 65,
+      "text": "is what I've been for a couple decades so I want to basically Adit my replacement before I retire and so in terms of using Ai and the development workflow itself which is sort of a meta concept"
+    },
+    {
+      "t": 79,
+      "text": "I guess in some respects I think of it like a new employee you know I've had small teams of developers and I've always found that uh the better that I scope task and explain what needs to"
+    },
+    {
+      "t": 91,
+      "text": "be done the the quicker I get back a solution that conforms to that expectation if I'm too fast and too varied how in my instructions for what I need from the team or what I'm expecting then I get"
+    },
+    {
+      "t": 104,
+      "text": "back out of a garbage answer and I find the same is often true with these l l tools and whatever we're using to co-pilot with get GitHub or whether it's U Claud Dev uh as long as I'm explicit about"
+    },
+    {
+      "t": 120,
+      "text": "good good respones and um so in some respects I think that's transferable going from the sort of human aspect to the virtual Jackson want you give a little a little background about where you're"
+    },
+    {
+      "t": 131,
+      "text": "coming from on this and your initial insights with these a tools yeah so like I said earlier I'm a software engineer full stack software developer and I mean when I feel like when chat gbt first"
+    },
+    {
+      "t": 144,
+      "text": "got launched it was kind of this like Revelation and you're just like oh okay this could help me probably twice as effective teally as any Google search Ever Could and that kind of just from there"
+    },
+    {
+      "t": 153,
+      "text": "just kept growing on top of itself obviously tools like GitHub co-pilot I think was another nice easy integration and an call De is kind of taking that up a notch so for me it's just about"
+    },
+    {
+      "t": 165,
+      "text": "efficiency gam uh and I kind of apply that to my personal life as well so anywhere I can you know just get an extra 30 seconds of my day back I feel like I try to use it for that um CLA Dev"
+    },
+    {
+      "t": 178,
+      "text": "is a good example even today where you know if you're doing something building something in to end maybe I just need to tweak a store procedure over here build out you know screen on the other"
+    },
+    {
+      "t": 188,
+      "text": "end of things hey why don't you just pass this task off over to Claud de let it handle the small mundane task that it needs to do then obviously you're seeing it on the other end of the spectrum"
+    },
+    {
+      "t": 199,
+      "text": "where you can get from point you know get to point a like you saw what cam was doing with the Google interfaces very quickly so like I don't think it's it's I think it's also going to rep low"
+    },
+    {
+      "t": 210,
+      "text": "code Solutions that's things that we talked about too where going from drag and drop Solutions being able to replace those with legitimate code and see that code and then being able to modify to what"
+    },
+    {
+      "t": 219,
+      "text": "you need so I think there's a lot of possibilities are endless and I think you know there's the short term there's the intermediate term there long term and I don't feel like I can confidently forecast"
+    },
+    {
+      "t": 228,
+      "text": "anything after the end of 2024 so just kind of a long for the ride at this point I feel Brian what about you yeah so over the past eight years have been running an internal application web hosted"
+    },
+    {
+      "t": 242,
+      "text": "application enables our sales team marketing team non-technical people to to better demo and and demonstrate our product to our customers without having to manage it on the open system or anything"
+    },
+    {
+      "t": 254,
+      "text": "like that so we've had a very small group of team or a small team there's four of us one technical lead the rest are developers um we all wear multiple hats we should be a team of at least"
+    },
+    {
+      "t": 265,
+      "text": "10 Engineers um but we're not and so we've with that we've always had to work very efficiently try out the methodologies Plug and Play different styles of doing stuff be as efficient as we can"
+    },
+    {
+      "t": 278,
+      "text": "with all of our with all of our meetings our time things like that planning everybody wears multiple hats comes in does does what needs to be done and so from a software development"
+    },
+    {
+      "t": 289,
+      "text": "standpoint that's usually where I'm coming from is as a full stack engineer having to figure out how fix problems across multiple Technologies so that's actually a great segue into fixing"
+    },
+    {
+      "t": 300,
+      "text": "problems against across multiple Technologies um and generating cross multiple Technologies uh I think in an earlier presentation we we saw mention that you know qu Dev to in this case one AI a tool"
+    },
+    {
+      "t": 314,
+      "text": "to generate a half together nice little frontend interface where in your experience or in your Viewpoint are you seeing your your AI whether an a accelerated IDE Plugin or an exra component um"
+    },
+    {
+      "t": 329,
+      "text": "where are you seeing that fitting your workflow like expanding the workflow of what you're able to Cod for me two things seem to define the success if I to summarize it for for what I've"
+    },
+    {
+      "t": 340,
+      "text": "seen one is the brain uh so what it's been trained on and best I can tell you know CL son 35 the more mainstream the the code that you're using the better chance is it kind of understands without"
+    },
+    {
+      "t": 353,
+      "text": "having to feed a whole lot of specificity so an example something like gooey B re very big Com or or your base Library python you know it's going to know what you're talking about pretty easy the"
+    },
+    {
+      "t": 366,
+      "text": "further I get into Nuance code or vend specific implementations of things the more it's going to start getting stuck in Loops just because it doesn't understand the context and I'm going"
+    },
+    {
+      "t": 375,
+      "text": "to have to almost pretty much do it myself at the end of the day and I I find myself having to check myself on that because sometimes I'll get lazy I'm like oh this is something I don't want to have to"
+    },
+    {
+      "t": 386,
+      "text": "look up because it's so you know new that I don't care to remember it I want to rely on this AI that s that for that's exactly the kind of thing I want to use it for right and so I just lazily throw it"
+    },
+    {
+      "t": 397,
+      "text": "in there and it doesn't work and I try to force it to do it again and then finally I learn what it's doing and I go through line by line I'm like oh it's stuck in a stupid Loop because it really"
+    },
+    {
+      "t": 407,
+      "text": "doesn't understand the syntax here got to go to the docks look it up the old school way right so the brain right what does the brain know what has it been trained on the other thing that for"
+    },
+    {
+      "t": 417,
+      "text": "me defines success is the cont so if you've got a big code repository first of all it's good to break it down into modularized smaller files that's generally in most implementation code"
+    },
+    {
+      "t": 430,
+      "text": "practice anyway right but even then you might have a large code base that's pretty heavily nested in file structures and with that I find it's not natively the best of being able to transverse that"
+    },
+    {
+      "t": 445,
+      "text": "now a colleague of ours Baskin has has uh Tak in that space and uh designed a little addend where we can basically with every prompt on the back end give C Dev a little bit of understanding of"
+    },
+    {
+      "t": 458,
+      "text": "the overall structure of the project both what you're trying to accomplish and where to find things I think that's that's a great sort of add in so kudos to asking for doing that and then in"
+    },
+    {
+      "t": 469,
+      "text": "addition the native claw Dev capability you can do a little at symbol and like specifically reference files so for today for example I knew I had a pretty complicated structure and I didn't to go"
+    },
+    {
+      "t": 480,
+      "text": "off on tangent modify a bunch of different files I knew exactly which four or five files I wanted to work with they were in different folders and I said use this file for this context I want you to"
+    },
+    {
+      "t": 490,
+      "text": "consider this that and that and it gets done in the first problem so a few extra minutes making sure I point out exactly what context I wanted to use understand where the brain has been trained"
+    },
+    {
+      "t": 501,
+      "text": "and I think for me those are the two key I mean just back to just where TR to get small efficiency games so I'm working at larger code bases like CL de can get hung up on some things it's kind"
+    },
+    {
+      "t": 511,
+      "text": "of harder to get it to do exactly what you want if you're pretty far along in a project some of the business logic is pretty pretty deep it doesn't do great at handling those things so I think and"
+    },
+    {
+      "t": 521,
+      "text": "and and honestly I can program that out quicker than I could figure out how to prompt get to do the thing I want to do anyways but then there's certain things where today I had like a wear clo"
+    },
+    {
+      "t": 531,
+      "text": "that wasn't that complicated it was like multi Lev something that more or less I just didn't want to have to think through so I just let it do that thing grab a cup of coffee on back here"
+    },
+    {
+      "t": 540,
+      "text": "it is and so there's small things like that and part of it is this I think laziness of having to get super verose about what it is that I want it to touch what I want it to do and and and at that"
+    },
+    {
+      "t": 552,
+      "text": "point it's kind of the yeah I might as well just ride it at this point so I do think it's going to get to a point and maybe it's by the end of the year maybe it's by end of the next year but"
+    },
+    {
+      "t": 561,
+      "text": "I think it's right there where you don't have to say too much so that's so I'll go a little bit different direction one of the one of the first more powerful use cases that I ran into"
+    },
+    {
+      "t": 571,
+      "text": "um was more by accident than anything U me and my team were sitting through doing a planning session for a feature of our scrub and we were going back and forth like you normally do on hashing out if"
+    },
+    {
+      "t": 584,
+      "text": "it would be better to write a Linux um D for the feature we were build in or would would a script be better to handle what we were doing there was a lot of back and forth no clear answers and my team"
+    },
+    {
+      "t": 597,
+      "text": "lead he gets all the credit on this didn't think of it he just pulled up chat GTP and this was this was about a year ago so he he pulled up chat GTP and basically asked hey how do I write a Damon to"
+    },
+    {
+      "t": 609,
+      "text": "blah blah blah blah blah blah blah and it spit out a set of code to write a Damon he was like okay then he turned around said how do I write a script to do the exact same thing and it spit out"
+    },
+    {
+      "t": 617,
+      "text": "a script and instantly everybody in the meeting can all look at the script you can all look at the code on the screen and instantly know what's more complex what are we looking at what are we facing"
+    },
+    {
+      "t": 629,
+      "text": "and then it accelerated the conversation into if we go the D route we didn't consider this this this and this but the code pointed it out we didn't need the code to write anything for us we"
+    },
+    {
+      "t": 640,
+      "text": "didn't need it to work it was just pseudo code and it got everybody on the same page instantly we all came out of that one pretty shocked with what just happened but then that instantly got"
+    },
+    {
+      "t": 651,
+      "text": "integrated into all of our meetings all of our planning sessions all of our scrums when we have to sit down and we have to either design something or figure something out let that do the the heavy"
+    },
+    {
+      "t": 662,
+      "text": "lifting let it do 80% of the work spit it out dump it in the jur ticket and move on and then we can write on top of that and it it accelerated a lot of our planning work by doing that you know"
+    },
+    {
+      "t": 672,
+      "text": "that's really interesting they bring up the the acceleration of the AI agent as a as a third or fourth team member to be able to um rapidly iterate and visualize on the structure something"
+    },
+    {
+      "t": 683,
+      "text": "might might be expanding on that you know kind of The Next Step past that is like automated testing of the right and and kind of getting that feedback that feedback from that cycle let me see"
+    },
+    {
+      "t": 694,
+      "text": "can you in start with Ryan on this you've kind of gone over this a little bit but can you share either some time some some some examples of how how um automating that feedback loop and that"
+    },
+    {
+      "t": 709,
+      "text": "that feedback cycle for debugging either within a ID plume like clad Dev or externally your code where you see that adding value in any place you see the value so far yeah it's a good question I"
+    },
+    {
+      "t": 720,
+      "text": "I think when you can have the agents who can actually analyze what type of output you're getting and be able to react to it or turn around and make additional steps to correct what's wrong"
+    },
+    {
+      "t": 731,
+      "text": "we we already see that with with these with these flows and with these agent interactions and and so if you can have a developer who can actually write the code it can even be an agent write the"
+    },
+    {
+      "t": 743,
+      "text": "code write the test and then have a test agent who actually executes the test and sends feedb back back um that can also be done within the pr process when when code gets checked in and"
+    },
+    {
+      "t": 754,
+      "text": "PR gets pushed for review you can take and have an AI agent or in inside the workflow review and say okay if if you were to write this code what test would you write with it have it double check"
+    },
+    {
+      "t": 769,
+      "text": "and it's picking up all the use cases of the code is it pinpoint enough for unit test integration test end test whatever and so adding that in there gives an extra layer of just visibility into are"
+    },
+    {
+      "t": 782,
+      "text": "we doing this the right way but then also going further into allowing the agents and the AI to do that stuff for you so if one of them can say yes you need to do these four things the next one can"
+    },
+    {
+      "t": 793,
+      "text": "actually pick it up and attempt execute to make it happen and then provide a feedback loop back and forth through the chain to do that possible yeah so I I've used it the old school way just for"
+    },
+    {
+      "t": 804,
+      "text": "hey here's a method go ahead write like an xior unit type unit test for for given method but I haven't done anything too extensive when it comes to testing I do think that there's other ways like"
+    },
+    {
+      "t": 814,
+      "text": "you mentioned um using as like a separate team member we're on some super small teams where I work so there's sometimes you get not the best requirements not the best documentation whatever"
+    },
+    {
+      "t": 824,
+      "text": "it is so this is another way to continue with that I think being able to save yourself time through writing mundane unit tests and then also on the back end be able to have it create"
+    },
+    {
+      "t": 835,
+      "text": "documentation and stuff like that I think there's plenty of space all around project that you could go ahead and you know build out fully flesh team if you don't really have BR I hav't de extensively"
+    },
+    {
+      "t": 847,
+      "text": "in using documentation testing part of it's a trust issue and that need me to get over that hurdle some of it is depending on the project I'm working on some of my internal stuff documentation"
+    },
+    {
+      "t": 857,
+      "text": "is source and stuff for clients I'm very focused on the documentation and I don't get pass that but that's just okay and last round I will definitely open up to the audience so the combination where"
+    },
+    {
+      "t": 872,
+      "text": "do you see uh let's explore how Ai and AI software devel interaction with the project management side right so creting tickets creting PRS coming into the existing workflow Brian tested on"
+    },
+    {
+      "t": 884,
+      "text": "the integration of Agents into like pipelines do you see other areas with your experience with your exploration into these AI tools are you starting to see opportunities for this to fit into kind"
+    },
+    {
+      "t": 899,
+      "text": "of the the non-functional requirements of of a day-to-day developer I was going to say absolutely yes kind of the the first story that I told um I think that's a that's a a key Point um the"
+    },
+    {
+      "t": 910,
+      "text": "everything that happened in the planning was all of PM Style function and so I I think you you have this gap between engineering teams and product teams and a lot of times it seems like product"
+    },
+    {
+      "t": 923,
+      "text": "team is just writing something and throwing it over the fence and saying good luck but where can they add value the product teams can't necessarily sit down and write a ton of code so if they can"
+    },
+    {
+      "t": 932,
+      "text": "leverage Ai and they can Le leverage agents and workflows to build up either like a simple proof concept or even build out pseudo code that can help showcase for the engineers what they need to"
+    },
+    {
+      "t": 946,
+      "text": "make it clearer or even a starting point better than you know a bullet point and as a as an end user I want to be able to R you know that type of stuff and so I really think it adds a lot of value"
+    },
+    {
+      "t": 957,
+      "text": "there and the PMs can actually get a good starting point started for the engineers that allows them to move a lot faster and a lot more accurate yeah I think I col we talked about v.d that was like a"
+    },
+    {
+      "t": 970,
+      "text": "good example of that where sometimes you're forced to just come up with UI on your own and I'm not somebody that's really good at just brainstorming where things should sit on a screen uh so if you"
+    },
+    {
+      "t": 980,
+      "text": "leave it to me it probably doesn't come out the best looking thing but having a good starting point like something like d. Dev that gives you UI up at a minimum in some ideas uh that you can"
+    },
+    {
+      "t": 991,
+      "text": "work off of and then sometimes it it's trying to figure out how to architect a solution figuring out the best way to go about something it can be small like you know maybe s get package going back"
+    },
+    {
+      "t": 1003,
+      "text": "to our net conversation earlier so it's like why would I want to use one thing versus another and being able to have something that you could ask questions off of and have more of a conversation"
+    },
+    {
+      "t": 1010,
+      "text": "versus perusing the Microsoft docs which probably ends up inevitable at some point or another but prefer to skirt that if I can and and so I think there's plenty of space too around and I think our"
+    },
+    {
+      "t": 1022,
+      "text": "my company can in particularly do it a lot better but finding ways to just automate some of these things that whether it's handling of tickets building requirements Gathering requirements"
+    },
+    {
+      "t": 1034,
+      "text": "documentation I think all that stuff could be heavily automated in a lot of ways and and even doing stuff like what C and I were working on building those types of components into that"
+    },
+    {
+      "t": 1043,
+      "text": "workflow so rfps I mean it really goes all the way up the ladder FR sa over here out in the car not too long ago where if you this is getting a little little ahead of things but if you walk"
+    },
+    {
+      "t": 1056,
+      "text": "claw Dev 10 steps down the road what is that going to really look like and you know if this thing's already coding things out for you like where is the developer sit and it sounded like you know"
+    },
+    {
+      "t": 1067,
+      "text": "you kind of made a joke like what are you going to be doing and it's like well it might be the other question where it's like you have to be just technical enough to know what questions to ask it"
+    },
+    {
+      "t": 1075,
+      "text": "where you're going to sit in the middle of things so there's a lot of workflow things that I think over the next two years you're going to really not really sure where they're going to need honestly"
+    },
+    {
+      "t": 1082,
+      "text": "but that's kind of at least inevitable aw yeah I I think it's huge on the front end I mean all the planning stage um concept selection ideation uh a lot of my projects I want to take all the"
+    },
+    {
+      "t": 1097,
+      "text": "stuff that is not really proprietary I want to use the most mainstream well supported solution possible and what better way to do that than the quer the AI that use to offload CL Dev right so"
+    },
+    {
+      "t": 1110,
+      "text": "if I can ask you some early prototyping questions and it seemed like you can pretty quickly mock up a solution but looks very logical well supported not too cumbersome convoluted okay that might be"
+    },
+    {
+      "t": 1123,
+      "text": "the same concept to run with and it's real rapid lot a lot faster than than I've done in the past with humans right we okay who's going to for the next you know couple days you're going to"
+    },
+    {
+      "t": 1133,
+      "text": "look into this you're going to look into that let's reconvene and see you know where we this now it's like a matter of 15 minutes CH and so one of the one of the things I'm kicking around and I"
+    },
+    {
+      "t": 1146,
+      "text": "got ideas about from last month goes into this and I I see this this futuristic view so we saw last month where we could take audio transcripts and we can pull out key components of it um measure"
+    },
+    {
+      "t": 1158,
+      "text": "what what we key conversations what we key topics things like that so you take that one step further if if you're looking at building a product or a feature or whatever it is you're taking take your"
+    },
+    {
+      "t": 1167,
+      "text": "app in a different direction you pull all the great lines into one room and everybody starts hashing it out and the problem is is we get this very flat very condensed notes or transcript of"
+    },
+    {
+      "t": 1178,
+      "text": "the meeting that that everybody has to take action out of and what H actually happens in the meetings is people actually go through architectural walkthroughs they they discuss what's happening"
+    },
+    {
+      "t": 1189,
+      "text": "they discuss how we build this and even sometimes it goes further where there's conflict and there's three or four different approaches to take so if we can take get to the point where we can take the"
+    },
+    {
+      "t": 1200,
+      "text": "audio transcript translate it and filter it down into a code generation tool by the time everybody walks out of that meeting and gets back to their desk there's three AI mockup tools with all the"
+    },
+    {
+      "t": 1212,
+      "text": "different discussions happening that shows the different approaches that can be measurable you can actually hit click a button and see output and see what works what doesn't and so be able to"
+    },
+    {
+      "t": 1222,
+      "text": "take what we're talking about and have it actually build it for us while we're going I think that's technology is there now now to shift it straight to production I don't think so but if we can get"
+    },
+    {
+      "t": 1234,
+      "text": "50% of the way there now that's way better than we were before you know 50% 50% of the way there Rings true to me um especially in the spirit of learning open showing half AOK stuff to each other"
+    },
+    {
+      "t": 1245,
+      "text": "I'd like to open up to questions from the audience uh questions comments what questions you have to the panel what would you need to see I honestly don't know that I distrusted I work I think I"
+    },
+    {
+      "t": 1255,
+      "text": "think what I would need to do is take some stuff that I've delivered to a client run it through the AI version and kind of compare and just make sure because I don't want to I don't want to"
+    },
+    {
+      "t": 1264,
+      "text": "release the RS on something that I haven't fully checked myself I guess when I think about what I've delivered to clients I do a lot of I mean I'll test test it through a couple times a minut"
+    },
+    {
+      "t": 1274,
+      "text": "so I document that I'm going to walk through the documentation and do a full full run through at least a couple times and if I catch one thing I'm redoing the whole run through and just to double"
+    },
+    {
+      "t": 1284,
+      "text": "check and it's sort of a paranoia thing because I don't want if my client to waste time on any one thing he's the guy or that didn't build it could take them way more time than would me find that so"
+    },
+    {
+      "t": 1296,
+      "text": "it's a it's a Balan thing and I guess you know as I'm speaking out loud about this all this sounds like an agend workflow I me you can have multiple grading layers and testing layers buil into this"
+    },
+    {
+      "t": 1307,
+      "text": "so there's no reason it's not possible most of my client these range from large institutional investors to small businesses with you know hand people try to where the owner just wants to get"
+    },
+    {
+      "t": 1321,
+      "text": "a workflow wait way too few hours to work with and way too much to do it's like how can I use Ai and Sol this so going into combination traditional and and AI tools you know try to make it as off as"
+    },
+    {
+      "t": 1336,
+      "text": "possible so when I get asked that question I came from Network automation Network infrastructure automation and for the past 10 years I've been bombarded with that question and then falling"
+    },
+    {
+      "t": 1352,
+      "text": "into the AI space you know I hear that question a lot is when do you trust the AI to do something that you don't review and my response is always thrown back on the person to tell me when they"
+    },
+    {
+      "t": 1366,
+      "text": "trust their team to be able to do that without me reviewing and when you can trust your team to deliver something without it having to be fully reviewed by you as a manager or whatever those"
+    },
+    {
+      "t": 1378,
+      "text": "should be the exact same workflows and the exact same testing validation steps that an AI takes I I don't necessarily think the AI should be treated any different than you would a human team member"
+    },
+    {
+      "t": 1389,
+      "text": "at what point do you trust it and when you can put qualitative numbers to that for both humans and AI that also allows you to measure who can do it better but until then it is a guessing game and"
+    },
+    {
+      "t": 1400,
+      "text": "you have to trust build some trust some way and it's up to you that's usually how I answer that one I was could could your to know what kind of you use and integration tool I tend to prefer I"
+    },
+    {
+      "t": 1413,
+      "text": "charm and PHP storm but when it comes to using Gile the code integration is much better and so I end up using like going back and forth between two idas what kind of you use and as the use of AI"
+    },
+    {
+      "t": 1425,
+      "text": "change which ID use or which tools use with like between the like the AI and I use Visual Studio code in CL de that's a nice little added native to that so what multitude the last C years on EX the"
+    },
+    {
+      "t": 1441,
+      "text": "cloud yeah I was pretty much exclusively V code I would try get things out just for fun I did do like any the jet brins ID so I really liked Rider during you know different spouse. net development"
+    },
+    {
+      "t": 1454,
+      "text": "but and then Pon diving into Lang chain and everything else but now with Claud de like kind of default FS code so yeah it's definitely changed because of that and I think Jeet has their own AI"
+    },
+    {
+      "t": 1466,
+      "text": "coding system as good as I've been hardcore pie charm idea user for the better part of a decade I use it quite in depth um I have found to answer your question the the AI movement has shifted be"
+    },
+    {
+      "t": 1484,
+      "text": "over to give um vs code more of a chance to see how it is um I feel in my opinion the jet brain High charm has not it's more clunky to work with it's not as intuitive it's not built into the"
+    },
+    {
+      "t": 1499,
+      "text": "workflows like it should be and I see that that is better handled by the vs code team and then you have tools like claw Dev that everybody keeps talking about that's vs code only that that makes"
+    },
+    {
+      "t": 1510,
+      "text": "a big difference there um I do use co-pilot um the GitHub co-pilot a paid subcription on P chart and I would say half the time I'm developing um I have turned off mostly because of the"
+    },
+    {
+      "t": 1522,
+      "text": "the auto completion functionality gets annoying especially when I'm editing code but when I'm WR code I let it run loose um so that's kind of my experience with it something that's kind"
+    },
+    {
+      "t": 1533,
+      "text": "of interesting though because you mentioned earlier about you know almost want to just use most popular Frameworks and languages and everything just so it's familiar with those I I"
+    },
+    {
+      "t": 1542,
+      "text": "have started to wonder if we just kind of Converge All the Same handful of tools no matter yeah we just keep going down the same routes because you know why use anything else if this is where all"
+    },
+    {
+      "t": 1550,
+      "text": "the tools are this is where all the people are is the best yeah I think there's some stats around how the uh the human generated you know content debugging and stuff online dropped off so J so"
+    },
+    {
+      "t": 1563,
+      "text": "it's sort of a reinforcement okay thanks thanks guys I was thinking about the problem I think Jackson were saying about having to be super ver Bose or maybe you're talking about as well Rob"
+    },
+    {
+      "t": 1577,
+      "text": "but when you're extra explicit it should lead to better outcomes um I definitely went through this experience I think col and I were talking about last week where I wanted to get it right on the"
+    },
+    {
+      "t": 1589,
+      "text": "first prom so I took extra time I actually said listen I have a problem this is like the first thing I wrote in the context like I have this issue do not start coding it right so here let"
+    },
+    {
+      "t": 1602,
+      "text": "me describe it first and then ended it with do you understand so far and I think I was working with flaw through the chat so my question is are there tactics like you know don't start until I say so"
+    },
+    {
+      "t": 1616,
+      "text": "here's four different promps with four different file attachments so you get the full story before you click go to get to increase your chances of getting that like first prompt response to be"
+    },
+    {
+      "t": 1626,
+      "text": "perfect um and then sort of tacked onto that idea or question is has anyone experienced like instead of having to explain all the things it might need to know saying ask me what you think you need to"
+    },
+    {
+      "t": 1640,
+      "text": "know cuz maybe that might be less for where you can just be like yep no yep you decide okay now go I know that wasn't question as some ideas I guess it's how do you it's the engineering"
+    },
+    {
+      "t": 1652,
+      "text": "question I suppose myself I found the best success by breaking that up um I'm not attempting to get it right the first first time so when when I'm building out a workflow or the workflows that I've"
+    },
+    {
+      "t": 1663,
+      "text": "built out for code development um I broken it down just like a software engineering team so going back to my point treat them treat them like human employees as well so you have multiple agents you"
+    },
+    {
+      "t": 1674,
+      "text": "you have a planner agent you have a PM agent you have a software veler agent you have tester agent Dev agent whatever and when the initial question comes in when you ask your initial question the"
+    },
+    {
+      "t": 1686,
+      "text": "the planner agent takes it and breaks it down into chunks and this is how we want to organize it this is how we want to break it down has the the developer actually put some code together if"
+    },
+    {
+      "t": 1696,
+      "text": "it doesn't work or they can't put it together that way Circle back up to the PM and say yeah we can't do that give me another option and so instead of taking a one shot approach you break"
+    },
+    {
+      "t": 1706,
+      "text": "it down into a work flow that allows it to repeat itself until it finds the right Solution that's how I approach them I I use to call well there's a website cursor. directory which is just a list"
+    },
+    {
+      "t": 1719,
+      "text": "of like pretext contexts and it'll be like you are an expert level engineered FR you know VI and nextjs and whatever and I that and then I write my context and if there are technologies that I'm"
+    },
+    {
+      "t": 1733,
+      "text": "using that aren't there I'll go like find python one and go into gbt this context but I wanted with other technology rewrite it for me and then I have another one and I P that in and um I have"
+    },
+    {
+      "t": 1745,
+      "text": "so is that a question I have seen people tell the prompt to like ask questions and um like obtain consensus before moving on I don't do that as much but like it's a good question ask do that another"
+    },
+    {
+      "t": 1760,
+      "text": "thing to to point in one specific response is to actually give it positive and negative examples examples actually help AI engines a lot or llms so that's a good way to go about it problem is is"
+    },
+    {
+      "t": 1774,
+      "text": "if you're talking more complex stuff like larger bits of code you know you can start you need to start getting considerate of your context window so I I want to keep this conversation going I do"
+    },
+    {
+      "t": 1784,
+      "text": "want to make sure we can get Sor on and show his perplexity clone I want to thank each and every one of you for for sharing your insights for sharing your knowledge and Contin the conversation"
+    },
+    {
+      "t": 1795,
+      "text": "yeah he's on Discord I'm going to try to get him in and and uh this is a grand experiment here so bear with us thank you so much for showing up and be part of the community thank you"
+    }
+  ],
+  "backfill": true
+}

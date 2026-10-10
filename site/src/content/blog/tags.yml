@@ -1,0 +1,394 @@
+facebook:
+  label: Facebook
+  permalink: /facebook
+  description: Facebook tag description
+
+hello:
+  label: Hello
+  permalink: /hello
+  description: Hello tag description
+
+docusaurus:
+  label: Docusaurus
+  permalink: /docusaurus
+  description: Docusaurus tag description
+
+hola:
+  label: Hola
+  permalink: /hola
+  description: Hola tag description
+
+event:
+  label: Event
+  permalink: /event
+  description: Posts related to Austin LangChain AI Group events
+
+meetup:
+  label: Meetup
+  permalink: /meetup
+  description: Information about our meetups and gatherings
+
+langchain:
+  label: LangChain
+  permalink: /langchain
+  description: Topics related to LangChain and its applications in AI
+
+mlops:
+  label: MLOps
+  permalink: /mlops
+  description: Topics related to Machine Learning Operations
+
+community:
+  label: Community
+  permalink: /community
+  description: Posts related to our AI community and events
+
+recap:
+  label: Recap
+  permalink: /recap
+  description: Summary and highlights from past events and meetings
+
+ai-development:
+  label: AI Development
+  permalink: /ai-development
+  description: Topics related to artificial intelligence development and implementation
+
+local-models:
+  label: Local Models
+  permalink: /local-models
+  description: Content about running and implementing AI models locally
+
+ai:
+  label: AI
+  permalink: /ai
+  description: Topics related to artificial intelligence and machine learning
+
+workflows:
+  label: Workflows
+  permalink: /workflows
+  description: Topics related to AI workflows and process automation
+
+models:
+  label: Models
+  permalink: /models
+  description: Content about AI models, their development, and implementation
+
+tools:
+  label: Tools
+  permalink: /tools
+  description: Information about AI tools, utilities, and development resources
+
+openwebui:
+  label: Open Web UI
+  permalink: /openwebui
+  description: Topics related to Open Web UI platform and its applications
+
+local-llm:
+  label: Local LLM
+  permalink: /local-llm
+  description: Topics related to running and implementing Large Language Models locally
+
+text-to-video:
+  label: Text to Video
+  permalink: /text-to-video
+  description: Content about AI-powered text to video generation and related technologies
+
+3d-modeling:
+  label: 3D Modeling
+  permalink: /3d-modeling
+  description: Topics related to AI-assisted 3D modeling and asset generation
+
+mcp:
+  label: MCP
+  permalink: /mcp
+  description: Content about Model Context Protocol and its implementations
+
+sxsw:
+  label: SXSW
+  permalink: /sxsw
+  description: Posts related to SXSW events and activities
+
+community-call:
+  label: Community Call
+  permalink: /community-call
+  description: Updates and recaps from community calls and discussions
+
+showcase:
+  label: Showcase
+  permalink: /showcase
+  description: Highlights and demonstrations of AI projects and achievements
+
+ai-workflows:
+  label: AI Workflows
+  permalink: /ai-workflows
+  description: Content about AI workflow design, implementation, and optimization
+
+ag-ui:
+  label: AG-UI
+  permalink: /ag-ui
+  description: Agent-User Interaction Protocol and related technologies
+
+protocol:
+  label: Protocol
+  permalink: /protocol
+  description: Communication protocols and standards in AI systems
+
+human-ai-collaboration:
+  label: Human-AI Collaboration
+  permalink: /human-ai-collaboration
+  description: Topics about collaborative interaction between humans and AI systems
+
+real-time:
+  label: Real-time
+  permalink: /real-time
+  description: Real-time AI applications and live interaction systems
+
+agents:
+  label: Agents
+  permalink: /agents
+  description: AI agents, multi-agent systems, and agent-based architectures
+
+standards:
+  label: Standards
+  permalink: /standards
+  description: Industry standards and best practices in AI development
+
+interoperability:
+  label: Interoperability
+  permalink: /interoperability
+  description: System integration and cross-platform compatibility in AI
+
+specialized-ai:
+  label: Specialized AI
+  permalink: /specialized-ai
+  description: Domain-specific AI applications and specialized use cases
+
+nuclear-regulatory:
+  label: Nuclear Regulatory
+  permalink: /nuclear-regulatory
+  description: AI applications in nuclear regulatory compliance and safety
+
+testing:
+  label: Testing
+  permalink: /testing
+  description: AI testing methodologies, validation, and quality assurance
+
+compliance:
+  label: Compliance
+  permalink: /compliance
+  description: Regulatory compliance and governance in AI systems
+
+domain-specific:
+  label: Domain-Specific
+  permalink: /domain-specific
+  description: Industry-specific AI applications and solutions
+
+applications:
+  label: Applications
+  permalink: /applications
+  description: Practical AI applications and real-world implementations
+
+interrupt-conference:
+  label: Interrupt Conference
+  permalink: /interrupt-conference
+  description: Content related to the Interrupt Conference and enterprise AI insights
+
+enterprise-ai:
+  label: Enterprise AI
+  permalink: /enterprise-ai
+  description: Enterprise-grade AI solutions and deployment strategies
+
+deployment:
+  label: Deployment
+  permalink: /deployment
+  description: AI system deployment, production, and scaling strategies
+
+evaluation:
+  label: Evaluation
+  permalink: /evaluation
+  description: AI model evaluation, testing, and performance assessment
+
+observability:
+  label: Observability
+  permalink: /observability
+  description: AI system monitoring, logging, and observability practices
+
+security:
+  label: Security
+  permalink: /security
+  description: Cybersecurity, blue/red team operations, and threat defense systems
+
+iclr:
+  label: ICLR
+  permalink: /iclr
+  description: International Conference on Learning Representations proceedings and insights
+
+self-improvement:
+  label: Self-Improvement
+  permalink: /self-improvement
+  description: Systems that can autonomously improve through self-critique and iteration
+
+agentic-ai:
+  label: Agentic AI
+  permalink: /agentic-ai
+  description: Autonomous AI agents and multi-agent systems
+
+blue-team:
+  label: Blue Team
+  permalink: /blue-team
+  description: Defensive cybersecurity, threat detection, and incident response
+
+red-team:
+  label: Red Team
+  permalink: /red-team
+  description: Offensive security, penetration testing, and exploitation techniques
+
+cloudflare:
+  label: Cloudflare
+  permalink: /cloudflare
+  description: Edge computing, Cloudflare Workers, and global edge infrastructure
+
+production:
+  label: Production
+  permalink: /production
+  description: Production AI systems and enterprise deployment
+
+ai-ecosystem:
+  label: AI Ecosystem
+  permalink: /ai-ecosystem
+  description: The broader AI development ecosystem and industry landscape
+
+milestone:
+  label: Milestone
+  permalink: /milestone
+  description: Significant achievements and milestones in AI development
+
+2025:
+  label: "2025"
+  permalink: /2025
+  description: AI developments and trends in 2025
+
+development-landscape:
+  label: Development Landscape
+  permalink: /development-landscape
+  description: The evolving landscape of AI development tools and practices
+
+future-trends:
+  label: Future Trends
+  permalink: /future-trends
+  description: Emerging trends and future directions in AI technology
+
+frameworks:
+  label: Frameworks
+  permalink: /frameworks
+  description: AI development frameworks and platforms
+
+google-io:
+  label: Google I/O
+  permalink: /google-io
+  description: Content related to Google I/O and Google's AI announcements
+
+enterprise:
+  label: Enterprise
+  permalink: /enterprise
+  description: Enterprise-level solutions and implementations
+
+development:
+  label: Development
+  permalink: /development
+  description: Development practices and methodologies
+
+independence:
+  label: Independence
+  permalink: /independence
+  description: Independence Day celebrations and related community events
+
+founding-members:
+  label: Founding Members
+  permalink: /founding-members
+  description: Recognition and content related to AIMUG founding members
+
+austin:
+  label: Austin
+  permalink: /austin
+  description: Austin-specific content and local community events
+
+membership:
+  label: Membership
+  permalink: /membership
+  description: AIMUG membership programs and benefits
+
+langgraph:
+  label: LangGraph
+  permalink: /langgraph
+  description: Topics related to LangGraph framework for building stateful applications
+
+claude:
+  label: Claude
+  permalink: /claude
+  description: Content about Claude AI and Anthropic's tools
+
+video:
+  label: Video
+  permalink: /video
+  description: Video recordings and replays of events
+
+middleware:
+  label: Middleware
+  permalink: /middleware
+  description: Middleware patterns and architectures in AI systems
+
+a2a:
+  label: A2A
+  permalink: /a2a
+  description: Agent-to-Agent communication protocol and agent discovery
+
+ap2:
+  label: AP2
+  permalink: /ap2
+  description: Agent Payment Protocol for automated transactions
+
+cancer-research:
+  label: Cancer Research
+  permalink: /cancer-research
+  description: AI applications in cancer detection and medical research
+
+inference:
+  label: Inference
+  permalink: /inference
+  description: LLM inference optimization and deployment strategies
+
+vllm:
+  label: VLLM
+  permalink: /vllm
+  description: VLLM inference provider for production deployments
+
+ollama:
+  label: Ollama
+  permalink: /ollama
+  description: Ollama local LLM deployment platform
+
+transformers:
+  label: Transformers
+  permalink: /transformers
+  description: Hugging Face Transformers and model implementations
+
+marketplace:
+  label: Marketplace
+  permalink: /marketplace
+  description: Agent marketplaces, service discovery, and autonomous commerce platforms
+
+deep-agents:
+  label: Deep Agents
+  permalink: /deep-agents
+  description: Deep Agents framework for complex multi-step AI tasks with planning and delegation
+
+rag:
+  label: RAG
+  permalink: /rag
+  description: Retrieval-Augmented Generation systems and enterprise implementations
+
+project-management:
+  label: Project Management
+  permalink: /project-management
+  description: AI project management practices, frameworks, and organizational approaches

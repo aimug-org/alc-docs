@@ -1,0 +1,147 @@
+---
+import Base from '../layouts/Base.astro';
+import ReleaseFields from '../components/speak/ReleaseFields.astro';
+import { allEvents, fmtDay, fmtTime, now } from '../lib/data';
+import { ui } from '../lib/speak';
+
+// Upcoming meetups still taking pitches: not started, lineup not announced yet.
+const open = (await allEvents()).filter((e) => e.data.start > now && !e.data.lineup.length && !((e.data.pitchDeadline ?? e.data.lineupDate) && (e.data.pitchDeadline ?? e.data.lineupDate)! <= now));
+const nextDeadline = open.find((e) => e.data.pitchDeadline);
+
+const pickLine = nextDeadline ? `Pitches close ${fmtDay(nextDeadline.data.pitchDeadline!, { weekday: 'long' })}. We pick the lineup that week and email you.` : 'We pick the lineup the week before the meetup and email you.';
+const steps = ['Your talk', 'About you', 'Release'];
+const { panel, field, label, hint, input, check, box, legend, gold } = ui;
+const next = [
+  ['We read it', 'Every pitch gets read. We reply by email to set a date.'],
+  ['You give it', 'About 15 minutes at ACC Rio Grande in Austin, or online.'],
+  ['We publish it', 'We record, caption and publish it, and your speaker page goes live with it.'],
+];
+---
+<Base title="Speak at AIMUG" description="Pitch a 15-minute talk or demo for an AIMUG meetup, in Austin or online. We record it, caption it, publish it and give you a speaker page.">
+  <section aria-labelledby="speak-h" class="mx-auto max-w-[1240px] px-4 pt-12 pb-16 sm:px-8 sm:pt-16">
+    <p class="m-0 mb-2 font-mono text-sm tracking-[0.12em] text-gold">SPEAK AT AIMUG</p>
+    <h1 id="speak-h" class="m-0 font-display text-[clamp(52px,8vw,104px)] leading-[0.95] font-normal uppercase">Pitch a talk</h1>
+    <p class="m-0 mt-4 max-w-[680px] text-xl text-soft">About 15 minutes on something you built or broke in the agentic stack. Demos welcome. Three short steps, and the last one is the release that lets us publish your talk.</p>
+
+    <div class="mt-8 flex max-w-[680px] flex-col gap-2 rounded-[18px] border border-line bg-panel p-5 text-base text-soft">
+      <p class="m-0"><strong class="text-text">A good AIMUG talk:</strong> something you built, measured or broke in the last 30 to 60 days. Demos welcome. About 15 minutes.</p>
+      <p class="m-0"><strong class="text-text">Timing:</strong> Pitch by 5 PM CT on the Monday before the meetup. We pick the lineup that week and announce it.{nextDeadline && <> Next deadline: <strong class="text-gold">{fmtDay(nextDeadline.data.pitchDeadline!, { weekday: 'long' })}, {fmtTime(nextDeadline.data.pitchDeadline!)} CT</strong> for the {fmtDay(nextDeadline.data.start, { weekday: undefined })} meetup.</>}</p>
+      <p class="m-0"><strong class="text-text">Picked on merit:</strong> talks are chosen for what they teach. Nobody pays to speak, and sponsors can't buy a slot.</p>
+      <p class="m-0"><strong class="text-text">After you submit:</strong> we reply by email to set a date. The talk is recorded, captioned and published with your speaker page.</p>
+    </div>
+
+    <div class="mt-10 grid grid-cols-1 items-start gap-10 lg:grid-cols-[minmax(0,1fr)_360px]">
+      <div class="min-w-0">
+        <ol id="speak-steps" hidden class="m-0 mb-8 grid list-none grid-cols-3 gap-3 p-0">
+          {steps.map((s, i) => (
+            <li data-dot={i} class="flex flex-col gap-0.5 border-t-4 border-line pt-2 text-muted data-done:border-edge aria-[current=step]:border-gold aria-[current=step]:text-text">
+              <span class="font-mono text-sm tracking-[0.08em]">STEP {i + 1}</span>
+              <span class="font-semibold">{s}</span>
+            </li>
+          ))}
+        </ol>
+
+        <form id="speak-form" data-speak action="/api/speak" method="post" class="flex flex-col gap-10">
+          <fieldset data-step="0" class="m-0 min-w-0 p-0">
+            <legend class={legend}><span class="block font-mono text-sm tracking-[0.12em] text-gold">STEP 1 OF 3</span><span class="block font-display text-4xl uppercase">Your talk</span></legend>
+            <div class={panel}>
+              <div class={field}>
+                <label for="sp-talk" class={label}>Talk title</label>
+                <input id="sp-talk" name="talk_title" type="text" required minlength="3" maxlength="150" class={input} />
+              </div>
+              <div class={field}>
+                <label for="sp-abstract" class={label}>Abstract</label>
+                <textarea id="sp-abstract" name="abstract" required minlength="20" maxlength="2000" rows="6" aria-describedby="sp-abstract-hint" class={input}></textarea>
+                <p id="sp-abstract-hint" class={hint}>What you built or broke and what the room will take away. A few sentences is plenty.</p>
+              </div>
+              <fieldset class="m-0 min-w-0 p-0">
+                <legend class={`${label} mb-1.5 p-0`}>Format</legend>
+                <div class="grid gap-3 sm:grid-cols-2">
+                  <label class="flex min-h-14 cursor-pointer items-center gap-3 rounded-xl border-2 border-edge bg-ink px-4 py-3 has-checked:border-gold"><input type="radio" name="format" value="thunderstorm" checked required class={box} />Thunderstorm Talk, about 15 minutes</label>
+                  <label class="flex min-h-14 cursor-pointer items-center gap-3 rounded-xl border-2 border-edge bg-ink px-4 py-3 has-checked:border-gold"><input type="radio" name="format" value="demo" class={box} />Demo</label>
+                </div>
+              </fieldset>
+              <div class={field}>
+                <label for="sp-event" class={label}>Preferred meetup</label>
+                <select id="sp-event" name="preferred_event" required class={`${input} min-h-[52px] cursor-pointer`}>
+                  {open.map((e) => <option value={e.id}>{fmtDay(e.data.start)} · {e.data.title}</option>)}
+                  <option value="any">Any month</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset data-step="1" class="m-0 min-w-0 p-0">
+            <legend class={legend}><span class="block font-mono text-sm tracking-[0.12em] text-gold">STEP 2 OF 3</span><span class="block font-display text-4xl uppercase">About you</span></legend>
+            <div class={panel}>
+              <div class="grid gap-5 sm:grid-cols-2">
+                <div class={field}>
+                  <label for="sp-name" class={label}>Name</label>
+                  <input id="sp-name" name="name" type="text" required maxlength="120" autocomplete="name" class={input} />
+                </div>
+                <div class={field}>
+                  <label for="sp-email" class={label}>Email</label>
+                  <input id="sp-email" name="email" type="email" required maxlength="254" autocomplete="email" class={input} />
+                </div>
+                <div class={field}>
+                  <label for="sp-company" class={label}>Company <span class="font-normal text-muted">(optional)</span></label>
+                  <input id="sp-company" name="company" type="text" maxlength="120" autocomplete="organization" class={input} />
+                </div>
+                <div class={field}>
+                  <label for="sp-title" class={label}>Title <span class="font-normal text-muted">(optional)</span></label>
+                  <input id="sp-title" name="title" type="text" maxlength="120" autocomplete="organization-title" class={input} />
+                </div>
+              </div>
+              <div class={field}>
+                <label for="sp-links" class={label}>Links <span class="font-normal text-muted">(optional)</span></label>
+                <textarea id="sp-links" name="links" rows="3" maxlength="1000" aria-describedby="sp-links-hint" class={input}></textarea>
+                <p id="sp-links-hint" class={hint}>LinkedIn, X, GitHub, your site. One per line. We use them for your speaker page and credits.</p>
+              </div>
+              <label class={check}><input type="checkbox" name="tag_ok" value="1" class={box} />OK to tag me on LinkedIn and X</label>
+            </div>
+          </fieldset>
+
+          <fieldset data-step="2" class="m-0 min-w-0 p-0">
+            <legend class={legend}><span class="block font-mono text-sm tracking-[0.12em] text-gold">STEP 3 OF 3</span><span class="block font-display text-4xl uppercase">Release</span></legend>
+            <div class={panel}>
+              <ReleaseFields>We email you a copy of your pitch and this release.</ReleaseFields>
+            </div>
+          </fieldset>
+
+          <div class="flex flex-col gap-4">
+            <p id="speak-status" role="status" aria-live="polite" class="m-0 text-[17px] font-semibold text-gold-hi empty:hidden"></p>
+            <div class="flex flex-wrap gap-3">
+              <button type="button" data-back hidden class="min-h-[52px] cursor-pointer rounded-full border-2 border-text bg-transparent px-6 text-lg font-bold text-text hover:border-gold hover:text-gold">Back</button>
+              <button type="button" data-next hidden class={gold}>Next</button>
+              <button type="submit" data-send class={gold}>Send my pitch</button>
+            </div>
+          </div>
+        </form>
+
+        <div id="speak-done" hidden tabindex="-1" class="flex flex-col gap-3 rounded-[22px] border border-gold bg-panel p-6 sm:p-9">
+          <p class="m-0 font-mono text-sm tracking-[0.12em] text-gold">PITCH RECEIVED</p>
+          <h2 class="m-0 font-display text-[clamp(40px,5vw,60px)] leading-none font-normal uppercase">Thanks, it's in</h2>
+          <p class="m-0 text-soft">A copy of your pitch and the release is on its way to <strong class="break-all text-text" data-email></strong>. We read every pitch. {pickLine}</p>
+          <p class="m-0 font-mono text-sm text-muted">Record <span data-id></span></p>
+        </div>
+      </div>
+
+      <aside aria-labelledby="next-h" class="flex flex-col gap-4 rounded-[22px] border border-[#2a5478] bg-panel p-7 lg:sticky lg:top-6">
+        <h2 id="next-h" class="m-0 font-display text-[28px] font-normal tracking-wide uppercase">What happens next</h2>
+        <ol class="m-0 flex list-none flex-col p-0">
+          {next.map(([h, d], i) => (
+            <li class="grid grid-cols-[44px_1fr] gap-3 border-t border-line py-3.5 last:border-b">
+              <span class="font-display text-[30px] leading-tight text-gold">{i + 1}</span>
+              <span class="flex flex-col"><span class="font-bold">{h}</span><span class="text-base text-muted">{d}</span></span>
+            </li>
+          ))}
+        </ol>
+        <p class="m-0 text-base text-soft">Questions first? Write to <a href="mailto:speakers@aimug.org">speakers@aimug.org</a>.</p>
+      </aside>
+    </div>
+  </section>
+
+  <script>
+    import '../components/speak/speak-form.js';
+  </script>
+</Base>

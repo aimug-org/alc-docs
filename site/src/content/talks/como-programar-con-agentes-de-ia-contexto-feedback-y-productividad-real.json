@@ -1,0 +1,326 @@
+{
+  "title": "Cómo Programar con Agentes de IA: Contexto, Feedback y Productividad Real",
+  "speakers": [],
+  "date": "2026-02-12",
+  "youtubeId": "waAkY4AgHhQ",
+  "duration": 873,
+  "topics": [
+    "Agents"
+  ],
+  "transcript": [
+    {
+      "t": 0,
+      "text": "Rolando Pérez, eh un poquito acerca de mí porque no lo us. Eh, yo soy desarrollador, llevo ya como arriba de 12 años trabajando eh como consultor"
+    },
+    {
+      "t": 12,
+      "text": "para empresas en Estados Unidos, Estados ya un punto más grande. Eh, bueno, el año, el último año que pasó me obsesioné mucho con el tema de primero entender"
+    },
+    {
+      "t": 24,
+      "text": "cómo funcionaban los modelos de lenguaje y segundo cómo iban a tener un impacto en mi carrera como desarrollador, ¿no? Y esta charla aquí rápido, rápido, me dieron 15 minutos. Eh, es un poquito de"
+    },
+    {
+      "t": 38,
+      "text": "eh yo quería hacer esta pregunta, pero antes una pregunta. ¿Quiénes aquí son divier? Si levantan la mano."
+    },
+    {
+      "t": 45,
+      "text": "Okay. ¿Quiénes de ustedes usan hoy en día agentes para programar?"
+    },
+    {
+      "t": 52,
+      "text": "No, todos. Y eso es bueno porque digo, estos días el creador de No prácticamente salió a decir, eh, se acabó la era de que los humanos escribamos código. Ahora en adelante los"
+    },
+    {
+      "t": 64,
+      "text": "agentes escriben código y yo estoy 100% de acuerdo con eso. Yo llevo ya eh, si no recuerdo con cu o 6 meses que no escribo una sola línea de código. Yo dirijo a la gente, pero yo código no es"
+    },
+    {
+      "t": 77,
+      "text": "que si es que la tarea me cambió porque al final nosotros como ingenieros de software lo que somos es que resolvemos problemas con las mejores herramientas que tenemos en la mano y con nuestro"
+    },
+    {
+      "t": 88,
+      "text": "conocimiento técnico. Y ahora en la herramienta no es el código. Ahora, la herramienta son estos LLMs a los cuales nosotros le podemos hablar en inglés o escribirles nuestros bronc markdown y"
+    },
+    {
+      "t": 100,
+      "text": "nos regresan código concurta, ¿alguien aquí sabe cómo funciona esto?"
+    },
+    {
+      "t": 111,
+      "text": "Bueno, eso es muy importante de saber porque entender eso es la base de cómo le podemos sacar el mayor jugo posible a este tipo de herramientas."
+    },
+    {
+      "t": 122,
+      "text": "Uno de esto es circulado, no es tan complejo como parece. Nosotros tenemos un loop aquí que es el loop observo, pienso,"
+    },
+    {
+      "t": 134,
+      "text": "reacto. Cada vez que el eh, ¿cómo se llama? que que pasa por la parte pienso es lo que hace es que envía la ventana de contexto que se puede es básicamente"
+    },
+    {
+      "t": 147,
+      "text": "todos esos tokens que tiene todas esas palabras y todo ese texto lo envía al ll toolc que los tools o las herramientas son prácticamente como un pedazo de de"
+    },
+    {
+      "t": 161,
+      "text": "programa, un pedazo de programa que ejecuta o y esa es la parte es este ciclo de aquí que sucede y las herramientas por lo general tenemos"
+    },
+    {
+      "t": 174,
+      "text": "herramientas como terminar búsqueda, leer un archivo, escribir un archivo y estas herramientas sus resultados de nuevo los meten dentro de la ventana de contexto. Básicamente un ciclo, un"
+    },
+    {
+      "t": 188,
+      "text": "arreglo y un conjunto de herramientas. Eso se parece mucho a algo que todos conocemos."
+    },
+    {
+      "t": 195,
+      "text": "Aquí tenemos el CPU y aquí tenemos la básica."
+    },
+    {
+      "t": 203,
+      "text": "Entonces, en este año que he estado explorando básicamente más que todo en mi trabajo, eh estoy un poquito encerrado en el mundo de de Go Pilot, así que no conozco mucho de Cloud y ese"
+    },
+    {
+      "t": 216,
+      "text": "tipo de herramientas más avanzadas, pero he descubierto que cuatro ejes son suficientes para tener buenos resultados."
+    },
+    {
+      "t": 224,
+      "text": "las instrucciones claras, manejar bien la ventana en el contexto, poner la información correcta siempre en el contexto y tener eh ciclos de feedback cortos, de preferencias a"
+    },
+    {
+      "t": 237,
+      "text": "última ratos. Entonces, vamos a ir por cada uno de esos pilares de a qué me refiero y qué podemos hacer al respecto."
+    },
+    {
+      "t": 245,
+      "text": "Instrucciones claras. Ustedes han visto este m en internet, me imagino. Oye, Cloud, ¿qué Spotify y no y no cometas errores, ¿qué es esa instrucción? Si tú le envías eso a la gente, la gente no va"
+    },
+    {
+      "t": 257,
+      "text": "a hacer nada. Lo que realmente necesitamos es algo así, un product requirement document siempre un pip para tareas más pequeñas puede ser un todulis o un plan, pero por"
+    },
+    {
+      "t": 272,
+      "text": "lo general entre más específico uno puede ser mejor."
+    },
+    {
+      "t": 277,
+      "text": "Y este tipo de documentos lo podemos hacer también con ayuda de agentes, o sea, no es como que lo escribimos nosotros, podemos hacerlo con ayuda de los agentes."
+    },
+    {
+      "t": 286,
+      "text": "Y bueno, un buen plan, un buen documento tiene dos tiene dos. Primero que divide las tareas en fases y las describe de una manera muy muy muy específica."
+    },
+    {
+      "t": 297,
+      "text": "Incluso yo en mi trabajo a veces tengo planes donde tengo eh trozos de código, eh direcciones a a este archivo, tal línea, ese tipo de"
+    },
+    {
+      "t": 310,
+      "text": "cosas. Y eh por el otro lado el definition of, la definición de one está lista la tarea. Por lo general se intenta mucho de que tengas checks automáticos, por ejemplo, que si tien"
+    },
+    {
+      "t": 323,
+      "text": "pruebas monitarias, que si tienen pruebas de integración, que están pasando, eh que si pasa el shacking, el linting, ese tipo de cosas. Eh, pero también sabemos que a veces se requiere"
+    },
+    {
+      "t": 335,
+      "text": "un tipo de validación manual por parte del desarrollador, por ejemplo, revisar un interfaz de que se vea cómo se tiene que ver o flujos más complejos donde ya uno tenga que hacer todo el toda la"
+    },
+    {
+      "t": 347,
+      "text": "navegación, ¿no? Para ver si hubo un camino a base de datos o si se o si se llama un webcas."
+    },
+    {
+      "t": 359,
+      "text": "manejo de la ventana de contexto. Para mí esta es la parte después de la de de las instrucciones claras, para mí esta la parte más importante y que mucha gente no conoce y es que existe algo,"
+    },
+    {
+      "t": 372,
+      "text": "un behavior de estos modelos que se llama context y esto significa que entre más tokens se va llenando la ventana de contexto. Todos saben que es la ventana de contexto, okay? Eh, para los que no"
+    },
+    {
+      "t": 386,
+      "text": "sepan la ventana de contexto es la ya como dije el arreglo este, pero es la cantidad eh limitada que uno puede tener de tokens que le puede enviar al ll, ¿no? Entonces, mientras que eso se va"
+    },
+    {
+      "t": 396,
+      "text": "llenando mediante este ciclo que hace Toolcals y los coloca dentro de la en el contexto, el performance descubrieron Chroman que crea un básicamente una base"
+    },
+    {
+      "t": 408,
+      "text": "de datos eh semántica eh o crea o de mediums crea vas dando el performance del LNL. Entonces, varios developers han"
+    },
+    {
+      "t": 421,
+      "text": "estado experimentando con esto y han estado haciendo eh esto herramientas específicamente para desarrollo."
+    },
+    {
+      "t": 428,
+      "text": "Descubrieron que podía que habían encontrado como una línea imaginaria en el medio de la zona de contexto que es alrededor del 40%. que si ustedes tienen un LM que dice que tiene 200 K de tokens"
+    },
+    {
+      "t": 442,
+      "text": "de contexto, la verdad es que son 80,000 realmente los usables. El otro es allí el el el nuevo empieza a cometer errores. Lo dieron en el Smarks y el"
+    },
+    {
+      "t": 454,
+      "text": "Thomas. Básicamente nuestra misión es que la gente se mantenga en el smart."
+    },
+    {
+      "t": 458,
+      "text": "Mientras que se mantiene en el smarson, todo está bien. Cuando se mete en el Johnson es cuando empieza alucinaciones, a trabajar de una manera bien la etcétera, etcétera, ¿no? Y es"
+    },
+    {
+      "t": 471,
+      "text": "básicamente eso. El CL Gis empezó a hacer tulcos, llega Thomson, el developer se queja y todo escuchado. más si en algún momento"
+    },
+    {
+      "t": 484,
+      "text": "el modelo les dice empiezan a sospechar de que está en el dos y cuál y de qué manera me dicen de qué manera puedo la manera más fácil es limpiar la ventana contextar de"
+    },
+    {
+      "t": 499,
+      "text": "y para eso nosotros hacemos algo que se haga intent comp básicamente nosotros tenemos el chat viejo y tomamos todo lo que está en el chat viejo y lo colocamos en un archivo y ese archivo lo colocamos en el nuevo"
+    },
+    {
+      "t": 511,
+      "text": "Esta es la manera más simple de hacer. O ustedes pueden tener un modo dentro de su hardness. Harness haciendo cloud code studio cod eh eh sorry copilot eh o"
+    },
+    {
+      "t": 524,
+      "text": "Codex. Usted puede tener un prom que diga e vec un research y al final me haces el archivo, me dejas el archivo, ¿no? Entonces esa es una de las maneras más eficientes de hacer."
+    },
+    {
+      "t": 538,
+      "text": "So. ¿Cuántos aquí han han escuchado o han o han experimentado con su agentes?"
+    },
+    {
+      "t": 545,
+      "text": "Bueno, mucho en internet cuando pasó el tema los superagentes muchos esto, super tú tienes un manager agent que le ha flor ingenier que le ha engineer al security para desarrollo no funciona"
+    },
+    {
+      "t": 559,
+      "text": "esto de aquí para desarrollo no funciona."
+    },
+    {
+      "t": 563,
+      "text": "Los agentes son los suagentes son para crear otra ventana de contexto, porque si yo aquí tengo 80k de tokens de Smartsan, yo puedo enviar acá hacer una"
+    },
+    {
+      "t": 577,
+      "text": "tarjeta 80 capas. Entonces uno puede crear eh agentes. Si por ejemplo yo tengo uno que me encuentra los archivos, uno que los lee y los analiza y"
+    },
+    {
+      "t": 590,
+      "text": "encuentra patrones entre ellos. Eh, otro que lee eh la base de datos y hace querer la base de datos local. Por favor, no coloquen la gente de producción. Eh, el base de datos local"
+    },
+    {
+      "t": 602,
+      "text": "para ver si repente lo que hice las migraciones que hice funcionaron o no funcionaron o para entender el esquema, etcétera. Entonces, ¿qué pasa? que el principal lo que hace es que orquestra,"
+    },
+    {
+      "t": 614,
+      "text": "orquestra, orquestra dice, tú ve allá, investigame con esto, tú v investigar esto, tú v investigamiento y cada uno de ellos está en su smart zone. Entonces, cuando él regresa, regresa ya con inal"
+    },
+    {
+      "t": 626,
+      "text": "compaction, ya cosas más pequeñas, no quizás no un archivo porque entre ellos ya se abren, eh, pero ya un contenido más resumido y no todos estos tool calls que tenía donde probablemente leiste"
+    },
+    {
+      "t": 639,
+      "text": "archivos que no tenían nada que ver con la t, si no te deja más relevado."
+    },
+    {
+      "t": 645,
+      "text": "Eh, información correcta en el contexto."
+    },
+    {
+      "t": 649,
+      "text": "Pues esto es simple, hay dos tipos de contexto, el estático y el dinámico. Es lo que me di el contexto estático es ese archivo agents donde uno coloca"
+    },
+    {
+      "t": 663,
+      "text": "arquitecturas que conciones de desarrollo que explica cómo funciona el proyecto, dónde está cada cosa y qué compañero lo puedes utilizar, etcétera."
+    },
+    {
+      "t": 673,
+      "text": "Y ya está el contexto, digamos, que es el que nosotros le vamos dar, ¿no? ¿Y qué le podemos dar? Le podemos dar ticket, le podemos dar acceso a git. Si alguien ha intentado decirle, \"Usa el"
+    },
+    {
+      "t": 683,
+      "text": "kit CLI, eh, y investígame entre todos los PRs dónde se agregó este archivo y por qué, qué decía el PR, qué decía la descripción, eh, documentas, acceso a"
+    },
+    {
+      "t": 695,
+      "text": "documentación también, eh, y también le podemos dar tips, ¿no? Le podemos dar un archivo por rezar, etcétera, etcétera, ya que al final la experticia la tenemos nosotros. Y ahí es donde yo quiero decir"
+    },
+    {
+      "t": 707,
+      "text": "que nuestro cerebro también es parte de la contex. Nosotros no podemos dejar que la gente haga todo sin entender qué está haciendo. Nosotros por lo general un research primero leo el research, lo un"
+    },
+    {
+      "t": 720,
+      "text": "plan, leo el plan y luego entonces dejo a la gente hacer toda la implementación."
+    },
+    {
+      "t": 725,
+      "text": "Por lo leo el plan completo puede ser un skin reading. Estás en lo correcto. Yo bien, baj bien, baj bien. Okay, dale, sigue con el siguiente, ¿no? Y los ciclos de redor alimentación."
+    },
+    {
+      "t": 738,
+      "text": "¿A qué manifo con ciclos de alimentación cortos?"
+    },
+    {
+      "t": 743,
+      "text": "a ayudar a la gente a entender si está haciendo la tarea bien de la manera más rápida posible y si es posible automáticamente."
+    },
+    {
+      "t": 752,
+      "text": "Un ejemplo, si estoy trabajando en un plan con el agente que me haga preguntas cuando eh no cuando tenga el servidum o en el caso de que esté implementando, que tenga acceso a correr las pruebas,"
+    },
+    {
+      "t": 764,
+      "text": "que pueda ver si fallan, si vas a ver si el está seleccionando bien, si si no cometó un error en el tema de eh que estén acceso a los logs, si en el caso"
+    },
+    {
+      "t": 776,
+      "text": "tal de que esté haciendo algo y quiera saber por qué salió mal, eh o acceso a la base de datos. local o acceso a Docker o a Language eh sem personalidad, que es básicamente lo que te da eh"
+    },
+    {
+      "t": 788,
+      "text": "acceso a los tipos, este tipo de cosas. Eh, ¿por qué esto es importante? Porque al final muchas veces el resultado al cual queremos llegar no llegamos por falta de contexto, porque la gente no"
+    },
+    {
+      "t": 800,
+      "text": "diga que eso es ese contexto que nosotros por lo general sí tenemos."
+    },
+    {
+      "t": 805,
+      "text": "Y bueno, la práctica hace al maestro, así que tomen eh recomiendo que tomen desafíos bastante difíciles, eh cosas que ustedes crean que un agente no va a completar,"
+    },
+    {
+      "t": 818,
+      "text": "se lo den, lo lleven a su límite y luego vayan aprendendo esta práctica y eh y exploren, exploren. Hay dos patrones, ya terminar esperar el último slime, pero hay dos patrones que eh sería bueno que"
+    },
+    {
+      "t": 833,
+      "text": "vean. Uno de ellos es el RPI Research Plan Implement, que es muy bueno para eh bases de código ya viejas que tienen muchos patrones distintos que a veces choan entre ellos. Y eh la otra sería"
+    },
+    {
+      "t": 848,
+      "text": "muy famosa ahorita mismo, se llama el RS Loop, que es prácticamente un loop que corre eh prácticamente eh infinitamente o con un límite hasta que termina, pero siempre está limpiando la ventana con un"
+    },
+    {
+      "t": 861,
+      "text": "texto detrás antes de seguir. Entonces todo lo dejan al fin y todas estas dos llevan por lo general esos patrones que les dije de igual sería todo. Muchas gracias. M."
+    }
+  ],
+  "language": "es",
+  "backfill": true
+}

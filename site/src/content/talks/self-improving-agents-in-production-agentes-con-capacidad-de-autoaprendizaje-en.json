@@ -1,0 +1,486 @@
+{
+  "title": "Self-Improving Agents in Production | Agentes Con Capacidad de Autoaprendizaje en Producción",
+  "speakers": [],
+  "date": "2026-05-29",
+  "youtubeId": "Djn_1W64118",
+  "duration": 1196,
+  "summary": "How do you keep your company competitive and \"alive\" in the rapidly evolving age of AI?",
+  "topics": [
+    "Agents"
+  ],
+  "transcript": [
+    {
+      "t": 0,
+      "text": "Glad to be here, very happy to be here. Um, it's actually kind of funny talking about data and metadata cuz a lot of this is actually related also to data."
+    },
+    {
+      "t": 9,
+      "text": "Um, but less so on the side of governance, which is actually the most important part. Um, I'm with a startup, so it's actually the piece that we miss the most and that we're in the process"
+    },
+    {
+      "t": 19,
+      "text": "of building the most, but um, mostly on the side of a learning loop. So, um, data is obviously super valuable."
+    },
+    {
+      "t": 29,
+      "text": "Um, for a long time over the last, let's say, 2 years as AI has gotten more important."
+    },
+    {
+      "t": 34,
+      "text": "Um, you go to San Francisco, everybody asks about how do I know that my company won't die whenever somebody goes to uh create a new update to chat GPT or add some new"
+    },
+    {
+      "t": 47,
+      "text": "product or add an app or an MCP connector. And the question has been, \"How do I keep my company alive?\" or \"How do I make my company even better in the age of AI?\""
+    },
+    {
+      "t": 56,
+      "text": "Um, what does it mean to do that? And the conclusion that a lot of people who are either VCs or startups in San Francisco has thus far been that um,"
+    },
+    {
+      "t": 68,
+      "text": "essentially data is the moat. So, if you have data in your business, whether it's a little bit or a lot, whether it's inside of a person who knows something that somebody else doesn't know or has a"
+    },
+    {
+      "t": 80,
+      "text": "better way of summarizing it than anybody else, um, or it's an actual database with a large amount of data, you have some inherent moat that you can start with. Um, so this is all about how"
+    },
+    {
+      "t": 93,
+      "text": "to take that data and maximize the use of it. Um, so primarily, just sort of a bit of background, um, I am working in voice AI, so we work with uh adjacent to"
+    },
+    {
+      "t": 105,
+      "text": "telec- telephony providers. So, uh we wouldn't be a MassMobile or a Tigo, but we would be uh sort of just downstream one step, and we work with servicing the clients on uh basically anybody who is"
+    },
+    {
+      "t": 117,
+      "text": "picking up the phone uh to call a business. Those businesses need somebody on the other end and usually it's a very small business. They'll have somebody in a shop or in a restaurant and they don't have the"
+    },
+    {
+      "t": 129,
+      "text": "time or ability to pick up the phone. We capture those calls and we're capturing not only calls with agents answering the phones, but we're also capturing the human side. So, if an"
+    },
+    {
+      "t": 141,
+      "text": "agent doesn't if an agent answers the phone and transfers it to somebody inside the business, we capture that part of the call, too."
+    },
+    {
+      "t": 149,
+      "text": "Now, it raises some interesting questions. So, the basic framework of the learning loop, if you will, and how you can make the most of the data from everything I've seen, some of the"
+    },
+    {
+      "t": 160,
+      "text": "companies that I've had conversations with CTOs and relative individuals in in San Francisco, a lot of them will say they need to maximize the use of their data. So, they have a"
+    },
+    {
+      "t": 172,
+      "text": "lot of data. Ideally, you process that data on the edge."
+    },
+    {
+      "t": 177,
+      "text": "So, that's the maximization piece. Take the art, as what I'm calling it."
+    },
+    {
+      "t": 183,
+      "text": "Um, it's essentially deciding what data points matter."
+    },
+    {
+      "t": 187,
+      "text": "Now, that's going to change, right? Like, data 10 years ago, maybe what mattered 10 years ago doesn't matter today. So, it's constantly changing and teams have to adapt to it."
+    },
+    {
+      "t": 197,
+      "text": "That's okay. It's also about deciding how to make sure that 10 years ago you stored some data, you have as many data points as possible."
+    },
+    {
+      "t": 206,
+      "text": "So, when 10 years from then, you decide what's important has changed, you can still learn and have maximum utility over that data that you had. So, then that's the feedback loop is taking"
+    },
+    {
+      "t": 218,
+      "text": "the data that you have and being able to send it back. So, um, in our case, we get lots of phone calls all the time. So, every transcript is recorded."
+    },
+    {
+      "t": 229,
+      "text": "We get the human side, we get the agent side. Obviously, that's the metadata tagging, being able to see where did that data come from, who made it, how did it happen, what was the results of"
+    },
+    {
+      "t": 238,
+      "text": "the call? Was it a conversion? Was it Was it high quality? Were people mad on the other end of the call? What happened? And all the different, you know, conversations, much like, you"
+    },
+    {
+      "t": 250,
+      "text": "know, say a picture holds a thousand words, conversations can hold many, many more."
+    },
+    {
+      "t": 257,
+      "text": "And in that essence, you can learn a lot from the data. For example, for example, let's say you have an agent answers the phone, and this could be for any use case, even a chatbot."
+    },
+    {
+      "t": 269,
+      "text": "If you're trying to productize something, somebody is making a communication with an agent. It doesn't go well. You transfer it to a support agent, whether it's on a phone, whether it's"
+    },
+    {
+      "t": 281,
+      "text": "I'm talking to the bank, the bank bot didn't do the thing I wanted it to do, got sent to a person on the support team."
+    },
+    {
+      "t": 288,
+      "text": "If the person answers the question, and whoever the client was, the customer, was unhappy with the AI, let's say, or so-so happy, but it didn't work out, but the person answered the"
+    },
+    {
+      "t": 300,
+      "text": "question, you can take that new learning from the transcript of what happened with the person, and you can capture the data, you can say that was a success, the agent was not a success. What was"
+    },
+    {
+      "t": 311,
+      "text": "working here that didn't work here? Let's send it back until this works next time. Um So, the question is, how do you make that happen for every single edge case possible?"
+    },
+    {
+      "t": 324,
+      "text": "So, that way you get a thousand customers, 60% are happy with the AI, or 60% are happy with your product, whatever it may be."
+    },
+    {
+      "t": 332,
+      "text": "Um Ideally, 1 2 3 months later, a couple thousand people later, interactions later, you get 80% are happy with the product."
+    },
+    {
+      "t": 343,
+      "text": "Next month, 90% are happy with the product. So, how to make those loops?"
+    },
+    {
+      "t": 347,
+      "text": "So, the first piece is data. Um if you are in a big company, you probably already have a lot of it. If you're in a medium-size company, you might have some, you might have a lot. Uh you might"
+    },
+    {
+      "t": 358,
+      "text": "have it be mixed, some of it's dirty, some of it is incomplete, duplicated, uh might be fragmented if you just did an acquisition."
+    },
+    {
+      "t": 366,
+      "text": "Um if you're in a small company, then you might not have any data or you might have very, very little."
+    },
+    {
+      "t": 372,
+      "text": "There's some different ways you can go about it. Um obviously, if you're big, you have the data, problem solved. Ideally, capture as much as you can continuously, uh have it not be too manual to continue"
+    },
+    {
+      "t": 384,
+      "text": "getting data. Um if you're from a small company, a startup, you want to build something new, um you sort of have two different big options. One is open-source data sets."
+    },
+    {
+      "t": 397,
+      "text": "If for whatever reason that is the right thing for you, maybe an open-source data set is the way to go. Lots and lots of data for free, great."
+    },
+    {
+      "t": 405,
+      "text": "If that doesn't work because you're doing something that is new or combines different data sets, um you can use multiple open-source data sets and fuse them, try to"
+    },
+    {
+      "t": 418,
+      "text": "capture learnings, maybe process it with AI, a little expensive. You can do a deep research, make your own small data set, enough to where you can get the start and more data comes in."
+    },
+    {
+      "t": 431,
+      "text": "Maximization of data points. So, um the company that I'm with, we don't have any S3 storage, we don't have any object storage. Uh we don't need it. We only have uh"
+    },
+    {
+      "t": 444,
+      "text": "uh oh, sorry. Yes, that's true, also. Um but, uh we also don't have any back end, essentially. We have an edge"
+    },
+    {
+      "t": 456,
+      "text": "because everything can run within about 30 seconds. So, obviously, telephones, we need to answer it very, very quickly."
+    },
+    {
+      "t": 461,
+      "text": "so uh there's very very few use cases where we need a full server and most of the time we can offload that to something else or break it into little pieces. In our case, we break everything"
+    },
+    {
+      "t": 473,
+      "text": "into little pieces. AI has gotten really cheap. I'm sure maybe some of you know about Grok, Cerebras, some of the very very fast chips that are on TPUs or LPUs. Those"
+    },
+    {
+      "t": 485,
+      "text": "run so quick that you don't even need a full server anymore. So, in the past you might need Hostinger AWS, something like that. Now you don't even need that. You can have a Grok API call and it's super"
+    },
+    {
+      "t": 497,
+      "text": "fast within 5 seconds even for a really big data set. And the quality sacrifice can be there. I ideally as you get data in, you process it on every new data point and it can be done"
+    },
+    {
+      "t": 510,
+      "text": "cheaply. If you can't do that and you need to process a whole data set, for example, you go back on a very large block of data, you can do that. You might need a full server. Um"
+    },
+    {
+      "t": 522,
+      "text": "but ideally you capture as you go and you maximize as you go. So some data in the past was meaningless."
+    },
+    {
+      "t": 534,
+      "text": "If you have a transcript of a call, it's just a transcript. It's words. Somebody would have to go and look and see what that means. You can't uh estimate the conversion rate of a call, for example,"
+    },
+    {
+      "t": 545,
+      "text": "by reading the text or if you do, it takes somebody really reading it carefully, maybe listening to the call 20-30 minutes."
+    },
+    {
+      "t": 554,
+      "text": "It's non-deterministic also, right? Like nobody's going to say on the call, I converted at the end of the call and then you can Oh, yeah, you converted."
+    },
+    {
+      "t": 562,
+      "text": "Well, that was a conversion. Done. Can't do that. Um but then you have a separate problem, which is if you wanted to enrich, for example, a transcript of a call and say did this person convert?"
+    },
+    {
+      "t": 576,
+      "text": "It's not deterministic. And you have to find a way to get the AI to enrich that data with was this a conversion? Was it not a conversion? And so inherently you're taking something non-deterministic and trying to make it"
+    },
+    {
+      "t": 589,
+      "text": "deterministic. Uh the quick solution is confidence intervals and then you set a manual threshold like if the AI says I'm 70% confident this was not a conversion or this was a conversion. Great, maybe"
+    },
+    {
+      "t": 602,
+      "text": "that's a conversion. 70% and above convert. Anything below, non-convert."
+    },
+    {
+      "t": 607,
+      "text": "Now you have something where the original piece of data was uh something that would have been very hard to learn from and now you can take"
+    },
+    {
+      "t": 620,
+      "text": "uh Yeah, you can take that non-deterministic data, turn it into something deterministic. Now it's useful."
+    },
+    {
+      "t": 627,
+      "text": "So, what can you do with that? Um pre-prioritization. So, in our case we decided conversions were important."
+    },
+    {
+      "t": 634,
+      "text": "We also wanted to the soft metric. So, for us I uh I I found it very important that the quality of a call is very abstract."
+    },
+    {
+      "t": 646,
+      "text": "It's hard to say if a call was good or bad or how good or how bad. Um it's kind of impressive how much you can now just ask an LLM, score this call. Was it What"
+    },
+    {
+      "t": 659,
+      "text": "what What do you score it out of five? It's not always perfect, but over 10, 20,000 calls you very quickly see how if your calls are getting consistently rated 2.5 out of five, maybe you need to do something to fix"
+    },
+    {
+      "t": 672,
+      "text": "it. So, doing it cheaply and fast super important. That's the Groq and Cerebras, really important. Uh there's other providers, OpenRouter obviously also really good. Um I would highly suggest"
+    },
+    {
+      "t": 684,
+      "text": "with data enrichment use the cheapest model you can. They're usually very very smart. Um ideally new and not old. Um but you can get away with even Gemma 4B now is"
+    },
+    {
+      "t": 697,
+      "text": "extremely cheap, extremely cheap and very very very cost efficient. You'll be paying I think our bill for 10,000 calls last month was somewhere in the range of"
+    },
+    {
+      "t": 709,
+      "text": "6 cents for everything."
+    },
+    {
+      "t": 714,
+      "text": "So it's a you know, scale that up and it's pretty impressive cuz you can take those data points and you can go to a customer and say, \"Hey, guess what? We get we converted 30-40% of your calls"
+    },
+    {
+      "t": 724,
+      "text": "last month.\" Now that's actually valuable. You can charge somebody for that. You can charge for coaching. So we also have other AIs that read those transcripts of the human calls specifically and we say, \"Make a"
+    },
+    {
+      "t": 735,
+      "text": "coaching report out of this. Brief, like one paragraph. What could have been done better?\" And the person gets that piece as an email at the end of the day. We charge extra for that."
+    },
+    {
+      "t": 745,
+      "text": "Cost us almost nothing."
+    },
+    {
+      "t": 752,
+      "text": "Yeah. Yeah, exactly. So um And the the agents themselves, I mean it's it's the math is interesting."
+    },
+    {
+      "t": 761,
+      "text": "Um So one interesting point at least for you know, this is very specific to our business, but um um we service mostly schools and then cell"
+    },
+    {
+      "t": 774,
+      "text": "phone repair shops. Cell phone repair shops have really low margin. Schools have also really low margin, but very high lifetime value. So one student coming into a preschool is about $30,000"
+    },
+    {
+      "t": 788,
+      "text": "in the span of the time they'll be with that school, at least in the US."
+    },
+    {
+      "t": 793,
+      "text": "And that you know, so you close that customer, they're sticky and they'll be with you for a very long time. Um and I guess this is another part of the moat, right? If you want to have a strong"
+    },
+    {
+      "t": 804,
+      "text": "moat, you should inherently be quite sticky. It should be really hard for somebody to say, I want to switch off of your product. Um and in that sense, if you can give more insights, more"
+    },
+    {
+      "t": 814,
+      "text": "intelligence based on what it is that they're learning, um that's very sticky."
+    },
+    {
+      "t": 819,
+      "text": "So, um on the side of the phones, I mean, we're finding that, you know, even one the the cost dynamics are insane cuz you if you have an AI that sells a telephone, for example,"
+    },
+    {
+      "t": 832,
+      "text": "um over the phone, then that's like $1,300, maybe $1,000, $800. We charge maybe 400 for the month."
+    },
+    {
+      "t": 842,
+      "text": "So, one sale of one phone is instantly paying for, at least on a gross basis, everything uh that they would that that we would charge them. So, it's it's really like you take that and I think a lot of"
+    },
+    {
+      "t": 854,
+      "text": "businesses have the potential to see those benefits shared across also."
+    },
+    {
+      "t": 860,
+      "text": "Um Just in insane margins are are possible with it. Um So, yeah, uh AI at the edge. I guess the the um"
+    },
+    {
+      "t": 872,
+      "text": "this is all about having it at the edge. So, on ingest, really, really important, at least in our case, that as soon as we capture that data, as soon as a call comes in, we are immediately going to"
+    },
+    {
+      "t": 883,
+      "text": "enrich that right out the gate, rather than doing any batch enrichment."
+    },
+    {
+      "t": 888,
+      "text": "They both work, but uh the other is easier to see the cost roll."
+    },
+    {
+      "t": 893,
+      "text": "Um So, the art. This is the next piece. Um How do you take those that enriched data on those calls? How do you take that"
+    },
+    {
+      "t": 905,
+      "text": "enriched data? And how do you think about what it is you can do with it? And immediately, it's questions about your business more than anything else. What is it that I can do with this data? What"
+    },
+    {
+      "t": 918,
+      "text": "is it that uh what is the extra monetization I can make? What are the costs I could save if I knew more about it? What are the costs I could save by knowing who made the call, who um initiated this, what phone number did"
+    },
+    {
+      "t": 931,
+      "text": "this come into? Um there's obviously a lot of different things."
+    },
+    {
+      "t": 936,
+      "text": "Different businesses will have totally different use cases. Um but these are the ones where it's really asking the questions of like, \"Okay, we have a fully enriched data set. What are the"
+    },
+    {
+      "t": 945,
+      "text": "three data points that matter? How do we think about what the improvement loop will be?\" So, then on the improvement um"
+    },
+    {
+      "t": 960,
+      "text": "in our case, after the call every time, we are able to loop it and say, \"If there are five bad calls or okay calls, what went wrong? Pull the reasons"
+    },
+    {
+      "t": 974,
+      "text": "together.\" So, if they all like like if this set of calls went really wrong because there's something wrong with the the sales of the agent, let's say. We can pull those together and say this was"
+    },
+    {
+      "t": 986,
+      "text": "um the agent forgot to follow up with the customer asking about their email because the transfer of the call didn't happen to the store, whatever."
+    },
+    {
+      "t": 996,
+      "text": "In those specific cases, we can see, \"Oh, the agent didn't ask this question.\" So, we can then go and say, \"Hey, what was the prompt in that agent?"
+    },
+    {
+      "t": 1004,
+      "text": "What are those three data points? Let's pull those together. Let's look at the current prompts and let's propose a new prompt based on what went wrong. Like why did this not go as well as it could"
+    },
+    {
+      "t": 1014,
+      "text": "have? Okay, here's the new version of the prompt.\" Then you can just AB test it, split everything. And you can automate that process, too. If version B, the new prompt, went really, really well, well,"
+    },
+    {
+      "t": 1025,
+      "text": "you know that agent is going to really highly perform over 10, 20 calls with the same use the same case scenario cuz again, you're still tracking the metadata."
+    },
+    {
+      "t": 1035,
+      "text": "You can see, \"Oh, this version is better.\" and now the conversion rates have gone up by 10% since flipping to version B. Okay, we're going to drop version A, version B will be immediately"
+    },
+    {
+      "t": 1045,
+      "text": "the new one. And you do that and you repeat it over many, many inter- iterations. Now you have essentially self-improving AI in your production stock for yourself. Now, this this is"
+    },
+    {
+      "t": 1057,
+      "text": "specifically for our business in particular, um, telephones."
+    },
+    {
+      "t": 1062,
+      "text": "It's a very, uh, uh, ongoing kind of uh, business, but um, I think there are a lot of interactions in general, whether it's like, you could put this on your emails at for a sales team, super valuable"
+    },
+    {
+      "t": 1075,
+      "text": "insights. Um, what went wrong? How do we improve it?"
+    },
+    {
+      "t": 1079,
+      "text": "Did the coaching do, you know, go out? If somebody got sent a coaching report, did they pay attention and has their conversion improved? If not, maybe the coaching has to change. There are many"
+    },
+    {
+      "t": 1089,
+      "text": "ways you can sort of like abstract the loop out, um, but in general, if you're if you have AI deployed in some manner or capacity, um, to production, then I think there's"
+    },
+    {
+      "t": 1101,
+      "text": "quite a bit of value in that loop. Um, so, couple pieces. One is about reward models."
+    },
+    {
+      "t": 1109,
+      "text": "Um, really again, thinking about the data points. Second being, um, scaling those improvements, allowing that auto-promotion. Um, for us, we initially started with just"
+    },
+    {
+      "t": 1122,
+      "text": "being able to have the proposals first. So, the agent would propose the new prompt and say, do you want this prompt?"
+    },
+    {
+      "t": 1129,
+      "text": "We'd have one of the managers would go and look at the prompt change and say, do we want to change the prompts for 15 different stores right now."
+    },
+    {
+      "t": 1138,
+      "text": "If yes, okay, we'll go and do that, or we'll send it for AB. Um, but eventually, as you start to trust the prompt changes, you dial in, you know, ideally it's the shortest, smallest possible change on every new"
+    },
+    {
+      "t": 1150,
+      "text": "iteration. You try to see small differences in every up."
+    },
+    {
+      "t": 1155,
+      "text": "Um and then over optimization is off off obviously super important also. So, like don't tell the agent only optimize for high conversion."
+    },
+    {
+      "t": 1164,
+      "text": "Because if there's a spam call that comes in and you have optimized conversions, well, the agent's going to start trying to sell the spam call and now you're going to waste a ton of"
+    },
+    {
+      "t": 1174,
+      "text": "tokens or a ton of time. Very bad obviously. So, um really a part of like thinking about what needs to go into what that loop is going to look like and how you feed it."
+    },
+    {
+      "t": 1186,
+      "text": "But, yeah."
+    }
+  ],
+  "backfill": true
+}

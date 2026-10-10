@@ -1,0 +1,18 @@
+---
+import DocsPage from '../../../components/content/DocsPage.astro';
+import { docTitle, docUrl, docsNav, kebab, type DocEntry } from '../../../components/content/content';
+
+export async function getStaticPaths() {
+  const { docs } = await docsNav();
+  const all = [...new Set(docs.flatMap((d) => d.data.tags))];
+  return all.map((tag) => ({ params: { tag: kebab(tag) }, props: { tag, tagged: docs.filter((d) => d.data.tags.includes(tag)) } }));
+}
+const { tag, tagged } = Astro.props as { tag: string; tagged: DocEntry[] };
+---
+<DocsPage title={`Notes tagged ${tag}`} current={`/docs/tags/${kebab(tag)}/`}>
+  <p class="m-0 font-mono text-sm tracking-[0.12em] text-gold uppercase"><a href="/docs/tags/" class="text-gold no-underline">Tags</a> · {tagged.length} {tagged.length === 1 ? 'page' : 'pages'}</p>
+  <h1 class="mt-2 mb-0 text-[clamp(30px,4vw,44px)] font-bold">{tag}</h1>
+  <ul class="m-0 mt-8 list-none p-0">
+    {tagged.map((d) => <li class="border-t border-line py-3"><a href={docUrl(d.id)} class="font-semibold text-text no-underline hover:text-gold">{docTitle(d)}</a></li>)}
+  </ul>
+</DocsPage>

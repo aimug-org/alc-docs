@@ -1,0 +1,21 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { posts, tagOf, tags } from '../../../components/content/content';
+
+const all = await posts();
+const known = await tags();
+const counts = new Map<string, number>();
+for (const id of all.flatMap((p) => p.entry.data.tags)) counts.set(id, (counts.get(id) ?? 0) + 1);
+const list = [...counts].map(([id, n]) => ({ ...tagOf(known, id), n })).sort((a, b) => a.label.localeCompare(b.label));
+---
+<Base title="Recap tags" description="AIMUG recaps by topic.">
+  <div class="mx-auto max-w-[1240px] px-4 pt-12 pb-20 sm:px-8 sm:pt-16">
+    <p class="m-0 mb-2 font-mono text-sm tracking-[0.12em] text-gold uppercase"><a href="/blog/" class="text-gold no-underline">Recaps</a></p>
+    <h1 class="m-0 font-display text-[clamp(44px,6vw,80px)] leading-none font-normal uppercase">Tags</h1>
+    <ul class="m-0 mt-10 flex list-none flex-wrap gap-3 p-0">
+      {list.map((t) => (
+        <li><a href={t.url} class="inline-flex items-center gap-2 rounded-full border border-edge min-h-[44px] px-4 font-semibold text-text no-underline hover:border-gold hover:text-gold">{t.label}<span class="font-mono text-xs text-muted">{t.n}</span></a></li>
+      ))}
+    </ul>
+  </div>
+</Base>

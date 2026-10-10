@@ -1,0 +1,33 @@
+---
+// The release step shared by /speak/ and /speak/release/: the text, a typed signature, "I agree", and a guardian for minors.
+// speak-form.js shows the guardian field only when "I'm under 18" is checked; without JS it is always shown.
+import { RELEASE_TEXT, RELEASE_VERSION } from '../../../functions/_lib/release.js';
+import { ui } from '../../lib/speak';
+---
+<div class="flex flex-wrap items-center justify-between gap-3">
+  <p class="m-0 font-mono text-sm tracking-[0.08em] text-muted">SPEAKER RELEASE · <span class="whitespace-nowrap">VERSION {RELEASE_VERSION}</span></p>
+  <span class="rounded-full border border-gold px-3 py-1 font-mono text-sm text-gold">Draft wording, pending lawyer review</span>
+</div>
+<blockquote id="sp-release" class="m-0 rounded-xl border-l-4 border-gold bg-ink p-4 text-text sm:p-5">{RELEASE_TEXT}</blockquote>
+<div class={ui.field}>
+  <label for="sp-sign" class={ui.label}>Type your full name to sign</label>
+  <input id="sp-sign" name="signature_name" type="text" required maxlength="120" autocomplete="name" aria-describedby="sp-sign-date" class={`${ui.input} font-semibold`} />
+  <p id="sp-sign-date" class={ui.hint}>Dated <span id="sp-today">the day you send this</span>.</p>
+</div>
+<label class={ui.check}><input type="checkbox" name="agreed" value="1" required class={ui.box} />I agree to the speaker release above</label>
+<label class={ui.check}><input id="sp-minor" type="checkbox" name="minor" value="1" class={ui.box} />I'm under 18</label>
+<div id="sp-guardian" class={ui.field}>
+  <label for="sp-guardian-name" class={ui.label}>Parent or guardian: type your full name to sign for the speaker</label>
+  <input id="sp-guardian-name" name="guardian_name" type="text" maxlength="120" aria-describedby="sp-guardian-hint" class={ui.input} />
+  <p id="sp-guardian-hint" class={ui.hint}>Required for speakers under 18.</p>
+</div>
+<p class="m-0 text-[15px] text-soft"><slot>We email you a copy of this release.</slot> To take a recording down later, reply to that email or write to <a href="mailto:speakers@aimug.org">speakers@aimug.org</a>.</p>
+
+{/* Honeypot and page-load time: /api/speak rejects a filled honeypot or a submit under 3 s. */}
+<div class="absolute -left-[9999px]" aria-hidden="true">
+  <label for="sp-website">Leave this empty</label>
+  <input id="sp-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+</div>
+<input type="hidden" name="t" value={Date.now()} />
+{/* The version this page shows; /api/speak returns 409 if the wording changed since it loaded. */}
+<input type="hidden" name="release_version" value={RELEASE_VERSION} />

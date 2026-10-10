@@ -1,0 +1,84 @@
+---
+import '@fontsource/anton';
+import '@fontsource/barlow/400.css';
+import '@fontsource/barlow/500.css';
+import '@fontsource/barlow/600.css';
+import '@fontsource/barlow/700.css';
+import '@fontsource/jetbrains-mono/500.css';
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  jsonld?: object | object[];
+  noindex?: boolean;
+  lang?: string;
+}
+const {
+  title,
+  description = 'AIMUG, the AI Middleware Users Group: free monthly meetups in Austin and online, and a library of every talk.',
+  image = '/og-default.jpg',
+  jsonld,
+  noindex = false,
+  lang = 'en',
+} = Astro.props;
+const fullTitle = title ? (/AIMUG/.test(title) ? title : `${title} | AIMUG`) : 'AIMUG: AI Middleware Users Group, Austin';
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL(image, Astro.site);
+const org = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'AI Middleware Users Group',
+  alternateName: 'AIMUG',
+  url: 'https://aimug.org',
+  logo: 'https://aimug.org/logo.png',
+};
+const blocks = [org, ...(jsonld ? (Array.isArray(jsonld) ? jsonld : [jsonld]) : [])];
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    {!noindex && <link rel="canonical" href={canonical} />}
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="alternate" type="application/rss+xml" title="AIMUG recaps" href="/blog/rss.xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="AIMUG" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@AustinLangChain" />
+    <meta name="theme-color" content="#06182b" />
+    {blocks.map((b) => <script type="application/ld+json" set:html={JSON.stringify(b).replace(/</g, '\\u003c')} />)}
+    {import.meta.env.PROD && (
+      <>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVEGH4FBSL"></script>
+        <script is:inline>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag('js', new Date());
+          gtag('config', 'G-EVEGH4FBSL');
+        </script>
+      </>
+    )}
+  </head>
+  <body class="bg-ink text-text">
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-gold focus:px-4 focus:py-2 focus:text-ink">Skip to content</a>
+    <Header />
+    <main id="main" data-pagefind-body>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

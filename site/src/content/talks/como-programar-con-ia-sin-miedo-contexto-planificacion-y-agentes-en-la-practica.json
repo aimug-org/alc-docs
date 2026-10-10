@@ -1,0 +1,422 @@
+{
+  "title": "Cómo Programar con IA sin Miedo: Contexto, Planificación y Agentes en la Práctica",
+  "speakers": [],
+  "date": "2026-02-17",
+  "youtubeId": "KWAIN3wVMA0",
+  "duration": 1080,
+  "topics": [
+    "Agents"
+  ],
+  "transcript": [
+    {
+      "t": 0,
+      "text": "Eh, vengo vengo a revelarles la receta de la cangreburger, o sea, los principios que utilizamos nosotros para desarrollar, porque nosotros pues hicimos una herramienta a la que tampoco"
+    },
+    {
+      "t": 10,
+      "text": "le hemos tocado el código ya casi con un año y no hemos vuelto a tocar código."
+    },
+    {
+      "t": 15,
+      "text": "Estoy olvidando de los ejercicios mentales para para hacer código porque estamos utilizando una disciplina muy seria que hoy se las vamos a compartir para eh que puedan programar sin miedo y"
+    },
+    {
+      "t": 26,
+      "text": "sin slop, ¿no?, que es lo que eh quiero mostrar, pero voy a hablarles un poquito de lo que estamos haciendo para que tengamos suficiente de contexto yamos conecto y arrancamos."
+    },
+    {
+      "t": 37,
+      "text": "Somos KSI, somos un startup manomeno, eh fully AI native, todos los founders trabajamos full 247 con la IA y estamos haciendo una IA que está contextualizada, la realidad"
+    },
+    {
+      "t": 49,
+      "text": "panameña, pero nuestra meta es llevarla toda a la Primo América. Una de las grandes ventajas de la vida, como ustedes saben, es para aprender. Así que si la aplicas a educación es el efecto"
+    },
+    {
+      "t": 59,
+      "text": "es multiplicado, por eso decidimos esta rama. Eh, y desde ya estamos haciendo un impacto. Tenemos eh, bueno, vengo llegando ahorita casualmente de de una capacitación a todos los profesores que"
+    },
+    {
+      "t": 70,
+      "text": "se le va a dar en sistema nacional del Ministerio de Educación. Eh, [resoplido] hoy eh llegamos en equipo y nos multiplicamos por 150. transmitimos todo el conocimiento de la herramienta para"
+    },
+    {
+      "t": 81,
+      "text": "no tener que ir uno por uno. Esos profesores van a capacitar al rey todos los profesores en la herramienta para que la puedan adquirir y usazen. Así que eh pero me parecen importantísimos estos"
+    },
+    {
+      "t": 91,
+      "text": "espacios, por eso la la intención de venir acá para compartirles no solo lo que hacemos, sino cómo lo hacemos y ustedes también puedan eh adquirir mucho esto. Rolando venía comentando mucho de"
+    },
+    {
+      "t": 101,
+      "text": "esos fluers que ya estamos utilizando acá, así todos los van a ver en la práctica. Excelente que estamos convergiendo en en la forma en la que se va a programar. Ahora tenemos un software para cursores y uno para eh"
+    },
+    {
+      "t": 114,
+      "text": "estudiantes. Eh todos localizados en los programas de estudios panameños. Tenemos a día de hoy eh más de 8,000 profesores registrados que ya están planificando eh y ahorita que van a las clases van a"
+    },
+    {
+      "t": 125,
+      "text": "estar va a haber mucho movimiento. Así que estos días han sido de loco y por eso les pido disculpas también por la diapositiva que tengo. Disclaimer aquí no la hice yo, no me da tiempo, la hice"
+    },
+    {
+      "t": 136,
+      "text": "con y puede que no se vea full bien."
+    },
+    {
+      "t": 140,
+      "text": "Vamos a explicarle cómo trabajamos en Ket. Eh, no les pases que a veces uno [resoplido] se puede oler la como que ya tú ves una imagen y tú sabes que sentido que se va que va saliendo y"
+    },
+    {
+      "t": 153,
+      "text": "surgiendo. Incluso el texto también a veces el texto tú te lo hueles que es guía. Por ejemplo, ese texto es guía o no es guía."
+    },
+    {
+      "t": 160,
+      "text": "Sí, sí, ¿verdad? Es Ga total. De hecho, el el nombre me lo cambié todo, pero lo quise dejar ahí para que lo lo eh pudiéramos eh razonar en esto. ¿Por qué?"
+    },
+    {
+      "t": 171,
+      "text": "Y excelente que estamos aquí, porque hoy estamos hablando con los profes a un nivel muy alto. Hoy podemos entrar un poquito más a detalle."
+    },
+    {
+      "t": 179,
+      "text": "Eh, una de las cosas que le transmití a los profesional, que es a la que tenemos nosotros, es superior a la artificial, eh, y tenemos que usarla como tal. Entonces, le queremos transmitir eso ahí, pero"
+    },
+    {
+      "t": 190,
+      "text": "también a ustedes. Eh, estos planes que estamos eh viendo, esta forma de trabajar no funcionan si no hay un más, ¿no? Como el de trás gente que los haga eh que revise y que actúe como un policía, aunque ellas se vuelvan"
+    },
+    {
+      "t": 203,
+      "text": "más inteligentes, le faltan los cinco sentidos que nosotros tenemos, ¿no? Así que en resumen, eh la inteligencia personal es superior y vamos a explicarle cómo nosotros usamos esta"
+    },
+    {
+      "t": 212,
+      "text": "primero antes de tirar una línea de COVID. Eh, bueno, lo que estamos hablando, ¿no? Lo orgánico es fallido y lo perfecto se siente, ¿eh? Y aquí viene lo que tiene que ver con la fábrica de"
+    },
+    {
+      "t": 224,
+      "text": "slot. Cuando generas código sin tener suficiente contexto, lo que estás haciendo una fábrica de técnica. ¿Qué hemos visto a la hora de desarrollar?"
+    },
+    {
+      "t": 233,
+      "text": "Esos planes que no están bien hechos o esos esa forma de programar VI code tiene un tiempo de caducidad, expira y se vence. ¿Por qué? Porque la IA se maneja en base a patrones. Y una de las"
+    },
+    {
+      "t": 246,
+      "text": "cosas que hemos notado es cuando el código no está limpio, cuando está martillado para que se vea bien y funcione y los botones actúen, pero el código por detrás no está revisado por"
+    },
+    {
+      "t": 254,
+      "text": "un bando, no sigue los patrones de buenas prácticas, la lo imita al crear más código, entonces agarra esos patrones y te sigue ensuciando el c y eso pues es fatal porque te llenan las"
+    },
+    {
+      "t": 269,
+      "text": "ventanas de contexto y no puedes seguir trabajando con código limpio y que puedas mantener, No, la saturación de contexto innecesario nos lleva a la zona tonta, que es esto, ¿no? Eh, y eso es"
+    },
+    {
+      "t": 281,
+      "text": "otra cosa que sucede que también estaba comentando eh Rolando, tenemos límites de contexto. Y en el caso personal, nosotros trabajamos siempre pensando que tenemos 200 K de contexto, pero nosotros"
+    },
+    {
+      "t": 295,
+      "text": "intentamos que nuestra por ojalá se pudiera one shot, pero quedar en 60k, o sea, nosotros trabajamos hasta 60k, podemos ir limpiando el contexto hasta llegar ahí. Nunca hacemos compact slash"
+    },
+    {
+      "t": 308,
+      "text": "compact en en cloud, o sea, ¿y qué es compact? Para los que no saben, contact es llevas una sesión de chats cloud, así como haces con chat GBT y a medida la conversación va creciendo, ella va"
+    },
+    {
+      "t": 318,
+      "text": "compactando atrás, pero ahí se va a perdiendo información. para una conversación eh de lenguajes naturales funciona porque pues tú puedes tener la idea de las cosas, pero para código no,"
+    },
+    {
+      "t": 329,
+      "text": "porque en código cuando ella empieza a compactar se empieza a perder eh eh contexto importante y la termina repitiendo código que ya había hecho porque ya se lo perdió de su contexto."
+    },
+    {
+      "t": 341,
+      "text": "Entonces, eh, ¿cómo funciona pues esta esta disciplina?"
+    },
+    {
+      "t": 346,
+      "text": "contexto antes que conveniencia, no se permiten bues. La trabaja con un plan que el eh el desarrollador aprueb y aquí viene esta parte también importante."
+    },
+    {
+      "t": 357,
+      "text": "Mientras mejores tokens tengas de entrada, mejores tokens vas a salir."
+    },
+    {
+      "t": 363,
+      "text": "Nosotros adoptamos eso no solamente a la hora de programar nuestra herramienta, sino a la hora de la misma herramienta que usaría, que utilice froms y y específicos contexto seleccionado y"
+    },
+    {
+      "t": 374,
+      "text": "durado. ¿Por qué? Eh, y ahorita que vamos a explicar la parte de vamos a explicarlo aquí mismo."
+    },
+    {
+      "t": 380,
+      "text": "¿Qué sucede? Eh, cuando tú pones a un agente como Cloud a hacer un plan y tú lo pones una vez que tiene el plan listo, lo pones a trabajar una vez. Él ha gastado todos sus tokens efectivos,"
+    },
+    {
+      "t": 390,
+      "text": "te lo mencionaste buscando en iPhone base y es como cuando tú terminas todo un día de trabajo para seguir trabajando y ya cuando son las 5 de la tarde no ries como a las 8 de la mañana. Por eso"
+    },
+    {
+      "t": 402,
+      "text": "es importante manejar snapshots de código curado, limpio, tokens limpio, que sería como empezar un día trabajo con un plan de acción de qué tienes que hacer y que te acabaste de tomar el café"
+    },
+    {
+      "t": 412,
+      "text": "y toda la energía del mundo. Entonces, ensite nosotros utilizamos el método RPI, Research Plan, implement y voy a explicarles cómo lo usamos porque y aquí"
+    },
+    {
+      "t": 424,
+      "text": "es digo estamos de developers eh les va a sonar hasta un poquito weird la forma en la que en la que mi cerebro trabaja, pero me ha ayudado un poco a entender cómo función el research, el plan y el"
+    },
+    {
+      "t": 436,
+      "text": "implemente. Vamos a empezar con el research."
+    },
+    {
+      "t": 440,
+      "text": "Eh, mira, esto, est es una de las de las de las locuras que me acordé que que hacemos a la hora de implementar nuevos features. Yo tengo mi codebase en mi notebook"
+    },
+    {
+      "t": 452,
+      "text": "y tengo podcast sobre mi code. Tengo podcast sobre las los documentos y las documentaciones de de NBI que usamos y estas cosas. ¿Por qué?"
+    },
+    {
+      "t": 461,
+      "text": "Porque cuando estoy ejercitando, cuando estoy cocinando, cuando estoy manejando, ese tiempo que parecería ser muerto, va como quien dice manejando tu cerebro para que tengas siempre en contexto el"
+    },
+    {
+      "t": 472,
+      "text": "plan que vas a hacer. Esto quizás soy solo yo, todos ustedes tendrán su método. Eh, quizás sea leer puramente la documentación. Esto es lo que a mí me funciona para ese tiempo que tengo off,"
+    },
+    {
+      "t": 482,
+      "text": "lo utilizo para ir en la parte del research, ¿no? Eh, otra cosa que es importante hacer en esta parte del research, aparte de buscar las documentaciones, eh documentar cómo es el proceso que van a hacer y ahorita les"
+    },
+    {
+      "t": 495,
+      "text": "cuento de lo que estuvos mostrando hoy. Eh, queremos cerrar el espacio de opciones viables, o sea, aquí en esta en esta fase pueden haber varios caminos que pueden tomar, pero deben ser eh"
+    },
+    {
+      "t": 506,
+      "text": "curados por ustedes. Por ejemplo, ¿qué voy a usar? Me voy a ir con qué framework voy a usar. Voy a usar este, voy a usar este otro, pero están las opciones ahí en la mesa para evaluar y"
+    },
+    {
+      "t": 517,
+      "text": "eh identificar las invariantes y los riesgos críticos también importante."
+    },
+    {
+      "t": 522,
+      "text": "Siempre a la hora de de de esta parte de RX y también lo hago con con Chachipit y con Cloud es siempre contarle cuáles son los blinds, qué es lo que la estoy viendo y y puedes integrar en eso hasta"
+    },
+    {
+      "t": 533,
+      "text": "que te tenga un research sólido. reset es contexto muy desordenado, incluso de tu propio codebase, porque en nuestra fase de research, al implementar algo, vamos a usar un ejemplo claro, eh hay"
+    },
+    {
+      "t": 547,
+      "text": "una diseño curricular en todo el Ministerio de Educación, Panamá se va a aprender todo diferente y eso involucrado una reorganización de todo el código. Tuvimos que en en el proceso"
+    },
+    {
+      "t": 556,
+      "text": "de research agarrar todos los planos, los programas oficiales, entender el proceso, pero también entender mi codebase, qué es lo que ya yo tengo. Y eso es lo que le mando a la gente a que"
+    },
+    {
+      "t": 564,
+      "text": "trabaje. va a dar todo el el copies relevante, los componentes que pueden ser reutilizados, rutas y y convenciones de programación que tú puedes reutilizar, las va a tener todas listas"
+    },
+    {
+      "t": 576,
+      "text": "para este paso de research. Pero, ¿qué hacemos una vez ya está el vaso de research? Es hora de tomar un snapshot, una foto. El contexto y para esto yo uso una herramienta que se llama Ripo Prom,"
+    },
+    {
+      "t": 586,
+      "text": "que está disponible ahorita solo en Mac. Déjame ver si se las puedo mostrar. Eh, y la la es una herramienta por suscripción, pero lo que hace ella es"
+    },
+    {
+      "t": 598,
+      "text": "que se encarga y mucho hip hop con con clean gits cada vez que vamos a implementar. Eh, pero ¿qué es lo que hace Riple Pro? Pues Riple Pro simplemente se encarga de eh darle contexto a los agentes de cloud. Eh,"
+    },
+    {
+      "t": 612,
+      "text": "ella tiene en sí todas las harness para mostrar sus agentes que exploran tu codebase, trae todos los archivos relevantes y eh se comunica entre ellos para que Cloud. Ahorita se ella"
+    },
+    {
+      "t": 624,
+      "text": "interactúa con Cloud Code por terminal o lo hace eh por MCP también, que ahora que se hizo la actualización y tenemos más conten"
+    },
+    {
+      "t": 637,
+      "text": "eh eh se implementa el research y por lo menos en Cloud Code cuando entras en plan mode puedes hacerlo. Eh tienes un plan listo, pero esta parte es importante. Eh debes leer el plan. El"
+    },
+    {
+      "t": 648,
+      "text": "plan no es como para glass, el plan es la parte más importante. Eh, y aquí es donde la la ambigüedad muere, ¿no? O sea, no el plan no sería el PR leo que te va a definir qué es lo que vas a"
+    },
+    {
+      "t": 661,
+      "text": "poner, en qué archivos voy a hacer los cambios, qué no se puede tocar, eh y cómo puedes verificar eh DOD, como como dicen, ¿no? Entonces, eso también es algo que me gustaría que se lleve de lo"
+    },
+    {
+      "t": 674,
+      "text": "que nosotros estamos haciendo. El plan nosotros lo leemos. Este último feature que estuvimos presentando hoy a todos los profesores que van a estar utilizando nos tomó y vamos a ponerlo"
+    },
+    {
+      "t": 684,
+      "text": "ahorita en tiempo, eh 4 días de planificar, 4 días de planificar todo el proceso que era larguísimo y y eso dio un muy buen efecto porque pudimos prácticamente hacer un onehot de todo un"
+    },
+    {
+      "t": 697,
+      "text": "feature que que en otro momento nos hubiera tomado muchas semanas, incluso meses y lo logramos hacer por tener un plan bien redactado y curados nosotros en En el plan no pueden haber"
+    },
+    {
+      "t": 707,
+      "text": "ambigüedades. Si no lees el plan, a veces hay dos caminos y la ella te recomienda, puedes utilizar este, el framework o y al momento de ejecución eso se vuelve un problema porque ella va"
+    },
+    {
+      "t": 718,
+      "text": "a decidir, por supuesto, quizás no era la mejor opción. O si estás delegando mucho a esta gente y no están bien coordinados, van a tomar diferentes pasos y van a haber problemas. Y cuando"
+    },
+    {
+      "t": 728,
+      "text": "le dice, \"No, está mal, estás haciéndolo mal, estás haciendo reinforcement de un mal comportamiento y empiezas agradar el resultado del con. Entonces este plan si algo se lleva de aquí cuando su plan"
+    },
+    {
+      "t": 740,
+      "text": "léano todo de arriba a abajo y con todo lo que va a pasar. Llama en mi caso nosotros marinamos ya nuestro cerebro de todo el contexto de lo que necesitamos nuestro cerebro ya está claro de cómo"
+    },
+    {
+      "t": 750,
+      "text": "funciona el proceso y el plan, pero ahora lo vamos a leer en acción con el pob. Y una vez queremos com esto, eh dejamos nuestro nuestro repositorio listo para empezar a implementar y para"
+    },
+    {
+      "t": 760,
+      "text": "poder revertir en cualquier momento. Y nos vamos a la fase en la fase de implementación."
+    },
+    {
+      "t": 767,
+      "text": "¿Cómo sabes que tu fase de implementación es buena? Porque no necesitas a Cloud Opus implementar. Si tú tienes un plan bien redactado, tú puedes utilizar un modelo más pequeño, porque las instrucciones que van a ver"
+    },
+    {
+      "t": 777,
+      "text": "aquí son tan específicas que un modelo pequeño lo puede manejar porque son instrucciones casi un un código escrito en lenguaje natural. ¿Qué es? Es un plan listo, sin ambigüedades, listo para ser"
+    },
+    {
+      "t": 790,
+      "text": "ejecutado si es necesario en fase. Otra cosa que hemos aprendido y que quizás les ha pasado es que, como mencionaba Rolando, estar adicto a a lanzar sus vagendes o agentes en paralelo es un"
+    },
+    {
+      "t": 800,
+      "text": "desastre. No porque puedas tienes que hacerlo. Eh, en nuestro caso somos muy conservadores en eso. Intentamos que si vamos a delegar a eh a gentes que contesten cosas, igual trabajen de uno"
+    },
+    {
+      "t": 813,
+      "text": "en uno y que eh el que cada agente maneje su contexto fresco, pero que mantenga eh que no que no se vuelva loco muchos planes, que traen muchas más variables. [resoplido]"
+    },
+    {
+      "t": 826,
+      "text": "Y otra cosa que hacemos es tener el botón en la tecla scale. [carraspeo] Es parecer a tiempo muerto, pero en cualquier momento debes estar listo para parar la ejecución y decir qué es lo que"
+    },
+    {
+      "t": 839,
+      "text": "está pasando. Aquí hay tiempo muerto, aquí hay free real estate. Aquí hay una oportunidad que que se puede implementar, pero ahorita cuando estás programando tienes tiempo muerto que"
+    },
+    {
+      "t": 850,
+      "text": "puedes usar para levantar tus pesas mientras estás viendo, ejercitarte, no sé qué puedas hacer, pero vale la pena estar activo en la computadora, eh, viendo lo que la está haciendo, incluso"
+    },
+    {
+      "t": 861,
+      "text": "haciendo preguntas si es necesario. Es una oportunidad de aprendizaje también."
+    },
+    {
+      "t": 866,
+      "text": "Y una vez llegamos a esos puntos, podemos onehotear features muy pero muy rápido y muy bien hechas."
+    },
+    {
+      "t": 874,
+      "text": "Este es el ejemplo que hicimos. Esto, esta planificación de de inglés nos tomó 4 días hacer la la prácticamente la planificación y la ejecución fue 4 horas. ¿Qué es la diferencia? Es que"
+    },
+    {
+      "t": 885,
+      "text": "ahora el bornet cambió. El bornet ahorita con la no es la ejecución."
+    },
+    {
+      "t": 890,
+      "text": "Ahorita puedes tirar cuatro varías un plan sólido cuál es el urche. El problema ahorita es tener un plan sólido y ese problema quizás se está resolviendo ahorita con nuevos modelos,"
+    },
+    {
+      "t": 899,
+      "text": "pero tener un plan sólido es el principio que que me gustaría pues que se puedan llevar acá, que es el que nos ha funcionado y el que nos ha hecho que de verdad no toquemos líneas de código"
+    },
+    {
+      "t": 909,
+      "text": "ya. Y nuestro [carraspeo] cof ya está ya en los millones de tropers ya que no podemos meternos todos un solo. Sí."
+    },
+    {
+      "t": 917,
+      "text": "Eh, ¿vieron esa película Memento? ¿Conocen la película Memento?"
+    },
+    {
+      "t": 922,
+      "text": "Sí. Bueno, piensen así como eh es un modelo de lenguaje. El modelo de lenguaje siempre empieza fresco, como el personaje de las películas. Ese personaje es una sinopsis rápido, pero"
+    },
+    {
+      "t": 932,
+      "text": "no dar spoilers. Todos los días se levantaban y no sabían qué estaba pasando, eh, pero él se veía los tatuajes. Entonces, intenten pensar también cuáles son esas cosas que pueden tatuarle a la gente en el Agence NB o en"
+    },
+    {
+      "t": 944,
+      "text": "el cloud que requieren revisión continua igual, pero que sí deben estar para que cuando empiece tenga todas las herramientas. Y otra cosita que no sé si me pasado el tiempo que es importante es"
+    },
+    {
+      "t": 956,
+      "text": "entender también cómo fueron entrenados los modelos. ¿Por qué? Uno agarra una especie de taste y uno empieza a entender cómo funciona. Pero si ustedes han usado Codex versus cloud, han visto"
+    },
+    {
+      "t": 968,
+      "text": "que se se siente diferente cómo actúan. Eh, Cloud es muy como Eagle, que es el que entra y voy y vamos y dale y vamos a hacer y termina, pero al hacerlo quizás deja cosas eh pasadas por antes. Por eso"
+    },
+    {
+      "t": 981,
+      "text": "estos loops como Ral funcionan bien porque se aseguran de que se cumplan todo el plans. Y agentes como Codes, por la forma en que fue entrenado, ellos utilizan mucho razonamiento, están"
+    },
+    {
+      "t": 992,
+      "text": "hambrientos por contexto, usan prácticamente todo su tiempo para razonar, utilizar herramientas durante su periodo de razonamiento para dar solamente una respuesta a veces de un powerful. Entonces, en la práctica a"
+    },
+    {
+      "t": 1005,
+      "text": "nosotros nos ha servido mucho que Cloud sea el caballito que implementa todo y tener en una ventana para ir la Codex, siendo el policía que hace los code reviews y siendo el policía que verifica"
+    },
+    {
+      "t": 1016,
+      "text": "que el plan se sigó al 10 de la letra y siempre se encuentra sus cosas, te dicen, \"Mira, te falta aquí, aquí, aquí y aquí hay una vulnerabilidad de de segidad alta, todas esas cosas"
+    },
+    {
+      "t": 1027,
+      "text": "prácticamente que te vuelven entre copia aquí y lo pasas al otro, pero siempre prendiéndolo. ¿no? Y eso asegura que tus tu código se pueda eh mantener, ¿no? Y puedes utilizar eh las bondades de"
+    },
+    {
+      "t": 1039,
+      "text": "ángel. Por último, eh recuerde que la IA es como un paquetito de zancho magnum, es artificial y nunca va a saber igual que un zancocho hecho en leña con todos los"
+    },
+    {
+      "t": 1051,
+      "text": "ingredientes. Entonces utilicen esa limitación para su vendar. Cuando uno usa sopa magri, cuando uno está enfermo, cuando uno tiene el band para ponerse a hacer los sandiches la leña. Entonces,"
+    },
+    {
+      "t": 1064,
+      "text": "eh bueno, ya con eso termino mi mi presentación sobre la inteligencia y no sé si tienen alguna N"
+    }
+  ],
+  "language": "es",
+  "backfill": true
+}

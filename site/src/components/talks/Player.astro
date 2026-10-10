@@ -1,0 +1,60 @@
+---
+// YouTube facade: a thumbnail link to YouTube that swaps in the nocookie embed on click.
+// Any link on the page with data-t="<seconds>" jumps the player there.
+interface Props { id: string; title: string; image: string }
+const { id, title, image } = Astro.props;
+---
+<div data-player={id} data-title={title}>
+  <a href={`https://www.youtube.com/watch?v=${id}`} class="group relative block aspect-video overflow-hidden rounded-[18px] bg-panel" aria-label={`Play ${title}`}>
+    <img src={image} alt="" data-pagefind-meta="image[src]" class="h-full w-full object-cover" />
+    <span class="absolute inset-0 flex items-center justify-center bg-ink/10 transition-colors group-hover:bg-ink/0">
+      <span class="flex h-[76px] w-[76px] items-center justify-center rounded-full bg-gold text-ink shadow-xl transition-transform group-hover:scale-105 sm:h-24 sm:w-24">
+        <svg aria-hidden="true" viewBox="0 0 24 24" class="ml-1 h-9 w-9 sm:h-11 sm:w-11" fill="currentColor"><path d="M8 5.5v13l11-6.5z" /></svg>
+      </span>
+    </span>
+  </a>
+  <p data-start-note hidden class="m-0 mt-2 font-mono text-sm text-gold"></p>
+</div>
+<script is:inline>
+  (() => {
+    const box = document.querySelector('[data-player]');
+    if (!box) return;
+    const fmt = (s) => {
+      const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), p = (n) => String(n).padStart(2, '0');
+      return h ? `${h}:${p(m)}:${p(s % 60)}` : `${m}:${p(s % 60)}`;
+    };
+    // Deep link: #t-<n> or ?t=<n> sets the start time; the facade stays until the user clicks play.
+    const m = location.hash.match(/^#t-(\d+)$/) || location.search.match(/[?&]t=(\d+)/);
+    let start = m ? Number(m[1]) : 0;
+    const note = box.querySelector('[data-start-note]');
+    if (start) { note.textContent = `Starts at ${fmt(start)}`; note.hidden = false; }
+    const play = (t) => {
+      const f = document.createElement('iframe');
+      f.src = `https://www.youtube-nocookie.com/embed/${box.dataset.player}?autoplay=1${t ? `&start=${t}` : ''}`;
+      f.title = box.dataset.title;
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      f.allowFullscreen = true;
+      f.className = 'block aspect-video w-full rounded-[18px] border-0 bg-panel';
+      const hadFocus = box.contains(document.activeElement);
+      box.replaceChildren(f);
+      if (hadFocus) f.focus(); // keyboard users land on the player, not on <body>
+    };
+    const live = document.getElementById('copied');
+    document.addEventListener('click', (e) => {
+      const c = e.target.closest('[data-copy]');
+      if (c) {
+        const u = new URL(location.href);
+        u.search = `?t=${c.dataset.copy}`;
+        u.hash = '';
+        const done = () => { c.textContent = 'Copied'; if (live) live.textContent = `Link copied for ${fmt(Number(c.dataset.copy))}`; setTimeout(() => { c.textContent = 'Copy link'; }, 2000); };
+        (navigator.clipboard ? navigator.clipboard.writeText(u.href) : Promise.reject()).then(done, () => { if (live) live.textContent = 'Copy failed'; });
+        return;
+      }
+      const a = e.target.closest('[data-player] a, a[data-t]');
+      if (!a || e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;
+      e.preventDefault();
+      play(a.dataset.t ? Number(a.dataset.t) : start);
+      if (a.dataset.t) box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  })();
+</script>

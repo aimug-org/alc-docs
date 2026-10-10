@@ -1,0 +1,373 @@
+{
+  "title": "Introducción al proyecto Innovation Smart District con CTO Guillermo Malo de Molina",
+  "speakers": [],
+  "date": "2026-02-10",
+  "youtubeId": "GoomWjVHYK8",
+  "duration": 943,
+  "summary": "El director de tecnología, Guillermo Malo de Molina, presentará el tema Innovation Smart District durante la reunión de Panama AI/MUG el 21 de enero de 2026.",
+  "topics": [],
+  "transcript": [
+    {
+      "t": 0,
+      "text": "Genial. Bueno, una de las razones por las que no quería empezar yo porque no había hecho la tarea tiempo, entonces quería quería aprovechar estos minutos para hacerla, pero voy a ser breve. E"
+    },
+    {
+      "t": 11,
+      "text": "10, 15 minutos, ¿no? Eh, no, no muy rápido porque sobre todo quiero que vosotros disfrutéis de del evento que que habéis venido a hacer, ¿no? Nosotros nuestro proyecto que se llama Indomision"
+    },
+    {
+      "t": 23,
+      "text": "Smart District. Eh, os pedimos como muchas gracias por pedirlo, que nos sigáis en redes sociales, porque yo siempre digo una cosa, digo, nosotros estamos haciendo el Silvation América desde Panamá y ya me"
+    },
+    {
+      "t": 37,
+      "text": "da igual que no cre que no me creáis ahora. Solo os pido que nos sigáis en redes y lo vais a ir viendo como pasado, ¿vale?"
+    },
+    {
+      "t": 46,
+      "text": "De hecho, eh pues nada, nosotros eh estamos convencidos de que eh para más posible crear ese espacio físico, ese lugar donde todos los"
+    },
+    {
+      "t": 59,
+      "text": "actores del ecosistema de innovación, startups, aceleradoras, incubadoras, pisis y compañías se unan para colaborar y competir."
+    },
+    {
+      "t": 72,
+      "text": "De hecho, en Latinoamérica vivimos 650 millones de personas y no tenemos un sitio físico para que eso pase. ¿Alguien se atreve a decirme qué otro país que no es Panamá podría ser?"
+    },
+    {
+      "t": 85,
+      "text": "¿Dónde podemos ver ese silicón Valley de Latinoamerica? Que en español no vamos, si queréis jugamos a ese juego. Puede ser en Costa Rica."
+    },
+    {
+      "t": 95,
+      "text": "Puede ser en Costa Rica. Vale, Costa Rica tiene cosas buenas."
+    },
+    {
+      "t": 99,
+      "text": "Vamos a numerar las cosas buenas que tienen Costa Rica que tienen cierta estabilidad política. Okay, ya no es un sitio tan seguro. De hecho, antes estuvimos y todo lo que nos hablaban era"
+    },
+    {
+      "t": 109,
+      "text": "de la inseguridad de Costa Rica. Tiene una moneda estable, pero no es el dólar, ¿verdad? Se vive bien, pero no tienes una ciudad como la que tienes en Panamá."
+    },
+    {
+      "t": 121,
+      "text": "Y eso vale mucho porque es verdad que ustedes viven en Cañas, que es un sitio fantástico, pero sabes que puedes llegar a una ciudad donde tienes 180 multinacionales que pueden ser tus"
+    },
+    {
+      "t": 132,
+      "text": "clientes y encima tengo el aeropuerto más importante de la región."
+    },
+    {
+      "t": 137,
+      "text": "Otro país Colombia. Colombia. Colombia tiene muy buenos developers, probablemente los mejores de la región, que ya no son tan baratos, que eso me lo dijo ayer una persona que lleva un"
+    },
+    {
+      "t": 150,
+      "text": "equipo de 150 developers, me dijo, \"Lo que está pasando es que Colombia ya como ha sido muchos han ido para allá ya no es tan barato.\" Pero sí es verdad, eh, esto sigue pasando, pero tienes un"
+    },
+    {
+      "t": 160,
+      "text": "problema que es la devaluación de la moneda constante. Es decir, estás muy sujeto a la inflación. Si yo quiero importar equipos, vamos a suponer que yo soy una startup, acabo de levantar"
+    },
+    {
+      "t": 172,
+      "text": "capital y parte de eso es que tengo que comprar 100 ordenadores. Como se me devalúe un poco el peso, me cambia absolutamente el mismo plan o al revés, ¿no? Si mis si mis eh"
+    },
+    {
+      "t": 185,
+      "text": "clientes, o sea, si mis proveedores son de fuera, yo les voy a llegar a un punto que no los puedo pagar, ¿verdad?"
+    },
+    {
+      "t": 192,
+      "text": "Yo yo siempre que hablo de esto creo que los mayores candidatos podrían ser Chile o Uruguay. Yo estos países sí los veo un poquito más candidatos, pero están muy apartados y son caros."
+    },
+    {
+      "t": 204,
+      "text": "Y son caros. O sea, yo tengo chilenos y son caros total y son caros además pero si es un lugar estable tienes este ya tienes más ecosistema, Universidad de Chile es un centro de estatas muy buenos pero cuando"
+    },
+    {
+      "t": 217,
+      "text": "hablamos del Silcom Vale de Latinoamérica, hablamos de Latinoamérica."
+    },
+    {
+      "t": 221,
+      "text": "es decir, ese encuentro y nosotros estamos en el centro del Monte y eso es super importante. Eso suma la estabilidad económica, suma ley que tienes 180 multinacionales, sumale que se vive muy bien y eso es parte de lo"
+    },
+    {
+      "t": 234,
+      "text": "que está pasando nada más. Esto es una teoría mía, pero yo ahora últimamente en los últimos tr cu meses empieza a ver mucha gente viniendo a Panamá y eso es a raíz de que se"
+    },
+    {
+      "t": 246,
+      "text": "estáando en un momento convulso, donde el mundo está muy complicado, cada vez tenemos más personas eh viviendo a Panamá, ¿no? Entonces, como digo, nosotros somos muy ambiciosos. Queremos"
+    },
+    {
+      "t": 260,
+      "text": "crear el Silicoma Latinoaméricas de Panamá basando en Panamá, basando en infraestructuras."
+    },
+    {
+      "t": 266,
+      "text": "Lo que veis aquí en muchas imágenes de de aquí, nosotros somos promotores de un proyecto inmobiliar, ¿okay? Es lo que nosotros llevamos haciendo 10 años y lo hacemos con las mejores"
+    },
+    {
+      "t": 276,
+      "text": "infraestructuras, ¿okay? Porque es verdad que Panamá es un sitio fantástico, tienes edificios fantásticos, pero tienes mala infraestructura. decir esta calle que no está mal, tienes las estrechas, tienes"
+    },
+    {
+      "t": 288,
+      "text": "cames por los aires. Nosotros estamos haciendo, hemos invertido 150 millones de dólares en infraestructura de primer nivel, aceras de 4 m de ancho, 12 km de ciclo ruta, iluminación LED, todo es el"
+    },
+    {
+      "t": 303,
+      "text": "segundo punto. Tercer punto, zona franca. Tenemos 3 hectáreas de zona franca que te da beneficios fiscales y migratorios y luego equip. Nuestro abogado fue"
+    },
+    {
+      "t": 317,
+      "text": "ministro de Panamá, nuestro eh arquitecta eh principal fue directora del MIBI. El el que está haciendo el segundo edificio es Jaime Ventura, que es uno de los mejores de Panamá. tenemos"
+    },
+    {
+      "t": 330,
+      "text": "equipo internacional, es decir, tenemos un equipazo y sobre todo de la gente que nos estamos rodeando para para hacerlo no solo en el equipo, sino también en el parkers, ¿no?"
+    },
+    {
+      "t": 344,
+      "text": "Entonces, no quiero quitar mucho tiempo al evento. Nosotros tenemos dos grandes patas. Uno es el sitio físico situado en Green Valley, donde tienes licencia de zona franca y vamos a"
+    },
+    {
+      "t": 356,
+      "text": "construir 24 edificios modernos y tecnológicos para todos los actores del ecosistema, funders, desarrolladores e inversores. Nosotros estamos convencidos de que desde aquí en Panamá"
+    },
+    {
+      "t": 368,
+      "text": "van a surgir los próximos unicornios de todo Latinoamérica. Pues es el lugar perfecto para tener la estabilidad a eso. Okay, esa es nuestra tesis. Pero entonces no nos limitamos solo al sitio"
+    },
+    {
+      "t": 378,
+      "text": "físico. De hecho, estamos pensando en que esto sea otra sede de ISD, donde aquí esto lo convertamos en un gran coworking. Explico. Entonces, no está"
+    },
+    {
+      "t": 390,
+      "text": "limitado edificios porque también somos una comunidad. Una comunidad de ¿qué? De empresas. Tengo información para rato, pero no se quiero aburrir. Empresas que se crean que pueden construir el silicón"
+    },
+    {
+      "t": 403,
+      "text": "de las que tengan una tesis."
+    },
+    {
+      "t": 407,
+      "text": "de innovación, de tecnología y escalabilidad en Latinoamérica."
+    },
+    {
+      "t": 412,
+      "text": "Nosotros hemos creado una eh comunidad que se llama Roadd, donde tenemos más de 80 miembros en solo un año y medio. Estos, ¿qué hacemos por"
+    },
+    {
+      "t": 424,
+      "text": "ellos? Por estos miembros les damos educación, por ejemplo, que estáis haciendo vosotros aquí, ¿no? Es decir, es dar educación a otros, compartir conocimiento."
+    },
+    {
+      "t": 438,
+      "text": "Enseñamos a las startups a cómo se pitchea, cómo se levanta capitán, cómo llego a ese punto. Pero antes de eso, ¿verdad, Elena, cómo antes de levantar capital, ¿qué tengo que hacer yo antes"
+    },
+    {
+      "t": 450,
+      "text": "de levantar capital? Tengo que hacer un buen MVP, tengo que traccionar para que cuando vaya a levantar capital no venga alguien y me pida el 50% de tu empresa."
+    },
+    {
+      "t": 460,
+      "text": "¿Qué es lo que le pasa a los emprendedores para o la tienda general?"
+    },
+    {
+      "t": 465,
+      "text": "Les enseñamos cuál es el mindset de levantamiento y cuál es correctores."
+    },
+    {
+      "t": 472,
+      "text": "Nosotros hicimos un evento este año donde juntamos a todos los bancos de Panamá y les dijimos, \"Eso que hacen ustedes de pedirle el 20, 30, el 40% a un emprendedor está mal, pero no porque eh eh por los"
+    },
+    {
+      "t": 487,
+      "text": "intereses, o sea, por los intereses del emprendedor, por los intereses del inversor. Porque entonces tú no vas a permitir que el proyecto escale. Si tú en la primera ronda de inversión cedes"
+    },
+    {
+      "t": 498,
+      "text": "un 20, un 30, 40%, el BC cuando ponga el big money nadie va a querer entrar porque ya te diluiste."
+    },
+    {
+      "t": 506,
+      "text": "Entonces ese mindset lo traemos, lo traemos para los honders y para también para la gente que tiene dinero y también para la gente de las universidades."
+    },
+    {
+      "t": 515,
+      "text": "Nosotros organizamos Stap World Cup en 10 países distintos. Es la competencia startups más grande de América Latina."
+    },
+    {
+      "t": 520,
+      "text": "De hecho, aquí los chicos de Ketzaki están aquí detrás han participado."
+    },
+    {
+      "t": 525,
+      "text": "El quedasteis terceros este año, ¿verdad? El ganador de de Sabkac se va Silicon Valley y compite por un millón de dólares. Nosotros lo hacemos en 10 pesos distintos. También lo que"
+    },
+    {
+      "t": 536,
+      "text": "hacemos es generamos exposición a través de nuestras redes sociales. Ti, que es nuestro director de marketing, es un excelente entrevistador. Le vais a ver dentro de cómo no va a querer eh"
+    },
+    {
+      "t": 548,
+      "text": "atendernos en teléfono. El el e qué hacemos, ¿enamos oportunidades, identificamos cosas que nosotros podemos hacer?"
+    },
+    {
+      "t": 560,
+      "text": "eh mentorías, cursos, entrevistas, podcasts, conexiones y damos oportunidades a través de un sistema de membresía. Entonces, un miembro, ya sea una startup, sea un corporate, es parte"
+    },
+    {
+      "t": 573,
+      "text": "de una comunidad donde recibe toda esta serie de beneficios y luego aparte puede decidir si quiere ser parte del Maricuri, que es nuestro primer edificio que va a estar en Goodudos de Stan. Es"
+    },
+    {
+      "t": 584,
+      "text": "un edificio precioso que os invito e a partir de abril a visitarlo, que ya tenemos, ¿vale? Es el primero de 24 edificies que vamos a construir. ¿Vale?"
+    },
+    {
+      "t": 597,
+      "text": "Como dice, no quiero eh dar un, pero sí que quería antes de de de de dar paso a a a al evento de hoy, hablaros un poquito"
+    },
+    {
+      "t": 609,
+      "text": "del tipo de compañías que están dentro, ya de ahí decir, para que entendáis qué somos. Recordad, somos innovación y escalabilidad en América Latina."
+    },
+    {
+      "t": 621,
+      "text": "Tenemos a Kruger, que es una de las empresas más importantes de tecnología de Ecuador, más de 300 empleados."
+    },
+    {
+      "t": 629,
+      "text": "Tenemos a Unión, que es una empresa panameña con 25 años de experiencia en Panamá."
+    },
+    {
+      "t": 636,
+      "text": "Y hoy hablé con el CEO y me dijo, \"¿Sabes qué, Guillermo?\" Le digo, le pregunté, \"¿Qué tal? ¿Cómo vais?\" Me dice, \"Pues sabes que el año pasado abrimos en Guatemala, El Salvador y Colombia.\" me dice, \"In parte, gracias a"
+    },
+    {
+      "t": 649,
+      "text": "ti, porque a ti entendí que desde Panamá es donde me tengo que expandir.\""
+    },
+    {
+      "t": 654,
+      "text": "Y una cosa que les he pedido es, \"Ahora quiero que tu experiencia se la cuentes al resto.\" Y eso es lo que vamos a hacer. O sea, eso es algo que que nosotros vamos, no es solo que nosotros ayudamos a a los"
+    },
+    {
+      "t": 668,
+      "text": "emprendedores, sino la propia comunidad apoya al resto de personas. ¿Okay?"
+    },
+    {
+      "t": 673,
+      "text": "Tenemos a 73, es una startup de movilidad, de sostenibilidad. Tenemos a Kurana, que son premios de IA e con el sector salud. Tenemos a Ketsh también"
+    },
+    {
+      "t": 685,
+      "text": "que eh queremos que hacen una plataforma educativa usando ella. Ayuda a los profesores a planificar. En vez de estar planificando toda la tarde, uso lo que"
+    },
+    {
+      "t": 697,
+      "text": "ha pasado en el salón para planificar el día siguiente o el próximo tres. Es brutal. A mí me encanta esa. Aquí está Andy, de hecho que es el CTO de el y el CEO de de Ketai. Me encanta esa"
+    },
+    {
+      "t": 710,
+      "text": "plataforma y tienen capacidad de cambiar. Algo muy importante para Mac es la educación que todos sabemos que requiere un cambio, ¿verdad? Tenemos a Benski, que es un cripto casasino"
+    },
+    {
+      "t": 721,
+      "text": "online. Nosotros les ayudamos a su evento de lanzamiento. Desde entonces han levantado más de un millón de dólares. Hay veces que ayudamos a los startups a levantar capital. Hay veces"
+    },
+    {
+      "t": 730,
+      "text": "que les ayudamos a desarrollar su producto, hay veces que les ayudamos a cómo hago mi go to market, cómo tengo que hacer ese go to market, ¿no? Es decir, ya tengo un producto, ya tengo un"
+    },
+    {
+      "t": 739,
+      "text": "MVP, pero ¿cómo lo tengo que hacer? $10 al mes, está bien, tengo que cobrar 15,000 one time. Todo ese proceso que nosotros ayudamos a hacer, ayudamos incorporando el mindset de ser"
+    },
+    {
+      "t": 751,
+      "text": "compatible, pero de nivel Latinoamérica."
+    },
+    {
+      "t": 755,
+      "text": "Y esto estoy hablando de algunas startas. pasar siguiente porque también eh Ah, bueno, ahí tenemos quería hablar un poquito también de Blerify. Birify está haciendo la licencia de conducir en"
+    },
+    {
+      "t": 766,
+      "text": "Panamá basada en blockchain. Están haciendo el ID de la cédula del Salvador."
+    },
+    {
+      "t": 774,
+      "text": "Estos chicos ganaron Fot World Cup. La primera vez que nosotros organizamos fueron con nosotros así con Valentos con gobiernos en Latinoamérica y son parte de este ecosistema."
+    },
+    {
+      "t": 786,
+      "text": "Mañana tenemos un evento, otro es mañana, si mañana jueves mañana tenemos un evento que se llama Fondo Scofi full para fondos full para que entre ellos, oye, ¿cómo me cómo fue levantar capital?"
+    },
+    {
+      "t": 800,
+      "text": "¿Cómo fue de repente cuando levantaste capital contratar a 20 personas? ¿Cómo cómo hiciste ese proceso? ¿Verdad?"
+    },
+    {
+      "t": 808,
+      "text": "Entonces, nosotros creamos esas dinámicas para eso. Obviamente estamos creando un sitio físico fantástico en beneficios fiscales, brutal, pero no estamos limitados a eso. Es una comunidad de gente que se la cree que"
+    },
+    {
+      "t": 821,
+      "text": "puede ser de Silicon Latinoamérica. Y una de las cosas que eh también estamos eh proponiendo o o haciendo eh incap"
+    },
+    {
+      "t": 834,
+      "text": "y que nos hemos dado cuenta y gracias a Panamana lo que podemos hacer es que las multinacionales o las big companies no pueden innovar dentro de sí mismos."
+    },
+    {
+      "t": 847,
+      "text": "Afortunadamente lo saben y están en conexión con nosotros porque saben que ellos son los que sí lo pueden hacer porque ellos piensan fuera de la gracia, no tienen nada que perder y es"
+    },
+    {
+      "t": 860,
+      "text": "es las estatus pueden hacer. Entonces aquí, insisto, podría hablar de cada una de las de los miembros que tenemos en nuestro ecosistema. Como digo, felices"
+    },
+    {
+      "t": 872,
+      "text": "de que nos llaméis, os escribáis, que queráis ser parte de nuestro ecosistema."
+    },
+    {
+      "t": 876,
+      "text": "Eh, lo que van a es generaros oportunidades. A eso a lo que nos dedicamos, a generar oportunidades para los sectores del sistema de innovación de América Latina y demostraros que es y"
+    },
+    {
+      "t": 888,
+      "text": "que puede ser que falles que falles que falles te vamos a enseñar a fallar rápido para que llegues pronto tu objetivo. Es lo que nosotros hacemos y a veces te enseñamos nosotros o a veces"
+    },
+    {
+      "t": 896,
+      "text": "son otros actores los que lo hacen. Voy por un ejemplo muy sencillo. Esa chica influen ya estor ya no se llama influera. ¿Por qué? Porque le enseñamos rápido que eso"
+    },
+    {
+      "t": 909,
+      "text": "no era la que vale se no influ para poner un un y si tú quieres llegar a ser un blify que haces acuerdos con con El Salvador o acuerdo está nosotros te te"
+    },
+    {
+      "t": 921,
+      "text": "ayudamos a acelerar ese proceso tanto nosotros como la comunidad. ¿Okay?"
+    },
+    {
+      "t": 926,
+      "text": "Entonces nada ISD. Seguirnos en redes sociales. Ojalá nos creáis y queráis ser parte de ISD y si no pues lo veréis en redes sociales y iréis viendo cómo nos vamos convirtiendo"
+    },
+    {
+      "t": 938,
+      "text": "en ese lateral. Muchísimas gracias,"
+    }
+  ],
+  "language": "es",
+  "backfill": true
+}

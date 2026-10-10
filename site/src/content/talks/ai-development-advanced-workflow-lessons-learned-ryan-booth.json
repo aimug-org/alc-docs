@@ -1,0 +1,892 @@
+{
+  "title": "AI Development: Advanced Workflow Lessons Learned",
+  "speakers": [
+    "ryan-booth"
+  ],
+  "date": "2025-08-28",
+  "youtubeId": "uhlhWiB2fMY",
+  "duration": 2309,
+  "summary": "Ryan shares his experiences building an end-to-end application stack agentically at July's AIMUG meeting",
+  "topics": [
+    "Agents"
+  ],
+  "transcript": [
+    {
+      "t": 8,
+      "text": "So, um, thanks everybody for coming. My name is Ryan Booth. Um, I have been a software engineer for the better part of 10, 12 years now. Um, I've been all"
+    },
+    {
+      "t": 22,
+      "text": "sorts of creators. started network infrastructure, moved over into application infrastructure, cloud data center, all that fun jazz. Been doing a lot of automation work and that's kind"
+    },
+    {
+      "t": 34,
+      "text": "of what led me into um software development. And recently I've been spending a lot of time really focused in on how how do we adapt our development processes? Um what tools can we use as"
+    },
+    {
+      "t": 48,
+      "text": "developers? How do we need to change our mindset um in how we are approaching projects?"
+    },
+    {
+      "t": 54,
+      "text": "Um what works, what doesn't, all that fun stuff. I've been doing that for probably about eight months now. Um I kind of took it to I wanted to build a real world project. I did not want to"
+    },
+    {
+      "t": 67,
+      "text": "build something that was just another, you know, hack together something in cursor or whatever over a weekend. I really wanted to run something that if I said I was serious enough, this would be"
+    },
+    {
+      "t": 77,
+      "text": "a company. and I wanted to build software that I expect my teams to build um and expect the AI agents to handle it. So basically what came out of that over the past nine months is I have"
+    },
+    {
+      "t": 88,
+      "text": "artist dashboard. It's a SAS product offering hosted out of um digital ocean."
+    },
+    {
+      "t": 95,
+      "text": "Um it's hosted on their Kubernetes platform runs about it's a standard um web app stack using fast API Reddus Postgress both Reddus Postgress are hosted in production um front end"
+    },
+    {
+      "t": 109,
+      "text": "react.js JS, TypeScript. So, just kind of the normal stuff that we're seeing in the wild right now and what people are building web apps around. Essentially, what the app does is it simplifies"
+    },
+    {
+      "t": 120,
+      "text": "posting to social media for artists and creators so that they can post once and it goes to all social media sites. And then on top of that, I'm really digging in to see how I can provide better"
+    },
+    {
+      "t": 131,
+      "text": "analytics and simplify the whole process so they don't have to spend all their damn time posting to social media. They can actually be creating. So, this is what I kind of started with. Um, what's"
+    },
+    {
+      "t": 142,
+      "text": "been great about this, it's given me a complete sandbox to just kind of explore and build everything I want. If I blow something up, it's a simple backup, restore. If something goes really wrong,"
+    },
+    {
+      "t": 154,
+      "text": "well, we got to shut the company down, whatever. But so um in this I've I've really been developing a number of workflows um that that either in the software development process it helps"
+    },
+    {
+      "t": 168,
+      "text": "automate the development one of which is the third party ooth clients that I got to build um and the integration with with the actual APIs of the social platforms um pretty much every single"
+    },
+    {
+      "t": 180,
+      "text": "social platforms API is complete dog um so building clients and building reliable integrations has been very challenging for the tools that I use."
+    },
+    {
+      "t": 192,
+      "text": "Um, not for me. I just get frustrated when it's not working and I yell at the AI and then go drink some coffee or something and come back. But the AI agent struggled. So, what I've been"
+    },
+    {
+      "t": 202,
+      "text": "doing is I've been working um, how can I improve these workflows? Where can I apply AI to actually help me in these workflows? Why do I have to keep doing this when I should be watching TV and it"
+    },
+    {
+      "t": 214,
+      "text": "doing the work? So, um, I've built a number of MCPs. I've gone through a number of different processes."
+    },
+    {
+      "t": 223,
+      "text": "Some stuff works. Um, some stuff doesn't. And today, we're going to kind of touch again on a couple of those. And I kind of give some insight into things that have actually been working pretty"
+    },
+    {
+      "t": 234,
+      "text": "well for me. So, let's talk start with the bad stuff. Um, previous months I was promising that I would give a presentation on one of the first MCPs I built, talks testing API. Um, this was a"
+    },
+    {
+      "t": 246,
+      "text": "very simple use case. I'm absolutely sick of running talks commands to test my local environment every single time I make a change. And when my AI agent, I"
+    },
+    {
+      "t": 258,
+      "text": "use rue or cursor or client, I'm sorry."
+    },
+    {
+      "t": 263,
+      "text": "Um, rue is what I use primary. For the longest time I used Klein. Um they're basically the same thing like we talked about a little bit before off of each R is forked off of Klein. Um but"
+    },
+    {
+      "t": 274,
+      "text": "essentially what would happen is every single time Klein would Klein or Rue would run through its normal process and be like yay we fixed it. Your test should be good now. It would try to run"
+    },
+    {
+      "t": 285,
+      "text": "the test again. And long running test or tests with lots of output you're thinking integration test end toend test stuff like that really struggled. um it completely overloaded the client. Um it"
+    },
+    {
+      "t": 298,
+      "text": "completely overloaded the task and even worse it overloaded the model to where these individual task and focused um work that I was trying to complete just got completely destroyed and we had to"
+    },
+    {
+      "t": 310,
+      "text": "start back from context files. So the notion was is I wanted to offload testing to another process on my computer that doesn't overload my agentic workflow but also provides the"
+    },
+    {
+      "t": 324,
+      "text": "information back around how the test did so that Klein or Rue can continue moving forward. Um the biggest problem with this one"
+    },
+    {
+      "t": 336,
+      "text": "where the heck did I lose my slides? There they are."
+    },
+    {
+      "t": 341,
+      "text": "Okay, so that kind of hits on the um that my solution for this was basically um a fast API based um MCP server. I want to set something up that would possibly be used from a central"
+    },
+    {
+      "t": 354,
+      "text": "location. So how you would do stuff with inside your normal enterprise company is you host it centrally and then have everybody point to it. So how well did that work? How well would it work um"
+    },
+    {
+      "t": 365,
+      "text": "based off an API? How will it solve my problems? So essentially the the back end of this thing, not to really go into the weeds, is um Langraph would basically take and capture all of the"
+    },
+    {
+      "t": 378,
+      "text": "results um in a text file from the from the logs or the output of the actual test. It would then turn around and summarize and sanitize all that information into a clean, condensed"
+    },
+    {
+      "t": 392,
+      "text": "version of what is needed for um RU to continue moving forward. Um and then once everything is done, the client will turn around and reach out to"
+    },
+    {
+      "t": 404,
+      "text": "the server and ask for the details. So um I can demo this one. It's it's not too um impressive."
+    },
+    {
+      "t": 415,
+      "text": "Um let me see testing API."
+    },
+    {
+      "t": 419,
+      "text": "I don't have my old one in here. All right, let's do it."
+    },
+    {
+      "t": 423,
+      "text": "Um, using the tox testing."
+    },
+    {
+      "t": 435,
+      "text": "Oh my gosh, typing is not a skill I have today."
+    },
+    {
+      "t": 457,
+      "text": "the results. All right. So, I'm basically telling it to reach out to the the talks testing API, which is actually a container. Um, you're not seeing that. Yes, you are."
+    },
+    {
+      "t": 468,
+      "text": "Barely. So, let's see how this goes. It should be actually making an MCP call pretty quick. Um, so here's where things kind of went south. um going in naively about"
+    },
+    {
+      "t": 480,
+      "text": "MCPs is like, you know what, let's just see if the MCP can gloss over everything and solve all my problems."
+    },
+    {
+      "t": 490,
+      "text": "So, first thing right off the bat, um the biggest problem that I have is these tests take a while to run. Like they just do. Um 10 15 minutes sometimes to"
+    },
+    {
+      "t": 502,
+      "text": "process some of these tests is not abnormal. Now, unit test is a little easier. here. I can kick off a unit test and those can run in a matter of seconds, minutes. Those aren't a big"
+    },
+    {
+      "t": 510,
+      "text": "deal. The thing I didn't consider here was the delay. I wasn't solving the delay. I was just shifting the delay from one bucket to another >> and actually adding in more complexity"
+    },
+    {
+      "t": 522,
+      "text": "to that. So, what what I did wrong was not recognizing that the problem is time."
+    },
+    {
+      "t": 529,
+      "text": "It's not what is running the service, it's the timing. And so even though I could start getting results back and I can actually tell climb or cursor or"
+    },
+    {
+      "t": 541,
+      "text": "whatever it is that I'm using um to to pull the results back, it it destroyed the workflow. Um, and I I struggled from a soft skill level to build props or to"
+    },
+    {
+      "t": 556,
+      "text": "control these workflows into stopping, going and grabbing the results and coming back and looking or even waiting."
+    },
+    {
+      "t": 563,
+      "text": "MCPs don't have a time or they have a pretty pretty um small timeout window."
+    },
+    {
+      "t": 569,
+      "text": "So, we have those problems. So, essentially, this one kind of killed it for me because it wasn't going anywhere."
+    },
+    {
+      "t": 575,
+      "text": "Um, >> limit. >> Oh, it's down. Do what? >> Rate limited."
+    },
+    {
+      "t": 579,
+      "text": ">> Do what >> is it is getting rate limited? >> Yeah, it's I think the container is still down. Maybe down. Let me find it."
+    },
+    {
+      "t": 588,
+      "text": "Talk testing API using. So, whoa, don't do that. I don't"
+    },
+    {
+      "t": 601,
+      "text": "know what just happened."
+    },
+    {
+      "t": 618,
+      "text": "All right, I might be able to get back to that one. Um, we'll see. It should take a Oh, of course not. So, yeah, we're we're pretty dead in the water with this one. I kind of gave up on it"
+    },
+    {
+      "t": 627,
+      "text": "um because I I need to rethink how I'm going to process testing and pull those back in. What I was hoping for with this one is to kind of have a structured environment where they could run and"
+    },
+    {
+      "t": 638,
+      "text": "when you needed test results, you could reach in and pull them out. Um, it doesn't really work that way. Um, so I got to go back to the drawing board with this one. Um, so there's bomb. Um,"
+    },
+    {
+      "t": 649,
+      "text": "here's the prompt that I forgot about this. I should have had this slide first. Here's the prompt that kind of initiated um, this whole talks testing API. Um, and this will kind of lead into"
+    },
+    {
+      "t": 659,
+      "text": "some of the some of the the key points and learning things that I'm I'm observing. Um, I started off with building this prompt. And this prompt basically says, \"Hey, you need to go run"
+    },
+    {
+      "t": 668,
+      "text": "test and here's all your expectations to run the test.\" Um, there's a lot to it because it's been evolved over time. And then I turned around and took this and was like, let's make an MCP out of it."
+    },
+    {
+      "t": 680,
+      "text": "So, kind of a natural progression that I've learned with a lot of this stuff is as you're moving through your workflows and as you're moving through your learning and your processing, pick up"
+    },
+    {
+      "t": 691,
+      "text": "tools as you can find them, okay? And actually put them in your work buckets."
+    },
+    {
+      "t": 696,
+      "text": "See if you can use them. Add to them as you can. Set them aside when they don't work. Get back to them."
+    },
+    {
+      "t": 703,
+      "text": "And and you'll be surprised at how big they build. And that's kind of what happened here. Unfortunately, talks testing API went sideways, but it was a great lesson that I learned there on on"
+    },
+    {
+      "t": 712,
+      "text": "how to kind of kick this can down the road as you're progressing. Um, so up next, let's do some automated workflows."
+    },
+    {
+      "t": 719,
+      "text": "Um, so I've I like I mentioned, I've been working on the client development workflow, um, which basically takes and you take a simple prompt. I want you to build an integration client with, um,"
+    },
+    {
+      "t": 731,
+      "text": "Tumblr, build it into everything, and it walks through the entire workflow. Now I I started the process doing it very manual and I'd step through it. Um but after the first or second time of doing that"
+    },
+    {
+      "t": 743,
+      "text": "on repeat I decided I needed a better documentated better documentation that I can feed in to um at the time was clined"
+    },
+    {
+      "t": 755,
+      "text": "into kind of the starting point of automating a number of workflows. Um then I swapped to Rue. Um I took on Rue for a number of um improvements, a"
+    },
+    {
+      "t": 767,
+      "text": "number of performance improvements, control improvements, um different things around a lot of these projects."
+    },
+    {
+      "t": 772,
+      "text": "And it was very simple for me to just set aside client kind of like you saw here. I just set aside client and I just launch Rue. They're based off the same branch the or not the same branch, but"
+    },
+    {
+      "t": 784,
+      "text": "the same repo. Um so they kind of have the same appeal. Whoops. Um in doing that I introduced a really interesting um frustration that I had um which is"
+    },
+    {
+      "t": 796,
+      "text": "kind of what this talk is getting into. So first thing I started noticing I would ask Rue to start doing something either there's a bug in the code we need to look at how something's reacting do a"
+    },
+    {
+      "t": 806,
+      "text": "curl command to get back this API call to see what the payload looks like. And in the past it would just run it in the terminal. No problem. Hit the terminal get the output. Let's look at it. It"
+    },
+    {
+      "t": 816,
+      "text": "sees a terminal output. I see the turnable output. Everybody's happy. Ru, on the other hand, was like, \"Yeah, we're just going to start writing scripts for everything you ask me.\""
+    },
+    {
+      "t": 826,
+      "text": ">> Yeah. >> Um, and I'm not you. Almost every single I'm sorry if I am not messing with you. Um, every single request it would start writing scripts."
+    },
+    {
+      "t": 840,
+      "text": "Mhm. Now, if I come over here to my scripts directory, um, where are you at? Scripts."
+    },
+    {
+      "t": 850,
+      "text": "It's in apps."
+    },
+    {
+      "t": 855,
+      "text": "Nope. Y'all see scripts and y'all just notice that I don't see it. And I'm probably driving you all insane, right?"
+    },
+    {
+      "t": 864,
+      "text": ">> I first need to be in the right project. How about that? >> That helps."
+    },
+    {
+      "t": 868,
+      "text": ">> That helps, right? So, here's my scripts directory. Um, this has been two projects, two tasks that's about the past week."
+    },
+    {
+      "t": 879,
+      "text": ">> Okay. So, when this first started happening, I started getting really, really frustrated with Rue."
+    },
+    {
+      "t": 886,
+      "text": ">> Um, I started going in and changing my default prompts. Um, I started cussing at it. Why the hell are you trying to write a script? Just run the damn command."
+    },
+    {
+      "t": 897,
+      "text": "Um, after about a week of this, I was like, \"What am I doing here? Let's, you know what? Let's just lean into this."
+    },
+    {
+      "t": 903,
+      "text": "Let's see what it's getting after.\" And another one of the features was like, if if if it's building scripts, it's a repeatable process for itself. And we started hinting on this in previous"
+    },
+    {
+      "t": 915,
+      "text": "presentations. Um, and a cool t-shirt is we're we're giving it too much agency."
+    },
+    {
+      "t": 921,
+      "text": "We're giving them these agents too much room to go all over the place and we need to tighten that in. And unfortunately what that means is, you know, that that agent's job is only to"
+    },
+    {
+      "t": 934,
+      "text": "run a script. That's all you do is run a script and report on it."
+    },
+    {
+      "t": 941,
+      "text": "All down to that. Um, so basically I I leaned into this. I was like, \"All right, if it's going to write scripts as it's doing stuff, that's going to give it something repeatable to do in the"
+    },
+    {
+      "t": 949,
+      "text": "future.\" Um, this becomes also a very um, if you're familiar with dry in software development or in other areas, don't repeat yourself. Don't write the same code more than once. Don't run the"
+    },
+    {
+      "t": 961,
+      "text": "same script twice. Don't write the same script twice. Don't run the same terminal commands twice. All of that applies. and what we're doing here. Um, so as I leaned into this, so before I"
+    },
+    {
+      "t": 974,
+      "text": "get ahead of myself, I started letting it write the scripts and do the things."
+    },
+    {
+      "t": 979,
+      "text": "And as I was troubleshooting, the scripts started building up. And then as I got into deeper troubleshooting, the scripts became a larger helping hand in my workflows. And instead of having"
+    },
+    {
+      "t": 992,
+      "text": "to go out and build this entire um observability stack and paying data dog million dollars a month or however much our budget is, um you just build it in line. And that's that's kind of the"
+    },
+    {
+      "t": 1006,
+      "text": "epiphany that I hit with this whole thing is if you're adding as you go, if you're picking up those tools and you're writing those scripts as you go through each one of those roads,"
+    },
+    {
+      "t": 1017,
+      "text": "eventually when you're ready to push a PR, you're going to have a pretty killer set of testing tools, testing scripts, um, that you can then apply to do"
+    },
+    {
+      "t": 1029,
+      "text": "bigger and better within it without having to within the project without really having to wait until customers start complaining about your problems."
+    },
+    {
+      "t": 1038,
+      "text": ">> And that's what we all want to get to. And so I really leaned into that one."
+    },
+    {
+      "t": 1043,
+      "text": "And what came out of it um was basically this prompt. Again, I'm starting with a prompt. I I want to understand my workflow. I want to understand what I'm getting through. I want to understand"
+    },
+    {
+      "t": 1053,
+      "text": "how to do it hands-on manually first. Once I do that, I have a pretty clear understanding of how I need to automate it. And then from there, we could iterate. So this simple script I"
+    },
+    {
+      "t": 1064,
+      "text": "literally need to troubleshoot a failure in the application. An upload in my application um for the upload logs. An upload is basically you take a picture and you post it to all the social media"
+    },
+    {
+      "t": 1075,
+      "text": "sites. We call it an upload. Um this workflow got quite complex and it also got quite complex to troubleshoot as a developer. Um, especially a single person shop who is also doing operations"
+    },
+    {
+      "t": 1088,
+      "text": "and marketing and sales and HR and all that fun jazz. I have non-existing employees and customers. So, who am I HR? I need to write up my bots. That's"
+    },
+    {
+      "t": 1100,
+      "text": "what I need to do. Um, where did I go? I'm sorry."
+    },
+    {
+      "t": 1106,
+      "text": "So we started with this prompt and this prompt turned into um an observability script and with this observ observability script I basically can now"
+    },
+    {
+      "t": 1118,
+      "text": "cancel terminate I can basically now start a task where I want to kick off some debugging activity or I want to try to root cause an issue"
+    },
+    {
+      "t": 1130,
+      "text": "and I want to kick off some monitoring. So, I basically come in here to Rue and the first thing I'm going to do is I'm going to swap over to this orchestrator um mode."
+    },
+    {
+      "t": 1141,
+      "text": "Yes, that's what they call it is a mode. Um orchestrator mode. Now, what's cool with inside rue with orchestrator mode is that basically you take off your developer cap or your your um project"
+    },
+    {
+      "t": 1153,
+      "text": "manager cap or your debugging cap, whatever it is, and you think about it from an orchestration workflow standpoint. And so whatever they're asking you to do, it is going to turn around and it's going to break it down"
+    },
+    {
+      "t": 1164,
+      "text": "into subtask and it's going to build a a a detailed understanding in its own little mind of everything it needs to step through. I have noticed that the orchestrator does amazing when you"
+    },
+    {
+      "t": 1178,
+      "text": "already have a clear workflow documented either inside of context files, inside of a PRD, wherever you have that workflow documented. if you port orchestration mode to it, it does a"
+    },
+    {
+      "t": 1190,
+      "text": "pretty damn good job of it with one exception, and we're probably going to hit that one. Um, that exception is basically when you have to deviate from that workflow. Um, it has a really hard"
+    },
+    {
+      "t": 1201,
+      "text": "time continuing to move forward. Um, understanding that where it deviated, it had it it it fixed everything so that the orchestrator could then move it to the next task."
+    },
+    {
+      "t": 1214,
+      "text": ">> That sounded like a really bad explanation. Did that did that resonate with everybody or should I resay that?"
+    },
+    {
+      "t": 1222,
+      "text": "Okay. Yeah. So, ultimately the workflow would get destroyed and you would either have to start over or you'd have to help kick it down the road and that was a problem. Um, that's kind of the only"
+    },
+    {
+      "t": 1233,
+      "text": "thing. So, what we're going to do now um is start the local develop um the local No, no, no, no, no, no."
+    },
+    {
+      "t": 1252,
+      "text": "So every bit of work has just kind of simply been boiled down into this. I just basically tell it to kick off the workflow. What it's doing is nothing special. This is all stuff we've written"
+    },
+    {
+      "t": 1262,
+      "text": "and we've used forever. There's simple scripts, bash commands that are that are pulling information out of Kubernetes, um pulling logs out of containers, all normal stuff. And then it's pulling it"
+    },
+    {
+      "t": 1275,
+      "text": "all together so we could evaluate it as a group. And so what you're seeing is you're seeing it break down into a subtask. Um you can come up here to the top of Rue and you can kind of see what"
+    },
+    {
+      "t": 1286,
+      "text": "it's doing. Um but it's walking through here. Oh, I didn't even give it the context files."
+    },
+    {
+      "t": 1295,
+      "text": "I really don't want my demos to work, do I?"
+    },
+    {
+      "t": 1300,
+      "text": "Okay. Um, looks like it's doing all right. It's picking it up. So, what it's going to do is it's gonna it's going to kick off a couple processes. Um, probably wants another terminal"
+    },
+    {
+      "t": 1313,
+      "text": "error ready. It'll get there. So, what it's going to do, it's going to kick off a couple processes that are actually monitoring the logs of the containers that I care about. Um, and that's what we described"
+    },
+    {
+      "t": 1324,
+      "text": "here. So, it's going to actively monitor those and then it's actively going to watch for the upload that we're going to kick off. So, hopefully if this thing works once it gets to the point where it's active"
+    },
+    {
+      "t": 1337,
+      "text": "has all of that stuff active, it's going to turn around and say, \"All right, I'm good to go. Give me the UU ID of the upload so we can start tracking it.\""
+    },
+    {
+      "t": 1345,
+      "text": "And it's essentially, \"Oh, we got retries. Some permanent.\""
+    },
+    {
+      "t": 1353,
+      "text": "Okay. So, along with all the scripts, I also, you can tell that it's also building out a ton of documents. Um, it's kind of one of those things that I have built into my default prompts. Um,"
+    },
+    {
+      "t": 1364,
+      "text": "and you can go as far as you want with this. Anytime I have it building out any stuff like this or any oneoffs or any type of something that you would need documentation on at like 3:00 a.m. and"
+    },
+    {
+      "t": 1376,
+      "text": "you're scrambling, it writes a document about it. And so, I don't even have to worry about the documents that are there. Um, so, so let's see. It's going to be,"
+    },
+    {
+      "t": 1388,
+      "text": "so there's development check. We'll use that one in later."
+    },
+    {
+      "t": 1401,
+      "text": "Maybe I just need to tell it to run the script."
+    },
+    {
+      "t": 1407,
+      "text": "Let's"
+    },
+    {
+      "t": 1423,
+      "text": "try this a different route."
+    },
+    {
+      "t": 1458,
+      "text": "Um, so for anybody that couldn't see that, I basically put in a prompt um that said using the upload monitoring scripts in the scripts directory, start a lo local monitoring workflow to"
+    },
+    {
+      "t": 1468,
+      "text": "validate um an upload. And so we're going to kick that off again. It might be freaking out because I did not build a higher level script yet for local development. I think I only built it for"
+    },
+    {
+      "t": 1482,
+      "text": "production, but if we can get there, we'll get there. If not, we'll move on. So, what this is scripts, I mean, it's I think it's kind of obvious what it what it does, but it it what it helps me with is"
+    },
+    {
+      "t": 1495,
+      "text": "to visualize a complex workflow that I would normally be handling. Um, but not just me, but I add that context into the the agents and I add it into RU so that"
+    },
+    {
+      "t": 1508,
+      "text": "it stays in the loop. I don't have to continue to push that down the road. Um, did we get there?"
+    },
+    {
+      "t": 1522,
+      "text": "Let's see how that goes. So essentially how this played out and you know I'm a little loose here on what I have so I do apologize. Um but this troubleshooter got me through some critical bugs with"
+    },
+    {
+      "t": 1535,
+      "text": "my upload workflow. Um what it recognized is that one of my environment variables was had a typo in it. Um, and that environment variable was the URL used by a worker container that runs"
+    },
+    {
+      "t": 1548,
+      "text": "upload task and it needs to connect with that URL to the Reddus Reddus hosted instance. So, production wasn't able to connect to the Reddus instance and I missed it for several days. Um, the"
+    },
+    {
+      "t": 1560,
+      "text": "reason was is because my develop or my deployment workflows to production um did not validate that. It just had the health checks in the containers."
+    },
+    {
+      "t": 1570,
+      "text": "Terraform had the health checks that it had, but nothing's checking services."
+    },
+    {
+      "t": 1574,
+      "text": "Obviously, who cares about services when we're deploying infrastructure?"
+    },
+    {
+      "t": 1578,
+      "text": "Um, so that's kind of what I ran into. So, I was like, okay, okay. Um, I need to take that same process, that same workflow that was successful for me in my local development and my local um"
+    },
+    {
+      "t": 1589,
+      "text": "environment and I need to apply that to production. So, I did just that. Um, I turned around and as I was cleaning up the code, as I was getting test in place, as I was working on everything"
+    },
+    {
+      "t": 1600,
+      "text": "else, I had Rue come in, um, and build basically a production deployment script. Now, um, this is essentially"
+    },
+    {
+      "t": 1612,
+      "text": "roughly the prompt that I started with to kick that workflow off. It was one that kind of delayed my fixing of production by about half a day. Um, but I got full observability into my"
+    },
+    {
+      "t": 1626,
+      "text": "production deployment and that means anything from image building at the very first stage making sure that the right images on the right platforms are built um to making sure that those are"
+    },
+    {
+      "t": 1637,
+      "text": "properly pushed and tagged in Digital Ocean's um image environment and then everything is properly deployed."
+    },
+    {
+      "t": 1646,
+      "text": "it's refreshed, rolled out successfully and in good health and then it starts checking all the services. Is the Reddus connection right? Is the database connection right? Um do we have our"
+    },
+    {
+      "t": 1656,
+      "text": "variables in the right place? Are the workers doing scheduler and then yada yada runs through all the components to validate."
+    },
+    {
+      "t": 1664,
+      "text": "This was nothing that I sat down and was like this week I am going to build an observability stack or this week I am going to improve how I do local debugging. This was something and this"
+    },
+    {
+      "t": 1677,
+      "text": "this here is the key point if there's anything out of my presentation."
+    },
+    {
+      "t": 1682,
+      "text": "These are the things that I just built in as I was typing prompts. one or two prompts here or there along with what you're building to help kick the can down the road makes a tremendous amount"
+    },
+    {
+      "t": 1695,
+      "text": "of um contribution over time. And so that's exactly what I saw here."
+    },
+    {
+      "t": 1702,
+      "text": "And so now I have an observability workflow that's it's okay. It's not too bad. It's free."
+    },
+    {
+      "t": 1711,
+      "text": "Just cost tokens to build. Um, but I have a lot tighter control over what happens locally, how it gets pushed to production, how it works locally, and then also, you know, along with testing."
+    },
+    {
+      "t": 1724,
+      "text": "That is the key component with this though is tying in the testing part, which I'm still working on there. Um, but yeah, that's that's kind of where I'm going in a nutshell."
+    },
+    {
+      "t": 1739,
+      "text": "So this is still the local monitoring setting up."
+    },
+    {
+      "t": 1745,
+      "text": "Um what you can see here is the health check returning all the data."
+    },
+    {
+      "t": 1752,
+      "text": "So let me see."
+    },
+    {
+      "t": 1758,
+      "text": "And if you remember this one um not to talk testing is basically off of this script right here or off of this prompt."
+    },
+    {
+      "t": 1768,
+      "text": "Okay, this kind of where I started do all that and then it's like all right let's automate this prompt. Um that's kind of what came out here. And so what you're seeing for the local monitoring"
+    },
+    {
+      "t": 1778,
+      "text": "it's validating that the processes aren't already running. It's then validating that um everything's in the right place. and then it starts starting everything up and then it turns around"
+    },
+    {
+      "t": 1787,
+      "text": "and starts validating that everything you stood up and everything you're working on is there. Um, and so that's kind of the start of this one. Let's see if it's prompted."
+    },
+    {
+      "t": 1800,
+      "text": "Um, yeah, I never built a a wrapper around all of these scripts. They're still individual scripts. The local workflow is actually um still expecting those. So I need to I need to build a higher level"
+    },
+    {
+      "t": 1813,
+      "text": "orchestration script. Um if you want to see though while that's still kind of working."
+    },
+    {
+      "t": 1822,
+      "text": "Um here is let's close that."
+    },
+    {
+      "t": 1829,
+      "text": "This is um the production deployment guidelines that I had it built out while it was working through how I handle and troubleshoot all this stuff. And so, um,"
+    },
+    {
+      "t": 1841,
+      "text": "it's just an MD file. I I don't think I've ever even looked at this and still instead of today. Um, but this is kind of where it started, where it worked through, and where I go from next with"
+    },
+    {
+      "t": 1853,
+      "text": "it. So, in the interest of time, so we don't have to keep doing this, let's jump into any questions, conversations, touching points. Um, it is one of those it's been a learning experience for me."
+    },
+    {
+      "t": 1867,
+      "text": "If you have insight, if you have suggestions, if you think of anything that I've done wrong right now or that I've done right, you know, I'm I'm all ears."
+    },
+    {
+      "t": 1878,
+      "text": "Any questions?"
+    },
+    {
+      "t": 1886,
+      "text": ">> I'm sorry. Could you repeat that?"
+    },
+    {
+      "t": 1890,
+      "text": ">> Yeah. So, the question was, are you working on um commercializing and selling the artist website? Yes, it is out there right now. Um it is public."
+    },
+    {
+      "t": 1898,
+      "text": "It's still working through you know getting customers. So but yes it is active and that is um that guy."
+    },
+    {
+      "t": 1909,
+      "text": ">> Yeah."
+    },
+    {
+      "t": 1913,
+      "text": ">> Sure. Sure. Oh yeah. Because if something's broken we're going to fix it. All right."
+    },
+    {
+      "t": 1921,
+      "text": ">> I hope y'all aren't ready for beer yet. All right. So this is this is local. Um"
+    },
+    {
+      "t": 1935,
+      "text": "Oh my gosh."
+    },
+    {
+      "t": 1950,
+      "text": "Okay. So here's basic the the dashboard. The uploads are what I mentioned. Um it's a very simple dashboard. Um here's a draft upload that I've already started. Um from this draft upload, you"
+    },
+    {
+      "t": 1961,
+      "text": "can basically some see basic details of it. Obviously, since it's draft, it hasn't been posted to any social sites."
+    },
+    {
+      "t": 1968,
+      "text": "Um our thumbnail's not there."
+    },
+    {
+      "t": 1972,
+      "text": "We have something"
+    },
+    {
+      "t": 1984,
+      "text": "Oh, this might be a good one, too. Might be nasty."
+    },
+    {
+      "t": 1990,
+      "text": "Um, so this is kind of walking through um kind of the steps. Here's here's adding social platforms."
+    },
+    {
+      "t": 1998,
+      "text": "Um, so it's it's just simple for users just to add. One of the things I will add to this, um, and I really didn't go into detail just to kind of save a little time. The the workflow has gotten quite"
+    },
+    {
+      "t": 2010,
+      "text": "complex for an upload. Um, it it started off it's it's relatively simple to post an image to YouTube or Imager or wherever you want to. um it's very"
+    },
+    {
+      "t": 2022,
+      "text": "difficult to validate that they're using the right files to pull out the right information and to make sure that they get posted in the right size and the right format in the right quality um"
+    },
+    {
+      "t": 2033,
+      "text": "without the user having to worry about that. And so it's becoming quite a complex um Reddus workflow to handle this reliably um but this is essentially what it is"
+    },
+    {
+      "t": 2048,
+      "text": "um reoccurring schedule man."
+    },
+    {
+      "t": 2055,
+      "text": "At least one image or video is required."
+    },
+    {
+      "t": 2060,
+      "text": "Oh man, I want to say we can fix this one, but I don't think we are. Um I I did some I moved a lot of stuff from the front end"
+    },
+    {
+      "t": 2072,
+      "text": "to the back end um that changed up how uploads are handled to prioritize the file getting upload. I don't think that's working here."
+    },
+    {
+      "t": 2082,
+      "text": "Um, let's see if we can fix this."
+    },
+    {
+      "t": 2092,
+      "text": "Colin, we can stop anytime you want."
+    },
+    {
+      "t": 2096,
+      "text": ">> I know we generally have a hard stop at 9 and it's 8:55."
+    },
+    {
+      "t": 2101,
+      "text": ">> All right, let's see what we can do here."
+    },
+    {
+      "t": 2142,
+      "text": "Okay, here I'm going to jump back over to let's do troubleshooting mode since this is a bug. Um, if you can't see it, I put in the prompt my local environment. Um, thumbnails on upload"
+    },
+    {
+      "t": 2152,
+      "text": "manager images are not properly showing up. see the attachment. So, this is basically Rue running through its thing."
+    },
+    {
+      "t": 2160,
+      "text": "If you're used to cursor, it looks a lot different. If you're Klein or any of the others, they kind of look a little bit familiar. Um, it's going to do its thing. Now, I believe one of the areas um is I I've really"
+    },
+    {
+      "t": 2175,
+      "text": "been trying to find how to attach into the developer tools better. Um, you can see that I have this browser tools MCP."
+    },
+    {
+      "t": 2185,
+      "text": "um I can't get it to connect. The MCP starts and works, but then when I try to attach it to um Klein or Rue or anything besides cursor, it it just won't work."
+    },
+    {
+      "t": 2197,
+      "text": "So, I'm kind of um struggling with pulling browser data, and that's one of those areas where I have to do manually still. So, that's kind of what um yeah,"
+    },
+    {
+      "t": 2209,
+      "text": "let's see. Network, most likely we did not get the image."
+    },
+    {
+      "t": 2214,
+      "text": "Oh, well, what did you come up with?"
+    },
+    {
+      "t": 2226,
+      "text": "It's still working."
+    },
+    {
+      "t": 2236,
+      "text": "[Music] All right."
+    },
+    {
+      "t": 2242,
+      "text": "Any other questions? I think we could probably call it there unless y'all are really wanting to see this finish out."
+    },
+    {
+      "t": 2250,
+      "text": ">> Well, on that note, um, thank you Ryan for giving us a live debugging, you know, and just like before, you know, there there's something that seeing uh seeing someone learn in the"
+    },
+    {
+      "t": 2263,
+      "text": "open and troubleshoot things uh allows me to learn, right? Because whether you simple stuff all the time, every time."
+    },
+    {
+      "t": 2271,
+      "text": "So, thank you so much. This has been so great on uh following your journey. Uh let's pack the things up. Uh for those of us want to grab a cold beverage up at the around the tavern, it is right"
+    },
+    {
+      "t": 2280,
+      "text": "around the corner. We're just going to pack up our AV gear, clean up, throw away your stuff, uh if you may, and then uh we'll walk on down and continue the conversation over a frosty beverage."
+    },
+    {
+      "t": 2290,
+      "text": "Thank you."
+    },
+    {
+      "t": 2295,
+      "text": ">> We'll take that."
+    },
+    {
+      "t": 2305,
+      "text": "What's up?"
+    }
+  ],
+  "backfill": true
+}

@@ -1,0 +1,19 @@
+name: Daily site rebuild
+
+# The site is static: premieres go live, the "next meetup" rolls over and dated recaps appear only when it rebuilds.
+# This asks Cloudflare Pages to rebuild main once a day, after the 10:00 AM Central premiere slot.
+on:
+  schedule:
+    - cron: '15 16 * * *' # 11:15 AM CDT / 10:15 AM CST
+  workflow_dispatch:
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger the Cloudflare Pages deploy hook
+        env:
+          HOOK: ${{ secrets.PAGES_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$HOOK" ]; then echo "PAGES_DEPLOY_HOOK secret is not set"; exit 1; fi
+          curl -fsS -X POST "$HOOK" > /dev/null && echo "Rebuild requested"

@@ -1,0 +1,38 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { publicTalks, upcomingTalks, fmtDay } from '../../lib/data';
+
+const live = await publicTalks();
+const soon = await upcomingTalks();
+const talksOf = (id: string) => live.filter((t) => t.data.speakers.includes(id));
+const talksBy = (id: string) => talksOf(id).length;
+const lastBy = (id: string) => Math.max(0, ...talksOf(id).map((t) => +t.data.date));
+const speakers = (await getCollection('speakers')).sort((a, b) => lastBy(b.id) - lastBy(a.id) || a.data.name.localeCompare(b.data.name));
+const nextBy = (id: string) => soon.find((t) => t.data.speakers.includes(id));
+---
+<Base title="Speakers" description="The people who have given talks at AIMUG, the AI Middleware Users Group in Austin.">
+  <section aria-labelledby="sp-h" class="mx-auto max-w-[1240px] px-4 pt-12 pb-20 sm:px-8">
+    <h1 id="sp-h" class="m-0 font-display text-[clamp(48px,7vw,96px)] leading-[0.95] font-normal uppercase">Speakers</h1>
+    <p class="m-0 mt-3 max-w-[60ch] text-xl text-soft">Builders from Austin and online who took the stage. <a href="/speak/">Your talk next?</a></p>
+    <ul class="m-0 mt-10 grid list-none grid-cols-[repeat(auto-fill,minmax(min(100%,220px),1fr))] gap-6 p-0" data-pagefind-ignore="all">
+      {speakers.map((s) => {
+        const n = talksBy(s.id);
+        const next = nextBy(s.id);
+        return (
+          <li>
+            <a href={`/speakers/${s.id}/`} class="group flex flex-col items-center gap-3 rounded-[18px] border border-line bg-panel p-6 text-center text-text no-underline hover:border-gold">
+              {s.data.photo
+                ? <img src={s.data.photo} alt="" width="140" height="140" loading="lazy" class="h-[140px] w-[140px] rounded-full object-cover" />
+                : <span class="flex h-[140px] w-[140px] items-center justify-center rounded-full border border-line bg-panel font-display text-5xl text-gold">{s.data.name.split(' ').map((w) => w[0]).slice(0, 2).join('')}</span>}
+              <span class="text-xl font-bold group-hover:text-gold">{s.data.name}</span>
+              <span class="font-mono text-sm text-muted">
+                {n > 0 ? `${n} ${n === 1 ? 'talk' : 'talks'}` : next ? `Premieres ${fmtDay(next.data.publishAt!, { weekday: undefined })}` : 'Talk coming'}
+              </span>
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+  </section>
+</Base>

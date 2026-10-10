@@ -1,0 +1,9 @@
+---
+import PostList from '../../components/content/PostList.astro';
+import { paged, posts } from '../../components/content/content';
+
+const [page] = paged(await posts(), '/blog/');
+---
+<PostList title="Recaps" kicker="Recaps" description="Recaps of every AIMUG meetup: the talks, the demos and what the room learned." intro="Meetup recaps, Office Hours notes, and community news from AIMUG." page={page}>
+  <p class="mt-4 mb-0 flex flex-wrap gap-x-5 gap-y-2 text-base"><a href="/blog/archive/">Archive</a><a href="/blog/tags/">Tags</a><a href="/blog/authors/">Authors</a><a href="/blog/rss.xml">RSS</a></p>
+</PostList>

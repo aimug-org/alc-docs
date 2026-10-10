@@ -1,0 +1,10 @@
+---
+import PostList from '../../../components/content/PostList.astro';
+import { paged, posts, type Page, type Post } from '../../../components/content/content';
+
+export async function getStaticPaths() {
+  return paged(await posts(), '/blog/').slice(1).map((page) => ({ params: { n: String(page.n) }, props: { page } }));
+}
+const { page } = Astro.props as { page: Page<Post> };
+---
+<PostList title="Recaps" kicker="Recaps" description={`Recaps of every AIMUG meetup: the talks, the demos and what the room learned. Page ${page.n}.`} page={page} />

@@ -1,0 +1,647 @@
+{
+  "title": "Middleware para IA desde Cero: cómo funciona un arnés de agentes en Python",
+  "speakers": [],
+  "date": "2026-06-23",
+  "youtubeId": "1P1r1bmET1Q",
+  "duration": 1802,
+  "summary": "Middleware para agentes de IA desde cero: construimos un arnés completo en Python y desmitificamos lo que realmente ocurre dentro de Claude Code, LangChain y otros frameworks.",
+  "topics": [
+    "Agents"
+  ],
+  "transcript": [
+    {
+      "t": 0,
+      "text": "tenía una presentación que es básicamente la presentación que él dio."
+    },
+    {
+      "t": 4,
+      "text": "Entonces, tengo un demo también y la idea es eh encajan muy bien las dos charlas porque es básicamente la implementación de todo esto que acabamos de ver. Este, entonces para resumir el"
+    },
+    {
+      "t": 20,
+      "text": "el tema de del de la gente y el bucle es su forma más simple, ¿no? Y la idea de cómo controlar ese bucle o cómo generar"
+    },
+    {
+      "t": 32,
+      "text": "un arnés que controle a la gente, eh, se hace a través de los conceptos que precisamente presentó Rolando, ¿no?"
+    },
+    {
+      "t": 41,
+      "text": "Entonces, si este siendo el ciclo básico del usuario, digamos, a llamar una herramienta, la observación y darte la respuesta. Y en"
+    },
+    {
+      "t": 53,
+      "text": "el medio viene entonces el manejo del life cycle, ¿no?, que es el manejo que que se hace a través de estos hooks y es lo que muchos frameworks que están llamando middleware y muchos providers"
+    },
+    {
+      "t": 65,
+      "text": "están llamando middleware, ¿no? Entonces, el middleware eh tiene algo interesante en la arquitectura, digamos, de un ARM, porque el middleware te"
+    },
+    {
+      "t": 77,
+      "text": "permite componer distintas herramientas según el caso de uso específico que yo le quiera dar a un agente, ¿no?"
+    },
+    {
+      "t": 85,
+      "text": "Entonces, básicamente, los hooks se hacen como que un wrap alrededor de el el ciclo de vida de la"
+    },
+    {
+      "t": 97,
+      "text": "gente. Entonces, eh hooks pueden ser pueden venir antes de la gente, después de llamar al modelo, pueden estar alrededor de un toolcal, sí, pueden"
+    },
+    {
+      "t": 109,
+      "text": "estar después del modelo y pueden estar después de la gente como tal. Entonces, si eh pensamos o yo la la analogía que me gusta pensar es que eh"
+    },
+    {
+      "t": 123,
+      "text": "si esto fuera una bicicleta eh las los hooks fueran como las rueditas, ¿no?"
+    },
+    {
+      "t": 129,
+      "text": "Entonces, ¿por qué? Porque cada vez que el agente llama un toolcal, yo puedo hacer un parsing de específicamente los argumentos que está llamando el agente."
+    },
+    {
+      "t": 140,
+      "text": "Puedo hacer paring, digamos, con SOD o con Pantic para validar, digamos, los inputs y los outputs de esa herramienta."
+    },
+    {
+      "t": 149,
+      "text": "Entonces, son lo que realmente nos permite inyectar determinismo de vuelta en el ciclo de vida de la gente, ¿no?"
+    },
+    {
+      "t": 157,
+      "text": "una llamada no es suficiente porque de nuevo el agente o ya lo vamos a ver en el demo, lo que realmente regresa el API del proveedor es extremadamente básico, ¿no? es una respuesta donde tienes este"
+    },
+    {
+      "t": 171,
+      "text": "stop reason y tienes un un esquema simple y el resto eh de sistema de seguridad, el resto de behavior de cómo"
+    },
+    {
+      "t": 184,
+      "text": "cargar, cómo hacer el prompt injection, depende específicamente del ciclo de vida, ¿no? Entonces, yo he estado trabajando en este pequeño e proyecto"
+    },
+    {
+      "t": 196,
+      "text": "personal eh en Python, digamos que haciendo mi arnés propio, ¿no? Haciendo un arnés desde cero y para tratar de eh entender realmente qué es lo que estoy"
+    },
+    {
+      "t": 209,
+      "text": "usando, ¿no? Entonces, esta es básicamente la estructura base eh que está en Cloud Code, que está en Open Clow eh y que está, digamos, en el"
+    },
+    {
+      "t": 223,
+      "text": "proyecto de de Lunchain que se llama Deep Agent. Eh, no es un una, o sea, no es un codebase para producción, para ser distribuido, es netamente un proyecto de"
+    },
+    {
+      "t": 236,
+      "text": "aprendizaje, pero ya empieza a a tener, digamos, todos los módulos eh necesarios que están en un en un arnés profesional, ¿no? Entonces, digamos que el reple es"
+    },
+    {
+      "t": 252,
+      "text": "básicamente el ciclo para yo poder introducir estos slash commands, ¿no?"
+    },
+    {
+      "t": 257,
+      "text": "Entonces, es básicamente como un parser que funciona con con la línea de comando en donde yo puedo leer los slash commands para ejecutar alguna acción antes de llamar al modelo. Agent es"
+    },
+    {
+      "t": 269,
+      "text": "básicamente el el corazón de de del arnés. Eh, es donde está el bucle que vamos a ver ahorita. el middleware."
+    },
+    {
+      "t": 278,
+      "text": "Entonces, como vimos, son las rueditas alrededor de este modelo. Entonces, si pensamos que en el modelo yo voy a hacer una llamada, un API y me va a a regresar estas respuestas, el middleware lo que"
+    },
+    {
+      "t": 290,
+      "text": "hace es atrapar las respuestas, atrapar las llamadas, eh hacer validación, hacer parcsing."
+    },
+    {
+      "t": 297,
+      "text": "Tools viene a ser eh eh toda la librería de funciones que yo le doy a mi agente eh con un esquema en Jason para que él"
+    },
+    {
+      "t": 309,
+      "text": "pueda ejecutar acciones en mi sistema. Y permissions es básicamente el sistema para poder de establecer eh qué herramientas puede un agente llamar en"
+    },
+    {
+      "t": 321,
+      "text": "determinado momento, ¿no? A esto yo también le agregaría el módulo de sesiones, que es eh básicamente eh cómo cómo hacemos para keep track de las conversaciones que hemos estado teniendo"
+    },
+    {
+      "t": 333,
+      "text": "con el agente, ¿no? Entonces creo que ya mucho de esto, okay, esto es interesante, eh, cómo funciona un turno. Entonces, básicamente como expandiendo un poquito"
+    },
+    {
+      "t": 346,
+      "text": "ese ese loop básico, este, realmente tenemos el rapper, que es la interacción contigo, el tob, ¿no? el terminal UI o"
+    },
+    {
+      "t": 358,
+      "text": "en este caso un simple reple como lo vamos a ver ahorita y él es el que se encarga entonces de hacer ese parsing de comandos, de skills para poder eh transformar eso en un workflow o"
+    },
+    {
+      "t": 372,
+      "text": "simplemente en un mensaje que se lo pasa directamente al modelo, ¿no?"
+    },
+    {
+      "t": 376,
+      "text": "agents en el caso de la arquitectura que vamos a ver específicamente, entonces es el que construye ese query inicial al API, ¿no? Y empieza entonces a entrar middleware, ¿no? En"
+    },
+    {
+      "t": 389,
+      "text": "este caso vamos a ver varios middlewares que ya están instalados. Por ejemplo, eh el Arnes tiene un un middleware de elección del del modelo dinámico, en donde según el query que tú le estás"
+    },
+    {
+      "t": 401,
+      "text": "haciendo, el T dice, \"Bueno, vamos a usar un modelo con low thinking o con high thinking.\" Y lo interesante del middleware es que puedes empezar a hacer este stacking, ¿no? El el middleware se"
+    },
+    {
+      "t": 413,
+      "text": "ejecuta en orden y tú puedes definir ese orden en que quieres que se ejecute. Y eso no es en esta arquitectura, es en general en los coding ya la mayoría de"
+    },
+    {
+      "t": 425,
+      "text": "arneses tienen formas en las que tú puedes utilizar este middleware y escribir tu propio middleware, porque la idea es que al ser simples funciones, como lo van a ver ahorita, se pueden"
+    },
+    {
+      "t": 437,
+      "text": "componer, ¿no? Entonces, eh viven dentro del ciclo de vida y se componen según las necesidades del caso de uso, ¿no?"
+    },
+    {
+      "t": 447,
+      "text": "Entonces, esto es interesante porque hace que el middleware se defina como algo que es netamente explícito."
+    },
+    {
+      "t": 457,
+      "text": "¿Qué quiero decir con eso? que eh yo puedo entonces eh crear una nueva eh función como dynamic model Router, en donde básicamente estoy leyendo el"
+    },
+    {
+      "t": 469,
+      "text": "estado y voy a decidir qué modelo. Y a través de estos que son los verdaderos hooks, llamemos a la función el middleware y llamemos a esto el hook como tal. El hook le dice al sistema,"
+    },
+    {
+      "t": 481,
+      "text": "\"Ey, vamos a poner esta función antes de llamar al modelo, vamos a poner esta función después de llamar al modelo, vamos a poner esta función eh al llamar el tool, ¿no? Vamos a poner esta antes"
+    },
+    {
+      "t": 493,
+      "text": "de llamar el tool.\" Entonces, cada uno de estos eh funciones eh corren en el life cycle de la gente y pueden removerse y agregarse cuando se necesitan, lo que nos permite entonces"
+    },
+    {
+      "t": 508,
+      "text": "adaptar, digamos, una misma arquitectura a distintos casos de uso."
+    },
+    {
+      "t": 514,
+      "text": "Eh eh en este caso nosotros tenemos, por ejemplo, eh yo tengo un comando para definir quién está utilizando el el agente. si eres un viewer, si eres un"
+    },
+    {
+      "t": 526,
+      "text": "operator o un administrador y los tres se a través de middleware deciden qué herramientas puede ver el agente o no."
+    },
+    {
+      "t": 536,
+      "text": "Eh, si la idea es que eh middleware lo podemos utilizar para cosas como permisos, para cosas como eh simplemente bloquear comandos en en total, pero"
+    },
+    {
+      "t": 549,
+      "text": "también para cosas como prompt injection, ¿no? En el que por ejemplo un skill al final es, mira, leo el comando en el reple, cargo un MD y lo inyecto en el prompt. Entonces, eh Skill surgió"
+    },
+    {
+      "t": 563,
+      "text": "como un protocolo que está implementado, digamos, ya eh como como lo ponen en la web, pero si uno lo deconstruye es esencialmente eso, ¿no? Es un una pieza"
+    },
+    {
+      "t": 575,
+      "text": "de middleware que dice antes de llamar al modelo, déjame ver si hay un comando con un slash que se llama front end. Si está esto, entonces read file, leo el MD y lo conecto al system prom antes de"
+    },
+    {
+      "t": 588,
+      "text": "llamar al modelo. Eso es un skill."
+    },
+    {
+      "t": 592,
+      "text": "Entonces este vamos a ver de una vez Python están familiarizados con Python por lo menos un poquitito."
+    },
+    {
+      "t": 601,
+      "text": "Bien. Eh, entonces aquí tienen básicamente, bueno, esta es la presentación, pero tienes tiempo para la gente"
+    },
+    {
+      "t": 614,
+      "text": "eh es probable. En este momento estamos conectados con eh Minimx. Eh, déjame ver porque creo que esto está"
+    },
+    {
+      "t": 630,
+      "text": "no estoy en mi computadora, así que debería de permitirme"
+    },
+    {
+      "t": 645,
+      "text": "ninguno de mis keywordas están puestos acá. la caja."
+    },
+    {
+      "t": 651,
+      "text": "Mm. Vámonos a irnos entonces."
+    },
+    {
+      "t": 655,
+      "text": "Eh, ah, debo tener internet un segundo. Así estamos conectados."
+    },
+    {
+      "t": 672,
+      "text": "Entonces, aquí eh este es el pequeño agente eh funcionando en su forma más básica. Y si notan, lo primero que van a notar es, bueno, no está toda la pintura de labios del terminal UI, esto es raw"
+    },
+    {
+      "t": 687,
+      "text": "eh responses directo en la terminal."
+    },
+    {
+      "t": 691,
+      "text": "Pero entonces eh solo para que vean el Ron y después lo mapeamos al código. Eh, fíjate, yo le puedo preguntar, yo le puedo dar aquí un comando eh roll, por ejemplo, y el rep entonces me va a"
+    },
+    {
+      "t": 702,
+      "text": "responder y me va a decir, \"Este roll es viewer, ¿no? Entonces, fíjate, esto todavía no tiene nada que ver con llamar a un modelo, ni siquiera en este momento es eh un parcer eh definiendo o o"
+    },
+    {
+      "t": 715,
+      "text": "leyendo que yo estoy llamando un slash command y y regresándome el rol. Yo le puedo decir roll admin y cambiar de roll, pero entonces yo le puedo decir qué herramientas tienes. Ponte."
+    },
+    {
+      "t": 728,
+      "text": "Y aquí es donde entra el middleware, ¿no? Entonces, si ves, vas a tener dos login arriba, estos dos, ¿no? Que te están que que que es un logger, ¿no?"
+    },
+    {
+      "t": 737,
+      "text": "Para eso también sirve middleware. Middleware te da observabilidad en cada parte de la ejecución del agente."
+    },
+    {
+      "t": 743,
+      "text": "Entonces, con el middleware tú puedes eh hacer todo el sistema de observabilidad y de analytics del modelo, ¿no? En este momento, fíjate, él te está diciendo aquí tool filter es básicamente según mi rol,"
+    },
+    {
+      "t": 756,
+      "text": "¿qué es lo que puedo hacer? Si mi rol es viewer, yo tengo escondida la herramienta de run commando, escondida save memory y write file. Eh, aquí este router es el que está"
+    },
+    {
+      "t": 769,
+      "text": "eligiendo el modelo. En esta en este caso está eligiendo el modelo default, ¿okay? y eh él está respondiendo aquí correctamente cuáles son las herramientas que él tiene. Si yo cambio"
+    },
+    {
+      "t": 781,
+      "text": "entonces de roll admin, yo estoy usando el rep ejecutar en un hook este cambio de literalmente eh la forma en la que yo"
+    },
+    {
+      "t": 794,
+      "text": "voy a llamar al modelo. Si yo le pregunto qué herramientas tienes, él me él me va a dar entonces las herramientas que el user adminilegios a ver, ¿no? Entonces, fíjate que aquí él me está diciendo que ahora tiene el run"
+    },
+    {
+      "t": 807,
+      "text": "command y ya él puede Entonces tú le puedes decir eh list files in root y aquí viene la el sistema de permisología, ¿no? Entonces, él me va e,"
+    },
+    {
+      "t": 820,
+      "text": "vamos a ver, en este caso"
+    },
+    {
+      "t": 834,
+      "text": "eh él llamó correctamente, pero les quería mostrar eh el sistema de permiso, No,"
+    },
+    {
+      "t": 849,
+      "text": "entonces que este dot folder que ya lo ven en todos lados, ¿no? DCL, Dopod, etcétera. Aquí es donde básicamente vive de memoria, sesiones, aprobación."
+    },
+    {
+      "t": 862,
+      "text": "Entonces, las sesiones son tan simples como un Jason L. Este, ahorita ya hay diferentes soluciones, pero así empezaron la mayoría. Si tú ves como lo usa P todavía hace esto. Entonces,"
+    },
+    {
+      "t": 876,
+      "text": "básicamente yo estoy guardando cada uno de los turnos que pasa con middleware en este session file y yo lo puedo inspeccionar luego como un tree o porque precisamente eh él tiene aquí y un ID y"
+    },
+    {
+      "t": 890,
+      "text": "tiene un parent ID. Entonces, al tener un parent ID, tú puedes asociar, digamos, una sesión debajo de otra sesión madre y tener sesiones separadas con subsiones, que me parece muy"
+    },
+    {
+      "t": 902,
+      "text": "interesante. Y approvals, entonces es lo que le va a permitir eh a la gente eh saber si tiene permisos para hacer algo o no, ¿no? Entonces, en este momento lo"
+    },
+    {
+      "t": 914,
+      "text": "que nos pasó es que estamos en el rol de admin y admino, ¿no?"
+    },
+    {
+      "t": 924,
+      "text": "Si cambiamos a Roll Viewer y yo le digo este hello. MD in root S to Py mod, él"
+    },
+    {
+      "t": 936,
+      "text": "debería de tener que pedirme permisos para hacer esto. Entonces, de nuevo es el router y no me los pidió, ¿eh? Entonces,"
+    },
+    {
+      "t": 950,
+      "text": "que no puede hacer que lo hagas tú mismo, ¿sí? porque no no está available con este usuario, ¿no? Entonces, si si empezamos como a mapear esto en el código para que eh se entienda, porque"
+    },
+    {
+      "t": 963,
+      "text": "es realmente mucho más eh fácil de lo que eh parece hacer un un pequeño arnés como este, ¿no? Entonces vamos desde el main.Pie,"
+    },
+    {
+      "t": 976,
+      "text": "que que muestra, digamos, el setup inicial."
+    },
+    {
+      "t": 981,
+      "text": "Entonces, eh arriba lo que tenemos es todo el import de nuestros tools. Como como nos dijo Rolando, son dos cosas las que estamos importando, los handlers, que son los que de verdad ejecutan el"
+    },
+    {
+      "t": 992,
+      "text": "tool, y sus esquemas, ¿no? Y esos son los esquemas en Jason que él nos mostró."
+    },
+    {
+      "t": 998,
+      "text": "Eh, ambos dos entonces hacen el toolcal posible."
+    },
+    {
+      "t": 1002,
+      "text": "Eh, tenemos el esto es de iniciación y este es el sistema entonces para registrar los tools. Entonces, generalmente los arneses centralizan el"
+    },
+    {
+      "t": 1014,
+      "text": "registro de tools con un tool registry, que es básicamente como un objeto en donde tú vas a poner allí cuáles son los tools. Es una es es una forma sencilla de manejarlo."
+    },
+    {
+      "t": 1025,
+      "text": "donde por ejemplo nosotros hacemos tool sets completos y tú le con namespace y tú le puedes decir curriculum tools o tools para y eso lo haces con el patrón"
+    },
+    {
+      "t": 1038,
+      "text": "sencillo de tener un tool registry y el middleware que es donde están estos hooks que que que es lo que venimos viendo, ¿no? Entonces, si f eh aquí en el en el middleware roll base, esta"
+    },
+    {
+      "t": 1052,
+      "text": "sería la función que yo quiero que corra y yo le estoy diciendo que aquí es donde yo quiero que la ponga. Entonces este hook entra antes de los tools, este antes del modelo, este después del"
+    },
+    {
+      "t": 1064,
+      "text": "modelo y así sucesivamente. Entonces, si eh esto que ustedes ven aquí que es messages, un array, esa es la ventana de contexto, literalmente."
+    },
+    {
+      "t": 1076,
+      "text": "Eso es lo que es, ¿no? Es un array de mensajes a los que vamos a agregar mensajes según vamos haciendo turnos con el LLM. El system prompt en este caso es"
+    },
+    {
+      "t": 1088,
+      "text": "una pequeña función, pero el system prompt es de este tamañito, ¿no? Y esto es lo que es lo load."
+    },
+    {
+      "t": 1094,
+      "text": "Entonces, tengo eh tres líneas de de de texto y aquí tienes una pequeña función que los corre, digamos, eh a este session key daytime now, esto es"
+    },
+    {
+      "t": 1106,
+      "text": "básicamente el sistema para poder manejar las conversaciones, ¿no?"
+    },
+    {
+      "t": 1112,
+      "text": "Contexto en este caso es como nosotros vamos a eh decirle a la gente cosas específicas sobre nuestro usuario."
+    },
+    {
+      "t": 1121,
+      "text": "Entonces, aquí puede ser como que nuestro setting o un user ID. Eh, esto no vive dentro del modelo, sino que entra como contexto a la gente y él sabe, ah, estoy hablando con esta persona."
+    },
+    {
+      "t": 1134,
+      "text": "Eh, también llamado el estado, ¿no? State. Eh, entonces en el en la entrada, fíjate, run rapple, cada vez que nosotros hablamos un turno, pasa esto, eh los mensajes, eh, cargamos el system"
+    },
+    {
+      "t": 1148,
+      "text": "prompt, cargamos un session key cargamos este context. Y en el reple es sencillo, es un pequeño loop, ¿no? Es un wild loop en donde aquí arriba esto es todo lo que"
+    },
+    {
+      "t": 1160,
+      "text": "tiene que ver con slash commands, ¿no? Entonces chequeamos si es un command con is command y handle command es el handler que es el que le está diciendo realmente, \"Ah, mira, es un simple match"
+    },
+    {
+      "t": 1171,
+      "text": "que dice si es exit sal, si es clear esto.\" Aquí es donde definiríamos slash commands, ¿no? Entonces, este es el parcer sencillo que corre, digamos, en"
+    },
+    {
+      "t": 1183,
+      "text": "el reple antes de llamar al modelo. Eh, si nos vamos entonces a Rpple, aquí es donde realmente empieza a ver el tema del proveedor, ¿no? Eh, aquí este"
+    },
+    {
+      "t": 1198,
+      "text": "es el primer momento en donde tomamos la ventana de contexto y le agregamos un primer mensaje que es precisamente nuestro user input. Entonces el user input es vamos a pararlo con el rapper,"
+    },
+    {
+      "t": 1208,
+      "text": "vamos a ver si tiene un slash command, vamos a ver si tiene skills y si no vamos a hacer el append a nuestro array de que que representa la ventana de contexto."
+    },
+    {
+      "t": 1219,
+      "text": "Entonces aquí delegamos con este tryc catch eh eh la respuesta a esta función que ya la vamos a ver, que básicamente es el loop de la gente, es el agente, es el bucle."
+    },
+    {
+      "t": 1232,
+      "text": "Hm. Eh, aquí es donde viene eh o o aquí ya podemos ver qué pasa cuando corremos esto. Específicamente vamos a obtener este response y este response es el Jason que les estaba mostrando ahorita."
+    },
+    {
+      "t": 1245,
+      "text": "Este response incluye este key que es stop reason. Y básicamente con el stop reason es que nosotros podemos saber eh el LLM desde el nivel del proveedor qué es lo que realmente está haciendo."
+    },
+    {
+      "t": 1257,
+      "text": "Entonces en este caso tenemos max iterations, tenemos error que Antropic nos regresa a errores, tenemos entonces e este thinking que son thinking tokens que"
+    },
+    {
+      "t": 1271,
+      "text": "están adentro y tenemos eh response tool Call, ¿no? que es una ray porque pueden ser múltiple múltiples toolcals en paralelo. Entonces, básicamente tú dices por cada toolcal en las respuestas corre"
+    },
+    {
+      "t": 1285,
+      "text": "el tool, ¿no? Y básicamente al final eh es hacer el appending de nuevo a a el arrey de decir, \"Ey, ahora los mensajes son estos.\""
+    },
+    {
+      "t": 1297,
+      "text": "Y en el run agent, este es el corazón y la base, digamos, de un un agent hardness y son 150 líneas de código."
+    },
+    {
+      "t": 1309,
+      "text": "Entonces, eh, fíjate, estamos importando nuestro middleware, que ya lo vamos a ver, la configuración y los settings."
+    },
+    {
+      "t": 1317,
+      "text": "Estos son los types básicos que creé para tener los helpers del stop reason y eso y de nuestros tools el el executor y los esquemas, ¿no? Entonces, inicializamos el cliente de Antropic. En"
+    },
+    {
+      "t": 1330,
+      "text": "este caso es es eh no estoy usando Antropic como tal, pero el modelo usa el mismo API shape. Eh, esto es un pequeño helper para traducir, digamos, content blocks adiccionarios. Y aquí está el"
+    },
+    {
+      "t": 1343,
+      "text": "corazón de todo lo que realmente es es un agent. Eh eh tenemos el estado de la gente, que es esto y nos va a revolver este agent response, context, tool"
+    },
+    {
+      "t": 1356,
+      "text": "calls, thinking es donde vamos a ir poniendo todas estas respuestas que él nos va dando. Entonces aquí es tan fácil como eh manejar los edge cases, ¿no? Si llegamos a las iteraciones máximas,"
+    },
+    {
+      "t": 1368,
+      "text": "devolver un agent response, que no se puede, ponte. Y aquí es donde eh ves que están implementados los hooks como tal."
+    },
+    {
+      "t": 1376,
+      "text": "Entonces, antes de llamar al modelo está el before middleware y aquí es donde estamos creando el cliente y aquí es donde estamos vamos a llamar. Entonces está el otro middleware de after the"
+    },
+    {
+      "t": 1389,
+      "text": "model call, ¿no? Estos son los handlings de los errores como error de conexión, rate limiting y las excepciones. Y aquí es donde realmente está eh"
+    },
+    {
+      "t": 1403,
+      "text": "eh la ejecución. Cuando él nos pasa, cuando cuando el proveedor nos dice que eh este stop reason es endurs, entonces nosotros agregamos ese mensaje a la a la"
+    },
+    {
+      "t": 1415,
+      "text": "lista de contextos. En este caso es aquí simplemente es convertir esto en un en un diccionario. Los thinking parts, que son los thinking tokens, van entonces en este bloque. Se hace un join,"
+    },
+    {
+      "t": 1428,
+      "text": "básicamente y se retorna entonces la respuesta del stop reason con los mensajes y con ese tool call, ¿no?"
+    },
+    {
+      "t": 1439,
+      "text": "Entonces, aquí lo que tienes es el bucle para llamar entonces la los tools eh para cada toolc que me que esté dentro de estos tool blocks, vamos a aprender"
+    },
+    {
+      "t": 1451,
+      "text": "este toolcal que tiene un toolcal ID, los argumentos que son este input y su nombre, ¿no? Entonces, este tool result"
+    },
+    {
+      "t": 1463,
+      "text": "la observabilidad de la gente cuando la gente dice que cuando se dice que un agente lo que hace es ejecutar un tool y reaccionar, esto es lo que está pasando, ¿no? El toolcal se ejecuta, el toolcal"
+    },
+    {
+      "t": 1477,
+      "text": "se agrega el mensaje contexto y se le manda de vuelta a la gente. E eso es todo lo que realmente está sucediendo."
+    },
+    {
+      "t": 1485,
+      "text": "Lo único que nos queda por aquí afuera es como tal el middleware, que es la parte interesante y la parte de donde nos permite extender entonces un arnés y hacer un arnés específicamente diseñado"
+    },
+    {
+      "t": 1497,
+      "text": "para nosotros. Entonces, ¿cómo funciona un sistema de middleware? De la forma más simple. Ya vimos esto, los before, after, eh before tool y after tool, ¿no?"
+    },
+    {
+      "t": 1508,
+      "text": "Cada uno de estos básicamente son los handlers para agregarlos en el life cycle, o sea, para registrarlos, por así decirlo, y eh"
+    },
+    {
+      "t": 1520,
+      "text": "aquí abajo. Estos son los los executors, digamos, del del de los hooks. Entonces, fíjate, es es sencillo."
+    },
+    {
+      "t": 1528,
+      "text": "hooks. En este caso, cuando yo uso esta función, yo estoy agregando con una pend un array de hooks y aquí el ejecutor"
+    },
+    {
+      "t": 1540,
+      "text": "dice para cada hook en el array de antes del modelo, voy a ejecutarlo con este request, ¿no? Entonces, básicamente es es así de simple, ¿no? Tengo un"
+    },
+    {
+      "t": 1552,
+      "text": "request, tengo una lista de hooks definidos por el usuario que me dicen, \"Estas son las cosas que yo quiero que pasen antes de que se llame al modelo y este modelo y esta función lo va a"
+    },
+    {
+      "t": 1563,
+      "text": "ejecutar en orden, ¿no? Y aquí es donde realmente llega el middleware, que es lo puedes ver como plugins y lo puedes ver como middleware. en frameworks ya más maduro como LChain, tú simplemente"
+    },
+    {
+      "t": 1576,
+      "text": "puedes escribir estas funciones y conectarlas al sistema de middleware, donde tú quieras, antes del modelo, antes del Toolcol. Y fíjate que entonces también es relativamente muy simple, es"
+    },
+    {
+      "t": 1588,
+      "text": "una simple función de Python, ¿no?, que está leyendo el request y en este caso va a retornar un request. Leemos para encontrar el último mensaje, ¿no?"
+    },
+    {
+      "t": 1601,
+      "text": "¿Cuántos mensajes llevamos para seleccionar el modelo? Eh, según los settings eh selecciono si es avanzado o no y retorno los settings del modelo."
+    },
+    {
+      "t": 1613,
+      "text": "En este caso, por ejemplo, eh esto es un middleware que se usa para tools, ¿no?"
+    },
+    {
+      "t": 1618,
+      "text": "Entonces, le estamos pasando el tool list, se le pasa el contexto y básicamente él está leyendo. Si tienes el rol correcto, te va a retornar una serie de tools y si no tienes el rol"
+    },
+    {
+      "t": 1629,
+      "text": "correcto te va a retornar otra serie de tools. Entonces, estas funciones que son, mira, este es el loger que estábamos viendo literalmente"
+    },
+    {
+      "t": 1642,
+      "text": "aquí estos loggers, Tool Filter y el loger de del Tool Rout, del model router, eh son básicamente estos es eh"
+    },
+    {
+      "t": 1654,
+      "text": "eh voy a recibir el nombre del tool, voy a recibir los argumentos del tool, voy a recibir el contexto y eh hacer Entonces, leer del diccionario, eh contar cuántas veces se ha llamado y hacer un print,"
+    },
+    {
+      "t": 1667,
+      "text": "que básicamente es el login. Y aquí tú te puedes empezar a poner custom, redactar secretos, redactar personal identifiable information, este"
+    },
+    {
+      "t": 1680,
+      "text": "realizar, digamos que eh múltiples llamadas a un API call para yo, por ejemplo, tener contexto dinámico."
+    },
+    {
+      "t": 1687,
+      "text": "Entonces, si tú me escribes, yo sé solamente tu Tool ID, con middleware puedo leer ese Tool ID, hacer una llamada a mi base de datos, inyectar en contexto. Entonces realmente para mi"
+    },
+    {
+      "t": 1699,
+      "text": "middleware y este sistema de hooks es donde está el corazón de generar un arnés. Eh, si vieron como vimos el agents.pi, es"
+    },
+    {
+      "t": 1712,
+      "text": "extremadamente simple, es un es un tool y es básicamente manejar los ed cases que te da el provider. Lo que hacen al arnés interesante y lo que hace al arnés customizable"
+    },
+    {
+      "t": 1725,
+      "text": "es el middleware y son estos hooks, son las rueditas, digamos, que le ponemos alrededor a la bicicleta. Entonces, espero que les haya dado como un un"
+    },
+    {
+      "t": 1737,
+      "text": "mejor idea de que dentro de estas herramientas no hay magia, de que si lo llevas a su forma más simple, en quizás 2000 líneas de código haces un agent harness."
+    },
+    {
+      "t": 1749,
+      "text": "Y no es, digamos, un el el black box que Antropic a veces quiere que creen que que ellos dicen que ellos están haciendo un game engine, ¿no? En en en el en la"
+    },
+    {
+      "t": 1761,
+      "text": "terminal. Eh, realmente es bastante más simple de lo que parece y termina siendo como muy eh o muy acertado lo que dice Rolando de que eh si ahora tenemos un piloto que es"
+    },
+    {
+      "t": 1776,
+      "text": "más inteligente, que es el modelo, al final eh el avión es el que hace que huelen, ¿no? Es el piloto, ¿no? Eh, el piloto sin el avión no sirve de nada. y esta arquitectura que ya está madurando"
+    },
+    {
+      "t": 1789,
+      "text": "alrededor de Arneses, eh, es lo que hace a a ese avión. Gracias, muchachos."
+    },
+    {
+      "t": 1799,
+      "text": "Preguntas."
+    }
+  ],
+  "language": "es",
+  "backfill": true
+}

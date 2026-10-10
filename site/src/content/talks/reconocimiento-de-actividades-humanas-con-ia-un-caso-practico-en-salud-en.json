@@ -1,0 +1,617 @@
+{
+  "title": "Reconocimiento de actividades humanas con IA: un caso práctico en salud (En Espanol)",
+  "speakers": [],
+  "date": "2026-05-06",
+  "youtubeId": "-N2yV_ZWVns",
+  "duration": 1732,
+  "summary": "Presente a Milagros Jaen Vargas IA para la salud: Human Activity Recognition (HAR) con un caso real | Panama AIMUG",
+  "topics": [],
+  "language": "es",
+  "transcript": [
+    {
+      "t": 2,
+      "text": "Bueno, entonces eh tengo milagro Jaén, estoy contenta de estar aquí con ustedes para hablarles un poco sobre el reconocimiento de actividades humanas con inteligencia artificial y un caso práctico en salud."
+    },
+    {
+      "t": 15,
+      "text": "Eh, yo como dije, soy de Panamá, trabajo en Indicati, que es un Instituto Nacional de investigaciones científicas eh focado en tecnologías de información y comunicación."
+    },
+    {
+      "t": 28,
+      "text": "Estamos dentro de la el auto IP y es una IP que se hace, ¿no? Entonces, eh hace como año y medio estudio, programa es biomédica."
+    },
+    {
+      "t": 40,
+      "text": "Entonces, eh lo que hago es cómo poner la tecnología, las fallas y todo eso para hacer ayudas a la salud. Eso es un general. Entonces, eh, voy a actualizar."
+    },
+    {
+      "t": 54,
+      "text": "Estudié en Madrid, por eso que dice que el proyecto está avalado por el laboratorio de Centro de Tecnología Biomédica y en la Politécnica de Madrid, como estaba ya por también alguien lo y"
+    },
+    {
+      "t": 66,
+      "text": "ese sindicato. Entonces, vamos a ver qué es humanity recognition, se le llama es la manera cómo se reconocen actividades humanas."
+    },
+    {
+      "t": 79,
+      "text": "ya sea caminar, levantarse, hacer squad, o sea, todos los cambios que que hace el eh una persona, con eso estamos viendo. Bueno, entonces con"
+    },
+    {
+      "t": 92,
+      "text": "inteligencia artificial somos capaces de poder eh reconocer patrones invisibles a lo humano."
+    },
+    {
+      "t": 102,
+      "text": "que hay varias formas de eh hay varios, perdón, dispositivos que podemos usar para captar esa información. Hay unos que son se le llama invasivo, aunque pues te están"
+    },
+    {
+      "t": 115,
+      "text": "grabando, eh, que se usa entonces en España había un hay una versiente bien grande de que uno en verdad mejor hacer todas las"
+    },
+    {
+      "t": 127,
+      "text": "ayudas que lo estén grabando la gente, que que el ambiente se se mantenga en anominato, ¿no? Entonces, por eso es eh está tan de moda el uso de sensores inerciales. que se llama, se le dice"
+    },
+    {
+      "t": 140,
+      "text": "iner iner ellos eh miden la acelerometría, el los ángulos de un punto en el gelopongas. De"
+    },
+    {
+      "t": 152,
+      "text": "hecho, eso está en el telem en los celulares, por eso es que eh eso se usa los FPS, las personas que usan su video y eso y más giroscopia."
+    },
+    {
+      "t": 162,
+      "text": "Ajá. Giroscopia. Entonces, de hay hay sensores inerciales que tienen, por ejemplo, solamente 3 gr de libertad libertad que sería que mide la aceleración de una red de de un objeto"
+    },
+    {
+      "t": 176,
+      "text": "en tres dimensiones. Entonces, real eh pero en general la mayoría tiene de seis eh grados de libertad en adelante. ¿Qué serían?"
+    },
+    {
+      "t": 185,
+      "text": "Acelerometría, giroscopio. Otros dicen ángulos emulent sería de nueve eh grado de libertad. Eh, pero en general la idea es hacer eh"
+    },
+    {
+      "t": 198,
+      "text": "ciencia usando la menor cantidad de ah variables para que sean menos costos de tres procesiendo al final. Entonces, por esto que que ven aquí es uno de ML que"
+    },
+    {
+      "t": 210,
+      "text": "es en Estados Unidos. Eh, pueden poner una aplicación en en el celular y empezar a grabar cuando lo dogas o objeto. Entonces, permite, como les comenté, la aceleración y giro."
+    },
+    {
+      "t": 226,
+      "text": "Por otro lado, si hablo de dispositivos, ya que se llama in invasivo, podría [resoplido] estar el moca. son sistemas de captura de movimiento, eh son"
+    },
+    {
+      "t": 238,
+      "text": "sistemas eh autoelectrónicos que usan cámaras láser en un enroitar un una habitación con cámaras láser y [resoplido] entonces él él eh hace un"
+    },
+    {
+      "t": 251,
+      "text": "rastreo del movimiento de la persona va caminando o haciendo cualquier actividad, ¿no? Pero para ellos se ponen marcadores en puntos específicos del del cuerpo"
+    },
+    {
+      "t": 263,
+      "text": "para para porque modelan un modelo geomanga."
+    },
+    {
+      "t": 270,
+      "text": "Eh, entonces eso tiene dos pasos, sería tomar el video, luego un cesado de los datos en ese modelo y luego obtener eh el punto en el en el espacio. Por ejemplo, si quieren saber la posición de"
+    },
+    {
+      "t": 283,
+      "text": "un marcador mientras se iba moviendo, iba cambiando o si quieres saber la velocidad que llevaba, el marcador la aceleración, también se podría, ¿no?"
+    },
+    {
+      "t": 293,
+      "text": "Entonces, eh cuando estuve ahí estudiando, la hicimos un primero un una un test, un caso, un quisimos ver"
+    },
+    {
+      "t": 306,
+      "text": "comparar estos dos sistemas eh porque el moca es el Gold Sangard, eh como es es más costoso, es más preciso y todo eso, queríamos ver si con eh Inus Costo"
+    },
+    {
+      "t": 319,
+      "text": "éramos capaces de de reconocer actividades eh con la misma eh precisión que con un Entonces para eso usamos el lapsenso que"
+    },
+    {
+      "t": 331,
+      "text": "les mostré arriba y un sistema mocap que se llama Qualisus que es sueco. Hay otro muy usado que yo creo que lo usan más en acá en América que se llama Bandar"
+    },
+    {
+      "t": 343,
+      "text": "Estados Unidos. [carraspeo] Entonces, las tres actividades que escogimos fue escar, eh, levantarse y hacer swass. ¿Por qué eh levantarse,"
+    },
+    {
+      "t": 355,
+      "text": "perdón, sentarse y hacer spans? Porque son movimientos parecidos, pero a ver si había eh si eran capaces de de de diferenciarlos."
+    },
+    {
+      "t": 364,
+      "text": "Entonces, para eso, miren, el el sensor inercial eh tiene un case que es como si fuera unarrelo."
+    },
+    {
+      "t": 373,
+      "text": "Entonces, pusimos aquí y otro en el en la izquierda y en el GF y pusimos. Y esas bonitas que ven son los marcadores del otro sistema porque él usa cámaras"
+    },
+    {
+      "t": 386,
+      "text": "las como les comenté. Entonces, la idea era comparar la señal eh de los dos sistemas del mismo curso. Solamente íbamos a trabajar con las aceleraciones, queríamos tener la menor cantidad de"
+    },
+    {
+      "t": 400,
+      "text": "de datos posibles. A ver qué tal, ¿no? A todo lo que vamos a 100 Hz."
+    },
+    {
+      "t": 407,
+      "text": "Esto lo hicimos en en el portugal, en un laboratorio."
+    },
+    {
+      "t": 411,
+      "text": "Entonces, las señales de arriba son de caminar, la del medio de sentarse y la última de hacer squats. Y eh"
+    },
+    {
+      "t": 424,
+      "text": "el las rosaditas serían la la del mano y la del tobillo, las verdes un taco."
+    },
+    {
+      "t": 434,
+      "text": "Eh, eso era es señal R, o sea, no está filtrando nada."
+    },
+    {
+      "t": 440,
+      "text": "Ah, entonces para para obtener las tradiciones es importante, hay que escribir el tema de la ciencia de datos, el preprocesante"
+    },
+    {
+      "t": 452,
+      "text": "antes de de alimentar esos algoritmos de inteligencia artificial. Ah, antes de de seguir aquí voy a decirles que estuve hablando, escuchando que están hablando, bueno, ahora muy de moda la inteligencia"
+    },
+    {
+      "t": 464,
+      "text": "artificial generativa, que si el prone engineering y todo eso. Bueno, esto ya tienen como 2 años y medio, tres."
+    },
+    {
+      "t": 472,
+      "text": "Entonces aquí estábamos usando era eh como es un problema de aprendizaje superf supervisado usábamos clasificadores. Entonces, en ese en ese tiempo había muchos clasificadores que"
+    },
+    {
+      "t": 485,
+      "text": "gente usaba machine learning. Entonces lo que hicimos hacer fue deep learning porque con deep learning eh haces fishing engineering automáticamente, ¿no? Había que eso era un vaso que que"
+    },
+    {
+      "t": 498,
+      "text": "uno se lo saltaba y el algoritmo era un robusto que diferenciaba automáticamente todo. Este por eso eh fue que usamos eh learning. Okay. Entonces, primero"
+    },
+    {
+      "t": 511,
+      "text": "obtuvimos el datas eh eh hicimos eh 10 personas y le hicimos caminar, sentarse, hacer squats a todos, ¿no? Luego tuvimos que"
+    },
+    {
+      "t": 523,
+      "text": "preprocesar ese dato, ver bien que no hubiesen ah lo que le llaman que en Titans, o sea, ningún dato, outliers, todo eso. Y entonces luego eh que ya"
+    },
+    {
+      "t": 536,
+      "text": "teníamos los datas setel, íamos a congilar el algoritmo y escogimos cuatro pacificadores, una dignor eh la más básica, luego una convolucional porque"
+    },
+    {
+      "t": 550,
+      "text": "la convolucional tiene la particularidad que extrae las características, por ejemplo, de fotos. Aquí serían eh datos, pero esta sería en donde"
+    },
+    {
+      "t": 563,
+      "text": "luego una LCTM porque ella rende de secuencias y como era repetitivo, perdón, caminar el ciclo caminar, hacer squats una y otra [carraspeo] vez y"
+    },
+    {
+      "t": 576,
+      "text": "entonces hicimos ver qué pasaba por la ner hígrida, que era la mezcla de la convencional con la con la LCTI."
+    },
+    {
+      "t": 585,
+      "text": "Luego al final vamos a ver las predicciones. Validábamos eh con datos que no habían sido entrenalado el algoritmo y evaluamos el modelo. Emparán la idea."
+    },
+    {
+      "t": 596,
+      "text": "Entonces, como les comenté, la data era de acelerómetro. Eh, teníamos trabajamos con CS, no con Jason, porque éramos bienos. Y para lo bueno o algo muy"
+    },
+    {
+      "t": 611,
+      "text": "importante aquí es que antes de darle los datos así en crudo al algoritmo hicimos algo que se llama sliding windows, que es una técnica de segmentación de los datos eh para que el"
+    },
+    {
+      "t": 625,
+      "text": "algoritmo los vaya tomando más eh en como en bolsas bolet."
+    },
+    {
+      "t": 632,
+      "text": "Entonces las las los datos, como les comenté era examinar, cist, pero ya teníamos los los seis las seis fishes de entrada, ¿no? Para clasificar"
+    },
+    {
+      "t": 645,
+      "text": "necesitas una salida que sería tu y a todos eso le tuvimos que hacer quererle etiquetada. Cero le llamamos a caminar, uno a ciclos a ascendarse y dos a squads."
+    },
+    {
+      "t": 660,
+      "text": "Como este es un eh problema de de series de tiempo, como les comenté, ser usa sliding window y esto es lo que sería un sliding window."
+    },
+    {
+      "t": 670,
+      "text": "le vas dando las las sí la señal de entrada en pequeños y entonces eso hace que el"
+    },
+    {
+      "t": 685,
+      "text": "predica con más posibilidad, se puede entrenar con más facilidad."
+    },
+    {
+      "t": 689,
+      "text": "Entonces, los algoritmos que les comenté hace un rato que ya los tené una secuencial, la convolucionar, perdón, una dimensión cuando es se usan dos dimensiones, pero esto como era de"
+    },
+    {
+      "t": 704,
+      "text": "eh solamente aceleraciones vaci el LCTM y la CNG."
+    },
+    {
+      "t": 712,
+      "text": "Aquí eh decidimos como eran 10 personas, entrenamos el algoritmo con ocho y dejamos dos personas para una vez entrenada a ver si te decía ayer o con"
+    },
+    {
+      "t": 725,
+      "text": "actitud de decir. Esta es la, perdona, esta [carraspeo] es la de del sensor inercial, los datos y esta es lo de"
+    },
+    {
+      "t": 738,
+      "text": "Entonces, fíjense aquí las gráficas. Eh, la Ajá. En la derecha está el moca y en"
+    },
+    {
+      "t": 752,
+      "text": "el izquierdo la elini. Eh, si se fijan esta es la red más robusta porque esta sería que tiende al 100 a al a predecir muy bien el 100% y pues la pérdida es"
+    },
+    {
+      "t": 767,
+      "text": "casi tendiendo el cero, ¿no? Mientras se va estrenando y mientras se va, ¿cómo se dice?"
+    },
+    {
+      "t": 774,
+      "text": "Entrenando. Ajá. entrenando y evaluando andos fueron los tuvimos que sacar el F1 score porque eso es importante. Hay gente que cuando está"
+    },
+    {
+      "t": 786,
+      "text": "entrenando solamente de acessive, pero eso y puedes tener un accido."
+    },
+    {
+      "t": 792,
+      "text": "Pero realmente no es que estás prediciendo pues cuando te dices bien."
+    },
+    {
+      "t": 796,
+      "text": "¿Por qué? Porque depende si tú no tienes bien balancear."
+    },
+    {
+      "t": 802,
+      "text": "Entonces como aquí el el moca tú tienes un rango de distancia para caminar o hacer los ejercicios, si te sales de ese rango, no vas a tener ni los datos."
+    },
+    {
+      "t": 812,
+      "text": "Entonces eh por eso aquí las diferencias."
+    },
+    {
+      "t": 817,
+      "text": "Si se fijan en en sí es casi lo mismo, pero acá va a predecir menos porque pues tenía menos dados realmente de eso. Esa es la no quiere decir que el a pesar que"
+    },
+    {
+      "t": 829,
+      "text": "es más caro y el estándar a seguir eh es que sea más el que sea peor. Perdón, es que es porque eh tenía medio ratos de por ejemplo el"
+    },
+    {
+      "t": 842,
+      "text": "caminar si sean atrás. Miren de Ah, a ver, sí, cero era 8000."
+    },
+    {
+      "t": 852,
+      "text": "Entonces, luego que hicimos esto, ya comprobamos que si queríamos hacer una un caso, un estudio eh para salud, íbamos a trabajar con personas con discapacidad hab."
+    },
+    {
+      "t": 866,
+      "text": "Entonces, la idea era escudieron ellos. Entonces, como hay unos test y unos cuestionarios para evaluar el equilibrio de alguien que actividades para hacer, pues eso sería un caso eh un ejemplo"
+    },
+    {
+      "t": 881,
+      "text": "específico de eh actividades pulas. Entonces, eso fue lo que hicimos. Eh, aquí ya no hice utilizamos video, simplemente un los sensores gerenciales y se los voy a mostrar, ¿no? Eh, esto lo"
+    },
+    {
+      "t": 894,
+      "text": "hicimos porque las personas con discapacidad visual inventan muchos retos en el control de las posturas. No sé si han visto que algunos hacen esto y se se informan. Eh, también queríamos"
+    },
+    {
+      "t": 907,
+      "text": "ver si realmente eh podía ser planificable las diferencias entre alguien que te guía y alguien que con la idea de que después se pudiera hacer rehabilitación. Eh, o sea, la rehabilitación aquí se le llama a que"
+    },
+    {
+      "t": 921,
+      "text": "una persona pues es ciega, pero le hagan le manden ejercicios en casa para que sea para que mejore su equilibrio y evite una cajita, por ejemplo."
+    },
+    {
+      "t": 932,
+      "text": "Entonces usamos todo esto en el ambiente de las 11, que es la Organización Nacional de Consum en España, y después fue entrenarnos al"
+    },
+    {
+      "t": 944,
+      "text": "e por ejemplo ahí hay varios test aquí estuvimos que hablar con fisioterapeutas. soy ingeniera, entonces tocaba un un toca hacer un ah equipo multidisciplinar y bueno, hay varias test para medir"
+    },
+    {
+      "t": 958,
+      "text": "equilibri. Escogimos el mini balance test porque eran eh menos eh eh menos actividades a medir y era muy usado, se había usado mucho para packings y todo"
+    },
+    {
+      "t": 970,
+      "text": "eso una modificación para personas que pasó el sueño."
+    },
+    {
+      "t": 975,
+      "text": "Eh, estos son las las cuatro varías que se miden."
+    },
+    {
+      "t": 980,
+      "text": "hay el equilibrio anticipatorio, el control postural, la orientación sensorial y la marcha dinámica. Generalmente en todos los cuestionarios de"
+    },
+    {
+      "t": 993,
+      "text": "equilibrio se ponen a caminar porque hay gente que realmente no es que no no pueda que no tenga temas que no puede ver, pero tienen eh patrones en marchar"
+    },
+    {
+      "t": 1005,
+      "text": "y eso puede hacer que [risas] la gente que arrastra mucho los tiempos es muy común en alguien que se puede caer espacio, pero es que ya levando, no es que no los arrastra porque realmente"
+    },
+    {
+      "t": 1015,
+      "text": "quiera, a veces mala costumbre, pero muy raro."
+    },
+    {
+      "t": 1020,
+      "text": "Entonces, evaluamos cuatro partes del equilibrio, fueron 14 actividades y íbamos a puntuar cada actividad de cero a dos con siendo dos que tenía un buen"
+    },
+    {
+      "t": 1032,
+      "text": "equilibrio y cero el peor equilíbrio."
+    },
+    {
+      "t": 1036,
+      "text": "Aquí está para que se mueve todo."
+    },
+    {
+      "t": 1049,
+      "text": "10 y dos."
+    },
+    {
+      "t": 1059,
+      "text": "Es sentarse en una silla, ponerse de puntillas, hacer lo de la tardonja. Eh, y si yo ponía el T y las personas capaces de pues no lo veían y empezaban a a más."
+    },
+    {
+      "t": 1072,
+      "text": "Hagan ustedes la cuando se vea la la prueba, cierras los ojos y intentas hacer las cojas y tú no te vas a quedar igual de quieto que cuando tienes los ojos abiertos porque el sistema de"
+    },
+    {
+      "t": 1083,
+      "text": "estimular eh incluye lo del vista."
+    },
+    {
+      "t": 1088,
+      "text": "Entonces, esto eran las retortividades. Entonces, ¿qué metodología usamos? Ah, como vieron atrás, él tiene no no se ve casi, pero tiene en todos esos puntos"
+    },
+    {
+      "t": 1101,
+      "text": "sensores chiquititos inerciales. usamos los mismos anteriores, sino que usamos un protoncito eh de Stanford, que usando una rasca e en Linuxográfica"
+    },
+    {
+      "t": 1114,
+      "text": "y entonces podemos grabar eh la información de acelerometría deita. Aquí pusimos dos en esas partes del cuerpo."
+    },
+    {
+      "t": 1124,
+      "text": "Entonces de ahí obtuvimos los laerometría y bueno, este fue toda la metodología con inteligencia artificial. Aquí no solo hicimos de learning para"
+    },
+    {
+      "t": 1137,
+      "text": "clasificar, esto era lo de la parte anterior, sino que también usamos machine learning para ver diferencias y se podía hacer agrupaciones o clusters entre las personas que veían y las"
+    },
+    {
+      "t": 1148,
+      "text": "personas que eran la eh esto en estadística para ver si había diferencias entre las personas. Las de arriba son las que ven y las de abajo"
+    },
+    {
+      "t": 1160,
+      "text": "los sie. Entonces hubo eh diferencias significativas en estos tres eh partes del hidrio,"
+    },
+    {
+      "t": 1172,
+      "text": "pero siempre marcó mucha diferencia significativa en el desrés, que era el correspondiente a hacer la concito. O sea, podías decir que eh al ver que alguien era ciego, ningún ciego dije que"
+    },
+    {
+      "t": 1186,
+      "text": "se quedaba bastante quieto haciendo eso. Pero con el la información de los de la suerometría, el alcoholismo fue capaz de diferenciarlo. Por ejemplo, los monstró aquí. El des 11 también hubo diferencias"
+    },
+    {
+      "t": 1200,
+      "text": "y el 14 que era la marcha de alta porque también cambiaban con una carencia distinta."
+    },
+    {
+      "t": 1209,
+      "text": "Eh, aquí es eh esto sí lo deben saber por igual lo que pasó hacer clusters es agrupar un montón de datos que no estánados y ver las diferen y que lo"
+    },
+    {
+      "t": 1222,
+      "text": "agrupe por con común con algo que le vea común. Entonces, eh hicimos primero para eh la selección de características para hacer el clustery y vimos que variablas tenían alta"
+    },
+    {
+      "t": 1235,
+      "text": "correlación y no y eso se iba de 24 eh eh características quedaron en tres o una."
+    },
+    {
+      "t": 1245,
+      "text": "Y bueno, aquí están las eh las resultados de los cleran que dije que quedaban tres o un, o sea,"
+    },
+    {
+      "t": 1257,
+      "text": "las fisures que eran importantes era el T3, la edad y si era masculino o femenino y el y el otro era el T3 solamente."
+    },
+    {
+      "t": 1270,
+      "text": "Entonces, ¿qué quiere decir este dos? que [resoplido] había dos dos subgrupos, las personas que veían y las que nos veían. Eso era lo esperaba, pero sí lo puedo diferenciar. He usado los ah las"
+    },
+    {
+      "t": 1284,
+      "text": "diferentes coeficientes de de del glossery y cuando lo graficamos los veían los ros los color vino y los azules."
+    },
+    {
+      "t": 1298,
+      "text": "Esta es la puntuación de 0 a dos. Era 0 un y dos."
+    },
+    {
+      "t": 1302,
+      "text": "del des, no sé qué quiere decir que de aquí para abajo están los que no ven y aquí los ven."
+    },
+    {
+      "t": 1315,
+      "text": "Entonces, eh ya esto terminaba para para la sustentación de la les, pero luego como había tantos datos quisimos hacer más estudios para hacer el artículo en"
+    },
+    {
+      "t": 1328,
+      "text": "aquí empezamos a estudiar. Eh, esto sí lo hicimos por primera vez en este lado. Es ver que habían diferencias. Por ejemplo, miren la señal"
+    },
+    {
+      "t": 1340,
+      "text": "del A y la B. En la A, la verde, la roja y la azul se mantiene estable, ¿no? Pero la B hay picos. Eso quería decir que era cuando la persona hacía esto, que no podía no"
+    },
+    {
+      "t": 1355,
+      "text": "podía quedarse así, sino que bajaba la pierna. Se notaba. Entonces quisimos hacer un estudio en el desde la cojas, o sea, el tres, para ver si había"
+    },
+    {
+      "t": 1368,
+      "text": "una diferencia para clasificar una ah un una actividad de otra usando BW y y que le caen ahí."
+    },
+    {
+      "t": 1381,
+      "text": "Entonces aquí eh no había noto buen desempeño, si se fijan que era el 74% y eso porque también eh teníamos que"
+    },
+    {
+      "t": 1394,
+      "text": "tener un eh sería bueno haber tenido más datos, o sea, más personas. Eh, conseguimos 15 personas que veían y 14"
+    },
+    {
+      "t": 1406,
+      "text": "ciegos, o sea, era muy bueno. Generalmente para los estudios con personas ciegas a veces lo prueban entre cinco, máximo ocho personas. Ya, ya se era considerable en todas las literatura"
+    },
+    {
+      "t": 1419,
+      "text": "que había buscado. Entonces, eh aquí ya no repetimos estas otras porque ya sabíamos que el mejor desempeño lo encontrábamos con la la híbrida"
+    },
+    {
+      "t": 1434,
+      "text": "y hicimos algo. ¿Se acuerdan que les comenté que habían 12 puntos eh para medir? Entonces queríamos reducir eso porque así mismo entonces la idea era"
+    },
+    {
+      "t": 1448,
+      "text": "dar a optimizar los recursos. Entonces, eh hicimos varias opciones, cuatro y eh vimos las laard deviation, el performance en relu y"
+    },
+    {
+      "t": 1462,
+      "text": "comparamos y la opción la opción de seis era es la mejor, me quedó rica, pero es la seis que eran solamente seis errores"
+    },
+    {
+      "t": 1477,
+      "text": "y eran esperadas. El de la peli es muy importante porque aquí está el centro de gravedad del esfuerzo, las piernas, las manos y la cabeza porque es porque ahí lo del si la persona veo no. Entonces ya"
+    },
+    {
+      "t": 1491,
+      "text": "ya la el paso a seguir sería, bueno, vamos a hacer unos seis nada más a ver qué más se puede replicar, ¿no? Entonces ahí está. extensoras."
+    },
+    {
+      "t": 1503,
+      "text": "Bueno, conclusiones, hay primera este ha sido el primer estudio para evaluar equilibrio personas con incapacidad visual eh hasta ahora."
+    },
+    {
+      "t": 1515,
+      "text": "el laboratorio que estaba allá en España, es mi compañero que sigue estudiando ahora eso, poniendo ahora más comparaciones y también están trabajando con personas adultas mayores porque"
+    },
+    {
+      "t": 1527,
+      "text": "saben que hay un tema bastante marcado, que ya cuando vas a cierta edad tienes riesgo a caer. Entonces allá allá como la población está envejeciendo mucho, quieren hacer que todo el mundo"
+    },
+    {
+      "t": 1538,
+      "text": "envejezca, pero bien fuerte para para que tenga una vejez eh buena."
+    },
+    {
+      "t": 1546,
+      "text": "Ajá. Entonces, hay mucho de esto. Entonces eh ya se sabe que con el con solo hacer la paga conja es un ejercicio decisivo para ver si alguien tiene buen equilibrio o no."
+    },
+    {
+      "t": 1559,
+      "text": "Eh, a pesar de que tuvo un buen un, ¿cómo te digo? Un score de 85.6, eh, sabemos que que tienen potencia los"
+    },
+    {
+      "t": 1573,
+      "text": "algoritmos, pero ah faltaría como más datos para para hacer una mejor predicción."
+    },
+    {
+      "t": 1580,
+      "text": "Eh, este con esto se puede cuantificar equilibrio y problemas de equilibrio difíciles de de medir manualmente porque eso generalmente lo pone un fisioterapeutica, entonces lo evalúan eh y pondrán un"
+    },
+    {
+      "t": 1594,
+      "text": "número, pero ahí nadie sabe qué qué tanto más se puedear, ¿no?"
+    },
+    {
+      "t": 1601,
+      "text": "Entonces, eh trabajo en futuro. Queremos ver si esto lo podemos validar en un entorno clínico, en un hospital que tengamos el la plato allí y se va más más personas se se agrada la eh la"
+    },
+    {
+      "t": 1614,
+      "text": "muestra. Esta ha sido esto está en Hop, no sé si lo puse, pero es la primera base de datos eh con información de este tipo para personas con discapacidad visual."
+    },
+    {
+      "t": 1626,
+      "text": "Eh, todo el trabajo está, como les comenté, en el hho eh abierto para cualquier persona que lo quiera verificar."
+    },
+    {
+      "t": 1633,
+      "text": "Y y la idea también es que queremos hacer estas herramientas para que sean de uso cotidiano, que la persona se puede llevar a la casa, que pueden hacer telerrehabilitación, que dicen que no es"
+    },
+    {
+      "t": 1645,
+      "text": "ir al hospital, sino que pues la persona, el fisioterapeuta en casa, perdón, en la en el hospital puede atender más gente, pero remotamente y si hacen no solamente los ejercicios en el"
+    },
+    {
+      "t": 1658,
+      "text": "hospital, si siguen en casa, pues van a a mejorar más."
+    },
+    {
+      "t": 1662,
+      "text": "y más rápido. Entonces, por agradecimientos está pues seis por haber hecho los estudios a jazz eh 11 que es donde hicimos la el test que es la"
+    },
+    {
+      "t": 1675,
+      "text": "organización nacional de sigos de España y bueno, Politécnica de Madrid que es centro de tecnología geométrica el laboratorio deción yamedicina que es donde trabajamos. Entonces, indicativ"
+    },
+    {
+      "t": 1686,
+      "text": "pues por la oportunidad también de estar acá eh aquí en Panamá, pues porque estamos intentando aquí en el país eh hacer proyectos que ayuden a en a a la celot."
+    },
+    {
+      "t": 1700,
+      "text": "Eh, este es el artículo, así lo pusieron, ese es el fodigo de y en senodum está el DAS y ahí le dice como si si en algún"
+    },
+    {
+      "t": 1712,
+      "text": "momento quieren hacer investigación o algo, si desitar y demás, ahí te dice cómo hacerlo."
+    },
+    {
+      "t": 1720,
+      "text": "Y bueno, eso era todo de mi parte. Ah, gracias por su atención. Si tienes ahí alguna pregunta, pues estoy aquí arri me digan."
+    }
+  ],
+  "backfill": true
+}

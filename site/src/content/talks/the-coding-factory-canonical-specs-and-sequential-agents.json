@@ -1,0 +1,914 @@
+{
+  "title": "The coding factory: canonical specs and sequential agents",
+  "speakers": [
+    "jake-cukjati"
+  ],
+  "date": "2026-10-05",
+  "event": "2026-10-05",
+  "youtubeId": "-65TrkDP1jY",
+  "publishAt": "2026-10-09T10:00:00-05:00",
+  "duration": 1258,
+  "thumbnail": "/talks/the-coding-factory-canonical-specs-and-sequential-agents.jpg",
+  "topics": [
+    "Coding agents",
+    "Agents"
+  ],
+  "summary": "Jake Cukjati shows how specs, not prompts, let agents code for 23 hours straight.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Introduction to AI Agents"
+    },
+    {
+      "t": 78,
+      "title": "Specs Over Prompts"
+    },
+    {
+      "t": 172,
+      "title": "Dynamic Workflows"
+    },
+    {
+      "t": 256,
+      "title": "The Coding Factory"
+    },
+    {
+      "t": 325,
+      "title": "Tools and Plugins"
+    },
+    {
+      "t": 487,
+      "title": "Compounding and Triage"
+    },
+    {
+      "t": 614,
+      "title": "CLI and Context"
+    },
+    {
+      "t": 690,
+      "title": "Q&A and Scaling"
+    }
+  ],
+  "learn": [
+    "You can get agents to work for hours, with a maximum run time of 23.8 hours.",
+    "Prompting into code is not good, but specs to actual work is the effective method.",
+    "Agents work sequentially one after the other with handoffs to communicate with each other.",
+    "The key part is like one agent at a time during implementation.",
+    "After review, we generate reference materials that feeds into the application so agents learn."
+  ],
+  "links": [
+    {
+      "label": "Slides",
+      "url": "https://byteofcode.io/presentations/forge-with-rigor/"
+    }
+  ],
+  "transcript": [
+    {
+      "t": 4,
+      "text": "Hey guys, so my name is Jake Cukjati."
+    },
+    {
+      "t": 7,
+      "text": "I've been pretty much interested in AI agents and Claude Code for the better part of a year."
+    },
+    {
+      "t": 15,
+      "text": "It's been a great discovery, and yeah, I mean, I'm just amazed by what you can do with it."
+    },
+    {
+      "t": 22,
+      "text": "So today I'm going to be talking about my, like, journey from Just taking agents and coding to creating workflows, and how… I, you know, get a coding factory going."
+    },
+    {
+      "t": 38,
+      "text": "So, if you're initially, like, starting out, maybe you're not getting alignment with your coding agents, and you're just telling them, go and create some code, you know, go do XYZ, whatever it may be."
+    },
+    {
+      "t": 54,
+      "text": "But, if you're not getting your agents to run for hours, and you're just sitting idle for, like, 30 minutes at a time."
+    },
+    {
+      "t": 63,
+      "text": "maybe you want to consider how you're actually, you know, performing work with your agents."
+    },
+    {
+      "t": 68,
+      "text": "How can you get them to go, you know, much longer, right?"
+    },
+    {
+      "t": 72,
+      "text": "You don't want to be a bottleneck, and that's what I was trying to attempt to do."
+    },
+    {
+      "t": 78,
+      "text": "So, are you, like, still prompting your agents to code?"
+    },
+    {
+      "t": 82,
+      "text": "Because I just put them in a slot, and you just go after it."
+    },
+    {
+      "t": 86,
+      "text": "I can get agents to work for hours, and the most I've gotten is about one day, 20… 23.8 hours."
+    },
+    {
+      "t": 97,
+      "text": "Not quite."
+    },
+    {
+      "t": 98,
+      "text": "Okay."
+    },
+    {
+      "t": 99,
+      "text": "And you can see like here I have like over 112 agents working for 16 hours."
+    },
+    {
+      "t": 106,
+      "text": "Producing 60,000 lines of code. The previous one was 110."
+    },
+    {
+      "t": 113,
+      "text": "So, coding for prompting to code is not good, but specs to actual works."
+    },
+    {
+      "t": 120,
+      "text": "work."
+    },
+    {
+      "t": 121,
+      "text": "That's what you want to do."
+    },
+    {
+      "t": 123,
+      "text": "That's how I found a good medium."
+    },
+    {
+      "t": 127,
+      "text": "getting agents to do everything that I want to do."
+    },
+    {
+      "t": 131,
+      "text": "So I will spend a long amount of time making out specs."
+    },
+    {
+      "t": 136,
+      "text": "And then from the specs, I can just be out to work 40 specs, 20 specs, whatever amount of specs I'm gonna give the agents, and they'll just work all night long."
+    },
+    {
+      "t": 148,
+      "text": "And the good thing about the specs is it's canonical, so you have something to actually verify."
+    },
+    {
+      "t": 156,
+      "text": "I can't stress that enough. Like every single time that there's a bug, the agents figure out how it should work, just because it's like, oh, there's… there's the specs."
+    },
+    {
+      "t": 167,
+      "text": "Like, that's… that's what I'm gonna use to make it actually work."
+    },
+    {
+      "t": 172,
+      "text": "So maybe you remember a couple months ago I said hey I have this open source project for CTL."
+    },
+    {
+      "t": 181,
+      "text": "That's pretty much obsolete now, because Claude Code came out with dynamic workflows a couple weeks later."
+    },
+    {
+      "t": 190,
+      "text": "And that's what I've been using ever since it's come out."
+    },
+    {
+      "t": 196,
+      "text": "You can replace that, like Agent SDK, or if you use Pi, or any other harness to have those notes."
+    },
+    {
+      "t": 203,
+      "text": "Same thing applies here."
+    },
+    {
+      "t": 205,
+      "text": "We're just calling the, TLIs from, like, shelters."
+    },
+    {
+      "t": 210,
+      "text": "So… It's not just… Like a school line, but… We're not just producing like one thing at a time."
+    },
+    {
+      "t": 221,
+      "text": "Or, you know, multiple cars in that case, when you think about code."
+    },
+    {
+      "t": 226,
+      "text": "this."
+    },
+    {
+      "t": 227,
+      "text": "It's, you know, it's a Kodi factory, and it… Works online badges."
+    },
+    {
+      "t": 233,
+      "text": "Or, you know, like, you can only have one worker at a time. I think… the mythical."
+    },
+    {
+      "t": 239,
+      "text": "Mammoth as a huge role."
+    },
+    {
+      "t": 243,
+      "text": "You can't, I don't use multiple agents working at once to get a job done."
+    },
+    {
+      "t": 249,
+      "text": "They work sequentially one after the other with handoffs. And that's how they do it."
+    },
+    {
+      "t": 255,
+      "text": "communicate with each other."
+    },
+    {
+      "t": 256,
+      "text": "you so… There are multiple steps here."
+    },
+    {
+      "t": 261,
+      "text": "We have to start out with a great number of specs."
+    },
+    {
+      "t": 267,
+      "text": "gonna implement."
+    },
+    {
+      "t": 268,
+      "text": "And then we go."
+    },
+    {
+      "t": 269,
+      "text": "champion."
+    },
+    {
+      "t": 269,
+      "text": "meditation."
+    },
+    {
+      "t": 271,
+      "text": "After implementation, there's integration testing."
+    },
+    {
+      "t": 274,
+      "text": "Code red."
+    },
+    {
+      "t": 274,
+      "text": "use."
+    },
+    {
+      "t": 275,
+      "text": "huge And then, triage pretty much to, continue."
+    },
+    {
+      "t": 281,
+      "text": "With, Yeah, what have we learned from this text? What's loose? What wasn't fixed?"
+    },
+    {
+      "t": 289,
+      "text": "What's, still open for our continued work?"
+    },
+    {
+      "t": 293,
+      "text": "And then, you have to compound on top of that."
+    },
+    {
+      "t": 296,
+      "text": "So, I do want to stress that you spend a lot of time on code review, and with, evaluating my agents."
+    },
+    {
+      "t": 305,
+      "text": "Where I will study their prompts, if they are performing at the efficiency that I want them to, if they're sending too many tokens, too much context window size."
+    },
+    {
+      "t": 318,
+      "text": "I wanted to prevent all that."
+    },
+    {
+      "t": 321,
+      "text": "So the first, like, plugin that I have is Spectacular, where we can dish out our specs."
+    },
+    {
+      "t": 328,
+      "text": "There are multiple types of specs that, that it had taken control over."
+    },
+    {
+      "t": 334,
+      "text": "And basically, it claims how the application will be run, right?"
+    },
+    {
+      "t": 341,
+      "text": "The great thing about this fence, like I said before, is it's all verifiable."
+    },
+    {
+      "t": 347,
+      "text": "And then I put this to Forge, which is the workflow, where the agents take it from the spec."
+    },
+    {
+      "t": 355,
+      "text": "To, planning the implementation."
+    },
+    {
+      "t": 358,
+      "text": "Where there's, implementation references, and that's a huge thing that gets built during the compounding, just before we start off with the next, spectrum."
+    },
+    {
+      "t": 370,
+      "text": "But yeah, the agents go through and test everything, implement it."
+    },
+    {
+      "t": 376,
+      "text": "Testing is only, like, concerning."
+    },
+    {
+      "t": 379,
+      "text": "With, unit testing here."
+    },
+    {
+      "t": 383,
+      "text": "The key part is like one agent at a time."
+    },
+    {
+      "t": 388,
+      "text": "And then, after we implement, I use Rigor, which is a skill plugin for."
+    },
+    {
+      "t": 395,
+      "text": "Test harnesses."
+    },
+    {
+      "t": 398,
+      "text": "So, the agents will verify that the specs are done, they'll have a checklist of what they want to implement for integration testing, and, integrate… yeah, do end-to-end testing that way."
+    },
+    {
+      "t": 414,
+      "text": "This works real well for back-end services."
+    },
+    {
+      "t": 418,
+      "text": "I'm not really good with UI, but yeah, back end, it's… It'll get you where you want to go."
+    },
+    {
+      "t": 426,
+      "text": "And like I said before, they have the specs."
+    },
+    {
+      "t": 429,
+      "text": "So if nothing fits the spec, if there's a bug, they'll catch it."
+    },
+    {
+      "t": 435,
+      "text": "So that's awesome."
+    },
+    {
+      "t": 436,
+      "text": "So I'm always in complete control because I just have to evaluate the specs themselves."
+    },
+    {
+      "t": 443,
+      "text": "This isn't running your agent on an infinite browser or anything like that."
+    },
+    {
+      "t": 450,
+      "text": "So yeah, I haven't spent a lot of time with code review."
+    },
+    {
+      "t": 456,
+      "text": "I want to make sure that the quality of the code, the intent, is good."
+    },
+    {
+      "t": 461,
+      "text": "You know, code architecture, infrastructure architecture."
+    },
+    {
+      "t": 465,
+      "text": "That's aligned with what I want to achieve."
+    },
+    {
+      "t": 468,
+      "text": "And then, I always like to ask questions."
+    },
+    {
+      "t": 471,
+      "text": "And I think… Findings in 18 of 18, that's just some random number that my agent found from a previous test run."
+    },
+    {
+      "t": 481,
+      "text": "So, I'm glad I pulled up there."
+    },
+    {
+      "t": 486,
+      "text": "Yeah, so compounding."
+    },
+    {
+      "t": 487,
+      "text": "So after review, we generate reference materials that goes and feeds into."
+    },
+    {
+      "t": 494,
+      "text": "the."
+    },
+    {
+      "t": 494,
+      "text": "application."
+    },
+    {
+      "t": 496,
+      "text": "That's pretty much how the agents learn."
+    },
+    {
+      "t": 499,
+      "text": "That's how I learn how the agents learn, and that's how they figure out."
+    },
+    {
+      "t": 507,
+      "text": "How the system works with these reference materials."
+    },
+    {
+      "t": 512,
+      "text": "What's the patterns organized twice?"
+    },
+    {
+      "t": 516,
+      "text": "We want to solidify it."
+    },
+    {
+      "t": 518,
+      "text": "We want to keep on using those good patterns, and then the agents will maintain all that."
+    },
+    {
+      "t": 527,
+      "text": "So triage, just every single time I run a spec, my agents will create two items."
+    },
+    {
+      "t": 534,
+      "text": "If there's any, remaining."
+    },
+    {
+      "t": 536,
+      "text": "Like, to do work that we didn't cover, that's not covered in the specs themselves."
+    },
+    {
+      "t": 542,
+      "text": "So anybody a Warhammer 40k fan?"
+    },
+    {
+      "t": 548,
+      "text": "So I run everything based off Warhammer 40K."
+    },
+    {
+      "t": 553,
+      "text": "And I actually use Jeff, which Colin, you gave me that inspiration. That's my Jeff."
+    },
+    {
+      "t": 561,
+      "text": "Product manager… It goes out and, Puts priority on all the tickets, and puts lockers as well."
+    },
+    {
+      "t": 575,
+      "text": "So yeah, this is, pretty much my tarot harness, my Agentic wheel."
+    },
+    {
+      "t": 580,
+      "text": "Creates the entire circle. So, every single run, it gets a little bit better."
+    },
+    {
+      "t": 586,
+      "text": "It's, yeah, it's pretty… It's hard to get started, but after a large amount of work."
+    },
+    {
+      "t": 594,
+      "text": "You can… You can start being real successful."
+    },
+    {
+      "t": 604,
+      "text": "Yeah, and the good thing, like, every… Every run, the prompts get way better, right?"
+    },
+    {
+      "t": 614,
+      "text": "And another thing, maybe this will help Jeff, you were mentioning."
+    },
+    {
+      "t": 619,
+      "text": "you."
+    },
+    {
+      "t": 620,
+      "text": "Evals?"
+    },
+    {
+      "t": 621,
+      "text": "Well, one thing I've noticed is if I create a CLI for my agents, and the CLI is the prompt engine."
+    },
+    {
+      "t": 629,
+      "text": "And it has a CAD machine in the COR. It's really, it's really helpful."
+    },
+    {
+      "t": 636,
+      "text": "That's how I can get the right context to the agent at the right time."
+    },
+    {
+      "t": 641,
+      "text": "and."
+    },
+    {
+      "t": 641,
+      "text": "The COI just says, \"Hey, come back.\""
+    },
+    {
+      "t": 644,
+      "text": "You need to call me again."
+    },
+    {
+      "t": 646,
+      "text": "I think… This is another skill that I have that's really helpful."
+    },
+    {
+      "t": 655,
+      "text": "That's… that's pretty much it. But yeah, I just, I want to show this, and… Yeah, keep your sex as a canonical truth."
+    },
+    {
+      "t": 667,
+      "text": "Major sales into CLIs, and then compound everything."
+    },
+    {
+      "t": 674,
+      "text": "I'm gonna open source my, skills."
+    },
+    {
+      "t": 677,
+      "text": "Soon."
+    },
+    {
+      "t": 679,
+      "text": "Not yet, but once I."
+    },
+    {
+      "t": 683,
+      "text": "Get rigor working the way I want it to. Yeah."
+    },
+    {
+      "t": 690,
+      "text": "What questions do we have for Jay?"
+    },
+    {
+      "t": 693,
+      "text": "You're only doing one feature at a time instead of a bunch of spreaders. Yep."
+    },
+    {
+      "t": 699,
+      "text": "One, one inch at a time."
+    },
+    {
+      "t": 701,
+      "text": "using handouts sequentially."
+    },
+    {
+      "t": 704,
+      "text": "Or, JSON."
+    },
+    {
+      "t": 707,
+      "text": "Whatever the output."
+    },
+    {
+      "t": 708,
+      "text": "Started or start pressing back."
+    },
+    {
+      "t": 712,
+      "text": "Yeah, when I started with, 4CTL, because… And Profit said they weren't gonna allow you to use Agent SDK, for the subscription plan."
+    },
+    {
+      "t": 724,
+      "text": "I don't know if you remember that, but they did warn that they were going to prevent that from happening."
+    },
+    {
+      "t": 729,
+      "text": "Like, I knew at that time I could automate it."
+    },
+    {
+      "t": 733,
+      "text": "And the, you know, either calling the COI."
+    },
+    {
+      "t": 739,
+      "text": "Or calling Agent SDK was, like, the best way to do that."
+    },
+    {
+      "t": 744,
+      "text": "But they added dynamic workflows, and I was like, this is great."
+    },
+    {
+      "t": 748,
+      "text": "So, yeah, the first iteration for CTO, just had one agent, and the agent would run to, like, a million, you know, it would hit its contact, context window, compact, and keep on running."
+    },
+    {
+      "t": 764,
+      "text": "It, you know, so there wasn't a lot of efficiency there."
+    },
+    {
+      "t": 768,
+      "text": "So, like, if I show this."
+    },
+    {
+      "t": 773,
+      "text": "Here I have like all the agents. You can see like the The most an agent ever goes on this context window is about 330."
+    },
+    {
+      "t": 783,
+      "text": "That's, like, the highest context window, but I'm trying to optimize this as much as possible, so I have another agent that, you know, evaluates this."
+    },
+    {
+      "t": 793,
+      "text": "And we try to, converge on, like, 250… As our, our soft limit for contracts with those."
+    },
+    {
+      "t": 806,
+      "text": "Any other questions?"
+    },
+    {
+      "t": 808,
+      "text": "Right."
+    },
+    {
+      "t": 809,
+      "text": "Julian on thrift."
+    },
+    {
+      "t": 812,
+      "text": "Make an entire set of database tables for me."
+    },
+    {
+      "t": 816,
+      "text": "It's changed the part so much. What would get rid of those same things?"
+    },
+    {
+      "t": 820,
+      "text": "What would a great fabric?"
+    },
+    {
+      "t": 822,
+      "text": "What would keep it from getting?"
+    },
+    {
+      "t": 825,
+      "text": "Bill was slow."
+    },
+    {
+      "t": 828,
+      "text": "So yeah, nothing gets implemented until you run the coding engine."
+    },
+    {
+      "t": 834,
+      "text": "To run the coding engine, you need specs."
+    },
+    {
+      "t": 837,
+      "text": "And to create specs, You evaluate it with the agent."
+    },
+    {
+      "t": 842,
+      "text": "So, if the agent's like, hey, this is a gap."
+    },
+    {
+      "t": 846,
+      "text": "we need to fix this, then you're like, yeah, fix that, get rid of those cables, we don't need them anymore, throw them away. It's old stuff."
+    },
+    {
+      "t": 855,
+      "text": "And the best part is, like, while you're planning it, you didn't code a thing."
+    },
+    {
+      "t": 860,
+      "text": "Not one thing was coded."
+    },
+    {
+      "t": 863,
+      "text": "I mean, if you're… You know, doing, like, long number of sessions, like."
+    },
+    {
+      "t": 869,
+      "text": "You know, like, 40… Specs at once. Like, I can run for, like, 10, 15 sessions."
+    },
+    {
+      "t": 879,
+      "text": "Which is about, you know, like, 20… 20 hours of work."
+    },
+    {
+      "t": 885,
+      "text": "Zoom."
+    },
+    {
+      "t": 886,
+      "text": "change a spec, or would you create a new spec that seeds it, and then you seed it built in between?"
+    },
+    {
+      "t": 892,
+      "text": "So… Yeah, as the… okay, so… There's a couple things on that."
+    },
+    {
+      "t": 898,
+      "text": "One is… The… Monorepos."
+    },
+    {
+      "t": 906,
+      "text": "And how your codebase changes over time, and how you handle domains, right?"
+    },
+    {
+      "t": 912,
+      "text": "So, domain-driven design is very important."
+    },
+    {
+      "t": 916,
+      "text": "I don't have that problem right now, but I knew I'm gonna… hit it very soon, because my… the Copic side run is approaching 200,000 lines."
+    },
+    {
+      "t": 929,
+      "text": "And… I need more domains."
+    },
+    {
+      "t": 933,
+      "text": "So I have, like, 80 or 90 text files."
+    },
+    {
+      "t": 937,
+      "text": "And each one… So, each spec contains a topic of concern, which sets it apart from all the other specifications."
+    },
+    {
+      "t": 948,
+      "text": "And if you think about it like entry points from like, these are the entry points of this application."
+    },
+    {
+      "t": 956,
+      "text": "Each entry point is spent."
+    },
+    {
+      "t": 959,
+      "text": "can… Like, top down, it's basically like, you know, code, how it maps, and there's references, and."
+    },
+    {
+      "t": 967,
+      "text": "All that, right."
+    },
+    {
+      "t": 970,
+      "text": "So, at a certain time, the amount of context that an agent receives could be exhausting to itself."
+    },
+    {
+      "t": 979,
+      "text": "So… Building a new domain, you can separate your code."
+    },
+    {
+      "t": 985,
+      "text": "you can separate your specs and isolate it to that one new domain, right?"
+    },
+    {
+      "t": 992,
+      "text": "So, like, for instance, I'm gonna have to split my, codebase to 3 or 4 domains, right? So if I do that equally, that's about 20 specs."
+    },
+    {
+      "t": 1003,
+      "text": "20 specs, the agents can easily handle."
+    },
+    {
+      "t": 1005,
+      "text": "Each spec is less than 1,000."
+    },
+    {
+      "t": 1009,
+      "text": "Normally, it's around, like, 400 or 500 lines."
+    },
+    {
+      "t": 1012,
+      "text": "So you have to be heavily involved."
+    },
+    {
+      "t": 1015,
+      "text": "Texture. Oh, yeah."
+    },
+    {
+      "t": 1017,
+      "text": "Yes."
+    },
+    {
+      "t": 1018,
+      "text": "Yeah, everything gets architectured. I have… Skills for… design HTML files to show architecture, design, because we're going at such a fast velocity."
+    },
+    {
+      "t": 1034,
+      "text": "Another thing is, like."
+    },
+    {
+      "t": 1037,
+      "text": "computation efficiency."
+    },
+    {
+      "t": 1039,
+      "text": "So I do a lot of, like, data pipelines and derived data, like, you know, for data analytics."
+    },
+    {
+      "t": 1049,
+      "text": "So, Ronnie skewed as much as I can with… The limit of RAM that I have is what I try to maximize."
+    },
+    {
+      "t": 1061,
+      "text": "Yeah."
+    },
+    {
+      "t": 1064,
+      "text": "Other questions?"
+    },
+    {
+      "t": 1067,
+      "text": "Yeah, I'll ask a final question."
+    },
+    {
+      "t": 1069,
+      "text": "So you mentioned with your specs that you make specs canonical."
+    },
+    {
+      "t": 1074,
+      "text": "So as your different agents are improving the architecture, and they I assume updated a root spec."
+    },
+    {
+      "t": 1083,
+      "text": "What's the mechanism that that triggers that canonical reference down to the existing code?"
+    },
+    {
+      "t": 1089,
+      "text": "Sure."
+    },
+    {
+      "t": 1126,
+      "text": "Let's see…"
+    },
+    {
+      "t": 1133,
+      "text": "Maybe… let's do this one."
+    },
+    {
+      "t": 1149,
+      "text": "Okay, and… Let's do…"
+    },
+    {
+      "t": 1160,
+      "text": "I think it's this one. Yeah, okay."
+    },
+    {
+      "t": 1166,
+      "text": "So to keep my specs in line, I use a file. It's called a manifest."
+    },
+    {
+      "t": 1175,
+      "text": "What that file is, is it gets generated based off of this one commit."
+    },
+    {
+      "t": 1181,
+      "text": "Which contains all these specification files."
+    },
+    {
+      "t": 1185,
+      "text": "These are… it's just the depth of all the specs themselves."
+    },
+    {
+      "t": 1191,
+      "text": "It uses this one file to outline all those specs."
+    },
+    {
+      "t": 1196,
+      "text": "Right."
+    },
+    {
+      "t": 1197,
+      "text": "At the very top, it says what the commit hash is, and the agents will use this commit hash with this command, and then… to identify, like."
+    },
+    {
+      "t": 1212,
+      "text": "All the specifications for that batch."
+    },
+    {
+      "t": 1215,
+      "text": "This gets split up into multiple batches by a scheduler."
+    },
+    {
+      "t": 1220,
+      "text": "Which."
+    },
+    {
+      "t": 1224,
+      "text": "Should be able to show right here, implemented badges."
+    },
+    {
+      "t": 1230,
+      "text": "And each one of these contains the hash of the canonical commit, the, the files that it uses, what it's blocked by, such and so forth."
+    }
+  ]
+}

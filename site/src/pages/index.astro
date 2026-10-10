@@ -1,0 +1,222 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection, getEntries } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import TalkCard from '../components/TalkCard.astro';
+import { eventLd as buildEventLd, publicTalks, upcomingTalks, nextEvent, fmtDay, fmtDate, fmtTime } from '../lib/data';
+import { stats, links, channels } from '../data/site';
+import Icon from '../components/Icon.astro';
+import hero from '../assets/photos/room-feb2025.jpg';
+import room from '../assets/photos/room-sep2025.jpg';
+import lab from '../assets/photos/lab-may2024.jpg';
+
+const next = await nextEvent();
+const speakerName = new Map((await getCollection('speakers')).map((sp) => [sp.id, sp.data.name]));
+const live = await publicTalks();
+const soon = await upcomingTalks();
+
+// The latest night with talks: its public talks first, then its premieres.
+const lastNight = [...live, ...soon].filter((t) => t.data.event).sort((a, b) => b.data.date.getTime() - a.data.date.getTime())[0]?.data.event;
+const nightTalks = [...live.filter((t) => t.data.event === lastNight), ...soon.filter((t) => t.data.event === lastNight)].slice(0, 6);
+const nightDate = nightTalks[0]?.data.date;
+const newest = live[0]?.id;
+const speakerIds = [...new Set(nightTalks.flatMap((t) => t.data.speakers))];
+const faces = (await getEntries(speakerIds.map((id) => ({ collection: 'speakers' as const, id })))).filter(Boolean);
+const talkOf = (sid: string) => nightTalks.find((t) => t.data.speakers.includes(sid));
+
+const nightSteps = [
+  ['6:00', 'Doors and hellos', "Grab a seat, meet who's next to you."],
+  ['6:20', 'Kickoff', "Who's new, what's coming up."],
+  ['6:30', 'Thunderstorm Talks', 'About 15 minutes each, demos welcome.'],
+  ['7:40', 'Open Q&A', 'Ask the speakers anything.'],
+  ['8:00', 'The mixer', 'Optional: we walk over to The Tavern on W 12th.'],
+];
+const eventLd = next && buildEventLd(next);
+const h2 = 'm-0 font-display text-[clamp(40px,5vw,60px)] leading-none font-normal uppercase';
+const h2s = 'm-0 font-display text-[clamp(32px,4vw,44px)] leading-none font-normal uppercase';
+// Calendar days to the event in Central time, matching what the inline script recomputes for the viewer.
+const ctDay = (d: Date) => Date.parse(d.toLocaleDateString('en-CA', { timeZone: 'America/Chicago' }));
+const days = next ? Math.round((ctDay(next.data.start) - ctDay(new Date())) / 864e5) : -1;
+const countdown = days < 0 ? '' : days === 0 ? 'Tonight' : days === 1 ? 'In 1 day' : `In ${days} days`;
+---
+<Base jsonld={eventLd || undefined}>
+  <section aria-labelledby="next-h" class="relative overflow-hidden">
+    <Image src={hero} alt="" widths={[800, 1280, 1920]} sizes="100vw" loading="eager" fetchpriority="high" class="h-56 w-full object-cover object-[center_42%] sm:absolute sm:inset-0 sm:h-full" />
+    <div class="relative sm:bg-gradient-to-r sm:from-ink/85 sm:via-ink/35 sm:to-transparent">
+      <div class="mx-auto max-w-[1240px] px-4 py-8 sm:px-8 sm:py-[72px]">
+        <div class="flex max-w-[640px] flex-col gap-5 rounded-[22px] bg-ink/90 p-6 sm:p-9">
+          {next ? (
+            <>
+              <p class="m-0 flex items-center gap-2.5 font-mono text-sm tracking-[0.12em] text-gold"><span class="inline-block h-2.5 w-2.5 rounded-full bg-gold"></span>NEXT MEETUP</p>
+              <h1 id="next-h" class="m-0 font-display leading-[0.92] font-normal uppercase">
+                <span class="block text-[clamp(64px,8.5vw,116px)] text-gold">{fmtDay(next.data.start).replace(',', '')}</span>{' '}
+                <span class="block text-[clamp(34px,4.4vw,56px)] text-white">{next.data.title.replace(/^\w+ Monthly /, '')}</span>
+              </h1>
+              {countdown && <p id="countdown" data-start={next.data.start.toISOString()} class="m-0 -mt-2 font-mono text-sm tracking-[0.12em] text-gold uppercase">{countdown}</p>}
+              {next.data.summary && <p class="m-0 text-xl text-[#dbe6ee]">{next.data.summary}</p>}
+              <ul class="m-0 flex list-none flex-wrap gap-x-6 gap-y-2.5 p-0 font-semibold">
+                <li>{fmtTime(next.data.start)} to {fmtTime(next.data.end)} CT</li>
+                <li>{next.data.venue.name}{next.data.venue.address ? `, ${next.data.venue.address.split(',')[0]}` : ''}</li>
+                {next.data.online && <li>In person or on Zoom</li>}
+              </ul>
+              <div class="flex flex-wrap gap-3.5">
+                {next.data.rsvp.luma && <a href={next.data.rsvp.luma} class="btn rounded-full bg-gold px-7 py-4 text-lg font-bold text-ink no-underline hover:bg-gold-hi hover:text-ink">RSVP on Luma</a>}
+                {next.data.rsvp.meetup && <a href={next.data.rsvp.meetup} class="btn rounded-full border-2 border-text px-6 py-3.5 text-lg font-bold text-text no-underline hover:border-gold hover:text-gold">RSVP on Meetup</a>}
+                <a href={`/events/${next.id}.ics`} class="btn inline-flex min-h-[44px] items-center rounded-full border-2 border-text px-6 py-3 text-lg font-bold text-text no-underline hover:border-gold hover:text-gold">Add to calendar</a>
+              </div>
+              <p class="m-0 border-t border-line pt-4 text-base text-soft">
+                {next.data.lineup.length
+                  ? <><span class="font-bold text-text">Lineup:</span> {next.data.lineup.map((id) => speakerName.get(id) ?? id).join(', ')}. <a href="/speak/" class="font-bold">Your talk? Pitch it</a></>
+                  : <>Lineup announced{next.data.lineupDate ? ` the week of ${fmtDay(next.data.lineupDate, { weekday: undefined })}` : ' soon'}. Your talk? <a href="/speak/" class="font-bold">Pitch it</a></>}
+              </p>
+            </>
+          ) : (
+            <>
+              <h1 id="next-h" class="m-0 font-display text-[clamp(48px,7vw,96px)] leading-[0.95] font-normal text-gold uppercase">First Monday, every month</h1>
+              <p class="m-0 text-xl">Free talks on the agentic stack in Austin and online. The next date goes up soon.</p>
+              <a href="/events/" class="self-start rounded-full bg-gold px-7 py-4 text-lg font-bold text-ink no-underline">See events</a>
+            </>
+          )}
+        </div>
+      </div>
+    </div>
+  </section>
+  <script is:inline>
+    (function () {
+      var el = document.getElementById('countdown');
+      if (!el) return;
+      var s = new Date(el.dataset.start), n = new Date();
+      var d = Math.round((new Date(s.getFullYear(), s.getMonth(), s.getDate()) - new Date(n.getFullYear(), n.getMonth(), n.getDate())) / 864e5);
+      if (d < 0 || (d === 0 && n > s)) el.hidden = true;
+      else el.textContent = d === 0 ? 'Tonight' : d === 1 ? 'In 1 day' : 'In ' + d + ' days';
+    })();
+  </script>
+
+  <section aria-label="AIMUG by the numbers" class="bg-gold text-ink">
+    <div class="mx-auto flex max-w-[1240px] flex-wrap justify-between gap-x-8 gap-y-3 px-4 py-4 font-display text-[clamp(20px,2.2vw,26px)] tracking-wide uppercase sm:px-8">
+      <span>{stats.meetupMembers.toLocaleString('en-US')} members on Meetup</span>
+      <span>{live.length.toLocaleString('en-US')} talks recorded</span>
+      <span>{stats.youtubeViews.toLocaleString('en-US')} views</span>
+      <span>Free · monthly since 2023 · now first Mondays</span>
+    </div>
+  </section>
+
+  <div class="flex flex-col">
+  {nightTalks.length > 0 && (
+    <section aria-labelledby="latest-h" class="mx-auto w-full max-w-[1240px] px-4 pt-[72px] pb-6 sm:px-8">
+      <div class="mb-7 flex flex-wrap items-end justify-between gap-4">
+        <div>
+          {nightDate && <p class="m-0 mb-1.5 font-mono text-sm tracking-[0.12em] text-muted uppercase">{fmtDate(nightDate, { year: 'numeric', weekday: undefined })} · {nightTalks.length} talks</p>}
+          <h2 id="latest-h" class={h2}>Fresh from the stage</h2>
+        </div>
+        <a href="/talks/" class="inline-flex min-h-[44px] items-center font-bold no-underline">All talks →</a>
+      </div>
+      <div data-pagefind-ignore="all" class="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-3 sm:mx-0 sm:grid sm:grid-cols-[repeat(auto-fill,minmax(min(100%,340px),1fr))] sm:gap-7 sm:overflow-visible sm:px-0 sm:pb-0">
+        {nightTalks.map((t, i) => <div class="w-[80%] shrink-0 snap-start sm:w-auto"><TalkCard talk={t} eager={i < 3} badge={t.id === newest ? 'New' : undefined} /></div>)}
+      </div>
+    </section>
+  )}
+
+  <section aria-labelledby="night-h" class="order-first mx-auto w-full max-w-[1240px] px-4 pt-14 pb-6 sm:order-none sm:px-8">
+    <div class="grid grid-cols-[repeat(auto-fit,minmax(min(100%,480px),1fr))] items-center gap-10">
+      <Image src={room} alt="A full room at ACC Rio Grande during an AIMUG talk, Sep 10, 2025" widths={[600, 960, 1400]} sizes="(min-width: 1024px) 600px, 100vw" class="aspect-[4/3] w-full rounded-[20px] object-cover" />
+      <div class="flex flex-col gap-4">
+        <h2 id="night-h" class={h2s}>New here? How a night goes</h2>
+        <p class="m-0 text-soft">AIMUG is where Austin's AI builders share new research and teach each other through short talks.</p>
+        <ol class="m-0 flex list-none flex-col p-0">
+          {nightSteps.map(([t, h, d]) => (
+            <li class="grid grid-cols-[84px_1fr] gap-4 border-t border-line py-3.5 last:border-b">
+              <span class="font-display text-[30px] leading-tight text-gold">{t}</span>
+              <span class="flex flex-col"><span class="font-bold">{h}</span><span class="text-base text-muted">{d}</span></span>
+            </li>
+          ))}
+        </ol>
+        <ul class="m-0 flex list-disc flex-col gap-1.5 pl-5 text-soft marker:text-gold">
+          <li>We learn in the open, and we're kind about it.</li>
+          <li>Talks cover what shipped in the last 30 to 60 days.</li>
+          <li>No nerd sniping: questions should help the room.</li>
+        </ul>
+        <p class="m-0 text-soft">Free. RSVP on Luma or Meetup so we can plan the pizza. <a href="/events/#getting-there" class="font-bold">Parking and directions</a></p>
+      </div>
+    </div>
+  </section>
+  </div>
+
+  {faces.length > 0 && nightDate && (
+    <section aria-labelledby="faces-h" class="mx-auto max-w-[1240px] px-4 pt-14 pb-6 sm:px-8">
+      <div class="mb-7 flex flex-wrap items-end justify-between gap-3">
+        <h2 id="faces-h" class={h2s}>On stage, {fmtDate(nightDate, { weekday: undefined })}</h2>
+        <a href="/speakers/" class="inline-flex min-h-[44px] items-center font-bold no-underline">Everyone who's spoken</a>
+      </div>
+      <div data-pagefind-ignore="all" class="grid grid-cols-2 gap-4 sm:grid-cols-[repeat(auto-fit,minmax(min(100%,180px),1fr))] sm:gap-6">
+        {faces.map((s) => {
+          const t = talkOf(s!.id);
+          return (
+            <a href={`/speakers/${s!.id}/`} class="lift flex flex-col gap-2.5 rounded-[18px] text-text no-underline">
+              {s!.data.photo ? <img src={s!.data.photo} alt={s!.data.name} loading="lazy" class="aspect-square w-full rounded-[18px] object-cover" /> : <span class="aspect-square w-full rounded-[18px] bg-panel"></span>}
+              <span class="text-xl font-bold">{s!.data.name}</span>
+              {t && <span class="-mt-1.5 text-base text-muted">{t.data.title.split(':')[0]}</span>}
+            </a>
+          );
+        })}
+      </div>
+    </section>
+  )}
+
+  <section aria-labelledby="lib-h" class="mx-auto max-w-[1240px] px-4 py-14 sm:px-8">
+    <div class="flex flex-col gap-5 rounded-[22px] border border-line bg-panel p-6 sm:p-11">
+      <div class="max-w-[640px]">
+        <h2 id="lib-h" class="m-0 mb-2 font-display text-[clamp(32px,4vw,44px)] leading-none font-normal uppercase">Every talk, searchable</h2>
+        <p class="m-0 text-soft">{live.length} recorded talks since 2023. Search titles, speakers and what was actually said on stage.</p>
+      </div>
+      <form action="/talks/" method="get" role="search" class="flex flex-wrap gap-3">
+        <label for="q" class="sr-only">Search talks and transcripts</label>
+        <input id="q" name="q" type="search" placeholder="Search talks" class="min-w-0 flex-[1_1_420px] rounded-[14px] border-2 border-edge bg-ink px-5 py-4 text-[19px] text-text placeholder:text-muted" />
+        <button type="submit" class="min-h-[60px] cursor-pointer rounded-[14px] border-0 bg-gold px-8 font-bold text-ink">Search</button>
+      </form>
+    </div>
+  </section>
+
+  <section aria-label="Ways in" class="mx-auto grid max-w-[1240px] grid-cols-[repeat(auto-fit,minmax(min(100%,250px),1fr))] gap-6 px-4 pb-14 sm:px-8">
+    {[
+      ['Come', 'First Monday of every month, 6 PM at ACC Rio Grande, or online. Free.', 'See all events', '/events/'],
+      ['Watch', 'Every talk is recorded and searchable. Newer talks come with chapters, a transcript and slides.', 'Browse the library', '/talks/'],
+      ['Speak', '15 minutes on something you built or broke. We record it, publish it and give you a speaker page.', 'Pitch a talk', '/speak/'],
+      ['Support', 'AIMUG is free and funded by the room. About $150 covers a meetup, and nobody can buy a talk.', 'Ways to support', '/support/'],
+    ].map(([h, p, cta, href]) => (
+      <div class="flex flex-col gap-2.5 border-t-4 border-gold pt-5">
+        <h3 class="m-0 font-display text-4xl font-normal uppercase">{h}</h3>
+        <p class="m-0 text-soft">{p}</p>
+        <a href={href} class="inline-flex min-h-[44px] items-center self-start font-bold no-underline">{cta}</a>
+      </div>
+    ))}
+  </section>
+
+  <section aria-label="Stay in touch" class="mx-auto grid max-w-[1240px] grid-cols-[repeat(auto-fit,minmax(min(100%,460px),1fr))] gap-6 px-4 pb-16 sm:px-8">
+    <div id="office-hours" class="flex flex-col overflow-hidden rounded-[18px] border border-line bg-panel">
+      <Image src={lab} alt="AIMUG members working through a problem together, May 29, 2024" widths={[600, 1000]} sizes="(min-width: 1024px) 600px, 100vw" class="aspect-[16/7] w-full object-cover" />
+      <div class="flex flex-col gap-3 p-7 sm:px-8">
+        <h3 class="m-0 text-[26px] font-bold">Office Hours</h3>
+        <p class="m-0 text-soft">2nd, 3rd and 4th Mondays, 5 PM CT on Google Meet. Bring a bug, a paper or a half-built agent.</p>
+        <div class="mt-1 flex flex-wrap gap-3">
+          <a href={links.officeHours} class="rounded-full border-2 border-text px-5 py-3 text-base font-bold text-text no-underline hover:border-gold hover:text-gold">Join Office Hours</a>
+          <a href={links.discord} class="rounded-full border-2 border-text px-5 py-3 text-base font-bold text-text no-underline hover:border-gold hover:text-gold">Join the Discord</a>
+        </div>
+      </div>
+    </div>
+    <form action={links.newsletter} method="post" class="flex flex-col justify-center gap-3 rounded-[18px] border border-line bg-panel p-8">
+      <h3 class="m-0 text-[26px] font-bold">Meetup emails</h3>
+      <p class="m-0 text-soft">The lineup before each meetup, then the talks once they are up. About two emails a month.</p>
+      <label for="em" class="text-[15px] font-semibold">Email</label>
+      <span class="flex flex-wrap gap-2.5">
+        <input id="em" name="email" type="email" required autocomplete="email" placeholder="you@example.com" class="min-w-0 flex-[1_1_240px] rounded-xl border-2 border-edge bg-ink px-3.5 py-3 text-text placeholder:text-muted" />
+        <button type="submit" class="min-h-[52px] cursor-pointer rounded-xl border-0 bg-gold px-6 font-bold text-ink">Subscribe</button>
+      </span>
+    </form>
+    <ul aria-label="Follow AIMUG" class="col-span-full m-0 grid list-none grid-cols-[repeat(auto-fit,minmax(min(100%,220px),1fr))] gap-3 p-0">
+      {channels.filter((c) => c.key !== 'mail').map((c) => (
+        <li><a href={c.href} class="flex h-full items-start gap-3 rounded-[18px] border border-line bg-panel p-5 text-text no-underline hover:border-gold"><Icon name={c.key} size={24} class="mt-0.5 shrink-0 text-gold" /><span class="flex flex-col gap-0.5"><span class="font-bold">{c.label}</span><span class="text-[15px] text-soft">{c.blurb}</span></span></a></li>
+      ))}
+    </ul>
+  </section>
+</Base>

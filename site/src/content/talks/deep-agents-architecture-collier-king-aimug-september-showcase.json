@@ -1,0 +1,349 @@
+{
+  "title": "Deep Agents Architecture",
+  "speakers": [
+    "collier-king"
+  ],
+  "date": "2025-09-18",
+  "event": "2025-09-10",
+  "youtubeId": "q9uR4YD3I6E",
+  "duration": 921,
+  "summary": "In this talk from the Austin AI Middleware Users Group (AIMUG) September Showcase, Collier King introduces Deep Agents, a batteries-included deep research framework inspired by Claude Code and built on top of LangGraph.",
+  "topics": [
+    "Agents"
+  ],
+  "transcript": [
+    {
+      "t": 5,
+      "text": "[00:59:59:22 - 01:00:05:22] (Thunder) (Music Playing) [01:00:05:22 - 01:00:08:17] Colin McNamara from my laptop."
+    },
+    {
+      "t": 9,
+      "text": "[01:00:09:20 - 01:00:11:05] Sal Castoro Here you go. You got, uh, [01:00:12:06 - 01:00:13:09] Sal Castoro yeah, I got it."
+    },
+    {
+      "t": 13,
+      "text": "[01:00:13:09 - 01:01:33:17] Collier King loud. Okay. So, um, I'm Collier King. I'm going to talk about deep agents from LaneChain. Um, so I just called the subtitle of batteries included deep research framework. Um, might be a little,"
+    },
+    {
+      "t": 27,
+      "text": "I'm not trying to sell it or anything. I don't work for LaneChain, but, um, uh, basically it's trying to solve this problem, this problem of the shallow agents. So you think about like the most"
+    },
+    {
+      "t": 36,
+      "text": "simple agent is just an LN that calls tools in a loop until some conditions met. Um, this doesn't really cut it for like complicated use cases. Um, there's the following pain points that tend"
+    },
+    {
+      "t": 50,
+      "text": "to come up over and over again, sustained context, uh, long-term planning is tough, complex workflows are not really feasible. And then parallelization and delegation is not easy. Um, so the, that,"
+    },
+    {
+      "t": 65,
+      "text": "you know, the begot deep agents, uh, and that's kind of a term that turned into this package, but basically Harrison, the genius that built LaneChain, uh, studied cloud code"
+    },
+    {
+      "t": 77,
+      "text": "very intensely. And he came up with these four design components that cloud code implements very well. And he tried to distill those into an easy to use Python package and he called deep agents."
+    },
+    {
+      "t": 89,
+      "text": "And so those four components are listed here and I'm going to go through those in a second."
+    },
+    {
+      "t": 94,
+      "text": "[01:01:35:11 - 01:01:45:00] Collier King Um, so like I said, it's Python package, inspired by cloud code. It's all lane graph under the hood. So it's kind of building on the existing success of lane graph."
+    },
+    {
+      "t": 105,
+      "text": "[01:01:46:07 - 01:03:10:10] Collier King You might recognize some of the syntax like to create deep agent. Um, there's a really simple function call that bootstraps, uh, the deep agent for you. It's just like create rack react agent,"
+    },
+    {
+      "t": 117,
+      "text": "which is in lane graph. And it's basically, if you're familiar with that, you've used that. It's just a simple, simple lane graph application you can build. Um, it's growing. It's,"
+    },
+    {
+      "t": 129,
+      "text": "it's just brand new. But if you look at this log scaled star history, it's, you know, taking off, it's, if you look at it compared to lane chain lane graph, it's got pretty, pretty good growth"
+    },
+    {
+      "t": 138,
+      "text": "trajectory. So, you know, people are jumping on this. Um, so, uh, maybe a little hard to see, and I totally stole this from your blog column, which is fantastic on this, uh, topic, but, uh,"
+    },
+    {
+      "t": 153,
+      "text": "you basically have a list of, um, tools, a prompt, which is called instructions here. You have, um, sub agents, which are optional. You don't have to use them if you don't want to,"
+    },
+    {
+      "t": 165,
+      "text": "and then you can specify the model and you just take those and just plug it into this create deep agent function. And then you get back those components that I discussed earlier, the planning tool, the file system, the system prompts for the sub agents. And then you have"
+    },
+    {
+      "t": 179,
+      "text": "a general purpose sub agent that does some stuff under the hood and you get back this lane graph agent. Super simple from a UX perspective, a DX perspective. It's hard to beat."
+    },
+    {
+      "t": 190,
+      "text": "[01:03:11:11 - 01:03:22:11] Collier King Um, so the first tools, the planning tool, they basically took this from Claude code."
+    },
+    {
+      "t": 196,
+      "text": "They basically reverse engineered this, uh, and built it into the deep agents."
+    },
+    {
+      "t": 202,
+      "text": "[01:03:23:14 - 01:04:13:14] Collier King And so this is what lets deep agents come up with a plan and then track that plan over a bunch of steps through to do list. And that's how it stays on track over like long executions. Um,"
+    },
+    {
+      "t": 216,
+      "text": "the second thing is the sub agents. Again, Claude code, uh, these are, you know, subordinates that kind of have their own prompts or own tools. Uh, Sal talked about context pollution. This"
+    },
+    {
+      "t": 228,
+      "text": "is what helps avoid that, uh, with, you know, context quarantine. So the main agent isn't flooded with stuff that it maybe doesn't care about. Um, and then there's the sub agent that"
+    },
+    {
+      "t": 239,
+      "text": "I talked about earlier, the general purpose sub agent, and this on the right is just a, uh, like a simple example of making a sub agent. You, you give it a name, a description, a prompt, maybe it's using a different model than, uh, the main agent."
+    },
+    {
+      "t": 253,
+      "text": "[01:04:14:15 - 01:05:08:02] Collier King And you just plug that in as one of the sub agents for the, for the create deep agent function. Um, and then you have your system prompt, uh, you know, this is a built-in system prompt. So again,"
+    },
+    {
+      "t": 267,
+      "text": "they took a reverse engineered Claude codes system prompt, and they will not let you edit this. This is like part of deep agents. It is on the roadmap to let users tweak it. But right now it's like"
+    },
+    {
+      "t": 280,
+      "text": "part of the package. You'd have to go edit the source code if you wanted to update this. Um, and they say in the read me, like, this is what makes this package good. Basically they say,"
+    },
+    {
+      "t": 290,
+      "text": "like, this is how it works. Like this is the secret. So, um, basically you, as the user, you can only customize part of it via the instructions parameter or the, the prompt here. Um, and this is"
+    },
+    {
+      "t": 302,
+      "text": "just concatenated onto the rest of the system prop from Claude code that they reverse engineered."
+    },
+    {
+      "t": 308,
+      "text": "[01:05:09:04 - 01:05:09:09] Collier King Um, [01:05:10:09 - 01:06:55:13] Collier King and then you have the virtual file system, virtual file system is the state. And so it's a, it's built on a file system, but it's really a lane graph state object. And it has, um, files,"
+    },
+    {
+      "t": 321,
+      "text": "you know, things that, uh, track, uh, pieces of data. Um, you can pass these as the user when you create the deep agent or the sub agents can actually create and edit these files. So it's a,"
+    },
+    {
+      "t": 334,
+      "text": "uh, it's a virtual file system, which means you could run a bunch of stuff in parallel. It's all in memory. You won't have like stuff writing over each other. Um, so it's, it scales very well. Um,"
+    },
+    {
+      "t": 345,
+      "text": "and then there's these built-in tools. It comes with five built-in tools and these, you can edit if you're feeling risky and you want to live on the edge, you can disable these or change these,"
+    },
+    {
+      "t": 355,
+      "text": "but this is what, this is how the sub agents will keep track of what they're doing. This is how the main agent knows what to do, delegate stuff. So you have a to-do list, which, uh, write to-dos function. You have write, read LS and edit file functions. And so you"
+    },
+    {
+      "t": 370,
+      "text": "can imagine all these sub agents in the main agent kind of editing a bunch of files, uh, quick succession and keeping track of state that way. It's, um, it's pretty cool, I think. Uh,"
+    },
+    {
+      "t": 382,
+      "text": "okay. So I'm going to give a little demo and this is a hard turn in this presentation, but, uh, the example I came up with was like, what's a good deep research use case? And this might not be a great one, but let's assume I'm a product manager and I want to do research"
+    },
+    {
+      "t": 397,
+      "text": "about my products. So the question of products managers are worried about, or as they do, uh, you know, who are our customers? What are their use cases? Are we solving their problems? What"
+    },
+    {
+      "t": 407,
+      "text": "are we telling them about all this stuff in our outgoing marketing material? What are they tell, what are the customers telling us about in our social media and their social media?"
+    },
+    {
+      "t": 416,
+      "text": "[01:06:56:16 - 01:07:00:18] Collier King Just so happens I have a bunch of data on this. Uh, so this is perfect."
+    },
+    {
+      "t": 421,
+      "text": "[01:07:01:21 - 01:07:11:15] Collier King Um, so I'm going to go over here now and can we, can we see that? Is that big enough? Probably not. Um, [01:07:13:08 - 01:07:42:08] Collier King"
+    },
+    {
+      "t": 432,
+      "text": "I zoomed in. It's probably fine. Uh, okay. So this is how you would set up a deep agent project. You just, um, I, I have this helper function. It basically just creates,"
+    },
+    {
+      "t": 444,
+      "text": "um, you know, runs this create deep agent and I'm passing it a model and I'm passing it a local tools, which is just a query tool to pull the data. And, uh, I have some prompts here."
+    },
+    {
+      "t": 456,
+      "text": "So I have a research instructions prompt, which is basically telling the, you know, [01:07:43:09 - 01:08:51:13] Collier King telling agent what it is like, hey, you're a researcher agent. You're looking at marketing"
+    },
+    {
+      "t": 467,
+      "text": "material, et cetera. Um, and then it has these sub agent prompts. So I have two sub agents here. One to look at the marketing material. That's the stuff that we're sending to the customers. And"
+    },
+    {
+      "t": 479,
+      "text": "then one to look at the social media, which is what the customers are sending to us."
+    },
+    {
+      "t": 484,
+      "text": "And I'm asking both sub agents to extract use cases and personas from the, uh, content. And then the main agent's going to look at both. And then imagine that Venn diagram again,"
+    },
+    {
+      "t": 496,
+      "text": "it's going to say, what are we missing? What are we overlapping? And then it's going to give some recommendations as far as what, you know, what mismatches there might be, uh, between what we're telling customers and what they're telling us. So, yeah, this is my, uh,"
+    },
+    {
+      "t": 510,
+      "text": "fantasy product manager agent. Um, I'll just show you the tool really quick. It's just a, just run some SQL queries. It's not very fancy, but then it runs some summarization. Um, just some like quick"
+    },
+    {
+      "t": 525,
+      "text": "summarization. Give me the use cases, the user personas, the problem solved in this content. Um, [01:08:53:15 - 01:09:56:16] Collier King and oh, one, just one side track deep agents doesn't like by default surface a lot of"
+    },
+    {
+      "t": 541,
+      "text": "observability like in the, when you're running it and you're reading the log. So I, there's this handy post model hook, uh, parameter and you can pass in like whatever type of logger you"
+    },
+    {
+      "t": 552,
+      "text": "want. I have this pretty verbose logger. Um, I did see it first. It would just run and I was like, what is going on? I can't see like nothing's happening. And then I realized, oh, I need to"
+    },
+    {
+      "t": 561,
+      "text": "add this logger to really see what's happening behind the scenes. Um, so I will show, I'm not, I could run it. It takes a few minutes every time. Let me just run it over here. We can see how long"
+    },
+    {
+      "t": 574,
+      "text": "it takes, but in the meantime, I'll show you. Um, so I'm in this case, I'm saying, Hey, look for workers AI. I work at cloud flare. Let's look at workers AI. Um, well that's running. I'll just"
+    },
+    {
+      "t": 587,
+      "text": "show you what this looks like when it's running. Um, so this, this is kind of tough to zoom in."
+    },
+    {
+      "t": 597,
+      "text": "[01:09:57:18 - 01:10:57:13] Collier King Um, basically the first thing it does is it says, you know, and this is, I'm running this with sonnet, this cloud sonnet. Uh, the first thing it does is it writes the to do's down that it"
+    },
+    {
+      "t": 607,
+      "text": "needs to do. And then, um, you know, these are the things that are going to get delegated to the sub agents. So the first thing it says is, um, extract the target product from the user's request. That"
+    },
+    {
+      "t": 617,
+      "text": "was workers AI. That's the product. And then it says the next steps are launched the marketing sub agent. And then after that launched the social media sub agent. And then after that, compare the"
+    },
+    {
+      "t": 627,
+      "text": "outputs from them. And then the last thing is provide the recommendations. So pretty simple use case. This is debatable. This is really a deep research use case. It's kind of on the edge. It's"
+    },
+    {
+      "t": 637,
+      "text": "not, it's not that deep, but, um, you know, it, it does those things and then it starts going off and running its different tasks. Um, so you can see as it goes, it starts to track what it's doing."
+    },
+    {
+      "t": 651,
+      "text": "So now it's completed this first task. It's in progress with the second one, uh, keeps going."
+    },
+    {
+      "t": 658,
+      "text": "[01:10:58:16 - 01:11:24:18] Collier King Um, now it's completed the second one and the third one. And now it's starting to write the starting to compare the results from both of them. And then finally it finishes everything"
+    },
+    {
+      "t": 669,
+      "text": "and it gives you a result back. And I should have asked this at the beginning, but who's used deep research before? I would hope a lot of people. It's pretty awesome. Um, every L M as a service has it like perplexity, Claude, um,"
+    },
+    {
+      "t": 685,
+      "text": "[01:11:25:23 - 01:11:52:08] Collier King Google, Jim and I, they all have it basically gives you a giant report back. And so this is what it gave me back. I ran it a few times. Um, so it says like marketing versus social"
+    },
+    {
+      "t": 697,
+      "text": "media analysis for workers, AI overlapping use cases, persona, strong alignment. Uh, you know, AI application development surprise, right? That's pretty obvious."
+    },
+    {
+      "t": 706,
+      "text": "Serverless AI computing, edge AI processing, image processing. Those are all overlapping."
+    },
+    {
+      "t": 712,
+      "text": "[01:11:53:10 - 01:13:10:04] Collier King The personas that are overlapping, AI developers and engineers. That's pretty obvious startup founders, technical product managers. Okay. And then what is one of the"
+    },
+    {
+      "t": 721,
+      "text": "marketing materials overemphasize, uh, basically, uh, threat intelligence. We talk a lot about that in the marketing docs, not as represented in social media, automated social media. We don't see that in the social data, but we advertise that more. Uh, we're"
+    },
+    {
+      "t": 739,
+      "text": "talking mostly to CTOs and CISOs where we should be talking more to individual developers. Uh, and we're focused a lot on large enterprise, which is not as prevalent in social media data. So anyway,"
+    },
+    {
+      "t": 751,
+      "text": "you can kind of get the gist of the report. It basically, um, just describes that Venn diagram for you. Like what are we over emphasizing? What are we under emphasizing? Um, but it gave"
+    },
+    {
+      "t": 761,
+      "text": "a pretty good result. I think it looked at, uh, let me see how many social media posts, 500 random social media posts. And, um, I don't know how many marketing materials it was. It was"
+    },
+    {
+      "t": 771,
+      "text": "a lot though. So, um, did a pretty good job. And did this thing stop running? Let me see."
+    },
+    {
+      "t": 777,
+      "text": "Yeah. So it ran in one minute and 48 seconds. It's not always that fast. Sometimes it's a little slower and the model does matter. Um, I ran this with SONIT, like I said,"
+    },
+    {
+      "t": 790,
+      "text": "[01:13:11:10 - 01:13:18:10] Collier King Opus take a lot, took a lot longer. I haven't really compared the outputs, but I feel like Opus is probably higher quality. Um, [01:13:19:17 - 01:13:49:04] Collier King"
+    },
+    {
+      "t": 799,
+      "text": "and I've seen, I've run this probably like 10 times. I've seen a few times where it's just crappy quality and I don't know why and it's just the model and I can't explain it. So I have a lot more testing to do, a lot more models to evaluate on, but,"
+    },
+    {
+      "t": 813,
+      "text": "um, I'm pretty impressed. It's a, it's a nice framework, easy to get started with. You just need a use case and yeah, I recommend it. Check it out. The, the get hubs, really good documentation or check out Collins blog. Collins blog is even better. So, um,"
+    },
+    {
+      "t": 829,
+      "text": "[01:13:50:12 - 01:13:53:17] Collier King let me go back to the PowerPoint just so I could show this one slide."
+    },
+    {
+      "t": 833,
+      "text": "[01:13:58:15 - 01:14:00:07] Speaker 6 I need [01:14:00:07 - 01:14:03:09] Collier King that in Google slides just like prompting inside."
+    },
+    {
+      "t": 843,
+      "text": "[01:14:03:09 - 01:14:05:23] Jeff Linwood Yeah. Oh, nice. [01:14:05:23 - 01:14:08:14] Collier King So they're stepping their game up. Yes."
+    },
+    {
+      "t": 848,
+      "text": "[01:14:08:14 - 01:14:12:06] Speaker 6 Yes, [01:14:16:05 - 01:14:28:04] Collier King it is. Uh, they built a lot of that. Most of the link, not, I won't say most, but a lot of"
+    },
+    {
+      "t": 861,
+      "text": "the Lang chain, sorry, Lang graph features that you're already kind of familiar with are in this."
+    },
+    {
+      "t": 868,
+      "text": "[01:14:29:06 - 01:14:37:14] Collier King So they, they note that in the read me, they write, um, human loop is there MCP. Uh, you can have the MCP adapters in there."
+    },
+    {
+      "t": 877,
+      "text": "[01:14:38:16 - 01:14:38:21] Collier King Um, [01:14:40:06 - 01:14:59:20] Collier King here it is human loop. Like if you run into this situation, that would be cool. I, uh, yeah, I would love to test that. I'm sure it's possible. Um,"
+    },
+    {
+      "t": 891,
+      "text": "because they show it in the docs. So yeah, tool. Okay, here you go. This is how you do it. Yeah."
+    },
+    {
+      "t": 902,
+      "text": "[01:15:02:23 - 01:15:05:03] Colin McNamara Awesome. Well, thank you so much. Yep. [01:15:11:20 - 01:15:12:14] Colin McNamara And [01:15:12:14 - 01:15:12:14]"
+    }
+  ],
+  "backfill": true
+}

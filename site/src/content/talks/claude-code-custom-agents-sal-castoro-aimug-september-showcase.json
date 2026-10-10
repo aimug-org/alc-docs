@@ -1,0 +1,358 @@
+{
+  "title": "Claude Code & Custom Agents",
+  "speakers": [
+    "sal-castoro"
+  ],
+  "date": "2025-09-30",
+  "event": "2025-09-10",
+  "youtubeId": "HI8PBSPr6Qk",
+  "duration": 953,
+  "summary": "In this session from the Austin AI Middleware Users Group (AIMUG) September Showcase, Sal Castoro explores the power of Claude Code and how to design custom agents for advanced development workflows.",
+  "topics": [
+    "Coding agents",
+    "Agents"
+  ],
+  "transcript": [
+    {
+      "t": 6,
+      "text": "[Music] So I'm just going to do a uh little presentation on uh cloud code kind of the development of our agentic coding"
+    },
+    {
+      "t": 18,
+      "text": "tools um mostly terminal based but uh you know kind of just speak to some more generalities there too. um start off."
+    },
+    {
+      "t": 28,
+      "text": "Does uh anybody use uh cloud code like on a day-to-day or maybe any other like uh agentic terminal based like uh codeex or um what is it Gemini CLI? That's that's another one. I've never tried"
+    },
+    {
+      "t": 40,
+      "text": "that one to be honest. But uh yeah, so hopefully this will be uh relevant to uh most people here and uh you know, you don't necessarily have to be a programmer nowadays to get advantage uh"
+    },
+    {
+      "t": 53,
+      "text": "you know, take advantage of a lot of these tools. So, that's pretty cool. Uh, let's go."
+    },
+    {
+      "t": 60,
+      "text": "Where are we? Ah, nice. So, um, I'm just going to do a brief history lesson. I'll speed through it. It won't be too boring if you're really into it. Uh, you probably know most of this stuff already, but um, so"
+    },
+    {
+      "t": 72,
+      "text": "kind of at the beginning, you know, the dark ages, uh, you know, when chatbt first came out, like late 2022, um, the whole big craze was prompt engineering, right? So, uh, everyone wanted to like"
+    },
+    {
+      "t": 83,
+      "text": "craft the perfect prompt that would instantly get their result right away."
+    },
+    {
+      "t": 88,
+      "text": "Uh, it's, uh, funny looking back at it now. I mean, we could laugh at it and be like, well, it's not really how you do it. It's kind of more of like this iterative approach, right? But, you"
+    },
+    {
+      "t": 96,
+      "text": "know, back then, I don't think that was as obvious, but, uh, we, uh, discovered like a lot of patterns to like kind of like coax these responses out of LLMs that took a lot of time to generate. And"
+    },
+    {
+      "t": 110,
+      "text": "then we found that they weren't really like easily um like generalized to other language models because they had their own kind of quirks and intricacies to them. Um and kind of like newer models"
+    },
+    {
+      "t": 123,
+      "text": "came along that tried to solve these issues. But it it still was like relatively inefficient especially compared to the tooling that we have now particularly when it comes to code generation seems to be one of the things"
+    },
+    {
+      "t": 135,
+      "text": "that it's actually quite good at. So um yeah uh this stuff this is old news we don't have to worry about it anymore. So kind of the new space we're in now is"
+    },
+    {
+      "t": 148,
+      "text": "the context engineering. So we have this MCP and uh kind of all of these tools that we can provide to the model to get more"
+    },
+    {
+      "t": 160,
+      "text": "accurate and useful responses. um especially with uh a lot of the tooling that we have now. It's it's kind of like we're building a scaffolding around the um foundational model. So like uh claude"
+    },
+    {
+      "t": 174,
+      "text": "code is a good example. You have uh you can even select different models, right?"
+    },
+    {
+      "t": 178,
+      "text": "So um I don't think you can choose haiku directly but you can do sonnet and opus and then depending on your limits you might uh get cut off uh from opus but uh you know got a shell at 200 bucks a"
+    },
+    {
+      "t": 190,
+      "text": "month to use that right and then you know they degrade it too. So, who knows? But, uh, yeah. So, one way that tools like, uh, Claude Code kind of address kind of the main issue with LLMs, right,"
+    },
+    {
+      "t": 201,
+      "text": "is that they're they're kind of ephemeral, like, uh, transient. You you don't have a memory to these LLMs."
+    },
+    {
+      "t": 207,
+      "text": "They're stateless, almost like, you know, if you're a developer, like a REST API, right? Supposed to be that you don't keep any session information in the model itself. All you really have"
+    },
+    {
+      "t": 216,
+      "text": "is the context window, right? And then once the context window either gets compacted so kind of like summarized or it gets cleared out you don't have any relevant information kind of from or as"
+    },
+    {
+      "t": 229,
+      "text": "rich of relevant information in the case of you compacted it as uh you had previously. So we as uh Colin had mentioned uh kind of in his presentation, one of the ways that these"
+    },
+    {
+      "t": 241,
+      "text": "coding tools are addressing this issue is creating um instructions files like your claude MD and uh kind of things like that. So you have information in a"
+    },
+    {
+      "t": 254,
+      "text": "LLM friendly format and it kind it allows you to save state in between requests and request and even when you compact or clear out your context window. So that's um and then I would"
+    },
+    {
+      "t": 267,
+      "text": "argue one of the main draws of these terminalbased uh agentic coding tools rather than maybe like a cursor or a co-pilot is I feel and I think it's a general consensus that you have much"
+    },
+    {
+      "t": 278,
+      "text": "greater control over the context that you provide to your foundational model."
+    },
+    {
+      "t": 283,
+      "text": "So you can compact and clear whenever you want. Um you even have like nifty little um uh commands like slashcontext to actually see kind of what's loaded into the context. So you really I think"
+    },
+    {
+      "t": 295,
+      "text": "have like much greater observability into it. Um but the main issue with this uh context engineering the thing that you're fighting against is uh finding the happy path between providing enough"
+    },
+    {
+      "t": 309,
+      "text": "context to your LLM to get the task done while not overloading the context and kind of poisoning it or uh you know confusing the LLM with too many"
+    },
+    {
+      "t": 321,
+      "text": "potential options. So that that's kind of where we get this idea of context engineering from. And uh kind of moving on, one of the ways that cloud code in particular and it seems like it's also"
+    },
+    {
+      "t": 333,
+      "text": "being generalized in deep agents um uh to address this context issue is the idea of like these custom sub aents. Um, and then cloud code had has had this"
+    },
+    {
+      "t": 345,
+      "text": "ability, you know, pretty much since it uh came out with the task command where you could you could see that it would run separate tasks, you know, maybe a bash command or it would uh, you know,"
+    },
+    {
+      "t": 357,
+      "text": "reach out to the internet with uh the web scrap um, the web request tool. But, uh, you could also ask it specifically to create a bunch of uh, different like"
+    },
+    {
+      "t": 369,
+      "text": "role-based sub aents is what they call them. And you could either run them in parallel or serially and they would all kind of go off and do their own thing."
+    },
+    {
+      "t": 378,
+      "text": "But the main advantage of them is that they had their own context windows. They would receive a prompt from the orchestrating agent and then go and do its task, summarize its findings, and"
+    },
+    {
+      "t": 390,
+      "text": "then return all of this information back to the orchestrating agent that could then load these summaries into its own context and make a a generalized uh like"
+    },
+    {
+      "t": 402,
+      "text": "assessment or you know in cloud code a lot of the times I would use it for researching and then it would add it to the plan. So you could have a plan with uh maybe a bit more uh information out"
+    },
+    {
+      "t": 412,
+      "text": "there kind of observed from many different roles or perspectives. Um and now um about I'd say it's been two or three months ago uh cloud code released"
+    },
+    {
+      "t": 424,
+      "text": "uh a new feature uh anthropic release a new feature in cloud code rather uh called custom agents where you have predefined uh uh sub agents that have their own uh"
+    },
+    {
+      "t": 438,
+      "text": "prompts uh system prompts um they don't inherit from the cloud MD so they kind of have their own um uh they are influenced by what the orchestrating"
+    },
+    {
+      "t": 450,
+      "text": "agent is. So, it kind of has that isolation, right? It's it's able to kind of complete its task without having to rely on an agent to uh the orchestrating"
+    },
+    {
+      "t": 462,
+      "text": "agent to uh make uh make the choices for you. Hopefully, we can sort that noise out. Uh anyway, um so yeah, the this uh tool is uh pretty great. um that now"
+    },
+    {
+      "t": 475,
+      "text": "they do require setup using the slash agents command um and you can then define the system prompt or kind of have uh claude do it itself you know a sonnet"
+    },
+    {
+      "t": 487,
+      "text": "or opus and uh they're much more customizable also you can choose the tools that they have access to um including MCP servers so um that that's another really good advantage of it and"
+    },
+    {
+      "t": 500,
+      "text": "since they're defined in markdown files they are transportable you can move them between projects. Um, so you have like domain specific work and if you uh as long as you have a good description of"
+    },
+    {
+      "t": 513,
+      "text": "these tools, the orchestrating agent can actually call them. Yeah."
+    },
+    {
+      "t": 526,
+      "text": ">> Uh yeah."
+    },
+    {
+      "t": 530,
+      "text": ">> Uh for sure. >> Yeah. Yeah. Yeah. Definitely. Um so yeah, so kind of moving on. Um here's kind of an example of what you can use."
+    },
+    {
+      "t": 540,
+      "text": "Loud enough for you or still can't hear me."
+    },
+    {
+      "t": 545,
+      "text": ">> Yeah. Uh can't speak too loud then echo. All right."
+    },
+    {
+      "t": 550,
+      "text": ">> Okay. Thank you. Um yeah, so uh here's the example of a uh custom agent that uh uh is a code reviewer. So you kind of"
+    },
+    {
+      "t": 562,
+      "text": "have an example of the markdown file that would define the way that this agent works and you can choose the model and uh the tools that uh go along with it. Uh this one in particular kind of"
+    },
+    {
+      "t": 576,
+      "text": "you even define like when it runs. So um general guidelines is you kind of want to keep like one job per agent. you uh want to restrict the tools kind of start like a read only and then introduce"
+    },
+    {
+      "t": 590,
+      "text": "editing tools as kind of that uh functionality is necessary and uh that also helps you keeping the context small and focused and and returning actual like useful information. Um and then of"
+    },
+    {
+      "t": 604,
+      "text": "course using clear and specific descriptions so that uh the main uh cloud code knows when to invoke these agents. So uh yeah uh we've got a couple of examples kind of code review QA"
+    },
+    {
+      "t": 618,
+      "text": "debugging these are all like a kind of software development life cycle specific. Yeah question."
+    },
+    {
+      "t": 624,
+      "text": ">> Yeah. Um so a >> um it can if you prompt it in such a way it will it will make them kind of on the fly. Uh"
+    },
+    {
+      "t": 639,
+      "text": ">> is it 15 minutes or 10? >> You're at 10 right now. >> Okay. Yeah. Yeah. Go on."
+    },
+    {
+      "t": 645,
+      "text": "[Music] >> Is there a library somewhere?"
+    },
+    {
+      "t": 651,
+      "text": ">> Yeah, there there's definitely repositories out there. I've seen quite a few. I don't have any offhand, but you can definitely look them up and find them. Um there are some uh downsides to"
+    },
+    {
+      "t": 660,
+      "text": "that that I'll kind of get to in the later on slides. Uh but uh yeah, let's uh move on here. So here's kind of an example of kind of some of the cool stuff you can do with uh sub agents. So"
+    },
+    {
+      "t": 672,
+      "text": "you can actually run them in parallel um and define an execution plan where you have your custom agents move from phase to phase to phase and then run your sub agents uh all at the same time assuming"
+    },
+    {
+      "t": 686,
+      "text": "that the tasks that they do can be parallelized. you know, they don't rely on uh custom they don't rely on uh resources that they kind of need to share between them. So, I was working on"
+    },
+    {
+      "t": 698,
+      "text": "making a new personal site that had a blog um in Astro. So, uh I actually had Opus create these sub agents for me particularly for this project and then I took a few like gifts here, some videos"
+    },
+    {
+      "t": 712,
+      "text": "of kind of that parallel action working. So, this is kind of the stuff that kind of makes you feel really powerful as you have all of these little tiny processes running at the same time uh to"
+    },
+    {
+      "t": 723,
+      "text": "accomplish uh you know some pretty pretty cool tasks for you. So, just uh just a little example of some of the cool things that you can do. And um this uh top picture here is actually the"
+    },
+    {
+      "t": 734,
+      "text": "Claude MD that kind of outlines how you would use these tools. Um so you can either have that or create like a plan and plan mode if you want to kind of invoke the agents in a serial way where"
+    },
+    {
+      "t": 746,
+      "text": "it passes the information from one to another to another. So uh yeah and then um this is uh just kind of close out here. Um I've kind of spoken about a lot of the upsides and the advantages of"
+    },
+    {
+      "t": 759,
+      "text": "using these but that there are some downsides. So all of these agents cost context space. They are tokens as you can see there if you lift them out and you hit slashcontext and you can see"
+    },
+    {
+      "t": 771,
+      "text": "what is occupying that and the custom agents along with your MCP tools all contribute to uh you could say context pollution but you know uh you know maybe context enrichment but whatever however"
+    },
+    {
+      "t": 785,
+      "text": "you want to view it. So keep that in mind. uh you don't really want to have like a hu a very large amount of large sub agents because they will cost a lot"
+    },
+    {
+      "t": 797,
+      "text": "of tokens and they will take it they'll eat up your context window and then you're compacting or you're clearing out more and more often and generally that kind of reduces the quality of the"
+    },
+    {
+      "t": 806,
+      "text": "output that you get. Um I think uh that's it for me. So uh does anyone have any questions? I got two minutes for questions."
+    },
+    {
+      "t": 818,
+      "text": ">> Yeah. Um, how well do sub aents work for multi modality?"
+    },
+    {
+      "t": 830,
+      "text": ">> Yeah. Um, I've tried out kind of something similar to that. So say you have like uh maybe an accessibility or uh kind of like a reviewing sub agent and say it uses like a playright MCP to"
+    },
+    {
+      "t": 842,
+      "text": "load up like a headless chrome and then like take a picture of a website and then it can kind of analyze that and provide you you know maybe to see like the contrast, right? Is it is there"
+    },
+    {
+      "t": 852,
+      "text": "enough difference between these two uh colors on the page that um you know it's accessible? Basically I've I've got mixed results um kind of with most things. I think it's like a work in"
+    },
+    {
+      "t": 862,
+      "text": "progress. Um although cloud code in general is actually pretty good at images but uh it kind of varies. So yeah, I'd say it's uh definitely something that can be improved."
+    },
+    {
+      "t": 875,
+      "text": ">> Yes, sir."
+    },
+    {
+      "t": 890,
+      "text": ">> Mhm. Yeah. So that's uh that's kind of the name of the game, right? Um that's uh I think the the main thing that you're thinking of when you're creating an agent. Yeah. I try to think of like kind"
+    },
+    {
+      "t": 903,
+      "text": "of an atomic set of maybe transactions like in a database or something like if all of these maybe even smaller tasks kind of go together. Um that that could work. So, say you know you're creating"
+    },
+    {
+      "t": 914,
+      "text": "components in a React site, maybe you could have an agent that does that and then maybe you have another one that does like uh unit testing or something like that. So, um but I I could chat"
+    },
+    {
+      "t": 924,
+      "text": "more about this, you know, uh afterwards if you'd like, but I think my time is up."
+    },
+    {
+      "t": 928,
+      "text": ">> Awesome. Thank you so much, S. >> I am absolutely stealing this pattern for my Astro blog, >> which anyone using Astro? I think Collier Collier is the one who started this fun,"
+    },
+    {
+      "t": 940,
+      "text": ">> right, Jeff? Y I heard it from >> it's fun."
+    }
+  ],
+  "backfill": true
+}

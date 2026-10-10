@@ -1,0 +1,43 @@
+---
+import { render } from 'astro:content';
+import DocsPage from '../../components/content/DocsPage.astro';
+import TalkCard from '../../components/TalkCard.astro';
+import { allEvents, publicTalks } from '../../lib/data';
+import { docSummary, docTitle, docUrl, docsNav, hasH1, kebab, type DocEntry } from '../../components/content/content';
+
+export async function getStaticPaths() {
+  const { docs } = await docsNav();
+  return docs.map((doc) => ({ params: { slug: docUrl(doc.id).slice('/docs/'.length, -1) || undefined }, props: { doc } }));
+}
+const { doc } = Astro.props as { doc: DocEntry };
+const { Content } = await render(doc);
+const title = docTitle(doc);
+const url = docUrl(doc.id);
+// Front matter description, else the first paragraph.
+const desc = docSummary(doc) || undefined;
+// A month's notes page leads with that night's talks, when an event links its notes here.
+const ev = (await allEvents()).find((e) => e.data.docs === url);
+const nightTalks = ev ? (await publicTalks()).filter((t) => t.data.event === ev.id) : [];
+---
+<DocsPage title={title} description={desc} current={url}>
+  {nightTalks.length > 0 && (
+    <section aria-label="Talks from this night" class="mb-10 flex flex-col gap-4" data-pagefind-ignore="all">
+      <p class="m-0 font-mono text-sm tracking-[0.12em] text-gold uppercase">Talks from this night</p>
+      <div class="grid grid-cols-[repeat(auto-fill,minmax(min(100%,220px),1fr))] gap-4">{nightTalks.map((t) => <TalkCard talk={t} size="sm" />)}</div>
+    </section>
+  )}
+  <article class="prose-aimug doc-body">
+    {!hasH1(doc) && <h1>{title}</h1>}
+    <Content />
+  </article>
+  {doc.data.tags.length > 0 && (
+    <ul class="m-0 mt-10 flex list-none flex-wrap gap-2 p-0">
+      {doc.data.tags.map((t) => <li><a href={`/docs/tags/${kebab(t)}/`} class="inline-flex min-h-[44px] items-center rounded-full border border-edge px-3 font-mono text-xs text-soft uppercase no-underline hover:border-gold hover:text-gold">{t}</a></li>)}
+    </ul>
+  )}
+</DocsPage>
+
+<style>
+  /* Doc titles are long sentences; set them in bold sans, not the Anton display face. */
+  .doc-body :global(h1) { font-family: var(--font-sans); font-weight: 700; font-size: clamp(30px, 4vw, 44px); text-transform: none; margin-top: 0; }
+</style>

@@ -1,0 +1,26 @@
+---
+import Base from '../../layouts/Base.astro';
+import DocsNav from './DocsNav.astro';
+import Mermaid from './Mermaid.astro';
+import { docsNav } from './content';
+
+interface Props { title: string; description?: string; current: string }
+const { title, description, current } = Astro.props;
+const { nav } = await docsNav();
+---
+<Base title={title} description={description}>
+  <div class="mx-auto grid max-w-[1240px] gap-8 px-4 pt-8 pb-20 sm:px-8 lg:grid-cols-[280px_minmax(0,1fr)] lg:gap-12 lg:pt-12">
+    <details class="rounded-xl border border-line bg-panel lg:hidden" data-pagefind-ignore>
+      <summary class="flex min-h-[48px] cursor-pointer items-center px-4 font-bold">Browse notes</summary>
+      <div class="px-2 pb-3"><DocsNav items={nav} current={current} /></div>
+    </details>
+    <aside aria-label="Notes" class="hidden lg:sticky lg:top-6 lg:max-h-[calc(100vh-3rem)] lg:block lg:self-start lg:overflow-y-auto" data-pagefind-ignore>
+      <p class="m-0 mb-2 px-2 font-display text-2xl font-normal uppercase"><a href="/docs/" class="text-text no-underline hover:text-gold">Notes</a></p>
+      <DocsNav items={nav} current={current} />
+    </aside>
+    <div class="min-w-0">
+      <slot />
+    </div>
+  </div>
+  <Mermaid />
+</Base>

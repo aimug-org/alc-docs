@@ -1,0 +1,859 @@
+{
+  "title": "Juan Iturbe & Andy Caballero: Building Ketzai and AIMUG Panama | Builders Podcast #7",
+  "speakers": [
+    "juan-iturbe",
+    "andy-caballero"
+  ],
+  "date": "2026-03-15",
+  "youtubeId": "o-aVeYFsdI4",
+  "duration": 2367,
+  "summary": "In episode seven of AIMUG Builders, James Coffey talks with Juan Iturbe and Andy Caballero about the rise of AIMUG Panama and the story behind Ketzai, an AI-powered education platform built for teachers and students in Panama.",
+  "topics": [],
+  "transcript": [
+    {
+      "t": 1,
+      "text": "at that point. Hold there. Holy smokes."
+    },
+    {
+      "t": 8,
+      "text": "Extraordinarily business value."
+    },
+    {
+      "t": 12,
+      "text": ">> Welcome to episode number seven of AI Mug Builders. And today we have a special episode. We have two fellows from Panama in the AI Mug chapter down there. and they're going to introduce"
+    },
+    {
+      "t": 25,
+      "text": "who they are, the mission of AIM mug builders in Panama, and also a special product of that meeting, which is Keti, an AI teacher planning for folks in"
+    },
+    {
+      "t": 38,
+      "text": "Panama, helping them create lessons and study guides for children in the country. So, Juan, very nice to meet you. Could you likewise"
+    },
+    {
+      "t": 50,
+      "text": ">> I guess let's first start with who you are and where you're from."
+    },
+    {
+      "t": 55,
+      "text": ">> My name is Juani Tur. I'm actually from Venezuela. I've been living been here in Panama for the past about 15 years and I come from the technical creative side and for the past year year and a half"
+    },
+    {
+      "t": 68,
+      "text": "I've been sort of focusing more and more on AI and I've been helping teams implement this sort of last wave of AI and generative AI uh specifically in"
+    },
+    {
+      "t": 81,
+      "text": "things that web applications and products. So you originally were not into AI. You were originally into, if I got this correct, you were into visual effects. Is that correct?"
+    },
+    {
+      "t": 91,
+      "text": ">> Yeah, that's right. I actually got into AI through that of stable diffusion when the first versions of stable diffusion came out. I was basically doing pipeline work and in BFX. So I was using Python"
+    },
+    {
+      "t": 104,
+      "text": "on on an everyday basis to build tools for artists. I started playing around with the models and I realized that this was something that was really going to change everything because in 3D MV"
+    },
+    {
+      "t": 115,
+      "text": "effects producing a single pixel is very very very hard. you know, you need rendering, you need light simulations, you need artists, you need textures, you need and and just the fact that Non was"
+    },
+    {
+      "t": 129,
+      "text": "able to produce even the quality back then was not great, but even the fact that he was being able to produce those things already like was enough for me to understand that that this was coming for"
+    },
+    {
+      "t": 141,
+      "text": "real, right? And right around that time the first Chad GDP came out and >> Okay. So then like how did your colleagues take it? like were you the you know the early adopter there where"
+    },
+    {
+      "t": 152,
+      "text": "they're like hey why what's going on here like this thing looks terrible why are you experimenting with this because cool part about it was when we started playing around with using gray renders"
+    },
+    {
+      "t": 166,
+      "text": "as the basis for an image to image and then the quality sort of spiked up from there. So we were just sort of fronting these models at the beginning from bare noise and the results were as you say"
+    },
+    {
+      "t": 180,
+      "text": "terrible but really not usable. But as the technology kept sort of pushing along and we started seeing tools like coffee UI for example and we could access other models for to do things"
+    },
+    {
+      "t": 193,
+      "text": "like background removal on the fly and then we started experimenting with okay what if we take this OpenGL render. So but if not finalized we're already in a stage where we would describe lighting."
+    },
+    {
+      "t": 206,
+      "text": "We would describe basic shapes and then the diffusion models are really interesting because you can play around with these levels of noise. You can give it more or less noise as a starting"
+    },
+    {
+      "t": 217,
+      "text": "point for the diffusion process. Right? So what we started to do was well what if we just give it a little bit of noise with these images in the background and started playing around this image to"
+    },
+    {
+      "t": 227,
+      "text": "image and yeah the results kind of spiked up from there. We actually used it in a couple of of production work for background textures like things that were far away from the camera. They've"
+    },
+    {
+      "t": 239,
+      "text": "been like we've been doing this in a studio since like 2021 and before. I think it was just that it's not used for things that are close to the camera yet."
+    },
+    {
+      "t": 251,
+      "text": "And that's what's changing now. like the quality of the AI generated stuff has improved so much that right now uh there's actually something going on in the BFX industry where artists are"
+    },
+    {
+      "t": 265,
+      "text": "actually like showing their work and a lot of managers have like an AI generated version and they just tell the artist like oh but this one looks very nice can you make yours look like this"
+    },
+    {
+      "t": 278,
+      "text": "so that's providing like a huge shift in the in the way that these productions are run and and the way that AI is impacting beyond just text generation"
+    },
+    {
+      "t": 290,
+      "text": "which is what what the largest scare public have seen but like behind the scenes for things like 3D gshian platin even uh geometric generation so the"
+    },
+    {
+      "t": 304,
+      "text": "model itself like there's been a spike in the quality of the models generated by AI and everything that has to do with just raw pixel generation. Like if you"
+    },
+    {
+      "t": 317,
+      "text": "compare how expensive rendering one frame from a real production level studio is with a rendering engine that's you know simulating like like red shift or or pix you can be talking about maybe"
+    },
+    {
+      "t": 332,
+      "text": "six to eight hours per image just to render it out. And the fact that a I can do this in with with the right computation minutes to maybe well I'm"
+    },
+    {
+      "t": 344,
+      "text": "I'm not even sure if hours just they're they're extremely fast ones they're trained and and and that's the that's the that's where things are moving. So right now people that were in my spot"
+    },
+    {
+      "t": 355,
+      "text": "about a year ago because I kind of branched into this more general application of AI but a lot of people that are still working in being the studio what they're doing right now is actually producing synthetic data to"
+    },
+    {
+      "t": 369,
+      "text": "train the AI model and use that AI model then to do the productions."
+    },
+    {
+      "t": 375,
+      "text": "Let's say we have a big explosion right. So I would be tasked to generating maybe a thousand explosions that look really good. Then we can train the model per that production with the style of the"
+    },
+    {
+      "t": 388,
+      "text": "explosions that we're going to use in this production. And then in production, we're not actually using the artist to make the actual simulation. We're just using the train model version. And"
+    },
+    {
+      "t": 399,
+      "text": "that's just it's a complete shift."
+    },
+    {
+      "t": 403,
+      "text": ">> All right. Well, before we go on to AI Mug and how you got involved there, I'd like to bring in Andy Caviierro and we can get to know each other and then I think after that we want to hear about"
+    },
+    {
+      "t": 415,
+      "text": "how you guys met. So Andy, can you tell me more about yourself? Where are you from? And what have you been doing that got you into AI?"
+    },
+    {
+      "t": 423,
+      "text": ">> I'm Andy. I'm the CEO of my startup KSI is a two-year adventure so far. It's proved to be very effective here in Panama and I'm fascinated by AI day one"
+    },
+    {
+      "t": 438,
+      "text": "user on CHP as it was released being seen a lot of um advantages that that comes from using it especially on the education field that's how the idea got started since I homeschooled my oldest"
+    },
+    {
+      "t": 452,
+      "text": "son I had to make a switch from the national education system to the US because that's where they give the courses there's there's a gap in the curricula that you use there. That's"
+    },
+    {
+      "t": 464,
+      "text": "where I see the first sparks of ideas there because I had to fill in some of the contents that they are teaching over there that are not taught here. So, I use AI for that."
+    },
+    {
+      "t": 475,
+      "text": ">> So, Andy, you're from Panama and so like you got involved in like chat GPT very early. What were you doing before before these guys came out with all their models? Well, I used to be a a developer"
+    },
+    {
+      "t": 490,
+      "text": "for big companies and I used to work in the throughout the entire life cycle of a product from creation to ideation to working with customers, developing it, training them, then supporting them."
+    },
+    {
+      "t": 503,
+      "text": "It's like maybe I work on that like maybe 12 years or so. So I understood how the process of software creation was and I am originally from here but"
+    },
+    {
+      "t": 515,
+      "text": "working from external companies from the US mainly. So seeing all of this AI change and the the all the advantages that it gives me, it allowed me to to start trying to develop my own software"
+    },
+    {
+      "t": 528,
+      "text": "idea and it came because of that that I was saying like if if AI can really help you catch up on education and that's also something that got my attention because in my own personal experience"
+    },
+    {
+      "t": 541,
+      "text": "because I was doing later on my job I was doing more support and development I stopped learning like development and and the new stacks of software and and the new TypeScript, React, all of these"
+    },
+    {
+      "t": 554,
+      "text": "things. I missed this wave. But I start catching up with AI. It caught me up to date. He terms that I was familiar with in the past to get me up to date. So when I see all of this, I see that my"
+    },
+    {
+      "t": 566,
+      "text": "kid is also learning a lot with it. I see like well we have to approximate these two people. So that's when the idea comes and that's when we start building Katsai which is okay now a"
+    },
+    {
+      "t": 577,
+      "text": "panamina startup. >> So you were previously doing about like I think you said what 12 years about in application development. You've done a lot for various different companies and then at some point you have I at least"
+    },
+    {
+      "t": 591,
+      "text": "one child. Do you have more than one but okay and then they're all in they're all in homeschool. My daughter's also in home school so I I'm with you there. And then it hits you. You got AI. You've"
+    },
+    {
+      "t": 603,
+      "text": "learned AI and you're like, \"Hey, I got an application here.\" So that's how you got into AI was basically you had your own need and you just like saw this wave"
+    },
+    {
+      "t": 615,
+      "text": "of um LLMs come about that can solve this gap. And to bring it back like to AI Mug, is this how both Juan, you and Andy met or did you guys know each other"
+    },
+    {
+      "t": 628,
+      "text": "beforehand? So, here's the thing. Here in Panama, Panama is like such a small country."
+    },
+    {
+      "t": 633,
+      "text": "It's like four million people. So, it's a it's great for making a lab or probing an MVP, first of all, but also there's not like a big AI scene or they use there didn't used to be a good AI scene."
+    },
+    {
+      "t": 644,
+      "text": "So, we met on a like a coffee meetup that one of our friends like a mutual friend did and that's when we start like talking to each other. So, that's where we got into it. I was already starting"
+    },
+    {
+      "t": 655,
+      "text": "to build catsite and Juan was starting to look for new adventures in the space."
+    },
+    {
+      "t": 660,
+      "text": "So that's like it was like instant click like we talk the same language."
+    },
+    {
+      "t": 664,
+      "text": ">> Gotcha. And Juan, could you tell me more about like well how did this end up becoming AI mug in Panama? Like how's Paul involved? So Paul Phelps, he's here in Austin."
+    },
+    {
+      "t": 676,
+      "text": ">> Um he's the one who put me in touch with both of you. And so like I'm really interested in that backstory. Could you fill us in?"
+    },
+    {
+      "t": 683,
+      "text": ">> Yeah. It actually started because after that initial meeting that Ali tells you about, we just we used to hook each other up just to talk about AI, right?"
+    },
+    {
+      "t": 694,
+      "text": "Just because we both were sort of on the same level being able to understand each other about what was happening and and and that was just like this is really nice. We should do it again because that"
+    },
+    {
+      "t": 707,
+      "text": "was a oneoff meeting, right? So we said if we both want to do this kind of meetups there's got to be more people right we should be able to put together another coffee where we maybe get four"
+    },
+    {
+      "t": 719,
+      "text": "or five people that was the initial idea and then what I've been working on is with launching the framework and I started just looking on online and on linking it who is near us that even"
+    },
+    {
+      "t": 735,
+      "text": "knows about this right that maybe has blank chain or something in their title or something so that we can start sort of connecting with more people and and keep this idea of being able to talk"
+    },
+    {
+      "t": 747,
+      "text": "about in the same in the same level, right? And then Paul showed up. That's who that's exactly who I found. And and Paul, he had recently been here in"
+    },
+    {
+      "t": 759,
+      "text": "Panama and he's been doing these online versions of the of the AI mod from Austin and he had the vision of of doing them"
+    },
+    {
+      "t": 772,
+      "text": "offline. So doing them in personal and that was sort of exactly what we were looking for. we just needed like a little bit of that extra just a motivation really and he came up with"
+    },
+    {
+      "t": 785,
+      "text": "all that motivation, right? He was like, \"Yes, I have I'm in contact with these guys. We can do this this meetups. We can record them and and sort of bring in Panama into the the larger community. We"
+    },
+    {
+      "t": 799,
+      "text": "found an organization here that would let us use their offices where we're doing the meetups right now and they've been amazing. This is the ISD, an organization here, innovation smart"
+    },
+    {
+      "t": 810,
+      "text": "district, and they've partnered with us to host these meetups right now where the sole idea is to get a bunch of interesting people in the room."
+    },
+    {
+      "t": 822,
+      "text": "Honestly, I think it's more about 60% networking and getting to know other people and about 40% about learning."
+    },
+    {
+      "t": 833,
+      "text": "And it's been really nice because we have people from every sort of level working in the group or contributing to the group. We have people that are just getting started with AI presenting about"
+    },
+    {
+      "t": 844,
+      "text": "their very small personal projects and then we have people that are senior leads at big companies that have also presented."
+    },
+    {
+      "t": 854,
+      "text": "So there's something for everybody because as a senior what you get is the exposure to these other developers that get turned into a into business connection or an opportunity and as a"
+    },
+    {
+      "t": 866,
+      "text": "junior you get the opportunity to expose your idea to these people that have a lot more experience than you and yes that's what we're doing."
+    },
+    {
+      "t": 876,
+      "text": ">> That's great because that's very similar to how it is here at AMOS. we are largely networking but it's been learning it's kind of worked out almost as a new service as well so the AI moves"
+    },
+    {
+      "t": 890,
+      "text": "so quickly that you know those people who may not be as experienced as the senior developer at the very least they can check out new libraries new frameworks and they can tell people what"
+    },
+    {
+      "t": 901,
+      "text": "they like about it what they don't because we can't try everything out all by ourselves we need help from a lot of people and so I'm interested to like how many meetups have you had so far? How"
+    },
+    {
+      "t": 913,
+      "text": "many people are there? I'd be interested to know what it looks like on the ground."
+    },
+    {
+      "t": 917,
+      "text": ">> Yeah, we were actually surprised because right from the get-go, like I think the idea came across really well that we were not trying to just do another talk about AI, general AI, but we really"
+    },
+    {
+      "t": 930,
+      "text": "focused in this developer niche. We expected about 10 people on that first day. We got 23, 24. We pretty much filled the room which was amazing for a"
+    },
+    {
+      "t": 942,
+      "text": "first turn up and in the second one we did just the same. So we have about 20 people coming to our groups right now."
+    },
+    {
+      "t": 950,
+      "text": "We have a couple of meetups already done and we're coming up to the third one next week on March 18th. So yeah, it's been a ride and it's getting better."
+    },
+    {
+      "t": 962,
+      "text": "We're just starting to put more time into the presentation and building maybe signage for ourselves. So, it's starting to become something a little bit more official"
+    },
+    {
+      "t": 975,
+      "text": ">> and it's been a ride. >> Awesome. Well, it'll be wonderful to do some more cross collaboration between the two chapters >> and to really be able to point each other, you know, point guests. That is"
+    },
+    {
+      "t": 986,
+      "text": "my vision because here we need that, you know, like a lot of Latin American countries like Panama lead their talent because there aren't huge opportunities"
+    },
+    {
+      "t": 998,
+      "text": "here to grow within this and to be able to just have the opportunity to get somebody a good engineer from that chap to come and and help spread the"
+    },
+    {
+      "t": 1011,
+      "text": "knowledge and help of the scene which is exploding the tech scene in Panama right now. I think it's one of the visions that I have for the group. Honestly,"
+    },
+    {
+      "t": 1023,
+      "text": "like I think that would be a milestone. I think what you say there is true like the bleeding talent part because on personal experience while I was working on the company I was before I started"
+    },
+    {
+      "t": 1035,
+      "text": "doing this I was a huge advocate for AI because it was like a software development company and it's like the latest thing but when organizations grow enough it's a little bit hard to to do"
+    },
+    {
+      "t": 1046,
+      "text": "change and you know how AI is like change like every day or every hour. So being able to bring these people that are feeling like that, it's been amazing because you you get to speak to people"
+    },
+    {
+      "t": 1057,
+      "text": "that are like are going through the same thing and are seeing the huge potential and here they have free reigns. I was telling my like right now with my company we don't have still the"
+    },
+    {
+      "t": 1067,
+      "text": "structure but we can like choose any stack any software any direction because we are building the policies ourselves and the procedures. So it's it's amazing to have a group of people like this. you"
+    },
+    {
+      "t": 1078,
+      "text": "started ketai and I think a lot of it isn't really about difficulty or knowhow. A lot of it is down to bravery and also just getting started and"
+    },
+    {
+      "t": 1090,
+      "text": "learning how to experiment with ideas so that they're they start small before you invest heavily in that idea. Maybe you can go into exactly how you started"
+    },
+    {
+      "t": 1102,
+      "text": "Katzai and how it evolved from the initial idea to where it is now."
+    },
+    {
+      "t": 1108,
+      "text": ">> Well, it all started with a global competition that Google did. It was called the Gemini API developer competition. It was like this worldwide competition where the prize would be an"
+    },
+    {
+      "t": 1119,
+      "text": "electric Delorean. So, if you do like the best AI thing that was back on the Gemini 1.5 Pro days, maybe two years ago, a little bit more. And I gathered a group of friends and I said like let's"
+    },
+    {
+      "t": 1132,
+      "text": "just start building for this. Let's do a tutor because we were homeschooling and AI was great at teaching. Let's do a tutor that teaches history takes you to the place where history happened and"
+    },
+    {
+      "t": 1142,
+      "text": "that's where we got the bird the catsai bird that we have for our logo right here."
+    },
+    {
+      "t": 1147,
+      "text": ">> That's where we got the mascot from because if it's going to be like elementary school teaching these kind of things help, right? So we start building it and we submitted the proposal but from my"
+    },
+    {
+      "t": 1160,
+      "text": "research I noticed that we were the only ones. We even build like this demo video because you had to submit a video where you would show off your tool but we made it like full passion project. We went we"
+    },
+    {
+      "t": 1172,
+      "text": "got some drones we got some historical shots from ruins here in Panama. We did this like crazy thing, but also the tool that accompanied it was like but the sad part of all of this is that Google"
+    },
+    {
+      "t": 1183,
+      "text": "didn't even saw the submission. I check on the repo. I check on the drive where I send the code base and they never check because there was so many submissions."
+    },
+    {
+      "t": 1193,
+      "text": "We were a little bit let down by that but through the process realized like hey this is not just a demo. It's not like a a hackathon Sunday project. This is like a thing that we have to build."
+    },
+    {
+      "t": 1204,
+      "text": "because there was also a lot of interest here locally. They were saying like wow this is really good. We like I would pay for this that that's what people were saying. So then we decided like let's"
+    },
+    {
+      "t": 1215,
+      "text": "make this official instead of just making it like a demo let's make it like a company and then we start working on it. So we start building for this tutor this tutor vision that we had and that's"
+    },
+    {
+      "t": 1226,
+      "text": "when my co-founder who is the COO Jose and I started working together but we needed someone else on the on the team that could help us bring that technology and that development here to life. So"
+    },
+    {
+      "t": 1240,
+      "text": "that's where I also recruited and invited to the team Helen who was working with the product alongside with me. So I have more of like the AI vision and where should we take things and she"
+    },
+    {
+      "t": 1250,
+      "text": "is also like really good at UI designing and and development. So it's like a good compliment. And then Jose handles all the the business and strategy part of these things. So now that we have the"
+    },
+    {
+      "t": 1262,
+      "text": "three of us working together, we were still doing our jobs. We're doing like our 9 to5. Uh and we used to meet before our shifts start at work. We would meet like two hours every day. We would go to"
+    },
+    {
+      "t": 1272,
+      "text": "a McDonald's and we would exchange ideas, draw on paper, start doing it."
+    },
+    {
+      "t": 1278,
+      "text": "But through the process of building this tutor, we realized that for a tutor to give effective classes, it needs to have a good planning. And that's where we pivoted the idea because we realized"
+    },
+    {
+      "t": 1290,
+      "text": "there's a huge pain here that's been unattended and that is that in order to give a a good class, teachers spend their whole weekend planning. And it's like such a drag for them because every"
+    },
+    {
+      "t": 1301,
+      "text": "year they keep asking more and more things that they have to deliver on and it's exhausting. Which teacher Oh, I I believe this is worldwide. What teacher would be happy to give a class when he"
+    },
+    {
+      "t": 1313,
+      "text": "spend the entire weekend planning? So that's the pain of what we saw. But especially Helen there because her mother is a an English teacher here in Panama. So she lived that pain. She"
+    },
+    {
+      "t": 1324,
+      "text": "lived not being with her mom during the weekends and this kind of things. So she brought the idea to us and we discussed it and we realized yes planning is important and now in development if you"
+    },
+    {
+      "t": 1334,
+      "text": "develop you know that now planning is everything if you don't plan the software comes out all spaghetti code that's unmaintainable right so if you have a solid plan you can have a solid"
+    },
+    {
+      "t": 1344,
+      "text": "code that you can maintain so it's the same for classes right >> so then we pivoted the idea >> yeah so like I was going to ask you about planning so I used to think that the elementary schools would have really"
+    },
+    {
+      "t": 1358,
+      "text": "just like a curriculum all laid out. You know, on this day you do X, on this other day you do Y, and then on these days you're going to test. Maybe it's not exactly written down to the exact"
+    },
+    {
+      "t": 1369,
+      "text": "calendar day, but you know, there's a script if you're going to be teaching one class to like like second graders about mathematics, another script for teaching fourth graders about I don't"
+    },
+    {
+      "t": 1381,
+      "text": "know what they let's say science. I don't know what what they're learning in in fourth grade, but you know, I thought, how's that actually work out?"
+    },
+    {
+      "t": 1389,
+      "text": "Like, what are they what what's this planning that's going on? I would like to know more about that. There's teachers that been using the same planning for the last 10, 15 years and"
+    },
+    {
+      "t": 1398,
+      "text": "they never change it. That's a huge problem right there because the kids that learned 15 years ago are not the same the ones that we have today. So, planning should be personalized to the"
+    },
+    {
+      "t": 1409,
+      "text": "student that's going to receive the class right now. for example, that's why we see there's a lot of special needs that student have a lot of TDA and all of these ways of learning that need uh"
+    },
+    {
+      "t": 1419,
+      "text": "attention. There's also different ways of of different realities that that students here face. For example, here in Panama, it's really easy to have rural and urban communities, but the way the"
+    },
+    {
+      "t": 1431,
+      "text": "classes are imported are totally different. So you have one main plan that could serve as a script, but you need to personalize it for each classroom and even more so for each student because everyone learns"
+    },
+    {
+      "t": 1443,
+      "text": "different. So that's that's where we find that the possibility because we can make that script that you're talking about, we can make it really personal for that particular student. That's"
+    },
+    {
+      "t": 1453,
+      "text": "where we saw the potential because some teachers were already using AI and I myself was using it as well. But we need to approximate a tool that would give planning and classes that are speaking"
+    },
+    {
+      "t": 1466,
+      "text": "the reality of that teacher that's going to impart it and they have to go over there and they have sometimes no electricity no internet but they have to make it work over there for that"
+    },
+    {
+      "t": 1475,
+      "text": "particular region. If those teachers go to chip and ask for planning and this is something that they have told us themselves, it's going to ask like you want to learn history. Okay, so the"
+    },
+    {
+      "t": 1485,
+      "text": "suggestion is go to this museum and such and such. But right in that remote region, there's no museum or way to get that. So we saw all of these things and we realized that uh if we're going to"
+    },
+    {
+      "t": 1497,
+      "text": "leverage AI for the tool, it needs to speak to that teacher's reality. So that's that's a personalization part that we we got right when we ship our first MVP which was last year. It was"
+    },
+    {
+      "t": 1510,
+      "text": "proven to be a success. We work I tell you McDonald's two hours every day until we ship something on right before like a month before classes started and suddenly out of nowhere we receive we"
+    },
+    {
+      "t": 1521,
+      "text": "it's like a a yappy payment we call it here in Panama. I believe that will be like a Venmo over there. It's like a a cash payment that you receive like electronically and we receive it out of"
+    },
+    {
+      "t": 1531,
+      "text": "nowhere and for us that was one of like the tough days of of of our journey because it was the first time that someone paid for for a product. It's like someone's willing to pay for this."
+    },
+    {
+      "t": 1542,
+      "text": "It means that it can work and throughout the year we start building the tool with them. We start seeing a lot of things in the educational system that take a lot of job that we start taking off of them"
+    },
+    {
+      "t": 1553,
+      "text": "because when they plan they have to not only do it for themselves but they also have to deliver to their coordinators and they need to keep track of what students are learning or what not. So"
+    },
+    {
+      "t": 1563,
+      "text": "our tool proved to be instrumental for last year because I tell you other thing that happened >> last year there was a disruption of classes. So there was like a huge nationwide protest where a huge amount"
+    },
+    {
+      "t": 1576,
+      "text": "of teachers start protesting and stop giving classes. The only ones affected there were the students of course because they are they're going to have some gaps that they already are hearing"
+    },
+    {
+      "t": 1586,
+      "text": "from the pandemic days and it was so hard for for the students that are coming because they are not and all the plans that teachers were doing they lost them because they had a schedule of when"
+    },
+    {
+      "t": 1596,
+      "text": "they were going to give it and they lost it. So during that gap time we decided like hey now we have planning let's make something that can help the students that are missing out on the classes. So"
+    },
+    {
+      "t": 1607,
+      "text": "during the protest which was like about two months we ship also a tutor that used this same planning for those students that are missing classes and that's where we ship our second product"
+    },
+    {
+      "t": 1619,
+      "text": "which stayed on the MVP stage. which is called cats I learn which is a tutor that we originally submitted on the developer competition but now made with a lot of planning and care and in a"
+    },
+    {
+      "t": 1629,
+      "text": "maintainable way not a hackathon style >> so can I so if I got this straight you entered into this Google competition and that's how the plan at McDonald's started that's how you recruited your"
+    },
+    {
+      "t": 1640,
+      "text": "team and you started to develop this MVP and you've developed two MVPs you've developed a planner if I'm correct right and then you have a tutor and both of them have been successful. I would like"
+    },
+    {
+      "t": 1653,
+      "text": "to know a little bit more about the features because I like I said previously my daughter's also homeschooled so I have sort of similar interests and maybe by the end of this call I might actually offer to make"
+    },
+    {
+      "t": 1666,
+      "text": "purchase. So, so I'd like to know could you tell me more about exactly how the teacher uses the tutor and then how the student well maybe I got that wrong. how the teacher uses the planner and then"
+    },
+    {
+      "t": 1679,
+      "text": "how the student uses the tutor. >> So for the teacher the planning process is quite simple. We use the the national curricula the official one and we fit it to the model but in a very efficient"
+    },
+    {
+      "t": 1693,
+      "text": "kind of way because you can go both routs with chip or other subscription uh tools that you have. You can send the curriculum for it to plan you the year or the week of classes or the day of"
+    },
+    {
+      "t": 1704,
+      "text": "classes. But because the curriculum itself is so big, the AI is going to summarize or omit some of the contents that are actually in there and need to"
+    },
+    {
+      "t": 1716,
+      "text": "be given because of the sheer amount of content that there is to give on each program. So we approximated that to the AI. So it can it only plans based on what's next. So teachers come here on a"
+    },
+    {
+      "t": 1728,
+      "text": "weekend and they plan their entire week or the next two weeks. they have an action plan of what they're going to do time based like the first 50 minutes I'm going to introduce the class with this"
+    },
+    {
+      "t": 1738,
+      "text": "thing that's going to catch students attention then I'm going to do the learning activity I'm going to show this video and then when I close we're going to do this and then we give them not"
+    },
+    {
+      "t": 1748,
+      "text": "only we start it on the cloud if they want to access it but they can also download it because we have many teachers here that go on a huge journey where there's no internet so they have a"
+    },
+    {
+      "t": 1757,
+      "text": "a printed plan of what they're going to do and that's how the entire planning process were taken care of. That's where we are so far. And for the the tutoring, we can use this same curriculum that you"
+    },
+    {
+      "t": 1771,
+      "text": "used to learn and you can have a personalized class for a teacher. That one is is on an earlier stage, but what it does is just a conversation back and forth, but where the teacher guides you."
+    },
+    {
+      "t": 1783,
+      "text": "regularly when when you have a conversation with a GPT for example or or these tools when a student is learning the teacher needs to guide so in this case the tutor the AI tutor is"
+    },
+    {
+      "t": 1793,
+      "text": "guided the conversation and it's trying to perceive the things that you're learning or the gaps it has infinite patience because AI is just like that >> and it talks to your language right so"
+    },
+    {
+      "t": 1804,
+      "text": "if you're like preschool or or like elementary school it the language it use is more adapted to that but it asks more from you if you are on a higher level."
+    },
+    {
+      "t": 1813,
+      "text": "So that's basically how how it works. The only thing is that so far we have proved the MVP and narrow it down here into the panel region. We are bringing it outside to other curriculums but"
+    },
+    {
+      "t": 1825,
+      "text": "right now it's limited to this curriculum only as of today."
+    },
+    {
+      "t": 1831,
+      "text": ">> So like Juan, what do you think of this? I have a number of questions. So like Juan, have you ever like when you were studying used things like flashcards for like space repetition?"
+    },
+    {
+      "t": 1842,
+      "text": "Yeah, >> like because I think it would be really cool to go and not only have a tutor, have maybe if you have AI video to go back to like Juan's, you know,"
+    },
+    {
+      "t": 1855,
+      "text": "motivation with like v visual effects creating video lessons that perhaps maybe aren't streaming so that people who have no internet can use it that it actually outputs it to a fixed storage."
+    },
+    {
+      "t": 1870,
+      "text": "You could also come up with flashcards that use spaced repetition to really drill it into a student's head. And then what else? Like I'm sure there are other ideas that you can come up with."
+    },
+    {
+      "t": 1882,
+      "text": ">> Yeah, there's a lot of work around accessibility actually like he was talking right. So the the just the fact that not needing internet and you can"
+    },
+    {
+      "t": 1896,
+      "text": "still get all of this knowledge inside the I think that's one of the strong because yes there's a lot of moments where kit size use that there is no"
+    },
+    {
+      "t": 1908,
+      "text": "internet so I think being able to come up with these solutions that can run in smaller models like these flash cards that you know activity suggest questions"
+    },
+    {
+      "t": 1920,
+      "text": "that are tailored to the space where the school actually is and just making the the job easier for teachers. I think"
+    },
+    {
+      "t": 1934,
+      "text": "it's it's where most of the of the hard work of the platform goes into because like Andy was saying, they actually have"
+    },
+    {
+      "t": 1946,
+      "text": "so much to do already and like the resources are spread so thin that just helping them out with planning with you know just a simple reduction in the time"
+    },
+    {
+      "t": 1959,
+      "text": "that I take to plan these things it creates a a larger impact in how that teacher can actually teach it his class later because"
+    },
+    {
+      "t": 1971,
+      "text": "it it it is a reality that then just by the sheer amount of work that it takes to produce all this official documentation it takes you know"
+    },
+    {
+      "t": 1983,
+      "text": "motivation out of the teachers themselves. So I think building around that where AI is not just a bolted on experience type of thing but the actual core of the product kind of uses AI for"
+    },
+    {
+      "t": 1998,
+      "text": "accessibility reasons to be able to provide you know these singleuse tools or that that are aimed at making your life easier as a teacher and and that's"
+    },
+    {
+      "t": 2012,
+      "text": "an awesome feeling when you have real users telling you, \"Yes, I need this.\""
+    },
+    {
+      "t": 2017,
+      "text": "And it's basically not a a problem of can I find people to use my product, but how fast can I actually meet their demands, right?"
+    },
+    {
+      "t": 2028,
+      "text": ">> And I think with that, >> Andy, so could you tell us more about like the users because I know you're very close to your user, the teacher in Panama. There are 20,000 I think that"
+    },
+    {
+      "t": 2039,
+      "text": "you told me offline that have registered for kitsai and I think act any particular given week you have 8,000 active users. So what features are they"
+    },
+    {
+      "t": 2051,
+      "text": "looking forward to? What can we look forward to from KSAI >> on December where when classes ended we had a some amount of time where we could develop our own things and this is something that we have internally"
+    },
+    {
+      "t": 2064,
+      "text": "working already and it's something that we're proud of and and I want to tell to you because we will release it later through the year. I'll give you a bit of context here in Panama. All teachers"
+    },
+    {
+      "t": 2075,
+      "text": "will have the exact same laptop probably this year, probably next year. The government will get a laptop for every teacher here. And these laptops have a specific requirement. These laptops have"
+    },
+    {
+      "t": 2087,
+      "text": "an NPU. They must have an MPU. It's a a neural processing unit that allows you to run local models on the computer under low usage because we in Panama,"
+    },
+    {
+      "t": 2100,
+      "text": "Latin America, we're very efficient with our things. And one can back me up on that. We are very efficient with our tokens. So when we build the tool, we are not just giving you the most"
+    },
+    {
+      "t": 2110,
+      "text": "expensive model and we're just flooding you with instructions and we are just letting it run. We're very efficient with what we ask, how we ask, and how we give context to it. Because through our"
+    },
+    {
+      "t": 2122,
+      "text": "year, our development was to make an efficient model that can help you plan."
+    },
+    {
+      "t": 2128,
+      "text": "As the technology progressed and local models became more and more smarter, we were able to take the plug out of Katsai from the cloud and we're able to run on at approximately 90 to 92%"
+    },
+    {
+      "t": 2142,
+      "text": "of efficiency. That means the quality of the outputs compared to one of the frontier models but in NPU level that"
+    },
+    {
+      "t": 2154,
+      "text": "means a local model. Why? Because our teachers, most of them sometimes don't have internet or the internet is not as good. And in Latin America, this is the reality. There's many teachers that go"
+    },
+    {
+      "t": 2166,
+      "text": "to these really far places that could do a lot of advantage of having these things. So once all the teachers here in Panama have that computer with that NPU, they will all be able to run KSAC"
+    },
+    {
+      "t": 2178,
+      "text": "without the need of internet. And for me, that's something that's very exciting because and it's the timing is so good because AI is developing, models are getting smarter, and they are all"
+    },
+    {
+      "t": 2187,
+      "text": "going to have the same device. And that's one of the things that we're working with. Another big thing that happened is that this year they redesigned the whole curriculum because it was like 15 years old. So, they made"
+    },
+    {
+      "t": 2199,
+      "text": "it new and we work hard on bringing it all to the platform. We are going to give you resources, printables and interactive activities because AI can do it. AI can generate printables on the go"
+    },
+    {
+      "t": 2212,
+      "text": "but based on the planning I did now I don't have to be hunting on the internet for printables that other did I can tailor it to my specific student needs and if I have to make an activity that's"
+    },
+    {
+      "t": 2224,
+      "text": "tailored for 10 students but two of them have special needs I can make this same activity but tailor to those two. So that's something that we're working on also that we will be shipping to our"
+    },
+    {
+      "t": 2234,
+      "text": "customers, but also they'll be able to do that offline. Sometimes having like the best top of the line models, they're good and we have to to do that, but if we're efficient with this, it can be"
+    },
+    {
+      "t": 2244,
+      "text": "good on the long run. So we're estimated that for example, by the end of the year, local models can be more agentic."
+    },
+    {
+      "t": 2250,
+      "text": "So they'll be able to take in even more tasks like they are doing right now. So you can try to see where things are going. So, we're very excited to bring that to local users that they can have a"
+    },
+    {
+      "t": 2261,
+      "text": "software that works even if there's no internet and we can have like really intelligence in their hands even if they're very remote."
+    },
+    {
+      "t": 2269,
+      "text": ">> Awesome. So, no longer are you going to have to use KSI when you have internet and print out your lesson plans. You'll be able to change it on the fly right where you are. No internet required."
+    },
+    {
+      "t": 2280,
+      "text": ">> Great. >> Yeah. >> Where can people find out more about Katsai? website, your socials so that they can keep up to date."
+    },
+    {
+      "t": 2288,
+      "text": ">> So we have our website ksite.com that's with a K and a Z. And over there you'll find also all of our socials. We have also we're doing live webinars every Friday because this is the other thing."
+    },
+    {
+      "t": 2300,
+      "text": "This is another thing that that we're very proud of in the team is that we have become very close to our users because we don't have to spend as much time on the computer coding. We are just"
+    },
+    {
+      "t": 2312,
+      "text": "talking more with our teachers and seeing where they are lacking, what they need, what's hard for them. So, every Friday at 7 p.m. in our YouTube channel, we do a webinar where they join in, they"
+    },
+    {
+      "t": 2322,
+      "text": "bring questions, they ask for features, and we work with them. So, we'll have that available and also our website and all of our socials, LinkedIn, Instagram, X."
+    },
+    {
+      "t": 2332,
+      "text": ">> Awesome. And Juan, where can people find out more about AMU Panama and what great work you're doing? Obviously, we run everything through GitHub right now. So, you can just uh find us on GitHub. It's"
+    },
+    {
+      "t": 2344,
+      "text": "just at github ptyimog.com."
+    },
+    {
+      "t": 2348,
+      "text": ">> Awesome. And I'll put down your personal socials in the description below. It was great having both of you here. It was a pleasure talking to you."
+    },
+    {
+      "t": 2356,
+      "text": ">> Thank you so much, Jim, for having us. I appreciate it. >> Thank you."
+    }
+  ],
+  "backfill": true
+}

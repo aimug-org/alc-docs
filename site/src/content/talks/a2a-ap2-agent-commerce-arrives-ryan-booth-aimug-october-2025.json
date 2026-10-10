@@ -1,0 +1,524 @@
+{
+  "title": "A2A & AP2: Agent Commerce Arrives",
+  "speakers": [
+    "ryan-booth"
+  ],
+  "date": "2025-10-23",
+  "youtubeId": "d5l0D7h5bI4",
+  "duration": 1333,
+  "summary": "In this AIMUG Deep Dive, Ryan Booth introduces the revolutionary A2A (Agent-to-Agent) and AP2 (Agent Payment Protocol), the open standards enabling agents to discover, negotiate, and transact autonomously.",
+  "topics": [
+    "Agents"
+  ],
+  "transcript": [
+    {
+      "t": 8,
+      "text": "of my presentations here. All right. Who's seen a working one?"
+    },
+    {
+      "t": 14,
+      "text": "Oh, yeah. Right. All right. And the rest have seen the ones that don't work. Um, right now I'm batting zero for any of my demos to actually work here. So, you know, you can't have too much confidence"
+    },
+    {
+      "t": 27,
+      "text": "in me right now. But this one luckily is not to actually demo a working solution."
+    },
+    {
+      "t": 33,
+      "text": "This is more of a exploratory task. Um sharing information, sharing where I've gone with this and what my mind is kind of pushing through as I explore these"
+    },
+    {
+      "t": 45,
+      "text": "topics. Um this is very much a presentation to open your eyes or help you see things different ways with how we could utilize these tools. Um, I'm not trying to cram anything down"
+    },
+    {
+      "t": 58,
+      "text": "anybody's throat right now, but just kind of present what I have. And if the demo gods are working, we will have a demo that won't work 100%, but it'll work with what it needs to. So, um, so"
+    },
+    {
+      "t": 72,
+      "text": "starting off really quick, um, who all here is familiar with A2A and AP2 already?"
+    },
+    {
+      "t": 79,
+      "text": "Okay. Okay. Quick primer on it. Um, for those of you that have been to regular meetings, I apologize. Um, agent to agent is a protocol that was released by Google. It's an open- source protocol."
+    },
+    {
+      "t": 91,
+      "text": "Um, and basically it is a process of taking agent-based traffic, AI based traffic, whatever you want to roll into the term agent. Um, taking that traffic, separating it into a separate protocol"
+    },
+    {
+      "t": 105,
+      "text": "and allowing it to handle more like discovery style tasks. Um, I see a lot of resemblance in what's being done here in the SEO world, um, in the areas where people are trying to get their"
+    },
+    {
+      "t": 118,
+      "text": "information out there. And it makes a ton of sense because it's getting into this notion that, um, similar to car radios, um, all of them kind of turned into an oxport for your iPhone,"
+    },
+    {
+      "t": 130,
+      "text": "um, everything is going to be turning into you get all of your information through your AI, um, chat assistants."
+    },
+    {
+      "t": 137,
+      "text": "So, as a business, as an entrepreneur, as a marketing team, um as a CEO, you know, your customers are not coming to your websites anymore. Your customers aren't um going to look through your"
+    },
+    {
+      "t": 149,
+      "text": "product catalog. They are going to chat GTP and telling them what is the best product to purchase. That is a lot of where I see this, but I'm going a completely different direction. Now, the"
+    },
+    {
+      "t": 158,
+      "text": "the areas to key in on here, um it's an open protocol. Like I said, core ideas."
+    },
+    {
+      "t": 165,
+      "text": "Um there is verified authentication between the agents with um A2A. So you do get that um capability like I mentioned capability discovery."
+    },
+    {
+      "t": 176,
+      "text": "This is the one I'm honing in on the most tonight. Basically you are saying as a business, as a person, as a brand, as a company, my capabilities are X. and"
+    },
+    {
+      "t": 188,
+      "text": "through the searches um inside of the chat bots, through the LLMs, through however they're working, they will find through the A2A protocol off of an exposed API all of your product catalog"
+    },
+    {
+      "t": 200,
+      "text": "all the information that they want you as a customer to know. Um this gets into a lot of really cool workflows. Um someone who desperately needs tech support on their computer takes a"
+    },
+    {
+      "t": 212,
+      "text": "screenshot of it with chat GTP and says, \"How do I fix this?\" and then they get a contract service or a service out there that can install something and do it."
+    },
+    {
+      "t": 221,
+      "text": "This is obviously a very madeup story. Um, but then they can pay for the transaction right there inside the chat with a reliable customer or a reliable company. Um, so that's kind of what I'm"
+    },
+    {
+      "t": 234,
+      "text": "going to dig into a little there. Um, there's also you got like um internet exchange handoffs anywhere supply chain that could be working with this stuff."
+    },
+    {
+      "t": 243,
+      "text": "um agents can be getting in there and walking through transactions."
+    },
+    {
+      "t": 248,
+      "text": "Um so then the AP2 protocol, agent payment protocol came out the other last week I believe or the week before and this basically allows them to start handling transactions, physical money"
+    },
+    {
+      "t": 260,
+      "text": "transactions um across the protocol. And so now instead of just doing handoffs and then you deal with billing later, the actual billing aspect now is built into the"
+    },
+    {
+      "t": 273,
+      "text": "chat. So when customers get your solutions back or they get whatever that it is inside the organization or inside the chat, they they get the details back and then they get the option to pay for"
+    },
+    {
+      "t": 284,
+      "text": "it. Um we're starting to see this hit the market now. Um there's a ton of integration from all of the big players."
+    },
+    {
+      "t": 293,
+      "text": "Um, PayPal's already on board. Um, I'm not going to speak to any of the others because I would probably be lying or I don't know what I'm talking about. So, I'll shut up there."
+    },
+    {
+      "t": 303,
+      "text": "Um, questions. Those were the basics. Um, anybody else want to cover anything I mentioned? Questions? Can I clarify anything?"
+    },
+    {
+      "t": 314,
+      "text": "All right, cool. So, here's what we're going to do. Um, we are going to build a prototype that runs through this transactions journey. Um what I did is I started I've I've been working for the"
+    },
+    {
+      "t": 326,
+      "text": "past year year plus on doing a lot of automated software development. My my whole notion and what I've latched into is is complete handsoff on software development and how do we fix it? So I I"
+    },
+    {
+      "t": 337,
+      "text": "kind of I rolled this straight into that one um with the notion that inside of an automated workflow with lane chain and I actually use lane graph"
+    },
+    {
+      "t": 349,
+      "text": "in this in this um demo. So you you have a workflow that steps through the the um process of selecting the agents. Sorry, I was getting a little mixed up there."
+    },
+    {
+      "t": 360,
+      "text": "Um, and with that when you go to get something built or you go to do something be similar to like eBay or any other market site, you say, \"I need these types of capabilities and it finds"
+    },
+    {
+      "t": 372,
+      "text": "all the different agents. It finds the custom um customtrained models, fine-tuned models, whatever is out there that offers up the type of services that your project needs. It gives you the"
+    },
+    {
+      "t": 384,
+      "text": "ability to pull those in and then work with them.\" And so that's what I wanted to test here. I wanted to be able to grab these A2A queries, being able to hit capabilities and find in a market"
+    },
+    {
+      "t": 395,
+      "text": "where people have agents available to do work and someone requesting software and it happening. And so that is what we're going to do. Um the notion of it is is"
+    },
+    {
+      "t": 409,
+      "text": "basically as a user goes in and requests new software um the the langraph workflow. Well, let me just show it. I need to do that."
+    },
+    {
+      "t": 420,
+      "text": "Let's make sure we're here. All right."
+    },
+    {
+      "t": 424,
+      "text": "Can everybody see? You'll see it better. So, Corva is the name of this kind of like ongoing software development project I've been doing."
+    },
+    {
+      "t": 433,
+      "text": "Um yeah, it's just kind of my own thing. So, that's what Corva is. So here, can y'all see that? Well, no."
+    },
+    {
+      "t": 443,
+      "text": ">> Zoom."
+    },
+    {
+      "t": 452,
+      "text": "All right. So here we got um basic selection. So what I have built into this right now is you can come in here and you can request software development. Um, rolling into my previous presentations, you"
+    },
+    {
+      "t": 464,
+      "text": "essentially add a project name. Chess game, taco cats. That'll work. We're going to build a chess game. Um, hopefully using characters of tacos and"
+    },
+    {
+      "t": 476,
+      "text": "cats versus each other. >> Um, so budget and stuff. These are kind of fake numbers. This is all kind of just to show how how transactions can be set up and how this can be planned out."
+    },
+    {
+      "t": 488,
+      "text": "Timeline 30 days. Why not? Um description basic chess game."
+    },
+    {
+      "t": 499,
+      "text": "Okay. Requirements um must use tacos and cats as pieces."
+    },
+    {
+      "t": 511,
+      "text": "PVP and PVC play options add. Okay. So this is kind of um"
+    },
+    {
+      "t": 525,
+      "text": "capabilities I'm leaving blank um for this very reason right here. So here's what happened. We put in um what we would like from a um application. All right, it actually failed. I got to love"
+    },
+    {
+      "t": 538,
+      "text": "it. So what happened is it was working off of the A2A capabilities and working through the information I built into the form to say what are the agents available that can build this"
+    },
+    {
+      "t": 552,
+      "text": "software. And we have a nice little bug here. So like I mentioned there's also services that I put in here. Um and I can go back in a second and show you the different services. One of them is a"
+    },
+    {
+      "t": 564,
+      "text": "taco stand. All right. Taco stand. Um, one of their menu items is a taco. So, obviously from the information I put in the description, it keyed in on tacos and not software or a chess app. So, I"
+    },
+    {
+      "t": 579,
+      "text": "should probably redo that. Um, let's try that again. No taco caps."
+    },
+    {
+      "t": 588,
+      "text": ">> Regular chest pieces. >> I mean, you're in Austin, so like having tacos and AI together is actually incredibly appropriate."
+    },
+    {
+      "t": 595,
+      "text": ">> Okay, let's All right. All right. All right. Fine, fine, fine, fine. All right, here's our agents. I got a coffee shop. Um, I got codeex orchestrator. So, we can go ahead and just go into it."
+    },
+    {
+      "t": 607,
+      "text": "Each one of the agents in a langraph workflow um kicks off whatever the workflow is that someone is providing."
+    },
+    {
+      "t": 615,
+      "text": "Oh, a pointer. You don't know what you just did."
+    },
+    {
+      "t": 619,
+      "text": "Um, so basically we have an agent here that says at $10 something or other it'll codec or you orchestrate the code development using codecs. Um, we have an"
+    },
+    {
+      "t": 632,
+      "text": "insurance company lawn care. So you can kind of see how um I set this up to kind of show multiple different approaches."
+    },
+    {
+      "t": 641,
+      "text": "Um, I also have claude orchestrator here and there's our taco place and then I'm also building in local integration as I can get there. So, let's do this again."
+    },
+    {
+      "t": 654,
+      "text": "Chess game 40 timeline 30 days and description"
+    },
+    {
+      "t": 683,
+      "text": "Get that added. Create."
+    },
+    {
+      "t": 687,
+      "text": "Yay. Now we have better. Okay. So, we have two options here. We have a codeex orchestrator and a cloud orchestrator."
+    },
+    {
+      "t": 694,
+      "text": "Um, let's see. Um th this is kind of the main part of of what I had from a demo wise because it kind of shows and highlights where some of the ways you can look at this"
+    },
+    {
+      "t": 706,
+      "text": "and this is very much from a marketplace standpoint kind of rip straight out of like AWS. Um but you see that the available agents are there. We we recognize that when the agents need to"
+    },
+    {
+      "t": 718,
+      "text": "be spun up and loaded and ready to go, it's there for the demo. Um specialization is an orchestrator. not going into too much depth. And then of course you can do price comparison and"
+    },
+    {
+      "t": 730,
+      "text": "you know ratings based on users to kind of give you the general picture of what's there. But what we're going to do is we're going to do the codeex orchestrator."
+    },
+    {
+      "t": 739,
+      "text": "Um works for me. He's got a 4.6 22 3649. That's pretty good."
+    },
+    {
+      "t": 747,
+      "text": ">> It's a very accurate score. >> Hey, agents demand detail."
+    },
+    {
+      "t": 754,
+      "text": "Let's start the work here. If this kicks back an API mirror, hey, it's going."
+    },
+    {
+      "t": 758,
+      "text": "Yay. All right. So, this is all kind of um it still needs a lot of cleanup, but essentially what this is, here's a workflow we're running through. Um"
+    },
+    {
+      "t": 771,
+      "text": "essentially, it's going to establish intent and requirements to be built out."
+    },
+    {
+      "t": 775,
+      "text": "Um it's then discovering the agents that are and their capabilities. Are they available, ready to go? um capability negotiation, blah blah blah blah blah, contract assembly. So, this is one of"
+    },
+    {
+      "t": 786,
+      "text": "those key things. It doesn't matter really how you apply it here, but here's what I'm going to say. Um contractedbased agents is going to have to be how we"
+    },
+    {
+      "t": 798,
+      "text": "build critical software. And I'm not just talking about building product designs. I'm not just talking about building engineering docs, but taking a capability through A2A where you can"
+    },
+    {
+      "t": 810,
+      "text": "actually negotiate contracts and have them executed and have have them validated. I think that is how we have to go to get to critical software development at this level."
+    },
+    {
+      "t": 821,
+      "text": "Anyways, that's just my opinion. So, it runs through its deal. It builds all the stuff. Um, it's actually building right now hopefully."
+    },
+    {
+      "t": 832,
+      "text": "So, um, that's essentially what it is. And when everything comes back, it will all get dr dumped into an artifacts folder. Um, and when everything completes, you will see"
+    },
+    {
+      "t": 846,
+      "text": "um, everybody getting paid."
+    },
+    {
+      "t": 850,
+      "text": "And that's it. So, while it's um, waiting to die and crash, >> questions."
+    },
+    {
+      "t": 859,
+      "text": ">> Yeah, I'll start with one. Um so you you implemented A2A inside of this. So um which side is actually implementing the A2A service discovery and service offering? Yeah. So you have"
+    },
+    {
+      "t": 872,
+      "text": "like a codeex agent, you have a llama agent that's exposing a service. Can you expand a little more on like how your project execution is quering these agents for their capabilities and"
+    },
+    {
+      "t": 882,
+      "text": "negotiating the cost? >> Yeah. So when um when an agent is added to this application um we look for the capabilities and how they register with the A2A um"
+    },
+    {
+      "t": 894,
+      "text": "specifically I did it to use A2A to find capabilities >> because the next thing I'm going to do is allow someone to set up like a third party website."
+    },
+    {
+      "t": 903,
+      "text": ">> Yeah. >> Expose their A2A cataloges through that >> and then tie it into this tool as well."
+    },
+    {
+      "t": 909,
+      "text": ">> So do you see this as like a service advertisement framework for your agents or graphs?"
+    },
+    {
+      "t": 914,
+      "text": "That is really the biggest use case I can come up with right now. Um, and it was one of those things I'm fielding out to everybody here. I'd love to hear other use cases on this."
+    },
+    {
+      "t": 925,
+      "text": "Oh, hey, it said that it worked. It didn't work. It's not going to work."
+    },
+    {
+      "t": 931,
+      "text": "Um, I'm still doing a lot of work. So, that's pulling in through the um through the OpenAI codeex SDK to integrate with that. Um, so it's literally just firing up a"
+    },
+    {
+      "t": 943,
+      "text": "codeex session and having it do all of its work. It does the exact same thing with um with cloud code."
+    },
+    {
+      "t": 953,
+      "text": ">> So let's see my my other pages. So, if I can come into my I used to have like details and stuff on what you could what was done with the"
+    },
+    {
+      "t": 966,
+      "text": "agent, its transactions, >> um the ledger and all that stuff, but I've lost that in the refactoring."
+    },
+    {
+      "t": 972,
+      "text": ">> We'll record it and all that. >> So, that'll have to be a next time type thing. >> Awesome."
+    },
+    {
+      "t": 976,
+      "text": ">> That's what I got. I hope everybody enjoyed it. Oh, yes."
+    },
+    {
+      "t": 988,
+      "text": "I'm I'm sorry. I can't >> Yes. Um and there's a pretty good chance it's already partially showing up there"
+    },
+    {
+      "t": 1002,
+      "text": "in there. So, um that type of stuff, you want to go into your SEO settings. Um, and I've I've noticed a few of the places, especially like website builders and different places like that, they"
+    },
+    {
+      "t": 1013,
+      "text": "stuff them in there. Um, but they should have those settings. And you're looking for um stuff like a robot txt though."
+    },
+    {
+      "t": 1021,
+      "text": "They do they take a lot of the same approaches for SEO with with AEO as well. Um, but that's that's where I would start there. And if they don't have it yet, Shopify is probably going"
+    },
+    {
+      "t": 1032,
+      "text": "to have it pretty dang quick. Shopify already released an MCP where you can actually connect to your Shopif Shop Shopify via the MCP and get access to the entire Shopify corpus."
+    },
+    {
+      "t": 1042,
+      "text": ">> I haven't seen A2A on them yet. >> Cool. >> But yeah. >> Okay. So with an MCP, you're basically now instead of interacting with a UI >> interacting with a um API, you're"
+    },
+    {
+      "t": 1055,
+      "text": "interacting with an agent that talks for you to the MCP. >> Awesome. Awesome."
+    },
+    {
+      "t": 1059,
+      "text": ">> You had a question, right? Sorry. Question. >> It was, you know, kind of about service providers and whatnot. You know, we think about service organizations and when you're like contracting with them,"
+    },
+    {
+      "t": 1069,
+      "text": "you do have things that are like clauses about craftsmanship and then you also have you know things that happen in terms of how do you cancel a project or how do you add on to"
+    },
+    {
+      "t": 1082,
+      "text": "a project or whatot that all happens right >> and then you know in my mind like what if I was cancel"
+    },
+    {
+      "t": 1094,
+      "text": "is the when we talk about the ATP aspect of this is the is the uh you know remuneration is that committed at the beginning that is there an escro but I'm"
+    },
+    {
+      "t": 1108,
+      "text": "curious about this >> I am too I don't have the answer to that >> no problem >> um I have not gone deeper into the contract side of all of this yet to understand how that is anybody have that"
+    },
+    {
+      "t": 1119,
+      "text": "answer >> I've only done service advertisement for like listing, searching, enumerating posts. I haven't tied it into any sort of like smart contract or something like that. I've only used it for like"
+    },
+    {
+      "t": 1131,
+      "text": "exposing interfaces that you can consume like my blog and stuff. >> Yeah."
+    },
+    {
+      "t": 1135,
+      "text": ">> And you brought up a point that I wanted to make sure and bring up um for the questions earlier about human in the loop. Um each one of these steps right here is one of those that would be a"
+    },
+    {
+      "t": 1146,
+      "text": "smart place to add human in the loop. Um and especially the the later steps."
+    },
+    {
+      "t": 1151,
+      "text": "Right now, you can't have agents pass money around with A2A or AP2. Um, you still have to have human in the loop."
+    },
+    {
+      "t": 1159,
+      "text": "So, you have to inject a human somewhere. And usually at the validation and review when the artifacts have been dumped, that's probably a good time to do it. That whole space though needs an"
+    },
+    {
+      "t": 1168,
+      "text": "a lot of work. I haven't I personally haven't seen many talk about it."
+    },
+    {
+      "t": 1173,
+      "text": ">> Yeah. Oh, um, right over here, you were first. >> So, I don't know where did I get lost or something. So, what's your fact that This is what I have"
+    },
+    {
+      "t": 1186,
+      "text": "running and you put in some software or something and then you assume that for example you're a software company and you wanted to build a customer and put the software somehow"
+    },
+    {
+      "t": 1202,
+      "text": "and the agent based on some >> there's Um, I haven't gone in depth into how that's handled. I've just done"
+    },
+    {
+      "t": 1214,
+      "text": "simple just proof. So, it it would be however you'd want to set that up. Um, and it doesn't necessarily have to just be a software company. Maybe you're really really good at building a certain"
+    },
+    {
+      "t": 1224,
+      "text": "type of model that does a certain thing. And when it's a tied to a project, use my model. It's 30 cents a minute or whatever the hell the charge."
+    },
+    {
+      "t": 1238,
+      "text": ">> What's the goal? Yeah. Can you repeat the question?"
+    },
+    {
+      "t": 1242,
+      "text": ">> Yeah. So, the the the goal of using A2A and AP2 is is to have agents communicate the contract, negotiate the contract, establish it, and then pay for it when"
+    },
+    {
+      "t": 1255,
+      "text": "it needs to be paid for >> in this workflow. Yeah. Yeah. Yeah."
+    },
+    {
+      "t": 1260,
+      "text": "Yeah. So, um first thing right off the top, um the intent requirement. So that's taking everything I entered in the form and that's turning it into a PRD that gets handed off to"
+    },
+    {
+      "t": 1273,
+      "text": "the agent we contract with. So um agent discovery is where we find them. And then capa capability negotiation and contract assembly are these are the steps right here where that is set up"
+    },
+    {
+      "t": 1285,
+      "text": "and it's not in there. Nothing's in there. Yay. So these two are where they would set up the contract. And then the authorization and signing is where they they close it off. Then we do the work."
+    },
+    {
+      "t": 1297,
+      "text": "Um, and then validation and review and payment routing. Um, so that's that's kind of where all those steps happen."
+    },
+    {
+      "t": 1310,
+      "text": ">> Yeah, it has to it has to do it um closer to setup. So, I'm going to have to stop there. I'm getting cut off. I'm sorry. Let's chat more if you want to after this."
+    },
+    {
+      "t": 1318,
+      "text": ">> Yeah, I'll grab your question after a bit. Okay. >> I'll encourage everyone to continue the conversation at"
+    }
+  ],
+  "backfill": true
+}

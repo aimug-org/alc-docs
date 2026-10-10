@@ -1,0 +1,124 @@
+---
+import Base from '../../layouts/Base.astro';
+import TalkCard from '../../components/TalkCard.astro';
+import { publicTalks, upcomingTalks } from '../../lib/data';
+
+const live = await publicTalks();
+const soon = await upcomingTalks();
+const yearOf = (d: Date) => String(d.getUTCFullYear());
+const count = (xs: string[]) => [...xs.reduce((m, x) => m.set(x, (m.get(x) ?? 0) + 1), new Map<string, number>())];
+const topics = count(live.flatMap((t) => t.data.topics)).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+const years = count(live.map((t) => yearOf(t.data.date))).sort((a, b) => b[0].localeCompare(a[0]));
+const chip = 'inline-flex min-h-[44px] cursor-pointer items-center rounded-full border-2 border-edge bg-transparent px-4 py-2 text-[15px] font-semibold text-text hover:border-gold aria-pressed:border-gold aria-pressed:bg-gold aria-pressed:text-ink';
+const pf = '--pagefind-ui-primary:#f5b81c;--pagefind-ui-text:#eef3f7;--pagefind-ui-background:#0b2540;--pagefind-ui-border:#3d6a91;--pagefind-ui-tag:#1e4466;--pagefind-ui-border-width:2px;--pagefind-ui-border-radius:14px;--pagefind-ui-font:Barlow,sans-serif;--pagefind-ui-scale:1';
+---
+<Base title="Talks" description={`Every AIMUG talk since 2023: ${live.length} videos on agents, RAG, LangGraph, evals, inference and more, with transcripts you can search.`}>
+  <link rel="stylesheet" href="/pagefind/pagefind-ui.css" />
+  <style is:global>#search .pagefind-ui__search-input::placeholder { opacity: 0.7; }</style>
+  <section aria-labelledby="talks-h" class="mx-auto max-w-[1240px] px-4 pt-12 pb-8 sm:px-8">
+    <p class="m-0 mb-1.5 font-mono text-sm tracking-[0.12em] text-muted uppercase">{live.length} talks{soon.length > 0 && ` · ${soon.length} premieres`}</p>
+    <h1 id="talks-h" class="m-0 font-display text-[clamp(48px,7vw,96px)] leading-[0.95] font-normal uppercase">Every talk</h1>
+    <p class="m-0 mt-3 max-w-[60ch] text-xl text-soft">Search titles, speakers and what was actually said on stage.</p>
+    <div id="search" class="mt-6" style={pf}>
+      <form action="/talks/" method="get" role="search" class="flex flex-wrap gap-3">
+        <label for="q" class="sr-only">Search talks and transcripts</label>
+        <input id="q" name="q" type="search" placeholder="Search talks" class="min-w-0 flex-[1_1_420px] rounded-[14px] border-2 border-edge bg-ink px-5 py-4 text-[19px] text-text placeholder:text-muted" />
+      </form>
+    </div>
+  </section>
+
+  {soon.length > 0 && (
+    <section aria-labelledby="soon-h" class="mx-auto max-w-[1240px] px-4 pb-10 sm:px-8" data-pagefind-ignore="all">
+      <h2 id="soon-h" class="m-0 mb-5 font-display text-[clamp(32px,4vw,48px)] leading-none font-normal uppercase">Premieres</h2>
+      <div class="grid grid-cols-[repeat(auto-fill,minmax(min(100%,300px),1fr))] gap-7">
+        {soon.map((t) => <TalkCard talk={t} size="sm" />)}
+      </div>
+    </section>
+  )}
+
+  <section aria-labelledby="all-h" class="mx-auto max-w-[1240px] px-4 pb-20 sm:px-8" data-pagefind-ignore="all">
+    <div class="mb-6 flex flex-wrap items-end justify-between gap-3">
+      <h2 id="all-h" class="m-0 font-display text-[clamp(32px,4vw,48px)] leading-none font-normal uppercase">All talks</h2>
+      <span id="shown" class="font-mono text-sm text-muted">{live.length} talks, newest first</span>
+    </div>
+    <div id="filters" class="mb-8 flex flex-col gap-3" hidden>
+      <div role="group" aria-label="Topic" class="flex flex-wrap gap-2">
+        <button type="button" class={chip} data-filter="topic" data-value="">All topics</button>
+        {topics.map(([t, n]) => <button type="button" class={chip} data-filter="topic" data-value={t}>{t} <span class="font-mono text-[13px] opacity-70">{n}</span></button>)}
+      </div>
+      <div role="group" aria-label="Year" class="flex flex-wrap gap-2">
+        <button type="button" class={chip} data-filter="year" data-value="">All years</button>
+        {years.map(([y, n]) => <button type="button" class={chip} data-filter="year" data-value={y}>{y} <span class="font-mono text-[13px] opacity-70">{n}</span></button>)}
+      </div>
+      <div class="flex items-center gap-3">
+        <label for="sort" class="font-mono text-sm text-muted uppercase">Sort</label>
+        <select id="sort" class="rounded-full border-2 border-edge bg-ink px-4 py-2 text-[15px] font-semibold text-text">
+          <option value="newest">Newest</option>
+          <option value="oldest">Oldest</option>
+          <option value="longest">Longest</option>
+        </select>
+      </div>
+    </div>
+    <div id="grid" class="grid grid-cols-[repeat(auto-fill,minmax(min(100%,300px),1fr))] gap-7">
+      {live.map((t) => (
+        <div data-topics={t.data.topics.join('|')} data-year={yearOf(t.data.date)} data-date={+t.data.date} data-dur={t.data.duration ?? 0}>
+          <TalkCard talk={t} size="sm" />
+        </div>
+      ))}
+    </div>
+    <p id="none" class="m-0 text-soft" hidden>No talks match. <button type="button" class="cursor-pointer border-0 bg-transparent p-0 font-bold text-gold underline" data-filter="topic" data-value="">Clear the filters</button></p>
+  </section>
+  <script is:inline src="/pagefind/pagefind-ui.js" defer></script>
+  <script is:inline>
+    (() => {
+      const params = new URLSearchParams(location.search);
+
+      // Search: Pagefind UI replaces the plain form once its script has loaded (it exists only after a build).
+      window.addEventListener('DOMContentLoaded', () => {
+        if (!window.PagefindUI) return;
+        const box = document.getElementById('search');
+        box.replaceChildren();
+        const ui = new window.PagefindUI({ element: '#search', showSubResults: true, showImages: true, resetStyles: false, translations: { placeholder: 'Search talks' } });
+        if (params.get('q')) ui.triggerSearch(params.get('q'));
+      });
+
+      // Topic and year filters over the static grid.
+      const cards = [...document.querySelectorAll('#grid > div')];
+      const shown = document.getElementById('shown');
+      const none = document.getElementById('none');
+      const state = { topic: params.get('topic') || '', year: params.get('year') || '', sort: params.get('sort') || 'newest' };
+      const grid = document.getElementById('grid');
+      const sorts = { newest: (a, b) => b.dataset.date - a.dataset.date, oldest: (a, b) => a.dataset.date - b.dataset.date, longest: (a, b) => b.dataset.dur - a.dataset.dur };
+      if (!sorts[state.sort]) state.sort = 'newest';
+      const sortEl = document.getElementById('sort');
+      sortEl.value = state.sort;
+      sortEl.addEventListener('change', () => { state.sort = sortEl.value; apply(); });
+      const apply = () => {
+        let n = 0;
+        cards.sort(sorts[state.sort]);
+        grid.append(...cards);
+        for (const c of cards) {
+          const hit = (!state.topic || c.dataset.topics.split('|').includes(state.topic)) && (!state.year || c.dataset.year === state.year);
+          c.hidden = !hit;
+          if (hit) n++;
+        }
+        for (const b of document.querySelectorAll('#filters [data-filter]')) b.setAttribute('aria-pressed', String(state[b.dataset.filter] === b.dataset.value));
+        shown.textContent = state.topic || state.year ? `${n} of ${cards.length} talks` : `${cards.length} talks, ${{ newest: 'newest first', oldest: 'oldest first', longest: 'longest first' }[state.sort]}`;
+        none.hidden = n > 0;
+        const url = new URL(location.href);
+        for (const k of ['topic', 'year']) state[k] ? url.searchParams.set(k, state[k]) : url.searchParams.delete(k);
+        state.sort !== 'newest' ? url.searchParams.set('sort', state.sort) : url.searchParams.delete('sort');
+        history.replaceState(null, '', url);
+      };
+      document.addEventListener('click', (e) => {
+        const b = e.target.closest('[data-filter]');
+        if (!b) return;
+        if (b.closest('#none')) state.year = '';
+        state[b.dataset.filter] = b.dataset.value;
+        apply();
+      });
+      document.getElementById('filters').hidden = false;
+      apply();
+    })();
+  </script>
+</Base>

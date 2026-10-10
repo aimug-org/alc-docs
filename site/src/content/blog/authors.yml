@@ -1,0 +1,372 @@
+colinmcnamara:
+  name: Colin McNamara
+  title: AIMUG contributor
+  url: https://github.com/colinmcnamara
+  image_url: https://github.com/colinmcnamara.png
+  page: true
+  description: 'Engineer 🔧 | Entrepreneur 💼 | Sustainability Champion 🌱 | Supply Chain
+    Strategist 🔗 | Private Label Pioneer 🏷️ | Build a Better Tomorrow 🌍
+
+    Based in Austin, TX.
+
+
+    Key Contributions to Austin LangChain AIMUG:
+
+
+    Core maintainer and founder of Austin LangChain AIMUG. Established the project''s
+    foundation and learning path structure from LangChain 101 through advanced implementations.
+
+
+    Notable Contributions:
+
+
+    • Created the initial LangServe and Streamlit integration labs
+
+    • Developed the LangGraph introduction and customer support tutorials
+
+
+    LangChain Development:
+
+    • Created foundational tutorials and labs for LangChain implementation
+
+    • Developed practical examples for real-world applications'
+  socials:
+    github: colinmcnamara
+    x: colinmcnamara
+    website: https://colinmcnamara.com
+    linkedin: colinmcnamara
+
+RPirruccio:
+  name: Riccardo Pirruccio (Ricky)
+  title: AIMUG contributor
+  url: https://github.com/RPirruccio
+  image_url: https://github.com/RPirruccio.png
+  page: true
+  description: 'Key Contributions to Austin LangChain AIMUG:
+
+
+    Enterprise architecture specialist focusing on production-ready implementations
+    and Docker containerization.
+
+
+    Notable Contributions:
+
+
+    • Developed the LangGraph Manufacturing BOM Analyzer
+
+    • Created the RAG implementation with Google Drive integration
+
+    • Built the AI Data Scientist report writer using LangGraph
+
+    • Authored comprehensive Docker deployment tutorials'
+  socials:
+    github: RPirruccio
+    linkedin: riccardopirruccio
+
+lalanikarim:
+  name: Karim Lalani
+  title: AIMUG contributor
+  url: https://github.com/lalanikarim
+  image_url: https://github.com/lalanikarim.png
+  page: true
+  description: 'Key Contributions to Austin LangChain AIMUG:
+
+
+    Local LLM and voice integration expert at Infinidigm LLC, specializing in Ollama implementations
+    and WebRTC technologies. Based in Leander, TX.
+
+
+    Notable Contributions:
+
+
+    • Created the WebRTC AI voice chat implementation
+
+    • Developed Ollama and Bakllava integration tutorials
+
+    • Built the Mistral chatbot implementation
+
+    • Pioneered local LLM deployment strategies'
+  socials:
+    github: lalanikarim
+    website: https://medium.com/@klcoder
+
+saskinosie:
+  name: Scott Askinosie
+  title: AIMUG contributor
+  url: https://github.com/saskinosie
+  image_url: https://github.com/saskinosie.png
+  page: true
+  description: 'Key Contributions to Austin LangChain AIMUG:
+
+
+    Data science specialist based in Austin, TX, focusing on practical AI applications in data analysis
+    and automation.
+
+
+    Notable Contributions:
+
+
+    • Created the Pandas DataFrame Agent tutorial series
+
+    • Developed AI-powered data scientist implementations
+
+    • Built practical examples for business analytics
+
+    • Authored comprehensive data processing guides'
+  socials:
+    github: saskinosie
+    linkedin: scott-askinosie
+
+saurabhlalsaxena:
+  name: saurabhlalsaxena
+  title: AIMUG contributor
+  url: https://github.com/saurabhlalsaxena
+  image_url: https://github.com/saurabhlalsaxena.png
+  page: true
+  description: 'Key Contributions to Austin LangChain AIMUG:
+
+
+    Advanced RAG architect specializing in sophisticated search and retrieval implementations.
+
+
+    Notable Contributions:
+
+
+    • Created the Perplexity Clone implementation
+
+    • Developed advanced RAG architectures
+
+    • Built complex document processing systems
+
+    • Implemented efficient search strategies'
+  socials:
+    github: saurabhlalsaxena
+
+that1guy15:
+  name: Ryan Booth
+  title: AIMUG contributor
+  url: https://github.com/that1guy15
+  image_url: https://github.com/that1guy15.png
+  page: true
+  description: 'Key Contributions to Austin LangChain AIMUG:
+
+
+    Integration specialist focusing on AI-driven development and LangGraph implementations.
+
+
+    Notable Contributions:
+
+
+    • Delivered AI Driven Development Presentation
+
+    • Created LangGraph APIChain integration demo
+
+    • Developed LangChain GitHub integration demo
+
+    • Contributed to advanced integration strategies'
+  socials:
+    github: that1guy15
+    linkedin: ryan-booth-46470a5
+    x: that1guy_15
+    huggingface: that1guy15
+
+robwhelan:
+  name: Rob Whelan
+  title: Speaker - Gridway AI
+  url: https://www.linkedin.com/in/rob-whelan-036b905/
+  image_url: https://ui-avatars.com/api/?name=R&background=0D8ABC&color=fff&size=400
+  page: true
+  description: 'Key Contributions to Austin LangChain AIMUG:
+
+
+    Nuclear power domain specialist at Gridway AI, focusing on fine-tuning embeddings for specialized technical domains.
+
+
+    Notable Contributions:
+
+
+    • Presented "Fine-tuning Embeddings for Nuclear Power" lightning talk
+
+    • Demonstrated domain-specific embedding optimization techniques
+
+    • Open-sourced nuclear-licensing-embeddings-768 model on Hugging Face
+
+    • Created practical training methodologies for technical domain adaptation'
+  socials:
+    linkedin: rob-whelan-036b905
+    website: https://gridwayai.com
+
+collierking:
+  name: Collier King
+  title: AIMUG contributor
+  url: https://www.linkedin.com/in/collierking/
+  image_url: https://ui-avatars.com/api/?name=C&background=0D8ABC&color=fff&size=400
+  page: true
+  description: 'Key Contributions to Austin LangChain AIMUG:
+
+
+    Active community member and Interrupt Conference attendee, contributing insights from cutting-edge AI development practices.
+
+
+    Notable Contributions:
+
+
+    • Participated in Interrupt Conference 2025 panel discussion
+
+    • Shared insights on enterprise AI deployment strategies
+
+    • Contributed to community knowledge sharing on production AI systems
+
+    • Helped bridge conference learnings with local community needs'
+  socials:
+    linkedin: collierking
+
+cam:
+  name: Cameron Rohn
+  title: AIMUG contributor
+  url: https://www.linkedin.com/in/cameron-rohn/
+  image_url: https://ui-avatars.com/api/?name=C&background=0D8ABC&color=fff&size=400
+  page: true
+  description: 'Key Contributions to Austin LangChain AIMUG:
+
+
+    Community member and Interrupt Conference attendee, bringing practical AI development experience to the group.
+
+
+    Notable Contributions:
+
+
+    • Participated in Interrupt Conference 2025 panel discussion
+
+    • Shared real-world AI implementation experiences
+
+    • Contributed to discussions on agent architecture patterns
+
+    • Helped translate conference insights for community application'
+  socials:
+    linkedin: cameron-rohn
+
+paul:
+  name: Paul Phelps
+  title: AIMUG contributor
+  url: https://www.linkedin.com/in/mrpaulphelps/
+  image_url: https://ui-avatars.com/api/?name=P&background=0D8ABC&color=fff&size=400
+  page: true
+  description: 'Key Contributions to Austin LangChain AIMUG:
+
+
+    Experienced AI practitioner and Interrupt Conference attendee, contributing enterprise-focused insights to the community.
+
+
+    Notable Contributions:
+
+
+    • Participated in Interrupt Conference 2025 panel discussion
+
+    • Shared enterprise AI deployment experiences
+
+    • Contributed insights on scalable AI system architecture
+
+    • Helped document conference learnings for community benefit'
+  socials:
+    linkedin: mrpaulphelps
+
+aimugteam:
+  name: AIMUG Team
+  title: AI Middleware Users Group
+  url: https://aimug.org
+  image_url: /img/austin_aimug-192x192.png
+  page: true
+  description: 'The official team account for Austin LangChain & AI Middleware User Group (AIMUG).
+
+
+
+    About AIMUG:
+
+
+
+    Austin LangChain & AI Middleware User Group is a community of developers, data scientists, and AI enthusiasts focused on building and deploying production AI systems using LangChain, LangGraph, and related technologies.
+
+
+
+    Our Mission:
+
+
+
+    • Foster collaborative learning and knowledge sharing
+
+
+    • Build practical AI applications and tools
+
+
+    • Support the growth of the AI ecosystem in Austin
+
+
+    • Create accessible educational resources
+
+
+
+    Community Values:
+
+
+
+    • Learning in the open
+
+
+    • Be cool to each other
+
+
+    • Share knowledge freely
+
+
+    • Build together
+
+
+
+    What We Do:
+
+
+
+    • Monthly showcases and technical presentations
+
+
+    • Hands-on labs and workshops
+
+
+    • Open source contributions
+
+
+    • Community support and mentorship'
+  socials:
+    website: https://aimug.org
+    github: aimug-org
+    x: AIMUG_org
+
+aimugcoreteam:
+  name: AI MUG Core Team
+  title: Austin LangChain & AI Middleware User Group
+  url: https://aimug.org
+  image_url: /img/austin_aimug-192x192.png
+  page: true
+  description: 'The core team organizing monthly showcases, coordinating speakers, and managing community events for Austin LangChain AIMUG.'
+  socials:
+    website: https://aimug.org
+    github: aimug-org
+    x: AIMUG_org
+
+johnvanlowe:
+  name: John Van Lowe
+  title: AIMUG contributor
+  url: https://github.com/johnvanlowe
+  image_url: https://ui-avatars.com/api/?name=J+V&background=0D8ABC&color=fff&size=400
+  page: true
+  description: 'Security Operations specialist at Austin LangChain AIMUG, focusing on agentic SOC operations, blue/red team automation, and AI-driven cyber defense.
+  
+  Key Contributions:
+  - Presentations on Autonomous SOC Operations for Blue/Red Teams
+  - Demonstrations of VIGIL, PentAGI, and other autonomous agent frameworks
+  - Research into agent-based offensive and defensive cyber operations'
+  socials:
+    github: johnvanlowe
+    linkedin: johnvl
+    website: https://retroencabulation.com/
