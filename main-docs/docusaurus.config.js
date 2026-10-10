@@ -145,6 +145,10 @@ const config = {
                 href: 'https://twitter.com/AustinLangChain',
               },
               {
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/company/austin-ai-middleware-users-group',
+              },
+              {
                 label: 'Volunteer',
                 to: '/volunteer',
               },
