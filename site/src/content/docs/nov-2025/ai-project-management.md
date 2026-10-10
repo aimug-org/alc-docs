@@ -1,6 +1,4 @@
-# AI Project Management Anti-Patterns
 
-**Speaker:** [Paul Phelps](https://www.linkedin.com/in/mrpaulphelps/)
 **Role:** Freelance AI Implementation Consultant
 **Location:** Remote from AIMUG Panama (100 members!)
 **Date:** November 5, 2025

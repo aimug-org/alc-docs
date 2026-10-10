@@ -2,15 +2,7 @@
 sidebar_position: 3
 ---
 
-# AG-UI: Agent-User Interaction Protocol
-
-*Lightning Talk - 10 minutes*
-
 > **🔗 Interactive Presentation**: [View Live Slides](https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/76e1247e589a34eed9a2f3fbbb089715/1732eaca-a9a0-4414-b23a-f790090a0864/index.html?utm_source=perplexity)
-
-## 📹 **Video Recording**
-
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/Owvcy7GIvEY?start=1259" title="June 2025 AIMUG - AG-UI Lightning Talk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## 🎯 **What is AG-UI?**
 

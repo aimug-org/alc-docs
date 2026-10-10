@@ -4,19 +4,9 @@ title: Streamlit for AI Dashboards
 sidebar_label: Streamlit Dashboards
 ---
 
-# Streamlit for AI Dashboards - Prototyping at the Speed of Thought
-
-**Speaker:** Jeff Linwood  
-**Duration:** 15 minutes  
-**Time:** 7:30 PM - 7:45 PM
-
 ## Overview
 
 Jeff Linwood presented Streamlit as the sweet spot between Jupyter notebooks and full React applications for building AI dashboards. Using a National Parks visitor data dashboard as an example, he demonstrated how to build interactive data visualizations with chat capabilities in just **126 lines of Python code**.
-
-## 📺 Watch the Talk
-
-<iframe width="100%" height="400" src="https://www.youtube.com/embed/qoLINgx8edQ" title="Streamlit for AI Dashboards - Jeff Linwood at AIMUG September 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Who Uses Streamlit?
 

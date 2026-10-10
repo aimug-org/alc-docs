@@ -2,8 +2,6 @@
 sidebar_position: 4
 ---
 
-# AI Accelerated Software Development Panel
-
 Join us for an insightful panel discussion on AI Accelerated Software Development. Our experts will explore how AI, particularly LangChain and related technologies, is revolutionizing the software development process.
 
 ## Panel Overview
@@ -18,8 +16,6 @@ This panel will explore the transformative impact of artificial intelligence on 
 ## Panel Video
 
 Here's a recording of our panel discussion:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Ufyi_dJimI8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Key Discussion Points
 

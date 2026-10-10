@@ -3,11 +3,7 @@ title: Integrating AI Workflows with MCP, OpenWeb UI, LangChain, and LangGraph
 description: A technical overview of Karim Lalani's presentation on connecting diverse AI tools into cohesive workflows
 ---
 
-# Integrating AI Workflows
-
 In this session from our March 5, 2025 "March Mixer - Off SXSW Edition" event, Karim Lalani presented a comprehensive overview of integrating various AI technologies to create cohesive, powerful workflows. This documentation provides a technical summary of the key concepts and implementations demonstrated.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/rq69zhxZS-8" title="Karim Lalani's talk on integrating AI workflows" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Key Technologies Covered
 

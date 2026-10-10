@@ -25,6 +25,7 @@ const talks = defineCollection({
     transcript: z.array(z.object({ t: z.number(), text: z.string() })).default([]),
     learn: z.array(z.string()).default([]), // "What you'll learn" bullets
     links: z.array(link).default([]),
+    writeup: z.string().optional(), // docs entry id of this talk's write-up; the talk page shows it and its /docs/ URL redirects here
     thumbnail: z.string().optional(), // path under /public, else the YouTube thumbnail is used
     language: z.string().optional(), // e.g. "es"; omitted for English
     backfill: z.boolean().default(false), // stub made from the channel listing, no transcript yet
@@ -79,6 +80,7 @@ const blog = defineCollection({
     tags: z.array(z.string()).default([]), // blogTags ids
     image: z.union([z.string().startsWith('/'), image()]).optional(), // /public path, or a file next to the post
     draft: z.boolean().optional(),
+    event: z.string().optional(), // events id: the night this post is about; its night page lists it
   }),
 });
 

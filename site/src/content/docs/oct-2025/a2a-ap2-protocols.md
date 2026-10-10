@@ -2,19 +2,11 @@
 sidebar_position: 2
 ---
 
-# Agent-to-Agent (A2A) and Agent Payment Protocol (AP2)
-
-**Presenter**: Ryan Booth
-**Date**: October 1, 2025
-**Duration**: 25 minutes (Thunderstorm Talk + Demo)
-
 ## Overview
 
 Ryan Booth presented an exploration of Google's Agent-to-Agent (A2A) protocol and the emerging Agent Payment Protocol (AP2), demonstrating how these protocols enable agent discovery, capability negotiation, and automated transactions in a marketplace model.
 
 **Update**: Ryan's full presentation is now available on YouTube!
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/d5l0D7h5bI4" title="A2A and AP2 Agent Protocols - Ryan Booth" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 [Read the detailed blog post →](/blog/a2a-ap2-agent-protocols-video)
 

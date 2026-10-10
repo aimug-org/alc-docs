@@ -1,10 +1,4 @@
-# Edge Computing with Gradio and Cloudflare Lab
 
-## 📹 Lab Recording
-
-Watch Karim's full presentation and walkthrough of the lab:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/47KiKEgsrKI" title="Edge Computing with Gradio and Cloudflare Lab" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 **Presented by Karim Lalani**
 

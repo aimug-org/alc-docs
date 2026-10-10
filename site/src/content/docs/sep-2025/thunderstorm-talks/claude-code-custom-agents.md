@@ -4,19 +4,9 @@ title: Claude Code & Custom Agents
 sidebar_label: Claude Code & Agents
 ---
 
-# Claude Code & Custom Agents - From Prompt Engineering to Context Engineering
-
-**Speaker:** Sal Castoro  
-**Duration:** 15 minutes  
-**Time:** 6:45 PM - 7:00 PM
-
 ## Overview
 
 Sal presented the evolution of agentic coding tools, focusing on Claude Code's approach to context engineering and custom sub-agents. The talk covered how Claude Code addresses LLM limitations through instruction files, custom agents, and parallel execution patterns.
-
-## 📺 Watch the Talk
-
-<iframe width="100%" height="400" src="https://www.youtube.com/embed/HI8PBSPr6Qk" title="Claude Code & Custom Agents - Sal Castoro at AIMUG September 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## The Evolution: From Prompt to Context Engineering
 

@@ -9,7 +9,7 @@ const rsvp = next?.data.rsvp.luma ?? next?.data.rsvp.meetup;
     <li><a href="/">Home</a></li>
     <li><a href="/events/">Events</a>: the next meetup and every past one</li>
     <li><a href="/talks/">Talks</a>: search every recorded talk</li>
-    <li><a href="/blog/">Recaps</a> and <a href="/docs/">notes</a></li>
+    <li><a href="/events/">Meetup nights</a>, <a href="/docs/">notes</a> and <a href="/blog/">news</a></li>
     {rsvp && next && <li><a href={rsvp}>RSVP for {fmtDay(next.data.start)}</a>: the next meetup</li>}
     <li><a href="/speak/">Speak</a>: pitch a talk</li>
   </ul>

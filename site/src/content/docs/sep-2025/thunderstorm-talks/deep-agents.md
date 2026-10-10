@@ -4,19 +4,9 @@ title: Deep Agents Architecture
 sidebar_label: Deep Agents
 ---
 
-# Deep Agents - Batteries-Included Deep Research Framework
-
-**Speaker:** Collier King  
-**Duration:** 15 minutes  
-**Time:** 7:00 PM - 7:15 PM
-
 ## Overview
 
 Collier King presented LangChain's new Deep Agents framework - a Python package that brings Claude Code's best patterns to LangGraph. The talk demonstrated how Deep Agents solves the "shallow agent" problem through sustained context, long-term planning, complex workflows, and parallelization.
-
-## 📺 Watch the Talk
-
-<iframe width="100%" height="400" src="https://www.youtube.com/embed/q9uR4YD3I6E" title="Deep Agents - Collier King at AIMUG September 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## The Problem: Shallow Agents
 

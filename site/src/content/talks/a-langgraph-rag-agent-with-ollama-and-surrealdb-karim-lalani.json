@@ -14,5 +14,6 @@
     "RAG",
     "Inference"
   ],
+  "writeup": "feb-2024/langgraph-rag",
   "backfill": true
 }

@@ -4,19 +4,9 @@ title: Rosie the Robot - Desktop Organization Assistant
 sidebar_label: Rosie Robot Demo
 ---
 
-# Rosie the Robot - Your Digital Desktop Maid
-
-**Speaker:** James Coffey  
-**Duration:** 15 minutes  
-**Time:** 7:15 PM - 7:30 PM
-
 ## Overview
 
 James Coffey presented Rosie the Robot, a desktop organization assistant that tackles the universal problem of messy digital workspaces. As a newcomer to AIMUG (attending for just 2 months), James jumped right in to solve his own pain point: years of accumulated desktop chaos.
-
-## 📺 Watch the Talk
-
-<iframe width="100%" height="400" src="https://www.youtube.com/embed/-TgsPm_54so" title="Rosie the Robot - Desktop Automation with Agents - James Coffey at AIMUG September 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## The Problem
 

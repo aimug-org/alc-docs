@@ -4,19 +4,9 @@ title: LangChain / LangGraph 1.0 Alpha Update
 sidebar_label: LangChain/LangGraph Update
 ---
 
-# LangGraph 1.0α & LangChain 1.0α — The New Defaults for Building Agentic Systems
-
-**Speaker:** Colin McNamara  
-**Duration:** 15 minutes  
-**Time:** 6:30 PM - 6:45 PM
-
 ## Overview
 
 Colin shares insights from Harrison's team on the upcoming LangGraph 1.0 and LangChain 1.0 releases, focusing on the new architecture, migration strategies, and production-ready features that make these the default choices for building agentic systems.
-
-## 📺 Watch the Talk
-
-<iframe width="100%" height="400" src="https://www.youtube.com/embed/N_WTAYVderI" title="LangChain/LangGraph 1.0 Alpha Update - Colin McNamara at AIMUG September 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Key Updates
 

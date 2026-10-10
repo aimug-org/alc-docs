@@ -1,4 +1,3 @@
-# Google Drive Integration with LangChain
 
 ## Presenter
 **Riccardo Pirruccio (Ricky)** is an enterprise architecture specialist who has made significant contributions to the Austin LangChain community through his work on RAG implementations and Docker containerization. His expertise in integrating Google Drive with LangChain has helped developers build robust document processing and analysis systems.

@@ -2,9 +2,6 @@
 sidebar_position: 2
 ---
 
-# EmoJourn: Lessons Learned
-
-*Presenter: Robert "Rob" Davis*  
 *Dallas → Austin, Senior Software Architect*  
 *Topic: AI-Powered Wellness Journal Analysis - Production Architecture & Lessons Learned*
 

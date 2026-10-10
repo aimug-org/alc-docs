@@ -2,11 +2,6 @@
 sidebar_position: 4
 ---
 
-# Slack + Cursor Integration
-
-*Presenter: Joseph*  
-*Lightning Talk - July 2025 AIMUG Session*
-
 ## 🔧 **Mobile Development Workflow Integration**
 
 ### **The Development Challenge**

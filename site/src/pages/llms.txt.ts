@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { publicTalks, nextEvent, fmtDay, fmtTime, fmtDate } from '../lib/data';
+import { moves, nightUrl } from '../components/content/content';
 
 const head = `# AIMUG
 
@@ -8,11 +9,11 @@ const head = `# AIMUG
 
 ## Key pages
 
-- [Events](https://aimug.org/events/): the next meetup, Office Hours, and every past event with recaps and slides
+- [Events](https://aimug.org/events/): the next meetup, Office Hours, and every past event; each meetup night has a page with its talks, recap and notes
 - [Talks](https://aimug.org/talks/): every recorded talk; newer talks come with transcripts and chapters
 - [Speak](https://aimug.org/speak/): how to pitch a talk
-- [Recaps](https://aimug.org/blog/): write-ups of each meetup
-- [Notes](https://aimug.org/docs/): slides and notes from past meetups, plus the earlier LangChain lab series
+- [Notes](https://aimug.org/docs/): labs, slides and guides from past meetups, plus the earlier LangChain lab series
+- [News](https://aimug.org/blog/): community news, essays and Office Hours notes
 
 ## Optional
 
@@ -37,5 +38,7 @@ export const GET: APIRoute = async () => {
     return `- [${t.data.title}](https://aimug.org/talks/${t.id}/): ${[who, when].filter(Boolean).join(', ')}.${first ? ` ${first.replace(/\s+/g, ' ')}` : ''}`;
   });
   body += `\n## Talks\n\n${lines.join('\n')}\n`;
+  const nights = (await moves()).nights.filter((e) => e.data.end < new Date()).reverse();
+  body += `\n## Meetup nights\n\n${nights.map((e) => `- [${e.data.title}, ${fmtDay(e.data.start, { weekday: undefined, year: 'numeric' })}](https://aimug.org${nightUrl(e.id)})`).join('\n')}\n`;
   return new Response(body, { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
 };

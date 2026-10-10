@@ -2,11 +2,6 @@
 sidebar_position: 3
 ---
 
-# Cloudflare Containers
-
-*Presenter: Collier*  
-*Lightning Talk - July 2025 AIMUG Session*
-
 ## 🌐 **Edge Computing with Cloudflare**
 
 ### **The Edge Advantage**
@@ -94,7 +89,6 @@ From Collier's presentation:
 - **[Lightning Talks Overview](/docs/jul-2025/lightning-talks/)** - All July 2025 lightning presentations
 - **[Toolhouse Fastlane Worker](/docs/jul-2025/lightning-talks/toolhouse-fastlane-worker)** - Web automation for AI agents
 - **[EmoJourn Case Study](/docs/jul-2025/thunderstorm-talks/emojourn-lessons-learned)** - Mental health AI lessons learned
-
 
 ---
 

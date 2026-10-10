@@ -1080,5 +1080,6 @@
       "url": "https://github.com/aimug-org/austin_langchain/tree/main/labs/LangChain_111"
     }
   ],
+  "writeup": "dec-2024/gradio-edge-computing-lab",
   "backfill": true
 }

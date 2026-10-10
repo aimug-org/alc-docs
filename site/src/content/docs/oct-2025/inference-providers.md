@@ -2,12 +2,6 @@
 sidebar_position: 4
 ---
 
-# LLM Inference Provider Frameworks
-
-**Presenter**: Dmitri Iourovitski
-**Date**: October 1, 2025
-**Duration**: 15 minutes
-
 ## Overview
 
 Dmitri Iourovitski provided a comprehensive comparison of local LLM inference providers, focusing on practical trade-offs between ease of use, performance, and production readiness.

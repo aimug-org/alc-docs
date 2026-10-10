@@ -30,11 +30,16 @@ for (const e of events) {
   const docs = e.docs?.replace(/^\/docs\/|\/$/g, '');
   if (e.docs && !(docs && existsSync(join(docsDir, docs)))) errors.push(`event ${e.id}: docs ${e.docs} has no folder under src/content/docs`);
 }
+for (const f of walk(join(root, 'src/content/blog')).filter((f) => /\.mdx?$/.test(f))) {
+  const ev = load(readFileSync(f, 'utf8').match(/^---\n([\s\S]*?)\n---/)?.[1] ?? '')?.event;
+  if (ev && !eventIds.has(String(ev))) errors.push(`post ${f.slice(f.indexOf('src/content/blog/') + 17)}: event "${ev}" is not an id in events.yaml`);
+}
 for (const f of walk(join(root, 'src/content/talks')).filter((f) => f.endsWith('.json'))) {
   const t = JSON.parse(readFileSync(f, 'utf8'));
   const name = f.slice(f.lastIndexOf('/') + 1);
   for (const id of t.speakers ?? []) if (!speakers.has(id)) errors.push(`talk ${name}: speaker "${id}" is not in speakers.yaml`);
   if (t.event && !eventIds.has(String(t.event))) errors.push(`talk ${name}: event "${t.event}" is not an id in events.yaml`);
+  if (t.writeup && !['.md', '.mdx'].some((x) => existsSync(join(docsDir, t.writeup + x)))) errors.push(`talk ${name}: writeup "${t.writeup}" is not a file under src/content/docs`);
 }
 
 if (errors.length) {

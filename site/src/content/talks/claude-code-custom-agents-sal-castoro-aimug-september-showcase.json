@@ -361,5 +361,6 @@
       "url": "https://github.com/aimug-org/austin_langchain/blob/main/resources/presentations/2025-09-10-Austin-LangChain-Claude-Code-Custom-Agents.pdf"
     }
   ],
+  "writeup": "sep-2025/thunderstorm-talks/claude-code-custom-agents",
   "backfill": true
 }

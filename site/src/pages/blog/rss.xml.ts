@@ -9,6 +9,6 @@ export const GET: APIRoute = async ({ site }) => {
     const url = new URL(p.url, site).href;
     return `<item><title>${esc(p.entry.data.title)}</title><link>${url}</link><guid>${url}</guid><pubDate>${p.date.toUTCString()}</pubDate><description>${esc(p.excerpt)}</description></item>`;
   });
-  const xml = `<?xml version="1.0" encoding="utf-8"?><rss version="2.0"><channel><title>AIMUG Recaps</title><link>${new URL('/blog/', site).href}</link><description>AIMUG Recaps</description><language>en</language>${items.join('')}</channel></rss>`;
+  const xml = `<?xml version="1.0" encoding="utf-8"?><rss version="2.0"><channel><title>AIMUG News</title><link>${new URL('/blog/', site).href}</link><description>AIMUG news, essays and Office Hours notes</description><language>en</language>${items.join('')}</channel></rss>`;
   return new Response(xml, { headers: { 'Content-Type': 'application/rss+xml; charset=utf-8' } });
 };

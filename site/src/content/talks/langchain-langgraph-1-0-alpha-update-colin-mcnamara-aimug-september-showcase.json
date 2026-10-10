@@ -11,5 +11,6 @@
   "topics": [
     "LangGraph"
   ],
+  "writeup": "sep-2025/thunderstorm-talks/langchain-langgraph-update",
   "backfill": true
 }
