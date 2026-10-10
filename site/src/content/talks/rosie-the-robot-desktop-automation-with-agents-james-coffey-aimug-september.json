@@ -1,0 +1,377 @@
+{
+  "title": "Rosie the Robot: Desktop Automation with Agents",
+  "speakers": [
+    "james-coffey"
+  ],
+  "date": "2025-09-30",
+  "event": "2025-09-10",
+  "youtubeId": "-TgsPm_54so",
+  "duration": 1033,
+  "summary": "In this talk from the Austin AI Middleware Users Group (AIMUG) September Showcase, James Coffey shares how he’s using AI to solve a personal pain point: his cluttered computer desktop.",
+  "topics": [
+    "Agents"
+  ],
+  "transcript": [
+    {
+      "t": 3,
+      "text": "[00:59:59:22 - 01:00:05:22] (Thunder) (Music Playing) [01:00:05:22 - 01:00:12:00] Colin McNamara Oh, cool. Okay."
+    },
+    {
+      "t": 17,
+      "text": "[01:00:17:02 - 01:00:18:05] James Coffey So, um, [01:00:20:16 - 01:00:50:23] James Coffey I think a lot of people here are further along than I am in AI engineering. So, uh, I came to,"
+    },
+    {
+      "t": 26,
+      "text": "like my first, uh, AI mug meeting, uh, two months ago and I decided to just jump right in. So, uh, I have a history in data science and ML ops and doing developer advocate work. Um,"
+    },
+    {
+      "t": 41,
+      "text": "so I thought like the easiest thing to do would be to solve one of my own pain points. And I decided, well, I have a terribly messy desktop and that's my idea for Rosie, the robot."
+    },
+    {
+      "t": 51,
+      "text": "[01:00:52:17 - 01:00:57:20] James Coffey And, uh, you can follow me on X. That's the last of any marketing one to do."
+    },
+    {
+      "t": 59,
+      "text": "[01:00:59:15 - 01:01:08:11] James Coffey So, um, right now my desktop has probably two, three years worth of just junk on it. Uh, the same as for all my directories."
+    },
+    {
+      "t": 69,
+      "text": "[01:01:09:12 - 01:01:19:01] James Coffey And, um, I have like vague names, duplicates, random downloads, and, you know, oftentimes I have to actually click in order to find out what it is that I saved."
+    },
+    {
+      "t": 79,
+      "text": "[01:01:20:04 - 01:02:28:04] James Coffey Um, so, uh, I can use like a deterministic method. I can use like clustering, um, sort of like, like, you know, K means things like that. Um, but the problem is they don't really pick a very intuitive"
+    },
+    {
+      "t": 95,
+      "text": "naming scheme and they don't structure it to how I would like it. So this is a bit different from like a specific, um, like land graph, um, technique talk. Uh, I did promise Collier that I"
+    },
+    {
+      "t": 109,
+      "text": "would inject it. Yeah. Uh, sorry, Collin, I would inject it. Uh, so I'm just going to go through my, uh, sort of, um, idea here. And I hope that by like next meeting, it's going to be further along"
+    },
+    {
+      "t": 121,
+      "text": "and we can kind of grow together and see it at the very beginning and how it gets more sophisticated going on. So, um, the solution I'm aiming for is that I have a, a maid, it asks a few questions."
+    },
+    {
+      "t": 135,
+      "text": "I give it a few answers. It proposes changes. I give it approval and then it safely organizes my computer, tells me what it did, and then, uh, hopefully I don't have to rerun it again."
+    },
+    {
+      "t": 149,
+      "text": "[01:02:29:04 - 01:03:16:19] James Coffey So, uh, the current state is that it's right now just a CLI. Um, I have a SQ light event store, um, and it's land graph ready. Um, I already have wired a few, uh, agents or like put the"
+    },
+    {
+      "t": 163,
+      "text": "precursor in there. The idea is that I'll have human in the loop. So there's going to be, uh, so there's a planner that scans everything. And then there is a reviewer that then comes and"
+    },
+    {
+      "t": 175,
+      "text": "asks me or the user what it is that we want to keep. What do we want to, uh, name sort a few things. And then, uh, lastly, there's an executor that goes on and takes in both"
+    },
+    {
+      "t": 189,
+      "text": "the algorithmic clustering information and also my own preferences and we get, um, the final result."
+    },
+    {
+      "t": 201,
+      "text": "[01:03:21:06 - 01:04:08:13] James Coffey So, uh, like I said before, most of you guys are a lot further along in the Lang chain development than I am. So I'm going to be talking to anyone who's just starting out and,"
+    },
+    {
+      "t": 214,
+      "text": "uh, right now I'm doing sort of a live, uh, production. So instead of overbuilding before I get feedback, this is feedback. So, uh, there we go. So, um, and also"
+    },
+    {
+      "t": 226,
+      "text": "have a definition of done. So I've said I want a clean desktop. That's my definition of done. Uh, so what I'm doing is I have one painful use case. Uh, it's messy. A first win, which is I'm going to have a CLI that's deterministic. Um, so then we have clear"
+    },
+    {
+      "t": 243,
+      "text": "definition of our problem. Um, and we've already gotten started. I have a deterministic core."
+    },
+    {
+      "t": 249,
+      "text": "[01:04:09:15 - 01:04:18:20] James Coffey Um, I'll be doing human in the loop gates on risky steps and I will be, well, it's probably not going to be 60 seconds, but I have a demo and it's short."
+    },
+    {
+      "t": 259,
+      "text": "[01:04:20:00 - 01:04:26:10] James Coffey Um, and like I promised, um, so we're going to have line graph control flow for bounded loops, [01:04:27:11 - 01:04:33:12] James Coffey uh, Lang chain tools. Um, and also, um,"
+    },
+    {
+      "t": 274,
+      "text": "[01:04:34:15 - 01:04:37:11] James Coffey these we're going to have traces and fixtures. So [01:04:42:06 - 01:04:43:06] James Coffey this is the checklist."
+    },
+    {
+      "t": 283,
+      "text": "[01:04:44:10 - 01:04:44:15] James Coffey Um, [01:04:46:10 - 01:04:54:07] James Coffey I already said pain point. The metaphor is it's a robot."
+    },
+    {
+      "t": 289,
+      "text": "It's a made for your computer. That's going to inform the UX and the prompts."
+    },
+    {
+      "t": 295,
+      "text": "[01:04:55:14 - 01:04:58:13] James Coffey Um, the architecture, um, is right now, [01:05:00:14 - 01:05:23:10] James Coffey good for like an initial demo and, um, I'll build on it. I'll show you a roadmap of what"
+    },
+    {
+      "t": 307,
+      "text": "I'm going to do later on. Eventually I want it to be an exe that people download and someone who is not a developer can easily benefit from it. Um, and then lastly, the demo. So,"
+    },
+    {
+      "t": 325,
+      "text": "[01:05:25:04 - 01:05:25:09] James Coffey um, [01:05:26:13 - 01:05:29:14] James Coffey the outcome having a, um, [01:05:30:19 - 01:06:24:07] James Coffey reviewable plan that groups related files and proposes the same, a safe move with an undo,"
+    },
+    {
+      "t": 337,
+      "text": "um, that's kind of informed the, uh, tools that I've made. So we have a file scan tool, um, that walks through the directories, scans the whole directory for the files. Uh, we have an"
+    },
+    {
+      "t": 350,
+      "text": "embeddings tool that has also fall back. So it's really, um, HDB scan is the first one. And then I believe it goes to a different agglomerative, um, a clustering algorithm. And then later on"
+    },
+    {
+      "t": 366,
+      "text": "we go to a, um, simple, uh, coastline similarity. And the names for each cluster, um, are TFIDF. Um, so then we have a tree shaper so that it keeps it sort of flat, um, and doesn't go too deep."
+    },
+    {
+      "t": 385,
+      "text": "[01:06:25:09 - 01:06:28:01] James Coffey Um, and I have some tools for check pointing and file ops."
+    },
+    {
+      "t": 390,
+      "text": "[01:06:30:04 - 01:06:30:13] James Coffey Um, [01:06:32:15 - 01:06:44:03] James Coffey so this is just quickly how the metaphor informs the prompts. So, um, or the UX. So it doesn't immediately mutate. It has human in the loop."
+    },
+    {
+      "t": 404,
+      "text": "[01:06:45:07 - 01:06:45:12] James Coffey Um, [01:06:46:16 - 01:06:55:11] James Coffey and this is sort of like over my head at this point. I haven't used pedantic. So I'm kind of like at this point over my skis. Um, so,"
+    },
+    {
+      "t": 416,
+      "text": "[01:06:56:20 - 01:07:06:03] James Coffey in the end, I'm really hoping that I'll get a lot of feedback here. Um, and then, uh, this is a, an example of the plan view."
+    },
+    {
+      "t": 429,
+      "text": "[01:07:09:11 - 01:07:11:08] James Coffey And then finally the architecture. [01:07:12:18 - 01:07:15:10] James Coffey I have an event store. I then use projections, [01:07:16:12 - 01:07:28:03] James Coffey"
+    },
+    {
+      "t": 436,
+      "text": "uh, keep all of my agents in the agents directory. Um, and then I have a core graph that's just a skeleton. It hasn't actually been, um,"
+    },
+    {
+      "t": 449,
+      "text": "[01:07:29:10 - 01:07:30:20] James Coffey it hasn't actually been a flush down."
+    },
+    {
+      "t": 453,
+      "text": "[01:07:34:01 - 01:07:37:03] James Coffey And so [01:07:58:09 - 01:08:21:03] James Coffey"
+    },
+    {
+      "t": 478,
+      "text": "first, it's just a dryline scan. Uh, this is going to be of my downloads folder and it takes less than a minute and it should come up with a list of clusters and a, uh, list of directories that"
+    },
+    {
+      "t": 494,
+      "text": "it wishes to create along with, uh, move plans for which files to move into those directors."
+    },
+    {
+      "t": 510,
+      "text": "[01:08:23:12 - 01:08:27:03] (Inaudible) [01:08:27:03 - 01:08:31:22] Colin McNamara Yes."
+    },
+    {
+      "t": 514,
+      "text": "[01:08:34:15 - 01:09:27:16] James Coffey So, um, I haven't tested out fully the clustering algorithm. I have been, uh, I went from having, um, sorry, I've been, uh, it's kind of loud. I've been, uh, going from using,"
+    },
+    {
+      "t": 528,
+      "text": "uh, uh, open AI just to check my functions and document things to using codecs. So I really just trusted it on the algorithms part as far as, uh, you know, clustering is concerned,"
+    },
+    {
+      "t": 541,
+      "text": "but it assures me that number one, it's using HDB scan. Um, and then it's going, uh, to an agglomerative clustering. And then later the cosine similarity. So,"
+    },
+    {
+      "t": 554,
+      "text": "um, that's something I have to really go in, check manually, verify that, like BS me and write some more documentation on that. But here it goes through, we get two tables. It has make directory,"
+    },
+    {
+      "t": 568,
+      "text": "[01:09:28:16 - 01:09:29:23] James Coffey uh, so create directory and move. [01:09:30:23 - 01:09:33:02] James Coffey And we have confidence levels, [01:09:34:02 - 01:09:53:21] James Coffey"
+    },
+    {
+      "t": 574,
+      "text": "uh, sorry, uh, yeah, confidence levels. Um, some of these are actually hard-coded. So, um, I think 0.6 is hard-coded, um, in there. The confidence is also something that I haven't"
+    },
+    {
+      "t": 587,
+      "text": "actually been able to get a straight answer on for the definition of how it's being calculated."
+    },
+    {
+      "t": 594,
+      "text": "[01:09:54:23 - 01:09:55:03] James Coffey Um, [01:09:56:05 - 01:10:05:22] James Coffey so this will be used on, uh, used later on for the agents to determine, um, whether or not they should actually go through with that or not."
+    },
+    {
+      "t": 606,
+      "text": "[01:10:07:04 - 01:10:10:03] James Coffey Um, and then here's a list of the largest folders."
+    },
+    {
+      "t": 617,
+      "text": "[01:10:17:01 - 01:10:22:16] James Coffey This is just to show that it will not implement without a yes."
+    },
+    {
+      "t": 623,
+      "text": "[01:10:23:16 - 01:10:23:16] James Coffey Yes. [01:10:24:17 - 01:10:27:03] Speaker 11 Did you say that 0.6 was hard-coded? [01:10:27:03 - 01:10:29:06] James Coffey It is. Will you put any better?"
+    },
+    {
+      "t": 629,
+      "text": "[01:10:30:15 - 01:10:31:17] James Coffey Well, uh, [01:10:33:12 - 01:11:07:22] James Coffey some steps and some, like, it also said, um, when I asked specifically about this, so I was querying"
+    },
+    {
+      "t": 640,
+      "text": "like, okay, here, what, what did you implement? Okay. What is confidence? Okay. I got like, well, planning to use that later on for the agents to determine whether or not to go forward and"
+    },
+    {
+      "t": 651,
+      "text": "implement that step. Um, I asked, okay, well, how do you calculate this? It says, well, right now I just said, well, when we do this, um, particular scan, we're just going to hard-code and say that"
+    },
+    {
+      "t": 662,
+      "text": "we have a confidence of 0.6. So that's all it is. It's just a, um, magic value at this point."
+    },
+    {
+      "t": 669,
+      "text": "[01:11:11:04 - 01:11:11:15] James Coffey Um, [01:11:12:19 - 01:11:18:17] James Coffey and then this last, this one we have, um,"
+    },
+    {
+      "t": 681,
+      "text": "[01:11:21:12 - 01:11:35:03] James Coffey so it just creates a directory and then it undoes it. And the point here is that, uh, using windows operations to then go into,"
+    },
+    {
+      "t": 696,
+      "text": "[01:11:36:11 - 01:11:40:19] James Coffey um, when it deletes anything, it goes into the recycle bin."
+    },
+    {
+      "t": 703,
+      "text": "[01:11:42:23 - 01:11:51:16] James Coffey And the last one is sort of a dev cleanup. So this one searches for just any sort of common, um, [01:11:52:21 - 01:11:55:11] James Coffey caches that we might have. This is the virtual environment."
+    },
+    {
+      "t": 716,
+      "text": "[01:11:56:15 - 01:12:01:09] James Coffey And, um, you can delete that too if you wanted and it would end up in your recycle bin."
+    },
+    {
+      "t": 723,
+      "text": "[01:12:03:06 - 01:12:15:02] James Coffey So this is very early on and this is sort of my promise, uh, to include land chain, land graph."
+    },
+    {
+      "t": 735,
+      "text": "[01:12:16:08 - 01:12:54:16] James Coffey Um, I haven't looked into this, so I'm going to get a lot of feedback. I've seen some people, um, scrunch up their eyebrows. And so I think that have, uh, some things to,"
+    },
+    {
+      "t": 750,
+      "text": "you know, suggest some advice to give, um, on my approach. So, um, just going to show the roadmap, uh, for this project and, uh, would take any sort of suggestions, questions at this point and"
+    },
+    {
+      "t": 765,
+      "text": "we can go from there. We've got three minutes. So three minutes of questions or comments or."
+    },
+    {
+      "t": 779,
+      "text": "[01:12:58:09 - 01:13:12:14] James Coffey So here's a question. So is anyone building anything, uh, end to end or are we, uh, as far as like a complete application to hand off to someone else?"
+    },
+    {
+      "t": 793,
+      "text": "[01:13:13:15 - 01:13:17:12] James Coffey Are we focusing more on internal dev tooling? Um, [01:13:19:10 - 01:13:19:15] James Coffey yeah."
+    },
+    {
+      "t": 799,
+      "text": "[01:13:21:00 - 01:13:34:06] Speaker 11 So you were talking about when you're asking it and how it's calculating, you get that a couple of times. Oh,"
+    },
+    {
+      "t": 817,
+      "text": "[01:13:37:11 - 01:13:39:03] James Coffey so, um, [01:13:44:09 - 01:13:44:10] James Coffey yes."
+    },
+    {
+      "t": 826,
+      "text": "[01:13:45:20 - 01:13:57:05] James Coffey So let me grab that. I actually have an answer for you there. So like I said, um,"
+    },
+    {
+      "t": 838,
+      "text": "[01:13:58:20 - 01:14:00:14] James Coffey I, this is my first time using codex."
+    },
+    {
+      "t": 842,
+      "text": "[01:14:02:10 - 01:14:11:12] James Coffey And like you said yesterday on the call with AI, things have gotten pretty fast. And so you end up going faster than, um, [01:14:13:06 - 01:14:33:16] James Coffey"
+    },
+    {
+      "t": 853,
+      "text": "faster than you would like. So I would like to answer your question regarding, um, confidence. And so right now I'm not sure, uh, right now. So confidence is how sure the algorithm"
+    },
+    {
+      "t": 867,
+      "text": "is about the proposed actions correctness. So classification and assignment confidence."
+    },
+    {
+      "t": 874,
+      "text": "[01:14:35:07 - 01:14:44:01] James Coffey And so the calculation today, um, so for the rules based classification, it's defaulting to 0.75. So that's not what we're doing."
+    },
+    {
+      "t": 884,
+      "text": "[01:14:51:02 - 01:15:07:12] Speaker 11 Interacting to say, right. Because you're saying it has an excellent explanation,"
+    },
+    {
+      "t": 898,
+      "text": "but it's not very deterministic. So how are you interacting how do you know what it's doing?"
+    },
+    {
+      "t": 908,
+      "text": "[01:15:08:15 - 01:15:11:10] Speaker 11 Oh, so [01:15:11:10 - 01:15:22:07] James Coffey it's not prompting. It's all deterministic. There's no, there's really no LLM in here at all. The only LLM involved is in the writing of the code."
+    },
+    {
+      "t": 923,
+      "text": "[01:15:23:08 - 01:15:27:15] James Coffey So yes. Um, so right now all the functions are deterministic."
+    },
+    {
+      "t": 928,
+      "text": "[01:15:29:01 - 01:15:41:12] James Coffey So the idea here is to give a deterministic core architecture and then add LLM into it and then give it the controls to then make decisions later. Gotcha. Okay."
+    },
+    {
+      "t": 943,
+      "text": "[01:15:43:05 - 01:15:43:22] Speaker 11 Yes. [01:15:46:15 - 01:15:55:08] James Coffey So I'm hoping that this will be a lot more relevant to the LLM line chain line graph group. Once I actually put line, right, line graph and line chain in it."
+    },
+    {
+      "t": 955,
+      "text": "[01:15:55:08 - 01:15:56:13] Speaker 11 So yeah."
+    },
+    {
+      "t": 959,
+      "text": "[01:15:58:09 - 01:16:20:19] Speaker 6 Just one quick comment that I think is really cool about this is that like we're all coming from this place of, I know I am coming from a place which is using LLMs for everything."
+    },
+    {
+      "t": 970,
+      "text": "And you're using the tooling around the LLMs, which are plugging in more traditional data science operations like your cluster, your bigger. So I don't know, I think it's just really interesting bringing the two together."
+    },
+    {
+      "t": 981,
+      "text": "[01:16:20:19 - 01:16:44:16] James Coffey Yes. So like I was talking earlier on that when I was in data science, I kind of figured I would go back and just do a lot of that and then found out that a lot of the sort of like"
+    },
+    {
+      "t": 994,
+      "text": "classification of text, like semantic analysis and all of that, kind of gotten taken over by LLMs. I was like, oh, so I was trying to like re-implement things that have been superseded."
+    },
+    {
+      "t": 1005,
+      "text": "[01:16:46:04 - 01:16:52:21] James Coffey And so this is really, you know, me diving in, you know, feet first or head first into AI engineering."
+    },
+    {
+      "t": 1014,
+      "text": "[01:16:54:07 - 01:17:04:20] Colin McNamara Awesome. Well, thank you so much James for sharing that with us. Thank you. We appreciate the different perspectives from the data science"
+    },
+    {
+      "t": 1029,
+      "text": "[01:17:04:20 - 01:17:04:20]"
+    }
+  ],
+  "backfill": true
+}

@@ -1,0 +1,343 @@
+{
+  "title": "AI Detecting Cancer with Graph Neural Networks: Stanford Internship by Venika Kakarla",
+  "speakers": [
+    "venika-kakarla"
+  ],
+  "date": "2025-10-24",
+  "youtubeId": "BEGWT1DAskI",
+  "duration": 902,
+  "topics": [
+    "Graphs"
+  ],
+  "transcript": [
+    {
+      "t": 4,
+      "text": "[01:00:00:00 - 01:00:02:22] (Typing) [01:00:02:22 - 01:00:18:17] Venika Kakarla Venika. Recently this summer I did an internship at Stanford University at the Donna Saker lab. It's really just a research lab in the Stanford School of Medicine."
+    },
+    {
+      "t": 19,
+      "text": "[01:00:19:17 - 01:00:52:05] Venika Kakarla Let's get started. I'm going to talk about the lab today. I'm going to talk about the procedures that are done at the lab. I'm going to talk about my project on data analysis and the results"
+    },
+    {
+      "t": 31,
+      "text": "that I found from that. As well as my future GNN or GRAF attention network implementation."
+    },
+    {
+      "t": 41,
+      "text": "I interned at the Donna Saker lab at the Stanford School of Medicine this summer. What this lab focuses on is gastroenterology which is the study of the digestive system and the organization."
+    },
+    {
+      "t": 52,
+      "text": "[01:00:53:10 - 01:01:04:17] Venika Kakarla All of that deals with the digestive system. Mostly they focus on the liver. One of the main liver cancers is hepatocellular carcinoma."
+    },
+    {
+      "t": 64,
+      "text": "[01:01:04:17 - 01:01:07:19] Colin McNamara Just put it right there. Put it on your neck."
+    },
+    {
+      "t": 68,
+      "text": "[01:01:08:23 - 01:01:09:23] Colin McNamara There you go. [01:01:11:05 - 01:01:11:14] Colin McNamara That works."
+    },
+    {
+      "t": 72,
+      "text": "[01:01:13:16 - 01:01:35:17] Venika Kakarla One of the main cancers that they focus on is hepatocellular carcinoma. That is a liver cancer."
+    },
+    {
+      "t": 79,
+      "text": "It's the third leading cause of cancer related deaths worldwide. Some of the procedures they do, I'll go over that in the next slide. One of the most important things that they require"
+    },
+    {
+      "t": 89,
+      "text": "nowadays is the use of technology in biological data collection and bioinformatics in general."
+    },
+    {
+      "t": 97,
+      "text": "[01:01:37:13 - 01:02:12:05] Venika Kakarla I'll go briefly over the procedures that are done in the lab. One of the procedures that they do is immunohistochemistry. In that procedure they try to find out where exactly"
+    },
+    {
+      "t": 107,
+      "text": "in a certain tumor region are different cells located. As you can see with this picture right here you can see that there are different colored areas. There are more brown areas and some white areas. That shows where certain cells such as maybe immune cells or"
+    },
+    {
+      "t": 122,
+      "text": "tumor cells are located within a region. This helps researchers figure out where they need to target the cells. Where they need to target the medicine that they're trying to deliver."
+    },
+    {
+      "t": 133,
+      "text": "[01:02:13:17 - 01:02:56:12] Venika Kakarla Some other procedures that we're seeing is cell culture. Cell culture is pretty much where cells are grown in the lab to be researched further. Cryostat is when there are small"
+    },
+    {
+      "t": 144,
+      "text": "samples of the tumor and they cut that and they make sure that they can put it under the microscope to view. Curio is when they try to see what proteins are manufactured in each of the cells and tumor samples to further understand that. Now let's talk about my"
+    },
+    {
+      "t": 160,
+      "text": "project. My project was on angiogenic influence. This is a really heavy data analysis based project. I think that data analysis is the first step towards creating a proper AI or machine learning model. This is really what I focused on most of this summer."
+    },
+    {
+      "t": 177,
+      "text": "[01:02:57:14 - 01:04:12:18] Venika Kakarla There were four parts to my project. It was the direct interaction study where I studied the interactions between endothelial cells and let me just clarify, endothelial cells make up blood"
+    },
+    {
+      "t": 189,
+      "text": "vessels like capillaries and they deliver blood to tumors. They're an important part of how tumors grow and may progress in human hepatocellular carcinoma, which is the liver cancer. That's"
+    },
+    {
+      "t": 201,
+      "text": "what I was studying here. Angiogenic just means the growth of these endothelial cells. The direct interaction study was I studied the environment around those endothelial cells within 30 to 50"
+    },
+    {
+      "t": 213,
+      "text": "micrometers of all of those cells. Then I did an indirect interaction study. This was the 100 plus micrometer study of these environments situated further from the endothelial cells. Then I did"
+    },
+    {
+      "t": 227,
+      "text": "an MVD analysis, which is a microvessel density analysis. This is when I pretty much split the tumor samples into a grid to analyze each grid square to see more small scale differences. Then"
+    },
+    {
+      "t": 241,
+      "text": "finally I did a clustering analysis, which is trying to see which cells are clustered closer together and which cells are more dispersed to see if that affects the cancer growth as well."
+    },
+    {
+      "t": 253,
+      "text": "[01:04:14:01 - 01:04:58:22] Venika Kakarla The data I used, codecs in this sense does not mean the AI agent is for coding, but it is a type of software that is able to classify these different cell data and make sure that they're in"
+    },
+    {
+      "t": 266,
+      "text": "the correct spatial locations. That's the data set that I have right here. This shows the cell IDs, the cell types. There were 13 different cell types. The cohort, whether it was primary ATC,"
+    },
+    {
+      "t": 278,
+      "text": "so the first occurrence of the tumor, or residual, which is the second occurrence or more occurrences of the tumor. X and Y coordinates are just the spatial data or spatial coordinates of each of these different cells. Over here we have this last column,"
+    },
+    {
+      "t": 293,
+      "text": "which was kind of irrelevant to my study, but it just shows the protein expression levels."
+    },
+    {
+      "t": 300,
+      "text": "[01:05:00:11 - 01:05:07:16] Venika Kakarla Each of these rows, there were about 1.4 million different rows in this data set. Each of those rows represented a different cell."
+    },
+    {
+      "t": 309,
+      "text": "[01:05:09:05 - 01:05:38:04] Venika Kakarla Just to show how I was able to analyze the data, if you tried to graph the cells from that data set, one of the regions, and there were about 124 regions, one of the regions looked like that. As"
+    },
+    {
+      "t": 322,
+      "text": "you can see, there are all the cell types to the side. You can see all of them on this tissue map over here. You can see each of the different cell types and how they may cluster. This was kind of"
+    },
+    {
+      "t": 333,
+      "text": "a visualization of the type of data I worked with, just to help you understand it better."
+    },
+    {
+      "t": 339,
+      "text": "[01:05:40:02 - 01:05:59:05] Venika Kakarla Here are some of the tools I used for data analysis. Most of my programming was done in Python. I executed in PyCharm and the Jupyter lab. Some of the libraries,"
+    },
+    {
+      "t": 348,
+      "text": "Matplotlib, I believe is a great way for creating graphs. Pandas and NumPy for Excel handling, and SciPy stats is great for research work."
+    },
+    {
+      "t": 361,
+      "text": "[01:06:01:07 - 01:07:11:04] Venika Kakarla First, let's start with the direct interactions. Over here we have two different graphs. These results are from the direct interactions of different cells in the tumor microenvironment with"
+    },
+    {
+      "t": 371,
+      "text": "the endothelial cells. As you can see, I wrote 30 up there. That just means 30 micrometers. Within a radius of 30 micrometers of the endothelial cells, these were the different types of cells that were"
+    },
+    {
+      "t": 382,
+      "text": "found within that radius. As you can see, it says primary. This was just in primaries. There was more than half of the other data was in residual HCC. Over here, you can see different patterns"
+    },
+    {
+      "t": 394,
+      "text": "such as an increase in the number of viral blasts as the tumor cells decrease. You can just try to find different patterns in this data set. Down here, the graph below this,"
+    },
+    {
+      "t": 406,
+      "text": "this is what really matters in biological research. This shows the significance of the differences between the cell types. The green bars mean that there's a significant difference"
+    },
+    {
+      "t": 418,
+      "text": "between the cell types in primary HCC and in residual HCC. That can show whether there is a difference between those two tumors to see how the tumor microenvironment changes over time."
+    },
+    {
+      "t": 432,
+      "text": "[01:07:12:07 - 01:07:26:21] Venika Kakarla As you can see, I have a summary of some of the results that I found. Just note that this is just a fraction of my data. I have a lot more data. This is just an overview"
+    },
+    {
+      "t": 442,
+      "text": "of what kind of results can be found. I'll talk about how this can be applied later."
+    },
+    {
+      "t": 448,
+      "text": "[01:07:28:02 - 01:08:16:23] Venika Kakarla Then I also did an indirect interaction analysis. This is when I saw the type of cells that surrounded endothelial cells in a farther radius. From 100 to 200 micrometer radius,"
+    },
+    {
+      "t": 461,
+      "text": "I saw the type of different cells around those endothelial cells. Farthor away from endothelial cells were more tumor cells and it's kind of blurred out there,"
+    },
+    {
+      "t": 474,
+      "text": "but there were more fibroblasts farther away. That might show that there is immune exclusion. There are less immune cells getting to the tumor and more blood cells getting to the tumor instead,"
+    },
+    {
+      "t": 488,
+      "text": "which shows that this may help tumor growth instead of limited. These can show important insights into how researchers can tackle the problem of cancer growth."
+    },
+    {
+      "t": 497,
+      "text": "[01:08:18:01 - 01:08:26:12] Venika Kakarla Over here, I think MVD analysis was one of my most prominent results. I'm just showing the visualization of how I did the analysis."
+    },
+    {
+      "t": 507,
+      "text": "[01:08:27:17 - 01:09:01:01] Venika Kakarla What I did was I split each region. This is one of the 128 different regions. I split it into an 8x8 grid. As you can see in each of those grids, there is a certain number of cells. With that,"
+    },
+    {
+      "t": 519,
+      "text": "I was able to take the cells in that grid. I took all the endothelial cells in that grid. I divided it by the total number of cells in each grid. I was able to normalize the values based on cell type and apply that and average those across cohorts,"
+    },
+    {
+      "t": 535,
+      "text": "such as primary and residual, to see and compare differences in the endothelial cell environments."
+    },
+    {
+      "t": 542,
+      "text": "[01:09:02:22 - 01:09:47:07] Venika Kakarla These were some of the results of that MVD analysis. As you can see, I have a box plot over there. Then below it is a simpler representation of the box plot. What this shows is I split up the"
+    },
+    {
+      "t": 554,
+      "text": "region. Each of the grids, I split them up between low MVD, which is low micro-vessel density, so less endothelial cells, and high micro-vessel density, more endothelial cells. I was able to"
+    },
+    {
+      "t": 565,
+      "text": "compare differences in each of the different cell types based on the micro-vessel density."
+    },
+    {
+      "t": 571,
+      "text": "As you can see, there are different results over there. Some bars are higher than the others, which means there are significant differences in the proportions of cells around these endothelial"
+    },
+    {
+      "t": 582,
+      "text": "cells. This just provided more insight into how these tumors look like in per cell."
+    },
+    {
+      "t": 589,
+      "text": "[01:09:49:07 - 01:10:47:07] Venika Kakarla Finally, I did a clustering analysis. With this, I was able to employ boronoid tessellations. What these are is that it takes each data point and it finds the average distance between that data"
+    },
+    {
+      "t": 600,
+      "text": "point and its nearest data points around it. It draws a line through that average distance."
+    },
+    {
+      "t": 607,
+      "text": "It does that for each and every one of these data points and in this version, each and every one of these cells. As you can see, there are so many lines on there. What I was able to do with this is, as you can see, some areas are bigger than other areas. This shows"
+    },
+    {
+      "t": 622,
+      "text": "whether some cells are more clustered together or some cells are more dispersed. With this, I was able to normalize and average the results across regions and cohorts. I was"
+    },
+    {
+      "t": 634,
+      "text": "able to plot that data. As you can see, that graph shows a difference. A residual HCC may have a higher area around these endothelial cells, which shows greater disbursement."
+    },
+    {
+      "t": 648,
+      "text": "[01:10:48:19 - 01:11:59:06] Venika Kakarla Finally, more of the AI implementation. All of this data that I have gathered, it can all be used to understand and analyze the effects of the spatial clustering and spatial distribution on the"
+    },
+    {
+      "t": 661,
+      "text": "tumor microenvironment. That's where I can use GAT, which is a graph attention network. This is a type of machine learning model, a type of GNN. What it does essentially is, you see the circles,"
+    },
+    {
+      "t": 677,
+      "text": "those are called nodes. They take the cell information. You could say what cell type it is. Then you could also put in patient data. This patient is this many years old."
+    },
+    {
+      "t": 687,
+      "text": "This patient has gone these therapies. You can try and understand the spatial interactions, how that compares with the clinical data, and how those two can combine together to try and predict"
+    },
+    {
+      "t": 699,
+      "text": "the probability of recurrence or the probability of this cancer worsening. I was thinking graph attention network integration would be a great way for me to proceed with this. This is just"
+    },
+    {
+      "t": 713,
+      "text": "an overall framework of what I would try and make this look like. I'm still working on this part."
+    },
+    {
+      "t": 720,
+      "text": "[01:12:00:21 - 01:12:13:07] Venika Kakarla That's it. Thank you all for listening. If you want, I have more of my projects on my LinkedIn. Then I also presented a more AI-based presentation here in March. You can also look at that over here. Thank you."
+    },
+    {
+      "t": 737,
+      "text": "[01:12:14:13 - 01:12:15:12] (Applause) [01:12:17:18 - 01:12:17:21] Colin McNamara Okay. [01:12:20:07 - 01:12:32:19] Colin McNamara Vanika, you mentioned that you're using GNNs. You're developing a GNN method"
+    },
+    {
+      "t": 746,
+      "text": "for cancer detection. How is this related to your earlier research where you, [01:12:35:07 - 01:12:43:15] Colin McNamara in a revolutionary way, were able to detect the cancer that killed"
+    },
+    {
+      "t": 760,
+      "text": "your grandfather with fractions of the resources previously done?"
+    },
+    {
+      "t": 764,
+      "text": "[01:12:43:15 - 01:13:38:00] Venika Kakarla Yes. My previous research was on the thermal stability of the proteins around that cancer."
+    },
+    {
+      "t": 771,
+      "text": "What that does is it is able to detect how fast the cancer can progress. I can also implement that data. I can also make a multimodal ML machine learning model. I'm still thinking about that for"
+    },
+    {
+      "t": 786,
+      "text": "now. Those are really both great ways that they can try and predict clinical data. Using clinical data, they can predict the recurrence of cancer and how this can progress and the probability that"
+    },
+    {
+      "t": 801,
+      "text": "a patient might get this cancer more than once or the probability of their survival if I'm able to integrate more data with this. Those two models are very closely related because they both provide"
+    },
+    {
+      "t": 811,
+      "text": "valuable information that can be used to predict the onset of this cancer or the recurrence of it."
+    },
+    {
+      "t": 819,
+      "text": "[01:13:40:02 - 01:13:42:09] Colin McNamara One of the questions we have for Vanika."
+    },
+    {
+      "t": 827,
+      "text": "[01:13:47:03 - 01:13:50:09] Colin McNamara Vanika, thank you so much for taking the time to share this. [01:13:51:20 - 01:13:54:13] (Applause) [01:13:54:13 - 01:14:13:09] Colin McNamara"
+    },
+    {
+      "t": 834,
+      "text": "Literally blows my mind. I'm really proud of what you've been able to do with the opportunities that they extend you at Stanford. I'm looking forward to hearing back about further developments in your research. Who knows,"
+    },
+    {
+      "t": 848,
+      "text": "can you spend time at MIT next? Go down to Stanford for the rest of your education."
+    },
+    {
+      "t": 853,
+      "text": "[01:14:13:09 - 01:14:14:03] Venika Kakarla That's my plan. [01:14:15:09 - 01:14:29:13] Venika Kakarla Stanford is really nice. I'm writing a research paper now, so I'm in the publication process."
+    },
+    {
+      "t": 863,
+      "text": "My research paper has a lot of this information. Once it's published, I'll try to share it with you guys so you can learn more about it if you're interested."
+    },
+    {
+      "t": 870,
+      "text": "[01:14:29:13 - 01:14:39:09] Colin McNamara We're so thankful that you had to take the time to share your research with us. Vanika is one of the students that we mentor here. You're actually in high school. Can you drive yet?"
+    },
+    {
+      "t": 880,
+      "text": "[01:14:40:11 - 01:14:41:05] Venika Kakarla No, I'm going to learn. [01:14:41:05 - 01:14:53:13] Colin McNamara You're going to learn how to drive, but you really learn how to detect cancer."
+    },
+    {
+      "t": 886,
+      "text": "If you get cancer, it's going to come back and kill you. Not you, but all of you. I think your priority is in the right place. I'm really [01:14:53:13 - 01:14:56:12] (Typing)"
+    }
+  ],
+  "backfill": true
+}

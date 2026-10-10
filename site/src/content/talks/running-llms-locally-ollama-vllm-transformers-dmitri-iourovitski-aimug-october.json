@@ -1,0 +1,464 @@
+{
+  "title": "Running LLMs Locally: Ollama, vLLM & Transformers",
+  "speakers": [
+    "dmitri-iourovitski"
+  ],
+  "date": "2025-10-27",
+  "youtubeId": "rhnuQQxrBw4",
+  "duration": 1209,
+  "summary": "In this highly technical AIMUG session, Dmitri Iourovitski compares and benchmarks today’s top local inference frameworks for running large language models efficiently on personal and enterprise hardware.",
+  "topics": [
+    "Inference"
+  ],
+  "transcript": [
+    {
+      "t": 8,
+      "text": "All right. So, today we're going to talk about um LLM inference providers and those mostly being uh the options you really have to how to run LLMs locally."
+    },
+    {
+      "t": 18,
+      "text": "I'm not going to go into any of the cloud ones. Um mostly because they're just self-explanatory and plus I I really think you could get a much better deep dive from those providers. And"
+    },
+    {
+      "t": 27,
+      "text": "fundamentally, like if you're going to go call OpenAI, Anthropic or any of those guys, they figured a lot of this stuff out that I'm about to show you."
+    },
+    {
+      "t": 36,
+      "text": "Um, so first of all, let's just walk through what those providers are. Um, you know, so I'm really going to go through like the ones you have locally like Ola, Lava, CPP, um, the HuggyFace"
+    },
+    {
+      "t": 46,
+      "text": "Transformers, VLM, um, and then at the end actually give you a comparison like at a glance and some key takeaways when you actually look at them all. Um, so the first one I actually put down was O Llama and Llama"
+    },
+    {
+      "t": 58,
+      "text": "CPP. You do see the slash as O Lama uh is just a wrapper of Llama CPP. They just make it easier to download models."
+    },
+    {
+      "t": 66,
+      "text": "Um, and mostly what they're really focused on is that they're really focused on just running things locally, you know, with ease. They really focus on this GGUF format there. And I'm going"
+    },
+    {
+      "t": 77,
+      "text": "to get into in a bit what that really is. Um, and it's great for a quick demo."
+    },
+    {
+      "t": 83,
+      "text": "Um but again because it's around that GGUF format which is really designed to be uh a binary format that's easy for CPUs to run them which is the other reason why a lot of accelerators have"
+    },
+    {
+      "t": 97,
+      "text": "really picked up on them mostly being that they're really easy just to pop right into like an M1 chip. Um you also see like AMD for example has some products where they have the CPU and the"
+    },
+    {
+      "t": 108,
+      "text": "GPU together. Um so that's why you kind of see that format take off. It's just easy to run these two things. But of course, the first problem you're going to run into is outside their immediate"
+    },
+    {
+      "t": 118,
+      "text": "use case of just I'm chatting to this model, they really do not have any batch sort of processing. So if you want to just take, you know, a a big PDF, you want to send every one of those pages to"
+    },
+    {
+      "t": 130,
+      "text": "O Lama, you're going to run into a whole lot of problems. Um, and really the second one is is that it's opaque in memory usage, which means um, and I and I encourage you to try this if you have"
+    },
+    {
+      "t": 141,
+      "text": "a GPU. Uh, go to your O Lama and then you can type in O Lama PS. That's going to tell you where the models are and they're loaded, which is going to tell you how much on GPU and CPU. And as you"
+    },
+    {
+      "t": 152,
+      "text": "increase the max sequence length, you're going to see it's going to make decisions on how to move the model between the CPU and the GPU, which is not ideal. And in fact, it can be very"
+    },
+    {
+      "t": 160,
+      "text": "subtle that you're gonna suddenly find. Um, I have a GPU. Why is half my model on the CPU when I'm not expecting to hit crazy tokens. Um, which again, not ideal. That I actually should not be the"
+    },
+    {
+      "t": 174,
+      "text": "case. You should be able to tell O Lama of, hey, I want you to keep this on CPU."
+    },
+    {
+      "t": 180,
+      "text": "I want you to keep it on GPU. But that is not what they're about. Um, so again, um, I I you could try put opening a ticket. probably they're not going to actually address it. Um, and finally,"
+    },
+    {
+      "t": 191,
+      "text": "uh, not tuned for production. Again, for the reasons I said, now there are things that you can do in there, like you can set how many models can run at a time."
+    },
+    {
+      "t": 200,
+      "text": "Um, how many requests can that model serve on the service? Like, great."
+    },
+    {
+      "t": 206,
+      "text": "They're not batching though. If you actually look at serving one model and having concurrent requests, it tries to spin up like their own token limit. So you can quickly just run out of memory"
+    },
+    {
+      "t": 219,
+      "text": "real fast on a MacBook. So let's go to the next one, which is Hugging Face Transformers. Um, this one's made by Hugging Face, and it it's a really amazing inference stack in that you have"
+    },
+    {
+      "t": 231,
+      "text": "all the fine grain controls you would like out of Hugging Face Transformers."
+    },
+    {
+      "t": 235,
+      "text": "You can tell the which layer goes on which device, which accelerator gets used by which layer. Um, they literally do let you go layer by layer and decide where on the GPU will this be. You can"
+    },
+    {
+      "t": 248,
+      "text": "also partially shard layers too. You can say half of your layer will be on one GPU and the other half will be on another. Um, and that's great for that."
+    },
+    {
+      "t": 258,
+      "text": "It's also very featured. So, anytime there's some new development, Hugging Face is the first to actually have it."
+    },
+    {
+      "t": 264,
+      "text": "You know, for example, Flash Attention, that's not really something OLama has. I know they've recently pushed it for just GBD OSS, but again, Flash Attention's been out since 2023. How come none of"
+    },
+    {
+      "t": 276,
+      "text": "the models have it on Olama versus this is really trivial easy to set up on hugging face? Um, again, I'm going to just skip how to install Flash Attention, but all you need to do is"
+    },
+    {
+      "t": 286,
+      "text": "just tell your transformers model, I want to use Flash Attention, and the rest will just work just fine. So to give you an idea um running uh uh Quen 2.5VL the 7 billion with O Lama through"
+    },
+    {
+      "t": 301,
+      "text": "20 pages of images for OCR took me about 35 minutes on the 3090."
+    },
+    {
+      "t": 308,
+      "text": "This took like eight minutes with Transformers. Um even though I had much more aggressive quantization on Transformers. Transformers does have quantization. Some of those are actually"
+    },
+    {
+      "t": 318,
+      "text": "better than the GGUs. uh for example AWQ is is dynamic when it quantizes. So you will practically have full precision of your model during the quantization there. Um now some of the"
+    },
+    {
+      "t": 330,
+      "text": "drawbacks is of course I mean it's developer centric. You're really going to have to know what you're doing with your model. If you really don't understand like what are some of those"
+    },
+    {
+      "t": 339,
+      "text": "offloading or sharding parameters you can move your model in weird ways that is going to slow down your run very significantly. Um there's also the other thing is there is a steep learning curve"
+    },
+    {
+      "t": 350,
+      "text": "at the box. In fact, all of these models are actually not standard. That's something that hugging faces decided to do. It's an it's the opposite of what for example um other providers like for"
+    },
+    {
+      "t": 365,
+      "text": "example PyTorch they just want to standardize on one interface. Hub just said look you could put up a model we'll have a different backend which really means every single model like Gwen has"
+    },
+    {
+      "t": 374,
+      "text": "its own architecture on there. Llama has its own architecture on there. Bert has its own architecture and so on and so forth. There is no standard architecture on there. Um that's also another reason"
+    },
+    {
+      "t": 385,
+      "text": "of why you see hugging face transformers being ahead of the curve is day one they can just use a model where OAMA will need to go patch this. And really the disconnect we've seen there is um you"
+    },
+    {
+      "t": 399,
+      "text": "need to rewrite some chunks of OAMA to just use Gwen 3 next or use Gwen 3VL because they have the vision model as part of the layers. Now um that's"
+    },
+    {
+      "t": 411,
+      "text": "something that Hugging Face just already does. Now find like I said manual memory management that is does require some understanding but the flip side is there's a lot of developer tooling there. Um,"
+    },
+    {
+      "t": 426,
+      "text": ">> that's just a laser pointer that >> that doesn't change yours. That changes mine."
+    },
+    {
+      "t": 431,
+      "text": ">> All right. All right. Let me see. Does this go? >> Yeah. Okay. Now, the one other one I'm going to cover is VLM."
+    },
+    {
+      "t": 437,
+      "text": "Um, this is a very popular one for inference. Now, it is optimized for high throughput. And they have this concept called paged attention. All that means is so typically right now if you're"
+    },
+    {
+      "t": 449,
+      "text": "going to run an attention mechanism, you know, the attention is just going to put everything onto one device. Um, which means if your device gets overloaded, you're just going to crash in memory."
+    },
+    {
+      "t": 461,
+      "text": "Now, flash attention is trying to just control um how the matrix of the attention model is being constructed. It does some smart things. Um, but fundamentally what they now do is they"
+    },
+    {
+      "t": 474,
+      "text": "can page the attention like memory. So it's you're not going to blow up. VLM is fully production ready out the box which actually takes some of the drawbacks is it's really heavy to set this up and you"
+    },
+    {
+      "t": 486,
+      "text": "do need a bigger GPU to really make VLM worth your while. Like if you have a smaller GPU um like say like I would say under 12 gigs I I really don't think"
+    },
+    {
+      "t": 499,
+      "text": "you're going to get much value out of VLM. Like just the fact that like you're going to be stuck in the paging of your attention. That's not great. where if you have for example like a 3090 or a"
+    },
+    {
+      "t": 508,
+      "text": "4090 or uh if you're going to get a 5090 in this day and age um those models can't those I'm sorry those GPUs can actually take off the taps of VLM at home. So if you do have a lot of"
+    },
+    {
+      "t": 520,
+      "text": "processes where you're constantly running, you know, tons of inference to LLMs, it is actually worth checking out VLM. Um especially, for example, if you're saying, you know, I got to"
+    },
+    {
+      "t": 531,
+      "text": "process PDFs. I want to do a bunch of rag and I want to go use uh open web UI while I'm doing this. And that's the the thing that gets most people is you're like, hey, I'm going to go to open web"
+    },
+    {
+      "t": 541,
+      "text": "UI and I'm going to go do a llama stuff. Well, you're talking to the same old llama and either one of the processes waiting or you're seeing a lot of processes are created. There's a lot of"
+    },
+    {
+      "t": 551,
+      "text": "memory use. Um, and in fact, the problem is that your hardware can start throttling what you're doing. So, all of a sudden, you're thinking, \"Oh, I'm running all this stuff on GPU or on the"
+    },
+    {
+      "t": 560,
+      "text": "M1 chip.\" Um, you might see that the M1 chip just says, \"Look, dude, I am I am so overheated right now. I'm just going to wait for the request.\""
+    },
+    {
+      "t": 569,
+      "text": ">> Um, now again, Nvidia GPUs have heat syncs. it's not really the case there."
+    },
+    {
+      "t": 573,
+      "text": "Um, but again that this is something VLM is designed to actually overcome and be an inference platform. But like I said, um, it's is not easy to use and you're"
+    },
+    {
+      "t": 585,
+      "text": "going to be paying for it. So let's look at an overall comparison. Um, so there you can see ease of use. Essentially O Lama is the easiest to use where VLM is really hard. Uh, but performance I mean"
+    },
+    {
+      "t": 597,
+      "text": "O Lama is not actually great. Does not support batching. Uh but again it just needs a CPU. They don't make any sort of assumption about your hardware. Now this one again the hugging face one not as"
+    },
+    {
+      "t": 611,
+      "text": "easy to use. Um ex very great performance. You can you can practically get fantastic performance out of this."
+    },
+    {
+      "t": 618,
+      "text": "It does have batching. You can control how much batching you give to the model."
+    },
+    {
+      "t": 623,
+      "text": "Um you can easily batch multiple requests all at once to that model and it handles it under the hood of PyTorch."
+    },
+    {
+      "t": 631,
+      "text": "Um it is production ready. You can use hugging face transformers in production."
+    },
+    {
+      "t": 635,
+      "text": "I've certainly done that. Um and then again I mean a one GPU you kind of need a GPU. You can I want to say use um uh the Mac M1 chips and stuff like that or"
+    },
+    {
+      "t": 648,
+      "text": "whatever chip they're on now. You can use them through HuggyFace. Uh, PyTorch is what it uses under the hood, but it can't use other backends. Finally, VLM is not easy to use whatsoever. Um, in"
+    },
+    {
+      "t": 659,
+      "text": "fact, I'll tell you, installing VLM in and of itself is not easy. Just use the Docker if you want it easy to set up."
+    },
+    {
+      "t": 666,
+      "text": "Um, and again, I mean, this could take hours to fiddle. You will get max performance out of ELLM. Um, it has batching just out the box. And again, they've really put batching as a first class citizen."
+    },
+    {
+      "t": 679,
+      "text": "you want for the documentary uh the document the the documentation they have and they will kind of talk you through how do you badge the requests, how many tokens do you want to allocate per"
+    },
+    {
+      "t": 689,
+      "text": "request. They really make that very seamless to do um just out the box. Um but you kind of need a higherend GPU for that and like I said uh you're not going to get much gain if you have a tiny GPU"
+    },
+    {
+      "t": 703,
+      "text": "and VLM does not work with the MacBook."
+    },
+    {
+      "t": 707,
+      "text": "it's not designed to they're designed for GPU clusters. Um so with that essentially some key takeaways a llama and llama CP are easy for local development if you just want to get going. um hugging face transformers very"
+    },
+    {
+      "t": 721,
+      "text": "flexible very much on the cutting edge every model in hugging face that comes out you can go use them in fact I'll tell you when 3 was available the architecture couple days before the"
+    },
+    {
+      "t": 732,
+      "text": "weights dropped and that's something we see is that these frontier research labs do put out the architecture the models on hugging face before the mo the weights are even available which means"
+    },
+    {
+      "t": 744,
+      "text": "day one the weights drop that hour you can just go run the models and you don't have to figure about you know does the GGU have good and all this other stuff it just works out the box if you have a"
+    },
+    {
+      "t": 756,
+      "text": "production use case like you know you got to build inference on a bunch of GPUs well VLM is really your only game in town I know there's SG lang I've conveniently just decide to ignore it"
+    },
+    {
+      "t": 766,
+      "text": "for this talk um that is viable um and again I mean VLM does can use transformers under the hood as a backend not a bad option u but with that let me"
+    },
+    {
+      "t": 778,
+      "text": "I will open this up now to uh comments, questions, uh concerns or anything else."
+    },
+    {
+      "t": 786,
+      "text": ">> No, >> questionama >> also repeat the question please."
+    },
+    {
+      "t": 799,
+      "text": ">> Yeah, so the question was that uh llama CPP has serving capability. Have I tried that? Um, I certainly have and that's actually very true. I mean, oh, Llama is essentially just a wrapper around Llama"
+    },
+    {
+      "t": 813,
+      "text": "CPP. Um, I certainly have, but I I think at a fundamental level I I don't see how um a lot of the, for example, the tricks that VLM has or"
+    },
+    {
+      "t": 825,
+      "text": "really the stuff that hugging face transformers or how lowlevel you can work with that memory. I just don't think that their architecture and what they've optimized for allows you to just"
+    },
+    {
+      "t": 835,
+      "text": "have that level of batching. Um because if they actually had more dynamic batching that would mean that that's more CPU activity. I think that there's just design choices they've made and"
+    },
+    {
+      "t": 849,
+      "text": "that was not their primary goal. >> Yeah."
+    },
+    {
+      "t": 867,
+      "text": "Um I would say VLM is distribution friendly. You can distribute over all the GPUs you have. Hyperbase transformers can do the same. Um, and if you actually look through their"
+    },
+    {
+      "t": 880,
+      "text": "documentation, they do have a lot of documentation on how you can move multi the same model to multiple. But just remember,"
+    },
+    {
+      "t": 892,
+      "text": ">> yeah, I would say VLM is user friendly if you can install it. The reason I say it's not easy to install is just because of >> Oh, distributive friendly. Yeah. Yeah."
+    },
+    {
+      "t": 902,
+      "text": "VLM can be distributed friendly. If you want to distribute the same model and just have copies of it across um if you want to have one model that's sharted, you can do that with VLM. As like I"
+    },
+    {
+      "t": 915,
+      "text": "said, it does use transformers under the hood. Uh transformers will easily let you distribute a lot of those models and they have documentation on how you can do that. Unfortunately, you do have to"
+    },
+    {
+      "t": 925,
+      "text": "actually know something about the model, but because of the higher level interface transformers gives you, you can actually introspect the models themselves, they're they have this layer"
+    },
+    {
+      "t": 937,
+      "text": "object that you can just check the layers. Um, it's very doable. So, while you didn't even know something about the model, you don't need to know everything about that model."
+    },
+    {
+      "t": 947,
+      "text": ">> Yeah. >> So, a lot of the new I guess models are expert models."
+    },
+    {
+      "t": 954,
+      "text": "I like how that model"
+    },
+    {
+      "t": 979,
+      "text": "curious about that things like systems."
+    },
+    {
+      "t": 988,
+      "text": ">> Yeah. So I think what the question essentially is, let me make sure I understand it. So what you're saying is that well the most of these mixture of exert models they really have a much"
+    },
+    {
+      "t": 996,
+      "text": "fewer activated parameters. So can they move some of that off and put those on?"
+    },
+    {
+      "t": 1004,
+      "text": "There have been some efforts to do that."
+    },
+    {
+      "t": 1008,
+      "text": "Uh I think the biggest challenge though is the fact that you know if you are to look at which experts do I want to put on you have a lot of activity at the CUDA layer which means you're having to"
+    },
+    {
+      "t": 1020,
+      "text": "move data between CPU and GPU. So in theory, Llama CPP could do it more efficiently, but then again, there's the whole problem then of"
+    },
+    {
+      "t": 1033,
+      "text": "how are you going to move those layers and if you don't know that much about the model and that's the problem with the GG format, they don't want to know about what hardware you're running. But"
+    },
+    {
+      "t": 1042,
+      "text": "the problem is that if you know that it's on CUDA, you can make so many optimizations for that. Um, I would say that that's probably an area that Nvidia is most active in is trying to figure"
+    },
+    {
+      "t": 1052,
+      "text": "out, you know, how can they do that at the driver level and make it just map memories that are easy to swap. Uh AMD has done a lot of work on that because they have the CPU and the GPU and"
+    },
+    {
+      "t": 1064,
+      "text": "they're trying to have this hybrid architecture that they're there for. Um, unfortunately are just way too new. I mean, they've really been only out for a couple of months versus dense models"
+    },
+    {
+      "t": 1074,
+      "text": "have been there for years on end, which is kind of why you've seen that the quantization behind GGF has gotten better and better now at this point because I mean it it is effectively a"
+    },
+    {
+      "t": 1087,
+      "text": "almost a two-year-old format now at this point. Um, I mean, I know stuff's brand new. It is two years old now where mixture of exports have really only just come about. So, that that's that's kind"
+    },
+    {
+      "t": 1098,
+      "text": "of what you're seeing there. there's not a whole lot of mature support."
+    },
+    {
+      "t": 1107,
+      "text": ">> Yeah. >> Yeah. I mean, in again in theory, they do because of that. In reality, you know, memory management, all that stuff. I that that's where it's going to come in at the developer level."
+    },
+    {
+      "t": 1122,
+      "text": ">> Yeah."
+    },
+    {
+      "t": 1129,
+      "text": "How much VRAM? >> It really depends on the Lab. Do you have any in mind?"
+    },
+    {
+      "t": 1152,
+      "text": "Yeah. So, I think with those two, you could probably just run a 70 billion. You just distribute that across the two."
+    },
+    {
+      "t": 1157,
+      "text": "Um, you might be able to get away with running the biggest Gwen 3 at 225 uh billion parameters. You're probably going to need quantization though. Um,"
+    },
+    {
+      "t": 1170,
+      "text": "again, those are all doable. So you could definitely run with any of these frameworks on them. Um, again, I don't really know how well does old Lama or Llama CPP distribute across multiple"
+    },
+    {
+      "t": 1182,
+      "text": "machines. That's really where VLM and and Hugging Face really let you just take care of that in in ways that I I that are just designed for you to just saying, want to put these layers here. I"
+    },
+    {
+      "t": 1194,
+      "text": "want to put those layers over there. >> Awesome. Awesome. Well, thank you so much,"
+    }
+  ],
+  "backfill": true
+}

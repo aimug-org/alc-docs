@@ -1,0 +1,1076 @@
+{
+  "title": "Edge Computing with LangChain, Gradio, and Cloudflare",
+  "speakers": [
+    "karim-lalani"
+  ],
+  "date": "2024-12-23",
+  "youtubeId": "47KiKEgsrKI",
+  "duration": 3431,
+  "summary": "Explore the fascinating world of AI and user interface design with Karim Lalani at the Austin LangChain December Meeting! Karim, a seasoned software engineer and contractor for the state of Texas, takes us through a hands-on lab featuring Gradio and Cloudflare Workers AI.",
+  "topics": [
+    "Inference"
+  ],
+  "transcript": [
+    {
+      "t": 0,
+      "text": "[Music] welcome to the Austin Lang chain AI mug event tonight we're showcasing highlights from our December event here in Austin featuring Kareem Lani and his"
+    },
+    {
+      "t": 14,
+      "text": "groundbreaking lab this lab brings together Lang chain gradio and Cloud flare all seamlessly run from a Jupiter notebook get ready for an inspiring look at how these tools are shaping AI"
+    },
+    {
+      "t": 24,
+      "text": "workflows don't forget to scan the QR code or visit aim.org to join our Meetup our Discord and subscribe to our YouTube channel for future updates let's dive"
+    },
+    {
+      "t": 40,
+      "text": "in how is everybody do very awesome all right my name is Kim Lani I am a regular with this group uh I I've been with"
+    },
+    {
+      "t": 54,
+      "text": "Austin Lang chain since session one yeah and uh um Colin got me hooked on Lang chain he he shared his U you know the story that"
+    },
+    {
+      "t": 66,
+      "text": "he shared today about uh him uh you know Lang chain sort of saving him from an SEC violation and you know um his his journey through get you onboarding onto"
+    },
+    {
+      "t": 80,
+      "text": "the Lang chain you know and and following it through Lang chain uh how long how many people have been following Lang chain since the early days it's it's a whole different Beast"
+    },
+    {
+      "t": 93,
+      "text": "now it used to be practically unusable Beyond some you know uh bespoke stuff that they had put out anything any new integration would come out it would be a different like rag agent would be uh"
+    },
+    {
+      "t": 107,
+      "text": "would be a different thing uh if you wanted to do something you know um Tex Generation stuff would be different so um we really seeing it evolve into some you know uh a collection of from a"
+    },
+    {
+      "t": 119,
+      "text": "collection of this spokes um specifically crafted agent you know uh modules to a full-fledged framework that is still growing uh I was talking"
+    },
+    {
+      "t": 132,
+      "text": "to a couple of people here um and I need I was I wanted to I was working on a script uh to extract some information from some"
+    },
+    {
+      "t": 144,
+      "text": "photos and I needed to look at the documentation to figure out how to present the image as part of the prompt and it's whole set of new stuff"
+    },
+    {
+      "t": 160,
+      "text": "that's there that I didn't see last time so the ecosystem is constantly evolving um what you saw uh earlier with the uh tooling uh blank Chain's been investing"
+    },
+    {
+      "t": 173,
+      "text": "heavily on improving their tools um it used to be you know everything was okay here are a bunch of of notebooks and we'll show you how it works and you know figure it out to now you have an IDE you"
+    },
+    {
+      "t": 188,
+      "text": "have a um an introspection service for your uh for agents in lsmith um and uh a hosting uh solution in langra"
+    },
+    {
+      "t": 201,
+      "text": "Cloud so okay so that's just you know me repeating some of the stuff that you've already uh heard before but um desktop yeah let's let's stay here so uh I'm"
+    },
+    {
+      "t": 215,
+      "text": "Kimani I'm a software you sharing on on Google my question thank you for that that one yeah let's do entire screen"
+    },
+    {
+      "t": 230,
+      "text": "uh go than sir so um my name is Kim Lani um when I'm not hanging out out with um colins"
+    },
+    {
+      "t": 242,
+      "text": "screw uh I am a software engineer uh a contractor for the State of Texas I work primarily in net don't boo me yet um but um besides that you know um I've been"
+    },
+    {
+      "t": 256,
+      "text": "sort of following Along on this Lang chain Journey uh since almost the very beginning I have um contributed to Lang Chain's documentation in early days when they were trying to put in an effort to"
+    },
+    {
+      "t": 270,
+      "text": "sort of clean up some documentation I have made code commits to the community and the experimental packages uh I did some work on you know um on the open"
+    },
+    {
+      "t": 282,
+      "text": "source side of things with um enhancing the now obsolete L AMA functions package when tool calling or tool use was becoming you know um it was be becoming"
+    },
+    {
+      "t": 296,
+      "text": "obvious as that is the way to truly build application with to that use language models at their core and the only candidates that only way you could"
+    },
+    {
+      "t": 308,
+      "text": "do use tool use was either go with open ai go with anthropic or maybe with the GRS um llama fine tune but nothing on the open source side of things um so"
+    },
+    {
+      "t": 321,
+      "text": "somebody had done some initial work onama functions where they had implemented something similar to what was initially function calling with open AI which was soon deprecated so that"
+    },
+    {
+      "t": 334,
+      "text": "that package was not maintained um so I did some work to sort of Bring It Back uh up to speed with the newer tool calling stuff um I released a couple"
+    },
+    {
+      "t": 346,
+      "text": "packages uh one with on on Python and on uh one on typescript uh to allow you to use tool calling with any uh inference service um that didn't yet support now"
+    },
+    {
+      "t": 360,
+      "text": "fortunately now so I don't maintain that package anymore and the reason for that is I don't have to almost all providers now support uh tool tool calling natively tool use natively so and that"
+    },
+    {
+      "t": 373,
+      "text": "was always going to be the um you know it was always going to be a stop Gap solution I I wanted to use tool use I didn't want to go to open AI I didn't want my data to go to anthropic I wanted"
+    },
+    {
+      "t": 383,
+      "text": "it to stay in my ecosystem and there was no other way to do itama hadn't integrated that in yet so that was U you know essentially a solution you know a problem that I was solving for myself"
+    },
+    {
+      "t": 397,
+      "text": "um I've participated in nvidia's hackathon langin hackathon um I've I've been giving presentations uh whenever uh I can uh for this group and I'm always"
+    },
+    {
+      "t": 411,
+      "text": "happy to sort of brainstorm uh you know with uh our other uh fellow members on Discord uh when whenever uh there's an opportunity what are we going to do today"
+    },
+    {
+      "t": 424,
+      "text": "so who here is familiar with Cloud flare I hope everybody so uh who's so Cloud flare started out as a"
+    },
+    {
+      "t": 436,
+      "text": "CDN service that evolved into a network infrastructure you know sort of U company and now they also are uh a competent inference service what I mean"
+    },
+    {
+      "t": 449,
+      "text": "by that is you can actually just like you can connect make an API request to open AI or anthropic or um your llms um you can also make API requests"
+    },
+    {
+      "t": 462,
+      "text": "to Cloud flare through the workers AI where they have some uh models that they have hosted uh some proprietary some open source and you can make llm you can"
+    },
+    {
+      "t": 475,
+      "text": "use their inference service um advantage is cloud flares infrastructure is quite well established which means that that"
+    },
+    {
+      "t": 487,
+      "text": "gets you one step closer to llms On The Edge and that's where the uh the title of today's um presentation was um I've been looking into so so that's the cloud flare side of things um we in"
+    },
+    {
+      "t": 502,
+      "text": "our initial um Labs we looked at uh we had looked at streamlit as a user interface Library for python something that was quite popular with um uh the uh data science and uh AIML side of things"
+    },
+    {
+      "t": 518,
+      "text": "um uh who here is familiar with streamlet very good most most of you um who uh who's familiar with"
+    },
+    {
+      "t": 530,
+      "text": "gradio slightly a couple less people but um gradio is another user interface uh library for pyth on developed by or at least maintained by the hugging face uh"
+    },
+    {
+      "t": 544,
+      "text": "Team um and it has some interesting features I you know I I looked through the workflow of how how you um build interfaces and how you launch and they have some additional niceties that come"
+    },
+    {
+      "t": 556,
+      "text": "with it that I um uh that I'll hopefully get a chance to share with you today and um um so this is a lab you can follow along if you have a what you will need"
+    },
+    {
+      "t": 570,
+      "text": "is access to Google's scab uh you will also if you want to follow the lab um with the cloud flare component you will need um your Cloud flare account ID and"
+    },
+    {
+      "t": 584,
+      "text": "an off token with uh worker uh with workers AI permissions um with uh show of hands who all here will be following along"
+    },
+    {
+      "t": 603,
+      "text": "perfect uh on the computer I mean in the so how do you get how do you access the notebooks you you know we have all of our notebooks all of the code and everything that we do with Austin Lang"
+    },
+    {
+      "t": 616,
+      "text": "chain um published in a public repo um AI mug hyen org uh the repository is Austin _ L chain in there we'll go under"
+    },
+    {
+      "t": 628,
+      "text": "labs Lang chain 111 and there's a couple notebooks here and a readme file with cloudflare setup so those who are new who are familiar with cloudflare would like to set up um"
+    },
+    {
+      "t": 643,
+      "text": "you you know this is how you would get your account ID you basically just go to your log to your cloudfare account and uh you can uh find your account ID there uh you will need to save that into your"
+    },
+    {
+      "t": 655,
+      "text": "Cloud flarecore accountor ID environment variable in collab to create the API key in fact Let me let me just see if I can get walk"
+    },
+    {
+      "t": 674,
+      "text": "you okay so I am logged in I'll log into the right account um easiest way to spot your account ID is when you're logged in what you see here up top that's your account ID that's the easiest way to"
+    },
+    {
+      "t": 688,
+      "text": "find your account Now to create an API key you would scroll down to manage your account account API tokens create token under the templates"
+    },
+    {
+      "t": 700,
+      "text": "worker AI use templates don't change anything you can add a start and end date I would advise don't worry about that just yet you can always delete this token after the exercise when you do uh"
+    },
+    {
+      "t": 712,
+      "text": "uh you know then you do uh view summary create token this here is your uh a token with access to workers AI now that everybody has seen that"
+    },
+    {
+      "t": 725,
+      "text": "token I'm going to go back here burn it as quickly as possible yes and let's"
+    },
+    {
+      "t": 738,
+      "text": "see actually it doesn't reveal the whole token so I think I'm okay okay um I I don't want to delete the one that is set up in my collab so I I'll come back and I'll delete it later uh but yeah so"
+    },
+    {
+      "t": 749,
+      "text": "that's how you would set up that those are the two pieces of information you need from your um cloud account now you will ask you will say that well if it's coming from my collab and if I'm making"
+    },
+    {
+      "t": 759,
+      "text": "API calls won't I be charged for those things well I have good news for you collab is currently for most of their beta models and some of their non-ba"
+    },
+    {
+      "t": 771,
+      "text": "models are not billing you anything for a set number of requests and that quoda is quite generous so if you happen to go through the exercise today a few different times you"
+    },
+    {
+      "t": 785,
+      "text": "should still not be built by uh Cloud flare so this is a pretty safe exercise as of today now few months down the road they might jack up the prices or you"
+    },
+    {
+      "t": 797,
+      "text": "know just uh be careful about that once you have that now for those of you who don't have a cloud flare account or you know you don't have enough you know we don't have enough time for you"
+    },
+    {
+      "t": 808,
+      "text": "to go setep one up there is a um an alternate notebook so the one that we're going to use today with cloudfare is called spoiler wish the one that we are that we uh we can use as an alternate"
+    },
+    {
+      "t": 821,
+      "text": "that doesn't have a dependency on cloud flare is called intro to gradio let me open both of those okay who here is familiar with the"
+    },
+    {
+      "t": 833,
+      "text": "game spoiler wish okay spoilerish is a game that I think originated on the forums internet forums in the mid"
+    },
+    {
+      "t": 845,
+      "text": "2000s where on a message board you would uh you know you would make a wish and you would you know basically you say okay here's my wish um and somebody else would say okay"
+    },
+    {
+      "t": 858,
+      "text": "your wish is granted but here's a caviar and basically they're spoiling your wish and then they would have to make their own wish and then somebody else would come in and then say okay your wish is"
+    },
+    {
+      "t": 868,
+      "text": "granted but here's here's another caveat so uh an example here is you know I wish for a million dollars well granted but you your dollars are in Zimbabwe's def currency so which is equivalent to $15"
+    },
+    {
+      "t": 881,
+      "text": "so enjoy your Happy Meal um on the so this is the intro to gradio lab so on top of both of those notebooks"
+    },
+    {
+      "t": 894,
+      "text": "whichever one you choose to follow I will I will walk walk through the spoiler wish one but you you will see a link open in collab once you click that it'll take you log into you uh log you"
+    },
+    {
+      "t": 904,
+      "text": "into your um Google collab account the nice thing is we don't need a GPU for this one the reason for that is cloudflare is putting the bill for gpus this time so you don't need a Pro"
+    },
+    {
+      "t": 918,
+      "text": "Plan um just connect to that make sure that you add your keys uh onto your uh so we have the two keys that we need uh cloud _ account _"
+    },
+    {
+      "t": 930,
+      "text": "ID cloudfl _ API _ token uh let me activate both of those keys and then we'll just follow along first thing we'll do is we'll set"
+    },
+    {
+      "t": 942,
+      "text": "up the um spoiler wish game in Lang chain simple prompt template um uh that uh pipes the prompt to a llm hosted on cloud flare and Returns the"
+    },
+    {
+      "t": 955,
+      "text": "response uh we install the packages for Lang chain Lang chain code Lang chain Community"
+    },
+    {
+      "t": 968,
+      "text": "yes so on the left hand do you have the keys already okay so on the left hand side you see um an icon for the key you you click that and then you should be able to add new secret the names of the"
+    },
+    {
+      "t": 980,
+      "text": "secret are listed uh okay they're not list okay they're listed here so you can copy this link uh this um Cloud Flore accountor ID paste"
+    },
+    {
+      "t": 994,
+      "text": "it and the next one is the API token those are the two ones that you need you don't you know this one is not uh so the nice thing about collab is you can set up your secrets in one place and then"
+    },
+    {
+      "t": 1005,
+      "text": "you can use them across all your notebooks so if you're doing some other stuff with um Cloud flare uh you just have to you only need to reference those environment variables you don't need to"
+    },
+    {
+      "t": 1016,
+      "text": "worry about um reading Keys again okay so first thing we just again we we're building the small uh not not really an agent a chain uh so uh install"
+    },
+    {
+      "t": 1030,
+      "text": "the Lang chain core and Lang chain Community packages um we'll do our Imports and we'll set up the uh we'll get the secrets that you just added"
+    },
+    {
+      "t": 1044,
+      "text": "we'll get them into our environment so far so good here this uh next cell is just to verify that your keys are actually set up correctly so um I'm"
+    },
+    {
+      "t": 1059,
+      "text": "making a an API request directly to cloudflare not going through Lang chain because we want to make sure that our keys are set up properly so we're making a s a cur request to the uh llama 3.1 70"
+    },
+    {
+      "t": 1073,
+      "text": "billion instruct model hosted on cloud flare uh with um with a message and if it is if everything is set up correctly then we should get a llm response and looks like"
+    },
+    {
+      "t": 1088,
+      "text": "in my case at least I got a response that uh that was not an error response next we'll goad and we'll create our prom template this is something you know if you're using IF youve worked with Lang chain you're"
+    },
+    {
+      "t": 1101,
+      "text": "familiar with um you're you're playing a game of spoiler wish user will make a wish this one I've kept it to keep it playful there's variations of the game spoiler"
+    },
+    {
+      "t": 1114,
+      "text": "wish where um people gr the wish but the outcomes are quite Grim question Kareem uh in this notebook can you change the prompt inside of there absolutely okay yes"
+    },
+    {
+      "t": 1128,
+      "text": "so the The Notebook you're seeing the promt that um comes with a notebook you feel free to adjust this you know after you have verified that it works mhm um"
+    },
+    {
+      "t": 1140,
+      "text": "on your second run yeah Third Run go back and and Fiddle around with it change you know maybe you want to change it from spoiler wish to something completely different yeah so this is"
+    },
+    {
+      "t": 1149,
+      "text": "where you would go you you would change your stuff um right now it only takes one parameter called wish you could adjust it to take multiple parameters uh you know just follow the the Syntax for"
+    },
+    {
+      "t": 1162,
+      "text": "that uh this one's using the F string syntax um and so yeah so this is the prompt I've kept it playful I've seen uh for example uh variations where they"
+    },
+    {
+      "t": 1174,
+      "text": "would say you know I want a million dollars granted but you don't have any family left anymore like I I don't want my AI agent to be that dark and G so I said let's keep it playful you know um"
+    },
+    {
+      "t": 1186,
+      "text": "it it'll come after us but I don't want my agent to come after us yeah so okay so we'll initialize so now now that we've verified that cloud flare is responding our our tokens and our"
+    },
+    {
+      "t": 1197,
+      "text": "account ID set up correctly we have our prompt set up now let's initialize the language model itself um that is hosted on cloudflare so we we're using the chat"
+    },
+    {
+      "t": 1209,
+      "text": "Cloud flare worker AI um uh class uh we passing the account ID the API token and I've defaulted the model name here where do you get this"
+    },
+    {
+      "t": 1222,
+      "text": "model name from again so there's if you look at the instructions up top there's some instructions on how you can access other models if I come here on that link uh worker AI"
+    },
+    {
+      "t": 1235,
+      "text": "models if I look at uh text generation these are all the models that you can use wow everything that has beta Cloud flare is not going to charge you even if you"
+    },
+    {
+      "t": 1247,
+      "text": "go past your um qua nice everything that is so and so text generation looks like pretty much everything with the exception of a handful are in beta MH um we are using 3.17 billion I believe"
+    },
+    {
+      "t": 1262,
+      "text": "which is beta so you won't be charged for that one there's 3.3 now already"
+    },
+    {
+      "t": 1274,
+      "text": "here yep it's not better but you can use it you should still be you should still have some allowance uh for uh the free quar"
+    },
+    {
+      "t": 1286,
+      "text": "wow so how how do you get the name of the uh the the model name String just click on any of the models that you're going to use and then you'll see this at the rate CF this is the name of the"
+    },
+    {
+      "t": 1299,
+      "text": "model that you'll Supply sometimes it's adate CF sometimes it it's HF um so be be sure that you're picking up the full name and not uhu Auto you're trying to"
+    },
+    {
+      "t": 1311,
+      "text": "you know um type it in yourself so okay so we initializing the cloudflare workers AI chat model passing in the model name uh token and account"
+    },
+    {
+      "t": 1326,
+      "text": "ID we have a test wish here I want I wish for a million dollars and we're creating a chain all this chain is doing is it's taking a prompt it's piping it to the model that we just initialized up here"
+    },
+    {
+      "t": 1339,
+      "text": "so I'm going to run that next it's time to test the uh chain with the uh with the wish I wish for a million"
+    },
+    {
+      "t": 1356,
+      "text": "dollars okay so it's giving me a response but it's giving me in a in a sort of un unusable format you know I I can't do any much with this format so"
+    },
+    {
+      "t": 1368,
+      "text": "we'll need to do some cleanup now this will vary from model to model what I'm doing here but for this specific instance um it looks Json but not quite this is actually a python uh dictionary"
+    },
+    {
+      "t": 1382,
+      "text": "being returned uh you can tell by you know single quotes around the keys and uh the true keyword with a capitalized T so uh we'll use the a literally Val uh"
+    },
+    {
+      "t": 1395,
+      "text": "to execute the content to get the dictionary back so so now this is the whole dictionary that came back again use this um at your discretion this is running arbitrary"
+    },
+    {
+      "t": 1409,
+      "text": "python code in this case it is somewhat safe but you want to be careful before you expose your data or or running on your machine and you're running arbitrary code coming from somewhere"
+    },
+    {
+      "t": 1419,
+      "text": "else um you want to be careful with something like that so what I've done next is created uh an output parser who knows what an output parser is in Lan chin awesome couple people here familiar"
+    },
+    {
+      "t": 1433,
+      "text": "with it output parsers is basically um the idea is that you get some form of uh response from an um llm and you want to transform that uh to"
+    },
+    {
+      "t": 1446,
+      "text": "maybe a different format you don't you uh you know it could be programmatically it could be some other way in this case I'm looking at the python dictionary I have the result key result has uh"
+    },
+    {
+      "t": 1457,
+      "text": "another uh object inside it uh with the key of response this is really what I'm interested in nothing else I do want to make you so that's what I'm doing here I'm basically just creating a simple uh"
+    },
+    {
+      "t": 1470,
+      "text": "pantic uh class to extract that information now let's uh create update a chain and attach that uh response to it uh uh output parser to it and now let's"
+    },
+    {
+      "t": 1484,
+      "text": "give it another try so okay and now I'm I'm getting something that I can extract information out easily so okay your h"
+    },
+    {
+      "t": 1499,
+      "text": "te problem there's a custom made high security VA only can be opened on leapers uh that's is actually a giant pinara shaped like a giant this is ninja hamsters"
+    },
+    {
+      "t": 1514,
+      "text": "man so okay so things seem to be working so now we have our chain we have the quote unquote model for our um spoiler wish"
+    },
+    {
+      "t": 1527,
+      "text": "game mhm now let's put let's put a user interface in front of it m so we'll we'll install the gradio package we'll do our first"
+    },
+    {
+      "t": 1540,
+      "text": "um customary import gradio as gr so we don't have to keep typing gradio do gradio everywhere I'm going to start I'm just going to give it a function I'm basically encapsulating my chain inside"
+    },
+    {
+      "t": 1553,
+      "text": "a python function which takes in an input in the form of a wish and gives me the output which is the response from the language model that way um it almost serves like you know acts like um an"
+    },
+    {
+      "t": 1570,
+      "text": "interface okay um radio is the way it works is you define your inputs you define your outputs and you define a call"
+    },
+    {
+      "t": 1583,
+      "text": "back uh gradio will build an interface it'll give you the controls for your inputs when you click the submit button it'll pass those inputs to the call back"
+    },
+    {
+      "t": 1595,
+      "text": "and the and then you and it basically Maps the responses to the output so first thing I'll do is uh so this is simp a simple gradio app is a an interface our function is a callback the"
+    },
+    {
+      "t": 1608,
+      "text": "spoil wish one it takes one input one output which means my inputs just one item there one item the output uh I'm giving it uh both the value of text and then I'll do app"
+    },
+    {
+      "t": 1622,
+      "text": "launch the nice thing about radio in in is that jupyter notebooks will actually render gradio within uh in line with um with streamlit one of the challenges"
+    },
+    {
+      "t": 1635,
+      "text": "that we would run into is we would run the streamlit app in uh backgrounded inside the notebook and then we would have to create a tunnel to then uh to get a publicly"
+    },
+    {
+      "t": 1650,
+      "text": "available URL to then connect back into it with gradio you actually have something that is just inline so let's look at our code again inputs is"
+    },
+    {
+      "t": 1663,
+      "text": "text um it's saying wish and then output is out where is it getting this wish from I didn't specify wish here I mean I have a call back called spoil wish but it's it's not spoil wish this is"
+    },
+    {
+      "t": 1675,
+      "text": "actually coming from the definition if you look at the spoil wish function definition call back definition the name of the argument is wish so it's doing a little bit of that for us to keep it a"
+    },
+    {
+      "t": 1685,
+      "text": "little bit intuitive okay um so let's say um I wish for a first sports car I have to keep it uh let's see I hit"
+    },
+    {
+      "t": 1703,
+      "text": "submit it's it's giving me a spinner because it's it's uh when it as for the duration it takes for the call back to process and return the output it's just giving me a spinner letting me"
+    },
+    {
+      "t": 1714,
+      "text": "know that hey I'm working on this okay dream has come true I'm thrilled to Grant you wish you now own a slick brand"
+    },
+    {
+      "t": 1726,
+      "text": "new cherry red super car that can go from 0 to 160 in just three seconds nice however there's a tiny problem the car is sentient oh great and it's a total diva"
+    },
+    {
+      "t": 1739,
+      "text": "Lola and has a very strong personality Lola demands that you never drive faster than 25 miles per hour and only on Sundays during leap years any attempts to disobey these rules will result in"
+    },
+    {
+      "t": 1752,
+      "text": "Lola transforming into a vesa okay with an annoying loud horn that plays who let the dogs out on repeat congratulations to your proud owner of a superar with a bad"
+    },
+    {
+      "t": 1765,
+      "text": "attitude okay so what did we do here we we create we took a model we we took a model it could be a lang chain uh agent it could be a machine learning pipeline"
+    },
+    {
+      "t": 1777,
+      "text": "it could be an API endpoint to something else that takes in an input returns output it takes in some number of inputs returns uh some number of outputs and"
+    },
+    {
+      "t": 1789,
+      "text": "we provided you know we were able to create an interface with how many lines of code really if you look at just the gradio side of things one for the import three for the call back 1 2 3 4 five"
+    },
+    {
+      "t": 1805,
+      "text": "six 10 lines yeah and because I decided to split this into multiple linesh and I have an interface that renders in that inside the"
+    },
+    {
+      "t": 1820,
+      "text": "notebook and you also get one more thing so because we I'm running this in gradio it's actually doing something um by default it's actually adding a a special parameter uh called share equals true"
+    },
+    {
+      "t": 1832,
+      "text": "what that does is it's giving me a public URL who here is on uh Discord right now I am okay I'm going to paste this link in Discord under let's say off"
+    },
+    {
+      "t": 1852,
+      "text": "topics oh I got your app I didn't have to do anything so basically gradio is using uh tunneling to give me a public link this"
+    },
+    {
+      "t": 1865,
+      "text": "link is going to be active for 72 hours so if I leave this app running so I could be doing this on my computer on my home computer I could leave this running and I could have anybody who I need"
+    },
+    {
+      "t": 1873,
+      "text": "feedback from test it out give me feedback I make adjustments give them another link test it out feedback without going through any kind of infrastructure it's using my AP yes it's"
+    },
+    {
+      "t": 1885,
+      "text": "actually running in as collab instance right now yeah so that's actually the same instance that I just tested this year okay so let's let's try to make some adjustments so you know it it you know it took the"
+    },
+    {
+      "t": 1900,
+      "text": "name of the variable and it used it here that's nice so I know what I have it gave a generic name output to the field that's okay I mean what maybe I need to I need to make it a little bit more uh"
+    },
+    {
+      "t": 1912,
+      "text": "uh sort of intuitive um say you want to give labels easiest to do that is so we were using a Shand notation here we use text text means it's a text box without telling"
+    },
+    {
+      "t": 1925,
+      "text": "anything else it's saying okay I'll give you a text box I'll try to figure out the names of the inputs and outputs but we say no I want a little bit more control over that so we can change the"
+    },
+    {
+      "t": 1933,
+      "text": "code and we can say gr. textbox label with a wish with a capital W and I want to default a value I want a million dollars in there I don't want to keep typing it every single time I'm testing"
+    },
+    {
+      "t": 1946,
+      "text": "this so I'll give I have a default value outputs I want to give it a label of response instead of output and I want I want it to be a text area with three"
+    },
+    {
+      "t": 1959,
+      "text": "lines okay if I do that now I have the same app but with a little bit of improvement on the U"
+    },
+    {
+      "t": 1971,
+      "text": "ux it works the same way okay now left side inputs right side outputs"
+    },
+    {
+      "t": 1984,
+      "text": "great but maybe you don't want that layout maybe you want a custom layout you want um who here is familiar with uh who knows any applications that would returned"
+    },
+    {
+      "t": 1996,
+      "text": "gradio automatic 1111 anybody familiar with that you see the the uh how complex that application is that's bu radio that's radio huh"
+    },
+    {
+      "t": 2008,
+      "text": "automatic 1111 is built on gradio Wow which ties in a bunch of back in a bunch of backend services and simplifies them behind one web interface yeah and so if you think about all the interactivity"
+    },
+    {
+      "t": 2020,
+      "text": "that's going on in there yeah that's all buil so but that's not a left side input right side output interface right yeah so how do you customize the layout well now you get into the slightly Advanced"
+    },
+    {
+      "t": 2031,
+      "text": "section so it's called Uh blocks uh with blocks you have access to some more controls one one of the ones that I'm showing here is CSS when I want to show I want to do some custom"
+    },
+    {
+      "t": 2043,
+      "text": "CSS um and then I also want to show some HTML so there's a gr. HTML there's a markup so if you don't want to do Straight Out HTML you're comfortable with markup markdown sorry not markup"
+    },
+    {
+      "t": 2057,
+      "text": "you can do gr markdown and you can use regular markdown syntax in there and then I'm creating a row uh with a single column"
+    },
+    {
+      "t": 2069,
+      "text": "and I'm creating a a variable for capturing the wish which is a text area uh another for uh response it's also text area and then I'm creating a"
+    },
+    {
+      "t": 2082,
+      "text": "button called submit uh and the buttons text is going to be called submit text I'm adding a custom class to it and that class is coming from up top here custom class that I gave it okay then I'm"
+    },
+    {
+      "t": 2094,
+      "text": "creating I'm uh create uh tying the event the submit event on this uh the uh The Click event on the submit button now this will look familiar because this is the the interface format that we had"
+    },
+    {
+      "t": 2105,
+      "text": "earlier we have inputs we have outputs we have call backs inputs input is this wish control output is this response control and we do app launch so if I run this"
+    },
+    {
+      "t": 2119,
+      "text": "guy now I have the same application but in a slightly different um form factor and I can say spoiler"
+    },
+    {
+      "t": 2138,
+      "text": "wish yes what would you recommend"
+    },
+    {
+      "t": 2150,
+      "text": "depends so they're both great at what they do it depends on what you know uh what you're most comfortable with I've come to like gradio um I think"
+    },
+    {
+      "t": 2163,
+      "text": "um it so what I've seen what I've seen the reasonings that I've seen so streamlit is very flow driven because streamlit everything executes as a script top to bottom"
+    },
+    {
+      "t": 2176,
+      "text": "gradio is more pipeline oriented you have inputs call backs outputs that flows into further call backs flows into further call backs so depends on the style that you're most comfortable with"
+    },
+    {
+      "t": 2189,
+      "text": "they're both easy to work with so gradio has backing of hugging face so and and stream late is a quite"
+    },
+    {
+      "t": 2201,
+      "text": "popular project itself okay so I'm going to now now we'll talk about a little bit we'll add a little bit more complexity to the uh UI I've um and this okay so what are we"
+    },
+    {
+      "t": 2217,
+      "text": "doing here we're doing the same CSS we have the top section is same this looks pretty similar but I've added a reset button this time a new button and that says try again um now instead of doing"
+    },
+    {
+      "t": 2233,
+      "text": "submit button. click I'm using uh explicit uh triggers so I'm saying gr on and I'm saying okay I'm going to now on a trigger I wanted to do something but then I want to chain that so there's"
+    },
+    {
+      "t": 2246,
+      "text": "this on then then sort of pipeline that I can create so what's happening here is first thing we'll go through the will will The Click event is going to there's"
+    },
+    {
+      "t": 2258,
+      "text": "no inputs here but there's three outputs do you notice I no longer have a single value I can pass an array a list of uh components so I have three components as outputs uh for call back instead of"
+    },
+    {
+      "t": 2271,
+      "text": "creating a uh a python function I just created a um a lambra expression what now the word it works Lambda works the same way it needs to have account for the inputs and it needs to return"
+    },
+    {
+      "t": 2283,
+      "text": "outputs in this case there is there are no inputs so it doesn't take any arguments but outputs need to match this sequence first output needs to be for wish second needs to be for response"
+    },
+    {
+      "t": 2294,
+      "text": "third needs to be for submit why okay what am I trying to do here well I'm actually trying I'm changing the behavior of the controls up until now we were sending we were just"
+    },
+    {
+      "t": 2306,
+      "text": "dealing with the content inside the controls but now I want to change the behavior I want to disable the when I so basically what I'm trying what I'm doing here is when I click submit I want to"
+    },
+    {
+      "t": 2318,
+      "text": "disable the wish button uh the wish text box make the response box visible and I want to make the submit"
+    },
+    {
+      "t": 2330,
+      "text": "button um invisible why am I making the response visible if you notice here I didn't talk about ear earlier I actually gave it a default property of false so when this form will first load you'll not see a"
+    },
+    {
+      "t": 2343,
+      "text": "response box you'll just see the uh input control so I've created four controls here out of which only two are visible the wish text area and the submit text area what I'm saying what"
+    },
+    {
+      "t": 2355,
+      "text": "I'm doing now is when you click the button deactivate the input hide the submit button and show the uh try again button next thing"
+    },
+    {
+      "t": 2368,
+      "text": "uh once you're done with that I'm not done because I haven't actually made the request next thing I'm say okay let's go ahead and call our call back spoil wish that we created earlier that will take"
+    },
+    {
+      "t": 2378,
+      "text": "the input of wish and the uh the output will be response so here I'm not changing the properties I'm just using this like we did before uh whatever is the content inside wish that's the input"
+    },
+    {
+      "t": 2389,
+      "text": "and whatever you got get uh what's returned from spoil wish needs to be applied to response but I'm not done yet I want to then go ahead and I want to change the behavior of the reset button"
+    },
+    {
+      "t": 2403,
+      "text": "I want to make it visible now okay so that's the this is what's going to happen this pipeline is going to execute on submit button click then I have the reset button click"
+    },
+    {
+      "t": 2416,
+      "text": "which basically um resets it back to the original state so it'll uh it'll hide the response it'll hide the reset button it'll activate the wish input so"
+    },
+    {
+      "t": 2428,
+      "text": "I can type again and it'll make the submit button visible okay you ready to uh see this in action yes okay so same application I only see"
+    },
+    {
+      "t": 2442,
+      "text": "two controls like I said so when I press the spoil wish button you see the interface change a little bit there's no button up down here because it's still processing it's still going through the"
+    },
+    {
+      "t": 2456,
+      "text": "uh yeah so now that I have response and I have the try again if I click try again it'll reset the interface back to the previous state okay one more thing uh there's something"
+    },
+    {
+      "t": 2470,
+      "text": "called the examples helper where would that come in handy when you're building interfaces like you saw when I'm building through this I could default a value in the input but maybe I want to try different values I"
+    },
+    {
+      "t": 2482,
+      "text": "don't want to keep going and typing in stuff so um examples help us sort of does so it's it's the same code I've just added this bit of code in here what I'm doing is I'm saying okay create an"
+    },
+    {
+      "t": 2495,
+      "text": "example uh component and these are my examples I wish for a million dollars I wish for a new car new house new job these are inputs for the wish"
+    },
+    {
+      "t": 2507,
+      "text": "control okay and then I'll label it try these everything else is exactly the same as we did before"
+    },
+    {
+      "t": 2521,
+      "text": "sorry yeah there's no value there because I didn't add any default value anymore but I have examples here so if I click this I can click this click this click this so these are the default values so"
+    },
+    {
+      "t": 2536,
+      "text": "uh this has been so for those who are following along who don't have Cloud flare we have the the very same exercise without cloud flare integration it just has"
+    },
+    {
+      "t": 2549,
+      "text": "um uh let's see let me just close this one where did it go spoiler wish intro to gradio it is pretty much the same thing"
+    },
+    {
+      "t": 2563,
+      "text": "except there is no gradio uh there's no Cloud flare integration and um so there's no llm all it does it takes your uh wish and it'll just say uh consider your wish spoiled that's it so but again"
+    },
+    {
+      "t": 2577,
+      "text": "it it goes inside that same uh spoil wish so from this point on it's the same thing so you can you can um follow along without if you don't have um Cloud fa"
+    },
+    {
+      "t": 2589,
+      "text": "setup now one thing that how are you doing on time colum um you're good yeah you w whenever you want or continue yeah cool so let me do this so let me there's a couple of things here of course this"
+    },
+    {
+      "t": 2601,
+      "text": "this build with gradio but there's this use via API let me actually open this up in a new browser so it's easier if I what happens when I click"
+    },
+    {
+      "t": 2614,
+      "text": "use via API it gives me some code oh it says okay you can test this there's three ways to test this out out of the box python JavaScript bash we'll"
+    },
+    {
+      "t": 2627,
+      "text": "stick with python I'm not going to run this but so you can use a grade your client there's an API name spoil wish I wonder where that came from did I"
+    },
+    {
+      "t": 2639,
+      "text": "didn't I didn't expose an API endpoint did I that's the function that's my call back so gradio by default will convert all your call backs into API end points"
+    },
+    {
+      "t": 2651,
+      "text": "oh so you're not only getting a user interface you're getting an API for free an API sort of Gateway for free for your app oh so you can use their client and then you know um it shows you this one"
+    },
+    {
+      "t": 2665,
+      "text": "so I I mean I could I could run it you could run it but I'll I'll not go through that with this one but it's only showing me one API end point there's there were there were multiple call"
+    },
+    {
+      "t": 2680,
+      "text": "backs what I sort of sneak past was for everywhere there's a call back you can pass an optional argument API name equals you can give a name that you"
+    },
+    {
+      "t": 2694,
+      "text": "want to give it or you can give it the value of false to say suppress this I don't want this to be I don't need an API that hides and shows controls yeah how is it going to even work yeah right"
+    },
+    {
+      "t": 2706,
+      "text": "I don't need an API for that but for spoil wish I mean it's a function it takes inputs yeah text input text output sure give me an API call for that so you get that for free another"
+    },
+    {
+      "t": 2720,
+      "text": "thing that you can do with uh gradio so this is running in a notebook uh I'm using my cloudflare uh account for that so there's no CPU requirements so how do you host"
+    },
+    {
+      "t": 2733,
+      "text": "this few different options you can get um you know Cloud hosting provider you can uh host it there you can host it on your own computer you can get a s you know link for 72 hours for free um or"
+    },
+    {
+      "t": 2748,
+      "text": "you can host it on your infrastructure you can use something like cloudflare tunnels which we've been sort of uh using lately um CL which is another service from cloudflare that will let"
+    },
+    {
+      "t": 2757,
+      "text": "you expose the applications running inside your infrastructure out into the uh public internet with optional authentication uh without necessarily tampering with your uh fidgeting with"
+    },
+    {
+      "t": 2769,
+      "text": "your router it takes care of uh and plus because it's coming from spout flare certificates are already taken care of you don't need to worry about SSL or any kind of that that setup you don't have"
+    },
+    {
+      "t": 2780,
+      "text": "to worry about um there there's another free option available because gradio is maintained by hugging phas hugging phase actually lets you"
+    },
+    {
+      "t": 2792,
+      "text": "host gradio applications so uh I posted another Link in uh it's in meeting plans I believe yeah meeting plans yeah familiar name see it what spoiler wish"
+    },
+    {
+      "t": 2807,
+      "text": "yeah see it if you click that that's the link is going to hugging face spaces uh to my account spoilerish it's the same application that we sort of went through um how do"
+    },
+    {
+      "t": 2820,
+      "text": "you go about deploying this you basically so spaces is is like a git repo you create space you get a good URL and then uh you provide with so this one's again I've broken out the code"
+    },
+    {
+      "t": 2833,
+      "text": "into different uh components but um app py this is familiar code this is what we had in the last uh stuff this is the actual radio code"
+    },
+    {
+      "t": 2847,
+      "text": "and um when you oh so if you go to settings this is running on the free tier CPU because this one doesn't require GPU Cloud flare is doing that for for me and"
+    },
+    {
+      "t": 2860,
+      "text": "there is no storage requirement so I don't have to pay for storage for this particular one and um yeah so when you when you set up a space it asks you what kind of space you you are creating uh"
+    },
+    {
+      "t": 2873,
+      "text": "maybe you know what let's uh if I to create a new space I can say test space I'm not going to create one but I can say gradio it says three"
+    },
+    {
+      "t": 2885,
+      "text": "templates I went with blank template because I already have an app if you don't go with blank template it'll actually create the it'll have some pre-created gradio templates for you"
+    },
+    {
+      "t": 2894,
+      "text": "that you can then uh modify and then you you select your infrastructure public if I create private then only people who have access to my space can this one's running on public so if I create create"
+    },
+    {
+      "t": 2905,
+      "text": "space it'll create an empty git repo on hugging face which is already set up for my gradi application all I have to do is check in that app.py file and it'll take"
+    },
+    {
+      "t": 2918,
+      "text": "it from there wow that's that's free hosting awesome okay um so that's that's the lab yes"
+    },
+    {
+      "t": 2932,
+      "text": "questions yeah yep what about ited CP yeah I I went with the free"
+    },
+    {
+      "t": 2944,
+      "text": "CPU so what uh what Hing face will do is they they'll spin it down when it's nobody's using it and then if it's spun down and some new request comes in it'll spin it up so they'll be um it'll show"
+    },
+    {
+      "t": 2955,
+      "text": "you that it's uh loading up a container and it's spinning so there'll be like a couple minutes uh time that it will take for it to spin up for this thing I don't care this is not a production this is"
+    },
+    {
+      "t": 2965,
+      "text": "not a mission critical application uh this is a showcase application so I yes"
+    },
+    {
+      "t": 2980,
+      "text": "yeah no this is uh this is using Docker as um uh the hosting implementation on hugging face yes so so if you have a Docker file if you have it set up in"
+    },
+    {
+      "t": 2993,
+      "text": "Docker then you can go with Docker and then it'll use instead of app it'll use your Docker file um and then it'll you'll try to download the image from wherever it's hosted and it'll do it"
+    },
+    {
+      "t": 3003,
+      "text": "that yeah stream L is also something that they they support yeah yes I was using pretty"
+    },
+    {
+      "t": 3020,
+      "text": "old I have a question so how many kids usually can go to how many what sorry I have not tested that it's a free"
+    },
+    {
+      "t": 3034,
+      "text": "implementation so of course you know if it starts hitting um bandwidth limitations you might see slowness so again you know and this is the other thing about uh this is this is a public"
+    },
+    {
+      "t": 3046,
+      "text": "space which means your code is also going to be out in the open unless you're connecting to an a privately hosted API somewhere else you're just creating a front end and and that's not"
+    },
+    {
+      "t": 3055,
+      "text": "an issue so so that is another consideration that if you uh of course it's not exposing my secrets or anything because they have a key management thing similar to what we did in um the collab"
+    },
+    {
+      "t": 3067,
+      "text": "notebook you can specify your secrets and it'll load them in the environment variable so nobody can see your secrets but the code itself will be visible yes uh there's a question in the"
+    },
+    {
+      "t": 3078,
+      "text": "back yeah are yes how it's just a different approach so streamlit uh runs the code um as a"
+    },
+    {
+      "t": 3090,
+      "text": "script every page is run as a script uh this one is more like you set up a pipeline and then um it uh it's it goes to the pipeline so uh I would"
+    },
+    {
+      "t": 3102,
+      "text": "say they both give you a good level of control it boils down to what your um uh preferred style is"
+    },
+    {
+      "t": 3116,
+      "text": "yes you function still work notebook collab and still work Hing if I"
+    },
+    {
+      "t": 3129,
+      "text": "do a what sorry rag a rag yes so if I'm running it so you have if you're running it on Spaces then it needs to it needs to"
+    },
+    {
+      "t": 3141,
+      "text": "wherever that infrastructure is for wherever your vector store is your your file stor is it the application will need to have access to that so if you're making like U serverless calls for"
+    },
+    {
+      "t": 3151,
+      "text": "example so yeah it'll work uh if you're running it on your own infrastructure if you're running an app on your own um home infrastructure or home lab um and you're just exposing a link then yes"
+    },
+    {
+      "t": 3162,
+      "text": "it'll it'll it should still work yeah so um I have um let's see I have an app that I built for an"
+    },
+    {
+      "t": 3176,
+      "text": "online gaming Community um that was basically my exercise to uh to learn gradio"
+    },
+    {
+      "t": 3197,
+      "text": "um authentication see"
+    },
+    {
+      "t": 3214,
+      "text": "this is a gradio interface this one is hosted on my home network in my in my uh home infrastructure it's using um uh so what's what's running on my"
+    },
+    {
+      "t": 3226,
+      "text": "infrastructure just the the python app uh it's the database and authentication it's all coming from super base uh people familiar with super base it's a Firebase alternative it's"
+    },
+    {
+      "t": 3239,
+      "text": "backend as a service so they expose uh rest apis um so they have a rest API for you to uh work with the database so they have a postest database that they make"
+    },
+    {
+      "t": 3251,
+      "text": "uh that you can use um they have an authentication so when you saw I put my email address and instead of putting a password I put an OTP that's all coming from superbase so I didn't have to code"
+    },
+    {
+      "t": 3261,
+      "text": "any of that but so that's uh even though app is running on my home infrastructure those things are are serverless services that it's able to so I could deploy this"
+    },
+    {
+      "t": 3274,
+      "text": "on uh hugging face and because it's you know it's connecting as long as it's able to reach out to those superbase service it'll work yeah"
+    },
+    {
+      "t": 3287,
+      "text": "so ready okay bring locally do you know what web server what web server I no so I"
+    },
+    {
+      "t": 3302,
+      "text": "uh it's it's using uvon module uh uvon yes it's it's a wsgi module to handle uh M you know parallel requests and stuff but I'm not"
+    },
+    {
+      "t": 3315,
+      "text": "it's not behind any web server well actually no I take it back this one's actually running on my kues cluster this one so when you ran initially the radio right yes no so that's not running any we it's running"
+    },
+    {
+      "t": 3327,
+      "text": "its own internal uh it's a uh its own internal web server so I I didn't expose any web server but when you're using a public link right yeah"
+    },
+    {
+      "t": 3339,
+      "text": "should be hosted from there it's still no it was hosting in the in in Google scab environment that's where it was coming from so um this link right here this public"
+    },
+    {
+      "t": 3353,
+      "text": "link this is running on Google it's right here it's the same app if you're not using yeah if you're running on your home network and you give this link it's running on your this"
+    },
+    {
+      "t": 3366,
+      "text": "link will point to your home network it's it's creating a tunnel uh to your home network and it's running in there awesome thank you so much k for sharing"
+    },
+    {
+      "t": 3379,
+      "text": "what you've been learning join me a nice round of applause for Kareem thank you for watching this recording of our Austin Lang chain AI mug event if you'd like to stay connected and be part of a growing"
+    },
+    {
+      "t": 3391,
+      "text": "Community it's easy to get started simply scan the QR code on your screen or visit aim.org click on get started to join our Meetup Group hop onto our Discord for ongoing discussions and"
+    },
+    {
+      "t": 3402,
+      "text": "subscribe to our YouTube channel to stay updated on all our future events and content we're building something exciting here in Austin and we'd love to have you along for the journey see you"
+    },
+    {
+      "t": 3410,
+      "text": "at the next Austin L chain aim mug event for"
+    }
+  ],
+  "backfill": true
+}

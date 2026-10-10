@@ -1,0 +1,394 @@
+{
+  "title": "Gobierno de Datos Agentico para Monetización de Datos |Agentic Data Governance for Data Monetization",
+  "speakers": [],
+  "date": "2026-05-29",
+  "youtubeId": "ZWrYt6lgeaw",
+  "duration": 809,
+  "summary": "How can you move beyond \"experimental\" AI agents and actually impact your company's bottom line? In this session, we explore the critical bridge between AI development and Data Governance.",
+  "topics": [
+    "Agents"
+  ],
+  "transcript": [
+    {
+      "t": 14,
+      "text": "So, I'm going to try to mix English and Spanish. I know that there's a mixed audience right now. I'm an amigo and a data governance specialist. I'm a data manager right now. I'm working at a"
+    },
+    {
+      "t": 24,
+      "text": "Telco company. So, we are building a lot of AI projects. And we'll talk about how can we monetize AI projects?"
+    },
+    {
+      "t": 34,
+      "text": "I I said this is an interesting thing that I like to do."
+    },
+    {
+      "t": 39,
+      "text": "Because I just don't want to make AI projects to be AI projects. I want to make an AI project that we can uh explain in the finance uh Excel and we say that we have reduced"
+    },
+    {
+      "t": 52,
+      "text": "costs or we have half a new revenue stream. If you do a AI project, most of the AI projects that I have seen are dying."
+    },
+    {
+      "t": 62,
+      "text": "Uh they're experiments. Uh but that's cool, but we want to make and find how can we monetize these projects?"
+    },
+    {
+      "t": 70,
+      "text": "So, I have found some opportunities in the data scope."
+    },
+    {
+      "t": 74,
+      "text": "And I want to share with you some ideas in how can we monetize data projects with agents?"
+    },
+    {
+      "t": 81,
+      "text": "So, that's that's we talk about right now."
+    },
+    {
+      "t": 85,
+      "text": "So, before we talk about agents and success uh use cases, first we want to talk about what is data monetization, what is data governance, and what is"
+    },
+    {
+      "t": 97,
+      "text": "uh agentic governance."
+    },
+    {
+      "t": 101,
+      "text": "Okay, let me begin. What is data monetization? I know some of you have heard of this in the past."
+    },
+    {
+      "t": 108,
+      "text": "But, we have three types. Some projects that we can increase a new revenue, decrease costs, or prevent some compliant things."
+    },
+    {
+      "t": 120,
+      "text": "So, some examples of increasing cost or increasing revenue is pricing models, uh recommendation models. Netflix is very popular for this."
+    },
+    {
+      "t": 131,
+      "text": "Uh churn prediction."
+    },
+    {
+      "t": 135,
+      "text": "And some of data monetization through uh start alliances. I don't know how to say that in English. Alliance. Thank you."
+    },
+    {
+      "t": 145,
+      "text": "And what about uh cost reduction? Most of the companies that I have worked for, they have a lot of data that nobody's responsible for. So, we start to increase the years that we have a"
+    },
+    {
+      "t": 158,
+      "text": "storage data and we have duplicated data. We have a lot of data that is noise."
+    },
+    {
+      "t": 165,
+      "text": "And we're paying the cloud to store that data, to process that data."
+    },
+    {
+      "t": 170,
+      "text": "So, right now with agents, it's more easy to find what is data that is more useful and what data is not useful."
+    },
+    {
+      "t": 178,
+      "text": "So, if we can change and use the data with that purpose, we can found some opportunities."
+    },
+    {
+      "t": 184,
+      "text": "But before making agent projects, we have to implement a governance project."
+    },
+    {
+      "t": 190,
+      "text": "So, ex- examples, I want to to pass this very quickly because I don't know if you are in data science or machine learning projects, but most of the time the"
+    },
+    {
+      "t": 203,
+      "text": "data teams help to improve our revenue from uh making predictions, churn predictions, etc."
+    },
+    {
+      "t": 213,
+      "text": "But this is We have in in data science some some mindset that is garbage in, garbage out."
+    },
+    {
+      "t": 220,
+      "text": "We have bad quality of data, we make wrong predictions and we waste time and cloud processing wrong data."
+    },
+    {
+      "t": 229,
+      "text": "So, we have a lot of silos are wasting the money making, processing, analyzing bad quality data."
+    },
+    {
+      "t": 241,
+      "text": "Another example is reducing costs."
+    },
+    {
+      "t": 245,
+      "text": "FinOps is calling us there a I have been a managing projects that its its goal was to migrate them from one architecture to another because one architecture is more"
+    },
+    {
+      "t": 257,
+      "text": "expensive than another. For example, Snowflake. Snowflake is like a luxury car and we are migrating to Redshift car which is a standard car."
+    },
+    {
+      "t": 266,
+      "text": "But it's cheaper. So we can make the same project or the same uses use cases needs dashboards, the same dashboards but reducing costs. This is real data for a project that I was in charge of."
+    },
+    {
+      "t": 279,
+      "text": "And we want we need I was asked to reduce this annual budget to that value."
+    },
+    {
+      "t": 285,
+      "text": "So we have to reducing the consumption of of Snowflake and increase increasing Redshift costs. So this is another example."
+    },
+    {
+      "t": 297,
+      "text": "And the financial, so right now we have a lot of compliance and new laws about um I don't know how to say in English but when multas"
+    },
+    {
+      "t": 309,
+      "text": "fines fines state fines that are increasing because data protection rules. Europe is very famous for this. They can a lot of fines for PII data a privacy data."
+    },
+    {
+      "t": 322,
+      "text": "So there are a lot of Europe for news you have to find fines because of companies that are not um making a good studying of the a quality sensitive data."
+    },
+    {
+      "t": 334,
+      "text": "So that's why I want to say about data governance. Before we make agents, we need to make governance. What's governance?"
+    },
+    {
+      "t": 344,
+      "text": "I always say I try to explain this like analogy of with Agile because Agile is more popular than data governance."
+    },
+    {
+      "t": 353,
+      "text": "In data governance we have framework that is the DMBOK, that's the the framework behind this."
+    },
+    {
+      "t": 360,
+      "text": "We have methods, data governance methods, we have ceremonies, we have software to do this."
+    },
+    {
+      "t": 368,
+      "text": "So data governance is just is not a PowerPoint, it's not an Excel."
+    },
+    {
+      "t": 372,
+      "text": "It's a software like Jira that when you look for a bad quality data, you can find who is the owner of the data."
+    },
+    {
+      "t": 381,
+      "text": "You can find what's the life cycle of the data. So you can make decisions."
+    },
+    {
+      "t": 386,
+      "text": "And also an agent can make that decisions because agent has its knowledge base about what is the governance of the data."
+    },
+    {
+      "t": 400,
+      "text": "So this is how looks a project about data monetization with data governance."
+    },
+    {
+      "t": 407,
+      "text": "We have to find these silos or pains."
+    },
+    {
+      "t": 412,
+      "text": "And DMBOK has 10 10 dimensions and we found some pain dimensions that are increasing costs or are provoking redundancy of data or"
+    },
+    {
+      "t": 425,
+      "text": "duplicated data. And we don't know what is the useful data and what is the bad data and who is the owner of the data."
+    },
+    {
+      "t": 433,
+      "text": "So when we implement a data governance framework and let's see the the next and one tool to do make this there are licenses tools which are very expensive, like Collibra."
+    },
+    {
+      "t": 446,
+      "text": "It's something like $60,000. I don't know how to say $60,000 in English."
+    },
+    {
+      "t": 450,
+      "text": "Well, $100,000. $100,000."
+    },
+    {
+      "t": 454,
+      "text": "And this is open source solution to make a data governance with zero cost but you're responsible of deploying this."
+    },
+    {
+      "t": 461,
+      "text": "But the good news is that your agents can deploy this easier."
+    },
+    {
+      "t": 466,
+      "text": "But you need to configure this agent to deploy it very in your standard security standards."
+    },
+    {
+      "t": 473,
+      "text": "So that's when the agents help. I have deployed Open Metadata a lot of times with agents."
+    },
+    {
+      "t": 480,
+      "text": "So not only to deploy Open Metadata, also to connect to the databases, to the dashboards, and to the owners."
+    },
+    {
+      "t": 488,
+      "text": "So an agent I have an agent with knowledge base can deploy Open Metadata."
+    },
+    {
+      "t": 496,
+      "text": "And can make a governance agent governance. I have post in my LinkedIn an agent video of an agent working about how an agent can work with Open Metadata MCP."
+    },
+    {
+      "t": 510,
+      "text": "So the agent can discover bad quality data. The agent can find who's the owner of the data."
+    },
+    {
+      "t": 517,
+      "text": "And Open Metadata Open Metadata is the software and is open source as I already said, has an MCP and you can use your favorite tool agent group, open code, Hermes code,"
+    },
+    {
+      "t": 530,
+      "text": "etc. I'm using most of the time this tool. And sometimes this one."
+    },
+    {
+      "t": 536,
+      "text": "But any tool that can connect an MCP can discover this data."
+    },
+    {
+      "t": 541,
+      "text": "And that's why or that's why data is useful."
+    },
+    {
+      "t": 547,
+      "text": "When you implement an agent, for example an SQL cost analysis with governance and with an MCP of Open Metadata your agent can discover this this"
+    },
+    {
+      "t": 559,
+      "text": "pain points and cost analytics."
+    },
+    {
+      "t": 563,
+      "text": "So you can find and make decisions about what data you can reduce the storage."
+    },
+    {
+      "t": 570,
+      "text": "For example or change life cycle of this data."
+    },
+    {
+      "t": 578,
+      "text": "in this example, I have reduced uh What number is this in English?"
+    },
+    {
+      "t": 591,
+      "text": "So, this is a monetize monetization a use case."
+    },
+    {
+      "t": 595,
+      "text": "Not directly from the agent. The agent can discover this quickly because has its its skills about data governance."
+    },
+    {
+      "t": 603,
+      "text": "So, the agent don't delete data. So, we don't want to delete data because just to delete data."
+    },
+    {
+      "t": 610,
+      "text": "If you delete data just because it's easy."
+    },
+    {
+      "t": 615,
+      "text": "It's This is a new agent delete data, okay."
+    },
+    {
+      "t": 619,
+      "text": "But, the agent needs to understand before make uh to touch the database."
+    },
+    {
+      "t": 627,
+      "text": "Needs to understand these skills about data governance and rules how to work."
+    },
+    {
+      "t": 633,
+      "text": "So, this is the AWS dashboard. How we were reducing this cost."
+    },
+    {
+      "t": 638,
+      "text": "So, this is some useful and real case how can agents can reduce in the finance can can you can you can put them in in the in the result of the"
+    },
+    {
+      "t": 650,
+      "text": "P&L. Uh resultados verdaderos."
+    },
+    {
+      "t": 657,
+      "text": "So, data governance is just not is not delete data because deleting data. You need to understand who's the owner, who's to make the decision of how many years needs the data."
+    },
+    {
+      "t": 668,
+      "text": "What are the redundancy data? And what are the good data that we need to the start?"
+    },
+    {
+      "t": 674,
+      "text": "And what are that sensitive data that nobody needs to see?"
+    },
+    {
+      "t": 680,
+      "text": "That is another example. I was talking with that about migrating from one architecture to another."
+    },
+    {
+      "t": 687,
+      "text": "So, we we have Snowflake, we need to change to Redshift, okay."
+    },
+    {
+      "t": 691,
+      "text": "So, if we need to make this uh to re- refactor code so our agents can make that work very easy."
+    },
+    {
+      "t": 700,
+      "text": "But, it's not easy just to change the code. You need to find the owner of the use case and check if the owner really really needs that use case or need to improve it. Or maybe it's"
+    },
+    {
+      "t": 711,
+      "text": "obsolete and you can kill. So, that's why you can reduce costs when you know to refactor by calling code. Before you need to understand what data is useful and who's the owner"
+    },
+    {
+      "t": 724,
+      "text": "and what is source of that data. So, that's the use case that I wanted to share with you and to conclude with this."
+    },
+    {
+      "t": 734,
+      "text": "So, before making data decisions, we need to understand or to implement a data governance framework. And that's what I'm doing in my company."
+    },
+    {
+      "t": 744,
+      "text": "I'm also helping other companies to implement a data governance framework."
+    },
+    {
+      "t": 749,
+      "text": "So, the agents can discover useful data with with this a base before making agents because if an agent a it's bad quality data,"
+    },
+    {
+      "t": 763,
+      "text": "the agent is not going to understand what is happening. And the agent never says, \"I don't know the answer.\" Always respond something."
+    },
+    {
+      "t": 770,
+      "text": "And we say he's hallucination. But, you give the agent duplicated data, maybe data incomplete, I don't know."
+    },
+    {
+      "t": 777,
+      "text": "So, this is a the first step to to have an agent that make less mistakes, to have a a good base of data governance."
+    },
+    {
+      "t": 788,
+      "text": "And then we can improve and go to this monetization use cases. And that's what happened in my experience with data projects with agents."
+    },
+    {
+      "t": 798,
+      "text": "Okay? And okay, that's all. That's my my I want to tell"
+    }
+  ],
+  "backfill": true
+}

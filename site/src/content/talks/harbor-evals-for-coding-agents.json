@@ -1,0 +1,642 @@
+{
+  "title": "Harbor evals for coding agents",
+  "speakers": [
+    "jeff-linwood"
+  ],
+  "date": "2026-10-05",
+  "event": "2026-10-05",
+  "youtubeId": "cvoYeYvLdhw",
+  "publishAt": "2026-10-08T11:00:26-05:00",
+  "duration": 865,
+  "thumbnail": "/talks/harbor-evals-for-coding-agents.jpg",
+  "topics": [
+    "Evals",
+    "MCP",
+    "Coding agents"
+  ],
+  "summary": "Jeff Linwood shows how to test if agents use MCP tools with Harbor Framework.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Intro to Agent Evals"
+    },
+    {
+      "t": 54,
+      "title": "The MCP Tool Problem"
+    },
+    {
+      "t": 149,
+      "title": "Harbor Framework Setup"
+    },
+    {
+      "t": 373,
+      "title": "Task Structure and Verifiers"
+    },
+    {
+      "t": 454,
+      "title": "Experiment Design"
+    },
+    {
+      "t": 605,
+      "title": "Results and Analysis"
+    },
+    {
+      "t": 693,
+      "title": "Key Takeaways"
+    },
+    {
+      "t": 727,
+      "title": "Applying This to Your Work"
+    }
+  ],
+  "learn": [
+    "Set up repeatable tests for agent behavior using the Harbor Framework.",
+    "Verify if an agent used specific MCP tools by inspecting the audit log.",
+    "Determine that short instructions in agents.md perform better than long descriptions.",
+    "Run multiple trials to account for the non-deterministic nature of LLMs."
+  ],
+  "links": [
+    {
+      "label": "Slides",
+      "url": "https://www.jefflinwood.com/2026/10/agent-evals-with-harbor/"
+    }
+  ],
+  "transcript": [
+    {
+      "t": 4,
+      "text": "you All right, so I am going to talk to all of you about… Yeah, let me grab this."
+    },
+    {
+      "t": 12,
+      "text": "I am going to talk to all of you about setting up evals for your coding agents."
+    },
+    {
+      "t": 17,
+      "text": "So this is going to be a very useful thing for all of you to know."
+    },
+    {
+      "t": 21,
+      "text": "If you've ever wanted to instrument your Claude codes, your codexes, possibly, you know, your open codes, anything else out there that's really much more of an agent harness."
+    },
+    {
+      "t": 33,
+      "text": "So think about this, not so much for individual models, but if you want to figure out, should we be using Claude code with Opus, who are using Asana, etc, and you actually wanted to get some real numbers on that,"
+    },
+    {
+      "t": 46,
+      "text": "I'm going to show you how using something called HARP."
+    },
+    {
+      "t": 50,
+      "text": "So, in my case, I'm building this application here, RobotBridge, and what it is, is it's basically in this form."
+    },
+    {
+      "t": 58,
+      "text": "It's a task board that uses MCP to talk to various coding agents."
+    },
+    {
+      "t": 63,
+      "text": "However, the problem I ran into was that the coding agents were not picking up the tools that it was providing over MCP."
+    },
+    {
+      "t": 72,
+      "text": "So I had to go out and solve that problem."
+    },
+    {
+      "t": 77,
+      "text": "What was kind of interesting about this was that, you know, I could tell the MCP connection was there."
+    },
+    {
+      "t": 84,
+      "text": "The tools were available, but when I asked that coding engine to pull a task off the board, it just skipped all that, moved straight to prep, and tried to figure out what to do, right? So it wasn't picking up on my MCP tools."
+    },
+    {
+      "t": 99,
+      "text": "And I wanted to solve that."
+    },
+    {
+      "t": 101,
+      "text": "Now, the FIPS is going to be a couple of lines in your agents.md file, or a couple of lines inside of your claw.md file, but… what's the right wording for that, right?"
+    },
+    {
+      "t": 113,
+      "text": "Because we have a lot of different things we could put into an agents.md or into a Claude.md."
+    },
+    {
+      "t": 118,
+      "text": "Has anyone here tried to instrument that, or ever explore how much, or what the right thing is?"
+    },
+    {
+      "t": 124,
+      "text": "Okay, well, we've got one person, excellent, so perfect."
+    },
+    {
+      "t": 127,
+      "text": "I'm gonna show you a way that you could actually go through and figure that out on your own, and run a few experiments, yourself."
+    },
+    {
+      "t": 135,
+      "text": "Because that's what I do."
+    },
+    {
+      "t": 136,
+      "text": "I use something called an eval, which we've heard about a few times today already."
+    },
+    {
+      "t": 140,
+      "text": "For those of you that are a little bit newer, maybe to LLMs and everything else, what we're going to do is we're going to set up some repeatable tests for behavior."
+    },
+    {
+      "t": 149,
+      "text": "And in this particular case, I'm working with a tool called Harbor Framework, which is an open source tool."
+    },
+    {
+      "t": 155,
+      "text": "It's a Python test harness, so it doesn't matter whether it's Python, it could be anything."
+    },
+    {
+      "t": 159,
+      "text": "And their terminology is going to be that we have a task."
+    },
+    {
+      "t": 163,
+      "text": "So, we have a realistic prompt and a good starting state."
+    },
+    {
+      "t": 166,
+      "text": "We have an agent that is under test. In my case, my tool is a macOS agent workspace."
+    },
+    {
+      "t": 171,
+      "text": "Right now, it works with Claude Code, and it works with Codex, and so those are the two that I was exploring."
+    },
+    {
+      "t": 178,
+      "text": "You also pair it with a model, because you're going to get very different performance from something like Sonnet than you would with Haiku or with Opus."
+    },
+    {
+      "t": 187,
+      "text": "And again, you can explore all that as part of your experimental design."
+    },
+    {
+      "t": 192,
+      "text": "Next, we need to have some kind of verifier."
+    },
+    {
+      "t": 195,
+      "text": "So, just shipping off a task over to an agent, how does that actually know that it got run, right?"
+    },
+    {
+      "t": 201,
+      "text": "So, how do we verify that the task actually happened?"
+    },
+    {
+      "t": 204,
+      "text": "And so, in my particular case, I was measuring two things."
+    },
+    {
+      "t": 208,
+      "text": "Did the coding challenge actually work?"
+    },
+    {
+      "t": 211,
+      "text": "In other words, did the coding agent implement some random task?"
+    },
+    {
+      "t": 215,
+      "text": "And then second, did it use the tools off my MCP to actually do the task, right?"
+    },
+    {
+      "t": 221,
+      "text": "And that's two separate things you need to verify."
+    },
+    {
+      "t": 225,
+      "text": "And then the last thing that you really have to consider is trials."
+    },
+    {
+      "t": 230,
+      "text": "We all know these large language models, they're non-deterministic, so you can't run it once, you have to run it multiple times. And unfortunately."
+    },
+    {
+      "t": 241,
+      "text": "every time you run it, it's gonna cost you more money, or use up more usage, and so, you know, you do need to figure out, are you working with a giant budget, or are you working with, like me, you know, a very small project because,"
+    },
+    {
+      "t": 252,
+      "text": "you know, or a very small budget, because I'm trying to figure out a very small problem."
+    },
+    {
+      "t": 259,
+      "text": "So, the tool I used is called Harbor. Does anyone use that one?"
+    },
+    {
+      "t": 264,
+      "text": "Okay."
+    },
+    {
+      "t": 265,
+      "text": "And the reason I bring this up is because I'm using it to evaluate whether or not my tool calls come out through MCP, whether they get picked up, but you could use it for all sorts of evaluations."
+    },
+    {
+      "t": 277,
+      "text": "So, there's been some people talking about, I don't know if we are using the right models for our coding tasks."
+    },
+    {
+      "t": 283,
+      "text": "Or perhaps you're doing something where, like Colin mentioned."
+    },
+    {
+      "t": 287,
+      "text": "or you know, you're pulling the traces down of your large language models."
+    },
+    {
+      "t": 292,
+      "text": "Now you actually have some real-world tasks that you have worked on."
+    },
+    {
+      "t": 296,
+      "text": "You could take some of those and actually benchmark those against various agent harnesses, against various models, and figure out, hey, maybe I can get by with, like, Luna, right, or Terra. I don't have to use the big ones."
+    },
+    {
+      "t": 310,
+      "text": "So, just know that Harper Framework's out there. It's all open source."
+    },
+    {
+      "t": 314,
+      "text": "It was really easy to set up."
+    },
+    {
+      "t": 316,
+      "text": "I'll be honest, it was really easy for Claude Code to set up for me."
+    },
+    {
+      "t": 319,
+      "text": "But, the other thing is that I used it locally with Docker, just running on this regular old Mac."
+    },
+    {
+      "t": 325,
+      "text": "You can also host it on a cloud-provided sandbox provider, like Daytona."
+    },
+    {
+      "t": 329,
+      "text": "If you want to scale up and above and beyond what your desktop or laptop can do."
+    },
+    {
+      "t": 334,
+      "text": "Another thing I'll mention here, I happen to use API… I use an API key with both Claude Code and with Codex, because I didn't want to run into usage limits, and then I'm actually not really sure what what the terms of service are,"
+    },
+    {
+      "t": 348,
+      "text": "if you're using this sort of thing with your subscriptions."
+    },
+    {
+      "t": 352,
+      "text": "So, I just used API keys."
+    },
+    {
+      "t": 354,
+      "text": "I did not spend a lot of money on this experiment, but it also limited my scope of the experiment, so I didn't spend a lot of money."
+    },
+    {
+      "t": 362,
+      "text": "So, just know that there is a way to set both of these up with subscriptions."
+    },
+    {
+      "t": 367,
+      "text": "I just set up a .env file and let it go to town."
+    },
+    {
+      "t": 373,
+      "text": "When you set up Harbor, each individual task that you are going to benchmark is a folder, and so you're going to have an instruction.md That's gonna be the actual prompt the agent gets, and then you're gonna have an environment with the repo."
+    },
+    {
+      "t": 388,
+      "text": "In my case, what we're really testing is something I've built called Zebric, which is an agent-native application framework."
+    },
+    {
+      "t": 395,
+      "text": "That's what's providing the MCP server and the tools associated with the tasks, so it pulls that all together, and then it's also got the test to actually verify that the thing ran. So… My, my framework has an audit log,"
+    },
+    {
+      "t": 409,
+      "text": "so it can actually tell what agent called what tool, and so it can inspect the audit log and just see if the tool actually got called."
+    },
+    {
+      "t": 417,
+      "text": "That makes it relatively easy with this particular task."
+    },
+    {
+      "t": 420,
+      "text": "Otherwise, mostly people are using this to do things like coding tests, so they're, you know, can this application actually… or can the Ernest actually add some functionality to an application, or fix a bug?"
+    },
+    {
+      "t": 432,
+      "text": "And so you could have a Python script that, for instance, tested the bug."
+    },
+    {
+      "t": 439,
+      "text": "There is some prior research about this."
+    },
+    {
+      "t": 442,
+      "text": "There's nothing in particular that's exactly like what I'm doing, but I did find 3 different PDFs on Archive that you could actually go in and explore if you wanted to learn a little bit more."
+    },
+    {
+      "t": 454,
+      "text": "My experiment was really, do agents use an available workflow tool when nobody tells them to?"
+    },
+    {
+      "t": 464,
+      "text": "And we had two questions we were trying to figure out."
+    },
+    {
+      "t": 468,
+      "text": "Did it write the code? In other words, did the problem actually get solved?"
+    },
+    {
+      "t": 471,
+      "text": "And then number two, did it use the MCP tools?"
+    },
+    {
+      "t": 475,
+      "text": "So the idea here is we've got this task tracker, we're running inside the, bridge here, and we're just trying to figure out everything's connected."
+    },
+    {
+      "t": 485,
+      "text": "In my case, I ended up with 120 runs for my first wave of the experiment, so I should say that this was just the very first exploration."
+    },
+    {
+      "t": 494,
+      "text": "I did go off and explore a couple different variants down the road, but this is sort of the initial experiment."
+    },
+    {
+      "t": 501,
+      "text": "I start with 5 different fixtures."
+    },
+    {
+      "t": 503,
+      "text": "Two agents, so I had Claude Code and Codex, because both of those were things that I use."
+    },
+    {
+      "t": 508,
+      "text": "Two model tiers, so I did only go with small and medium."
+    },
+    {
+      "t": 511,
+      "text": "That was mostly because I wanted to cut costs a little bit."
+    },
+    {
+      "t": 515,
+      "text": "And if I wanted to expense a little bit, I could certainly have it use Opus or Solve."
+    },
+    {
+      "t": 520,
+      "text": "And then I tried three different conditions, because I thought that's really the most interesting thing."
+    },
+    {
+      "t": 527,
+      "text": "My conditions were the control."
+    },
+    {
+      "t": 529,
+      "text": "The controls have nothing in your agents.md telling it about the tasks."
+    },
+    {
+      "t": 534,
+      "text": "A short instruction."
+    },
+    {
+      "t": 536,
+      "text": "So based on some of the research, a short instruction is actually much better."
+    },
+    {
+      "t": 541,
+      "text": "Put a very short instruction into Agents.md."
+    },
+    {
+      "t": 544,
+      "text": "And then the third was the product construction that's currently inside the Mac app, that is live. And so that's the one I was seeing."
+    },
+    {
+      "t": 551,
+      "text": "It wasn't really performing as well as I thought it would be."
+    },
+    {
+      "t": 555,
+      "text": "But again, I'm just seeing that from user behavior, from actually exploring the app."
+    },
+    {
+      "t": 560,
+      "text": "How do I actually boil this down into results?"
+    },
+    {
+      "t": 564,
+      "text": "Well, I do need to have some sort of ground truth, and so I can look at whether the MCP was used or the task was discovered."
+    },
+    {
+      "t": 572,
+      "text": "By looking at the audit log, I can look at whether a task was pulled off the board, because that ends up in the, final ZBERC DB, so it's just a… it's a SQLite database in this case."
+    },
+    {
+      "t": 584,
+      "text": "And then I can also check the coding success of the PyTest."
+    },
+    {
+      "t": 587,
+      "text": "That's actually something Harbor does for you."
+    },
+    {
+      "t": 590,
+      "text": "And then last, if there's any kind of errors, things crash out, that would make an invalid run."
+    },
+    {
+      "t": 596,
+      "text": "I did not use Jev, unfortunately."
+    },
+    {
+      "t": 598,
+      "text": "I started this project probably about when Jeff came out, so… Okay, here's the results from that 120, run."
+    },
+    {
+      "t": 606,
+      "text": "The interesting thing, I thought, was that all 120 runs passed the coding tests."
+    },
+    {
+      "t": 611,
+      "text": "These were not huge tests, but it was cool to see that, you know."
+    },
+    {
+      "t": 616,
+      "text": "That all these things worked."
+    },
+    {
+      "t": 618,
+      "text": "What didn't work was the control with nothing in agents.md or Claude MD to tell it to use the tasks."
+    },
+    {
+      "t": 626,
+      "text": "The task tracker? It didn't use it."
+    },
+    {
+      "t": 628,
+      "text": "It tried to use grep or something, or just ignored it completely."
+    },
+    {
+      "t": 631,
+      "text": "With the short instructions."
+    },
+    {
+      "t": 634,
+      "text": "I actually got great results from the medium, models."
+    },
+    {
+      "t": 638,
+      "text": "So I got 10 out of 10 from… Claude Code Medium, and 8 out of 10 for Codex Medium."
+    },
+    {
+      "t": 643,
+      "text": "But the product instructions, what I actually had baked into the Mac app right now that you can download, not so hot, right? I've got, like, 3 out of 10, and 2 out of 10."
+    },
+    {
+      "t": 654,
+      "text": "Yeah, or even 0 out of 10 on Codex Media."
+    },
+    {
+      "t": 657,
+      "text": "So… This is what those instructions actually looked like."
+    },
+    {
+      "t": 663,
+      "text": "On the left-hand side, you can't read it too well, but you can see how short the instructions are. That's the one that worked."
+    },
+    {
+      "t": 671,
+      "text": "On the right-hand side is the Mac app instructions, and that's just, like, part of it. It went through and gave a big description about each tool."
+    },
+    {
+      "t": 680,
+      "text": "Turns out none of that's needed for effective, tool usage."
+    },
+    {
+      "t": 684,
+      "text": "So, you know, with the next version bump of the Mac app, it's gonna get the short instructions."
+    },
+    {
+      "t": 693,
+      "text": "Some of the key takeaways that I had from this experiment, well, number one was just kind of diving into Harper in the first place and figuring out that, hey, we can start instrumenting our agent harnesses with this,"
+    },
+    {
+      "t": 704,
+      "text": "evals framework and exploring a little bit more about results."
+    },
+    {
+      "t": 708,
+      "text": "Number two, small, medium, small models were worse than medium."
+    },
+    {
+      "t": 712,
+      "text": "Again, we're talking about, like, Haiku and, and… Luna, they're not the… they're fast, cheap, not as good, understandable."
+    },
+    {
+      "t": 720,
+      "text": "And then shorter instructions performed well, so that was also nice."
+    },
+    {
+      "t": 727,
+      "text": "Now, for all of you, right, because I had my particular problem that I went out to go and solve and actually run some evals on, what could you all do, right?"
+    },
+    {
+      "t": 736,
+      "text": "So, you know, where could you take this?"
+    },
+    {
+      "t": 739,
+      "text": "Number one, I think, we all have agents.md files, we all have a lot of .md files in our repos."
+    },
+    {
+      "t": 745,
+      "text": "go in and see if those changes in those files actually change how well your agent performs, right?"
+    },
+    {
+      "t": 750,
+      "text": "That's probably the first thing I'd say if people were interested in exploring this."
+    },
+    {
+      "t": 755,
+      "text": "Number two, if you're working on some sort of project that has MCP tools in it, you can actually work on design around that."
+    },
+    {
+      "t": 762,
+      "text": "So, in my case, right, like, how are the tools named, what descriptions do you provide? All very useful."
+    },
+    {
+      "t": 769,
+      "text": "And then, you can also use it to create your own benchmark if you want to have a state of where your company is at in Agentic Coding now."
+    },
+    {
+      "t": 779,
+      "text": "Okay, I'll just leave some links up here."
+    },
+    {
+      "t": 781,
+      "text": "The first two sets of links are to my open source projects, which you're welcome to explore, and then the third one is Harbor, which is the eval streamer, which is also open source."
+    },
+    {
+      "t": 791,
+      "text": "It's by the people behind Terminal-Bench."
+    },
+    {
+      "t": 795,
+      "text": "Any questions?"
+    },
+    {
+      "t": 799,
+      "text": "Yeah, just… Yes."
+    },
+    {
+      "t": 805,
+      "text": "Did I use Prompt Guru or something?"
+    },
+    {
+      "t": 810,
+      "text": "No, I did not. Haven't heard of it, actually."
+    },
+    {
+      "t": 814,
+      "text": "Got it."
+    },
+    {
+      "t": 815,
+      "text": "Bye-bye."
+    },
+    {
+      "t": 816,
+      "text": "And… Okay."
+    },
+    {
+      "t": 818,
+      "text": "Yeah, it was, fascinating and, you know, counterintuitive to what I initially designed in the Mac app."
+    },
+    {
+      "t": 824,
+      "text": "So yeah, that's why I thought it was a very interesting client."
+    },
+    {
+      "t": 829,
+      "text": "Yes. Not the vertical, but… Colors?"
+    },
+    {
+      "t": 837,
+      "text": "My color scheme doesn't show up? Oh, no, okay."
+    },
+    {
+      "t": 842,
+      "text": "We'll… we'll make sure to put it on the Discord."
+    },
+    {
+      "t": 845,
+      "text": "Yeah. You can just send it and link to your presentation. Yeah, sure."
+    }
+  ]
+}

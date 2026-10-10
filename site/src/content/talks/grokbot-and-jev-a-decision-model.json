@@ -1,0 +1,16 @@
+{
+  "title": "Grokbot and Jev, a decision model",
+  "speakers": [
+    "joseph-fluckiger"
+  ],
+  "date": "2026-10-05",
+  "event": "2026-10-05",
+  "youtubeId": "YPJd-RXsWI0",
+  "publishAt": "2026-10-12T10:00:00-05:00",
+  "duration": 980,
+  "thumbnail": "/talks/grokbot-and-jev-a-decision-model.jpg",
+  "topics": [
+    "Agents",
+    "LangGraph"
+  ]
+}

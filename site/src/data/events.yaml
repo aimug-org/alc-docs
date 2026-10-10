@@ -1,0 +1,242 @@
+# Every AIMUG event, oldest first. The home page and header show the next one that hasn't ended.
+# Times carry their UTC offset: CDT is -05:00, CST is -06:00. Give lineupDate a time too: a bare date is UTC midnight, the evening before in Austin.
+# Copied from the old events page. Where the page gave no end time, the end follows its standard
+# schedule (6:00 to 8:30 PM, then The Tavern for 2025; 6:00 to 9:00 PM for 2026).
+
+- id: "2025-01-08"
+  title: January Monthly Showcase
+  start: 2025-01-08T18:00:00-06:00
+  end: 2025-01-08T20:30:00-06:00
+  venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
+  recap: /blog/january-2025-meeting-recap/
+  docs: /docs/jan-2025/
+
+- id: "2025-01-22"
+  title: January Hacky Hour
+  kind: hacky-hour
+  start: 2025-01-22T18:00:00-06:00
+  end: 2025-01-22T20:00:00-06:00
+  venue: { name: Kinda Tropical }
+  online: false
+  recap: /blog/january-2025-hacky-hour-recap/
+
+- id: "2025-02-05"
+  title: February Showcase and Mixer
+  start: 2025-02-05T18:00:00-06:00
+  end: 2025-02-05T20:00:00-06:00
+  venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  docs: /docs/feb-2025/
+
+- id: "2025-02-19"
+  title: February Hacky Hour
+  kind: hacky-hour
+  start: 2025-02-19T18:00:00-06:00
+  end: 2025-02-19T20:00:00-06:00
+  venue: { name: Cosmic Coffee Saltillo }
+  online: false
+
+- id: "2025-03-05"
+  title: "March Mixer: Off SXSW Edition"
+  kind: special
+  start: 2025-03-05T18:00:00-06:00
+  end: 2025-03-05T20:30:00-06:00
+  venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
+  docs: /docs/mar-2025/
+
+- id: "2025-04-02"
+  title: April Monthly Showcase
+  start: 2025-04-02T18:00:00-05:00
+  end: 2025-04-02T20:30:00-05:00
+  venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
+
+- id: "2025-05-07"
+  title: "Lightning Talks, LangChain Voice-Agent Lab & Mixer"
+  start: 2025-05-07T18:00:00-05:00
+  end: 2025-05-07T20:00:00-05:00
+  venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
+  summary: "Community lightning talks, a hands-on LangChain voice agent lab with FastRTC, and a mixer at The Tavern."
+  docs: /docs/may-2025/
+
+- id: "2025-06-04"
+  title: "June Monthly Showcase: Multimodal AI & Agents"
+  start: 2025-06-04T18:00:00-05:00
+  end: 2025-06-04T21:00:00-05:00
+  venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
+  summary: "Multimodal AI applications and agent architectures, with demos of vision-enabled agents, audio processing pipelines and cross-modal reasoning systems."
+  docs: /docs/jun-2025/
+
+- id: "2025-06-26"
+  title: "Field Trip: Your Startup Sucks Comedy Show"
+  kind: field-trip
+  start: 2025-06-26T18:30:00-05:00
+  end: 2025-06-26T21:00:00-05:00
+  venue: { name: Tequila 512, address: "2201 Lake Austin Blvd, Austin, TX" }
+  online: false
+  summary: "We left the terminal for Your Startup Sucks, Austin's only pitch-roast comedy show. Founders braved the stage and VCs fired back."
+
+- id: "2025-07-02"
+  title: July Monthly Mixer & Showcase
+  start: 2025-07-02T18:00:00-05:00
+  end: 2025-07-02T20:30:00-05:00
+  venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
+  summary: "Lightning talks on AI development workflows, Cloudflare containers, Slack-Cursor integration, and lessons learned from building Emojourn."
+  docs: /docs/jul-2025/
+
+- id: "2025-08-14"
+  title: August Monthly Showcase
+  start: 2025-08-14T18:00:00-05:00
+  end: 2025-08-14T20:30:00-05:00
+  venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  summary: "Agent-to-Agent (A2A) communication protocols, with lightning talks and implementation guides."
+  docs: /docs/aug-2025/
+
+- id: "2025-09-10"
+  title: September Thunderstorm Talks
+  start: 2025-09-10T18:00:00-05:00
+  end: 2025-09-10T20:30:00-05:00
+  venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
+  summary: "Five rapid-fire Thunderstorm Talks: LangChain and LangGraph 1.0 alpha, Claude Code and custom agents, Deep Agents, Rosie the Robot, and Streamlit for AI dashboards."
+  recap: /blog/september-showcase-thunderstorm-talks-replay/
+  docs: /docs/sep-2025/
+
+- id: "2025-10-01"
+  title: October Monthly Mixer & Showcase
+  start: 2025-10-01T18:00:00-05:00
+  end: 2025-10-01T20:30:00-05:00
+  venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
+  summary: "LangGraph 1.0 middleware, A2A and AP2 protocols, cancer detection research, and inference providers."
+  recap: /blog/october-2025-showcase-recap/
+  docs: /docs/oct-2025/
+
+- id: "2025-11-05"
+  title: November Monthly Mixer & Showcase
+  start: 2025-11-05T18:00:00-06:00
+  end: 2025-11-05T20:30:00-06:00
+  venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
+  summary: "LangGraph fundamentals, enterprise RAG failures, Deep Agents in production, and AI project management anti-patterns."
+  recap: /blog/november-mixer-showcase-langgraph-rag-deep-agents/
+  docs: /docs/nov-2025/
+
+- id: "2025-12-03"
+  title: December Monthly Mixer & Showcase
+  start: 2025-12-03T18:00:00-06:00
+  end: 2025-12-03T21:00:00-06:00
+  venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
+
+- id: "2026-01-07"
+  title: January Monthly Mixer & Showcase
+  start: 2026-01-07T18:00:00-06:00
+  end: 2026-01-07T21:00:00-06:00
+  venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
+
+- id: "2026-02-04"
+  title: February Monthly Mixer & Showcase
+  start: 2026-02-04T18:00:00-06:00
+  end: 2026-02-04T21:00:00-06:00
+  venue: { name: Cloudflare Austin }
+  afterparty: { name: Zilker }
+
+- id: "2026-03-04"
+  title: March Monthly Mixer & Showcase
+  start: 2026-03-04T18:00:00-06:00
+  end: 2026-03-04T21:00:00-06:00
+  venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
+
+- id: "2026-04-01"
+  title: April Monthly Mixer & Showcase
+  start: 2026-04-01T18:00:00-05:00
+  end: 2026-04-01T21:00:00-05:00
+  venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
+
+- id: "2026-05-06"
+  title: "May Monthly Mixer & Showcase: Thunderstorm Talks Edition"
+  start: 2026-05-06T18:00:00-05:00
+  end: 2026-05-06T21:00:00-05:00
+  venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
+  summary: "Rapid-fire 10-minute talks: highlights from ICLR 2026 on recursive self-improvement research, open source agentic security operations tooling, and auto-documentation pipelines on Cloudflare Workers and Assets."
+  recap: /blog/2026/05/18/may-2026-mixer-recap/
+
+- id: "2026-06-03"
+  title: "June Monthly Mixer & Showcase: Thunderstorm Talks Edition"
+  start: 2026-06-03T18:00:00-05:00
+  end: 2026-06-03T21:00:00-05:00
+  venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
+  summary: "Thunderstorm Talks on agentic platforms and productivity: a LangChain interrupt update, agentic framework topology primitives with Pydantic and MLflow, and scaling management productivity with agents."
+
+- id: "2026-07-01"
+  title: July Monthly Mixer & Showcase
+  start: 2026-07-01T18:00:00-05:00
+  end: 2026-07-01T21:00:00-05:00
+  venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
+  summary: "Community demos and networking."
+
+- id: "2026-08-10"
+  title: August Monthly Mixer & Showcase
+  start: 2026-08-10T18:00:00-05:00
+  end: 2026-08-10T21:00:00-05:00
+  venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
+  summary: "Moved from the usual first Wednesday. Thunderstorm-style talks on agentic middleware patterns."
+
+- id: "2026-09-02"
+  title: September Monthly Mixer & Showcase
+  start: 2026-09-02T18:00:00-05:00
+  end: 2026-09-02T21:00:00-05:00
+  venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
+  summary: "Practical demos and short deep-dives on the agentic stack."
+
+- id: "2026-10-05"
+  title: October Monthly Mixer & Showcase
+  start: 2026-10-05T18:00:00-05:00
+  end: 2026-10-05T21:00:00-05:00
+  venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
+  summary: "First Monday-night AIMUG. Talks on semantic routing and mixture of models, Grokbot and the Jev decision model, Harbor evals for coding agents, a spec-driven coding factory, and Corvic AI graph dependency tracing."
+  recap: /blog/october-2026-monthly-meeting-recap/
+  docs: /docs/oct-2026/
+
+- id: "2026-11-02"
+  title: November Monthly Mixer & Showcase
+  start: 2026-11-02T18:00:00-06:00
+  end: 2026-11-02T21:00:00-06:00
+  venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
+  rsvp:
+    luma: https://luma.com/rh5iht5h
+    meetup: https://www.meetup.com/austin-langchain-ai-group/events/ffldbvyjcpbgb/
+  summary: "Short talks, about 15 minutes each, from people building with AI, then the mixer. Free, in person at ACC Rio Grande or online."
+  lineupDate: 2026-10-26T12:00:00-05:00
+  pitchDeadline: 2026-10-26T17:00:00-05:00
+  agenda:
+    - { time: "6:00 PM", label: Networking and welcome }
+    - { time: "6:20 PM", label: Introductions and kickoff }
+    - { time: "6:30 PM", label: "Thunderstorm Talks, about 15 minutes each" }
+    - { time: "7:40 PM", label: Open Q&A }
+    - { time: "8:00 PM", label: Walk to The Tavern for the mixer (optional) }
+
+# On the 2026 schedule; venue and RSVP links not posted yet. The end time follows the Monday format.
+- id: "2026-12-07"
+  title: December Monthly Mixer & Showcase
+  start: 2026-12-07T18:00:00-06:00
+  end: 2026-12-07T21:00:00-06:00
+  venue: { name: Venue to be announced }
+  # Pitches close the Monday before the meetup, 5 PM CT. CST, -06:00.
+  lineupDate: 2026-11-30T12:00:00-06:00
+  pitchDeadline: 2026-11-30T17:00:00-06:00

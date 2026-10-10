@@ -1,0 +1,79 @@
+---
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Mermaid from '../../components/content/Mermaid.astro';
+import { plain, authors, postDay, postImage, posts, tagOf, tags, type Post } from '../../components/content/content';
+
+export async function getStaticPaths() {
+  const all = await posts();
+  return all.map((post, i) => ({
+    params: { slug: post.url.slice('/blog/'.length, -1) },
+    props: { post, newer: all[i - 1], older: all[i + 1] },
+  }));
+}
+const { post, newer, older } = Astro.props as { post: Post; newer?: Post; older?: Post };
+const d = post.entry.data;
+const { Content } = await render(post.entry);
+const people = await authors();
+const byline = d.authors.map((id) => people.get(id)).filter((a) => !!a);
+const tagList = await tags();
+const image = await postImage(post);
+
+// Most posts open with a # heading that repeats the title. Hide it when it does, so the title shows once.
+
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: d.title,
+  datePublished: post.date.toISOString(),
+  author: byline.map((a) => ({ '@type': 'Person', name: a.name, url: a.url })),
+  image: image ? new URL(image, Astro.site).href : undefined,
+  url: new URL(post.url, Astro.site).href,
+};
+---
+<Base title={d.title} description={d.description ?? plain(post.excerpt, 155)} image={image} jsonld={ld}>
+  <article class="mx-auto max-w-[1240px] px-4 pt-12 pb-16 sm:px-8 sm:pt-16">
+    <header class="max-w-[72ch]">
+      <p class="m-0 font-mono text-sm tracking-[0.12em] text-gold uppercase">
+        <a href="/blog/" class="text-gold no-underline hover:text-gold-hi">Recaps</a> · <time datetime={post.date.toISOString().slice(0, 10)}>{postDay(post.date)}</time>
+      </p>
+      <h1 class="mt-3 mb-0 text-[clamp(30px,4vw,48px)] leading-[1.1] font-bold text-text">{d.title}</h1>
+      {byline.length > 0 && (
+        <ul class="m-0 mt-6 flex list-none flex-wrap gap-x-6 gap-y-4 p-0">
+          {byline.map((a) => (
+            <li class="flex items-center gap-3">
+              {a.image_url && <img src={a.image_url} alt="" width="44" height="44" loading="lazy" class="h-11 w-11 rounded-full border border-edge object-cover" />}
+              <span class="flex flex-col leading-tight">
+                <a href={a.href} class="font-bold text-text no-underline hover:text-gold">{a.name}</a>
+                {a.title && <span class="text-sm text-muted">{a.title}</span>}
+              </span>
+            </li>
+          ))}
+        </ul>
+      )}
+      {d.tags.length > 0 && (
+        <ul class="m-0 mt-5 flex list-none flex-wrap gap-2 p-0">
+          {d.tags.map((id) => { const t = tagOf(tagList, id); return <li><a href={t.url} class="inline-flex min-h-[44px] items-center rounded-full border border-edge px-3 font-mono text-xs text-soft uppercase no-underline hover:border-gold hover:text-gold">{t.label}</a></li>; })}
+        </ul>
+      )}
+    </header>
+    <div class="prose-aimug post-body mt-10">
+      <Content />
+    </div>
+    <nav aria-label="More posts" class="mt-16 grid max-w-[72ch] gap-4 sm:grid-cols-2">
+      {newer && (
+        <a href={newer.url} class="rounded-[18px] border border-line bg-panel p-5 text-text no-underline hover:border-gold">
+          <span class="block font-mono text-xs tracking-[0.1em] text-muted uppercase">Newer post</span>
+          <span class="mt-1 block font-bold leading-snug">{newer.entry.data.title}</span>
+        </a>
+      )}
+      {older && (
+        <a href={older.url} class="rounded-[18px] border border-line bg-panel p-5 text-text no-underline hover:border-gold sm:col-start-2">
+          <span class="block font-mono text-xs tracking-[0.1em] text-muted uppercase">Older post</span>
+          <span class="mt-1 block font-bold leading-snug">{older.entry.data.title}</span>
+        </a>
+      )}
+    </nav>
+  </article>
+  <Mermaid />
+</Base>

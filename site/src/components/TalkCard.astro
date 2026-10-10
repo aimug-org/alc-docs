@@ -1,0 +1,24 @@
+---
+import { getEntries } from 'astro:content';
+import { thumb, mmss, fmtDay, now, type Talk } from '../lib/data';
+
+interface Props { talk: Talk; badge?: string; size?: 'lg' | 'sm'; eager?: boolean; hideSpeakers?: boolean }
+const { talk, badge, size = 'lg', eager = false, hideSpeakers = false } = Astro.props;
+const d = talk.data;
+const names = (await getEntries(d.speakers.map((id) => ({ collection: 'speakers' as const, id })))).filter(Boolean).map((s) => s!.data.name);
+const premiere = d.publishAt && d.publishAt > now ? `Premieres ${fmtDay(d.publishAt)}` : undefined;
+const href = premiere ? undefined : `/talks/${talk.id}/`;
+const Tag = href ? 'a' : 'div';
+---
+<Tag href={href} class="group lift flex flex-col gap-3 rounded-[14px] text-text no-underline">
+  <span class="relative block aspect-video overflow-hidden rounded-[14px] plate">
+    <img src={thumb(talk)} alt="" width="640" height="360" loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : undefined} decoding="async" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" />
+    {(premiere || badge) && (
+      <span class:list={['absolute top-2.5 left-2.5 rounded-md px-2.5 py-1 text-sm font-bold uppercase', premiere ? 'border border-gold bg-ink text-gold' : 'bg-gold text-ink']}>{premiere ?? badge}</span>
+    )}
+    {!d.backfill && d.transcript.length > 0 && <span class="absolute bottom-2.5 left-2.5 rounded-md bg-black/80 px-2 py-0.5 font-mono text-sm text-white">Transcript</span>}
+    {d.duration && <span class="absolute right-2.5 bottom-2.5 rounded-md bg-black/80 px-2 py-0.5 font-mono text-sm text-white">{mmss(d.duration)}</span>}
+  </span>
+  <span class:list={['font-bold leading-tight', size === 'lg' ? 'text-[22px]' : 'text-lg']}>{d.title}{d.language === 'es' && <span class="ml-2 inline-block rounded-md border border-gold px-1.5 align-middle font-mono text-xs font-bold text-gold">ES</span>}</span>
+  {!hideSpeakers && <span class="text-base text-muted">{[names.join(', '), d.topics[0]].filter(Boolean).join(' · ')}</span>}
+</Tag>

@@ -1,0 +1,389 @@
+---
+import { getCollection, getEntries } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import TalkCard from '../../components/TalkCard.astro';
+import Player from '../../components/talks/Player.astro';
+import { publicTalks, upcomingTalks, nextEvent, thumb, mmss, fmtDate, fmtDay, fmtTime, eventLd, now, type Talk } from '../../lib/data';
+
+// Pages exist only for public talks; a talk with a future publishAt gets its page on the first rebuild after it.
+export async function getStaticPaths() {
+  return (await publicTalks()).map((talk) => ({ params: { slug: talk.id }, props: { talk } }));
+}
+
+const { talk } = Astro.props as { talk: Talk };
+const d = talk.data;
+const yt = `https://www.youtube.com/watch?v=${d.youtubeId}`;
+const speakerEntries = await getEntries(d.speakers.map((id) => ({ collection: 'speakers' as const, id })));
+const missing = d.speakers.filter((_, i) => !speakerEntries[i]);
+if (missing.length) throw new Error(`Talk "${talk.id}" lists speaker id(s) not in speakers.yaml: ${missing.join(', ')}`);
+const speakers = speakerEntries;
+const next = await nextEvent();
+const rsvp = next?.data.rsvp.luma ?? next?.data.rsvp.meetup;
+const pitchBy = next?.data.pitchDeadline && next.data.pitchDeadline > now ? next.data.pitchDeadline : undefined;
+const btn = 'inline-flex min-h-[44px] items-center rounded-full border border-line px-4 font-semibold no-underline hover:text-gold';
+const sameNight = d.event
+  ? [...(await publicTalks()), ...(await upcomingTalks())].filter((t) => t.data.event === d.event && t.id !== talk.id)
+  : [];
+const shown = new Set([talk.id, ...sameNight.map((t) => t.id)]);
+// Related: other public talks that share a topic (any position), ranked by shared topics, then same speaker, then closest date.
+const mine = new Set(d.topics);
+const sameSpeaker = (t: Talk) => t.data.speakers.some((id) => d.speakers.includes(id));
+const more = (await publicTalks())
+  .filter((t) => !shown.has(t.id))
+  .map((t) => ({ t, n: t.data.topics.filter((x) => mine.has(x)).length }))
+  .filter((x) => x.n > 0)
+  .sort((a, b) => b.n - a.n || +sameSpeaker(b.t) - +sameSpeaker(a.t) || Math.abs(+a.t.data.date - +d.date) - Math.abs(+b.t.data.date - +d.date))
+  .slice(0, d.backfill ? 3 : 2)
+  .map((x) => x.t);
+const pageUrl = new URL(`/talks/${talk.id}/`, Astro.site).href;
+const byline = speakers.map((s) => s.data.name).join(', ');
+const shareLi = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}`;
+const shareX = `https://x.com/intent/post?text=${encodeURIComponent(byline ? `${d.title} by ${byline}` : d.title)}&url=${encodeURIComponent(pageUrl)}`;
+const year = d.date.getUTCFullYear();
+const ev = d.event ? (await getCollection('events')).find((e) => e.id === d.event) : undefined;
+// Archive (backfill) talks are recording-only on the page. Their raw YouTube auto captions aren't reviewed, so they
+// only feed site search, through an attribute Pagefind indexes, and never show as text or structured data.
+const stub = !!d.backfill;
+const showTranscript = !d.backfill && d.transcript.length > 0;
+const recent = stub
+  ? (await publicTalks()).filter((t) => !shown.has(t.id) && !more.some((m) => m.id === t.id)).sort((a, b) => +b.data.date - +a.data.date).slice(0, 3)
+  : [];
+// Transcript lines grouped under the chapter they fall in; lines before the first chapter get no heading.
+const sortedCh = [...d.chapters].sort((a, b) => a.t - b.t);
+const groups: { ch?: (typeof sortedCh)[number]; lines: typeof d.transcript }[] = [];
+if (!sortedCh.length || (d.transcript[0] && d.transcript[0].t < sortedCh[0].t)) groups.push({ lines: [] });
+sortedCh.forEach((ch) => groups.push({ ch, lines: [] }));
+for (const l of d.transcript) {
+  let g = groups[0];
+  for (const x of groups) if (!x.ch || x.ch.t <= l.t) g = x;
+  g.lines.push(l);
+}
+const nonEmpty = groups.filter((g) => g.ch || g.lines.length);
+
+const iso = (s: number) => `PT${Math.floor(s / 3600) ? `${Math.floor(s / 3600)}H` : ''}${Math.floor((s % 3600) / 60)}M${Math.floor(s % 60)}S`;
+const description = d.summary ?? `${d.title}, a talk from AIMUG, the AI Middleware Users Group in Austin.`;
+const metaDescription = description.length <= 160 ? description : `${description.slice(0, 157).replace(/\s+\S*$/, '')}...`;
+const pageHref = new URL(`/talks/${talk.id}/`, Astro.site).href;
+const clips = sortedCh.map((c, i) => {
+  const end = sortedCh[i + 1]?.t ?? d.duration; // endOffset is optional; leave it out when unknown
+  return { '@type': 'Clip', name: c.title, startOffset: c.t, ...(end !== undefined && { endOffset: end }), url: `${pageHref}?t=${c.t}` };
+});
+const { '@context': _ctx, ...recordedAt } = (ev && eventLd(ev)) || ({} as Record<string, unknown>);
+const jsonld = {
+  '@context': 'https://schema.org',
+  '@type': 'VideoObject',
+  name: d.title,
+  description,
+  thumbnailUrl: new URL(thumb(talk), Astro.site).href,
+  uploadDate: (d.publishAt ?? d.date).toISOString(),
+  ...(d.duration && { duration: iso(d.duration) }),
+  embedUrl: `https://www.youtube-nocookie.com/embed/${d.youtubeId}`,
+  url: pageHref,
+  inLanguage: d.language ?? 'en',
+  ...(clips.length && { hasPart: clips }),
+  ...(speakers.length && { creator: speakers.map((x) => ({ '@type': 'Person', name: x.data.name, url: new URL(`/speakers/${x.id}/`, Astro.site).href })) }),
+  ...(ev && eventLd(ev) && { recordedAt }),
+  ...(showTranscript && { transcript: d.transcript.map((l) => l.text).join(' ') }),
+};
+const label = 'm-0 font-mono text-sm tracking-[0.12em] text-gold uppercase';
+const h2 = 'm-0 text-[26px] font-bold';
+---
+<Base title={d.title} description={metaDescription} image={thumb(talk)} jsonld={jsonld} lang={d.language ?? 'en'}>
+  <article class="mx-auto max-w-[1240px] px-4 pt-8 pb-16 sm:px-8">
+    <a href="/talks/" class="font-mono text-sm no-underline" data-pagefind-ignore>← All talks</a>
+
+    <div class="mt-5 grid items-start gap-x-8 gap-y-10 lg:grid-cols-[minmax(0,1fr)_380px]">
+      <div class="flex min-w-0 flex-col gap-4">
+        <Player id={d.youtubeId} title={d.title} image={thumb(talk)} />
+        <p class="m-0 flex flex-wrap gap-x-4 gap-y-1 font-mono text-sm text-muted uppercase" data-pagefind-ignore>
+          <span data-pagefind-filter={`year:${year}`}>{fmtDate(d.date, { year: 'numeric' })}</span>
+          {d.duration && <span>{mmss(d.duration)}</span>}
+          {d.topics.map((t) => <a href={`/talks/?topic=${encodeURIComponent(t)}`} class="text-gold no-underline" data-pagefind-filter="topic">{t}</a>)}
+        </p>
+        <h1 class="m-0 font-display text-[clamp(34px,4.6vw,58px)] leading-[0.98] font-normal break-words uppercase">{d.title}</h1>
+        <p class="m-0 flex flex-wrap items-center gap-x-5 gap-y-1 text-base" data-pagefind-ignore>
+          <span class="font-mono text-sm tracking-[0.12em] text-muted uppercase">Share this talk</span>
+          <a href={shareLi} rel="noopener" class="inline-flex min-h-[44px] items-center font-semibold no-underline">LinkedIn</a>
+          <a href={shareX} rel="noopener" class="inline-flex min-h-[44px] items-center font-semibold no-underline">X</a>
+          <button type="button" data-copy-page class="min-h-[44px] cursor-pointer border-0 bg-transparent p-0 text-base font-semibold text-gold hover:text-gold-hi" hidden>Copy link</button>
+        </p>
+        {speakers.length > 0 && (
+          <p class="m-0 text-xl font-semibold">
+            {speakers.map((s, i) => <>{i > 0 && ', '}<a href={`/speakers/${s.id}/`} class="no-underline">{s.data.name}</a></>)}
+          </p>
+        )}
+        {d.backfill && d.summary && <p class="m-0 font-mono text-sm tracking-[0.12em] text-muted uppercase" data-pagefind-ignore>From the video description</p>}
+        {d.summary && <p class="m-0 max-w-[68ch] text-xl text-soft">{d.summary}</p>}
+        <p class="m-0 flex flex-wrap gap-x-5 gap-y-2 text-base" data-pagefind-ignore>
+          <a href={yt} class="font-bold no-underline">Watch on YouTube</a>
+          {ev && <a href={`/events/#${ev.id}`} class="no-underline">Recorded at AIMUG, {fmtDate(d.date, { year: 'numeric', weekday: undefined })}</a>}
+          {ev?.data.recap && <a href={ev.data.recap} class="no-underline">Recap of the night</a>}
+          {ev?.data.docs && <a href={ev.data.docs} class="no-underline">Slides and notes</a>}
+        </p>
+        {speakers.length === 0 && (
+          <p class="m-0 text-base text-muted" data-pagefind-ignore>Know who gave this talk? <a href={`mailto:speakers@aimug.org?subject=${encodeURIComponent(`Credit: ${d.title}`)}`} class="font-semibold">Tell us.</a></p>
+        )}
+        {stub && (
+          <p class="m-0 text-soft" data-pagefind-ignore>Recording only. A transcript isn't available yet. <a href={yt} class="font-bold">Watch on YouTube</a></p>
+        )}
+        {stub && d.transcript.length > 0 && <span data-pagefind-index-attrs="data-captions" data-captions={d.transcript.map((l) => l.text).join(' ')}></span>}
+      </div>
+
+      {d.chapters.length > 0 && (
+        <aside aria-labelledby="ch-h" class="flex flex-col gap-3 rounded-[18px] border border-line bg-panel p-6 lg:sticky lg:top-4 lg:row-span-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto" data-pagefind-ignore>
+          <h2 id="ch-h" class={label}>Chapters</h2>
+          <ol class="m-0 flex list-none flex-col p-0">
+            {d.chapters.map((c) => (
+              <li class="grid grid-cols-[1fr_auto] items-center gap-2 border-t border-line first:border-t-0">
+                <a href={`${yt}&t=${c.t}s`} data-t={c.t} class="grid min-h-[44px] grid-cols-[60px_1fr] items-center gap-3 py-2.5 text-text no-underline hover:text-gold">
+                  <span class="font-mono text-[15px] text-gold">{mmss(c.t)}</span><span>{c.title}</span>
+                </a>
+                <button type="button" data-copy={c.t} class="min-h-[44px] cursor-pointer rounded-full border-0 bg-transparent px-2 font-mono text-[13px] text-muted hover:text-gold">Copy link</button>
+              </li>
+            ))}
+          </ol>
+        </aside>
+      )}
+
+      {(d.learn.length > 0 || d.links.length > 0 || speakers.length > 0) && (
+        <div class="flex min-w-0 flex-col gap-10 lg:col-start-1">
+          {d.learn.length > 0 && (
+            <section aria-labelledby="learn-h" class="flex flex-col gap-3">
+              <h2 id="learn-h" class={h2}>Takeaways</h2>
+              <ul class="m-0 flex flex-col gap-2.5 pl-5 text-soft marker:text-gold">
+                {d.learn.map((l) => <li>{l}</li>)}
+              </ul>
+            </section>
+          )}
+          {d.links.length > 0 && (
+            <section aria-labelledby="res-h" class="flex flex-col gap-3">
+              <h2 id="res-h" class={h2}>Resources</h2>
+              <ul class="m-0 flex list-none flex-col gap-2 p-0">
+                {d.links.map((l) => <li><a href={l.url} class="font-semibold break-words">{l.label}</a></li>)}
+              </ul>
+            </section>
+          )}
+          {speakers.map((s) => (
+            <section aria-label={`About ${s.data.name}`} class="flex items-center gap-4 rounded-[18px] border border-line bg-panel p-5">
+              {s.data.photo && <img src={s.data.photo} alt="" width="88" height="88" loading="lazy" class="h-[88px] w-[88px] shrink-0 rounded-full object-cover" />}
+              <div class="flex min-w-0 flex-col gap-1">
+                <span class="font-mono text-sm tracking-[0.12em] text-muted uppercase">Speaker</span>
+                <a href={`/speakers/${s.id}/`} class="text-xl font-bold text-text no-underline hover:text-gold">{s.data.name}</a>
+                {(s.data.title || s.data.company) && <span class="text-base text-soft">{[s.data.title, s.data.company].filter(Boolean).join(', ')}</span>}
+                <a href={`/speakers/${s.id}/`} class="text-base no-underline">All talks →</a>
+              </div>
+            </section>
+          ))}
+        </div>
+      )}
+
+      {next && (
+        <aside aria-label="Next meetup" class="flex flex-col gap-3 rounded-[18px] border border-line bg-panel p-5 lg:col-start-1" data-pagefind-ignore>
+          <p class={label}>Next AIMUG</p>
+          <p class="m-0 text-xl font-semibold">{fmtDay(next.data.start)}, {fmtTime(next.data.start)} CT. <span class="font-normal text-soft">Free, in person{next.data.online ? ' or on Zoom, with the link in your RSVP' : ''}.</span></p>
+          <p class="m-0 flex flex-wrap gap-3 text-base">
+            {rsvp && <a href={rsvp} class={btn + ' bg-gold !text-ink hover:!text-ink'}>RSVP</a>}
+            <a href={`/events/${next.id}.ics`} class={btn}>Add to calendar</a>
+            {pitchBy && <a href="/speak/" class={btn}>Pitch a talk by {fmtDay(pitchBy)}</a>}
+          </p>
+        </aside>
+      )}
+
+      {!d.backfill && (
+        <section aria-labelledby="tr-h" class="flex min-w-0 flex-col gap-4 lg:col-start-1">
+          <div class="flex flex-wrap items-end justify-between gap-3">
+            <h2 id="tr-h" class={h2}>Transcript</h2>
+            {d.transcript.length > 0 && <span id="tr-count" class="font-mono text-sm text-muted" data-pagefind-ignore>{d.transcript.length} lines</span>}
+          </div>
+          {d.transcript.length > 0 ? (
+            <>
+              <p class="m-0 text-base text-muted" data-pagefind-ignore>Captions generated automatically from the recording. They may contain errors. <a href={`mailto:speakers@aimug.org?subject=${encodeURIComponent(`Transcript fix: ${d.title}`)}`} class="font-semibold">Suggest a fix</a></p>
+              <label for="tr-q" class="sr-only">Filter the transcript</label>
+              <input id="tr-q" type="search" placeholder="Filter the transcript" class="min-w-0 rounded-[14px] border-2 border-edge bg-ink px-4 py-3 text-lg text-text placeholder:text-muted" data-pagefind-ignore />
+              <div id="tr" class="flex flex-col rounded-[14px] border border-line">
+                {nonEmpty.map((g) => (
+                  <div data-g class="border-b border-line last:border-b-0">
+                    {g.ch && (
+                      <h3 id={`t-${g.ch.t}`} class="m-0 scroll-mt-4 bg-panel px-4 py-2 text-base font-bold text-gold"><span class="mr-2 font-mono text-sm text-muted" data-pagefind-ignore>{mmss(g.ch.t)}</span>{g.ch.title}</h3>
+                    )}
+                    <ol class="m-0 flex list-none flex-col p-0">
+                      {g.lines.map((l) => (
+                        <li class="grid grid-cols-[64px_1fr_auto] items-center gap-3 border-t border-line px-4 py-0.5 first:border-t-0">
+                          <a href={`${yt}&t=${l.t}s`} data-t={l.t} class="inline-flex min-h-[44px] items-center font-mono text-[15px] no-underline" data-pagefind-ignore>{mmss(l.t)}</a>
+                          <span class="text-soft">{l.text}</span>
+                          <button type="button" data-quote class="min-h-[44px] cursor-pointer border-0 bg-transparent px-1 font-mono text-[13px] text-muted hover:text-gold" aria-label={`Quote the line at ${mmss(l.t)}`} data-pagefind-ignore>Quote</button>
+                        </li>
+                      ))}
+                    </ol>
+                  </div>
+                ))}
+              </div>
+              <p id="tr-none" class="m-0 text-muted" hidden>No lines match.</p>
+            </>
+          ) : (
+            <p class="m-0 text-soft">Transcript coming.</p>
+          )}
+        </section>
+      )}
+    </div>
+
+    {showTranscript && (
+      <dialog id="qd" aria-label="Quote card" class="m-auto w-[min(92vw,calc(76vh*0.8),480px)] overflow-visible border-0 bg-transparent p-0 text-text backdrop:bg-ink/80" data-pagefind-ignore="all" data-title={d.title} data-slug={talk.id} data-who={speakers.length ? new Intl.ListFormat('en', { type: 'conjunction' }).format(speakers.map((sp) => sp.data.name)) : 'AIMUG'} data-photo={speakers.length === 1 ? speakers[0].data.photo ?? '' : ''}>
+        <div class="flex aspect-[4/5] flex-col gap-4 overflow-hidden rounded-[18px] border border-line bg-panel p-6">
+          <p class="m-0 font-mono text-sm tracking-[0.12em] text-gold uppercase" data-qt></p>
+          <blockquote class="m-0 flex min-h-0 flex-1 items-center overflow-hidden font-display leading-[1.12] uppercase" data-qx></blockquote>
+          <div class="flex items-center gap-3">
+            <img data-qp alt="" width="48" height="48" class="h-12 w-12 shrink-0 rounded-full object-cover" hidden />
+            <div class="min-w-0"><p class="m-0 font-bold" data-qw></p><p class="m-0 text-sm text-soft" data-qh></p></div>
+          </div>
+          <p class="m-0 font-mono text-sm text-muted" data-qu></p>
+        </div>
+        <div class="mt-3 flex justify-center gap-3">
+          <button type="button" data-qc class="min-h-[44px] cursor-pointer rounded-full border-0 bg-gold px-5 font-semibold text-ink">Copy link</button>
+          <button type="button" data-qk class="min-h-[44px] cursor-pointer rounded-full border border-line bg-transparent px-5 font-semibold text-text">Close</button>
+        </div>
+      </dialog>
+    )}
+
+    <span id="copied" class="sr-only" aria-live="polite"></span>
+
+    {sameNight.length > 0 && (
+      <section aria-labelledby="night-h" class="mt-16 flex flex-col gap-6" data-pagefind-ignore="all">
+        <h2 id="night-h" class="m-0 font-display text-[clamp(32px,4vw,48px)] leading-none font-normal uppercase">Same night</h2>
+        <div class="grid grid-cols-[repeat(auto-fill,minmax(min(100%,260px),1fr))] gap-6">
+          {sameNight.map((t) => <TalkCard talk={t} size="sm" />)}
+        </div>
+      </section>
+    )}
+    {more.length > 0 && (
+      <section aria-labelledby="more-h" class="mt-16 flex flex-col gap-6" data-pagefind-ignore="all">
+        <h2 id="more-h" class="m-0 font-display text-[clamp(32px,4vw,48px)] leading-none font-normal uppercase">Related talks</h2>
+        <div class="grid grid-cols-[repeat(auto-fill,minmax(min(100%,260px),1fr))] gap-6">
+          {more.map((t) => <TalkCard talk={t} size="sm" />)}
+        </div>
+      </section>
+    )}
+    {recent.length > 0 && (
+      <section aria-labelledby="recent-h" class="mt-16 flex flex-col gap-6" data-pagefind-ignore="all">
+        <h2 id="recent-h" class="m-0 font-display text-[clamp(32px,4vw,48px)] leading-none font-normal uppercase">Recent talks</h2>
+        <div class="grid grid-cols-[repeat(auto-fill,minmax(min(100%,260px),1fr))] gap-6">
+          {recent.map((t) => <TalkCard talk={t} size="sm" />)}
+        </div>
+      </section>
+    )}
+  </article>
+  <script is:inline>
+    (() => {
+      const b = document.querySelector('[data-copy-page]');
+      if (!b || !navigator.clipboard) return;
+      b.hidden = false;
+      b.addEventListener('click', () => {
+        navigator.clipboard.writeText(location.origin + location.pathname).then(() => { b.textContent = 'Copied'; setTimeout(() => { b.textContent = 'Copy link'; }, 2000); }, () => {});
+      });
+    })();
+  </script>
+  <script is:inline>
+    (() => {
+      const q = document.getElementById('tr-q');
+      if (!q) return;
+      const rows = [...document.querySelectorAll('#tr li')];
+      const spans = rows.map((r) => r.children[1]);
+      const orig = spans.map((s) => s.textContent);
+      const groups = [...document.querySelectorAll('#tr [data-g]')];
+      const count = document.getElementById('tr-count');
+      const none = document.getElementById('tr-none');
+      const run = () => {
+        const s = q.value.trim().toLowerCase();
+        let n = 0;
+        rows.forEach((r, i) => {
+          const low = orig[i].toLowerCase();
+          const at = s ? low.indexOf(s) : -1;
+          const hit = !s || at >= 0;
+          r.hidden = !hit;
+          if (!hit) return;
+          n++;
+          const sp = spans[i];
+          if (!s) { sp.textContent = orig[i]; return; }
+          const frag = document.createDocumentFragment();
+          let from = 0;
+          for (let k = at; k >= 0; k = low.indexOf(s, from)) {
+            frag.append(orig[i].slice(from, k));
+            const m = document.createElement('mark');
+            m.textContent = orig[i].slice(k, k + s.length);
+            frag.append(m);
+            from = k + s.length;
+          }
+          frag.append(orig[i].slice(from));
+          sp.replaceChildren(frag);
+        });
+        groups.forEach((g) => { g.hidden = !!s && !g.querySelector('li:not([hidden])'); });
+        count.textContent = s ? `${n} of ${rows.length} lines` : `${rows.length} lines`;
+        none.hidden = n > 0;
+        const u = new URL(location.href);
+        s ? u.searchParams.set('q', q.value.trim()) : u.searchParams.delete('q');
+        history.replaceState(null, '', u);
+      };
+      q.addEventListener('input', run);
+      const init = new URLSearchParams(location.search).get('q');
+      if (init) { q.value = init; run(); }
+    })();
+  </script>
+  <script is:inline>
+    (() => {
+      const dlg = document.getElementById('qd');
+      if (!dlg) return;
+      const $ = (k) => dlg.querySelector(`[data-${k}]`);
+      const fmt = (s) => {
+        const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), p = (n) => String(n).padStart(2, '0');
+        return h ? `${h}:${p(m)}:${p(s % 60)}` : `${m}:${p(s % 60)}`;
+      };
+      let from = null, link = '';
+      const open = (li, trigger) => {
+        const t = Number(li.querySelector('a[data-t]').dataset.t);
+        const text = li.children[1].textContent;
+        const path = `/talks/${dlg.dataset.slug}/`;
+        link = `${location.origin}${path}?quote=${t}`;
+        $('qt').textContent = 'AIMUG talk';
+        const x = $('qx');
+        x.textContent = text;
+        x.style.fontSize = text.length > 300 ? '18px' : text.length > 120 ? '23px' : text.length > 60 ? '30px' : '40px';
+        $('qw').textContent = dlg.dataset.who;
+        $('qh').textContent = `${dlg.dataset.title}, ${fmt(t)}`;
+        $('qu').textContent = `aimug.org${path}?t=${t}`;
+        const img = $('qp');
+        img.hidden = !dlg.dataset.photo;
+        if (dlg.dataset.photo) img.src = dlg.dataset.photo;
+        from = trigger;
+        dlg.showModal();
+        $('qk').focus();
+      };
+      document.addEventListener('click', (e) => {
+        const b = e.target.closest('[data-quote]');
+        if (b) open(b.closest('li'), b);
+      });
+      $('qk').addEventListener('click', () => dlg.close());
+      dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+      dlg.addEventListener('close', () => { if (from) from.focus(); });
+      $('qc').addEventListener('click', (e) => {
+        const b = e.currentTarget;
+        const done = () => { b.textContent = 'Copied'; setTimeout(() => { b.textContent = 'Copy link'; }, 2000); };
+        const fallback = () => {
+          const ta = document.createElement('textarea');
+          ta.value = link;
+          dlg.append(ta);
+          ta.select();
+          let ok = false;
+          try { ok = document.execCommand('copy'); } catch (_) {}
+          ta.remove();
+          ok ? done() : (b.textContent = link);
+        };
+        navigator.clipboard ? navigator.clipboard.writeText(link).then(done, fallback) : fallback();
+      });
+      const q = new URLSearchParams(location.search).get('quote');
+      if (q) {
+        const a = [...document.querySelectorAll('#tr a[data-t]')].find((x) => x.dataset.t === q);
+        if (a) { const li = a.closest('li'); open(li, li.querySelector('[data-quote]')); }
+      }
+    })();
+  </script>
+</Base>

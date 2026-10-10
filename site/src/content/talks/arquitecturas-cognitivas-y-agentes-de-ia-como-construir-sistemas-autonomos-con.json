@@ -1,0 +1,504 @@
+{
+  "title": "Arquitecturas Cognitivas y Agentes de IA: Cómo Construir Sistemas Autónomos con LangGraph",
+  "speakers": [],
+  "date": "2026-02-19",
+  "youtubeId": "-T3FGOM9R9s",
+  "duration": 1402,
+  "summary": "El consumado ingeniero de IA y desarrollador full-stack Juan Francisco Iturbe habla sobre el desarrollo de la IA durante la reunión de Panamá AI/MUG el 21 de enero de 2026.",
+  "topics": [
+    "LangGraph",
+    "Agents"
+  ],
+  "transcript": [
+    {
+      "t": 0,
+      "text": "Mi presentación no hecha con inteligencia artificial."
+    },
+    {
+      "t": 4,
+      "text": "Bueno, mi nombre es Juan Iturbe. Yo este soy de hecho artista técnico, vengo del mundo de la programación gráfica"
+    },
+    {
+      "t": 16,
+      "text": "inicialmente y a finales del 2021 empezó todo el tema de GAN y stable diffusion y estos modelos a salir a a revolucionar un poquito la"
+    },
+    {
+      "t": 30,
+      "text": "parte gráfica. De hecho, todavía no había salido Chuck PT1. Estaba el modelo de Da Vinci solamente andando y me di cuenta que las cosas iban a empezar a cambiar seriamente"
+    },
+    {
+      "t": 43,
+      "text": "porque en ese momento tú simplemente cargabas un modelo dentro de un Google Col y podías correr los modelos para generar imágenes, para generar este"
+    },
+    {
+      "t": 55,
+      "text": "lo que ahorita se ha vuelto normal para todo el mundo, ¿no? Entonces, un poco por ahí empezó mi aventura de entender cómo funcionaba esto"
+    },
+    {
+      "t": 68,
+      "text": "y me he venido enfocando ya el último año en este tema de agentes, pero no solo en mira cómo los uso para hacer más códigos, sino en qué es realmente un"
+    },
+    {
+      "t": 81,
+      "text": "agente, ¿no? si estos agentes existen, pero ¿quién está construyendo la gente y de dónde vienen estas ideas como Ralph Wom o como el framework React de Reasoning Act? O"
+    },
+    {
+      "t": 95,
+      "text": "sea, si pensamos en que este nuevo mundo con con inteligencia artificial mueve a los productos,"
+    },
+    {
+      "t": 108,
+      "text": "¿a dónde mueve a los desarrolladores? No, porque no mueve a los desarrolladores a product managers. ¿no?"
+    },
+    {
+      "t": 114,
+      "text": "O sea, alguien aquí ha escuchado el término de arquitecturas cognitivas."
+    },
+    {
+      "t": 120,
+      "text": "Sí. Entonces esa es un poco la idea. Yo creo que siempre vamos a necesitar humanos que piensen en ese nuevo look que se necesita. Y ahora eh con lo que"
+    },
+    {
+      "t": 132,
+      "text": "está haciendo Cloud, con el work, con el Cloud Work, que es este agente generalista, eh porque el primer lugar en donde han tenido éxito los verdaderos agentes, digamos, es en en el área del código."
+    },
+    {
+      "t": 147,
+      "text": "Pero si tú le preguntas a una persona normal, común, qué es un agente, no te vas a saber decir que es una agente, ¿no? Entonces, incluyo para los"
+    },
+    {
+      "t": 159,
+      "text": "desarrolladores es complicado eh diferenciar entre, \"Okay, estoy usando un agente, pero el agente es el modelo o es lo que"
+    },
+    {
+      "t": 172,
+      "text": "hizo el humano, que hace que se comporte el modelo de esa forma, ¿no? Eso es la arquitectura cognitiva."
+    },
+    {
+      "t": 180,
+      "text": "esto que estábamos hablando de specs o RIP o simplemente loop de React, esas son las arquitecturas en las que tiramos a un modelo, no importa qué modelo sea,"
+    },
+    {
+      "t": 193,
+      "text": "y le damos un framework de esto es lo que debes hacer primero. Debes pensar, debes poder llamar una herramienta, si la recibes de vuelta, debes poder redactar información y sacarla de de de"
+    },
+    {
+      "t": 206,
+      "text": "de eso. Entonces, mi punto es, ¿cómo construimos un cloud? ¿Cómo construimos ah un curso y no tanto cómo lo"
+    },
+    {
+      "t": 218,
+      "text": "utilizamos para mejorar nuestra práctica. Entonces, básicamente podemos definir un agente por lo que no es un agente también, ¿no? Y un agente no es un prompt, no es un prompting. No"
+    },
+    {
+      "t": 231,
+      "text": "importa si yo le digo a la gente instrucciones claras dentro de mi prompt."
+    },
+    {
+      "t": 237,
+      "text": "Eh, si yo no tengo esta arquitectura cognitiva alrededor de la gente, esas instrucciones se van a perder en el prom y apenas empieces a hablar con él, él va"
+    },
+    {
+      "t": 249,
+      "text": "a dejar eso atrás. Y un agente tampoco es un workflow, o sea, tampoco yo puedo definir paso uno, paso dos, paso tres y el modelo siempre debe hacer estos pasos"
+    },
+    {
+      "t": 261,
+      "text": "porque entonces lo que tendríamos sería un programa tradicional, ¿no?"
+    },
+    {
+      "t": 265,
+      "text": "Básicamente un chatbot de WhatsApp. Entonces, si pudieran decir en una palabra qué diferencia a un chatbot de WhatsApp"
+    },
+    {
+      "t": 278,
+      "text": "o un programa tradicional de un agente, ¿qué palabra elegirían? Una sola palabra, alguien."
+    },
+    {
+      "t": 285,
+      "text": "Agencia. Agencia. Okay. Decisiones."
+    },
+    {
+      "t": 289,
+      "text": "Exactamente. Entonces, el punto de la gente es que le podemos dar ahora a este programa autonomía. Podemos simular inteligencia con el LM, con el modelo,"
+    },
+    {
+      "t": 301,
+      "text": "¿verdad? Y se lo tiramos a esta construcción arquitectónica de nosotros, ¿okay? Para balancear estas dos cosas. autonomía del programa versus"
+    },
+    {
+      "t": 314,
+      "text": "control, ¿no? Porque eh teóricamente suena muy bonito el framework React, por ejemplo, eh cada vez que el Ll haga una llamada, un tool,"
+    },
+    {
+      "t": 326,
+      "text": "yo regreso el contexto al LLM. ¿Qué pasa si el modelo se confunde y llama el tool? El tool no funciona y lo vuelve a llamar y lo vuelve a llamar y lo vuelve a llamar. él puede caer en un"
+    },
+    {
+      "t": 339,
+      "text": "loop infinito. Entonces el Llm como tal no va a tener la capacidad de hacer el DO y tener una definición de listo en"
+    },
+    {
+      "t": 351,
+      "text": "mis para eso necesitamos control tradicional."
+    },
+    {
+      "t": 356,
+      "text": "Entonces, este, dentro de este mundo de desarrollo, uno de los frameworks que se está posicionando como el React del"
+    },
+    {
+      "t": 369,
+      "text": "ecosistema, ¿no? Se llama launching y Lang."
+    },
+    {
+      "t": 374,
+      "text": "Son dos framewors de eh uno es el high level, abstracciones del LLM y el otro landraph es las unidades básicas con el que podemos realmente construir un"
+    },
+    {
+      "t": 388,
+      "text": "agente como cloud, un agente como y funciona eh eh acercando estas dos grandes ideas de"
+    },
+    {
+      "t": 403,
+      "text": "autonomía. y control, ¿no? Entonces, en el flujo tradicional, ¿no? Son flujos que son repetibles, que son fiables, que yo sé que un output me va a generar eh un input me va a generar un output, pero"
+    },
+    {
+      "t": 416,
+      "text": "los ll son no deterministas por naturaleza. Si yo le doy el mismo input, él me va a dar un output diferente cada vez."
+    },
+    {
+      "t": 424,
+      "text": "Aquí es donde entra Lineraft a a proveer el verdadero framework para construcción de este tipo de de programas y aplicación. Entonces, podemos decir que un un agente es un"
+    },
+    {
+      "t": 437,
+      "text": "sistema que va a cambiar su comportamiento de forma autónoma utilizando un modelo como inteligencia."
+    },
+    {
+      "t": 446,
+      "text": "Fíjate que son dos cosas muy diferentes."
+    },
+    {
+      "t": 450,
+      "text": "El eh las diferencias que tú hablabas ahorita entre cómo se comporta un agente, lo que llamaban un arnés, ¿no?, que es eh un cursor versus copiler."
+    },
+    {
+      "t": 464,
+      "text": "Estoy en dos ambientes diferentes, los modelos son diferentes, pero lo más clave para por qué uno se está perdiendo, por qué el otro te está"
+    },
+    {
+      "t": 476,
+      "text": "funcionando mejor, no es el modelo, es el framework cognitivo, es su system prompt, es el loop cognitivo que él está"
+    },
+    {
+      "t": 488,
+      "text": "ejecutando cada vez que tú haces pronto, ¿no?"
+    },
+    {
+      "t": 493,
+      "text": "Entonces, ¿cuál es el problema de la autonomía? Que tenemos una ventana limitada de contexto, como lo que estábamos hablando ahorita, ¿no? Entonces, ahorita hay un nuevo horizonte que es, ¿qué tanto"
+    },
+    {
+      "t": 506,
+      "text": "tiempo podemos dejar una gente corriendo haciendo tareas? ¿no? Y cada 3 cu meses está prácticamente duplicando el tiempo que estos agentes pueden salir a trabajar solos, ¿no? Entonces, a mayor"
+    },
+    {
+      "t": 520,
+      "text": "autonomía tenemos que tener una arquitectura cognitiva que me permita hacer estrategias como compación."
+    },
+    {
+      "t": 528,
+      "text": "resumen, ¿no? Este, las decisiones de ese eh agente si no tienes determinismo entre tu programa, son totalmente"
+    },
+    {
+      "t": 540,
+      "text": "arbitrarios. Eh, con si tú pones, por ejemplo, Business Logic dentro de un Chrome, en lo que cambia el modelo, ya tu programa no es el mismo. ¿Me explico? Entonces, tenemos"
+    },
+    {
+      "t": 554,
+      "text": "que balancear estas dos cosas, autonomía y control."
+    },
+    {
+      "t": 559,
+      "text": "y ahí es donde entra realmente el trabajo, como yo lo veo, de lo que queremos desarrollar inteligencia artificial a nivel de la implementación de la vida. Yo siento que no estamos en"
+    },
+    {
+      "t": 574,
+      "text": "un mundo en el que una empresa el día de mañana va a tener que contratar cloud para acceder a las capacidades de una gente como Clud."
+    },
+    {
+      "t": 585,
+      "text": "Yo siento que muchas o que el futuro se ve más como empresas grandes van a desarrollar sus profesores internamente. Está específicamente diseñado con una arquitectura cognitiva para su uso"
+    },
+    {
+      "t": 599,
+      "text": "interno delamiento, ¿no? Entonces, ¿por qué existe el anf existe precisamente para darte balance entre autonomía y el control?"
+    },
+    {
+      "t": 614,
+      "text": "Este en LRF eh, tienes un run time, un run time que está hecho desde cero para ser durable, para resistir a errores y para correr tu"
+    },
+    {
+      "t": 630,
+      "text": "aplicación de inteligencia artificial por largos periodos de tiempo."
+    },
+    {
+      "t": 636,
+      "text": "Y funciona en cuatro pilares. tienes un estado que es básicamente como un sustance store de una aplicación de real, ¿no? Es un gran diccionario en Python, por ejemplo, en donde tienes key"
+    },
+    {
+      "t": 649,
+      "text": "value pair y funcionan como una como una scratchpad de la aplicación, ¿no? Aquí yo puedo mantener sacar de mi ventana de contexto cosas como por ejemplo eh"
+    },
+    {
+      "t": 663,
+      "text": "información sobre un usuario, ¿sí? y extraerlas al estado de la operación."
+    },
+    {
+      "t": 669,
+      "text": "Entonces, LRAS te da esta estructura de estado, te da nodos que son básicamente funciones puras que van a multar tu estado. Entonces, tú tienes un estado en el que, por ejemplo, existe una rey y en"
+    },
+    {
+      "t": 683,
+      "text": "ese rey existen mensajes y ahí se guardan los mensajes del humano, de la gente, de los tulos."
+    },
+    {
+      "t": 690,
+      "text": "Entonces, yo puedo eh dentro de estos nodos manipular ese estado y actualizarlo. ¿Okay?"
+    },
+    {
+      "t": 700,
+      "text": "Eh, los nodos se conectan entre sí con estas aristas, ¿no?, que pueden ser direccionales, o sea, paso uno, paso dos o condicionales. Paso uno, pero en el"
+    },
+    {
+      "t": 713,
+      "text": "medio de eso, eh, hago alguna condición. si la condición es verdadera, hago branching a uno o al otro. Y con estas cuatro ideas eh se están construyendo entonces"
+    },
+    {
+      "t": 728,
+      "text": "todas estas arquitecturas cognitivas de las que estábamos conversando ahorita, React, Spec Driven, Ralph Wigon, todos son realmente una arquitectura cognitiva que la podemos poner eh en este aspecto."
+    },
+    {
+      "t": 744,
+      "text": "al a la izquierda totalmente tenemos software tradicional."
+    },
+    {
+      "t": 750,
+      "text": "Este, básicamente el flujo es totalmente controlado por el humano. Tienes paso A, paso B, eh puedes hacer cosas como paralelización,"
+    },
+    {
+      "t": 762,
+      "text": "pero esto no es nada nuevo, como te digo, es el desarrollo de todos los días. Y por el otro lado tenemos teóricamente el agente, ¿no? Y en e en esta forma eh más básica, digo"
+    },
+    {
+      "t": 776,
+      "text": "teóricamente porque de nuevo tiene muchos problemas, ¿no? Es un loop y ese loop no tiene ninguna condición de terminación, ¿no? La condición puede estar simplemente en en el system"
+    },
+    {
+      "t": 788,
+      "text": "prompt. Entonces él va a continuar, continuar, continuar."
+    },
+    {
+      "t": 792,
+      "text": "En el medio es donde empiezan a nacer todos estos productos como Cloud Code y Codex y este todos los otros coding agents de ahora."
+    },
+    {
+      "t": 804,
+      "text": "Eh, este medio es como controlo a un agente generando entonces un framework alrededor de él que sea específicamente para mi tazo de uso, ¿no? Entonces, aquí"
+    },
+    {
+      "t": 818,
+      "text": "es donde yo puedo tener un orquestrador, puedo empezar a pensar en subagentes."
+    },
+    {
+      "t": 824,
+      "text": "Entonces, yo puedo tener un sistema multiagentes donde un agente decida eh enviarle eh una unidad de trabajo a otro agente y espera una respuesta o pueden"
+    },
+    {
+      "t": 836,
+      "text": "ser asíncrono en donde ese dispara un trabajo como lo que pasa en subs, ¿no?"
+    },
+    {
+      "t": 844,
+      "text": "Eh, entonces dentro de este espectro entre software tradicional y autonomía total, es donde se sienta eh"
+    },
+    {
+      "t": 858,
+      "text": "este framework que nos permite diseñar entonces flujos de inteligencia artificial visualmente en no visualmente más no en no low code o no code. O sea,"
+    },
+    {
+      "t": 873,
+      "text": "esto es básicamente un una representación visual del grafo que tú estás eh trabajando, pero el framework es en código. El framework está en ambos, en Python y en TypeScript."
+    },
+    {
+      "t": 885,
+      "text": "Ahora están empezando a a sacar un editor visual en el que te permite, digamos que rápidamente hacer estos agentes simples, eh, que si se conectan"
+    },
+    {
+      "t": 897,
+      "text": "un slack o que pueden escuchar. Entonces, se están se está comodizando, digamos, el uso en general de un agente sencillo y empieza a volverse la carrera"
+    },
+    {
+      "t": 913,
+      "text": "de quién tiene una arquitectura cognitiva más inteligente, más interesante, este, más creativa. Porque si tú piensas y y eso es una de las cosas que me ha"
+    },
+    {
+      "t": 925,
+      "text": "llamado mucho la atención, es que por ejemplo el el esta última idea de Ralph Will, eh a alguien se le tiene que haber este a alguien se le tiene que haber ocurrido"
+    },
+    {
+      "t": 938,
+      "text": "la idea de, ey, ¿por qué no limpiamos la ventana de contexto cada vez que una tarea está lista? Y en vez de tener un sistema de memoria, no sé, con R, tenemos simplemente un archivo de Nv y"
+    },
+    {
+      "t": 952,
+      "text": "esa arquitectura como tal ahora la están llamando Deep Agency. Y Deep Agents son estos agentes que corren en tu computador y que tienen acceso a tu máquina. Entonces, pueden leer y"
+    },
+    {
+      "t": 965,
+      "text": "escribir archivos. Básicamente cada vez que estás usando cloud code o estás utilizando esta arquitectura de agent. Entonces estas son implementaciones eh directamente en Lraph de esas tres"
+    },
+    {
+      "t": 980,
+      "text": "ideas, ¿no? Aquí está un workflow 100% tradicional, pero con inteligencia artificial, en donde eh entra un request. El request básicamente es"
+    },
+    {
+      "t": 992,
+      "text": "clasificado por un LM y ese esta clasificación de hecho se los puedo mostrar uno."
+    },
+    {
+      "t": 1017,
+      "text": "Langraf viene con su propio entorno de desarrollo, que es este entorno que ven aquí. Entonces, básicamente yo aquí tengo estos agentes"
+    },
+    {
+      "t": 1030,
+      "text": "que que he estado desarrollando y este es esta primera idea de un agente o un workflow tradicional y muchas aplicaciones de inteligencia artificial hoy dicen o creen que tienen un agente y"
+    },
+    {
+      "t": 1043,
+      "text": "lo que tienen es un workflow parecido a esto, ¿no? Un workflow en el que pasan cosas específicas aunque tenga inteligencia artificial. Entonces, si yo le digo aquí les ponemos cualquier"
+    },
+    {
+      "t": 1055,
+      "text": "información, solo para hacer una prueba y le digo que hay un formulario roto, él entonces está haciendo la clasificación del request y aquí ves"
+    },
+    {
+      "t": 1067,
+      "text": "visualmente puedes ver qué está haciendo la aplicación en cada uno de los pasos que tú estás radio. Entonces, eh él hizo la clasificación y aquí respondió que"
+    },
+    {
+      "t": 1080,
+      "text": "fíjate eh lo que yo le digo que el form está roto en la página web es un bog lo clasifica eh correctamente."
+    },
+    {
+      "t": 1089,
+      "text": "Y luego entonces déjame hacer aquí un resumen más sencillo que entonces el request entra y aquí en este primer nodo eh"
+    },
+    {
+      "t": 1103,
+      "text": "actualmente no está pasando nada, pero digamos que entra este request y en el request que puede ser un llamado en su viene el correo de la persona que me está mandando un request, ¿no? Yo puedo"
+    },
+    {
+      "t": 1115,
+      "text": "utilizar ese correo para buscar información sobre esa persona en mi base de datos y en este paso de la aplicación enriquecerle eso al antes de que se lo pase de vuelta, ¿no? Este, él luego hace"
+    },
+    {
+      "t": 1126,
+      "text": "su clasificación de la clasificación en paralelo. Entonces puedes hacer este fin out de tantas tareas tú quieras. él hace, él loguea un bug en eh en un API"
+    },
+    {
+      "t": 1141,
+      "text": "eh falso en este momento y busca supuestamente la documentación. La documentación le está arrojando entonces documento uno, documento dos y documento tres. Él pasa al nuevo al al otro paso"
+    },
+    {
+      "t": 1153,
+      "text": "en donde escribe un draft de esta respuesta. Y aquí es donde está bien interesante que este framework te provee todas las herramientas listas para hacer un agente completo. Fíjate que él me"
+    },
+    {
+      "t": 1164,
+      "text": "está diciendo me review. Entonces, según la clasificación, yo le estoy diciendo a la gente, ey, si esto es un bug o si esto es un problema, yo necesito que tú me preguntes a mí antes de ejecutar tu"
+    },
+    {
+      "t": 1179,
+      "text": "acción final. Y aquí es donde él me está preguntando, eh, ¿qué quieres que que hagamos con esto? Y en este film de Jason, yo le puedo decir, aprueba, no apruebes o cambias totalmente tu"
+    },
+    {
+      "t": 1190,
+      "text": "dirección. Esto es un workflow eh que por más que tenga inteligencia artificial eh sigue siendo más cercano al desarrollo tradicional que a un verdadero agente, ¿no? Y por otro lado, entonces tenemos"
+    },
+    {
+      "t": 1207,
+      "text": "este este grafo que es teoric o teóricamente lo que nos estaba comentando Rolando. Este es el loop de React. Cada vez que entra un request,"
+    },
+    {
+      "t": 1219,
+      "text": "llamamos al modelo, el modelo puede decidir si llama una herramienta o no y luego esa respuesta se regresa al mundo."
+    },
+    {
+      "t": 1227,
+      "text": "Pero, ¿qué pasa? Que lo que yo les estaba comentando, tenemos problemas de que no hay no hay fiabilidad y este no tenemos carbs, como se llama. Entonces,"
+    },
+    {
+      "t": 1240,
+      "text": "con las grafas podemos combinar ambas cosas y entonces tener un proceso como este en el que entonces yo tengo nodos específicos como este router y este human decision que son pasos que siempre"
+    },
+    {
+      "t": 1256,
+      "text": "mi agente debe tomar y dentro de este flow yo tengo también entonces un loop de un agente en reality, ¿no? Entonces aquí eh el request va a entrar primero."
+    },
+    {
+      "t": 1269,
+      "text": "Y fíjense cuál es la diferencia. Si yo le digo, yo le estoy diciendo aquí la misma pregunta de forma"
+    },
+    {
+      "t": 1282,
+      "text": "un poquito diferente. Él ahorita está clasificando y él decide inmediatamente."
+    },
+    {
+      "t": 1287,
+      "text": "Eh, esto es un bow y es un bow por esta razón. los reportes están reportando que está eh dañado el font, ¿qué debo hacer?"
+    },
+    {
+      "t": 1296,
+      "text": "¿No? Entonces, ¿qué es lo interesante de en esto? Aquí yo le puedo decir, por ejemplo, mira, yo te quiero dar feedback y Langraf, ¿qué está haciendo en este momento? Está pausando totalmente la"
+    },
+    {
+      "t": 1306,
+      "text": "ejecución de tu programa. Esto puede ser una interrupción que yo le mando al usuario un correo y él mañana logre y el grafo sigue en este punto. Entonces, tú"
+    },
+    {
+      "t": 1320,
+      "text": "puedes resumir el workflow cuando tú quieras, ¿no? Entonces, si yo le digo que aquí el feedback, por ejemplo, le voy a decir traduce todo a español"
+    },
+    {
+      "t": 1335,
+      "text": "y al darle vision, él entonces va a tomar mi feedback en consideración antes de ejecutar el agente. Él ahorita está mandándole la información del tri router y mi feedback a la gente. Entonces,"
+    },
+    {
+      "t": 1350,
+      "text": "esta es un poco la idea de cómo funcionan realmente estos coding agents detrás de cámaras, ¿no? Hay unidades de código específicas que les están diciendo cuándo deben hacer una cosa u"
+    },
+    {
+      "t": 1363,
+      "text": "otra, que no necesariamente viven en el que no necesariamente tienen nada que ver con un modelo de de inteligencia artificial. son programación pura y dura desde que me va"
+    },
+    {
+      "t": 1376,
+      "text": "a ayudar a mí a guiar a la gente hasta que haga lo que yo quiera que diga."
+    },
+    {
+      "t": 1382,
+      "text": "Porque de nuevo, si nos vamos a un workflow 100% definido por mí, no tenemos inteligencia y si nos vamos a full inteligencia tenemos sistemas que se rompen. Entonces"
+    },
+    {
+      "t": 1395,
+      "text": "ahí de eso se trata."
+    },
+    {
+      "t": 1399,
+      "text": "¿Alguna pregunta? Hm."
+    }
+  ],
+  "language": "es",
+  "backfill": true
+}

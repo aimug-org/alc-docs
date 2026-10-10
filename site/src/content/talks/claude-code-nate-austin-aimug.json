@@ -1,0 +1,1123 @@
+{
+  "title": "Claude Code - Nate",
+  "speakers": [],
+  "date": "2025-08-27",
+  "event": "2025-08-14",
+  "youtubeId": "dYHaCTUPjxs",
+  "duration": 2704,
+  "summary": "Nate shares his Claude Code setup with the group in our August Showcase",
+  "topics": [
+    "Coding agents"
+  ],
+  "transcript": [
+    {
+      "t": 8,
+      "text": "So quick question before I get started. How many who I mean some kind of sort of like curs"
+    },
+    {
+      "t": 22,
+      "text": "this everything I'm going to talk about here since I'm using clock code as an example but it can be applied to pretty much anytime similar to lake train like any kind of flip it's actually very"
+    },
+    {
+      "t": 37,
+      "text": "accessible to set I think it's like let's see what we walk through. It's just how light on software development but it's more broad. Um I've in the last couple"
+    },
+    {
+      "t": 52,
+      "text": "months I switched from cursor to clock as my name. So I 95% of the time and then popping the cursor when I want to do something just specifically targeted"
+    },
+    {
+      "t": 69,
+      "text": "in progress and it is always changing and this is very specific to my way of working. So what I've shifted to like I know a lot of people like to check every change that the agent node makes as it"
+    },
+    {
+      "t": 80,
+      "text": "makes it and then I like to have it a lot of work all at once in a big way. So really philosophy and brainwal"
+    },
+    {
+      "t": 94,
+      "text": "setup for how I do issue tracking is I use for planning like road map management bug tracking all sorts if used"
+    },
+    {
+      "t": 106,
+      "text": "tool type taskmaster um for breaking down a feature into small tasks that the angel with you so that I can control what's going on and kind of do one of"
+    },
+    {
+      "t": 118,
+      "text": "these small specific things too far off the secret weapons I think of"
+    },
+    {
+      "t": 130,
+      "text": "custom commands and subjects. So I typically use this and I'll show examples of custom commands but is basically program out an entire workflow like similar to what was showing these"
+    },
+    {
+      "t": 145,
+      "text": "graph workflows. We have multiple steps and it calls out tools and does all these things. You can write those in code build just a prompt and it works incredibly well. Like it'll follow the"
+    },
+    {
+      "t": 156,
+      "text": "process just write a prompt and it just does it. It's it's remarkable."
+    },
+    {
+      "t": 163,
+      "text": "some commands to to do an overall process like"
+    },
+    {
+      "t": 176,
+      "text": "my sub angles to handle very specific tasks like technical specialists how to do something really well and for dealt with context management code the really nice"
+    },
+    {
+      "t": 190,
+      "text": "thing about send agents through the outgoing context. So that really helps like if you have a set of them going out and like auditing a security audit base it context and it"
+    },
+    {
+      "t": 204,
+      "text": "doesn't consume all of the context. So you can run for a lot of it starts."
+    },
+    {
+      "t": 210,
+      "text": "What happens is when your clock context, it starts to drift and then once it gets to compaction like compresses all of your context, make"
+    },
+    {
+      "t": 222,
+      "text": "space for you, it gets a lot more just kind of summarizes everything in a very simple way."
+    },
+    {
+      "t": 228,
+      "text": "the micro never come back."
+    },
+    {
+      "t": 241,
+      "text": "This is like a basically just I said step one, step two, let you write out a process and it follows it and it says the technical"
+    },
+    {
+      "t": 254,
+      "text": "researcher agent to have research this topic and then master research finds some of the tech, right? I can write about like that and you know"
+    },
+    {
+      "t": 266,
+      "text": "a good language workflow and write a bunch of Python code for I just now come and create a lot of very small things like I want to use this system because this is running"
+    },
+    {
+      "t": 278,
+      "text": "on my laptop so I use this for a lot of just local operational tasks like software development I'll define this um you said this one has a super long technical provider"
+    },
+    {
+      "t": 291,
+      "text": "that describes the lighting style that I have these my custom commands and call to whatever asks out the subitors"
+    },
+    {
+      "t": 305,
+      "text": "content. How do you create the subg with that conditional thinking?"
+    },
+    {
+      "t": 312,
+      "text": "I just have a separate output specific message. I approve it. I want you to change these things and this command is smart enough to understand it."
+    },
+    {
+      "t": 323,
+      "text": "Therefore, I should go back. I actually stop three times saying that because otherwise that's good."
+    },
+    {
+      "t": 337,
+      "text": "That's actually called one of the other nice things about set agents is that if I have a system come in and I ask it to approve its own work like yeah"
+    },
+    {
+      "t": 349,
+      "text": "sub agent you say now approval of work it's actually feedback like it's nice like"
+    },
+    {
+      "t": 363,
+      "text": "but I didn't know special conditional conditional branching is"
+    },
+    {
+      "t": 377,
+      "text": "really a for text."
+    },
+    {
+      "t": 393,
+      "text": ">> Yeah, go ahead. Um sub agents how much to generate that's one of the things"
+    },
+    {
+      "t": 409,
+      "text": "how much I first"
+    },
+    {
+      "t": 421,
+      "text": "saw this scope thing."
+    },
+    {
+      "t": 427,
+      "text": "Okay, that's where I started. Okay, got it. Got it. I was like, \"All right, well, I solve this like a product performance document describing everything I want to do this thing like,"
+    },
+    {
+      "t": 438,
+      "text": "you know, make a lot of changes all over the place.\" And a lot of times they'll come back and say, you know, what is this not?"
+    },
+    {
+      "t": 448,
+      "text": "So, is that what you're getting at? You got to ask something else like um >> I want to know."
+    },
+    {
+      "t": 462,
+      "text": ">> Yeah."
+    },
+    {
+      "t": 472,
+      "text": ">> Um, you know, I just use it to do 300 lines or so every year. you know now >> yeah I I would have massive change I won't do exactly what I do but like"
+    },
+    {
+      "t": 486,
+      "text": "on it here in a moment to to show you what I do but I know how to do that I'm very much trying to get it very focused on exactly what I want it to do the change so your usage of"
+    },
+    {
+      "t": 501,
+      "text": "your list you have your task each Wow. And I question"
+    },
+    {
+      "t": 513,
+      "text": "my uses to say task and then I spawn off a set of tasks"
+    },
+    {
+      "t": 531,
+      "text": "like very specialized, right? like I guess security want to use a set agent because it's like they have a lot of very specific instructions and what to look for what"
+    },
+    {
+      "t": 543,
+      "text": "types of you know things to explore whatever I don't want to just create a massive like if I'm invisible process I don't want to put ignore this of having security but if it's something like go these five"
+    },
+    {
+      "t": 556,
+      "text": "files and add this you know these markdown files and add matter to them and then make these change in the main command itself Say if I have something very specialized or if I want to like"
+    },
+    {
+      "t": 568,
+      "text": "if I want to you know check the context and not consuming all of my cloud code session with this command. So an example of that is I have a set that does playrite automation. when I had my"
+    },
+    {
+      "t": 581,
+      "text": "command like all the changes made together"
+    },
+    {
+      "t": 594,
+      "text": "because the information back and forth between play"
+    },
+    {
+      "t": 606,
+      "text": "screenshots screenshots out of the simple like arrows or whatever and that's just a lot of context that's building up in the session. So I use a separate set for that just because it has its own"
+    },
+    {
+      "t": 617,
+      "text": "context. So it's going to fill its memory with all this stuff but then it's just going to give a concise summary back to the main broad process. That's really my command. That's not just I"
+    },
+    {
+      "t": 629,
+      "text": "don't want them to set up my entire session."
+    },
+    {
+      "t": 640,
+      "text": ">> It doesn't match what I'm supposed to match a summary back what's wrong and be a very precise summary of the issue. But that way the main the main process doesn't have to have to have much"
+    },
+    {
+      "t": 652,
+      "text": "information planning it context within Excel studies."
+    },
+    {
+      "t": 663,
+      "text": "Yeah, by default they don't start with no context. You want to pass the content. That's the trickiest part is like the information it needs to solve the problem you wanted to solve."
+    },
+    {
+      "t": 674,
+      "text": "I think it does get a little tricky like to make sure it has you have to this is getting into the weeds but like you have to pass it the right context for it to do what it needs to do. Um, and that can"
+    },
+    {
+      "t": 684,
+      "text": "get a little tricky to get it right, but once you do, now it could go out and do a thousand different things and just fill up a ton of context and it just gives you your answer back. And your"
+    },
+    {
+      "t": 693,
+      "text": "main clawed process has just now consumed a little bit of context."
+    },
+    {
+      "t": 704,
+      "text": "They in sub agents there is a here I'll go back here. specifically there's I've I've shortened this description here but this description uh front matter parameter is basically defining its API"
+    },
+    {
+      "t": 717,
+      "text": "to the callers. So the actual description on this one was pretty long and it it basically says here's how you call this. Here's what information you provide for the sub agent to work"
+    },
+    {
+      "t": 726,
+      "text": "effectively and whatever. And what's cool is if you go into cloud code you can there's a you know"
+    },
+    {
+      "t": 740,
+      "text": ">> and yeah and claude knows how to do that. So if I if you create any custom command and you say call this agent, it knows to say all right well let me look at the agent what information is expecting okay"
+    },
+    {
+      "t": 750,
+      "text": "great let me pass the right information to it just magically happens yeah"
+    },
+    {
+      "t": 768,
+      "text": "let me yeah let me I mean here let me hop in here"
+    },
+    {
+      "t": 780,
+      "text": "that orchestration of code doesn't >> Yeah. Yeah. That's exactly right. That's exactly right. And what you specify here's an example of an actual description and you can see like up here"
+    },
+    {
+      "t": 791,
+      "text": "that description is super long and it's basically like here's ways to communicate with me as a sub agent. It's giving examples and it's basically giving you an API specification for how"
+    },
+    {
+      "t": 800,
+      "text": "do you talk to this sub agent and just once you then drop this file into this agents folder it is now available for any for claude or any commands or anything to call and use as an agent."
+    },
+    {
+      "t": 817,
+      "text": ">> Sorry, say that again."
+    },
+    {
+      "t": 825,
+      "text": "Yeah, it's it's just the fact that you drop it in thecloud/ aents folder. It is now an agent available for you to call from within cloud code or for claude to decide to call. And a lot of times and"
+    },
+    {
+      "t": 836,
+      "text": "it'll often times just use these. It'll just be like, hey, I need to solve this problem. Oh, there's an agent that does uses searches context 7 docs. It searches for technical docs. So, I'm"
+    },
+    {
+      "t": 845,
+      "text": "going to go ahead and use that agent to get the docs I need. >> Yeah. Free sweetite. Go ahead."
+    },
+    {
+      "t": 857,
+      "text": "using >> yeah you could you I mean it also"
+    },
+    {
+      "t": 869,
+      "text": "support I haven't heard I use MCPS all the time like playrs and MCP that I use for browsing the web or whatever like you could use MCPS just like anything else so I think I would assume that if"
+    },
+    {
+      "t": 878,
+      "text": "you wanted to connect with some external tooling you just use an MCP for that >> such as like lang chains SWE if you wanted to have like a library specific >> return back of what's most important"
+    },
+    {
+      "t": 889,
+      "text": ">> yeah that's right you could use an MCP to connect to those those lang chain >> uh agents that you were talking about yeah so here you have naming pretty explanatory description and"
+    },
+    {
+      "t": 901,
+      "text": "the rest that you have what >> this is just the prompt so this is just like defining any other prompt for like here is the definition of your agent identity and here's how you do your job."
+    },
+    {
+      "t": 912,
+      "text": "So, it's just it's just prompt engineering really. I mean, >> and the difference from MCPS is just only cross and MCP's got tools."
+    },
+    {
+      "t": 922,
+      "text": ">> Yeah. An MCP is going to you're going to have some really specific a API specification um of like or the specification of how you interact with it. And yeah, and this is just something"
+    },
+    {
+      "t": 931,
+      "text": "that runs within quad code inside of the environment. So like if you want to set I think that the best way to learn about it here is come into quad code and type agents agents and then it'll say hey"
+    },
+    {
+      "t": 942,
+      "text": "here are your agents you want to create a new agent here where do you want to do it I want to put it in my project you want cloud to generate it and then you just say generate with claude you give"
+    },
+    {
+      "t": 949,
+      "text": "it a description of the agent you want to create and it'll generate one for you with the appropriate description everything else and then just start using it like that's the I think the"
+    },
+    {
+      "t": 956,
+      "text": "best way to learn about them and and I find that usually what it creates is pretty verbose and I go in and just make it a lot more concise because I like carefully craft what I have my agents"
+    },
+    {
+      "t": 965,
+      "text": "doing. But >> how do you keep track if you have too many agents don't get confused?"
+    },
+    {
+      "t": 973,
+      "text": ">> Yeah. Um I I don't think they've really solved it's a very new thing. They haven't solved it. Well, I know with commands like I have you can uh namespace the commands like custom"
+    },
+    {
+      "t": 982,
+      "text": "commands by putting them in these folders. So I have a PM folder for all my product management commands. So I can go PM and so you can namespace them. So I have like a uh you know create prd"
+    },
+    {
+      "t": 993,
+      "text": "command which I'll I'll show here in a second. Um they don't do that for agents yet."
+    },
+    {
+      "t": 999,
+      "text": ">> Code organization or >> it's just code organization and just keeping them and and also name like if if I hit slash and there's like 250 things show up and I'm like which which one did I call that again? You know like"
+    },
+    {
+      "t": 1010,
+      "text": "what is that? And I can just be like oh slashpm and it'll give me the name space of all. >> But it's not for his his question was about that that problem where you have uh like 20 tools."
+    },
+    {
+      "t": 1018,
+      "text": ">> Oh yeah. Yeah. >> Oh. Oh, got it. Yeah, you're talking about the Yeah, it's it getting confused. Yeah, I don't actually know how it registers these agents. So, I don't I don't have the answer."
+    },
+    {
+      "t": 1028,
+      "text": ">> Well, you have agent one, you give a description. >> Yeah. >> And by the time you get to agent 20 descriptions kind of get fuzzy like they're similar."
+    },
+    {
+      "t": 1035,
+      "text": ">> Yeah. >> How you ag Well, for me, for my usage, I just call the agents by name. But for Claude, yeah, I don't know how it handles that."
+    },
+    {
+      "t": 1044,
+      "text": "I don't know. Like I don't know if it has the same problem that MC like it has with MCPS where you get too many of them. It's probably the same problem I would guess. So I guess yeah that's"
+    },
+    {
+      "t": 1051,
+      "text": "which is a good point. You probably want to only create ones that you know you need right and not just go willy-nilly and create a million of them."
+    },
+    {
+      "t": 1059,
+      "text": "task."
+    },
+    {
+      "t": 1071,
+      "text": ">> Let me let me come back to that because I'll just do a real quick walkthrough of the workflow and then I'll I'll get to that question when I when I get to it."
+    },
+    {
+      "t": 1078,
+      "text": "Um, so let's see."
+    },
+    {
+      "t": 1085,
+      "text": "What the heck? All right, here we go. So basically my when I'm trying to sync I'm all I'm trying to do is sync context and give claude as much you know of an understanding of what I want which is"
+    },
+    {
+      "t": 1096,
+      "text": "what is in my brain and then what is in the codebase so it can knows how to build the right thing. That's what all of this is about. You know, it's really just like we were saying, it's just"
+    },
+    {
+      "t": 1104,
+      "text": "about like it can take a million different paths. So, I try to eliminate on the front end like it's like there even for something as simple as provide the ability to delete posts. There are"
+    },
+    {
+      "t": 1113,
+      "text": "so many decisions you can make like do you do a soft delete, do you allow undo, do you need confirmation, whatever. And so, like I think of it like there is a like a a like a massive graph of"
+    },
+    {
+      "t": 1125,
+      "text": "possible ways to implement this thing. And so the more I can do on the front end to like be specific about like to narrow that down and cut off all the wrong paths, I can keep on track better."
+    },
+    {
+      "t": 1135,
+      "text": "Um, and then the second thing I do is getting into taskmaster and I'll show it here in a moment. But then then I try to like once I've defined what I want to build really well using my commands,"
+    },
+    {
+      "t": 1144,
+      "text": "then I'll use taskmaster to break it down into small pieces. Um, and I'll show that here in a in a moment. So let me first start like the first thing I do is to try to give wa I have a what is"
+    },
+    {
+      "t": 1155,
+      "text": "it? It is. Come over here to my notes."
+    },
+    {
+      "t": 1161,
+      "text": "Oh, yeah. Build context. Okay. So, I have a build context command. Um, and I'll say learn the front end and back end. All right. So, I have a custom command that the fir that is attempting"
+    },
+    {
+      "t": 1174,
+      "text": "to solve this problem. So, this is the first thing I usually do is like um just get quad up to speed on the part of my codebase that I'm about to work on. So it it has it in its memory in its"
+    },
+    {
+      "t": 1185,
+      "text": "immediate memory. It's got in its context a familiarity with the specific parts of the app that it's going to go start editing. So it knows how to how to make the changes. Um I do a few things"
+    },
+    {
+      "t": 1194,
+      "text": "for this. Like what I'm showing right now is a custom command called build context that's that's running here and it's like you know looking at the task."
+    },
+    {
+      "t": 1204,
+      "text": "It's going to go through the codebase and it's just basically just exploring and learning about what it needs to learn. Um I have other things I do for that but I'm not going to get into them"
+    },
+    {
+      "t": 1211,
+      "text": "right now. And then so that's the first thing I do. I And by the way, I have a bunch of tools I use and I'll like use them depending on the situation. Like I have a tool I'm not going to show here"
+    },
+    {
+      "t": 1221,
+      "text": "because I don't have time, but that will like go into my linear ticket here. Let me open up. We'll do we'll do this ticket. So I have a tool that then this is all about getting very specific about"
+    },
+    {
+      "t": 1232,
+      "text": "what I want Claude to build. Like I I can run a custom command to say refine this linear ticket and it'll read it. it understands the codebase and then it'll interview me and it'll ask me questions"
+    },
+    {
+      "t": 1242,
+      "text": "like well you know for this you know for these uh tags that we're going to add to prompts like do you want to have a character limit on them do you want to allow special characters like unic code"
+    },
+    {
+      "t": 1250,
+      "text": "characters do you like want the user to be able to oneclick delete them like how do you so it's going to ask me clarifying questions and then fill out my requirements so that now I'm sort of"
+    },
+    {
+      "t": 1259,
+      "text": "narrowing the region of darkness and and really honing it in on what I wanted to build so sometimes I'll use that um I have another one that would be way too timeconsuming assuming to run right now,"
+    },
+    {
+      "t": 1269,
+      "text": "but I've like sometimes if I if I'm like trying to build something new, but I really don't know how I want it built or how like there's different technical paths you could take, um I'll use this"
+    },
+    {
+      "t": 1278,
+      "text": "AR architecture recommendation, which is a command. It's a custom command and it'll spin up multiple architects like software architects that will evaluate explore different ways of solving this"
+    },
+    {
+      "t": 1289,
+      "text": "problem. Technically, they will each give back their recommendation to the main command, the the AR, and it's going to review the recommendations from its like fleet of sub aents that are spun"
+    },
+    {
+      "t": 1298,
+      "text": "off. It's going to look at what they each recommend recommended. It will come up with its own recommended solution."
+    },
+    {
+      "t": 1304,
+      "text": "And then it just explain it all to me and show me. It's like, hey, here are the options I looked at. Here's what I think we should do. What should you do?"
+    },
+    {
+      "t": 1310,
+      "text": "And then I'll take look at those recommendations and be like, yeah, it looks great. And it'll update the ticket. Or I'll be like, no, I actually don't like that. Here, come up, change"
+    },
+    {
+      "t": 1317,
+      "text": "this and this and this. and I'll give it feedback and we'll just work together. So like what I'm doing is I'm getting these sub agents to like interview me or work with me or give me suggestions and"
+    },
+    {
+      "t": 1326,
+      "text": "it's like a collaborative thing that I've set up so that I can very quickly go through the product requirements or software architecture part of the process. And again, everything I'm"
+    },
+    {
+      "t": 1336,
+      "text": "trying to do is just get as much clarity on the front end so that when I unleash Cloud Code to be like go to town on this feature, like we're we're on the same page as much as possible by the time it"
+    },
+    {
+      "t": 1346,
+      "text": "does that. And then I'll do here, let me come back."
+    },
+    {
+      "t": 1350,
+      "text": "Generate PRD, which I'll go ahead and generate a This is my ticket. I've got this really simple little app here. Let me see if I have it up and running. It's a little prompt management tool I put"
+    },
+    {
+      "t": 1359,
+      "text": "together yesterday for the purposes of demonstration. It's just a dumb little tool. And I have a feature which is I want to add tags to be able to to these prompts. So this is a list of prompts"
+    },
+    {
+      "t": 1368,
+      "text": "with descriptions and I want to be able to add tags to them. So I have a So now it's up to speed. The last command I ran was was build context. So now it's up to speed on my codebase. And then I'll go"
+    },
+    {
+      "t": 1379,
+      "text": "prd create prd uh and then I'll pass in the linear ticket number. What is this?"
+    },
+    {
+      "t": 1385,
+      "text": "DRI166."
+    },
+    {
+      "t": 1389,
+      "text": "Okay. So now what it's going to do, so there's another command I use. Um so now it's it's up to speed on my codebase and now I'm saying okay now give me a plan for this particular ticket. And it's"
+    },
+    {
+      "t": 1400,
+      "text": "going to use uh MCP to like go fetch the details from linear. And again, this could be Jira or GitHub issues or anything else. It's going to identify and and this is part of that Q&A like if"
+    },
+    {
+      "t": 1412,
+      "text": "there's anything that's ambiguous like it could where anything that's unclear about the solution, it's going to then um ask me questions."
+    },
+    {
+      "t": 1420,
+      "text": "Uh oh yeah, I can move this. By the way, if you can't hide that, I'll I'll move the bottom up so it's not covered. Are you good?"
+    },
+    {
+      "t": 1426,
+      "text": "Um and then it will ask me targeted questions if there's information that is missing. And again, this is part of that conversational thing. So, like it's done a gap analysis and it's like, \"Hey,"
+    },
+    {
+      "t": 1435,
+      "text": "here's what's clear to me. Here's what's not clear to me. Will you answer these questions?\" And it's got three of them for me. Um, and I'll just come up with stupid answers here like, \"Should tags"
+    },
+    {
+      "t": 1443,
+      "text": "be displayed?\" Uh, yes to for tag component uh individual entry and then no"
+    },
+    {
+      "t": 1456,
+      "text": "validation anyway. All right. So, I just answered it questions to clarify my requirements and then it's going to go create a product requirements document for me. So, now it's like we've gone"
+    },
+    {
+      "t": 1465,
+      "text": "through, you know, and I could use any of these tools by this point. And it's going to go ahead and uh create this, let me flip over to my IDE, and there will now be in my where is it"
+    },
+    {
+      "t": 1478,
+      "text": "here? In my docs folder, PRDS."
+    },
+    {
+      "t": 1483,
+      "text": "Let's see. It'll take a second here. Okay. So it's it's it may run for a second. So I'll come back to the workflow. Um so it's generating the PRD right now and then I after that once I"
+    },
+    {
+      "t": 1496,
+      "text": "have my PRD generated then I'm going to go in and generate taskmaster tasks. Now um just as while it's generating the PRD what what I'll the quick intro to taskmaster for anybody who hasn't used"
+    },
+    {
+      "t": 1506,
+      "text": "it like I know a lot of people who have different solutions for this. So it's just one way to solve this problem. But what it does is it takes a product requirements for a feature and then it"
+    },
+    {
+      "t": 1516,
+      "text": "um breaks it down into a set of discrete tasks and in the latest release it's it's aware of your codebase. So like they've just updated it so it'll actually go scour your codebase, learn"
+    },
+    {
+      "t": 1526,
+      "text": "about your codebase as well. So you've already like you you've already got your cloud agent that knows about your codebase and then you your taskmaster um is going to look at the requirements"
+    },
+    {
+      "t": 1534,
+      "text": "which should should already be defined within the context of your codebase. Like it should be the right solution. Go ahead."
+    },
+    {
+      "t": 1542,
+      "text": ">> Oh, it does not use the agents. It just has it's just an a third party package."
+    },
+    {
+      "t": 1546,
+      "text": "So, it uses its own set of um LLM calls and its own prompts and it's its own toolkit to do that. But you could set up your own if you wanted to do one that uses your agents. You could set up your"
+    },
+    {
+      "t": 1557,
+      "text": "own custom commands to do to replace Taskmaster and like because I know some people in the group they do this but they just create a checklist and they don't use taskmaster. They break it down"
+    },
+    {
+      "t": 1566,
+      "text": "into a checklist and you know"
+    },
+    {
+      "t": 1578,
+      "text": "Yeah. Yeah, you could totally do that. I don't do that because I just let once I get the tasks already dialed in, I just let Claude just go implement them and I just use raw Cloud code, you know, just"
+    },
+    {
+      "t": 1587,
+      "text": "say go build these tasks. It just edits my code just like I normally would. So, but you could absolutely have it do that. Yeah. Uh, how about you?"
+    },
+    {
+      "t": 1595,
+      "text": ">> Could you expand a bit more? So I see one place to use VS code and that's where your project source is."
+    },
+    {
+      "t": 1599,
+      "text": ">> Ah yes using >> yeah cloud code. So why not use terminal PS code if you have all in one."
+    },
+    {
+      "t": 1607,
+      "text": ">> Yeah I um so I could throw quad up here once it loads. Yeah I actually was doing this before. I just so this is kind of the the way I think a lot of people use it just in the VS code terminal. I just"
+    },
+    {
+      "t": 1619,
+      "text": "like warp. >> That's this works great too. So, I just >> Yeah. Yeah. There's no other than I just like the UX and I like being able to do things. I've I've learned to do things"
+    },
+    {
+      "t": 1632,
+      "text": "quickly and work."
+    },
+    {
+      "t": 1641,
+      "text": "cost a lot of time to make"
+    },
+    {
+      "t": 1653,
+      "text": "a lot."
+    },
+    {
+      "t": 1657,
+      "text": ">> Do you mean in terms of credits or my time?"
+    },
+    {
+      "t": 1661,
+      "text": "Oh, >> that is a excellent question. And um I am on the Claude Max plan, the Cloud Code Max plan, which I'm paying uh 200"
+    },
+    {
+      "t": 1674,
+      "text": "bucks a month, but it gives you virtually unlimited credits."
+    },
+    {
+      "t": 1682,
+      "text": ">> Yeah. And I should have clarified that on the front end."
+    },
+    {
+      "t": 1686,
+      "text": ">> You'll find the limits. >> Yeah."
+    },
+    {
+      "t": 1691,
+      "text": "What? What's that? >> No, I I haven't. I I just No, no, I haven't. I stop if I if I hit my It's like It's You get You don't get unlimited credits. You get a lot. And then they do it in five hour chunks. So,"
+    },
+    {
+      "t": 1704,
+      "text": "if I run out, like it resets every 5 hours. There's also a weekly limit, but I haven't hit that yet because, you know, but like um yeah, like if I hit my limit before the 5 hour chunk is up,"
+    },
+    {
+      "t": 1715,
+      "text": "which has happened a couple times. I'm like, \"All right, I should probably take a break anyway because I'm clearly They change the limits right now. Is that helping after they change the limits?"
+    },
+    {
+      "t": 1722,
+      "text": ">> Yeah, it is after they change the limits. I haven't I haven't hit the the limits. >> You're doing it the right way. I when this first came out, I was just testing it out and I I like left it alone, went"
+    },
+    {
+      "t": 1730,
+      "text": "to lunch, came back, and it was like $12 later. >> Yeah. I was like, hold up."
+    },
+    {
+      "t": 1735,
+      "text": ">> Yeah. Yeah. I'm so glad you asked that question. Make sure you're on a plan."
+    },
+    {
+      "t": 1740,
+      "text": "Don't you're not paying by the question because everything I'm doing here is very is is very token heavy."
+    },
+    {
+      "t": 1744,
+      "text": ">> I know. Like I I was heads down for a little bit and the CC usage MPM is really handy because you can actually see what it would be equivalent if you're paying for APIs. And my CC usage"
+    },
+    {
+      "t": 1754,
+      "text": "was like almost $4,000 a month and I was paying for paid the $200 for the 20x plan. I was using Opus a little too much but you know >> it was cool. Like it was worth that"
+    },
+    {
+      "t": 1766,
+      "text": "worth that 200 bucks. >> Yeah. Here's my >> It may have dropped my API usage down from like I think I was like 1,200 the month before."
+    },
+    {
+      "t": 1774,
+      "text": ">> When you run system usage, how far is it looking back? Is it like a month? >> 30 days. >> 30 days. Yeah. So, I've spent $2,500 worth of credits, but I've only paid 200 for my monthly subscription."
+    },
+    {
+      "t": 1785,
+      "text": ">> Yeah. Great. >> Yeah. I They're subsidizing it like crazy. I don't I don't know. So, >> they're buy."
+    },
+    {
+      "t": 1795,
+      "text": ">> Yeah. Exactly. The big caveat to everything here is it it assumes you have credits on a plan and you're not going to get blown out by actually having to pay those those fees. Um, let"
+    },
+    {
+      "t": 1804,
+      "text": "me try to >> Sorry, one sec. What's your question >> on your agency and your workflow? Kind of go back to that for a second. Um, I've been using a very similar kind of"
+    },
+    {
+      "t": 1817,
+      "text": "methodology or I was for a little while before I I pivoted and one of the reasons I kind of avoided it I moved away from it because no matter how granular I got, no how no matter how"
+    },
+    {
+      "t": 1829,
+      "text": "much I decomposed, um I would find that after a time I would go back and have my QA agent go back and do a comprehensive review of all my code and he would find out that"
+    },
+    {
+      "t": 1841,
+      "text": "even though I was using a microstep approach, having an architect build it, having the specific developer develop it, having QA agent check it."
+    },
+    {
+      "t": 1852,
+      "text": ">> Yeah. What I was finding out was the developer was actually stubbing everything and the QA agent was just rubber stamping."
+    },
+    {
+      "t": 1859,
+      "text": ">> Yeah. Yeah. >> So, we had to had to get into more complicated hooks and workflow to >> Yeah."
+    },
+    {
+      "t": 1866,
+      "text": ">> around that. But I'm still it still was an issue. >> Yeah. So, the question is like or the the experience you shared is is that like you you tried using an agent like a developer agent and then a QA agent and"
+    },
+    {
+      "t": 1875,
+      "text": "then an architect agent and just have them all collaborate. I don't use that approach when it comes to actually building the code. I just let Claude do it all and using this approach. So I use"
+    },
+    {
+      "t": 1884,
+      "text": "agents for like the playright, you know, like >> about within Claude. This is all quad agents I'm talking about."
+    },
+    {
+      "t": 1889,
+      "text": ">> Yeah. Yeah. But I'm just like when I go say well I'm not quite there yet in my in my my demo, but when I just say go do the next task, it's just Claude doing the work. So I'm using these sub agents"
+    },
+    {
+      "t": 1900,
+      "text": "for like planning and other things, but then when it's actually writing the code, >> it's not using kicking off the work >> got away from that because he was stubbing everybody."
+    },
+    {
+      "t": 1908,
+      "text": ">> He was a stub was stubbing. Okay. So that didn't work well. So your experience is trying to use the sub agents to actually write the code and test did not work well."
+    },
+    {
+      "t": 1916,
+      "text": ">> Okay, got it. Yeah, >> that's good. Good feedback."
+    },
+    {
+      "t": 1920,
+      "text": ">> Yeah. So sorry, you had a question."
+    },
+    {
+      "t": 1925,
+      "text": ">> You're good. Okay, cool. Um All right. So, okay. So, I've generated a PRD. Let me just flip back over to here. Um and where is it? Here. So, it's created"
+    },
+    {
+      "t": 1939,
+      "text": "a PRD and you know, I'll usually scan through this and look and make sure I agree with it. The main thing I typically look for is you know the the I find that oftentimes I I look for like"
+    },
+    {
+      "t": 1949,
+      "text": "scope creep or anything else like that and then I look to see I always have it spit out milestones at least in my workflow. Um and I make sure that those make sense like I like you like I like"
+    },
+    {
+      "t": 1958,
+      "text": "it to build something basic that I can test you know so I can then verify it and then something and then the next milestone adds on to it. So I I'll review that. But anyway, let's pretend I"
+    },
+    {
+      "t": 1967,
+      "text": "look through it and it looks good. Then I then I have my um taskmaster generate taskmaster tasks and then it's going to go find the most recent PRD and it's going to start um creating these"
+    },
+    {
+      "t": 1978,
+      "text": "tasks and let's see here in fact let me tell it it's going to try to do generate task with task master. It's analyzing the prd. It's it's going"
+    },
+    {
+      "t": 1990,
+      "text": "through this this process of uh generating the tasks for me and I can also you know taskmaster the way it works let me flip over to a command line um I can also just do it through the"
+    },
+    {
+      "t": 2001,
+      "text": "command line like tm list task it's a it is what tm list um it is a uh terminal program by you know at it's a native terminal program so you can look I don't"
+    },
+    {
+      "t": 2013,
+      "text": "have any tasks listed here but it's you can just say show me this task or generate task from prd and you can do it all from the command line I I just have my agent do it um just because it'll"
+    },
+    {
+      "t": 2022,
+      "text": "it'll do a full workflow for me. So, it's currently going through and generating or about to generate the task with Taskmaster for me. And um once it's done, I'm going to I'll stop this. I"
+    },
+    {
+      "t": 2034,
+      "text": "won't let it it can also like what's kind of neat about Taskmaster is it it's smart about doing things in the right order where they build on each the tasks build on each other. And then it'll also"
+    },
+    {
+      "t": 2043,
+      "text": "if you have a complex task, it'll break it down into subtasks. Again, try to get it down into like the micro smaller tasks that it can go work on. So, uh, let's see if this finishes up here,"
+    },
+    {
+      "t": 2056,
+      "text": "then I'll just have it start working on one feature. I won't make you all sit through a coding session. um >> file."
+    },
+    {
+      "t": 2065,
+      "text": ">> Yeah. The way it works is Taskmaster specifically, it's just a you know package and it creates tasks in a JSON."
+    },
+    {
+      "t": 2073,
+      "text": "So um it's just sitting in your in your project. There's no database. There's no like SAS offering or anything like that."
+    },
+    {
+      "t": 2081,
+      "text": "It's just it works on the local file system which is nice because LLMs understand files. Um, and I I usually interface with it through use an MCP, but you can also use the command line"
+    },
+    {
+      "t": 2091,
+      "text": "interface to interface with it. And you basically just call commands on it. Like parse PRD is is a taskmaster command which will read in the PRD and it will do a bunch of work and it'll research"
+    },
+    {
+      "t": 2101,
+      "text": "your codebase and and then it'll spit out the tasks that it thinks that make sense. Um, and hopefully this finishes up soon."
+    },
+    {
+      "t": 2111,
+      "text": ">> Let me flip it. It's out of the cloud ND."
+    },
+    {
+      "t": 2116,
+      "text": ">> No, it's just a um it's just a separate package that you call through an MCP."
+    },
+    {
+      "t": 2123,
+      "text": "Yeah. And it just you just have to point it to your PRD to your product requirements doc and then it'll read that and then just kind of explore your codebase a bit. I don't know maybe it's"
+    },
+    {
+      "t": 2132,
+      "text": "using cloud MD and referencing those."
+    },
+    {
+      "t": 2136,
+      "text": ">> MD. >> Oh yeah, that Oh. Oh yeah, yeah, yeah."
+    },
+    {
+      "t": 2140,
+      "text": "Sorry. I don't think Taskmaster is necessarily using Claude MD, but this CloudMD is provided by Taskmaster so that your cloud knows how to use Taskmaster. Yeah, but I've set it up different ways where just I mean I just"
+    },
+    {
+      "t": 2153,
+      "text": "this is actually kind of redundant because I have it set up as an MCP. So I could probably just delete it and it just use the MCP definition. All right, so let's see here. All right, this is uh"
+    },
+    {
+      "t": 2161,
+      "text": "taking a very long time. I don't know why. Usually it's it's usually pretty fast. Uh let's here let me move on. Um, I'll just walk through the rest of the workflow because I think we're over time. Um,"
+    },
+    {
+      "t": 2176,
+      "text": "you know, I'll just what I do is then I then I once I have these smaller tasks, then I just use uh Claude to test or to, you know, do the normal stuff you would do, right? And then I like to do the"
+    },
+    {
+      "t": 2187,
+      "text": "code review in the git window. So, or in the git interface here. So, as it's, you know, spinning up changes, as it's writing code, I'll just review the changes as they come in. you know, once"
+    },
+    {
+      "t": 2196,
+      "text": "I like them, I I'll just It's just a normal, you know, I'll Oh, one thing I do, too, is between each task, I'll stage the changes so I get a Wait, why is this not showing up there?"
+    },
+    {
+      "t": 2208,
+      "text": "Okay, this was updating a little slow. Um, anyway, then I'll stage my changes and review them. Then I'd say the last couple of things that I'll just mention is I do have you know some custom"
+    },
+    {
+      "t": 2219,
+      "text": "commands like there's a code review command that'll look for like code complexity, duplication, readability issues, maintainability issues, those sorts of things and it does a very good"
+    },
+    {
+      "t": 2228,
+      "text": "job of of highlighting just giving me a to-do list of things and I can decide what I want to clean up. Um, there's another one like I'll see if I can while Taskmaster is trying to run here. Let me"
+    },
+    {
+      "t": 2239,
+      "text": "open up another um here's actually here's a a little thing that I just discovered in the last week or two. This is getting into the like quad code nerdweeds a moment, but um you can fork"
+    },
+    {
+      "t": 2250,
+      "text": "a context, right? So like if you've built up, it's all about context. So if you've built up a very good context in your cloud code instance where it knows about the part of the codebase that"
+    },
+    {
+      "t": 2259,
+      "text": "really matters. It's up to speed on everything it needs to know to do this feature. I can then copy the session ID."
+    },
+    {
+      "t": 2265,
+      "text": "I've I've got like a custom status thing down there. So there's every instance has a session ID and I can come in here into a new window and say claude- resume and paste in the session ID and it's"
+    },
+    {
+      "t": 2276,
+      "text": "going to this is a new cloud instance but it's picked up the the conversation where that other one is. So you've basically forked the conversation. So now I can go do something else. And if I"
+    },
+    {
+      "t": 2284,
+      "text": "wanted to, let's see, test recent changes, you know, if I wanted to like just spin up another task on the same context, you can do it that way. So there's some, you know, cool tricks like"
+    },
+    {
+      "t": 2293,
+      "text": "that that you can do. And what this one does, this test recent changes, this is the one. And again, if it's uh Oh, I don't Yeah, it's Hold on."
+    },
+    {
+      "t": 2305,
+      "text": "Let me do this. Another thing is, I don't know if you guys use the double escape, but you can always go back to previous um you can go back to previous steps of the process. And so, and then"
+    },
+    {
+      "t": 2317,
+      "text": "uh if you want to like if you spend a lot of time working on something, you can go go back to a previous step of your state so that you have way less context consumed."
+    },
+    {
+      "t": 2324,
+      "text": ">> Oh, yeah. >> Is it a checkpoint like like a cursor where you go back to your previous undo everything that you just done?"
+    },
+    {
+      "t": 2331,
+      "text": ">> It does not change any of the code. All you're doing is you're context."
+    },
+    {
+      "t": 2335,
+      "text": ">> You're going back to context. Oh, so like what I'll do a lot of times is like I'll build up the context for this part of the code I'm working on and then I'll do some changes and then I'll say all"
+    },
+    {
+      "t": 2344,
+      "text": "right summarize the changes that you did and it'll give me like a little text blurb and I'll reverse back and then paste it in and be like just add a little bit to it and then >> you can build up the context once and"
+    },
+    {
+      "t": 2352,
+      "text": "then just work forever without hitting your context limits. >> Oh wow."
+    },
+    {
+      "t": 2356,
+      "text": ">> Yeah, it's pretty sweet. So how so this this like harness that you have all of the files that you have maybe subtasks how often do you see yourself uh iterating mean are you going back"
+    },
+    {
+      "t": 2367,
+      "text": "every day way and try to like continually or >> Yeah."
+    },
+    {
+      "t": 2373,
+      "text": "No, I'm I'm probably tweaking them a couple times a week. It's like pretty much if I run into something where it's like ah this is going to be manual or I'm gonna have to manually figure all"
+    },
+    {
+      "t": 2380,
+      "text": "this and then I'll be like okay let me take 20 minutes and tweak the prompt or like I'm always fine-tuning them. So, it's it's very much a work in process."
+    },
+    {
+      "t": 2392,
+      "text": ">> Yeah, let me show it. And I'd be happy to, you know, it's I don't have it in a format that's easy to share, but I'll I'd be happy to put it in like clean it up and put it in the lang chain"
+    },
+    {
+      "t": 2400,
+      "text": ">> GitHub, but let me just show you real quick. Um, yeah, I have two code reviews commands."
+    },
+    {
+      "t": 2409,
+      "text": "This one what it I mean this is looking this one specifically is the lightweight one and it's looking for things like unused code overly complex code like overly nested structures long functions"
+    },
+    {
+      "t": 2420,
+      "text": "that should be split code duplication because I want dry code naming missing type hints you know things like that and then I have another one that's like a major code review that like I'll I'll only run every once in a"
+    },
+    {
+      "t": 2432,
+      "text": "while but it's doing like looking at security performance impacts integration points and it spins up you multiple sub aents and it's like a beast of a of a thing. But I I only do that, you know,"
+    },
+    {
+      "t": 2444,
+      "text": "every once in a while because it's it's more of >> how we keep in uh code review to the project. I don't do code review differently from project to project."
+    },
+    {
+      "t": 2454,
+      "text": ">> Yeah, that's a good question. I don't actually have a good I would love to learn better ways of managing this, but what I actually do all of these, if you'll notice the little arrow there,"
+    },
+    {
+      "t": 2463,
+      "text": "these are actually all sim link directories. Okay. You simply simulate them to your home directory."
+    },
+    {
+      "t": 2468,
+      "text": ">> Yeah, they're Yes. Essentially. Yeah. And and the only reason I'm using because you could also put them in your home directory cla"
+    },
+    {
+      "t": 2486,
+      "text": ">> Yeah. I think I I think I'm probably going to switch back to that. Initially I tried doing that and I I was referencing files within my project so I just put them in the project because"
+    },
+    {
+      "t": 2495,
+      "text": "they were that the commands were referencing files in the project but I think I've clean that up. So I think I think what you described is a better way if you want shared universal commands."
+    },
+    {
+      "t": 2502,
+      "text": "What what what what you're describing is like you could put these commands in your project itself but you can also put them in tilda.cloud in like your home directory.cloud and then they're"
+    },
+    {
+      "t": 2513,
+      "text": "available to all your cloud instances to all your projects. So if you're working in team as well."
+    },
+    {
+      "t": 2519,
+      "text": ">> Yeah. Yeah. That's the other factor."
+    },
+    {
+      "t": 2525,
+      "text": ">> Yeah. I'll put it in subm module in subm module. Yeah. So we have this is a shared big team for the project."
+    },
+    {
+      "t": 2534,
+      "text": ">> What are the other things you can do to create dev containers and then the uh post create and the startup and then the bootstraps. you can have all of those files automatically generated right into"
+    },
+    {
+      "t": 2544,
+      "text": "your container for you. So no matter what you're using when you fire up that container, all of those files are already there and set up. And if you need to change them, then you just"
+    },
+    {
+      "t": 2552,
+      "text": "change your dev container. And it'll also give you process isolation and not let cloud run on your laptop, too. Yeah."
+    },
+    {
+      "t": 2560,
+      "text": ">> So this is just the last thing and then we can I'll wrap I'll wrap it up. But um one of the things I'll do like if I have to do a bunch of front-end changes is I'll be like, \"Hey, I've got this"
+    },
+    {
+      "t": 2568,
+      "text": "command that'll be like, hey, put look at all the recent changes you made. put together a test plan and then go test it in the UI and make sure it works. And you can see it's using a sub agent. The"
+    },
+    {
+      "t": 2577,
+      "text": "reason I'm using a playright sub aent is is because for context preservation."
+    },
+    {
+      "t": 2581,
+      "text": "That's the example I was talking about earlier where it'll consume its own context. And um Oh, by the way, there's this new thing. You see that insight right there? They just added a new thing"
+    },
+    {
+      "t": 2591,
+      "text": "to quad code where you can have it like give you insights or teach you things."
+    },
+    {
+      "t": 2595,
+      "text": "Huh. >> As it's they just added that today. Yeah. >> Learn. >> The learn. Yeah. There's like a learn mode and it'll teach you and give you assignments so it can teach. Anyway, that's total aside."
+    },
+    {
+      "t": 2603,
+      "text": ">> Love it. >> Yeah. Anyway, so I think that's it. I don't know."
+    },
+    {
+      "t": 2607,
+      "text": ">> Wow."
+    },
+    {
+      "t": 2611,
+      "text": ">> Are we are we way beyond time or >> We're great on time, man."
+    },
+    {
+      "t": 2615,
+      "text": ">> We're good on time. Yeah, we can take more. >> We got like 15 minutes before we get out."
+    },
+    {
+      "t": 2619,
+      "text": ">> All right, we're good then. Yeah. Yeah, go for it. Yeah, it's al something that's something you're using like no tools or like"
+    },
+    {
+      "t": 2636,
+      "text": "uh yeah allowed tools. What's that? Is that like the gar is that >> how do you know which list is there like a list of you? I know simple stuff, right? I'm just as well."
+    },
+    {
+      "t": 2648,
+      "text": ">> Yeah, there is. I think they have it documented. Um, but also whenever you're going through Claude and you're approving commands and you say like I want to approve you to do this every"
+    },
+    {
+      "t": 2661,
+      "text": "single time, it'll it'll throw something in your settings.json and you can see like how they name it like web fetch, >> okay, >> is one right there where um and those are tool I think they also they do have"
+    },
+    {
+      "t": 2672,
+      "text": "it in their document so you could go look at their tools and everything else. It can sometimes be kind of tricky to figure out exactly what to call them."
+    },
+    {
+      "t": 2677,
+      "text": "But but for the agents, yeah, it's just Oh, and when you're going through the agent workflow and you have it build, actually, this is a good way to go play with it and figure it out is when you"
+    },
+    {
+      "t": 2685,
+      "text": "tell it to make an agent for you, like I was showing earlier, it'll ask you what tools do you want to enable and it'll give you categories of tools and you just select the categories and it'll"
+    },
+    {
+      "t": 2692,
+      "text": "drop them in there. That's probably the easiest way."
+    },
+    {
+      "t": 2696,
+      "text": ">> Thanks. >> Yeah. Yeah. Awesome. >> Thanks everybody. >> Thank you so much, Nate. lighting switch"
+    }
+  ],
+  "backfill": true
+}

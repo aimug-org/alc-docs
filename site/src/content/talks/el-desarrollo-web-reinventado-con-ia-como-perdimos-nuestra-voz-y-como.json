@@ -1,0 +1,773 @@
+{
+  "title": "El Desarrollo Web Reinventado con IA: Cómo Perdimos Nuestra Voz y Cómo Recuperarla",
+  "speakers": [
+    "dave-sottimano"
+  ],
+  "date": "2026-08-31",
+  "youtubeId": "0QY4Zu3G36U",
+  "duration": 2165,
+  "summary": "Google dejó de mandarte tráfico. Ahora te copia y se queda con el clic.",
+  "topics": [
+    "MCP"
+  ],
+  "transcript": [
+    {
+      "t": 0,
+      "text": "Bueno, todo bien, empezamos. Esto se va, eso es peor que antes, pero con los live demos siempre va a fallar, pero esto seguramente va a fallar."
+    },
+    {
+      "t": 13,
+      "text": "Bueno, mi nombre es David, eh, hace un poco de tiempo que vivo en Panamá. Mi background es en SEO, ¿vale? Entonces, me convertí en programador y hoy en día, literalmente, soy un esclavo a cloud. Ya"
+    },
+    {
+      "t": 25,
+      "text": "está. Bueno, todos entienden inglés también, así que puedo cambiar un poquito. Bueno, super bien. Entonces, e te voy, vamos a hacer esto. Okay. Bueno,"
+    },
+    {
+      "t": 39,
+      "text": "tengo 42 años, entonces yo nací y crecí cuando el internet se estaba empezando, ¿vale? Entonces vi absolutamente todo."
+    },
+    {
+      "t": 47,
+      "text": "El internet antes el HTML era superfácil, podías hacer blink tags, todo ese tipo de cosas. Esto no sé si era muy popular en Panamá, pero se llama Links Cars. Era gigante, como un tipo de"
+    },
+    {
+      "t": 61,
+      "text": "ella vendía carros en Reino Unido. Super bien. El Million Dollar Homepage."
+    },
+    {
+      "t": 68,
+      "text": "¿Alguien? Nadie. No podías comprar un pequeño pixel. Sí."
+    },
+    {
+      "t": 75,
+      "text": "Y han ganado un millón de dólares. Eso era el inicio del internet. Vale, entonces todo era s super super creativo, era difícil. Al inicio había cosas que"
+    },
+    {
+      "t": 87,
+      "text": "puede ser que nunca haya escuchado. Todos están super joven. Bueno, pero Geisies, todo tipo de cosas para hacer, o sea, una página web de lanzarlo por la web, ¿okay? Era superdfícil y era super"
+    },
+    {
+      "t": 100,
+      "text": "nuevo, pero era increíble. Vale, hay mucha gente que estaban haciendo sus páginas de sus series preferidas, de sus bandas, todo eso. El internet era un"
+    },
+    {
+      "t": 113,
+      "text": "caos total, pero había original creatividad antes y era superfácil."
+    },
+    {
+      "t": 120,
+      "text": "Utilizaba también un programa que se llama Dreamweaver o lo que sea para hacer una página web. Era increíble, pero la cosa es que siempre ha sido super ya se complicó mucho, mucho, mucho y"
+    },
+    {
+      "t": 131,
+      "text": "había mucha, muchas cosas por la web, pero al inicio los motores de búsquedas como Yahoo y La vista era los inicios eran super malos. Entonces llegaron"
+    },
+    {
+      "t": 144,
+      "text": "Google obviamente con Serge y Larry y tenían el algoritmo de Paydank. Eso era el digamos el empuje al total, ¿vale?"
+    },
+    {
+      "t": 155,
+      "text": "este punto había mucha gente y no sé si ustedes saben, pero se podía, o sea, los días de 2000, 95, 2000, todo ese tipo de cosas, tú podías hacer cualquier tipo de"
+    },
+    {
+      "t": 168,
+      "text": "página de gatos, Britney Spears, lo que sea, y podías poner Google AdSense. Hay gente al inicio que de verdad compraron sus casas de $300,000,"
+    },
+    {
+      "t": 180,
+      "text": "literalmente un año de trabajo, ¿vale? Era fantástico. Bueno, el punto era que h la web necesitaba contenido, ¿vale? Y era, o sea, ganancia para hacer tu"
+    },
+    {
+      "t": 193,
+      "text": "contenido, creatividad de lanzarlo por la web, la gente lo descubren por Google. Bueno, tienes este publicidad, todos están feliz, ¿vale? este punto"
+    },
+    {
+      "t": 205,
+      "text": "hasta el punto que no sé si saben, pero antes Google tenía un slogan, don't be evil, ¿vale? Lo quitaron."
+    },
+    {
+      "t": 218,
+      "text": "punto. Okay. Entonces, ya sabemos dónde iba a ir pues el procedimiento de Google, el web y todo. Enfoco mucho en Google porque esto era mi vida por muchos años y la verdad es que es el eh"
+    },
+    {
+      "t": 231,
+      "text": "controla la mayoría de cabezas, de mentes, de todos que han utilizado internet. Google es el web. Lo es es casi igual, no era un portal, es la web, ¿sabes? Bueno,"
+    },
+    {
+      "t": 245,
+      "text": "esos fueron uno de mis colegas que hice un tweet hace mucho tiempo y Google pues el el Head of Web Spam Matcuts está diciendo que estamos cortando muchas páginas de muchos creadores, entonces"
+    },
+    {
+      "t": 258,
+      "text": "blog de recetas de tu madre, de lo que sea, porque había enlaces, links pues malos o lo que sea y lo cortaron o porque están copiando y todo. Y el"
+    },
+    {
+      "t": 270,
+      "text": "chiste aquí es que Matcuts, el este punto, el head of webpam de Google ha preguntado, si veas un ejemplo de un scraper, muéstrame."
+    },
+    {
+      "t": 283,
+      "text": "Bueno, no entiendes el chiste. Bueno, aquí Google está scrapeando páginas."
+    },
+    {
+      "t": 291,
+      "text": "Coge todos los datos de todos. Bueno, al inicio acuérdate que pues el cambio era apareces en Google, puedes ganar, lo que sea y ahora Google te está sacando todo."
+    },
+    {
+      "t": 303,
+      "text": "Vale, eso es el inicio de cosas que eran para nosotros, o sea, muy mal, ¿vale? Ya es un poco difícil de compensar alguien por su tiempo."
+    },
+    {
+      "t": 315,
+      "text": "Literalmente este mensaje está escrito por la pared. Se dice en inglés, it was written on the wall. Serge Brin wanted the answers to come to you before you said anything. Entonces, su visión era"
+    },
+    {
+      "t": 328,
+      "text": "con Google Glass, Google Glog. Todavía pues no es nada, pero con Elía ya estamos. Vale, esto era siempre la carrera, siempre es la visión y bueno,"
+    },
+    {
+      "t": 342,
+      "text": "hemos cambiado, puesto independencia, o sea, de tener mi propio dominio, todo esto por una página de Instagram, ¿vale?"
+    },
+    {
+      "t": 352,
+      "text": "O que ah substack o medium, entonces voy a a dar todo mi contenido a una plataforma. Hemos cambiado todo por conveniencia, pero eso es el malo,"
+    },
+    {
+      "t": 364,
+      "text": "¿vale? Entonces sí tienes usuaries, sí, todo es mucho más fácil, pero la cosa es que estás construyendo, imagínate que alquilas un apartamento aquí y te"
+    },
+    {
+      "t": 378,
+      "text": "vas a hacer un bar dentro del apartamento. El dueño no lo quiere, tú lo quieres, pero después es que, okay, el dueño lo puede pues eliminar todo, no es tuyo, es lo que estamos haciendo."
+    },
+    {
+      "t": 393,
+      "text": "Cuando eh toda la gente es que las empresas aquí siempre todos tienen algo en Instagram, búscame Instagram, ¿no?"
+    },
+    {
+      "t": 400,
+      "text": "Porque no puedo ver tus horarios, no sé si estás abierto ni nada, ¿vale? Y el punto aquí es que estás siempre estás construyendo en tierra alquilada en más o menos este términos y es un problema."
+    },
+    {
+      "t": 414,
+      "text": "Había un caso famoso hace poco que YouTube, el rey de Censorship han quitado un canal entero del juego de chess. ¿Cómo se llama chess en español?"
+    },
+    {
+      "t": 428,
+      "text": "Vale, gracias. Entonces, ¿por qué? Porque están mencionando blanco y negro siempre. Blanco y negro. Blanco y negro."
+    },
+    {
+      "t": 435,
+      "text": "Entonces es racista. Quitaron un montón de canales. O sea, que tú vives y eres un jugador y haces streaming, ¿sí?, del juego y por qué estás diciendo black"
+    },
+    {
+      "t": 448,
+      "text": "pawn white queen. Chao, no es tuyo. Vale."
+    },
+    {
+      "t": 454,
+      "text": "Okay. El otro, había una cosa que se llama MySpace. Eh, también en Ah, pues sí era había muchas muchos networks,"
+    },
+    {
+      "t": 466,
+      "text": "bueno, antes que fallaron y todo, el primer cosa del internet que era super grave es que borraron un montón de música de artistas independientes, ¿vale? Esto puede pasar y esto pasa"
+    },
+    {
+      "t": 480,
+      "text": "siempre, ¿vale? Eh, Elía de Google, bueno, te mostré cómo está escraeando, bá, dándote respuestas."
+    },
+    {
+      "t": 490,
+      "text": "No sé si han visto y es un poco difícil de ver, pero la gente estaban preguntando a los días iniciales, ¿cuántas piedras debería comer? Te está respondiendo uno al día."
+    },
+    {
+      "t": 504,
+      "text": "Eh, yo tengo una pizza, es que necesito un poco un poco más de consistencia. Ah, ponte el glue. El ¿Cómo se llama? Glue."
+    },
+    {
+      "t": 514,
+      "text": "Ah, pegamento. Pegamento. Sí, la pega. Sí, vale. Y eso un caso muy famoso. Todos los enlaces están aquí. Bueno, punto es, no te"
+    },
+    {
+      "t": 526,
+      "text": "puedes confiar. Mucha gente ahora, no sé, tus amigos y todos que cuál es la población de Indonesia, se van por Google. Ah, haz esto."
+    },
+    {
+      "t": 535,
+      "text": "¿Sabes qué? la mayoría de veces te está mentiendo. Eso es la cosa. Bueno, el otro problema ya vengo al punto, es que todo este datos por el training data del"
+    },
+    {
+      "t": 549,
+      "text": "IA, ¿cómo dijeron varios de este tipo de personajes como Elon y Dario, es que no tenemos más? Ya han consumido todos los libros de humanidad y necesitamos más y"
+    },
+    {
+      "t": 562,
+      "text": "nadie y nadie está compilando su propio contenido. Siempre es con IA y lo puedes ver desde tus amigos. Seguramente a veces este abres WhatsApp, veas el M"
+    },
+    {
+      "t": 575,
+      "text": "dash. Bueno, sabes esto y es un es un problema. Ya tenemos pruebas como Bolbook, que es un red social para gentes, que literalmente"
+    },
+    {
+      "t": 588,
+      "text": "no [resoplido] puedes distinguir la realidad. Sí, Elía, está aquí. La mayoría de gente que con quién estamos hablando de redes sociales son Elía. Eso es el punto, ¿vale? En un estudio hace"
+    },
+    {
+      "t": 602,
+      "text": "poco es que ya en general, bueno, en samples todo esto es que ya tenemos más tráfico en general de los bosques humanos, ya estamos al punto de Dead"
+    },
+    {
+      "t": 617,
+      "text": "Internet Theory, ¿vale? Y es un problema muy grande, ¿vale?"
+    },
+    {
+      "t": 622,
+      "text": "Como te dije antes, era un poco de scraping de Google, ya te está cogiendo los datos totalmente. Están reescribiendo datos de tu página web y no te dan el click. Google, bueno, ya"
+    },
+    {
+      "t": 636,
+      "text": "está en este punto, está literalmente robando gente y el incentivo de crear contenido, ¿para qué? No, no tengo click, no tengo forma de ganar, es muy"
+    },
+    {
+      "t": 649,
+      "text": "difícil, ¿sabes? Pero ellos necesitan el contenido, entonces tiene que indexar todo el contenido, ¿vale? La mayoría de contenido por la web y de publicaciones"
+    },
+    {
+      "t": 661,
+      "text": "de periódicos es que yo trabajo con periódicos bastante grandes. No te puedes creer la cantidad del contenido que está escrito por ella, ¿vale? Es literalmente totalmente falso, te digo."
+    },
+    {
+      "t": 675,
+      "text": "Bueno, la mayoría de gente tienen una página web a veces, bueno, pero dependiendo si es tuyo o no. Hay muchas empresas allí que utilizan Wix o otras cosas, eh, y la verdad no es suyo. Otra"
+    },
+    {
+      "t": 689,
+      "text": "vez el argumento que el el la tierra está alquilado, ¿vale?"
+    },
+    {
+      "t": 696,
+      "text": "Por eso es que estoy un poco ambicioso que todos los programadores quieren su propio sistema de contenido. Vale, yo lo hice y te voy a dar un pequeño ejemplo y"
+    },
+    {
+      "t": 709,
+      "text": "vamos a ver si esto va a funcionar."
+    },
+    {
+      "t": 714,
+      "text": "Bueno, te voy a decir super rápido. ¿Quién conoce Cloudfler?"
+    },
+    {
+      "t": 728,
+      "text": "Cloudfare, sí, por favor. Es el más útil, la cosa más útil en internet. Bueno, es el digamos es un layer de seguridad de todo por el internet. Deberías comprar la"
+    },
+    {
+      "t": 740,
+      "text": "acción también. Está un poco bajo ahora net. Sí. Bueno, cloud eh te voy a decir en inglés iters like 40% of the internet right now. It's huge. People don't know."
+    },
+    {
+      "t": 753,
+      "text": "There are so many services. It has the best cloud offering you can get."
+    },
+    {
+      "t": 759,
+      "text": "as mi cosa con SMS era de que era absolutamente gratis, no tienes que modificar el código y además es que el"
+    },
+    {
+      "t": 773,
+      "text": "IA debería crear tu propio sito sitio, o sea, que para lanzar lanza CMS para lanzar una página por cualquier persona que quiere escribir de su propio banda"
+    },
+    {
+      "t": 785,
+      "text": "que hay un evento en Panamá, es que necesitamos, necesitamos más contenido humano y yo quiero quitar la barrera."
+    },
+    {
+      "t": 794,
+      "text": "Eso es completamente gratis. Bueno, vamos a hacer una prueba juntos, ¿vale?"
+    },
+    {
+      "t": 799,
+      "text": "Entonces, aquí tiene toda la información. Da igual."
+    },
+    {
+      "t": 803,
+      "text": "Voy a empezar. Esto es inglés. Bueno, vamos a pick somebody."
+    },
+    {
+      "t": 817,
+      "text": "Dame dame un título de una página web."
+    },
+    {
+      "t": 830,
+      "text": "Vale. ¿Alguien quiere saber los detalles técnicos?"
+    },
+    {
+      "t": 837,
+      "text": "¿Cómo funciona? Bueno, la página web, la parte estática es astro. ¿Cómo puedes tener un login? Todo esto es que utilizo"
+    },
+    {
+      "t": 850,
+      "text": "GitHub, ¿vale? Y utilizo aplicación de OF."
+    },
+    {
+      "t": 855,
+      "text": "Eso es. Y después tengo otra aplicación de cloud o aquí puedes ver. Entonces ya el proceso está seleccionando eh reps y esto era documental approve and"
+    },
+    {
+      "t": 870,
+      "text": "install. Bueno, conect cloud fare cloud también totalmente gratis."
+    },
+    {
+      "t": 881,
+      "text": "gratuito. Eh, voy a seleccionar esto. Review permissions."
+    },
+    {
+      "t": 886,
+      "text": "Authorize. No pido mucho."
+    },
+    {
+      "t": 890,
+      "text": "Puedes hacer un poco de Ah, sí. Ya."
+    },
+    {
+      "t": 903,
+      "text": "bueno, lo que está pasando, yo tengo [carraspeo] el CMS lanza en un repositorio. Bueno, tengo otro que se llama el al inquilino. El inquilino está hablando"
+    },
+    {
+      "t": 917,
+      "text": "con este lanza, le está convirtiendo un token. Bueno, aquí cambiamos solo el token de GitHub. Bueno, el el repository de cada persona que tiene esa página web, literalmente son cinco archivos, no"
+    },
+    {
+      "t": 931,
+      "text": "tienes que hacer nada. Esto es Voy a averiguar esto. Vamos a hacer, mientras tanto te voy a mostrar la"
+    },
+    {
+      "t": 945,
+      "text": "página web y cómo cómo es."
+    },
+    {
+      "t": 953,
+      "text": "Bueno, el punto aquí era el home, ¿vale? El punto aquí no es que ah, yo tengo que hacer todo programación de CS, de HTML, todo este,"
+    },
+    {
+      "t": 967,
+      "text": "¿no? El punto es el MSP tiene que hacer absolutamente todo. También tiene una esquima que es super estricto. Entonces tienen tipos de eh tipos de contenido,"
+    },
+    {
+      "t": 979,
+      "text": "¿vale? igual como WordPress. Entonces puedes decir que tienes servicios, tienes documentos, cualquier tipo de cosas. Hm. Como un HCMS, ¿vale? Y después es que él te lo va a crear"
+    },
+    {
+      "t": 992,
+      "text": "también te va a dar los campos para cambiar todo esto. Aquí voy."
+    },
+    {
+      "t": 1001,
+      "text": "Ah, no puedo. No, no más."
+    },
+    {
+      "t": 1011,
+      "text": "Si puedes ver que está cambiando en tiempo real, ¿no? Bueno, es lo que hay."
+    },
+    {
+      "t": 1016,
+      "text": "Bueno, pues Ahí a [carraspeo]"
+    },
+    {
+      "t": 1052,
+      "text": "Ah, bueno, no puedes ver mucho, pero yo literalmente hice SEO por muchos años."
+    },
+    {
+      "t": 1058,
+      "text": "Entonces, todas las cosas que son difíciles de aplicar tipo de instrucciones para Google, todo esto está automatizado. Es que el punto es que lo puedes lanzar, cualquier persona lo puede lanzar, ¿okay? De ser incluido"
+    },
+    {
+      "t": 1071,
+      "text": "en el index de Google, pero bien hecho, ¿okay? Ah, mi futuro es que voy a seguir con este tipo de proyecto porque me encanta. La otra cosa es que le falta, o sea, que hoy estamos en el día que con"
+    },
+    {
+      "t": 1084,
+      "text": "el día podemos hacer eh los test A, B."
+    },
+    {
+      "t": 1088,
+      "text": "Sencillos. Entonces podemos autoimizar las páginas. La verdad es que necesitas $ de CH GPT y nada más. Eso es, eso es literalmente. Vale, con esta con esta herramienta aparece también en chatt"
+    },
+    {
+      "t": 1104,
+      "text": "si si es que si es que tu tu página es específica para un cierto tema y lo constru con con lanza aparece en chatt en clon."
+    },
+    {
+      "t": 1117,
+      "text": "Vamos a hacer el demo ahora. Es la última cosa que vamos a hacer y alguien me va a describir una página web. Si lo hace bien. Si no, me voy. Bye. Okay."
+    },
+    {
+      "t": 1127,
+      "text": "Listo. Entonces esto ya está live. No puedes ver, pero eso es documental pages.dde siempre el dominio gratuito de cloud es pages. Vale, entonces aquí"
+    },
+    {
+      "t": 1152,
+      "text": "vale a mi charpt y vamos a hacer el demo absolutamente todo."
+    },
+    {
+      "t": 1160,
+      "text": "Primera cosa es que necesito hacer un nuevo plugin. Okay. Documents portal y aquí la conexión MCP, pero vamos con"
+    },
+    {
+      "t": 1173,
+      "text": "Oat. Vale. Y accepto. Ya. Okay. Alguien me dame algo, un tipo de idea que te gusta, no sé, rainbows, gatos o lo que sea, no sé."
+    },
+    {
+      "t": 1186,
+      "text": "Colores. Pad deporte. Pad paddel. Okay. Eres un eres un negocio de pad."
+    },
+    {
+      "t": 1192,
+      "text": "Sí, jugador. Bueno, aquí el otro parte es también eso es ah sin permisiones, ¿vale? Eso es lanza que está manejando absolutamente todo eso. Es que quieres dejar acceso al"
+    },
+    {
+      "t": 1206,
+      "text": "LM, ¿vale? Sí, dale."
+    },
+    {
+      "t": 1210,
+      "text": "Y eso es totalmente a través de GitHub, ¿okay? No pagas por GitHub, no pagas por Cloud nunca. Cloud, te puedes poner literalmente 25 megas por archivo hasta que el límite de GitHub, ¿okay? Puedes"
+    },
+    {
+      "t": 1223,
+      "text": "poner videos y todo. Super fast."
+    },
+    {
+      "t": 1232,
+      "text": "Bueno, okay. New chat."
+    },
+    {
+      "t": 1242,
+      "text": "Aquí no veo. Bueno, documental."
+    },
+    {
+      "t": 1250,
+      "text": "Can you please design a padle shop padle. No sé si hay otras cosas."
+    },
+    {
+      "t": 1262,
+      "text": "fictitious."
+    },
+    {
+      "t": 1269,
+      "text": "Okay. Y diseño, colores retro them, don't know."
+    },
+    {
+      "t": 1276,
+      "text": "Rojo, blanco y azul. Ah, rojo, blanco y azul. I brutal."
+    },
+    {
+      "t": 1298,
+      "text": "Bueno, [carraspeo] todos saben, o sea, que cómo utilizar o cómo crear un off server por para NCP, ¿no? Sí, sí. No, sí."
+    },
+    {
+      "t": 1310,
+      "text": "No. Okay. Eh, bueno, voy a explicar porque no sé el nivel de de todos. O, literalmente, si no saben, perdón, eh, o sea, es una conexión siempre por la web,"
+    },
+    {
+      "t": 1322,
+      "text": "¿vale? Entoncesen con Google por la web, eso es o hay otros muchas formas de conexiones, pero aquí lo que estamos haciendo es literalmente"
+    },
+    {
+      "t": 1334,
+      "text": "dando eh un permiso al bot directamente. Entonces, chat GPT y cloud están bien, ¿okay? Pueden manejar todo este tipo de cosas. Eh, no sé, Grock Gemini, no sé"
+    },
+    {
+      "t": 1346,
+      "text": "tampoco la verdad, pero chat GPT y Cloud, excelente."
+    },
+    {
+      "t": 1355,
+      "text": "Bueno, lo que va a hacer ahora es que hay dos formas. Entonces siempre al bueno, la cosa es que en una página de producción, página real, bueno, siempre quieres ver algo antes de publicarlo,"
+    },
+    {
+      "t": 1369,
+      "text": "¿no? Entonces ese sistema viene con un staging y production."
+    },
+    {
+      "t": 1376,
+      "text": "Cuando tú estás feliz, ¿vale?, de un cambio, o sea, que ah era aquí"
+    },
+    {
+      "t": 1390,
+      "text": "cuando tú estás aquí y quieres cambiar algo, o sea, que puedes y vamos a hacer un cambio super pequeño aquí solo para"
+    },
+    {
+      "t": 1402,
+      "text": "Vale, save. Y aquí es que está esperando para publicar. Esto funciona literalmente como getup que otro branch. That's it."
+    },
+    {
+      "t": 1413,
+      "text": "Eso es la magia. Totalmente gratuito. Vale, voy a publicar publicar a producción. Bueno, vamos a ver qué tal GPT."
+    },
+    {
+      "t": 1427,
+      "text": "Pero entonces eh a ver si entiendo de ahím el agente está conectado a tu gitubina que trabaj cread, ¿no? Sí, ¿no? Bueno, digamos que GitHub"
+    },
+    {
+      "t": 1442,
+      "text": "está manejando, GitHub tiene una conexión, ¿vale?"
+    },
+    {
+      "t": 1447,
+      "text": "Entonces, esto es era la forma más sencilla de hacerlo sin hacer todo ese contraseño, bla bla. Entonces, GitHub maneja un repositorio, ¿vale?, de lanza, tú alquilas, ¿sí? El código, o sea, que"
+    },
+    {
+      "t": 1459,
+      "text": "nunca tienes que darte, o sea, no te tienes que ocupar con el código, nunca."
+    },
+    {
+      "t": 1465,
+      "text": "Tienes literalmente un skim adjacent y cosas así para que se construya. Y después es que tienes un off server, o application en GitHub. Cloudler tiene o"
+    },
+    {
+      "t": 1477,
+      "text": "también, ¿vale? Entonces, en Cloudlare, en los Cloudlare Pages que hay muchas cosas, Cloudflare Workers es una cosa mucho más, bueno, eh, son como cloud"
+    },
+    {
+      "t": 1489,
+      "text": "functions más o menos, ¿vale? Pero pages, pages es algo totalmente estático. Y cuando vamos a admin la magia es que utilizo, obviamente es un spa de view JS. Esto es, ¿vale?"
+    },
+    {
+      "t": 1524,
+      "text": "Okay, eso es el momento de no sé si si lo va a hacer o no, pero si lo hice varias veces no no vino aquí sin si hace pruebas, ¿vale?"
+    },
+    {
+      "t": 1535,
+      "text": "Ah, es es la Sí, super raro."
+    },
+    {
+      "t": 1549,
+      "text": "No, I know."
+    },
+    {
+      "t": 1556,
+      "text": "Eh, tú tienes you have you have the actual code the astro code view code that sits on LMS that's own repo. You"
+    },
+    {
+      "t": 1568,
+      "text": "get a skeleton and you get essentially a big schema, right? Big Jason object essentially populates everything. That's why it works. That's the only reason why it works. And so what an LM is doing is"
+    },
+    {
+      "t": 1581,
+      "text": "literally putting in page template the HTML, everything into one giant uh Jason object. And that's what's happening. So I don't know what's happening here, but let's try it on a different site."
+    },
+    {
+      "t": 1594,
+      "text": "I have this is this is this is a new one for me. So I've never guess your core value proposition is"
+    },
+    {
+      "t": 1606,
+      "text": "that you're building someone's website I think the entire thing. Yeah. Yeah. Let me I'll explain in English."
+    },
+    {
+      "t": 1619,
+      "text": "The idea is that you never really worry about anything, right?"
+    },
+    {
+      "t": 1624,
+      "text": "But what are you trying to do? You're trying to build a website. Yeah."
+    },
+    {
+      "t": 1633,
+      "text": "No, it's not it's not just it's not just about website. Everybody can do this. You can go right now and you can do any website that you want. The thing is you want something that's got a little bit"
+    },
+    {
+      "t": 1640,
+      "text": "of harness on it so that the AI doesn't lose control."
+    },
+    {
+      "t": 1645,
+      "text": "So whenever you're doing a website, whenever you're doing a website, it's sort of like what is this? Is it a page?"
+    },
+    {
+      "t": 1650,
+      "text": "Is it a post? All this very structured. An AI can go all over the place and do whatever it wants. And so this is a way to give everybody a free infrastructure, some of the best infrastructure in the"
+    },
+    {
+      "t": 1662,
+      "text": "world. Literally, you can scale this, no problem. And then GitHub it's free, right? And so the only part of this is essentially making sure that the agents adhere to your instructions. There's"
+    },
+    {
+      "t": 1675,
+      "text": "going to be a lot of hicups because this is in beta, right? But for the most part, this is working. This is the last time. We see if it's it's actually going to work here. But I told you it was going to go wrong."
+    },
+    {
+      "t": 1690,
+      "text": "Oh shit."
+    },
+    {
+      "t": 1699,
+      "text": "Entonces se llama golpe independent for gear players brutalist weapon"
+    },
+    {
+      "t": 1713,
+      "text": "cool and you and you know that I'm not like we just did this right now right this is not a this is not a magic trick I didn't have this in"
+    },
+    {
+      "t": 1727,
+      "text": "Eh, la gente que programé también Vera al inicio es que ella está capaz de hacerlo. Obviamente es que hay mucho más bugs y también es que yo tengo un GPU obviamente en este ordenador, por eso"
+    },
+    {
+      "t": 1739,
+      "text": "que me facilita la vida. O sea, que mucha gente pueden utilizar otro tipo de sistema, cualquier cosa, pero yo soy muy del campo de open source y tienes que"
+    },
+    {
+      "t": 1752,
+      "text": "tomorrow you're if you're racist or whatever accounts gone right and this is the way"
+    },
+    {
+      "t": 1764,
+      "text": "to I hope keep this So, aquí vamos a hacer login y vamos a hacer lo que hice. Ah, perdón,"
+    },
+    {
+      "t": 1779,
+      "text": "eso es el último. Signe. Así funciona. Vale, entonces está utilizando e el oat de GitHub."
+    },
+    {
+      "t": 1793,
+      "text": "Y esto para que sepas, al inicio es que caduca en una hora, pero hay una forma de hacer un refresh, bla bla authorize."
+    },
+    {
+      "t": 1801,
+      "text": "Y aquí así es. Ya puedo hacer el login, voy a hacer el skip del wizard, puedes hacer otros idiomas, da igual. Bueno,"
+    },
+    {
+      "t": 1817,
+      "text": "vale. Y te acuerdes del de la página principal, ¿vale? Aquí. Okay. Entonces, el punto es que Elía me ayuda, ¿okay? Que lance este"
+    },
+    {
+      "t": 1829,
+      "text": "cosa encima del cloud pages gratuito, totalmente."
+    },
+    {
+      "t": 1833,
+      "text": "You can look it up yourself. You can make as many as you want and will never charge you a penny. Okay."
+    },
+    {
+      "t": 1841,
+      "text": "Tantas, ¿cuántos reples hasta que te cobran? No sé, nunca llegó. Vale. Y aquí lo que puedes hacer el humano después lo puede corregir todo esto. Entonces es"
+    },
+    {
+      "t": 1854,
+      "text": "superfácil. Puedo yo tengo un dominio. Puedo usar tu herramienta para desarrollar páginar con mi dominio."
+    },
+    {
+      "t": 1862,
+      "text": "Claro, claro. Totalmente. Es que esto eh digamos que sí, Clafer es el DNS. También te puedes comprar el nombre. Sí. Y literalmente de ahí. Y aquí tengo Lanza. Y aquí"
+    },
+    {
+      "t": 1880,
+      "text": "Ah, superf. Sí."
+    },
+    {
+      "t": 1884,
+      "text": "Oh, it's amazing. Amazing. I mean, have you thought about like if I'm doing this, maybe I'm thinking let's say I [carraspeo] do marketing, right? And"
+    },
+    {
+      "t": 1896,
+      "text": "with every campaign I'm going to do a new website, right? It's cool that I can sort of build them like this. Have you thought about a manager?"
+    },
+    {
+      "t": 1905,
+      "text": "I don't know 10 or 20 websites with LAN right sort of manage all of them together and I could just I'm done with this website."
+    },
+    {
+      "t": 1915,
+      "text": "Boom gone you know I can open a website in 20 seconds. I can do a marketing campaign on top of it and when I'm done boom gone. Yeah. Uh I don't know exactly how I would do that yet. Uh but there's"
+    },
+    {
+      "t": 1930,
+      "text": "there's the idea like WordPress has multisite and all that kind of stuff. It never worked well. The only reason why it worked like on the multisite, the only people who used WordPress multisite"
+    },
+    {
+      "t": 1940,
+      "text": "were spammers. I'm going to be honest here because each website is not going to be like, I'm going to do all this kind of things in market, but you have full control. Like you can go on your"
+    },
+    {
+      "t": 1950,
+      "text": "phone, you know, now that you're connected with chat GBT and it has that plugin, right? You can be like, \"Hey, you're like literally you're outside and you want to create your own content and"
+    },
+    {
+      "t": 1960,
+      "text": "be like, awesome, there's an event in Panama. Digamos que en el cupo mundial había el parque aquí eh, no me acuerdo cómo se llama, pero había mucha gente, había tantas cosas. Entonces, ¿para qué vas a"
+    },
+    {
+      "t": 1972,
+      "text": "dar este tipo de contenido a Facebook directamente o Instagram? Es tuyo, ¿vale? Y aquí lo puedes poner en chat."
+    },
+    {
+      "t": 1979,
+      "text": "Ponga este video directamente en mi página web y eso es mi sueño. Y después toda la gente es tu contenido, después lo alquilas a Instagram y todo. Si ellos lo quitan"
+    },
+    {
+      "t": 1992,
+      "text": "está bien, está en tu página web, tú tienes todo el dominio. Sí, son $ al año, ¿vale? Pero es tuyo. Sí. Y si Cloud mañana te quitan, GitHub se quita, da igual el contenido, el el Jason está en"
+    },
+    {
+      "t": 2007,
+      "text": "un archivo, tú puedes hacer lo que tú quieras, no pueden hacer nada, tú lo tienes para siempre. Es como un archivo de texto, no pueden hacer nada, ¿sabes?"
+    },
+    {
+      "t": 2018,
+      "text": "Bueno, llevamos tres minutitos preguntas porque estamos prestados en Sí, sí, ya preguntas 3 minutitos para cerrar, pero a nivel a nivel de contenido, ¿no? Estás creando contenido también con con IA en"
+    },
+    {
+      "t": 2032,
+      "text": "cierto sentido, ¿no? y el contenido a nivel de SEO que comentabas, ¿cómo haces para comenzar a limitar qué es contenido realmente valioso y qué es un contenido que es muy genérico, muy"
+    },
+    {
+      "t": 2044,
+      "text": "de, o sea, cómo comienza a futuro ese tema del SEO, por ejemplo, porque claro, lanzar lo que decía el compañero de 20 páginas por una campaña de marketing, 20 páginas es estás creando contenido, pero"
+    },
+    {
+      "t": 2057,
+      "text": "también contenido basura porque son es un contenido no creado por humano, sino también es muy cosas ya algo nuevo, no hay no hay novedad, es algo super extraído es como se se trabaja de la"
+    },
+    {
+      "t": 2069,
+      "text": "otra manera para crear contenido limpio y para crear contenido humano como tal."
+    },
+    {
+      "t": 2073,
+      "text": "Vale. Eh, voy a responder dos formas. La primera cosa es que espero que la gente no van a hacer ese tipo de de cosas, ¿vale? Es que es super obvio. El punto aquí es de utilizar el IA para crear"
+    },
+    {
+      "t": 2086,
+      "text": "algo de la estructura super rápido, pero el punto es que tú escribes. Sí, te voy a dar todos los campos para que sea más fácil, pero deberías escribirlo. Además que todas las empresas, como hace 3 días"
+    },
+    {
+      "t": 2098,
+      "text": "que Antrop vino con el Cent ID, lo sabemos que todos, todo el contenido ya tenía watermarks. Había muchos, muchas técnicas para esconder eh cosas,"
+    },
+    {
+      "t": 2110,
+      "text": "digamos, en un font o todo esto. Es que ellos lo van a lograr, ¿vale? es que ellos van a saber dependiendo de Google, de lo que sea, cómo cómo van a hacer cosas, es otra cosa. Pero créeme, es que"
+    },
+    {
+      "t": 2126,
+      "text": "el contenido humano, no sé si ustedes han llegado al el cansancio hasta que yo llegué, pero todo en mi mundo decía."
+    },
+    {
+      "t": 2136,
+      "text": "Todo en mi mundo decía, es que yo y para entender, para leer algo humano es muy difícil."
+    },
+    {
+      "t": 2144,
+      "text": "Sí. en el futuro. Okay. Si no somos totalmente esclavos, es que bueno, eh, vamos a pagar por un premium, por para hablar con un humano. Yo eso es yo creo,"
+    },
+    {
+      "t": 2157,
+      "text": "yo creo. Vale. Es, perdón, eso"
+    }
+  ],
+  "language": "es",
+  "backfill": true
+}

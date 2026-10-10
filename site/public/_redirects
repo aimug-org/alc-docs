@@ -1,0 +1,18 @@
+# Cloudflare Pages redirects. Format: /old /new 301
+# "Labs Timeline" links in the old docs pointed at a page that was never built; the docs index is the month-by-month timeline.
+/docs/labs_by_month /docs/ 301
+/labs_by_month /docs/ 301
+# Docusaurus published both feeds.
+/blog/atom.xml /blog/rss.xml 301
+/markdown-page /  301
+/markdown-page/ /  301
+# Links in old docs that pointed at pages that never existed: send them to the closest real page.
+/docs/community-guidelines /code-of-conduct/ 301
+/docs/upcoming-events /events/ 301
+/docs/project-showcase /talks/ 301
+/docs/learning-resources /docs/ 301
+/docs/jul-2025/resources/ /docs/jul-2025/ 301
+/docs/jun-2025/full-sessions/mcp-testing-showcase /docs/jun-2025/ 301
+/docs/langchain-introduction /docs/ 301
+/get-started /community/ 301
+/get-started/ /community/ 301

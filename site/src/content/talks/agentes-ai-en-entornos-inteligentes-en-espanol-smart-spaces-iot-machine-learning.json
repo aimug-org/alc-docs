@@ -1,0 +1,495 @@
+{
+  "title": "Agentes AI en Entornos Inteligentes En Espanol | Smart Spaces, IoT, Machine Learning",
+  "speakers": [],
+  "date": "2026-05-11",
+  "youtubeId": "BTuGssS5u1o",
+  "duration": 1363,
+  "summary": "En esta charla del Panama AI Meetup Group (AIMUG), Victor Rodriguez y Alejandro Mo presentan su trabajo sobre agentes de Inteligencia Artificial para entornos inteligentes, combinando conceptos de IA, Machine Learning, IoT y Smart Systems.",
+  "topics": [
+    "Agents"
+  ],
+  "language": "es",
+  "transcript": [
+    {
+      "t": 1,
+      "text": "Eh, bueno, eh, muchas gracias por por estar aquí. Nosotros vamos a hablarles de agentes en entornos inteligentes. Eh, vamos a dividir la charla en dos partes."
+    },
+    {
+      "t": 13,
+      "text": "Primero vamos a hablar como qué es esto. Ajá. De la gente inteligente y luego de nuestro proyecto de Tis que estamos desarrollando."
+    },
+    {
+      "t": 24,
+      "text": "Y bueno, mi nombre es Alejandro y Vicon."
+    },
+    {
+      "t": 28,
+      "text": "Bueno, somos desarrolladores de Zombo y bueno, agentes eh de ella, ¿correcto? Eh, bueno, entonces e"
+    },
+    {
+      "t": 41,
+      "text": "nosotros básicamente eh para darse un un brega acá como inside e nosotros tenemos voy a dar un poco de contexto porque tenemos tiempo. Así que eh nosotros"
+    },
+    {
+      "t": 54,
+      "text": "desarrollamos eh en una materia que tomamos intercambio con otra universidad que se llama Malardens University eh varios proyectos que estaban relacionados a SM. Entonces este desarrolló qué"
+    },
+    {
+      "t": 67,
+      "text": "sí era una cadera para ofrecir el estado de un entorno inteligente. Okay."
+    },
+    {
+      "t": 72,
+      "text": "Okay. Y por ejemplo, yo en el estuve desarrollando un sistema que extraía eh ítems de los refrigeradores eh y te daba un en una a través de un web de podías"
+    },
+    {
+      "t": 85,
+      "text": "ver todo lo que tenías en el en laera y podías saber cuánto tiempo llevaba ahí adentro. Y bueno, cada vez que tú sacabas algo y vendías algo que te escoliz para tenerlo pero lo cierto es"
+    },
+    {
+      "t": 95,
+      "text": "que eh todo eso lo hicimos utilizando modelar y eh inteligencia artificial."
+    },
+    {
+      "t": 101,
+      "text": "Entonces eso nos dejó como con ese ese con ese chispa de seguir dándole por esa área. Entonces se nos presentó la oportunidad de trabajar eh"
+    },
+    {
+      "t": 114,
+      "text": "todo esto lo hicimos en un smart que está en la universidad que estuvimos trabajando en Suecia. Entonces nos afectaba por una piqu y todo lo hicimos ayer. Entonces, eh luego teníamos la"
+    },
+    {
+      "t": 124,
+      "text": "idea de desarrollar porque ya está gradísimo, pero ¿por qué no hacemos algo así? Y casualmente eh hablamos con la profesora que fue nuestra conexión con esos días y nos di, bueno, justamente"
+    },
+    {
+      "t": 134,
+      "text": "nos dejaban de financiar a hacer algo así acá. Entonces nosotros di que bueno, lo vamos para allá. Entonces ahora básicamente en este acá en OTP nosotros tenemos un salón, un laboratorio donde"
+    },
+    {
+      "t": 147,
+      "text": "hay un servidor corriendo. Bueno, vamos adentro. Eh, ahí tenemos un servidor donde están corriendo eh cuando hay super servidor tiene 250 GB de RAM, tiene dos GPUs, tiene est super cool,"
+    },
+    {
+      "t": 161,
+      "text": "pero tenemos también todos los dispositivos que antes utilizáamos a través en Suecia, la tenemos acá."
+    },
+    {
+      "t": 168,
+      "text": "Entonces, eh nosotros tenemos la tarea como de empezar a hacer algo para empezar a hacer way eh lo que dijimos fue, bueno, vamos a hacer eh primero primero"
+    },
+    {
+      "t": 180,
+      "text": "cómo está la no porque han cambiado mucho las cosas. Entonces, por ejemplo, hace 2 años cuando nosotros hicimos eso en los proyectos que desarrollamos allá, como que eh todavía todo era muy muy"
+    },
+    {
+      "t": 192,
+      "text": "manual, por así decirlo. O sea, tenías una leis que puedes hablar por comando, tenías eh yo que sé, lo puedes usar por el teléfono, ¿cierto? Pero no era algo que ah"
+    },
+    {
+      "t": 205,
+      "text": "cómo digo, que tú tuvieras ahí físicamente, sino que todo era a través del o o de la quitando Alexa, pero bueno, ahí hay unos puntos que Alexa y su y su competencia, pero ahí hay unos"
+    },
+    {
+      "t": 220,
+      "text": "puntos que vamos a estar dialogando ahorita. Entonces, eh conocemos la evolución que han tenido los agentes, pasamos de modelos por allá, en realidad tienen más tiempo,"
+    },
+    {
+      "t": 232,
+      "text": "pero empezaron a emerger ahora en 2023, luego en el 2024 empezaron a aparecer con herramientas. el año pasado eh con los MCP que tuvo el boom y ahora pues eh"
+    },
+    {
+      "t": 244,
+      "text": "la idea es ahora qué va a suceder, ¿no? O sea, ya tenemos ya tenemos todo que todo se todo funciona a través de de por ejemplo Antropic que tiene sus modelos de CL"
+    },
+    {
+      "t": 257,
+      "text": "todo esto, pero al final eso no es como para nosotros es muy sencillo lo conocemos pero somos un pequeño porcentaje de mucha gente. Entonces, eh tú no es como que vas a poner a alguien a usar"
+    },
+    {
+      "t": 270,
+      "text": "cloud para que te haga alguien que no es experto, que no conoce técnicamente que es. Entonces, eh por otro lado e eh tenemos lado que nos da como"
+    },
+    {
+      "t": 283,
+      "text": "comprensión profunda del contexto a través de sus modelos, ¿verdad? O sea, ellos desarrollan modelos que son capaces de entender, de interpretar las introducciones que tiene el humano. Por"
+    },
+    {
+      "t": 293,
+      "text": "eso podemos hacer cosas tan cool con él, porque nos entiende y sabe que queremos hacerlo. Entonces, e por otro lado, entonces está que utiliza esos y y los"
+    },
+    {
+      "t": 305,
+      "text": "utilizan estos modelos como por ejemplo como los modelos de Antropic eh para empedrar y ejecutar."
+    },
+    {
+      "t": 314,
+      "text": "E y bueno, también están los otros frame que también conocemos de Lunch, de de de lo gráfico, ¿cómo se llama? Y y Free AI, Auto Jin y otros agentes con"
+    },
+    {
+      "t": 327,
+      "text": "otros framews que son más especializados. É, tenemos la idea de que ah cómo cómo van a unirse, cómo van a cómo"
+    },
+    {
+      "t": 340,
+      "text": "van a hacer para dar una unas para dar soluciones a la gente que no es técnica como porque esto lo usa gente que es técnica y aquello también. Ahorita no es como que cualquier persona pueda"
+    },
+    {
+      "t": 352,
+      "text": "hacerlo, puede hacerlo si se lo propone porque no es tan difícil, pero como lo digo, fácil de hacerlo para nosotros."
+    },
+    {
+      "t": 358,
+      "text": "Entonces, eh tenemos la creencia de que ya por un lado se está desarrollando aquello y ya por este lado se está desarrollando que falta algo, falta el factor como que conecta eso digital con"
+    },
+    {
+      "t": 370,
+      "text": "lo físico. Entonces eh creemos que el que desarrolla esa integración del mundo digital con lo físico va a ser como el que va a explotar lenguas."
+    },
+    {
+      "t": 383,
+      "text": "Eh, bueno, sí, el tema es que los el proyecto nosotros lo basamos que bueno, tenemos un SM, entonces hacemos el tema de un agente enos inteligentes, porque"
+    },
+    {
+      "t": 397,
+      "text": "imagínense qué pasa, por ejemplo, cuando eh te despertas una mañana, pero la alarma sonó media hora antes y resulta que tú no hiciste nada, tú no lo cambiaste, pero en las noticias salió"
+    },
+    {
+      "t": 411,
+      "text": "que hay tráfico más denso y la gente simplemente cambió todo alarma para que te tardara más temprano. No te preguntó, no te mandó notificación y nada."
+    },
+    {
+      "t": 421,
+      "text": "Entonces es literalmente una integración, una integración en cómo vivir con con alguien y tiene un entendimiento de tu entorno eh físico y"
+    },
+    {
+      "t": 435,
+      "text": "con el que puede interactuar. Eh, y bueno, hay una brecha muy gigante. Eh, menos del 1% de la gente sabe que mucha gente y mucho menos"
+    },
+    {
+      "t": 448,
+      "text": "la inteligencia artificial o los agentes más avanzados que tienen los niveles."
+    },
+    {
+      "t": 454,
+      "text": "Nosotros porque estamos metidos lleno prácticamente en este lo dominamos y eso y bueno, no importa si es que los agentes van a pasar de un entorno digital a a físico, eh van a estar eh"
+    },
+    {
+      "t": 469,
+      "text": "viviendo enor tu entorno físico y no te van a dar cuenta."
+    },
+    {
+      "t": 475,
+      "text": "El la forma en la que los agentes, la o la mayoría de la población va al final usar los agentes, no va a ser eh para que eso no se van a necesitar hacer como"
+    },
+    {
+      "t": 488,
+      "text": "mejores interfaces gratis para o más, sino que se van a hacer se tiene que hacer que los agentes desaparezcan. Tú no te vas a dar cuenta que hay un"
+    },
+    {
+      "t": 500,
+      "text": "agente, es como la electricidad. Tú enciendes la luz y no piensas, \"Ah, voy a usar electricidad menos que sea un ingeniero, pero básicamente así.\""
+    },
+    {
+      "t": 513,
+      "text": "Y los eh agentes entonces van a estar muy integrados eh y te acuerdas y va a pasar una interacción a una convivencia de escribir bronza,"
+    },
+    {
+      "t": 526,
+      "text": "simplemente él está ahí, conoce y no cuando digo que conoce tu entorno o tu Sí, tu entorno es que no solo sabe"
+    },
+    {
+      "t": 539,
+      "text": "cuál es tu color favorito, cuál es tu pisa favorita parair, sino que eh sabe hasta por ejemplo tu router tiene conex tu router sabe qué qué dispositivos están conectados, cuándo te conectas,"
+    },
+    {
+      "t": 552,
+      "text": "cuándo te tu actividad, el tema de sensores, movimientos, cámaras y bueno, ahí hay eh ahí hay también temas eh debatibles que ahora también vamos a tratar. Eh, y eso va a pasar de ser"
+    },
+    {
+      "t": 568,
+      "text": "visible a invisible, literalmente. Eh, ahí es cuando la brecha entonces se se va y se vuelve tan natural que no lo no lo vas a notar."
+    },
+    {
+      "t": 582,
+      "text": "Ah, bueno, y para hablar también un poco de las aplicaciones eh no solo en tema de probóstica o computación, sino eh tiene muchas aplicaciones muy puede tener aplicaciones muy específicas"
+    },
+    {
+      "t": 596,
+      "text": "y algunas generales serían, por ejemplo, yo que sé, oficinas, eh hospitales, entornos eh físico, espacio público, eh la ciudad, o sea, así eh con"
+    },
+    {
+      "t": 610,
+      "text": "todo el poder de de la de la los modelos y los agentes que están saliendo y bueno, ahora un poco más como del proyecto que que tenemos eh hace poco,"
+    },
+    {
+      "t": 627,
+      "text": "hace como tres semanas, ya tres semanas fue dijo que por fin llegaron los componentes del y tenemos un servidor e"
+    },
+    {
+      "t": 639,
+      "text": "los envía cinco 60 Ti eh porque vamos a hacer la diferencia del modelo de los LLM locales. Ahorita tenemos dos modelos, pero creo que van a ser tres o cuatro. Eh, uno, un Qwen 2.5"
+    },
+    {
+      "t": 654,
+      "text": "especializado para tuneado para Homistant."
+    },
+    {
+      "t": 658,
+      "text": "Ahora voy a hablar un poco más eso, pero es un sistema operativo especializado para entornos eh inteligentes. Exacto."
+    },
+    {
+      "t": 667,
+      "text": "Y es muy bueno. Eh, entrenado."
+    },
+    {
+      "t": 673,
+      "text": "Este lo hizo, ¿cómo se llama? Adam conway."
+    },
+    {
+      "t": 677,
+      "text": "Bueno, está en el otro es Gema 26 en el Edge, ¿no?"
+    },
+    {
+      "t": 690,
+      "text": "En el Edian eh 31B, no."
+    },
+    {
+      "t": 696,
+      "text": "Pero estamos experimentando también con implementaciones con porque en estos días eh vimos por ejemplo el cubo se van volando, entonces fue como 700 ton por"
+    },
+    {
+      "t": 708,
+      "text": "segundo y está muy el otro todavía no lo hemos probado a ese nivel, pero yo calculo que 100, 200 token por segundo va a estar super muy"
+    },
+    {
+      "t": 720,
+      "text": "bueno. Entonces el home systemado con Homem va a ser solo se usan como para interactuar con el ambiente para tener data contextual porque esa es otra cosa que pensamos como eh medir"
+    },
+    {
+      "t": 735,
+      "text": "eh la data contextual que tiene la gente y eh bueno, también tiene el 256 controlado. Eh tema de nubes. En este caso nosotros estamos haciendo también"
+    },
+    {
+      "t": 747,
+      "text": "un local porque en Suecia que decide con colaboración con la Universidad de Suecia hay una ley que parece que no todo el mundo sabemos por Entonces"
+    },
+    {
+      "t": 760,
+      "text": "bueno. Sí, exacto. Esa eso en realidad es más que una ley es como una es una norma de la universidad por tema de seguridad y ellos también tienen esa mentalidad."
+    },
+    {
+      "t": 774,
+      "text": "Se cuidas mucho de la privacidad."
+    },
+    {
+      "t": 779,
+      "text": "Sí, muchas eh nosotros estamos conectados conectando todos los eh dispositivos IP y nos"
+    },
+    {
+      "t": 793,
+      "text": "conectamos a través de una app lo tenemos corriendo en Docker e creo que en una Sí."
+    },
+    {
+      "t": 801,
+      "text": "Y bueno, ahí tiene eh se pueden explorar todos los datos del estado, todo el estado del entorno y se pueden cargar hasta el hotel eh incluso como"
+    },
+    {
+      "t": 813,
+      "text": "mencionaba el el así que mucha compatibilidad con muchos dispositivos."
+    },
+    {
+      "t": 821,
+      "text": "Correcto. Por ejemplo, eh hay algunos dispositivos que se conectan directamente a coma system. ¿Por qué?"
+    },
+    {
+      "t": 827,
+      "text": "Porque como es un software que es open source, tiene muchas materialidades, pero también tenemos un CB que funciona como gateway eh para eh otros dispositivos como sensores de movimiento, de temperatura, todos ellos"
+    },
+    {
+      "t": 841,
+      "text": "se conectan a una red privada de de C y ese Casta y se traen todos los dispositivos a los otros, la mayoría sensores alacas y nos dan. Entonces, por ejemplo, eh tenemos"
+    },
+    {
+      "t": 854,
+      "text": "un se nos da el nombre de sensor, pero es un sensor que detecta actividad humana y no es una cámara, un sensor que no estoy seguro de que es lo men, me imagino será frecuencia, eh, pero"
+    },
+    {
+      "t": 867,
+      "text": "detecta personas en una sala, depende a donde esté apuntado, practicar ese chilito."
+    },
+    {
+      "t": 872,
+      "text": "Eh, está el sensor de temperatura. La idea tenemos una cámara con la que, bueno, en un principio esperábamos como utilizarla para detectar a la gente, pero luego llegó el sensor ese que no"
+    },
+    {
+      "t": 885,
+      "text": "teníamos contemplado. Así que probablemente por el tema de la privacidad terminemos usando el sensor eh de movimiento más que la cámara, pero tenemos capaz la idea de si nos da tiempo utilizar la cámara para capaz"
+    },
+    {
+      "t": 898,
+      "text": "entrenar un modelo que nos detecte esto y yo que sé, por ejemplo, si estamos escuchando música sin ungente que te apagas, así que al final te te ayuden o sea una mejor experiencia de su e"
+    },
+    {
+      "t": 912,
+      "text": "pero eh sí, básicamente ente en un principio teníamos la idea de hacer en realidad ahora que lo pienso, teníamos la idea de ser una especie de glob porque medida que fuese un agente"
+    },
+    {
+      "t": 926,
+      "text": "proactivo y no reactivos, eh, no que te responda al mensaje que tú le mandas, como por ejemplo lo hacen los que usamos actualmente de de de forma assist de"
+    },
+    {
+      "t": 938,
+      "text": "asistencia en la casa. Ah, como Alex dice, Alex aprende la luz. Entonces, la idea era que fuera como proactivo, que fuera capaz de entender tus patrones y si te tú llegas a tu casa a las 8 de la"
+    },
+    {
+      "t": 950,
+      "text": "noche todos los días que 5 minutos antes de aire cuando tú llegues y esté eh fresco, por decir un capsul de muchos."
+    },
+    {
+      "t": 959,
+      "text": "Entonces, eh, pero también si no llegas a las 8 y dices, \"Ah, no llego.\""
+    },
+    {
+      "t": 963,
+      "text": "Entonces lo apago 5 minutos para estar o si me voy y dejo la cocina prendida, eh, la cocina es inteligente, no puedo pagar, no país, todo ese tipo de casos."
+    },
+    {
+      "t": 973,
+      "text": "Eh, pero luego salió P Glow, así que dijimos, \"Qué bueno, ¿por qué no usamos si ya lo tenemos?\""
+    },
+    {
+      "t": 980,
+      "text": "Entonces, eh ya teníamos algo desarrollado, pero ahora vamos a intentar implementar Open Club para que la para que él nos todo eso porque él al final por activo y como el servidor siempre está corriendo y es"
+    },
+    {
+      "t": 993,
+      "text": "todo local, entonces eh tenemos esa facilidad. Eh, también el tema de de que sea eh local eh tiene mucho que ver con el tema"
+    },
+    {
+      "t": 1005,
+      "text": "de la privacidad, porque por ejemplo hace un no sé si hace un año, el año pasado a lo pasado, eh Amazon eh, por ejemplo, te quitó de los términos de y"
+    },
+    {
+      "t": 1018,
+      "text": "condiciones la posibilidad de dejar de enviar tus datos ayer. dijera opcional que tú dijeras y que bueno, yo a mí no me importa que uses mis datos para entrenar a tu página. Ahora si quieres"
+    },
+    {
+      "t": 1028,
+      "text": "usar mis dispositivos tienes que darme tus datos entonces probablemente hay algo que se vaya a estar replicando con los demás y se hace. Entonces eh tenemos la idea de que como los agentes van a"
+    },
+    {
+      "t": 1038,
+      "text": "estar físicamente y que te van a conocer como que por qué y y ya estáamos hablando ahora de que los modelos se están comprimiendo y de que eventualmente eh vamos a poder correr un modelo decente en una laptop."
+    },
+    {
+      "t": 1051,
+      "text": "probablemente, no lo sé, pero también entonces bueno, tenemos la capacidad sin tener un servidor que te corra un modelo que sea capaz de bueno, captar esos cuatro porque al final nosotros estamos"
+    },
+    {
+      "t": 1062,
+      "text": "usando modelos potentes, pero no necesitas un modelo tan potente realmente. Entonces eh es más que todo porque queremos hacer nuestras pruebas."
+    },
+    {
+      "t": 1073,
+      "text": "Eh, lo cierto es que no queremos que nuestros gatos los tengan otras personas y no sé, tenemos la, yo tengo la teoría de que eventualmente las casas se van a comunicar entre ellas y que todo va a"
+    },
+    {
+      "t": 1084,
+      "text": "estar s super ultra conectado y tú no quieres que toda la actividad de tu casa la tenga una expresa ajena. Bueno, si te importan o no te importas ya es otro tema, pero eh ya es un tema más cultural"
+    },
+    {
+      "t": 1096,
+      "text": "y regional. Tú sabes eh imagínate que mi casa escucha que tomando mis Pero eso ya vendría siendo en los términos y condiciones del servicio que"
+    },
+    {
+      "t": 1108,
+      "text": "se le otorgaría a este tipo de forma system, por así decirlo."
+    },
+    {
+      "t": 1114,
+      "text": "Claro, claro. Pero la idea es que si por ejemplo todo eso lo podemos contactar una lo podríamos como un dispositivo que incluso conecta y empieza a hacer lo mismo que no exor porque es proactivo y entonces"
+    },
+    {
+      "t": 1127,
+      "text": "es que es privado, sobre todo es privado, ¿no?"
+    },
+    {
+      "t": 1134,
+      "text": "Todo claro en base a las normativas que casi siempre son las principales en el área de seguridad informática, tomando en cuenta la privacidad y los riesgos de los datos en todo lo que"
+    },
+    {
+      "t": 1146,
+      "text": "conlleva esto. Así que principalmente en esa parte. Sí, eso es otro tema, ¿no?"
+    },
+    {
+      "t": 1151,
+      "text": "Usa. Por ejemplo, eh, si lo usamos, hay que cortarle todas las entradas y salidas de información que nada más o este los mensajes."
+    },
+    {
+      "t": 1162,
+      "text": "Eh, no hay muchos hay muchos detallitos por debajo que hay que hay que ver antes de pero eh pues sí, la idea es básicamente tener un Yaris."
+    },
+    {
+      "t": 1176,
+      "text": "Otro, bueno, otra parte del principal del proyecto serían las Tools y los MC eh con las Tools y algunas internas ahí en código hacen que sea super rápido eh"
+    },
+    {
+      "t": 1188,
+      "text": "tenerlas ahí siempre disponibles y sobre todo con algunas con Marcita y otras eh quean alguna otra cosa, hay un código y los MSP porque ya ahí podría la gente usar"
+    },
+    {
+      "t": 1202,
+      "text": "bueno cualquier MSTP, hacer algo, traer fuera hacer cosas y eso está muy potente en realidad."
+    },
+    {
+      "t": 1210,
+      "text": "Y el otro tema es el los RS. Nosotros al principio eh cuando empezamos, bueno, hicimos como una especie de eh nobamos no estábamos tan de lleno y no conocíamos mucho el tema de RC,"
+    },
+    {
+      "t": 1222,
+      "text": "hicimos una especie de RAC un poco, yo le digo, artesanal porque hicimos eh y bueno, ahora lo tenemos con Croma y"
+    },
+    {
+      "t": 1237,
+      "text": "otro modelo de creo que es el más famoso en el eh de 184 dimensiones, muy muy buenas. Y esta parte es bien interesante porque nosotros nos dimos cuenta, lo"
+    },
+    {
+      "t": 1250,
+      "text": "hemos estado usando la gente y me hubiera gustado hacer como una prueba y mostrarla, pero cuando nosotros lo usábamos antes del R se estaba muy muy"
+    },
+    {
+      "t": 1262,
+      "text": "bueno, pero después ya cambiaba muchísimo. Se sentía como hablar con alguien que tuviera estuviera viviendo porque es muy sabe datas tuyas. Eh,"
+    },
+    {
+      "t": 1275,
+      "text": "porque hay un otro el agente eh con otro agente en paralelo con otro Llara que me está diciendo el usuario con otro modelo más para que sea más rápido"
+    },
+    {
+      "t": 1288,
+      "text": "porque no se neces eh la haremos guardar y eso es cualquier cosa, cualquier todo el tipo que la gente decida eh ya sea que tú le un"
+    },
+    {
+      "t": 1300,
+      "text": "mensaje que eh captó algo nuevo de eh tus sensores de la red de cámaras, lo que sea, pregunta, ¿debo guardar esta data del usuario me cumple data y puede"
+    },
+    {
+      "t": 1313,
+      "text": "ser data personal lo que tú quieras? Si le quieres decir cu cumpleaños lo va a guardar y después lo va a decir como y está está muy interesante porque lo vuelve muy muy personal a ti"
+    },
+    {
+      "t": 1327,
+      "text": "interesante y bueno, la parte de Open Cloud un poco más reciente eh para lo va a poder cloud, bueno, sabemos que es muy poderoso"
+    },
+    {
+      "t": 1339,
+      "text": "y sí eh bueno, creo que el futuro no es más pantalla sino que bueno son agentes viviendo en los entornos transparentes, omnipresentes e invisibles."
+    },
+    {
+      "t": 1351,
+      "text": "Eh, esa es nuestra proyecto tesis preguntas. Bienvenido."
+    }
+  ],
+  "backfill": true
+}

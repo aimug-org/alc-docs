@@ -1,0 +1,115 @@
+---
+sidebar_position: 1
+---
+
+# July 2025 Documentation
+
+Welcome to the July 2025 Austin LangChain & AI MUG documentation. This month features our Independence Day founding members celebration, exciting LangChain Ambassadors updates, lightning talks on cutting-edge tools, and Ryan Booth's main event showcase.
+
+## 📹 **July 2025 Session Recording**
+
+*Recording will be available after the session*
+
+## 📁 **Documentation Sections**
+
+### **[📰 News & Updates](/docs/jul-2025/news/)**
+*Latest developments and community announcements*
+- **[AIMUG Monthly Membership Program Launch](/docs/jul-2025/news/membership-program-launch)** - 🎉 **NEW!** PBS-style member supported, corporate underwritten community model
+- **[LangChain Ambassadors Meeting Updates](/docs/jul-2025/news/langchain-ambassadors-july-2025)** - Major product updates and roadmap insights from Harrison Chase and the LangChain team
+
+### **[⚡ Lightning Talks](/docs/jul-2025/lightning-talks/)**
+*Quick, focused presentations covering cutting-edge AI topics*
+- **[Toolhouse Fastlane Worker](/docs/jul-2025/lightning-talks/toolhouse-fastlane-worker)** - Orlie presents high-speed web automation for AI agents
+- **[Cloudflare Containers](/docs/jul-2025/lightning-talks/cloudflare-containers)** - Collier King explores container deployment strategies
+- **[Slack Integration with Cursor AI](/docs/jul-2025/lightning-talks/slack-cursor-integration)** - Joseph Fluckiger demonstrates mobile programming capabilities
+
+### **[⛈️ Thunderstorm Talks](/docs/jul-2025/thunderstorm-talks/)**
+*Extended technical presentations with comprehensive deep dives*
+- **[EmoJourn: Lessons Learned](/docs/jul-2025/thunderstorm-talks/emojourn-lessons-learned)** - Robert Davis presents comprehensive AI agent architecture case study
+- **[Advanced AI Development Workflows](/docs/jul-2025/thunderstorm-talks/ai-development-workflows)** - Ryan Booth explores SaaS development and automation patterns
+
+### **[🛠️ Resources](/docs/jul-2025/resources/)**
+*Implementation guides and practical tools*
+- **[Support AIMUG](https://aimug.org/support)** - Contribute to our community
+- **Community Links** - Discord, LinkedIn, and technical documentation
+- **Coming Soon** - Integration guides, AI development tools, workflow examples
+
+## 🎯 **Key Highlights**
+
+### **Major Themes**
+- **Community Growth** - PBS-style membership model launch with founding members
+- **Corporate Partnerships** - LangChain AI and new partner Toolhouse
+- **LangChain Evolution** - 1.0 roadmap and major platform enhancements
+- **Independence Day Drive** - Community contribution initiative
+
+### **Technical Insights**
+- **Enhanced Type Safety** - LangGraph 1.0 improvements
+- **Standardized I/O** - Universal formats across LLM providers
+- **Enterprise Compliance** - SOC 2, HIPAA, and GDPR certifications
+- **Mobile Development** - Slack + Cursor AI integration possibilities
+
+### **Community Focus**
+- **Founding Members Recognition** - Celebrating our 23 charter supporters
+- **Corporate Sponsorship** - Growing partnership ecosystem
+- **Independence Day Celebration** - Community building and support drive
+- **Practical Demonstrations** - Real-world tool integrations and workflows
+
+## 🚀 **Quick Navigation**
+
+### **For Immediate Use**
+- **Community Updates**: Start with [News & Updates](/docs/jul-2025/news/) for latest announcements
+- **Quick Tech Insights**: Check [Lightning Talks](/docs/jul-2025/lightning-talks/) for focused technical content
+- **Support the Community**: Visit [aimug.org/support](https://aimug.org/support) to contribute
+
+### **For Deep Research**
+- **LangChain Roadmap**: [LangChain Ambassadors Updates](/docs/jul-2025/news/langchain-ambassadors-july-2025)
+- **Technical Deep Dives**: [Thunderstorm Talks](/docs/jul-2025/thunderstorm-talks/) for comprehensive case studies
+- **Tool Integrations**: Explore the lightning talks for practical implementations
+
+## 🎉 **Founding Members Recognition**
+
+We proudly recognize our **23 Founding Members** who have committed to supporting AIMUG's mission:
+
+|                  |                    |                    |                 |
+| ---------------- | ------------------ | ------------------ | --------------- |
+| Cameron Rohn     | Christopher Ewing  | Colin Best         | Colin McNamara  |
+| Collier King     | Hutch              | Jeff Linwood       | John Van Lowe   |
+| Joseph Fluckiger | Kaiwalya Joshi     | Karim Lalani       | Miguel Lucero   |
+| Nate Little      | Orlando Kalossakas | Riccardo Pirruccio | Roberto Fuentes |
+| Robert Davis     | Roger Saras        | Ryan Booth         | Sal Castoro     |
+| Scott Askinosie  | Wendy Schorn       | Zack Angelo        |                 |
+
+## 🏢 **Corporate Sponsors**
+
+Thank you to our corporate partners:
+- **LangChain AI** - Framework and platform innovation
+- **Toolhouse** - 🎉 **NEW PARTNER!** Advanced automation tools
+
+## 🔗 **Connect & Contribute**
+
+### **Austin LangChain Community**
+- **[AIMUG.org](https://aimug.org)** - Official Austin AI Middleware User Group website
+- **[Support AIMUG](https://aimug.org/support)** - Join our Independence Day contribution drive
+- **[Discord Community](https://discord.gg/JzWgadPFQd)** - Join our active community discussions
+
+### **Community Presenters & Contributors**
+
+#### **Colin McNamara** - *Community Founder & Lead*
+- **[LinkedIn](https://www.linkedin.com/in/colinmcnamara/)** - Professional networking and updates
+- **[Blog](https://colinmcnamara.com)** - Latest insights and technical tutorials
+
+#### **Ryan Booth** - *Community Contributor*
+- **[LinkedIn](https://www.linkedin.com/in/ryan-booth-46470a5/)** - Connect for AI and tech discussions
+
+#### **Collier King** - *Community Contributor*
+- **[LinkedIn](https://www.linkedin.com/in/collierking/)** - Connect for AI and technology discussions
+
+#### **Joseph Fluckiger** - *Community Contributor*
+- **Lightning Talk**: Slack Integration with Cursor AI
+
+#### **Robert Davis** - *Community Contributor*
+- **Thunderstorm Talk**: EmoJourn case study and lessons learned
+
+---
+
+*July 2025 marks a significant milestone for AIMUG - celebrating our Independence Day with the launch of our member-supported community model and recognition of our founding members who make this vision possible.*

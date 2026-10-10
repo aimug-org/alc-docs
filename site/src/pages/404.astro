@@ -1,0 +1,16 @@
+---
+import Prose from '../components/events/Prose.astro';
+import { nextEvent, fmtDay } from '../lib/data';
+const next = await nextEvent();
+const rsvp = next?.data.rsvp.luma ?? next?.data.rsvp.meetup;
+---
+<Prose title="Page not found" lead="That page isn't here. It may have moved when we rebuilt the site." noindex>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/events/">Events</a>: the next meetup and every past one</li>
+    <li><a href="/talks/">Talks</a>: search every recorded talk</li>
+    <li><a href="/blog/">Recaps</a> and <a href="/docs/">notes</a></li>
+    {rsvp && next && <li><a href={rsvp}>RSVP for {fmtDay(next.data.start)}</a>: the next meetup</li>}
+    <li><a href="/speak/">Speak</a>: pitch a talk</li>
+  </ul>
+</Prose>

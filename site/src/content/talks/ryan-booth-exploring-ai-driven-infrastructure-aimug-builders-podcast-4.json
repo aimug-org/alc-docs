@@ -1,0 +1,1265 @@
+{
+  "title": "Ryan Booth: Exploring AI-Driven Infrastructure | Builders Podcast #4",
+  "speakers": [
+    "ryan-booth"
+  ],
+  "date": "2025-11-06",
+  "youtubeId": "16lVhvBgCB8",
+  "duration": 3391,
+  "summary": "In this episode of the AIMUG Builders Podcast, Ryan Booth discusses his extensive background in enterprise networking and operations, including his ventures into DevOps and automation, and how he has recently been leveraging machine learning and AI in his work.",
+  "topics": [
+    "RAG",
+    "Agents"
+  ],
+  "transcript": [
+    {
+      "t": 0,
+      "text": "man. So, the very first thing I dove into was image generation models. So, this was when open source diffusion models were first hitting the scene. Um, and that was kind of the first thing"
+    },
+    {
+      "t": 10,
+      "text": "that really got me going. Um, because I in my side time, I personal time, I also love doing art and love painting."
+    },
+    {
+      "t": 17,
+      "text": "There's just too many options. Like, no one used to spend more than an hour at Blockbuster ever. But yet, you know, how many hours would we waste trying to find a show everybody can"
+    },
+    {
+      "t": 29,
+      "text": "agree with on Netflix or, you know, on a Roku to to find what we'll watch tonight? I can't lie. Right now in the software field, you know, there's engineers out there that are able to"
+    },
+    {
+      "t": 39,
+      "text": "build enterprise level software with AI 100%. Automation has never made things faster. It's just made things more reliable and removed the need for human involvement."
+    },
+    {
+      "t": 54,
+      "text": "The following is a conversation with Ryan Booth. Over 20 years in enterprise networking and operations, he's led from the trenches across service providers, government, healthcare, and finance."
+    },
+    {
+      "t": 65,
+      "text": "He's built hands-on training platforms like Aster Cloud Labs, moved deeply into DevOps, and automation, and now he's applying machine learning and AI to everyday infrastructure work. This is"
+    },
+    {
+      "t": 77,
+      "text": "the AI mug builder podcast. If you find it valuable, please subscribe and join our meetup and Discord. The links are in the description. And now, dear friends, here's Ryan Booth. Ryan,"
+    },
+    {
+      "t": 92,
+      "text": ">> thank you for coming on to the show. And um >> what's interesting is that at the meetups, I remember you telling me that you fly in uh for the meetup every month and you're flying in from Amaro. So,"
+    },
+    {
+      "t": 106,
+      "text": "how's that? Um, you know, it's it's it's not bad. It's it's from the top of Texas, so it's only, you know, two, three hours from the airport to get there, or if I ever want to drive it,"
+    },
+    {
+      "t": 118,
+      "text": "you know, I could do a long 10-hour drive or so. Um, so it's not too bad, but it's it's it's great to kind of get out of my area, get out of the the world that I live in here, get down to Austin"
+    },
+    {
+      "t": 128,
+      "text": "where a lot of people are doing a lot of cool stuff. So, it's it's fun meeting up with everybody and meeting new people."
+    },
+    {
+      "t": 135,
+      "text": ">> Well, yeah. So, um, how did you even find AIM mug?"
+    },
+    {
+      "t": 140,
+      "text": ">> Um, yeah, it it really came through Colin, um, our our founder. Um, when when I started getting into social media in my career about 15 years ago, he was pretty prominent in social media. We"
+    },
+    {
+      "t": 153,
+      "text": "both worked in the network infrastructure, cloud infrastructure realm. And so, we kind of s knew each other. We didn't talk to each other for quite a while. And then we both seemed"
+    },
+    {
+      "t": 162,
+      "text": "to jump into the AI stuff and we kind of caught up with each other on LinkedIn and then he was like, \"Hey, come check out my group.\" And I did and it was amazing and I haven't looked back. So"
+    },
+    {
+      "t": 173,
+      "text": "yeah, kind of went like that. >> Cool. Well, could you tell me more about your background? Like how did you get to Amaro? Were you there uh all your life?"
+    },
+    {
+      "t": 183,
+      "text": ">> Sure. Um both me and my wife were born and raised here in Amarillo. Um, we grew up here, graduated high school here, started college here, and then I couldn't get my IT career going in any"
+    },
+    {
+      "t": 197,
+      "text": "way, shape, or form in a smaller town like this, kind of like most people face in small towns. And so, I needed to finish up school. I needed to get a strong foundation for my career. So, we"
+    },
+    {
+      "t": 207,
+      "text": "left and we went to Oregon. Um at the time I was trying to um get into cyber security and security infrastructure um which I later deviated from but finished up my degree built a strong career"
+    },
+    {
+      "t": 219,
+      "text": "there. Um mostly focused on network and data center infrastructure. Um I did work for service providers up there doing content delivery network type stuff. Um but my primary focus was"
+    },
+    {
+      "t": 231,
+      "text": "always network infrastructure. Um, and then fast forward a few years into 2012 or so and we had kids. We had our first daughter and we had our second one on the way and the grandparents were really"
+    },
+    {
+      "t": 244,
+      "text": "looking at us like you got to get these kids back home so we can see them. And so we we decided to shift back home um move back to Amarillo a little bit slower pace, a little bit out of the"
+    },
+    {
+      "t": 254,
+      "text": "community or a little bit outside of town, make things a little nice, a little slower for us. And from there it was just basically build my career and um did a couple jobs where I did some"
+    },
+    {
+      "t": 265,
+      "text": "network data center redesigns, rebuilds um jumped into network automation um which was really the the um DevOps for infrastructure and it it really picked"
+    },
+    {
+      "t": 277,
+      "text": "up when cloud was coming into play because a lot of DevOps tools were really getting built for cloud and it kind of naturally fit into what we were doing and that was really what my intro"
+    },
+    {
+      "t": 288,
+      "text": "of software development was was starting to learn how to do automation um for network infrastructure. Um fast forward a couple years and I got lucky and landed a job with um a strongly VCbacked"
+    },
+    {
+      "t": 301,
+      "text": "startup out of the Bay Area that did just that, network automation and push button network infrastructure um tools."
+    },
+    {
+      "t": 309,
+      "text": "And so I spent the better part of 10 years getting a really strong set of shops of software development taught out of some of the best software engineers in the Bay Area. Um built up a number of"
+    },
+    {
+      "t": 320,
+      "text": "tools, some cloud-based tools that scaled up with users as we grew. Um, and then after we got acquired and I started migrating more into um, the company I worked for, Juniper Networks, AI took"
+    },
+    {
+      "t": 334,
+      "text": "off and I figured out that I absolutely loved working with it. It tied in perfectly with the automation solutions and tools that I used. It was just a matter of learning how to use it and get"
+    },
+    {
+      "t": 346,
+      "text": "everything put in place with it. And honestly, since then, that's what I've been doing is is just really figuring out how to utilize it the best to to either build infrastructure or build"
+    },
+    {
+      "t": 356,
+      "text": "workflows that people can rely on."
+    },
+    {
+      "t": 360,
+      "text": ">> And that's the time that you got introduced to Lang Chang land graph, >> man. So, the very first thing I dove into was image generation models. So, this was when open source diffusion"
+    },
+    {
+      "t": 372,
+      "text": "models were first hitting the scene. Um, and that was kind of the first thing that really got me going. Um because I in my side time I personal time I also love doing art and love painting. So you"
+    },
+    {
+      "t": 383,
+      "text": "know that that kind of tied the two together for me and allowed me to dig into the advanced algorithms and stuff like that that that had a lot of abstraction that I couldn't get before."
+    },
+    {
+      "t": 392,
+      "text": "Um so it started there and then at the end of that year when I was right about to settle down for um Christmas vacation that's when chat GTP hit and that's when we really got exposed to I think it was"
+    },
+    {
+      "t": 404,
+      "text": "GPT2 at the time and what a transformer model could really do and I started plugging that into a couple of like workflows I would do with network automation and I really saw the power"
+    },
+    {
+      "t": 415,
+      "text": "with that. Um so I I I started pushing and I started working with those inside our organization that was doing the same things. Um a little after that is when"
+    },
+    {
+      "t": 427,
+      "text": "RAG hit the scene. So that was getting into 2024 at the time. Um and a number of us had already been really pushing down the rag pipe or the rag route to do vector searches. um vectorzed databases"
+    },
+    {
+      "t": 440,
+      "text": "had been around for a little bit longer before the term rag had come around. And so there had already been a number of companies and startups built up around it. And so I did rag for about a year"
+    },
+    {
+      "t": 450,
+      "text": "within um the organization. But as teams got more and more ramped up with rag, I was needed less and less to help them understand stuff. And as Rag solutions got better, it became easier. And so I"
+    },
+    {
+      "t": 462,
+      "text": "shifted my focus over to software development. um you know, chasing that proverbial um that that proverbial solution none of us have ever been able to get, which is developing software"
+    },
+    {
+      "t": 474,
+      "text": "through automation without humans building it. And so that's kind of what I've been digging into is is how can I build software? How can I build it reliable? How can I get software out of"
+    },
+    {
+      "t": 485,
+      "text": "these solutions that I would expect out of the teams that I run um building off building platforms? And so, um, I spent about I've been about a year, year and a half now really pushing down that route."
+    },
+    {
+      "t": 498,
+      "text": "Um, I've had six products now kind of go through a complete um, phase one proof of concept, some a little bit further, some into production, an actual product. Um, and"
+    },
+    {
+      "t": 511,
+      "text": "it's just been a lot of exploring, a lot of seeing how far we can go. there's, you know, been a ton of advancements over the past year and a half on what we do for agentic style development and so"
+    },
+    {
+      "t": 523,
+      "text": "it's it's it's keeping up. >> So in the episode prior I spoke with S and what was interesting is this concept of context engineering. So I think I'll"
+    },
+    {
+      "t": 536,
+      "text": "give a brief overview um right now for anyone who's not familiar. So in the large language model space you have foundational models and these are trained uh with large compute clusters"
+    },
+    {
+      "t": 550,
+      "text": "and they're very expensive to train and these are then tuned to specific applications and they typically go through a flow of at first it was prompt"
+    },
+    {
+      "t": 562,
+      "text": "engineering trying to get the correct prompts uh with maybe examples and get that tuned to the specific the specific application."
+    },
+    {
+      "t": 571,
+      "text": "The next was providing more specific context. And so this is uh retrieval augmented generation where you use semantic search with the vector database"
+    },
+    {
+      "t": 583,
+      "text": "and um the data has been vectorized inserted into that database and the idea is that your prompt will fetch related context from that database. it'll be concatenated to the current prompt and"
+    },
+    {
+      "t": 596,
+      "text": "the LLM would be able to produce a more specific result with the final and most expensive technique being fine-tuning using"
+    },
+    {
+      "t": 609,
+      "text": "parameter efficient fine-tuning on the specific application."
+    },
+    {
+      "t": 613,
+      "text": "So with S the idea here is that we had context engineering that has become more important and I believe his opinion was"
+    },
+    {
+      "t": 625,
+      "text": "that it had superseded prompt engineering that the idea of oneshotting is no more. So you're going to always be iterating having agents work and gather new context for specific segmented"
+    },
+    {
+      "t": 638,
+      "text": "subtasks. And I was wondering with how things are going as far as context engineering and how those agents use"
+    },
+    {
+      "t": 650,
+      "text": "the model context protocol MCP that this idea of rag at least the term rag has been uh removed and that you have instead just like far for the"
+    },
+    {
+      "t": 665,
+      "text": "course like there's it's not it's lost its novelty in a way."
+    },
+    {
+      "t": 670,
+      "text": "Yeah. Um, you know, I I I think eventually we could get there. I I do subscribe to the possibility that um models will eat everything. Um I I think it'll just be a"
+    },
+    {
+      "t": 684,
+      "text": "matter of time and if transformer models can't do it, we'll figure out other models that will. Um but there's there's more to rag um than just well it it is context"
+    },
+    {
+      "t": 698,
+      "text": "control. It absolutely is context control. Um but it goes beyond just what context is available to the agent for use. Um when you look at enterprise"
+    },
+    {
+      "t": 711,
+      "text": "level rag needs, you start talking about sensitive data. Um does the rag pipeline that is requesting or the user that is asking for this information, do they"
+    },
+    {
+      "t": 723,
+      "text": "have authorization? Um do they have access to that data? there's a lot of cons security concerns there. Um same thing with like PPI um personal private information. Um so HIPPA um"
+    },
+    {
+      "t": 737,
+      "text": "government federal any type of um high sensitivity type information. Um you got to be able to filter that out. you don't want that type of information leaking out in prompts if it's being attached"
+    },
+    {
+      "t": 748,
+      "text": "through a database through rag um or responses or straight up you just don't want it to get leaked out another another vector attack vector for a company so I feel there are a lot of"
+    },
+    {
+      "t": 761,
+      "text": "there's still a lot of strong needs for rag there um the underlying concept of what rags rag does of controlling what context gets dumped into the agents to do their their heavy lifting I think"
+    },
+    {
+      "t": 773,
+      "text": "that's that's going to stay, you know, relevant. Um, how it's done will probably change a lot, but yeah, I I think we still need all of those enterprise and those realw world mature"
+    },
+    {
+      "t": 785,
+      "text": "solutions built around this stuff that we just haven't got there yet or very few have. Yes. I think the point I I don't think I articulated as well as I"
+    },
+    {
+      "t": 798,
+      "text": "wanted. I think what I was thinking is that with the sort of formalization that agents are always going to require tooling um templates and context the previous"
+    },
+    {
+      "t": 811,
+      "text": "term of rag is probably what's going to go away and so you have it's sort of the default, right? So the"
+    },
+    {
+      "t": 823,
+      "text": "idea that you're going to rely solely on prompts that this is going to be a chatbot because I think I think really with agents the mental model has changed. I think that when"
+    },
+    {
+      "t": 836,
+      "text": "chatgbt2 came out and when claude came out I think people were looking at it as a chatbot and so the idea here was the"
+    },
+    {
+      "t": 848,
+      "text": "chat the prompt that's what mattered right and I think that what has happened is as agents are no longer directly engaging"
+    },
+    {
+      "t": 860,
+      "text": "in interaction with the user we have abstracted away the idea of the prompt a little bit and uh we're looking at more at instruction, general"
+    },
+    {
+      "t": 875,
+      "text": "instruction uh and context. And so this specific rag terminology is probably on the way out and it's just the default concept"
+    },
+    {
+      "t": 887,
+      "text": "now. >> Okay. Okay. Yeah, I you know I understand what you're saying there."
+    },
+    {
+      "t": 892,
+      "text": "Yeah. I I agree with you. Um I I I think it'll it'll go further down um into the weeds where, you know, very few people actually think, hey, we're we're building a rag, you know. It's it's like"
+    },
+    {
+      "t": 904,
+      "text": "it's kind of like saying we're building a database. Woohoo. You know, um I I think it will get to that point where it's it's just natively built into what we do and and into the um when we do"
+    },
+    {
+      "t": 915,
+      "text": "search, when we do context control, it's just naturally built in that way. Um terms and how it's all done. I I think agentic rag, you know, really drives that workflow better. Um, it really"
+    },
+    {
+      "t": 926,
+      "text": "defines it a lot stronger than what we used to do um with scripting and stuff."
+    },
+    {
+      "t": 931,
+      "text": ">> A2A, what is it? >> Sure, you can tell me a lot about it."
+    },
+    {
+      "t": 936,
+      "text": ">> Um, yeah, A2A is kind of been one of the um one of those protocols that landed."
+    },
+    {
+      "t": 941,
+      "text": "It had a little bit of press from Google. Um, but I still just don't hear a lot of people talking about this or even talking about the needs. Um so essentially A2A is is the attempt to"
+    },
+    {
+      "t": 954,
+      "text": "allow agents to communicate and to um discover services and other agents to be able to um complete work for you on"
+    },
+    {
+      "t": 966,
+      "text": "your end. So, some some really simple examples would be if you have an agent that could go out and um search all the different um sites that supported A2A"
+    },
+    {
+      "t": 978,
+      "text": "for um for clothes or for anything you would be buying off Amazon and you're trying to find better deals um as a that's kind of what your company does is you you you source products at the best"
+    },
+    {
+      "t": 990,
+      "text": "price and then you you redistribute them or whatever. Um things like that. So an agent can go out and find the products and actually make the purchase for you on your behalf or at least give you a"
+    },
+    {
+      "t": 1000,
+      "text": "notification. Hey, we're buying this. Do you accept the purchase? Yes. And and it it becomes a binding contract um between the two agents to where you can associate delivered work and um currency to that"
+    },
+    {
+      "t": 1016,
+      "text": "transaction. So that then allows you to transact um or trans transfer money between parties. Um, and that's well that's that that's what it opens up."
+    },
+    {
+      "t": 1027,
+      "text": "Sorry, I jumped ahead of myself. So, the the transaction and the purchasing part is actually a newer part of A2A called AP2. Um, which which is for purchasing."
+    },
+    {
+      "t": 1039,
+      "text": "And so, that's where I got a little bit ahead of my myself. So, with A2A, it's it's a lot like the the one use case that everybody seems to gravitate towards or at least pick up on is the"
+    },
+    {
+      "t": 1051,
+      "text": "notion of your business, your personal brand, um, whatever it is. When you jump on a chatbot and you ask about that, are you getting the information back you want? Um, so it used to be like, hey, if"
+    },
+    {
+      "t": 1062,
+      "text": "you Google your company's name, how far up on the list are you? Is it even on the front page? Now, it's basically like if if someone asks a chatbot about your services in your area, is your name"
+    },
+    {
+      "t": 1074,
+      "text": "coming up in the in the response? And um that's kind of the starting point."
+    },
+    {
+      "t": 1078,
+      "text": "That's that's the point that kind of hooks everybody in, I feel, and people start understanding. Okay, if people are looking for services, so like if you're an insurance agent, if people are"
+    },
+    {
+      "t": 1088,
+      "text": "looking for insurance services and they're asking a chatbot, what's the best agent in Austin, Texas? Um where does my name end up on that list? And that's where A2A helps. Um, A2A helps"
+    },
+    {
+      "t": 1100,
+      "text": "share your catalog with your customers or potential customers. So, anybody can very quickly use a chatbot to navigate all of your catalog, um, all of your products, um, and have a way to possibly"
+    },
+    {
+      "t": 1113,
+      "text": "purchase them with AP2. Um, but it goes further than that. So, if you're thinking about how customers get engaged and find you as a company, you start looking into, okay, what's what's the"
+    },
+    {
+      "t": 1125,
+      "text": "scenarios where they're going to be like, oo, I need to go to this company or I need to find this."
+    },
+    {
+      "t": 1130,
+      "text": "And what we're finding is instead of Google searching to find companies, everybody's jumping straight into like ChatGP or Perplexity or Claude or whatever, whatever you use for your"
+    },
+    {
+      "t": 1143,
+      "text": "generalized chatbot, and they start there with searching. So, hey, I need to try to solve this problem. Or they take a screenshot of their computer and it's like, this is broken. How do I fix it?"
+    },
+    {
+      "t": 1152,
+      "text": "Um, those chat bots can go beyond just finding um cataloges of your product."
+    },
+    {
+      "t": 1158,
+      "text": "They can find your blog post. They can find your CMS data around content creation. They can find the resources they need that help them. And then that can be a gateway into you know possibly"
+    },
+    {
+      "t": 1172,
+      "text": "an upsell or providing better user experience for them with your documentation um without having to spend a lot of effort with a massive rag on the back end to do it or they can combine"
+    },
+    {
+      "t": 1184,
+      "text": "together at a later date. So that was a lot of words. Um hope all of that made sense."
+    },
+    {
+      "t": 1192,
+      "text": "Yeah. So I think we could take it uh we could take it step by step and the the thing is I don't quite understand"
+    },
+    {
+      "t": 1205,
+      "text": "why so A2A is built as agent interacting with other agents right so why for example finding your content wouldn't that simply be a an internet"
+    },
+    {
+      "t": 1219,
+      "text": "search and looking at the markdown perhaps that comes out or the HTML more accurately that results from that search like why"
+    },
+    {
+      "t": 1232,
+      "text": "what other what's the other agent that it's speaking to?"
+    },
+    {
+      "t": 1237,
+      "text": ">> Yeah. Um so what what I think you're hitting at here um and and cut me off if I'm wrong is is really what why are we using AI to do this? Why? What's what's"
+    },
+    {
+      "t": 1249,
+      "text": "the why here? And if you take a step back and you look at this, the the internet when the internet hit, everybody on Earth who had access to the internet basically got access to the"
+    },
+    {
+      "t": 1264,
+      "text": "world's knowledge all at once. You just got to be able to find it and you got to know how to use it. Um, and that was that was what we were introduced to with the internet. What AI is introducing to"
+    },
+    {
+      "t": 1276,
+      "text": "um is not just the world's knowledge at your fingertips, but the contextual knowledge and experience and expertise to know what to do with that information."
+    },
+    {
+      "t": 1287,
+      "text": "And so when we're talking in a scenario like this, when in the past a Google search will return a document, if you're trying to troubleshoot something or you're trying to fix something,"
+    },
+    {
+      "t": 1299,
+      "text": "whatever, um, it'll return a document that should give you the answer to that, but that's it. A chatbot is going to be like, \"Hey, I found this document out there. Um, it looks like what you need"
+    },
+    {
+      "t": 1311,
+      "text": "to do is step 1 2 3 4 5. Um, but I'm also seeing over here it contextualizes it and it helps you. So instead of just dumping a bunch of information on our users like we have been all the way up"
+    },
+    {
+      "t": 1322,
+      "text": "until now, now it's time to start massaging that data to work and conversate with the user. And that's what AI brings to the table. If something else can do it better, then there's no reason for AI to do it."
+    },
+    {
+      "t": 1336,
+      "text": ">> Okay, so let me imagine this. So, I have let's say a client AI um I'm using that on my own desktop uh or smartphone and I"
+    },
+    {
+      "t": 1350,
+      "text": "am searching for a a roofer in Austin, Texas and I don't know anything about my roof."
+    },
+    {
+      "t": 1362,
+      "text": "I don't know what makes a better roof. I don't know what is expensive. I don't know what's cheap. I don't know the reputations of anyone involved."
+    },
+    {
+      "t": 1371,
+      "text": "Is the concept that my agent will go look for, let's say, local roofing agents or maybe a national roofing agent and converse with that agent to try to"
+    },
+    {
+      "t": 1384,
+      "text": "determine precisely the uh roofing company that would meet my needs."
+    },
+    {
+      "t": 1390,
+      "text": ">> Yeah, that's exactly it. Um, so you you would make the request. Um, your your chat assistant would pick up the A2A um data that's being requested and asked for. Um, it'll do a search. Um, right"
+    },
+    {
+      "t": 1404,
+      "text": "now it's a little unclear to me exactly how it goes out in search or what all the available places are to search um or if it just does a full internet search."
+    },
+    {
+      "t": 1413,
+      "text": "So, I will have to get that detail back um or look into it a little more. But essentially, you find agent cards and agent cards is basically like your LinkedIn profile. Hey, here's what this"
+    },
+    {
+      "t": 1423,
+      "text": "dude can do. Here's here's what this agent can provide or um roofing companies, you know, here are the top 15 roofing companies by feedback on Yelp or whatever in the area that support A2A."
+    },
+    {
+      "t": 1437,
+      "text": "[clears throat] And so when we find one or the agent says, \"Hey, here's the 15 companies that we're looking at.\" It can then dig in deeper to each one of them. what's their product catalog, what's their process,"
+    },
+    {
+      "t": 1449,
+      "text": "what type of shingles do they use? Um, any type of services that you would put on your website or, you know, if you expose a calendar to where people can book their own, you know, their own"
+    },
+    {
+      "t": 1460,
+      "text": "times for people or own days for people to show up and replace the roof. Um, things like that can all then be turned around and exposed here through an API."
+    },
+    {
+      "t": 1469,
+      "text": "And so instead of the chatbot just saying, \"Hey, here's the top 15 companies. Pick which one you like. They all have these different ratings. It'd be like, \"Here's the 15 companies, but"
+    },
+    {
+      "t": 1478,
+      "text": "it looks like Bob's roofing can have you high quality shingles roofed by next week. If you need something tomorrow, um, David's David's Cheap Shingles can be out there tomorrow to do your roofing"
+    },
+    {
+      "t": 1491,
+      "text": "at this price.\" Um, David's Quick also supports payment. Would you like to go ahead and schedule and pay it?"
+    },
+    {
+      "t": 1497,
+      "text": ">> Can you do it? Okay, >> that's the end goal, but there's still a number of to get there. Okay. So, I can imagine a future in which maybe"
+    },
+    {
+      "t": 1509,
+      "text": "well it looks like the companies are perhaps up to themselves to implement A2A and provide it for anyone else who has a client."
+    },
+    {
+      "t": 1521,
+      "text": ">> So, there's not a there's not a consumer level vendor or even I would say a business level vendor that provides this as a service."
+    },
+    {
+      "t": 1533,
+      "text": "One could imagine that you have an application and instead of having a whole bunch of A2A agents, the"
+    },
+    {
+      "t": 1545,
+      "text": "company simply adds individual services to their catalog and you speak to one dedicated agent that is perhaps fine-tuned on solving that specific problem >> specifically."
+    },
+    {
+      "t": 1559,
+      "text": ">> Yeah, I I I do I think there's use cases there. Um it is an area that I'm I'm kind of exploring myself with one of the projects. Um I'm kind of exploring how A2A would fit in and and look inside of"
+    },
+    {
+      "t": 1571,
+      "text": "a marketplace style um application or infrastructure. And it it really is the notion and this is what I gave a a demo on that you spoke spoke about last month was um you know people can bring their"
+    },
+    {
+      "t": 1584,
+      "text": "own models, they can bring their own tooling. So if you have a really nailed down process to to build I don't know any type of application with say cloud code or an agent workflow um if if you"
+    },
+    {
+      "t": 1596,
+      "text": "bring it into this application as a workflow that any user can um pay for to use and then you it gets ran in the compute um wherever and then the user"
+    },
+    {
+      "t": 1608,
+      "text": "requests to purchase the the use of that workflow. So it'd be like AWS marketplace or anything like that where you could attach tools to your to your cloud infrastructure. Um but on top of"
+    },
+    {
+      "t": 1619,
+      "text": "that and with A2A built in you have the possibility of allowing transactions to happen directly between users and vendors um without having to go through the the"
+    },
+    {
+      "t": 1632,
+      "text": "service provider um like AWS or anything like that. Um, now we are seeing to to kind of get on some of your questions."
+    },
+    {
+      "t": 1641,
+      "text": "Um, every day there's new vendors that seem to get added to the list supporting A2A and AP2 um for purchasing. So, it it has a decent um amount of businesses"
+    },
+    {
+      "t": 1653,
+      "text": "behind it and it seems like it'll have a head of steam."
+    },
+    {
+      "t": 1658,
+      "text": ">> Interesting. Just saying how um these sort of things occur in the past."
+    },
+    {
+      "t": 1663,
+      "text": "Usually there's a sort of consolidator that comes around later and makes everything very easy to me. Uh for example, going through and setting it up"
+    },
+    {
+      "t": 1675,
+      "text": "in the sort of AWS marketplace is still more of a developer ecosystem and not necessarily a consumer level or small business level environment."
+    },
+    {
+      "t": 1686,
+      "text": ">> Yeah. Yeah. we definitely would be there and and you're right um >> this is going to grow with complexity and A2A might not be the end all beat all solution here or maybe there's an"
+    },
+    {
+      "t": 1698,
+      "text": "A2A version two I I don't know um because there's still a number of things that have to be worked out um you can't just have payments happening automatically anymore but I I think or"
+    },
+    {
+      "t": 1708,
+      "text": "not anymore you still can't you've never been able to just have payments be auto approved and go without a human approval Um but that just could be a limit limitation to protect us right now. Um"
+    },
+    {
+      "t": 1721,
+      "text": "but yes, I I think as it grows because you got to start looking at um before when we're presenting our our products, when we're presenting our solutions, we're presenting our brand to"
+    },
+    {
+      "t": 1734,
+      "text": "our customers, we basically build the collateral and we we we hope that they review it and go through it the way we want them to um the way we want it to resonate with them. and we tell them the"
+    },
+    {
+      "t": 1744,
+      "text": "specific stories that we think will will make it click for them and and that's all part of marketing and we you know there's a lot of professionals out there that are really really good at this. Um"
+    },
+    {
+      "t": 1756,
+      "text": "I I think we got to reook at how we're approaching serving this up to our customers because before it was just through APIs or websites or portals or whatever to get that information."
+    },
+    {
+      "t": 1767,
+      "text": "They're not going to go there anymore. Um, and they're probably not even going to buy your products at some point in time unless you have the ability to do all these services through a chatbot."
+    },
+    {
+      "t": 1778,
+      "text": "Um, now of course that's, you know, that's that that can easily be not true in the future, but you know, who knows?"
+    },
+    {
+      "t": 1785,
+      "text": "Um, I do think we need to start looking at that because people will be able to start taking a competitive advantage if they understand how to serve this content through AI to their customers."
+    },
+    {
+      "t": 1796,
+      "text": ">> Yes. And it also will affect a lot of branding um because we're not going to have the ability to"
+    },
+    {
+      "t": 1809,
+      "text": "we're not going to have the ability to work on emotion like we did beforehand if things are occurring through A2A through LLMs. We're not going to have the ability to necessarily have an"
+    },
+    {
+      "t": 1822,
+      "text": "non-quantified reputation. So branding is very much about what you're associated with. It's not an explicit numerical value. You can have ratings, but that's not exactly the same as your"
+    },
+    {
+      "t": 1835,
+      "text": "your brand. So yes, I think um have you ever seen or do you remember the old 1800 contacts commercial?"
+    },
+    {
+      "t": 1847,
+      "text": ">> Oh yeah. >> With my brand. Yes. So I think I think A2A A2A is going to be u maybe a brand destroyer unless marketers can uh figure"
+    },
+    {
+      "t": 1859,
+      "text": "out a new way of uh preserving that sort of brand client relationship, brand customer relationship."
+    },
+    {
+      "t": 1868,
+      "text": "So don't want to disagree with you but I think I do like I I don't know and I'd love to have this discussion with others further. So, if anybody out there has a"
+    },
+    {
+      "t": 1880,
+      "text": "deeper opinion on this, I'd love to hear it."
+    },
+    {
+      "t": 1884,
+      "text": "I think we're going to have to learn to do marketing differently. Um, in terms of, you know, how we brand, how we push it out. Like I said, we we got to influence the the AI"
+    },
+    {
+      "t": 1898,
+      "text": "to speak on our behalf. We don't have to influence the collateral to to speak on our behalf. And so, how we build collateral? Um, yes, you do have the collateral that people are going to want"
+    },
+    {
+      "t": 1910,
+      "text": "to look at. People are going to want to look at spec sheets. They're going to want to look at flyers with all the benefits, all that stuff, all the features. Um, but then agents, you know,"
+    },
+    {
+      "t": 1919,
+      "text": "they they need to cut out all of that, but they need to understand how to present to the user. They they need to understand the stories that make sense for the users. Um, and if you don't"
+    },
+    {
+      "t": 1928,
+      "text": "create those for the AI to use, the AI will make them up themselves."
+    },
+    {
+      "t": 1934,
+      "text": "So, I I I think we're going to have to learn relearn how to do that maybe. Um, but I do think there's still emotion involved there. I just don't think we know how to use it yet. Or I could be"
+    },
+    {
+      "t": 1946,
+      "text": "wrong. >> Well, I mean, that's a very interesting point, but let's consider this. Right now, um, we have ads that are served all over the"
+    },
+    {
+      "t": 1958,
+      "text": "place, YouTube, Facebook, on Google, and you have these ads bidded on by various companies. And so, you have cost per click, and there's essentially a"
+    },
+    {
+      "t": 1972,
+      "text": "marketplace for your attention. This could also be extended into the agent space. You could have the agent advocate for a particular brand based upon what it knows about you"
+    },
+    {
+      "t": 1986,
+      "text": "and then also the payment by the brand."
+    },
+    {
+      "t": 1990,
+      "text": "So you can move that marketplace to the agent."
+    },
+    {
+      "t": 1995,
+      "text": "Interesting. Yeah. And then that's a matter. So but that would be shifting and I'm trying to think through what you just said because that's you got my wheel spinning now. Um"
+    },
+    {
+      "t": 2007,
+      "text": "because then that kind of shifts that well it's always been the control of the agents on what they present to the users. It's just influenced by the the the A2A data coming in."
+    },
+    {
+      "t": 2018,
+      "text": "So if the agent Yeah."
+    },
+    {
+      "t": 2022,
+      "text": "And those are probably getting into some more advanced workflows too where where the agents can be instructed to do more more thorough research. Um, maybe it's like what what are the top five products"
+    },
+    {
+      "t": 2033,
+      "text": "in our line and in other companies? Um, I don't know. There's a lot to discuss with this one. It's so new and there's so much it can possibly do and it's just a matter of how's it going to go."
+    },
+    {
+      "t": 2045,
+      "text": ">> Yeah. So to look at it a different way, I think that companies are going to eventually see this as maybe if the agent is not advocating for them,"
+    },
+    {
+      "t": 2060,
+      "text": "it becomes a situation where they are essentially selling on a platform."
+    },
+    {
+      "t": 2065,
+      "text": "They're selling, let's say, on Amazon and they're just competing on price and distribution and it would be a race to the bottom for them. And if someone were"
+    },
+    {
+      "t": 2079,
+      "text": "to come out with a marketplace where they could somehow get the agent to not be so impartial and instead be their personal sales agent. I think"
+    },
+    {
+      "t": 2091,
+      "text": "that's perhaps a solution that more and more brands would be interested in supporting rather than something that was um generic and open source."
+    },
+    {
+      "t": 2104,
+      "text": ">> You know, you might be hitting on something there. Um because opinionated, you you brought up the word opinionated and that kind of made it"
+    },
+    {
+      "t": 2116,
+      "text": "click for me. Um the value of an opinionated solution is that you don't have to make as strong of a choice or as risky of a choice. um the the vendor or"
+    },
+    {
+      "t": 2130,
+      "text": "the product does all the risky decision making, best practice following, all of those things. So the user can be reassured that what they're getting is good."
+    },
+    {
+      "t": 2141,
+      "text": "So that would be interesting because if if your sales for for a lot of product, especially stuff in bulk like you mentioned, it's a race to the bottom because no one cares. I need to find"
+    },
+    {
+      "t": 2152,
+      "text": "part number 4572763 and I need 14 of them next week. There's nothing to that."
+    },
+    {
+      "t": 2158,
+      "text": "But for products where you're selling more than just the products or you're you're you're selling um where am I getting at with this?"
+    },
+    {
+      "t": 2167,
+      "text": ">> You can be selling prestige for example. How do you >> exact >> how do you quantify prestige? Right."
+    },
+    {
+      "t": 2174,
+      "text": ">> And I think so I I think you you you tailor the experience to the user and their their search assistant. And so people don't okay where I was going is"
+    },
+    {
+      "t": 2186,
+      "text": "think I instantly when you said that it sent me back to the this issue we face now with all these social platforms for streaming services or entertainment."
+    },
+    {
+      "t": 2196,
+      "text": "There's just too many options. Like no one used to spend more than an hour at Blockbuster ever. But yet, you know, how many hours would we waste trying to find a show everybody can"
+    },
+    {
+      "t": 2209,
+      "text": "agree with on Netflix or, you know, on a Roku to to find what we'll watch tonight? There's too many damn options."
+    },
+    {
+      "t": 2215,
+      "text": "And I think that's where opinionated processes and opinionated applications shine. Because those that are like, \"Oh my god, just give me something, make it work. I hope it matches my persona.\""
+    },
+    {
+      "t": 2225,
+      "text": "Great. And go with it. That's that's where those values stand up because people will pay for that. people will pay for, you know what, I don't have time to think about this right now or this is"
+    },
+    {
+      "t": 2236,
+      "text": "not my area of expertise. It's way too critical for me to have to try to figure this out. I'm going to pay someone. I'm just going to pay someone right now and do it. We do that all the time. And I I"
+    },
+    {
+      "t": 2247,
+      "text": "think that's a perfect example here, too, where you can stand out."
+    },
+    {
+      "t": 2251,
+      "text": ">> I think it's going to it's going to absolutely go in two different directions. You're going to have one direction is going to be the Walmartization of everyday life, the Walmartization of"
+    },
+    {
+      "t": 2266,
+      "text": "information, and you'll get something that's similar to Netflix, which is you're going to get movies and suggestions that are least common denominator. Uh it's going to be AI slop essentially, just what just a little bit"
+    },
+    {
+      "t": 2278,
+      "text": "above what we currently have. And then I think you're going to have a separate case in which it's going to be taste."
+    },
+    {
+      "t": 2286,
+      "text": "We're going to have to teach taste to the models and instead of Netflix it'll be criterion collection."
+    },
+    {
+      "t": 2296,
+      "text": "Yeah. And then you know a lot of them already are right now. A lot of the ML models we've been using on Netflix um you know social media platforms. I mean that's what Tik Tok's famous for is is"
+    },
+    {
+      "t": 2307,
+      "text": "their algorithms. Um, yeah, I think we're we're going to see a lot of that, a lot of profiling for ourselves. Um, but I also think, you know, this is one of those like, so I mentioned art. I"
+    },
+    {
+      "t": 2319,
+      "text": "paint. Um, I love painting. I painted my whole life. I love the art community."
+    },
+    {
+      "t": 2323,
+      "text": "Um, I even attempted to build an artist dashboard app over over the past year to to help artists on social media present their stuff. Um, artists have a massive"
+    },
+    {
+      "t": 2335,
+      "text": "um, backlash against AI right now for for very obvious reasons. Um, you know, people who do online art or all across the field, they're just completely drying up their marketplace because AI"
+    },
+    {
+      "t": 2348,
+      "text": "art's taking it over and especially like marketing people or um, creators in the professional space. They're losing a ton of business right now because people are able to just go generate good enough"
+    },
+    {
+      "t": 2359,
+      "text": "slop like you said. Um, with A2A, we're introducing a possibility to where if you have a personal brand and you have a personal persona, so like for an"
+    },
+    {
+      "t": 2372,
+      "text": "artist, their portfolio or their style of painting, um, if you can build a model or you can build something that does it in your style very well and generates those images or helps an"
+    },
+    {
+      "t": 2384,
+      "text": "artist paint in that style, whatever an agent can help someone do. and then you license it and then charge for it through A2A and AP2. You got a"
+    },
+    {
+      "t": 2396,
+      "text": "transactional base. So then you as an artist, you can share your work, you can share your models out on social media or hugging face where people use a lot of open source models now or wherever the"
+    },
+    {
+      "t": 2407,
+      "text": "marketplace might be. Um, and then people can use your art, have your approval to to use your likeness in their stuff, and they pay for the generation of that content, however much"
+    },
+    {
+      "t": 2421,
+      "text": "you license. A2A and these technologies, I think, are opening up this door for new ways of doing old things that are getting destroyed by AI."
+    },
+    {
+      "t": 2432,
+      "text": "And I think that's a good example of one. >> Yeah, that would be interesting to see how that shakes out. I think that there's going to be some of that. I think you're going to"
+    },
+    {
+      "t": 2445,
+      "text": "have more of a concentration on relationships between an artist and their fan and perhaps even a switch in the art"
+    },
+    {
+      "t": 2457,
+      "text": "community from doing things behind closed doors to doing things live. So, you might get more uh painting out in the open or get more uh performance art"
+    },
+    {
+      "t": 2469,
+      "text": "as a result. >> And you're right there, that is already starting to happen. Um the the the trend in like YouTube shorts or Tik Tok"
+    },
+    {
+      "t": 2481,
+      "text": "videos in the art community is to to record yourself painting or record yourself going through a process. And the the outcome isn't the end. the the"
+    },
+    {
+      "t": 2493,
+      "text": "content of the recording, the the process becomes the material for the artist. And a lot of them are finding some very creative ways to do this to to make a painting, which is very usually"
+    },
+    {
+      "t": 2508,
+      "text": "not very interactive with, make it interactive and digital and interesting."
+    },
+    {
+      "t": 2513,
+      "text": "I think there's a lot of creativity that we're going to open up um when we figure out how to work with it."
+    },
+    {
+      "t": 2519,
+      "text": ">> All right. So, uh, before the podcast, you talked to me a little bit about warming up a an LLM agent to do coding."
+    },
+    {
+      "t": 2528,
+      "text": "Could you speak more about that? Yeah. Yeah. Um, okay. So, this is this is a newer idea that's been kicking around in my head for a few weeks, maybe a little longer is kind of when the"
+    },
+    {
+      "t": 2539,
+      "text": "seeds started getting planted. So, I'll take a step back. Okay. So a lot of my software exploration or software development exploration with agents um a"
+    },
+    {
+      "t": 2551,
+      "text": "lot of the bottlenecks, a lot of the blockers, a lot of the problems I faced that slowed me down or full-on stopped me in getting through issues, troubleshooting, um bug scrubs, things"
+    },
+    {
+      "t": 2564,
+      "text": "like that that the agent had difficulty doing. Um, I I noticed that working with an agent more like a human instead of a"
+    },
+    {
+      "t": 2576,
+      "text": "service or a, you know, PID file, whatever, it it treat it more like a human. You interact with it more like a human. So, when it's stuck, take off your engineering hat, put on your"
+    },
+    {
+      "t": 2587,
+      "text": "leadership hat, and help figure out how to navigate it through the workflow. And it works. I've had tremendous success with this um in a number of things that have really blocked applying your your"
+    },
+    {
+      "t": 2600,
+      "text": "human-toum interaction to an agent works. So the notion was is um like I said earlier, I' I've built up all these different applications over the past year while I've been exploring um all"
+    },
+    {
+      "t": 2613,
+      "text": "these different nicks nooks and uh nooks and crannies of the development world in AI. And a number of these apps have failed in different ways um and a number"
+    },
+    {
+      "t": 2625,
+      "text": "of them um have not. And one of the areas that I picked up on is if I jump straight into a complex project, brand new repo, brand new folder, fully built"
+    },
+    {
+      "t": 2638,
+      "text": "PRD, and I'm talking, you know, complete PRD down to schema design, down to function and class setups, architecture, the whole nine yards."
+    },
+    {
+      "t": 2650,
+      "text": "Usually the first two or three to five tasks the agents just suck at. They have a hard time setting up. They have a hard time talking to MCPs. They have a hard"
+    },
+    {
+      "t": 2662,
+      "text": "time writing files. They're asking for permissions all the time. They just generally do a horrible job these first three to five tasks."
+    },
+    {
+      "t": 2670,
+      "text": "And so, one thing that I noticed um is well, the first thing that I noticed is okay, I I get as far as I can and then when I'm frustrated, I'm just like screw it. Let's let's stop here and let's"
+    },
+    {
+      "t": 2681,
+      "text": "rebuild from scratch. Learn from your mistakes. Build a brand new PRD."
+    },
+    {
+      "t": 2685,
+      "text": "understand what you did wrong and let's fix it and do it again. The second time around, even though it didn't necessarily do it faster, it did it better. Okay? And it was because we had"
+    },
+    {
+      "t": 2697,
+      "text": "that additional context of the first try. And so the second thing that I noticed just the other week, excuse me, was that at the beginning when I'm doing a brand new fresh project, when I'm"
+    },
+    {
+      "t": 2711,
+      "text": "doing um all of those things, that's when it's the most vulnerable. And so when I take a massively large complex um project or PRD, and the ones I'm talking about right now, you know, we're we're"
+    },
+    {
+      "t": 2724,
+      "text": "talking the first five tasks have like 35 subtask. Okay. um it gets complex quick. They don't do very good at um they struggle. And after three or four runthroughs of it, I noticed they get"
+    },
+    {
+      "t": 2737,
+      "text": "better. And so after I noticed this, it was like, okay, when we hit that resistance point, we're going to review the PRD. We're going to update it for any type of clarity or anything you"
+    },
+    {
+      "t": 2748,
+      "text": "screwed up with this time, and we're going to start over. And I've noticed giving it that warmup and that primer allows it to start up a lot smoother."
+    },
+    {
+      "t": 2758,
+      "text": "And so it allows you to move past those first five, first 10, first 15 task a lot smoother. And so that's kind of one of those things. Like I said, I have no"
+    },
+    {
+      "t": 2770,
+      "text": "data behind this. I have absolutely no scientific research behind it. Um it's just my spidey sense kicking in right now. So it's kind of my hot take for the moment."
+    },
+    {
+      "t": 2779,
+      "text": ">> Yeah, it makes sense. have to provide more examples, especially in this case, it seems like a negative example to the agent that you're going to have a better"
+    },
+    {
+      "t": 2792,
+      "text": "uh fidelity to what it is you wanted in the first place. My question is, wouldn't this eat up the context window uh providing all of this negative example when perhaps there's a more"
+    },
+    {
+      "t": 2806,
+      "text": "efficient way of describing what you don't want the agent to do?"
+    },
+    {
+      "t": 2810,
+      "text": "Yeah. And you know, I think really what I'm describing if I take a step back and look at this is it really probably is the brute force approach. You know, you you keep doing it until you finally get"
+    },
+    {
+      "t": 2821,
+      "text": "it right. Um so yeah, there has to be better there. Um but I I I think I don't know if we if there's better ways to do it or we have to wait until"
+    },
+    {
+      "t": 2834,
+      "text": "we get better models. I don't know where we sit. It's probably somewhere in between. Um, but I'm not sure."
+    },
+    {
+      "t": 2842,
+      "text": ">> I wonder whether or not this is the same thing with AI slop in the art community that simply poor implementation and coding is the equivalent. Yes."
+    },
+    {
+      "t": 2855,
+      "text": ">> Yeah. I I I think that's it. I mean, I I see it in the software industry, too."
+    },
+    {
+      "t": 2860,
+      "text": "Um, with all of my my peers and my software development buddies. Um, not necessarily them, but the the the circles I'm in. It's the same there as it is in other communities is they they"
+    },
+    {
+      "t": 2870,
+      "text": "attack the the trash, the the garbage, the the lowhanging fruit that's poorly done. The high quality work is what they're really scared of because those are the professionals who are able to do"
+    },
+    {
+      "t": 2883,
+      "text": "stuff a lot better. Um, and I can't lie, right now in the software field, you know, there's engineers out there that are able to build enterprise level software with AI 100%. Um, will they"
+    },
+    {
+      "t": 2895,
+      "text": "replace you? bad. Probably not. But they're going to be able to do stuff a lot faster probably. I take that back. I hate saying that. I don't want to say that. Not a lot faster, a lot more"
+    },
+    {
+      "t": 2905,
+      "text": "efficient in whatever area efficiency is for you."
+    },
+    {
+      "t": 2910,
+      "text": "Yeah. So, I mean, I've noticed that the speed isn't as high as I would as I would think, especially if you have human in the loop to manage it. So it"
+    },
+    {
+      "t": 2923,
+      "text": "seems like that AI coding is limited by the speed of the management, the human and the loop management."
+    },
+    {
+      "t": 2931,
+      "text": ">> That's that's going to be true across the entire board. Um when when I was going through all of my machine learning stuff in the early days and and we were really just starting to get a glimpse of"
+    },
+    {
+      "t": 2942,
+      "text": "the possible of what transformer models were doing. I I was a fly on the wall with a number of of really smart people having conversations around this very topic. Um, and I don't think speed speed"
+    },
+    {
+      "t": 2957,
+      "text": "has never been solved by automation. Automation has never made things faster."
+    },
+    {
+      "t": 2962,
+      "text": "It's just made things more reliable and removed the need for human involvement, but it's never speeded anything up. and even like research papers. So we can crank out some crazy research papers"
+    },
+    {
+      "t": 2974,
+      "text": "with deep research or with research models now. But we still have to go through the evaluation phases. We still have to go through the regulatory protections so we don't hurt people."
+    },
+    {
+      "t": 2985,
+      "text": "There are all these things that still have to happen. And in the software world, writing the code is probably 30% of the entire project."
+    },
+    {
+      "t": 2994,
+      "text": "um you know and then in the art community actually painting the the actual canvas is probably 30 40% of the process. This is true everywhere. And so"
+    },
+    {
+      "t": 3008,
+      "text": "yeah, interesting. So let's go into our lightning round. I'm going to ask you some fun questions."
+    },
+    {
+      "t": 3017,
+      "text": "And so we can begin with one tiny automation since you brought up automation that has solves an outsized pain."
+    },
+    {
+      "t": 3031,
+      "text": "Yeah. Um so [clears throat] I'm one of those I'm a very big stickler to keep my inbox clean. I don't like having more than one or two emails sitting in my inbox. It it gives me anxiety and angst. And so managing um my"
+    },
+    {
+      "t": 3046,
+      "text": "emails into different folders has always been critical. And so I have rules that push them all over the place. My biggest problem is is especially when I get a lot of emails that go into a specific"
+    },
+    {
+      "t": 3056,
+      "text": "folder, I lose track of it all. And I usually have to inbox zero it and just select all, delete, and and see what I can salvage. Um, but within the past few"
+    },
+    {
+      "t": 3068,
+      "text": "months when I've been able to attach um, agents to my inboxes and to my calendars and stuff, I just basically have agents scheduled to check those folders,"
+    },
+    {
+      "t": 3080,
+      "text": "summarize all the emails in there, um, and give me the title of emails that I might need to reference back. And so instead of having to dig through 40 emails from sub substack this last week,"
+    },
+    {
+      "t": 3091,
+      "text": "I was able to get a condensed workflow that showed me everything that was discussed over the week with any insights. Um, that one saved me a ton of time because it's so difficult right now"
+    },
+    {
+      "t": 3102,
+      "text": "to keep up with what's happening. Um, that's just kind of how I'm trying to survive it."
+    },
+    {
+      "t": 3108,
+      "text": ">> You might actually have to send me that one, so I'll ask later."
+    },
+    {
+      "t": 3113,
+      "text": "So let's see what uh unpopular opinion do you have regarding AI?"
+    },
+    {
+      "t": 3121,
+      "text": ">> Unpopular opinion. Geez, there's a lot of people out there that would probably say that writing software with AI is an unpopular opinion. Um automating it would be even more an unpopular opinion. Um"
+    },
+    {
+      "t": 3137,
+      "text": "let me see. I'm gonna have to stick with that one right now. I can't think of anything."
+    },
+    {
+      "t": 3144,
+      "text": "But if I think of something to it, >> yes, probably not necessarily an unpopular as far as ability. It's probably unpopular as far as actually using it in that manner."
+    },
+    {
+      "t": 3160,
+      "text": ">> I'd probably say I don't think we we'll we'll see AGI in the 21st century."
+    },
+    {
+      "t": 3167,
+      "text": ">> Ah, so that's a cool one. Yeah. So we don't So it depends. What do you think uh AGI actually means? I mean is it a >> um"
+    },
+    {
+      "t": 3179,
+      "text": "my opinion AGI is when um agents or an intelligent model is able to come up with its own task and its own work and"
+    },
+    {
+      "t": 3192,
+      "text": "do it on its own with zero input from anybody."
+    },
+    {
+      "t": 3196,
+      "text": "Um, right now we have to feed the AIS what we want them to do. Um, and they can they can come off of that and say, \"Okay, now I need to do this, this, this, and this, and organize and build"
+    },
+    {
+      "t": 3207,
+      "text": "it.\" But there's no AI right out there right now that says, \"All right, I need to go out there and I need to start um trading stocks for Ryan because blah blah blah happened.\" Um, it doesn't"
+    },
+    {
+      "t": 3218,
+      "text": "think logically like that. You have to start it. You you have to tell it what to do. Um, and I think that's going to be the critical part with AGI. It's going to be a lot harder for us to"
+    },
+    {
+      "t": 3228,
+      "text": "solve. And I think it'll probably another hundred years we're chipping away at it. But >> I don't know."
+    },
+    {
+      "t": 3235,
+      "text": ">> My crystal ball is just as good as anybody else's."
+    },
+    {
+      "t": 3240,
+      "text": ">> Well, let's uh what about this? I like to ask everybody that I meet, what is one book or resource or talk that you have found to be helpful? So, one of the books when when I was really digging"
+    },
+    {
+      "t": 3253,
+      "text": "into getting into leadership um at a higher level um for engineering teams or highly skilled people um one of the things that I I was really pushing for was trying to have a blend of both"
+    },
+    {
+      "t": 3265,
+      "text": "creativity fully owning everything that you build and understanding it from a full stack standpoint. Um and and and building on creativity and technical, not just one"
+    },
+    {
+      "t": 3277,
+      "text": "or the other because I I usually see in most teams, you know, one or the other really stands out. Either a very strong creativity team or a very strong technical team, neither both. Um I found"
+    },
+    {
+      "t": 3288,
+      "text": "this book, it's called No Rules Rules: Netflix and the Culture of Reinvention."
+    },
+    {
+      "t": 3295,
+      "text": "Um and basically it's by Reed Hastings and um it's an amazing read. It's it's an easy read, but he basically talks about he how he defined and built the"
+    },
+    {
+      "t": 3307,
+      "text": "Netflix culture around this. Um, and so I thought it was a really good book."
+    },
+    {
+      "t": 3314,
+      "text": ">> All right, Ryan. So, this is the end of the episode. And where can people find you?"
+    },
+    {
+      "t": 3320,
+      "text": ">> Yeah, so, um, I have a portfolio site that is A2A supported. Um, if you want to play around with it, it's abstract.ai."
+    },
+    {
+      "t": 3329,
+      "text": "AI. Um, and I'll add those so you can put in the show notes as well. Um, you can find me on LinkedIn under Ryan Booth. You'll find me in Canyon, Texas."
+    },
+    {
+      "t": 3338,
+      "text": "Um, you'll find me I don't do Twitter too much anymore. Um, you'll find me on Discord, especially the AI mug um, user group forum. This place is amazing. There's a lot of great"
+    },
+    {
+      "t": 3350,
+      "text": "people in here, including yourself. Conversations are great. Um, those are usually that's the place I stay the most. So, yeah, that's where you can find me. If you do find me and you want"
+    },
+    {
+      "t": 3359,
+      "text": "to chat though, I'm always around. I'm always open. I'm always happy to hear what you have to say."
+    },
+    {
+      "t": 3366,
+      "text": ">> Right. Well, thank you so much, Ryan. >> That was Ryan Booth. If this was useful, hit subscribe and come build with us at AIMG. Meetup.com for events and Discord for demos and code. The links for both"
+    },
+    {
+      "t": 3379,
+      "text": "are in the description. All resources and Ryan Booth links are in the show notes. Thanks for listening."
+    }
+  ],
+  "backfill": true
+}

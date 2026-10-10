@@ -1,0 +1,10 @@
+# Cloudflare Pages: the static Astro build in dist/ plus Pages Functions in functions/.
+name = "alc-docs"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-09-01"
+
+# Speaker pitches and signed releases (functions/schema.sql). Local dev keeps its own copy under .wrangler/.
+[[d1_databases]]
+binding = "DB"
+database_name = "aimug-speakers"
+database_id = "33b4ebde-0cc8-4d02-9531-8dea96059fa7"

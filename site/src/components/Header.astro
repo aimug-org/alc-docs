@@ -1,0 +1,53 @@
+---
+import { nav, channels } from '../data/site';
+import Icon from './Icon.astro';
+import { nextEvent, fmtDay } from '../lib/data';
+
+const next = await nextEvent();
+const rsvp = next?.data.rsvp.luma ?? next?.data.rsvp.meetup ?? '/events/';
+const path = Astro.url.pathname;
+const here = (href: string) => path === href || path.startsWith(href);
+const quick = channels.filter((c) => c.key === 'discord' || c.key === 'youtube');
+---
+<header class="border-b border-line bg-ink">
+  <div class="mx-auto flex max-w-[1240px] items-center justify-between gap-4 px-4 py-3 sm:px-8">
+    <a href="/" class="flex items-center gap-3 text-text no-underline">
+      <img src="/logo.png" alt="" width="48" height="48" class="h-11 w-11 rounded-[10px]" />
+      <span class="flex flex-col leading-none">
+        <span class="font-display text-[28px] tracking-wide">AIMUG</span>
+        <span class="mt-1 hidden text-sm font-medium text-muted sm:block">AI Middleware Users Group, Austin</span>
+      </span>
+    </a>
+    <nav aria-label="Main" class="hidden items-center gap-7 text-[17px] font-semibold lg:flex">
+      {nav.map((n) => (
+        <a href={n.href} class:list={['navlink no-underline', here(n.href) ? 'text-gold' : 'text-text hover:text-gold']} aria-current={here(n.href) ? 'page' : undefined}>{n.label}</a>
+      ))}
+    </nav>
+    <div class="flex items-center gap-3">
+      {quick.map((c) => (
+        <a href={c.href} aria-label={`AIMUG on ${c.label}`} title={c.label} class="hidden h-11 w-11 items-center justify-center rounded-full border border-edge text-text no-underline hover:border-gold hover:text-gold lg:inline-flex"><Icon name={c.key} /></a>
+      ))}
+      {next && (
+        <a href={rsvp} class="hidden rounded-full bg-gold px-5 py-3 text-base font-bold text-ink no-underline hover:bg-gold-hi hover:text-ink sm:inline-block">
+          RSVP for {fmtDay(next.data.start, { weekday: undefined })}
+        </a>
+      )}
+      {next && (
+        <a href={rsvp} class="inline-flex min-h-[44px] items-center rounded-full bg-gold px-4 text-base font-bold text-ink no-underline hover:bg-gold-hi hover:text-ink sm:hidden">RSVP</a>
+      )}
+      <details class="relative lg:hidden">
+        <summary class="flex h-12 w-12 cursor-pointer list-none items-center justify-center rounded-xl border border-edge text-text" aria-label="Menu">
+          <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+        </summary>
+        <nav aria-label="Main" class="absolute right-0 z-40 mt-2 flex w-56 flex-col rounded-2xl border border-line bg-panel p-2 shadow-xl">
+          {nav.map((n) => <a href={n.href} class="rounded-lg px-4 py-3 font-semibold text-text no-underline hover:bg-ink">{n.label}</a>)}
+          <a href="/community/" class="rounded-lg px-4 py-3 font-semibold text-text no-underline hover:bg-ink">Community</a>
+          <div class="mt-1 flex flex-wrap gap-1 border-t border-line px-2 pt-2">
+            {channels.map((c) => <a href={c.href} aria-label={c.label} title={c.label} class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-soft no-underline hover:bg-ink hover:text-gold"><Icon name={c.key} /></a>)}
+          </div>
+          {next && <a href={rsvp} class="mt-1 rounded-lg bg-gold px-4 py-3 font-bold text-ink no-underline">RSVP for {fmtDay(next.data.start, { weekday: undefined })}</a>}
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>

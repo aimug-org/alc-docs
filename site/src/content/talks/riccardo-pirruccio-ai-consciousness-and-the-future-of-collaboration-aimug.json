@@ -1,0 +1,916 @@
+{
+  "title": "Riccardo Pirruccio: AI, Consciousness, and the Future of Collaboration | Builders Podcast #5",
+  "speakers": [
+    "riccardo-pirruccio"
+  ],
+  "date": "2026-01-02",
+  "youtubeId": "jWLFSrfI_fA",
+  "duration": 2470,
+  "summary": "In this podcast episode, James interviews Ricky, who shares his journey from moving to Austin to diving deep into AI and consciousness. Ricky discusses his initial foray into coding during the pandemic, transitioning from G Code to JavaScript, and eventually to Python.",
+  "topics": [
+    "Agents"
+  ],
+  "transcript": [
+    {
+      "t": 1,
+      "text": "at that point. Hold there. Holy smokes."
+    },
+    {
+      "t": 8,
+      "text": "Extraordinarily business value."
+    },
+    {
+      "t": 13,
+      "text": "All right, Ricky, we're live. Thank you. Welcome to the podcast."
+    },
+    {
+      "t": 18,
+      "text": "Thanks to our listeners for joining us. I met you at the AI mug meetup and I think it was this Christmas that we started talking about AI in respect to"
+    },
+    {
+      "t": 32,
+      "text": "consciousness and I thought that we would be uh having a good conversation about that. It' be great to capture that here. Before we do that, could you introduce yourself? Tell us how you got"
+    },
+    {
+      "t": 42,
+      "text": "to Austin if you're a native, how you got into AI lang chain, how you joined the meetup. It'd be very interesting to find out what you're doing. So take it away."
+    },
+    {
+      "t": 50,
+      "text": ">> Yeah, thank you James. Thanks for having me. So I came to Austin about five years ago. It was right before COVID happened."
+    },
+    {
+      "t": 58,
+      "text": "Actually before that I was living in Connecticut for a couple of years, but I'm really grew up in Texas for most of my life. Um I'm from Italy. Uh so moved"
+    },
+    {
+      "t": 71,
+      "text": "to the US when I was 10 years old, moved to Louisiana and then grew up in Houston. Went to high school there. I went to college there and I got a bachelor's in mechanical engineering and"
+    },
+    {
+      "t": 83,
+      "text": "I think it was around 2020 I started having more of an interest in coding. I want to learn how to code, wanted to get my hands on just learning how to"
+    },
+    {
+      "t": 96,
+      "text": "build stuff with code. I think 2020 was it it was sort of you couldn't ignore that technology was going to have a profound change in our lives. Um at that"
+    },
+    {
+      "t": 108,
+      "text": "point I remember Zoom sort of just popping out of nowhere. It was built super fast and adapted to the needs of the time when we were people were more"
+    },
+    {
+      "t": 121,
+      "text": "or less quarantining. It was around I was working manufacturing in Connecticut. I got my first job out of college working aerospace contract manufacturer. We were making like these"
+    },
+    {
+      "t": 133,
+      "text": "turbine veins and blades that went on Pratt and Wendy engines."
+    },
+    {
+      "t": 138,
+      "text": ">> This is actually so funny because that was one of my first jobs was manufacturing veins for the F35 replacement engine."
+    },
+    {
+      "t": 146,
+      "text": ">> Yeah. >> From GE GE Aviation. And so what was this for Prattton Whitney?"
+    },
+    {
+      "t": 152,
+      "text": ">> Yeah, Pratt Whitney was one of our we were contracting with them. There was another uh customer we had was actually GE. So yeah, wire veins and blades what probably were made for the F-35."
+    },
+    {
+      "t": 165,
+      "text": "It was an interesting material to work with. We're doing mostly like grinding operations and um EDM like with a wire cutter to a dipped in like >> very"
+    },
+    {
+      "t": 178,
+      "text": "Yeah, exactly. So, I was actually programming that's that's kind of where I my programming experience started programming the EDM machines with G-code."
+    },
+    {
+      "t": 187,
+      "text": ">> Okay. But this is like G-code, if anybody hasn't been familiar with it, it's like a very very old coding language. It's really just a series of descriptions and coordinate spaces to"
+    },
+    {
+      "t": 198,
+      "text": "tell machines where to move the machine head RPMs to turn other various little switches like run coolant that kind of thing. So like how did you go from"
+    },
+    {
+      "t": 211,
+      "text": "G-code to let's say Python or are you doing TypeScript or I don't know what your current stack is."
+    },
+    {
+      "t": 218,
+      "text": ">> Yeah. So, in 2021, I applied to a coding boot camp when those were still a thing. I don't know nowadays, but it was a JavaScript boot"
+    },
+    {
+      "t": 231,
+      "text": "camp with Hack Reactor. They may still be around. I'm not sure. It was supposed to be an eight-mon long boot camp. It was I think it was like a couple hours every night. So it was like evening"
+    },
+    {
+      "t": 243,
+      "text": "classes and I was learning essentially JavaScript and web development without really knowing what that entailed."
+    },
+    {
+      "t": 251,
+      "text": "That's where I gained my initial skills in in programming and I started to get a better picture of backend frontend systems script. At the same time I got a"
+    },
+    {
+      "t": 263,
+      "text": "I got a job at apply materials. Um it was remote at the time so it was pretty easy to do my job and then learn code in my evenings. Um and"
+    },
+    {
+      "t": 276,
+      "text": ">> how did you get from JavaScript to like Python?"
+    },
+    {
+      "t": 280,
+      "text": ">> So actually Python I got into it working at my job um at Applied Materials. So I work in it's still current my job. I was a contractor at the time but I got hired"
+    },
+    {
+      "t": 292,
+      "text": "full-time ever since. And we were working a lot with uh these build materials for essentially these like rare used build materials where just to"
+    },
+    {
+      "t": 306,
+      "text": "know okay like we have these parts. They could be like throttle valves. They could be controllers uh that go in inside of some of our products across"
+    },
+    {
+      "t": 318,
+      "text": "multiple business units. And my job is essentially in obsolescence which is basically more or less project managing part changes. And a semiconductors part"
+    },
+    {
+      "t": 331,
+      "text": "changes are super complex because they go into this complicated life cycle of uh qualifying a new part uh meeting customer requirements and sometimes c we"
+    },
+    {
+      "t": 344,
+      "text": "we know that the new solution is going to work in our product but then you know customers have stricter requirements that they make it sort of implicit."
+    },
+    {
+      "t": 354,
+      "text": "they, you know, they they try to squeeze a little bit more um out of the the spec. Um [clears throat] and that then causes us to have to go back to the supplier, you know, get some update on"
+    },
+    {
+      "t": 368,
+      "text": "it and it just takes forever to do so."
+    },
+    {
+      "t": 372,
+      "text": "But the initial challenge was um data, right? I I realized early on that our company just lacked data intelligence and you had all these people working on"
+    },
+    {
+      "t": 386,
+      "text": "these projects that were not really making datadriven decisions and when they try to do that it was a very very manual process. So it was around the"
+    },
+    {
+      "t": 398,
+      "text": "time I graduated from the boot camp and I realized wait like I can automate this. Um and I started making tools for myself uh to help me out in my projects"
+    },
+    {
+      "t": 412,
+      "text": "and uh that's where Python was purely self-learning for for that purpose. So, it actually got me hired then because I think the leadership noticed that it was"
+    },
+    {
+      "t": 425,
+      "text": "useful. It was making our team more efficient. Um, and ever since I've been building tools and sharing them with my team to use."
+    },
+    {
+      "t": 432,
+      "text": ">> And so, at what point did AI come into the mix?"
+    },
+    {
+      "t": 437,
+      "text": ">> Really? It came to the mix earlier this year, June."
+    },
+    {
+      "t": 443,
+      "text": "But I was using chatbt way before that."
+    },
+    {
+      "t": 449,
+      "text": "Um, honestly, chatbt taught me a lot of Python. Um, and it was not as efficient to make these tools because I was manually coding"
+    },
+    {
+      "t": 463,
+      "text": "everything, which just it seems so weird now to actually type code. I don't do it any I don't know anyone that does it."
+    },
+    {
+      "t": 471,
+      "text": "But I think when I first started using uh AI assisted coding like how we know it today with cursor and claude code um it was with what's today known as clin"
+    },
+    {
+      "t": 484,
+      "text": "but I think before it was known as >> um was it client code >> right yeah but you know it's interesting that in enterprise there are people who are still users of client because it's"
+    },
+    {
+      "t": 496,
+      "text": "very you know they have very long approval processes so like it's very hard for them to deep at the forefront."
+    },
+    {
+      "t": 502,
+      "text": "So, I've seen people continue to use Klein."
+    },
+    {
+      "t": 506,
+      "text": ">> Yeah, it was called Clawude Dev. Um, but I started using it as client when it was an extension. You could download on VS Code and I was still using VS Code as my IDE. Now I use Cursor, but when I first"
+    },
+    {
+      "t": 519,
+      "text": "heard about it was at MLOps last year and I saw Colin using it and building some front-end code. I was like, what?"
+    },
+    {
+      "t": 528,
+      "text": "you could just see code being built in your IDE with the diffs um of what's being removed, what's being added and I was just like my mind was blown and I started using it ever since. It was more"
+    },
+    {
+      "t": 539,
+      "text": "expensive at the time. I feel like models have become less expensive now and people generally use subscriptions like I have a CLCO subscription um because I'm such a heavy user of it."
+    },
+    {
+      "t": 553,
+      "text": "I made good use of it but um yeah it's been a journey in that regard in the enterprise."
+    },
+    {
+      "t": 560,
+      "text": ">> Yeah. Yeah. Go ahead. >> So how did the consciousness come into it? So I mean that's what I remember what I think even before this discussion at our Christmas meetup we had you"
+    },
+    {
+      "t": 575,
+      "text": "talking about consciousness and AI coming together. Like first of all, I want to know like how did you get so interested in this and like what even is consciousness cuz I've heard like 10 20"
+    },
+    {
+      "t": 588,
+      "text": "different definitions. >> Yeah. So where does it come from for me?"
+    },
+    {
+      "t": 592,
+      "text": "I think it's the same thing that sparks everything and that's pain. Um having a problem that feels so impossible to solve. Um and then some"
+    },
+    {
+      "t": 604,
+      "text": "new technology comes in and it gives you high hopes that you can actually do the impossible. Um it was mostly in my job."
+    },
+    {
+      "t": 614,
+      "text": "Um but I started I think it was around May um or June and I"
+    },
+    {
+      "t": 626,
+      "text": "downloaded I got I got this voice mode MCP. I don't know if you heard of it."
+    },
+    {
+      "t": 630,
+      "text": "Um, essentially it it made it so I could talk to my models. Um, and whatever IDE was using just cloud code at a time. I'm"
+    },
+    {
+      "t": 642,
+      "text": "still using it. Um, and I realized I could just talk, have a voice conversation with my models, and it just completely blew my mind. And I started thinking, we're running like, you know,"
+    },
+    {
+      "t": 654,
+      "text": "300,000 year old cognitive software in an exponential information environment. Um, and the only way that I can actually, you"
+    },
+    {
+      "t": 668,
+      "text": "know, learn and keep up with things is if I can just talk to my models and my agents and have a real- time voice"
+    },
+    {
+      "t": 680,
+      "text": "conversation to brainstorm things, to build things."
+    },
+    {
+      "t": 686,
+      "text": "Um, and it's just it just increases the the the time it decreases the time it takes to get to an idea point to a sort"
+    },
+    {
+      "t": 699,
+      "text": "of epiphany of of you know where you going to build, how you going to solve a problem. And when I realized that I could actually make it portable was when"
+    },
+    {
+      "t": 711,
+      "text": "I was driving to Houston to see my family and I plugged in my MacBook over Bluetooth in my car. Um, and I was talking to Claude over my uh car uh"
+    },
+    {
+      "t": 726,
+      "text": "Bluetooth system um working on a project over my drive and I was like, \"Okay, so I I sort of see a pattern here right now. I'm, you"
+    },
+    {
+      "t": 739,
+      "text": "know, I'm grounded in like I have to plug in this thing to my car speaker. I could definitely make this work in the cloud."
+    },
+    {
+      "t": 751,
+      "text": "So is the idea here that it's like a multiplication of your own consciousness that you know used to be that you would have to dedicate all of your attention to coding or in"
+    },
+    {
+      "t": 764,
+      "text": "this case to driving and now you are able to sort of offload your cognition to the agent, >> right? And that's what makes it less painful. I think what's interesting here is that it sort of lines up with like"
+    },
+    {
+      "t": 778,
+      "text": "sociology in a way or sort of like I don't know you could say like corporate dynamics because you have let's say a whole bunch of people who join corporation and they have to"
+    },
+    {
+      "t": 791,
+      "text": "complete the vision of the leadership and are they simply extensions of the consciousness of the leadership?"
+    },
+    {
+      "t": 798,
+      "text": ">> The user is the leader in this case. >> Yeah. In this case, it's you. You're the leadership and the cloud code is the employee. But I'm wondering like"
+    },
+    {
+      "t": 810,
+      "text": "is this your own consciousness or is it the AI's consciousness or conversely are employees the consciousness of their employer?"
+    },
+    {
+      "t": 818,
+      "text": ">> I think it's an extension of your own. The question I think is it's more about ownership than anything else. Do you own your models? Because if you do then you own your own intelligence. you can train"
+    },
+    {
+      "t": 831,
+      "text": "your models to do, you know, whatever to prioritize whatever um to have this like constitutional component to it. Um baked in the weights"
+    },
+    {
+      "t": 845,
+      "text": "and that actually made me think I asked myself this a lot. So is the model like making decisions for me or am I in control here? Um, and the answer is I"
+    },
+    {
+      "t": 859,
+      "text": "think right now it's a little bit of both. You can't deny that you're not fully in control. Um, because you don't own the model. So like I'm using anthropic right now. I'm using claude"
+    },
+    {
+      "t": 871,
+      "text": "code and they have this constitutional AI baked into weights which sort of prevents opus in case for claude sonnet um to do certain things. If you ask it"
+    },
+    {
+      "t": 885,
+      "text": "to, hey, let help me launch a DDOS attack on this person, it's going to be like, no, >> no, it won't do. But if you go to venice.ai, they'll help you launch a DDOS attack."
+    },
+    {
+      "t": 897,
+      "text": ">> Really? [clears throat] I didn't know that. >> Yeah. I don't know. I mean, Venice is anonymized and jailbroken models. So, you can use those."
+    },
+    {
+      "t": 907,
+      "text": ">> But, I mean, in the dos attack, you know, question, I mean, that sort of seems like an obvious thing. I mean, I'm a corporation and I'm having like, you know, a"
+    },
+    {
+      "t": 919,
+      "text": "multi-tenant system like using my my AI."
+    },
+    {
+      "t": 924,
+      "text": "If they do bad things with it, then I'm sort of responsible. But it's like, well, you know, it's like this now, but moving forward, what else are you going to bake into the weights that are going"
+    },
+    {
+      "t": 936,
+      "text": "to sort of make the experience or the outcomes that the users are looking for not aligned with what they actually want and so >> or even pay is like nudges the users"
+    },
+    {
+      "t": 949,
+      "text": "along with fake information. >> The problem is that you don't have control over it. And that's what is scary in a way."
+    },
+    {
+      "t": 957,
+      "text": "I I think that we can leverage these cloud models um that you could definitely never run on your own hardware. Even with the"
+    },
+    {
+      "t": 969,
+      "text": "Nvidia Spark or the new GPUs that are coming out, um they're just too big. And I think we'll get to that point of being"
+    },
+    {
+      "t": 982,
+      "text": "able to run edge AI on our own hardware."
+    },
+    {
+      "t": 986,
+      "text": "um most people are probably not going to bother with it. Um but we can leverage these cloud models you currently have to build that infrastructure ourselves. Um if you don't do that, I think you're"
+    },
+    {
+      "t": 996,
+      "text": "doing yourself a disservice."
+    },
+    {
+      "t": 1000,
+      "text": ">> Yeah, there already has been edge models that have been created for other domains. I know for example TensorFlow has a version of its library which I"
+    },
+    {
+      "t": 1012,
+      "text": "believe a lot of the models are quantized and shrunk for edge cases not edge cases but for being out of network."
+    },
+    {
+      "t": 1019,
+      "text": "So you can put them on robots that are in the middle of nowhere or put them in internet of things uh situations where maybe the wireless or internet is only sparsely connected. So you can have"
+    },
+    {
+      "t": 1033,
+      "text": "models being run on the parking meter if you need it. But yeah, I think going forward it's definitely going to be the case. And it did seem like more and more of the models are going to be"
+    },
+    {
+      "t": 1043,
+      "text": "specialized and smaller smaller weight rather than having these large general models that we tend to rely on today."
+    },
+    {
+      "t": 1054,
+      "text": ">> Yeah. And there's several problems that come with that. I think the interesting thing with you think about extending your consciousness to AI, it's like how does that scale? Um,"
+    },
+    {
+      "t": 1066,
+      "text": "if I can create maybe an agent that can create other agents sort of on the fly as my problems evolve. Um, that's sort"
+    },
+    {
+      "t": 1080,
+      "text": "of where I see this going. We're at the point where we can manufacture intelligence, but then to make it portable, you need a runtime and it needs to live in, you know, some server"
+    },
+    {
+      "t": 1093,
+      "text": "that would be long running um or maybe multiple servers. You can make it distributed. The scale component, I think, is something that a lot of people"
+    },
+    {
+      "t": 1105,
+      "text": "are trying to solve right now with the runtimes. I don't think we're at the point where we have sort of figure out distributed intelligence just yet. Um because then it's one thing to"
+    },
+    {
+      "t": 1117,
+      "text": "have an agent and specialize on something, but then it's another thing to have a team of agents working together to solve more complex problems."
+    },
+    {
+      "t": 1128,
+      "text": "I >> think we're going to see that. Yeah, there's that component I think with A2A agent to agent and then there's I forget the protocol but there's a protocol for payments between agents. So"
+    },
+    {
+      "t": 1140,
+      "text": "you could have distributed cognition or distributed agents working that way where you know you just buy the specialization of other agents to solve particular problems."
+    },
+    {
+      "t": 1151,
+      "text": ">> Yeah, definitely. And I think the first sort of attempt at this that I saw was in Cloudflow."
+    },
+    {
+      "t": 1160,
+      "text": "If you checked out that repo on GitHub, >> is it the one with the swarms? A swarm of guys. Yeah, I think it was they had this concept of this hive mine where you"
+    },
+    {
+      "t": 1172,
+      "text": "have agents sort of being orchestrated from an orchestrator that they're calling out a queen and they had a fault tolerance component to it where agents"
+    },
+    {
+      "t": 1184,
+      "text": "were writing communicating to one another some uh persistent state that still it's not very fault tolerant. it sort of misses the point because"
+    },
+    {
+      "t": 1197,
+      "text": "um you would need this, you know, websocket connection for agents to be able to talk to each other, especially like sub agents because like right now in in cloud code, if I launch a session"
+    },
+    {
+      "t": 1211,
+      "text": "and I start talking to Opus and I ask to launch a sub agent or like multiple sub agents, they won't be able the sub agents won't be able to talk to each other. Um, all they know is, you know,"
+    },
+    {
+      "t": 1224,
+      "text": "this is this is what I'm doing. Um, they have no context of talking to other agents or sub agents. They don't even know the other sub agents are running."
+    },
+    {
+      "t": 1234,
+      "text": "And I think that's that's sort of it's going to be the next step in agent development."
+    },
+    {
+      "t": 1239,
+      "text": ">> Didn't they do something very similar to that? >> Oh, interesting."
+    },
+    {
+      "t": 1243,
+      "text": ">> They just had an orchestrator like they had a manager and he had a bunch of sub aents and the sub aents could communicate with each other."
+    },
+    {
+      "t": 1251,
+      "text": "I didn't know that if crew AI sort of solved that."
+    },
+    {
+      "t": 1256,
+      "text": ">> I don't know if they would they solved it. I mean, it's an implementation. I tried crew AI. It's not as straightforward or >> it's not easy to conceptualize like I think line chain is."
+    },
+    {
+      "t": 1268,
+      "text": ">> So, I mean that's something I could go back to. I don't know if you've tried this sort of swarming the agents, but I found it very difficult when I was doing that. Yeah, it is difficult because"
+    },
+    {
+      "t": 1282,
+      "text": "think you know goes back to the question of consciousness. It's like you have I think humans are very singlethreaded like organisms in a way. Uh we work in"
+    },
+    {
+      "t": 1294,
+      "text": "teams, we work with each other. Um but this whole concept of having like a distributive network of people being in sync, coordinating one another, it's"
+    },
+    {
+      "t": 1306,
+      "text": "impossible. Like even if we have telephones, messaging systems, that perfect level of coordination doesn't exist in our human world. Isn't consciousness just a single"
+    },
+    {
+      "t": 1318,
+      "text": "thread? I mean, and omniscience is the ability to observe other threads, right? So like I mean we split up, right? You have multiple threads on a"
+    },
+    {
+      "t": 1330,
+      "text": "processor, but really like each thread is its own kind of fault. They're not really communicating with each other."
+    },
+    {
+      "t": 1335,
+      "text": "Comes back together at the end. It's sort of like a ghost or a temporary clone of cognition that gets booted up to solve a problem but ultimately you"
+    },
+    {
+      "t": 1347,
+      "text": "can't have more than one thought and awareness of all those thoughts at a time like there is singular attention to a thread and so the sort of like multi-attention multi-thread I think is something that I"
+    },
+    {
+      "t": 1361,
+      "text": "mean I have like I don't think any human or any living animal has that capacity."
+    },
+    {
+      "t": 1368,
+      "text": "I mean, we kind of do, but we're not we're not conscious of it because we are aware of our own bodily functions, right, at some level. Like, we're I'm digesting something at this moment. You"
+    },
+    {
+      "t": 1380,
+      "text": "are. We're talking. I don't have to tell myself to breathe. Neither do you. And so, like there is sort of this awareness, but it's not with my attention. Like, my attention is a"
+    },
+    {
+      "t": 1392,
+      "text": "single thread. It's what's occurring in my conscious thought and you know I don't know whether or not having attention across simultaneous consciousness it's possible you know"
+    },
+    {
+      "t": 1404,
+      "text": "there's telemetry right maybe get telemetry >> I feel like though in nature you have instances where like ant colonies right if you like look at ants like working together they're just in sync like they"
+    },
+    {
+      "t": 1418,
+      "text": "just know what to do and they're achieving like one common purpose this all doing one thing. Bees sort of work the same way. Um, >> humans do that too. I mean, but we don't"
+    },
+    {
+      "t": 1431,
+      "text": "do it through I think it's ofactory glands, right? They have particular smell that's left and you can kind of communicate. Uh, the way I view that is like emotion like they kind of are"
+    },
+    {
+      "t": 1444,
+      "text": "operating on a hive emotion >> and that kind of influence the individual like cognition of each ant >> or each bee. And I think that happens also at the human level. I think that you can have, for example, emotion"
+    },
+    {
+      "t": 1458,
+      "text": "spread through media, speeches, that kind of thing. And it can affect everybody's cognition. And you're kind of functioning as a hive mind in that case. You know, you see someone else,"
+    },
+    {
+      "t": 1467,
+      "text": "you have empathy towards like whatever sort of state of mood that they're in and affects your own cognition in that way too. So there is some sort of hive mind that occurs even in humans,"
+    },
+    {
+      "t": 1477,
+      "text": ">> right? And >> but it's not I don't think I mean I don't know if I've ever been fully aware of that. I don't think I I'm fully aware of when that happens but you know I can observe it happening for other people"
+    },
+    {
+      "t": 1490,
+      "text": "but I don't know whether or not they're aware of that happening too."
+    },
+    {
+      "t": 1494,
+      "text": ">> Yeah I know it's interesting but I think the part that interests me most it's like there's probably different levels of abstraction when it comes to age and development. I think what interests me"
+    },
+    {
+      "t": 1505,
+      "text": "most is like what is the right cognitive architecture here for the system that I'm building the right communication protocols for working with my agents. Um"
+    },
+    {
+      "t": 1517,
+      "text": "I I feel like uh as you know engineers, developers alike, but even non-developers um we're as humans really we're going to"
+    },
+    {
+      "t": 1529,
+      "text": "be thinking a lot more on the overall system. um how it works, how it operates, how it communicates, and how we communicate to it. If I'm trying to take my agent system, um"
+    },
+    {
+      "t": 1544,
+      "text": "on the cloud, um would I then be talking in voice mode? Would I be talking to just one of my agents? Could I have maybe a Zoom meeting where there's a bunch of different agents that"
+    },
+    {
+      "t": 1556,
+      "text": "specialize in different things and we're all just talking together and brainstorming? It it opens up interesting possibilities of working with your agents and"
+    },
+    {
+      "t": 1568,
+      "text": "probably the speed of execution and the different technologies that can emerge from it."
+    },
+    {
+      "t": 1577,
+      "text": ">> It is interesting. So like I think we kind of talked about the cognition of the agent itself. The sort of multiplicity of consciousness that you can have, how"
+    },
+    {
+      "t": 1591,
+      "text": "maybe emotions are sort of a hive mind in humans and other animals and that might be something that can be replicated inside agentic systems."
+    },
+    {
+      "t": 1603,
+      "text": "I want to move forward to another area that you've mentioned which was the effect of these systems on the consciousness of the user. So we were speaking previously with Sam about"
+    },
+    {
+      "t": 1618,
+      "text": "people using AI to become more authentic or to achieve more in life that maybe they couldn't achieve necessarily on their own in their particular station."
+    },
+    {
+      "t": 1630,
+      "text": "Could you expand on that? Like how would you view it? How has AI expanded your own consciousness?"
+    },
+    {
+      "t": 1638,
+      "text": ">> So I think that we're at the point where we can build these systems with AI and sort of have a goal to maybe embody a"
+    },
+    {
+      "t": 1650,
+      "text": "certain type of consciousness ourselves and have this like artificial feedback loop happening."
+    },
+    {
+      "t": 1658,
+      "text": "um to purposely guide the way you think."
+    },
+    {
+      "t": 1662,
+      "text": "You know, up until now, we've been trying to do the same thing, you know, with books. It's like why do you read a book? Because you're interested in the knowledge in the book. You wanted to be"
+    },
+    {
+      "t": 1673,
+      "text": "part of yourself and when you read it and you understand it, then it just you become a different person after that."
+    },
+    {
+      "t": 1679,
+      "text": "Um, so we could sort of accelerate that with maybe in have an agent that I'm talking with in voice. I'm talking to it about a specific problem, how to think"
+    },
+    {
+      "t": 1691,
+      "text": "about politics, how to think about life and it's sort of coaching me in at the same time."
+    },
+    {
+      "t": 1702,
+      "text": ">> So my daughter uses this AI called synthesis to learn mathematics. I think it came out of maybe SpaceX engineers worked on it. I do know this program itself is an AI agent and it gifies the"
+    },
+    {
+      "t": 1717,
+      "text": "lessons. So it taught counting originally, then addition, subtraction, multiplication, and each one is centered around some sort of game. And what it's able to do is modify the lesson and"
+    },
+    {
+      "t": 1729,
+      "text": "attack her particular misunderstanding of the concept so that she can learn the material and then also do the repetition so that it gets like ingrained. I like"
+    },
+    {
+      "t": 1741,
+      "text": "how you brought up a novel and how this might be like a new means of knowledge acquisition, like how the novel was novel and came out and it was this new"
+    },
+    {
+      "t": 1754,
+      "text": "technology for people to learn new material. And I think that what worries me with AI is that it's too quick right now. That definitely needs some sort of"
+    },
+    {
+      "t": 1768,
+      "text": "guidance. that needs to be adapted to human limitations because what's great about novels is that you can take them slowly, you can absorb them as you read and it's not a fast conversation like if"
+    },
+    {
+      "t": 1781,
+      "text": "I if I open up my chat GPT app and I start having a conversation with it, guaranteed like 20 minutes after I've had the conversation, I will forget what it talked about with the app. So that's"
+    },
+    {
+      "t": 1793,
+      "text": "definitely something that I think needs development and at least there are people for example the synthesis team that are actively pursuing that at least for K through 12 education."
+    },
+    {
+      "t": 1805,
+      "text": ">> That's interesting. something that sparked this idea. I built this project called Green Lights AI when I started thinking about hey what if I could just tell about of my agents like about all"
+    },
+    {
+      "t": 1818,
+      "text": "my books on my bookshelf and they could I could sort of ask questions about what does this mean about me like what about my interest about my personality"
+    },
+    {
+      "t": 1831,
+      "text": "um and like what I value about things. sort of trying to learn more about myself. Um it was interesting because sort of the same time when I was having these kind of ideas, I saw a podcast in"
+    },
+    {
+      "t": 1844,
+      "text": "Joe Rogan with Matthew McConn um talking about this Kanye was like um I want to like a personal LLM that I can just like tell it all about my books and"
+    },
+    {
+      "t": 1857,
+      "text": "ask questions. Um right after that I built green lights AI for this just on GitHub collecting dust but it was a concept that I experimented with."
+    },
+    {
+      "t": 1869,
+      "text": ">> Wow. So you know there is this concept of coaching right psychiatrists have their own sort of application where they try to get people who are experiencing"
+    },
+    {
+      "t": 1881,
+      "text": "very distressing issues back to normal. But then there's this idea of coaching which is you take people who are otherwise normal and you try to get them to perform at their peak. And I was"
+    },
+    {
+      "t": 1890,
+      "text": "wondering whether or not this app that you've built is sort of like that."
+    },
+    {
+      "t": 1894,
+      "text": "You're trying to like look at yourself, look at the books you're interested in roan podcast. And I think a lot of people who are reading books, listening to podcasts, they're trying to better"
+    },
+    {
+      "t": 1905,
+      "text": "themselves through acquisition of like new ideas and new practices if they put the books into practice. And it'd be very interesting to actually have an LLM that just is your own personal wellness"
+    },
+    {
+      "t": 1919,
+      "text": "coach or psychological coach and just knows your faults, knows your strengths, and knows, you know, sort of the path to get you from where you are to where you want to be. I mean, there's tons of"
+    },
+    {
+      "t": 1929,
+      "text": "people who are top performers who have a weekly check-in call with a coach just to, you know, make sure that they're up to snuff, uh, so that they can perform at their peak because being at the"
+    },
+    {
+      "t": 1942,
+      "text": "pinnacle is not normal. It's not normal for humans to be that way. So, if you want to be that, you have to have some help."
+    },
+    {
+      "t": 1949,
+      "text": ">> Yeah. And and that opens up really interesting possibilities in the field science. It's like cybernetics."
+    },
+    {
+      "t": 1956,
+      "text": "Um where like what if you have like we have these health sensors, you know, like the aura rings or like Garmin watches, Apple watches that are just collecting bio health information"
+    },
+    {
+      "t": 1969,
+      "text": "um on yourself. Could you maybe feedback that information to an agent that's analyzing your health metrics and sort of maybe tweaking the environment around you, lights, ordering groceries for you?"
+    },
+    {
+      "t": 1983,
+      "text": "I don't know. Um >> yeah I mean it it so there's this idea of like ustress this we are anti-fragile creatures. So in other words we become"
+    },
+    {
+      "t": 1996,
+      "text": "stronger when we experience stress when we experience hardship. And I'm a little bit worried about having an AI pamper me throughout the whole day cuz I have a feeling that what would happen is that,"
+    },
+    {
+      "t": 2008,
+      "text": "you know, I'd develop a whole bunch of neurosis, become very weak, start to forget how to do things that I take for granted now. So, you know, I think that LLMs are really great in that they can"
+    },
+    {
+      "t": 2019,
+      "text": "perhaps do some of the upper level things, but I get worried when we start trying to get them to do basic tasks."
+    },
+    {
+      "t": 2027,
+      "text": ">> Yeah. It's understandable because I think an entire 20th century it's been very agency focused for people. I mean even before that it's like people have"
+    },
+    {
+      "t": 2039,
+      "text": "always done things. Um and now we have these agents sort of doing that for us."
+    },
+    {
+      "t": 2047,
+      "text": "So then it's like what does that mean for us? You know what's our place in the world? I think it just means that you get to be more human. consciousness vacuums. They're vacuuming our"
+    },
+    {
+      "t": 2058,
+      "text": "consciousness out and storing it all for themselves and we're just here pressing go. Well, it depends on what that thing is, you know, like if I have maybe an agent that is in charge"
+    },
+    {
+      "t": 2073,
+      "text": "of my relationships and to, you know, message people to make them just feel good when to make them think, I don't know, maybe it's like me talking to them um because I just don't want to deal"
+    },
+    {
+      "t": 2085,
+      "text": "with it. Then that becomes a little bit less human. and it doesn't seem like a good use case for having agents to manage your own personal relationships with people. But if it's for work, if"
+    },
+    {
+      "t": 2099,
+      "text": "it's something where I'm monetizing on it or my health is dependent on it, um I think it's a good outsourcing of the agency. The purpose is to make me better. So then I can focus on maybe"
+    },
+    {
+      "t": 2113,
+      "text": "taking a hike. um the things that right now I can't I feel like I can't do as much because I'm so overloaded with work. So I think there's definitely a"
+    },
+    {
+      "t": 2125,
+      "text": "need. >> Be very interesting to see. So have you come up with any AI agents that you're regularly using in your day-to-day life to sort of like offload your consciousness and have more time?"
+    },
+    {
+      "t": 2139,
+      "text": ">> I started doing that and I think it failed. And tell me more."
+    },
+    {
+      "t": 2144,
+      "text": ">> Well, the reason why I think it failed is because having a system that can be you can adapt that you can expand um is a much harder problem to solve than"
+    },
+    {
+      "t": 2157,
+      "text": "building a system that solves one specific problem. I think a lot of people have this tendency I definitely have it to solve all my problems. Um it's it's complex [laughter]"
+    },
+    {
+      "t": 2169,
+      "text": "and that's why I started working on this project called AI mission command um where I could essentially have a cloud runtime um with my agents that I can communicate"
+    },
+    {
+      "t": 2182,
+      "text": "with through a web app over voice to orchestrate other agents or build other agents on demand to integrate my infrastructure."
+    },
+    {
+      "t": 2191,
+      "text": "One very good example of a a company that's been leading forefront of this has been Toyota. Um I saw at a conference I went to a conference at MLOps this year in Austin where they had"
+    },
+    {
+      "t": 2204,
+      "text": "their ML team speaking and they essentially were using Langraph. They had their whole data infrastructure connected to agents that could create other agents on demand from factory"
+    },
+    {
+      "t": 2219,
+      "text": "floor operators through an edge service where they could talk to an agent, tell them about the problem they were having, and then that agent would create another agent from a config file. And that just"
+    },
+    {
+      "t": 2233,
+      "text": "completely blew my mind. Um because that is sort of the like a manufacturing paradigm of going from nothing to"
+    },
+    {
+      "t": 2246,
+      "text": "something and just like as little time as possible and you're already putting it in use and it works. I think that's the goal that I'm driving towards having that kind of system in my personal life."
+    },
+    {
+      "t": 2260,
+      "text": ">> Yeah. Command. Okay. So these are little factories for agents and then Okay. So then"
+    },
+    {
+      "t": 2272,
+      "text": "I mean are you like have you started playing around with it?"
+    },
+    {
+      "t": 2276,
+      "text": ">> Yeah, I tried I tried building it. I it it was way too complex the the way I made it because you you can sort of only really build it"
+    },
+    {
+      "t": 2288,
+      "text": "right now with cloud models, right? with like using like a myanthropic cloud code subscription. I can use the cloud agent SDK uh to build agents that I can just run"
+    },
+    {
+      "t": 2303,
+      "text": "on on the cloud for my own self use, right? Um but long term that's not something that I think is going to really work. The architecture has to be"
+    },
+    {
+      "t": 2318,
+      "text": "uh it you have to have some kind of you know kernel um a core piece to it that uh you get to define sort of what"
+    },
+    {
+      "t": 2331,
+      "text": "matters to you then you can just sort of make these adapters to it and connect it to your infrastructure right away. That's what it is is the"
+    },
+    {
+      "t": 2343,
+      "text": "hard piece to it. And when I tried building this, I wasn't very knowledgeable of like building any time I I tried to build an architecture, you know, like some kind of back-end system."
+    },
+    {
+      "t": 2353,
+      "text": "Um I think I see this pattern more nowadays. I started understanding it more myself. Um in a monolith, you're essentially trying to build these ports and adapters system. Ports are"
+    },
+    {
+      "t": 2367,
+      "text": "essentially like the contract that define how these different adapters that you may build would plug into your system. And I started doing it, but it"
+    },
+    {
+      "t": 2380,
+      "text": "was way too complex and I had to script it down a little bit. Other life things happen. So I didn't work on it a lot more, but I have a good concept of how I'm going I'm going to build it moving"
+    },
+    {
+      "t": 2392,
+      "text": "forward. So this consciousness expansion is more about adding like threads and getting more done and being more in charge of like"
+    },
+    {
+      "t": 2404,
+      "text": "the effect that your your own like human consciousness has and like you're sort of expanding the power in a way and the presence as well. So you're also having agents that can run you know while"
+    },
+    {
+      "t": 2417,
+      "text": "you're sleeping while you're inattentive while you're distracted or doing other things. And so I think we kind of we went through the gamut and we also kind of touched on maybe the sort of esoteric"
+    },
+    {
+      "t": 2431,
+      "text": "or particular cases of consciousness were like bees and humans and ants and I was wondering where can people find you and where should people go to know what"
+    },
+    {
+      "t": 2443,
+      "text": "you're doing? >> I should make what I'm doing more public. It's something I'm working on right now. I have a Twitter if people want to find me there. Also LinkedIn."
+    },
+    {
+      "t": 2451,
+      "text": "There's probably a bunch of messages in my inbox that haven't been checked in a while. Yeah, LinkedIn and Twitter are two good places. Also, GitHub."
+    },
+    {
+      "t": 2459,
+      "text": ">> All right. Well, thank you so much, Ricky. It's been a pleasure speaking with you."
+    },
+    {
+      "t": 2463,
+      "text": ">> Likewise."
+    }
+  ],
+  "backfill": true
+}

@@ -1,0 +1,45 @@
+---
+import Base from '../../layouts/Base.astro';
+import { authors, postDay, type Page, type Post } from './content';
+
+interface Props {
+  description?: string; // meta description, defaults to intro
+  title: string; // page <title> and heading
+  kicker?: string; // small mono label above the heading
+  intro?: string;
+  page: Page<Post>;
+  noindex?: boolean;
+}
+const { title, kicker, intro, description, page, noindex } = Astro.props;
+const people = await authors();
+const docTitle = page.n > 1 ? `${title}, page ${page.n}` : title;
+---
+<Base title={docTitle} description={description ?? intro} noindex={noindex}>
+  <div class="mx-auto max-w-[1240px] px-4 pt-12 pb-20 sm:px-8 sm:pt-16">
+    {kicker && <p class="m-0 mb-2 font-mono text-sm tracking-[0.12em] text-gold uppercase">{kicker}</p>}
+    <h1 class="m-0 font-display text-[clamp(44px,6vw,80px)] leading-none font-normal uppercase">{title}</h1>
+    {intro && <p class="mt-4 mb-0 max-w-[60ch] text-xl text-soft">{intro}</p>}
+    <slot />
+    <ol class="m-0 mt-10 grid list-none gap-4 p-0">
+      {page.items.map((p) => (
+        <li class="rounded-[18px] border border-line bg-panel p-6 sm:p-7">
+          <p class="m-0 font-mono text-sm tracking-[0.1em] text-muted uppercase">
+            <time datetime={p.date.toISOString().slice(0, 10)}>{postDay(p.date)}</time>
+            {p.entry.data.authors.length > 0 && <span> · {p.entry.data.authors.map((a) => people.get(a)?.name ?? a).join(', ')}</span>}
+          </p>
+          <h2 class="mt-2 mb-0 text-[clamp(20px,2.2vw,26px)] leading-tight font-bold">
+            <a href={p.url} class="text-text no-underline hover:text-gold">{p.entry.data.title}</a>
+          </h2>
+          {p.excerpt && <p class="mt-3 mb-0 max-w-[75ch] text-soft">{p.excerpt}</p>}
+        </li>
+      ))}
+    </ol>
+    {page.total > 1 && (
+      <nav aria-label="Pages" class="mt-10 flex flex-wrap items-center justify-between gap-4">
+        {page.newer ? <a href={page.newer} class="rounded-full border-2 border-edge px-5 py-2.5 font-bold text-text no-underline hover:border-gold hover:text-gold">Newer posts</a> : <span />}
+        <span class="font-mono text-sm text-muted">PAGE {page.n} OF {page.total}</span>
+        {page.older ? <a href={page.older} class="rounded-full border-2 border-edge px-5 py-2.5 font-bold text-text no-underline hover:border-gold hover:text-gold">Older posts</a> : <span />}
+      </nav>
+    )}
+  </div>
+</Base>

@@ -1,0 +1,16 @@
+{
+  "title": "Corvic AI: graph analytics and dependency tracing",
+  "speakers": [
+    "james-coffey"
+  ],
+  "date": "2026-10-05",
+  "event": "2026-10-05",
+  "youtubeId": "FcwYnstEsJw",
+  "publishAt": "2026-10-13T10:00:00-05:00",
+  "duration": 901,
+  "thumbnail": "/talks/corvic-ai-graph-analytics-and-dependency-tracing.jpg",
+  "topics": [
+    "Graphs",
+    "Agents"
+  ]
+}

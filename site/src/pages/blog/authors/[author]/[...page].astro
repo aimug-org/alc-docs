@@ -1,0 +1,20 @@
+---
+import PostList from '../../../../components/content/PostList.astro';
+import { authors, paged, posts, socials, type Author, type Page, type Post } from '../../../../components/content/content';
+
+export async function getStaticPaths() {
+  const all = await posts();
+  return [...(await authors()).values()].flatMap((author) =>
+    paged(all.filter((p) => p.entry.data.authors.includes(author.id)), author.href)
+      .map((page) => ({ params: { author: author.href.split('/')[3], page: page.param }, props: { page, author } })));
+}
+const { page, author } = Astro.props as { page: Page<Post>; author: Author };
+const links = socials(author);
+---
+<PostList title={`Posts by ${author.name}`} kicker="Author" intro={author.title} page={page}>
+  <div class="mt-6 flex flex-wrap items-center gap-5">
+    {author.image_url && <img src={author.image_url} alt="" width="72" height="72" class="h-[72px] w-[72px] rounded-full border border-edge object-cover" />}
+    {links.length > 0 && <p class="m-0 flex flex-wrap gap-x-5 gap-y-2 text-base">{links.map((l) => <a href={l.href} rel="me noopener">{l.label}</a>)}</p>}
+  </div>
+  {page.items.length === 0 && <p class="mt-8 text-soft">No posts yet.</p>}
+</PostList>

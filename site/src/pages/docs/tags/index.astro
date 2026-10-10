@@ -1,0 +1,15 @@
+---
+import DocsPage from '../../../components/content/DocsPage.astro';
+import { docsNav, kebab } from '../../../components/content/content';
+
+const { docs } = await docsNav();
+const counts = new Map<string, number>();
+for (const t of docs.flatMap((d) => d.data.tags)) counts.set(t, (counts.get(t) ?? 0) + 1);
+const list = [...counts].sort(([a], [b]) => a.localeCompare(b));
+---
+<DocsPage title="Notes tags" current="/docs/tags/">
+  <h1 class="m-0 text-[clamp(30px,4vw,44px)] font-bold">Tags</h1>
+  <ul class="m-0 mt-8 flex list-none flex-wrap gap-3 p-0">
+    {list.map(([t, n]) => <li><a href={`/docs/tags/${kebab(t)}/`} class="inline-flex items-center gap-2 rounded-full border border-edge min-h-[44px] px-4 font-semibold text-text no-underline hover:border-gold hover:text-gold">{t}<span class="font-mono text-xs text-muted">{n}</span></a></li>)}
+  </ul>
+</DocsPage>

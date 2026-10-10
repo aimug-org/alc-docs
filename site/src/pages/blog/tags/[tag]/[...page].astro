@@ -1,0 +1,19 @@
+---
+import PostList from '../../../../components/content/PostList.astro';
+import { paged, posts, tags, tagOf, type Page, type Post } from '../../../../components/content/content';
+
+export async function getStaticPaths() {
+  const all = await posts();
+  const known = await tags();
+  const ids = [...new Set(all.flatMap((p) => p.entry.data.tags))];
+  return ids.flatMap((id) => {
+    const tag = tagOf(known, id);
+    const tagged = all.filter((p) => p.entry.data.tags.includes(id));
+    return paged(tagged, tag.url).map((page) => ({ params: { tag: tag.url.split('/')[3], page: page.param }, props: { page, label: tag.label, count: tagged.length } }));
+  });
+}
+const { page, label, count } = Astro.props as { page: Page<Post>; label: string; count: number };
+---
+<PostList title={label} kicker={`Tag · ${count} ${count === 1 ? 'post' : 'posts'}`} page={page}>
+  <p class="mt-4 mb-0 text-base"><a href="/blog/tags/">All tags</a></p>
+</PostList>

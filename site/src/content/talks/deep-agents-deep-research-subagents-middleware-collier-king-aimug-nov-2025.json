@@ -1,0 +1,631 @@
+{
+  "title": "Deep Agents: Deep Research, Subagents & Middleware (Collier King)",
+  "speakers": [
+    "collier-king"
+  ],
+  "date": "2025-11-12",
+  "youtubeId": "cB9uiy5Tja0",
+  "duration": 1771,
+  "topics": [
+    "Agents"
+  ],
+  "transcript": [
+    {
+      "t": 7,
+      "text": "Everyone doing good Wednesday?"
+    },
+    {
+      "t": 11,
+      "text": ">> Good. >> All right. Um, I'm Collier. I'm a machine learning engineer. I work at Cloudflare. I'm going to talk about deep agents. This is the second talk I've done here on deep agents. Last time I"
+    },
+    {
+      "t": 24,
+      "text": "went over kind of like the high level, what is deep agents? Um, how does it work? I'm not going to go that deep into the weeds this time. I'm just going to show you an example of using it and I'm"
+    },
+    {
+      "t": 35,
+      "text": "going to give you like an honest appraisal of my experience using it and what I like and what I don't like. Um, but first of all, this is what deep agents uh from the lane graph or the"
+    },
+    {
+      "t": 47,
+      "text": "lang chain docs says when to use deep agents. So, use it when you need to handle complex multi-step tasks that require planning and decomposition."
+    },
+    {
+      "t": 58,
+      "text": "manage large amounts of context, delegate work, persist memory. So why would you not just use langraph for that? Well, the short answer is you still can use langraph for for stuff"
+    },
+    {
+      "t": 70,
+      "text": "like this, but this is fundamentally a different like paradigm of agentic workflows uh that is built on basically after uh what cloud code came up with with their planning and task"
+    },
+    {
+      "t": 83,
+      "text": "decomposition, context management, sub aents, and long-term memory. They basically took um what they thought was the best attributes of cloud code and built it into this library. Um and then"
+    },
+    {
+      "t": 96,
+      "text": "just a reminder, it fits in with lane chain and lane graph. Um and deep agents can be deployed. Yeah. Anyway, so um okay, so I I wanted a use case and I"
+    },
+    {
+      "t": 109,
+      "text": "wanted to see like can deep agents do deep research and those are and they're not the same thing. Deep research, I'm sure some of you have used. You basically ask an LM a question. It takes"
+    },
+    {
+      "t": 120,
+      "text": "a while. It goes through a bunch of stuff. It comes back with an answer. It goes through tons of context to figure out what the like best answer is for you. I wanted to do something similar."
+    },
+    {
+      "t": 131,
+      "text": "So, um, I came up with a mini project to work on. Did anyone watch the Nvidia keynote last week from Jensen? It's okay. It's not it's anyway he um he gave"
+    },
+    {
+      "t": 146,
+      "text": "a talk about um a lot of stuff. He talked for like an hour and a half. So what I wanted to do is I wanted to um see if I could take the learnings"
+    },
+    {
+      "t": 159,
+      "text": "from his talk and try to find interesting companies out there that are doing what he's talking about. So, what he talked about in his talk was a bunch of stuff. And this is um"
+    },
+    {
+      "t": 173,
+      "text": "this is a a meme, but basically he's the he's the merchant of the infinite money merchant. Um yeah, he's Jensen's amazing. Anyway, um so the themes he"
+    },
+    {
+      "t": 185,
+      "text": "came up with in his talk were the dawn of a new computing era and this is by the way as a result of um the deep research deep agent process. He also came up with um AI factories that's"
+    },
+    {
+      "t": 198,
+      "text": "another theme physical AI and robotics and then some trends uh the end of Mo's law accelerated computing the virtual cycle of generative AI digital twins and"
+    },
+    {
+      "t": 210,
+      "text": "simulation by the way I don't know all what all these things mean but if any of you do that I'm we maybe we can talk later but um anyway I basically started"
+    },
+    {
+      "t": 222,
+      "text": "the process getting this and the goal was to take these uh themes from his uh talk and then go through a list of about 400 tech companies and look at their"
+    },
+    {
+      "t": 235,
+      "text": "company descriptions and say, \"Do these compan do any of these companies match up with the themes that he's talking about? Do any of these companies fall into those themes?\" And then if they do,"
+    },
+    {
+      "t": 245,
+      "text": "take the top 100 and go through each of the press releases for those companies and see do the press releases make the case even more that they fall into this theme or not. If not, then it doesn't"
+    },
+    {
+      "t": 257,
+      "text": "move the needle. But this is a useful exercise to see like, hey, what companies are out there doing the things that he's talking about, these cutting edge things uh in this new world of, you"
+    },
+    {
+      "t": 267,
+      "text": "know, AI and um computing. And so this is my deep research use case."
+    },
+    {
+      "t": 273,
+      "text": "Um, so there's a few ways I could start talking about this. Um, I think probably is I can either show the results first or I could show the code and stuff first. I think I'll show the results"
+    },
+    {
+      "t": 286,
+      "text": "first. Um so I showed already you know basically um the results of the first part of the process which is getting the themes and"
+    },
+    {
+      "t": 298,
+      "text": "then I'll show the the final result which was this list of companies and this is what the deep research came up with. It says, you know, analyzed all these themes, validated 87 of the"
+    },
+    {
+      "t": 313,
+      "text": "hundred matched companies with press releases, and then here are the rankings of all the um companies, and um it basically the the highest rank they started with was 10, but then you tack"
+    },
+    {
+      "t": 325,
+      "text": "on the press release stuff and it it can go basically you can have a final score higher than 10. So, um, so anyway, we had like everything from Microsoft, Nvidia, no surprise, to Astero and"
+    },
+    {
+      "t": 337,
+      "text": "Coreweave, and, you know, it just goes down and down and the lower you go, the the less uh these companies may match one of these themes."
+    },
+    {
+      "t": 348,
+      "text": "Um, but anyway, this is like the final result. So, I'm kind of showing you the end first. Um, so what was the experience like to get this? This is like a ton of content, right? It's 244"
+    },
+    {
+      "t": 360,
+      "text": "pages of content. Um, so clearly I think this falls in like the deep research type of use case. Um, so let's let's show um let's show the code really"
+    },
+    {
+      "t": 372,
+      "text": "quick. Let's show like how this is this works. Um, can I zoom in? Because that's really small, right? Yeah."
+    },
+    {
+      "t": 384,
+      "text": "Let me just do this really quick."
+    },
+    {
+      "t": 389,
+      "text": "Make it bigger. Let's do like font of like 18 or something."
+    },
+    {
+      "t": 397,
+      "text": "Huh, that didn't work. Okay. Um, wow. Okay, that's surprising."
+    },
+    {
+      "t": 407,
+      "text": "Well, okay, let's skip the read. I mean, the read me is whatever. Um, so anyway, deep agents looks like this with the with the code. You basically create an agent with this create deep agent"
+    },
+    {
+      "t": 418,
+      "text": "function and then you give it uh tools if you want to a model. The model I used was uh Google Gemini for this. I found that um it was a little faster than"
+    },
+    {
+      "t": 430,
+      "text": "cloud code or sorry uh sonnet 4.5. Um, and uh, so yeah, that's what I used. And I basically, you start out, you give it a system prompt. And in this uh,"
+    },
+    {
+      "t": 442,
+      "text": "pipeline, I'm saying there's four sub agents. So, one of the sub aents does the transcription. It goes through the transcrib, finds those themes that I showed you before. The second one goes"
+    },
+    {
+      "t": 454,
+      "text": "through all the companies, finds the descriptions, and then matches them against the themes. And then the third sub aent goes through all the press releases, finds those for each company"
+    },
+    {
+      "t": 464,
+      "text": "and says, \"Does this back up the claim that this company falls in this theme?\""
+    },
+    {
+      "t": 470,
+      "text": "And then the final agent like ranks all the results and gives you the top 100."
+    },
+    {
+      "t": 476,
+      "text": "So like um four four uh sub aents and um this is what the sub aents look like. So there's these four right here. And the"
+    },
+    {
+      "t": 489,
+      "text": "way this works is you would just go define any of these sub agents as a lang chain agent which is new which is what Colin was talking about earlier. So you would do you know from lang chain import"
+    },
+    {
+      "t": 504,
+      "text": "from lang chain agents import create agent and then you would start just making sub agents. So the first sub agent, you know, I just mentioned goes through the"
+    },
+    {
+      "t": 516,
+      "text": "transcript. Um, it has a system prompt. This just basically just tells it what it needs to do. Um, I gave it this. So we haven't talked about middleware, but Colin talked about a little bit. It's,"
+    },
+    {
+      "t": 526,
+      "text": "um, this is new and it's really powerful and it's basically ways of giving your agent to do stuff before it does things or after it does things. Um, and it's super useful. So I gave it this S3"
+    },
+    {
+      "t": 539,
+      "text": "system middleware so that it could write to stuff on S3 in this case R2 Cloudflare. Um so it could read and write files from there. I used this kind of remote bucket as a place to put all"
+    },
+    {
+      "t": 553,
+      "text": "the files. It makes sense if you're running stuff in production or running stuff in any like serious manner. You usually want remote file storage or remote database or whatever. Um the"
+    },
+    {
+      "t": 563,
+      "text": "second middleware was content uh truncation. didn't really matter for Gemini because the context window is so big, but for some LLMs, you want to truncate the content so it can fit in"
+    },
+    {
+      "t": 573,
+      "text": "context window. Um, and then logging. Logging does not come out of the box with deep agents. You'll have to add your own middleware. And so I added this one. Uh, and by the way, this is all be"
+    },
+    {
+      "t": 585,
+      "text": "on GitHub if you want to take a look at it, copy it, whatever. Um, but what I found is if you start running a deep agent process, it could take a really long time and if you don't have logs,"
+    },
+    {
+      "t": 595,
+      "text": "you're going to be like, what is going on? I'm just going to give up on this."
+    },
+    {
+      "t": 599,
+      "text": "So, the logging middleware is super important. Um the second sub aent company ma matcher goes through um goes through all the you know companies looks at the descriptions like I already"
+    },
+    {
+      "t": 612,
+      "text": "mentioned um and it writes the results to to S3 R2 and then the third one um goes through and does the this validation"
+    },
+    {
+      "t": 625,
+      "text": "process. So so end up getting like batches of companies to start with."
+    },
+    {
+      "t": 630,
+      "text": "looks like you know this. So this would be like a list of companies to go through and then the next one would go through each company and find um the key evidence that's the PRs that"
+    },
+    {
+      "t": 643,
+      "text": "back up the claim that it's in this theme. And so these are, you know, links to press releases and you get a original score like, hey, this company Adobe"
+    },
+    {
+      "t": 656,
+      "text": "falls in these themes and it has a kind of a weak score of six. But then it we went through this uh these PRs and we adjusted the score up by one, so now it's seven. So that's what the"
+    },
+    {
+      "t": 667,
+      "text": "validation agent did. And then the last agent um just combines all of these files over here and gives you a final ranking"
+    },
+    {
+      "t": 679,
+      "text": "um with all the companies. And that's kind of what I showed in that Google doc earlier."
+    },
+    {
+      "t": 686,
+      "text": "Um so yeah, I mean it's just kind of write reading and writing stuff to uh to R2 S3."
+    },
+    {
+      "t": 694,
+      "text": "um talk a little bit about just some like uh the experience of doing this."
+    },
+    {
+      "t": 700,
+      "text": "So, I found that you really it's kind of hard to keep it on track and like have one agent do one thing, the next one do the next thing and like expect everything to be seamless. So, I found that I encountered"
+    },
+    {
+      "t": 714,
+      "text": "stuff like um like schemas would be written wrong. it would like you know in my model file I say hey you need to write the file like this and it would write it like with like a slightly"
+    },
+    {
+      "t": 725,
+      "text": "different key or something like that or things like hey I need you to loop through all hundred of these companies this is in your system prompt I want you to do that and it would loop through"
+    },
+    {
+      "t": 734,
+      "text": "like the first 10 and then be like oh I did enough I'm good you're good and it's because these LLMs are fine-tuned to uh save tokens so they will just naturally"
+    },
+    {
+      "t": 746,
+      "text": "kind of take shortcuts Um, even the big even the good ones like Google Gemini or Claw, they'll they'll do this. And so you have to be very explicit and like super clear in your"
+    },
+    {
+      "t": 758,
+      "text": "prompts what you're telling the DP agent to do because it will deviate and the the weaker your prompt with the more gaps in it to fill like it will just take shortcuts. Um, so that was kind of"
+    },
+    {
+      "t": 770,
+      "text": "like an unfortunate thing and I think everyone's seen that has used any of these planning agents like clock code or anything like it's you do have to keep it on the rails and this is the same"
+    },
+    {
+      "t": 780,
+      "text": "same thing. Um so you know basically putting the schemas uh in the prompt just like printing it out and also putting examples uh of like an example"
+    },
+    {
+      "t": 795,
+      "text": "in the prompt as well is is a good idea like here's how the the schema should look when you actually fill it out not just the field names and stuff and field types. Um and so so the prompts that's"
+    },
+    {
+      "t": 807,
+      "text": "one thing that's really important. Second thing with is um you can actually use the middleware to keep it on track too which is really nice. So all of this middleware has uh this agent middleware here this"
+    },
+    {
+      "t": 820,
+      "text": "class. Um it they all have this after tool call uh hook here and then before tool call hook. So what you can do is you can make it check stuff after it"
+    },
+    {
+      "t": 832,
+      "text": "runs uh you know a tool call or an inference or whatever and you can have some check there and so if it fails the check then you can yell at it basically."
+    },
+    {
+      "t": 844,
+      "text": "So here's an example where it's like um the number of matches in the company uh the company matcher doesn't match what the expected one it was. And this happens um this happens before the tool"
+    },
+    {
+      "t": 859,
+      "text": "call. So in this case, if this failed, all of this would get printed back to the agent and the agent would actually see this error message and correct because it's sees, oh, I I'm about to"
+    },
+    {
+      "t": 872,
+      "text": "call this tool, but this before tool call failed and now I'm getting yelled at. And now I see in the code why I'm getting yelled at, so I can go fix what I was just about to do before I call a"
+    },
+    {
+      "t": 884,
+      "text": "tool and then call the tool the right way. And so it gets very meta where you're kind of like almost letting it it's like having a toddler or something."
+    },
+    {
+      "t": 893,
+      "text": "You're letting it kind of fall down and be like, \"Well, now you know not to do that.\" And it's kind of it's it's a little metaphysical in that way. You're kind of giving it um you're you're"
+    },
+    {
+      "t": 903,
+      "text": "giving the error messages back to it just like you would when you're using clock code or you're vibe coding or whatever. You're like, \"Hey, this failed. Here's the error.\" you're doing"
+    },
+    {
+      "t": 911,
+      "text": "it now in your program like at runtime and and it's course correcting from that as it's executing which is kind of a weird thing to think about doing but that's how this works. Um and so I found"
+    },
+    {
+      "t": 925,
+      "text": "that between the middleware and uh designing the tool calls in a right way that like really nailed down how to do things, you basically just yell at the agent a bunch and it does things right."
+    },
+    {
+      "t": 937,
+      "text": "And if you don't do that, it'll deviate and get off course and do things wrong."
+    },
+    {
+      "t": 941,
+      "text": "Um, so that's just a a experience I encountered. Um, so how long did this take to run and how much did it cost?"
+    },
+    {
+      "t": 952,
+      "text": "Um, so this is Langmith. This is how long it took to run. It took uh and this is a huge job. You know, it has to run through a transcript uh 400 companies and validate each one"
+    },
+    {
+      "t": 965,
+      "text": "against a bunch of PRs. It's a lot of work, but this is how long it took. It started at I started last night at 12:38 a.m. and it finished uh while I was asleep at about 4:00 a.m. Um so, you"
+    },
+    {
+      "t": 980,
+      "text": "know, it took a long time. It burned um about 11 million tokens. Um and it cost I I'm just seeing this actual cost for the first time. It burned, you know,"
+    },
+    {
+      "t": 994,
+      "text": "about $80, which is like, wow, that's a lot. Um, you know, I did I I don't know how that compares if I'd run this with like Sonic 4.5 or Opus or something like that. Um, if anyone else wants to test,"
+    },
+    {
+      "t": 1007,
+      "text": "please. Uh, but um, anyway, so, so it is expensive and it is very token intensive. And this kind of goes back to, you know, as as I'm testing this stuff, could I have just done this in"
+    },
+    {
+      "t": 1020,
+      "text": "Langraph and gotten it way faster, way less tokens, way cheaper? And the answer is definitely yes for this use case, but it wouldn't have been the same type of agentic workflow. I wouldn't have been"
+    },
+    {
+      "t": 1033,
+      "text": "like letting it make decisions and stuff like that. And so it was for this use case, this is pretty deterministic. A lot of use cases like this are not like this may not even be a real deep re open"
+    },
+    {
+      "t": 1044,
+      "text": "to deep research use case. So in some cases you definitely want to give it more leeway to go figure things out and do stuff. In this case this is kind of specific. It was like hey one agent next"
+    },
+    {
+      "t": 1055,
+      "text": "agent next agent result. So it's up to you to to determine if your use case is suitable for deep agents or not. Not all of them would be but um I thought this is at least a good learning experience."
+    },
+    {
+      "t": 1068,
+      "text": "Um, this also makes me want to have like my own hardware to run stuff on. Yes."
+    },
+    {
+      "t": 1081,
+      "text": ">> Well, I mean, with langraph, you basically you're not letting it figure stuff out. You're just telling it what to do. It's like very deterministic. So there's so when deep agents runs just"
+    },
+    {
+      "t": 1093,
+      "text": "like quad code or anything like that you see it kind of thinking and figuring out hey I need to do this next I have a to-do list I'm going through the to-dos oh I didn't do that to-do right I need"
+    },
+    {
+      "t": 1103,
+      "text": "to go back and finish it because the that's part of the the middleware is yelling at me now so that kind of whole like two steps forward one step back type thing does spin more tokens it does"
+    },
+    {
+      "t": 1115,
+      "text": "take longer whereas langraph just straight through"
+    },
+    {
+      "t": 1127,
+      "text": "Yeah."
+    },
+    {
+      "t": 1131,
+      "text": ">> Well, let me show you the let me show you the log. Um, so I did send the log to S3 and I can show you kind of how it thinks when it's running. Um, so here's the log and so this is when it"
+    },
+    {
+      "t": 1146,
+      "text": "just starts out. So, it's using this write to-dos tool. And so, it's actually writing down the to-dos it needs to do."
+    },
+    {
+      "t": 1153,
+      "text": "So, the first to-do is call the transcript analyzer agent to analyze the transcript file. The second one call a company matcher sub agent to match companies from the themes analysis JSON,"
+    },
+    {
+      "t": 1165,
+      "text": "etc. And then there's a couple more agents. And then as you keep going, you can see it completed the first to-do and now the second one's in progress. And then as you keep going more it completes"
+    },
+    {
+      "t": 1178,
+      "text": "the um if I can this take a little minute but um let me just write to-dos."
+    },
+    {
+      "t": 1191,
+      "text": "Yeah. Anyway, so then it completed the second one and eventually it gets through all its to-dos and it's done."
+    },
+    {
+      "t": 1198,
+      "text": "But you can kind of see the time stamps going by on the left. It's like you know minute by minute. Um, so it's it's thinking as it's going."
+    },
+    {
+      "t": 1207,
+      "text": "It's like, \"Hey, I just did this.\""
+    },
+    {
+      "t": 1212,
+      "text": ">> Yeah."
+    },
+    {
+      "t": 1224,
+      "text": "So um so you could do a tool that just you just call it and wait for it to finish and it could call another do another lm invocation or something like that that kind of gets back into like"
+    },
+    {
+      "t": 1237,
+      "text": "hey should this be lang graph instead whereas this is like hey I'm telling you what I want you to do just go do it and here's the things to hopefully keep you on track the middleware the you know"
+    },
+    {
+      "t": 1249,
+      "text": "checking if you're off if you skipped a tick or whatever."
+    },
+    {
+      "t": 1253,
+      "text": "Yeah."
+    },
+    {
+      "t": 1269,
+      "text": ">> It could. Yeah, you can definitely connect this to MCP. Um yeah, >> it actually um in their docs they I"
+    },
+    {
+      "t": 1282,
+      "text": "think um it's on their read me of the repo. Um yeah, I mean it's it's it's definitely out of the box. It's like very >> Yeah. Um"
+    },
+    {
+      "t": 1295,
+      "text": "so anyway, I mean it was a fun experiment. Um I think I will use this for some use cases. some things it may not uh make sense financially or uh from a time perspective, but um it's really"
+    },
+    {
+      "t": 1308,
+      "text": "powerful stuff. I'm just getting started playing with it. It's um you know, you can do a lot with this. The first use case I showed was more open-ended. It was just like synthesizing two data sets"
+    },
+    {
+      "t": 1321,
+      "text": "together and like coming up with a report. And that worked really well. It ran in like a minute or two and it created, you know, like a 500word report for me. Um, I'm still happy with the the"
+    },
+    {
+      "t": 1334,
+      "text": "content that it came out with here. I mean, to pay a human to do this would probably cost a lot. So, um, if anyone wants to buy this, uh, I'm just kidding."
+    },
+    {
+      "t": 1345,
+      "text": "I'll just give it away for free. Um, >> yeah. Uh, we could No, just it's free."
+    },
+    {
+      "t": 1352,
+      "text": "Um, if you, yeah, if you're looking for good investment investment research, um, and you actually know about these companies, I'd be curious because you could tell me, is it BS or not? That might help. So,"
+    },
+    {
+      "t": 1372,
+      "text": ">> that's all part of the agent. That's all part of that's the first um, that's the first sub agent here. It's uh just goes through the transcript and um"
+    },
+    {
+      "t": 1385,
+      "text": "the prompt the prompt's right here. I mean it's pretty open-ended prompt too."
+    },
+    {
+      "t": 1390,
+      "text": "It just says um read this file in S3 analyze it to identify themes, trends, focus areas, write the analysis. And so even that like very open-ended uh task,"
+    },
+    {
+      "t": 1403,
+      "text": "you know, produced um basically this whole document here. Um,"
+    },
+    {
+      "t": 1415,
+      "text": ">> yeah."
+    },
+    {
+      "t": 1422,
+      "text": ">> Oh, I already had all this data. I'm a stock market nerd, so I already have all this stuff. I'm happy to share it if you want. If anyone else wants to do this,"
+    },
+    {
+      "t": 1434,
+      "text": ">> of course. Yeah. Um, again, tokens, tokens, tokens. If you want to spend the tokens, you can make it do whatever you want. It could have it go search and pull stuff. The quality may be something"
+    },
+    {
+      "t": 1445,
+      "text": "you want to verify and, you know, lock down a little bit. I'm the data in there. I'm pretty happy with the quality, so I was ready to just turn it over. But, um, yeah, it's all about"
+    },
+    {
+      "t": 1457,
+      "text": "data. Everything comes back to data. Can do you have it? Do you trust it? You know, so yeah."
+    },
+    {
+      "t": 1476,
+      "text": "I did. That was the first thing I tried. Um I think there's some kind of this may be a skill issue or bug just me not figuring it out. But um there was some hitch there with deep agents and"
+    },
+    {
+      "t": 1489,
+      "text": "structured output that like was a a blocker like something. Maybe it was to do with the middleware or something like that. It's probably on me, but um what most of the time when you do structured"
+    },
+    {
+      "t": 1499,
+      "text": "output, it's through one LM call. It's like one LM call structured output and it's not a tool call. It's like the LLM, it's like an AI generating a response in"
+    },
+    {
+      "t": 1511,
+      "text": "the format. This is like hundreds of LLM calls. So, it's kind of like where do you even put the structured output for the LM to use because it's like making so many calls that you kind of have to"
+    },
+    {
+      "t": 1524,
+      "text": "force it just to use a tool if you want a structured output. And that's that's mostly what I did. So for like a lot of the stuff there is tool outputs, but when it comes to like combining all of"
+    },
+    {
+      "t": 1537,
+      "text": "these um validation files for example and reranking them um that is like do you really want to write a tool for that or you just want to let it do that? And then if it screws that up, can you yell"
+    },
+    {
+      "t": 1551,
+      "text": "at it through the middleware after it did it before it goes to the next step to then have it be like, \"Oh, I just did that wrong. Let me go back and do it again.\" So, it's kind of like there's no"
+    },
+    {
+      "t": 1561,
+      "text": "right answers. Like, you could do you force it to use a bunch of tools or you could have it get checked after it does, you know, every step and then goes on the next step with the middleware. Um,"
+    },
+    {
+      "t": 1572,
+      "text": "it's it's a little unclear to me actually like what the best approach is, but I found that for my use case, it was skipping a bunch of stuff until I added these middleware checks and then it"
+    },
+    {
+      "t": 1582,
+      "text": "stopped and then it was like back on track because I kept yelling at it when it would, you know, skip and it' be like, \"Oh, I just skipped a ticker. I need to go back.\" So, it's kind of a bad answer. Sorry."
+    },
+    {
+      "t": 1596,
+      "text": ">> Yeah."
+    },
+    {
+      "t": 1601,
+      "text": "Nope. It's all it's all like self uh it's all self- encapsulated."
+    },
+    {
+      "t": 1607,
+      "text": "Um so for example the the one I was just talking about the validation one um down here. So this is the the the data"
+    },
+    {
+      "t": 1619,
+      "text": "model it's supposed to write out. Um it looks like this. You know the the results should come out looking like that. Um, and so I'm telling that in the prompt. Um, and I'm telling it, you"
+    },
+    {
+      "t": 1632,
+      "text": "know, not basically these are the things you're forbidden. You can't query the same company twice. You can't skip companies in the list. Um, telling it very specifically, don't skip anything."
+    },
+    {
+      "t": 1643,
+      "text": "Don't take a shortcut, anything like that. And then the middleware part is there to keep it on track. So this validation file tracker middleware tracks when validation files are written. And then basically after the"
+    },
+    {
+      "t": 1656,
+      "text": "tool call runs it checks and makes sure that like hey we actually have a file written out that is the one that you just said you wrote and if it's not there then uh you know we have an issue"
+    },
+    {
+      "t": 1669,
+      "text": "basically. Um so yeah a little bit of trial and error and I'll be honest wrote a lot of this and I was just like is it going to work? Yes. Okay great."
+    },
+    {
+      "t": 1683,
+      "text": "Um, so it took, you know, it took some trial and error and it's definitely worth thinking about, but the middleware is, I think that's my biggest takeaway is it's super powerful and it'll really"
+    },
+    {
+      "t": 1693,
+      "text": "keep these things on track if you design it well and you uh basically have it like block the LM from continuing, the agent from continuing um because you set up the middleware correctly."
+    },
+    {
+      "t": 1720,
+      "text": "So, um it's it's for the whole sub agent. You set up you just have this middleware whatever you want to give it."
+    },
+    {
+      "t": 1727,
+      "text": "You don't have to give it any middleware if you don't want to. Um I I gave it all this stuff so that I make sure every agent logs with the logging middleware."
+    },
+    {
+      "t": 1735,
+      "text": "I gave it this content truncation thing just in case it ran over the context window, it would truncate so it didn't run into context uh overflow issues. I gave it that um file validation tracking"
+    },
+    {
+      "t": 1747,
+      "text": "middleware and I gave it S3 middleware so it would be able to access stuff on S3. So um we could probably do a whole talk on just middleware. Anyway, thank you so much. Uh appreciate it."
+    }
+  ],
+  "backfill": true
+}

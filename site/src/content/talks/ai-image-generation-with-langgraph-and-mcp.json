@@ -1,0 +1,1073 @@
+{
+  "title": "AI Image Generation with LangGraph and MCP",
+  "speakers": [
+    "karim-lalani"
+  ],
+  "date": "2025-03-31",
+  "youtubeId": "rq69zhxZS-8",
+  "duration": 3932,
+  "summary": "Dive into the integration of advanced AI workflows with Karim Lalani as he explores the Model Context Protocol (MCP), OpenWeb UI pipelines, LangChain, and LangGraph, all designed to streamline everything from prompt refinement to image generation using ComfyUI’s API mode.",
+  "topics": [
+    "LangGraph",
+    "MCP"
+  ],
+  "transcript": [
+    {
+      "t": 5,
+      "text": "hi everyone this is Colin mcar from Austin Lang Shain AI mug I want to introduce a video by Kim Lani in this video he covers the integration of model context protocol open way web UI open web UI pipelines and Lane graph all these Concepts tie together really a"
+    },
+    {
+      "t": 24,
+      "text": "complete solution that we've been covering here in Austin so without further Ado here's Kareem um I had been working on some imagin AI IM related uh tools in the past and um gam really inspired"
+    },
+    {
+      "t": 43,
+      "text": "me to sort of take a closer look into mcps a couple weeks ago uh when he was working through his presentation um we got together and you know uh the the uh the walkth through that you just"
+    },
+    {
+      "t": 57,
+      "text": "saw uh we did on we did on my computer just to see if we can replicate it uh to work and that's how I was able to set it up on my machine and that got me thinking um because I I had done"
+    },
+    {
+      "t": 72,
+      "text": "a previous lab with uh Cloud flare uh flux image in as well uh one of my showcases um showed that U and this was sort of like okay here's the mCP version of that same thing it's it's hosted by"
+    },
+    {
+      "t": 87,
+      "text": "on cloud cloud Flare's uh Edge it's it's using the AI workers um but then there's I did another followup on that one that um did image generation on your local 4090 pce work uh workstation um I"
+    },
+    {
+      "t": 104,
+      "text": "have a comfy UI set up at home uh who here is familiar with comfy UI stable diffusion yep so"
+    },
+    {
+      "t": 116,
+      "text": "um uh so I have a 4090 setup at home I connect to it externally through Cloud flare tunnels and so"
+    },
+    {
+      "t": 128,
+      "text": "that I can expose uh that functionality I if I need to use it um while uh I'm on the road but after spending some time with Cam on his uh mCP exercise um I got to thinking and and"
+    },
+    {
+      "t": 147,
+      "text": "plus Ricky also inspired me to sort of take a closer look into open web UI pipelines um who here is familiar with open web UI you heard it a couple of times today um and who knows about the"
+    },
+    {
+      "t": 160,
+      "text": "pipelines so is a chat interface for is similar to chat GPT but it's for not just um you know it's"
+    },
+    {
+      "t": 177,
+      "text": "for any kind of models or any kind of workflow really uh that can uh use a chat front end and initially it was basically a primary was client for AMA Sama few more hands um so with the Lama"
+    },
+    {
+      "t": 197,
+      "text": "you can run open weight models locally that are supported most of the Llama family of models are supported um Microsoft's five family is supported uh the the newer quen and deeps models are support"
+    },
+    {
+      "t": 212,
+      "text": "anything that is ggf um has a strong likelihood of being support and they do have a um a good uh interface with with hugging face as well so you can specify you can just point to a hosted"
+    },
+    {
+      "t": 228,
+      "text": "ggf model on hugging face and it'll just download that if it's not already part of the AMA Library um and open web UI started out as a front end for just you know basically a front end for"
+    },
+    {
+      "t": 240,
+      "text": "um AMA so you could do chat GPT type stuff but with your local hosted models but they started adding more functionality and soon it became I guess clear to them that you know people work"
+    },
+    {
+      "t": 256,
+      "text": "at more models more functionalities and while you could do some uh limited um extensibility work within open webui itself without you know through their functions and actions uh tooling"
+    },
+    {
+      "t": 270,
+      "text": "but you were limited by the fact that you had to if if you bringing in any additional dependencies you had to install it on the workstation or the server that was running open webui and"
+    },
+    {
+      "t": 281,
+      "text": "restarted every single time you need to update that so um that's where the idea about pipelines came about where pipelines exposes you to a more feature Rich I I would call it feature"
+    },
+    {
+      "t": 293,
+      "text": "but an external interface into uh what used to be functions but um it runs on in a separate Docker container so uh what that means is you can you don't have to keep restarting"
+    },
+    {
+      "t": 307,
+      "text": "your OA instance anytime you are installing a new workflow that requires additional dependencies um you can have multiple pipeline servers um and they could be a you know each pip server could"
+    },
+    {
+      "t": 319,
+      "text": "be responsible for collection of workflows um related or unrelated so that's let's say"
+    },
+    {
+      "t": 331,
+      "text": "uh that's my socials okay the nice thing about my presentation is I can go ramble about because cam already did all the introduction to mcps so uh you probably remember this uh I don't have to go through all explaining about"
+    },
+    {
+      "t": 345,
+      "text": "what mcps are uh we're just going to build on top of what he um presented um who langra that's good so langra is the um um agentic SDK I would call it you know Loosely uh"
+    },
+    {
+      "t": 365,
+      "text": "for from L chain allows you to build uh agentic workflows and um um applications um recently they also so initially when they um when they released the the first iterations uh it was purely a graph"
+    },
+    {
+      "t": 383,
+      "text": "based API right so you had your um you had your state definitions you had uh nodes and edges that you would combine to create a graph uh that would represent your workflow and it would have an entry"
+    },
+    {
+      "t": 395,
+      "text": "point and then you know nodes would be connected to other nodes through edges and it would it worked almost like a state machine uh you started it and then you could go through it and then they"
+    },
+    {
+      "t": 405,
+      "text": "added started adding features like U human in the loop through interrupts they added more more functionality like memories and checkpointing and stuff um recently they introduced a"
+    },
+    {
+      "t": 420,
+      "text": "um so what's called a functional API which is a an alternative way of creating land graph workflows uh but in a more programmatic way more imperative way so you you no longer have to build"
+    },
+    {
+      "t": 437,
+      "text": "a graph to represent your um your workflows because more often than not you already have your code like you if you're writing if you're working in Python you you already"
+    },
+    {
+      "t": 449,
+      "text": "have your logic laid out in Python um having to convert that over to the graph API could be seen as an overhead that not you know many people would be interested in because they already"
+    },
+    {
+      "t": 463,
+      "text": "have something working it's just missing a few uh bels and whistles you know uh a few enhancements that they could benefit from from Lang graph and um the graph API might prove to be a little bit more overhead to sort of you know to venture in that U uh Direction that's"
+    },
+    {
+      "t": 481,
+      "text": "where the functional API I think shines because you can now work within your uh you know you know work within your idiomatic pythonic way uh but start bringing in these um features like you know"
+    },
+    {
+      "t": 497,
+      "text": "persistence human in the loop uh checkpointing streaming in your uh existing python uh python code um I went basically with the you know here and this is some documentation none of this is my"
+    },
+    {
+      "t": 515,
+      "text": "uh stuff but basically you know you depending on what your comfort level is what your preference is you could go one way or the other um with the graph API you get a little bit more control over"
+    },
+    {
+      "t": 529,
+      "text": "the flow you get a bit more of a a state machine a dag like um workflow versus with um functional API it's it's more imperative programmatic you know uh more uh type workflow um State Management uh"
+    },
+    {
+      "t": 546,
+      "text": "you do get fine grain State control with graph API with uh functional API um you don't have that you're basically just using your uh your variables and your objects uh as you see fit to"
+    },
+    {
+      "t": 560,
+      "text": "manage your State uh checkpointing is available in both however where it differs is with graph AP you get explicit checkpointing every single time um the workflow moves from one node to the other"
+    },
+    {
+      "t": 576,
+      "text": "node it's checkpointed with graph um it only with the functional API checkpointing works on specific PR uh because there's no such thing as uh nodes and edges there so they have um you"
+    },
+    {
+      "t": 591,
+      "text": "do get some benefits of checkpointing so at the end of the execution uh of the um workflow it's checkpointed if there's any um human in the loop um um interrupts they get checkpointed uh and then"
+    },
+    {
+      "t": 609,
+      "text": "let's see visualization um graph graph API is easier to visualize because I mean you have a workflow that is represented as a graph and they already have tooling built into Lang graph Studio"
+    },
+    {
+      "t": 621,
+      "text": "that lets you sort of you know as you're walk you know walking through your code debuging through it you can see where it is in functional API it's your python function so you know there's"
+    },
+    {
+      "t": 632,
+      "text": "not much you can do in terms of visualization there but again depending on what your comfort level is what your um preference is um you can achieve pretty much similar um outcomes from"
+    },
+    {
+      "t": 648,
+      "text": "both uh with a little bit of variation maybe um open web I briefly talked about it it's a frontend web web interface uh for your own uh uh you know for your locally hosted or um now"
+    },
+    {
+      "t": 663,
+      "text": "with pipelines you can actually connect to any kind of uh external workflows as well so they have a pipeline for chat GP for instance so instead of going to you know chat. open.com"
+    },
+    {
+      "t": 674,
+      "text": "or chat gp.com you you know if you have your own API key you can stay within open web UI and access your uh GPD models um they have um pipelines for Dali they have pipelines for anthropics models"
+    },
+    {
+      "t": 689,
+      "text": "they have pipelines for cloud flare um hosted um worker AI models as well like I mentioned is a way to extend functionality to external workflows they"
+    },
+    {
+      "t": 704,
+      "text": "may or may not be llms so um one example would be say you you're building a an agentic workflow and you need a front end to you know either to test it or maybe that's the chat front end is what you"
+    },
+    {
+      "t": 718,
+      "text": "need to deploy it um you can create you can put it behind a pipeline wrapper and make it available as a um as a as a model within open web UI so you can select it from a drop down so and that's"
+    },
+    {
+      "t": 735,
+      "text": "how um you know some of the um I think um Ricky you did a demo earlier on you showed how to use a lang graph or Lang chain um workflow uh but it's now hosted behind a pipeline so you know you have"
+    },
+    {
+      "t": 752,
+      "text": "a nice web interface uh our initial demos would involve creating a streamlit UI in to demonstrate uh some of these things we would put it in front of a chat interface we built with streamlet but um"
+    },
+    {
+      "t": 767,
+      "text": "with something like open web UI plus pipelines why even go through that effort you know just create a simple wrapper around uh um uh your workflow and just have everything within uh a nice"
+    },
+    {
+      "t": 781,
+      "text": "UI comfy UI um so for those who are not familiar with it um stable diffusion and um similar workflows they uh comfy UI is one of the front ends for that um another front"
+    },
+    {
+      "t": 797,
+      "text": "end that you might have heard about is automatic 1111 um comfy is a more note based workflow you have these Primitives um nodes that you can then connect with each other and um information flows"
+    },
+    {
+      "t": 813,
+      "text": "inputs flow from one you know from from left to right depending on which way you're going and then basically you're collecting information all the necessary parameters before you run it"
+    },
+    {
+      "t": 821,
+      "text": "through the model and then you the output that you get you might have other notes that could then um process some of that information before you get the image out um comfy is not just used for image"
+    },
+    {
+      "t": 833,
+      "text": "generation any kind of um workflows uh there's um both image and video generation there's um um some controll net workflows there's plenty of stuff that's out there you could even use it for"
+    },
+    {
+      "t": 848,
+      "text": "non-image Generation stuff this is just you know mo what it's most um popular for for diffusion and flowchart based models okay so that was the um that was all the information that you needed to"
+    },
+    {
+      "t": 865,
+      "text": "follow through this so what I'm demonstr something that I had worked been working on is u a comfy mCP"
+    },
+    {
+      "t": 877,
+      "text": "server so what cam was uh what cam demonstrated was a mCP server that um was a front end for the cloud flares workers AI model uh for flux um I have a like I mentioned I have a 4090 at home"
+    },
+    {
+      "t": 899,
+      "text": "um I have comfy running comfy does uh work in API mode um so I had created mCP server as a front end for uh for that so uh it it basically initially all it did all it had was a generate image uh you"
+    },
+    {
+      "t": 918,
+      "text": "give it a prompt it would pass it to comfy to a predefined workflow it would return back with the URL of the image that was generated recently as as I was working for this showcase I added"
+    },
+    {
+      "t": 929,
+      "text": "another uh tool to it called generate prompt um the idea being that you might not always know you might have an idea what you want but you might not have the whole prompt you know or you know some if"
+    },
+    {
+      "t": 942,
+      "text": "you're like me yeah I I need a barot with a cowboy hat but that's the extent of how I how much I can articulate about it and we know that with some of these image generation models the more you"
+    },
+    {
+      "t": 954,
+      "text": "can articulate the better quality results you can uh you can get out of them so the generate tromp essentially does that you you the idea being that you give it a a topic in you know as few"
+    },
+    {
+      "t": 966,
+      "text": "words as you can and then it'll return back uh a potential prompt for that and um and that for that it's uh you know I you know I I also have an all lense running on my homework station um so it the"
+    },
+    {
+      "t": 986,
+      "text": "generate image connects to comfy um for for the flux Dev model and the generate prompt connects to AMA um defaults to Lama 3.2 but it's configurable so that's the mCP server uh but this is not an mCP"
+    },
+    {
+      "t": 1002,
+      "text": "talk this is this is this is not an mCP user group right this is AI mug we primarily you know discuss Lang chain stuff so um I created langra workflow around that it's a very simple rather crude langra"
+    },
+    {
+      "t": 1019,
+      "text": "workflow basically you in you give it a that you want it'll generate a and it'll ask you are you happy with this prompt if you're happy then it'll generate an image with that prompt if"
+    },
+    {
+      "t": 1032,
+      "text": "you're not happy then it'll generate a new it'll give you a new version of The Prompt and you can just keep going um and that's um until you uh you get that and you know that's where the human the"
+    },
+    {
+      "t": 1041,
+      "text": "the human and the loop uh aspect comes in um and then at the last step it generates the image um that workflow um then I have a pipeline strap around that"
+    },
+    {
+      "t": 1057,
+      "text": "so that I can test I can use it in web UI why because so I talked a little bit about this um the image generation workflow has confy UI"
+    },
+    {
+      "t": 1072,
+      "text": "API mode uh it's got a predefined workflow uh that's how comfy API works is you have to give it a workflow in the API and you have to prefill those values so it can generate the uh the image"
+    },
+    {
+      "t": 1083,
+      "text": "uh and you can have multiple workflows by the way you just specify the workflow if you're using it as as a as an API then you can specify those uh you can provide the workflows fill in those values"
+    },
+    {
+      "t": 1094,
+      "text": "and it can it'll invoke that specific workflow to generate the image for you the mCP server in question uh is hosted on um uh GitHub um I um time permitting I will go over that as well um"
+    },
+    {
+      "t": 1110,
+      "text": "but that's what I discussed um this is the spec for that if you want to install it in um in CLA um path to uvx uh comy mCP server that's the name uh so it's it's also hosted on um uh PFI so you can"
+    },
+    {
+      "t": 1131,
+      "text": "just do uvx uh comy mCP server uh you don't have to do a uh you know get clone or anything for that it'll just download it needs a few parameters to um confy URL the the basically the URL of"
+    },
+    {
+      "t": 1147,
+      "text": "your comfy instance that is listening for apis as well uh comfy workflow at Json file that's the J the workflow file that I mention path to that um prompt node ID and output node IDs are so which"
+    },
+    {
+      "t": 1161,
+      "text": "um inside that workflow are responsible for the prompts and the outputs prompt is basically a text prompt output is uh going to be the uh the picture output uh the output mode is file um but uh this"
+    },
+    {
+      "t": 1173,
+      "text": "this works inside if you're using this for CLA Dev for instance and you want to display the file but if you're doing um uh if you just want to show the URL you can just change the you can change the"
+    },
+    {
+      "t": 1185,
+      "text": "output more to URL and instead of displaying the file it'll it'll return the URL of you know URL from comy itself of um the generat image there's um few um optional environment variables here"
+    },
+    {
+      "t": 1200,
+      "text": "that you don't see here uh one of them is comfy URL external um this is used for because my mCP server runs in my host in my um home network it has access to my comfy locally externally I have"
+    },
+    {
+      "t": 1217,
+      "text": "access to comfy but it's behind cloudfare tunnels and cl you know like said desktop or doesn't know how to authenticate against that uh so I do have a a um um a sub uh a subdirectory subfolder inside"
+    },
+    {
+      "t": 1235,
+      "text": "my path that is available accessible externally uh that doesn't require authentication so um basically what it it generate the image but then it it'll use the external image as the prefix for"
+    },
+    {
+      "t": 1248,
+      "text": "the generated image that way I can use it outside of my home network and still get access to that image um then there's uh prompt uh there's the AMA API base uh if so right now you you know you"
+    },
+    {
+      "t": 1263,
+      "text": "know if you only specify this you only have access to one tool which is image generation but if you specify two additional um environment variables theama you know path to the URL to AMA uh"
+    },
+    {
+      "t": 1276,
+      "text": "instance and the model that you want to use then it will expose a second tool which is the generate prompt so uh the nice thing about the mCP ecosystem the the SDK ecosystem is um they"
+    },
+    {
+      "t": 1295,
+      "text": "do ship with uh some what's called an mCP inspector uh so when you're developing mcps you don't always want to have you know you might not just have claw desktop you know you don't want to be uh burning through your tokens just to test your stuff um so mCP inspector is"
+    },
+    {
+      "t": 1311,
+      "text": "basically think of that as a test harness for your mcps um when you when you launch it um it you know on the left hand side you see the parameters um is it the is it stdio uh server"
+    },
+    {
+      "t": 1325,
+      "text": "or is it an SSE server what command it needs to run with and then if you need some additional environment variables um once you connect to it you have access to all the Ser you know all the"
+    },
+    {
+      "t": 1336,
+      "text": "features that the mCP server is exposing um in I I am because mine exposes just two tools you'll see generate prompt and generate image you can select one of the those you can provide the uh"
+    },
+    {
+      "t": 1350,
+      "text": "input and then you can see the output in this case I was testing the generate prompt I said you know like I said you know I am not very creative when it comes to um articulating uh"
+    },
+    {
+      "t": 1362,
+      "text": "prompts for image generation I can come up with an idea so I said okay well a cat holding an AI sign you know Lama 3.2 help helped me out with it and it came up with a sleek black cat is"
+    },
+    {
+      "t": 1377,
+      "text": "sitting on a velvet couch holding a small AI mug don't wor about what's in the parenthesis sign in its mouth and with a mischievous glint on its face and blur citycape background I mean it is"
+    },
+    {
+      "t": 1394,
+      "text": "a and you see in the response it actually came up it gave me URL um and uh you know"
+    },
+    {
+      "t": 1410,
+      "text": "again this is internal URL so if you try to run this on your machine it's not going to work um but yeah okay so let's talk about Lang graph I mentioned about the graph API um so I want so"
+    },
+    {
+      "t": 1432,
+      "text": "langra did release an mCP adapter recently what that does is you might have your mCP servers um mcps primarily expose give you access to tools um Lan chain already has a"
+    },
+    {
+      "t": 1451,
+      "text": "has Primitives for handling tools um so what that mCP adapter does is you provide it with the configuration for mcps and it will wrap it'll create a Lin to wrapper mcps"
+    },
+    {
+      "t": 1469,
+      "text": "this demo doesn't do that because that would be too easy um but yeah here that I mentioned earlier right so uh you start you know I give the topic I say you know and what do first is it generate"
+    },
+    {
+      "t": 1483,
+      "text": "prompt generate prompt goes to lama lama brings back a prompt asks me in feedback I say no I don't like it give me another one it keeps doing that until I like the prompt and once I like the prompt"
+    },
+    {
+      "t": 1497,
+      "text": "it then say it to generate image and then it ends um I intentionally kept it simple you could see potentially a second human in the loop here it says no I don't like this you know try one more"
+    },
+    {
+      "t": 1511,
+      "text": "time but I mean that's you can do that you just do a second run and it does that anyways you know so if it runs I I do that it'll do that anyways um but um yeah now this one I specifically stuck"
+    },
+    {
+      "t": 1528,
+      "text": "with oh here familiar with UV love UV um the you know cam we were running into those issues with npx I am waiting for an npm equivalent of UV to be launched because then then we won't have to worry"
+    },
+    {
+      "t": 1547,
+      "text": "about actually NVM plus npx is something what UV does uh but it just I mean life was so much complicated before UV you know don't need to anymore UV well so I just want to run basic"
+    },
+    {
+      "t": 1569,
+      "text": "scripts right so uh for for example this server was created as a standalone script I got handed over to you you and not give you any information okay whaton version do you need what what versions"
+    },
+    {
+      "t": 1586,
+      "text": "of dependencies do you need none of that now poetry yeah if it's a project then yes I can hand it over to you it manages all that U also has that sort of Inspirations in it so you when"
+    },
+    {
+      "t": 1598,
+      "text": "you're doing a UV based project then it basically becomes a um an alternative to poetry but in this case I just wanted a single script and um you that I didn't specify what version of python I need or"
+    },
+    {
+      "t": 1615,
+      "text": "what dependencies I need but I'm just giving you the script uh and so I went on a tangent but let's let's come back here um so when when I do us graph py thread ID is again because this is"
+    },
+    {
+      "t": 1632,
+      "text": "a disconnected run right so this is not a you run it and then the application keeps running until you are satisfied and it exits because I want to use this in front in inside the chat application"
+    },
+    {
+      "t": 1644,
+      "text": "I could have multiple chats and I don't want to hold up an application inste is running um you know while I do other stuff so I needed somewhat of a stateless design in this one um so that's"
+    },
+    {
+      "t": 1658,
+      "text": "where I think so the checkpoint I so I sort of lean into checkpointing in shortterm memory um for that so you give it thread ID it becomes part of the configuration I I pass the flag of topic"
+    },
+    {
+      "t": 1670,
+      "text": "give it the topic and then it gives me back the response and it ends right there it doesn't do anything after that um I can spec I can provide my feedback by giving it the same thread ID but this"
+    },
+    {
+      "t": 1683,
+      "text": "time with a feedback flag of yes or no and then it will continue execution from that point on and I I just keep doing that um so this so this was so again you know to parall because you know a lot"
+    },
+    {
+      "t": 1698,
+      "text": "examples that you see out there are single Jupiter notebook which is easy to understand but when you try to to convert it over to an application it's difficult to sort of into it about unless you're"
+    },
+    {
+      "t": 1714,
+      "text": "familiar with um you know how to do that uh which I am not um so this was the The Comfy UI and I said well while so initially my goal was to do this with functional API only um so this is"
+    },
+    {
+      "t": 1729,
+      "text": "the um with functional API I could not get it to stateless I was running into some issues with the checkpointing I think um I had a discussion with the Lang chain devs and they said that I should"
+    },
+    {
+      "t": 1741,
+      "text": "be able to do it the functionality at least what I was doing both graph API and functional AP parity uh so I need to do some more uh I need to do some more Discovery work so I can open up a either a"
+    },
+    {
+      "t": 1754,
+      "text": "bug report or give them more information so they can guide me uh out of it so in this case this is a stateful app right it's not necessarily A stateful app but basically you give it a topic and"
+    },
+    {
+      "t": 1763,
+      "text": "then you're stuck in that application until you're satisfied with your prompt and you have an image or you control CR of it I can't use this in uh behind a a chat interface because um you know"
+    },
+    {
+      "t": 1775,
+      "text": "this application will stay running until I am done with all the steps and if I'm doing 20 of these that means there 20 instances of this stuck in execution uh execution Loop but uh this is how the"
+    },
+    {
+      "t": 1790,
+      "text": "execution runs as a UV run uh appy wearing a hat say um the uh it created its own thread ID because you know right now I don't have a disconnected run uh so first thing it went through generate prompt"
+    },
+    {
+      "t": 1806,
+      "text": "interrupt it gave me you know okay this is the prompt I came up with do you like this I said no I don't like it um then it went through the generate prompt again again you it's essentially the same"
+    },
+    {
+      "t": 1817,
+      "text": "flow as the graph API but this one I had this had nodes and edges um and all of that while this one is basically a regular python code um this is the second C that came out of the functional API okay"
+    },
+    {
+      "t": 1840,
+      "text": "okay then of course you know we have L graph we have mCP well let's throw pipelines in the mix um it's just a simple integration you just because we have human in the loop we could put it behind a"
+    },
+    {
+      "t": 1857,
+      "text": "chat interface this is not the most uh efficient use of this the way I've done it I mean there's probably uh you can improve on this but um because I had been meaning to test out pipeline for the"
+    },
+    {
+      "t": 1869,
+      "text": "longest time since Ricky demonstrated that I said okay this is my opportunity I'm going to have to do this this time so I can check it off my list um so this is an example of that graph API um running"
+    },
+    {
+      "t": 1885,
+      "text": "you know as as a uh with pipeline strapper um I give it an uh a prompt it generates the example uh the example I give a topic it generates example prompt it says do you like it or not just in the"
+    },
+    {
+      "t": 1900,
+      "text": "chat interface I say yes or no uh it gives me another one I say yes I like it gives me the image so how are we doing on time"
+    },
+    {
+      "t": 1921,
+      "text": "okay walk through okay Lang graph MCB pipelines so um three uh scripts here the graph uh was the"
+    },
+    {
+      "t": 1951,
+      "text": "Lang graph uh code that I mentioned app py is basically the functional API app and AI imag pipeline is the pipeline wrapper around graph it's in but it's a single file it's not basic it's not calling this module or anything it's it has all that code inside it"
+    },
+    {
+      "t": 1966,
+      "text": "um so okay let's go the let's go to the graph API first because that's what we saw"
+    },
+    {
+      "t": 1981,
+      "text": "so this is what I was um this header on top of the script tells UV all that it needs it tells that okay this needs a python version greater than 310 and here are the dependencies if I"
+    },
+    {
+      "t": 1997,
+      "text": "give the script to you and you have UV installed and it's a clean install nothing else you have never Ed it before when you do UV run graph it'll see okay do I have the local version"
+    },
+    {
+      "t": 2007,
+      "text": "of python running no let me download that do I have this dependencies no let me download that and then I'll start running it uh so there is actually you could um UV add dependency so"
+    },
+    {
+      "t": 2025,
+      "text": "when you're when you're working in a project then you would just do UV add dependency and it'll just add it to the project but in this case because it's a script I have to specify UV ad dependency double hyphen script name of the script and then I'll will just add it here"
+    },
+    {
+      "t": 2039,
+      "text": "um for the python version uh it's a UV python pin version number and I'll just add it um okay so this is my um config for the uh this is similar to if you uh let's go"
+    },
+    {
+      "t": 2057,
+      "text": "back yeah so for those who've been using Cloud desktop for mcps this is what you're familiar with right this is just that this is a python uh object"
+    },
+    {
+      "t": 2074,
+      "text": "with that information it's the cdio parameters command arcs environment variables command ARS envirment variables that that's all it is um uh uh for the state again"
+    },
+    {
+      "t": 2094,
+      "text": "could have done better but you know I need a I'm starting out with a prompt with a topic and then I'm having the agent uh the workflow fill the uh prompt I'm providing the feedback and it's it's"
+    },
+    {
+      "t": 2104,
+      "text": "going to give me back the URL now in this case I am specifying the output mode of I'm hardcoding the output mode of URL because I don't want to deal with downloading the file from comfy"
+    },
+    {
+      "t": 2117,
+      "text": "and then re-encoding it and then sending it back to the uh client and then have having to redcode it it's you know I can just pass the URL over and it can just display that however it needs"
+    },
+    {
+      "t": 2129,
+      "text": "um here's just an abstraction of the uh run tool which is basically uh if you want to run your mCP to inside python um this is basically how you would initialize"
+    },
+    {
+      "t": 2142,
+      "text": "it and once you have the session initialize you would say session call tool name of the tool and arguments um and that's how it'll just you're just calling the tool that yes"
+    },
+    {
+      "t": 2159,
+      "text": "yep you could but comfy offers a diff an easier way you can download a workflow Json file so when"
+    },
+    {
+      "t": 2179,
+      "text": "you have so when you have that workflow that you uh you know you're testing out inside comfy when you're happy with the workflow you can export it out in external API mode and it'll give you"
+    },
+    {
+      "t": 2189,
+      "text": "Json file and that's the Json file that's what I'm giving here as um the workflow Json file parameter you that Jon"
+    },
+    {
+      "t": 2203,
+      "text": "yeah yeah yeah yeah but yes you could handcraft you know if you're familiar with"
+    },
+    {
+      "t": 2217,
+      "text": "um their schema you could craft that um Json file yourself comy will you know because basically all that is is it's the representation of that workflow in Json format as long as those"
+    },
+    {
+      "t": 2231,
+      "text": "nodes are available and you have made the right connections it will work um so this is the tool call this is again you know when I'm explicitly calling a tool I'm just saying yes yeah yeah sorry the the question from Camp was can you programmatically create the"
+    },
+    {
+      "t": 2254,
+      "text": "Jason for comfy uh you know to represent the the workflow yeah and the answer was while you can you know it's a comple as long as you know it's it's a complex schema uh if you have an existing workflow you could just download the schema from um from comy itself"
+    },
+    {
+      "t": 2270,
+      "text": "but um you could as long as you have you have represented the right nodes and stuff um and you know you could you could yes you could handcraft um you could craft the Json"
+    },
+    {
+      "t": 2284,
+      "text": "programmatically yeah um so run tool so then I have uh rappers around um you know my tools that I have you know generate image which takes a state these are the nodes by the"
+    },
+    {
+      "t": 2300,
+      "text": "way for those who are familiar with PL graph uh it takes State and it um returns a state um if uh for Generate image uh node uh I'm looking at the prompt I'm calling the tool explicitly uh"
+    },
+    {
+      "t": 2316,
+      "text": "and I'm doing you know giving that uh returning the URL for prompt feedback it's exact same thing I'm but no for prompt feedback I'm making an interrupt it's not calling a tool here it's uh"
+    },
+    {
+      "t": 2327,
+      "text": "it's the human in the loop interrupt uh basically what it's doing is it's uh you know from my state it's saying well this is the topic this is the generated prompt and the action again this this"
+    },
+    {
+      "t": 2337,
+      "text": "is just if you're if you're creating a UI you want to display that you know this is just hardcore stuff you don't need this uh if your application is handling that but in this case I just wanted"
+    },
+    {
+      "t": 2345,
+      "text": "to have it here and then process feedback is um you know once we get the uh input from the user um this is a conditional uh Edge by the way where it says based on um the feedback if the feedback"
+    },
+    {
+      "t": 2362,
+      "text": "if I don't give you any feedback which means that I accept it or if I explicitly say yes then go to the generate image node uh follow the generate image Edge rather or follow the generate prompt"
+    },
+    {
+      "t": 2374,
+      "text": "Edge I build my um graph workflow uh you know add the nodes specify the uh starting node uh at the"
+    },
+    {
+      "t": 2387,
+      "text": "edges at the conditional Edge and then this is basically the representation of the flow that you saw here then in the code I have you know some some code here to handle the argument processing"
+    },
+    {
+      "t": 2404,
+      "text": "um some setup work and then I'm I'm initializing a sqlite saver for checkpoint so that you know again because if I use a uh if I don't use that it'll use memory after every execution that memory is"
+    },
+    {
+      "t": 2420,
+      "text": "gone you know so because I you know if I because I want human in the loop to work uh properly I need uh it to manage State externally um and that's where uh this uh we initializing"
+    },
+    {
+      "t": 2434,
+      "text": "this uh saver file name is hardcoded but you know we could make it configurable there's also by the way out of the box uh L chain provides a post Crest saver so uh you know"
+    },
+    {
+      "t": 2450,
+      "text": "if you're using something like superbase for example or you know I think uh langra platform also provides you um post I believe uh so it kind of makes sense that they're providing you"
+    },
+    {
+      "t": 2464,
+      "text": "with the checkpoint for that so you don't have to worry about it um you know inside there uh I compile with that checkpoint um first thing I do is I check the state of the graph well I don't"
+    },
+    {
+      "t": 2478,
+      "text": "know whether this is my first run or I'm coming back if this is um if this is a first run then my prompt is going to be just this you know topic and whatever I give in the in the topic I give"
+    },
+    {
+      "t": 2494,
+      "text": "that but if if it is a feedback run then I say okay just over don't use that prompt use this one you know just whatever feedback I give resume with that feedback and then I just stream uh from there"
+    },
+    {
+      "t": 2507,
+      "text": "um then there's a conditional here if if you do encounter and interrupt after running this then go ahead and uh print what you uh what you receive in that interrupt if it is a generate image then go"
+    },
+    {
+      "t": 2520,
+      "text": "ahead and provide the you know give the output for that and execute and end end after that so this was the graph API run functional API is not that different except so this part is the same this is"
+    },
+    {
+      "t": 2542,
+      "text": "the same tools uh the notes instead of notes I'm I now have tasks um and they're doing the same thing you know they're taking the topic this is a bit more ergonomic taking the topic returning the"
+    },
+    {
+      "t": 2557,
+      "text": "response all it's doing is it's calling the tool the mCP Tool uh the tool that the mCP is exposed right so I'm explicitly calling those um you could just make this a react agent and say these are"
+    },
+    {
+      "t": 2569,
+      "text": "the tools I have work with it and it would be very it would be very um very simple workflow but then because I needed a specific uh I had a specific workflow in mind with with human in the"
+    },
+    {
+      "t": 2586,
+      "text": "loop um I I went with explicit okay at this step I wanted to call this tool at this step I want to call this tool but um you know if you're thinking in terms of what CLA desktop does it says okay I"
+    },
+    {
+      "t": 2598,
+      "text": "have all these tools and that's more like a react uh agent at that point right so you have access to these tools look at the query that I have and choose the correct tool and uh display the output"
+    },
+    {
+      "t": 2610,
+      "text": "um is basically the Primitive that um functional API brings and that's your entry point into your"
+    },
+    {
+      "t": 2622,
+      "text": "functional API workflow this is where the checkpointing uh happens um this is your uh you know so work workflow topic is the same as graph invoke you know parenthesis topic topic"
+    },
+    {
+      "t": 2637,
+      "text": "it's a first step into the uh flow but inside here this is this is all the code there is so it's going in it's checking to see first um so um if it's a I'm going into"
+    },
+    {
+      "t": 2655,
+      "text": "I'm creating you know an endless loop here again that's uh to you know that's this Loop but programmatically do this until the user says they're happy with"
+    },
+    {
+      "t": 2668,
+      "text": "it when they happy with it go ahead and generate the image exit so this code represents this graph but instead of doing nodes States"
+    },
+    {
+      "t": 2689,
+      "text": "edges you you have this in like 20 lines of cod yeah interaction with gra finding a prompt in a in a loop until it gets a successful return"
+    },
+    {
+      "t": 2710,
+      "text": "then it passes off to mCP up for the the the prompt generation and image generation are both mCP yeah um it's encapsulated 20 Lin ofe of course there's you know there's a little bit"
+    },
+    {
+      "t": 2727,
+      "text": "of uh you know this there you have five four lines or three lines for each tool wrapper and maybe another five lines for setup and stuff yeah not a lot of scod front ends to FL maybe like how many lines that it was more than this it was more"
+    },
+    {
+      "t": 2753,
+      "text": "than this yeah um functional I mean because you know if you think about it could you do this workflow without any of the functional AP stuff yes you do in Python you're you're"
+    },
+    {
+      "t": 2766,
+      "text": "managing you're responsible for managing the flow and uh the state you know managing the state and St I nowhere here am I making calls to say hey by the way this information put it"
+    },
+    {
+      "t": 2777,
+      "text": "in a database somewhere so when I come back I check the datab base and I make those you know none of that when I'm you know when I'm doing this um or or you know especially in the graph"
+    },
+    {
+      "t": 2788,
+      "text": "one it's not that evident here but when I enter this um flow it's already checking to see because when I when you initialize it you specify the thread ID it's checking to the checkpoint and"
+    },
+    {
+      "t": 2799,
+      "text": "say hey do I have any existing state for this thread okay let me bring that over let me have it available here so that you know the developer can use that to make informed you know decisions"
+    },
+    {
+      "t": 2810,
+      "text": "in the code um this one is you know a little bit more simplistic version of that but yeah um the the main function actually is quite similar to the graph one but you know um this this piece"
+    },
+    {
+      "t": 2825,
+      "text": "of code might be a little bit easier to reason about um for those who are coming from Strictly a programming background and you know then say oh this was is"
+    },
+    {
+      "t": 2838,
+      "text": "still you know this yeah if um I would say that if functional API would have been introduced first then a lot of"
+    },
+    {
+      "t": 2859,
+      "text": "the you know sort of grievances that people had you know developers mostly had about um langra being too um convoluted to understand would not have existed because you know it's easier"
+    },
+    {
+      "t": 2874,
+      "text": "to reason because this is this is how anyway and now by introducing some of these um decorators and uh and langra Primitives it's actually you're getting it's it's you're offloading"
+    },
+    {
+      "t": 2887,
+      "text": "all of the State Management to langra it's doing it behind the scenes similar to you know how with lsmith all your specify a API key you know you know an environment variable you don't have to"
+    },
+    {
+      "t": 2899,
+      "text": "specify anything else and he just does it for you you know could you do that by hand of course you can you know that's bringing in a whole different Library you know uh sprinkling a whole lot of you"
+    },
+    {
+      "t": 2912,
+      "text": "know sort of um uh log statements uh across your code uh but when you're doing it with uh with The Primitives that lanch provides all of that just becomes transparent just Blends"
+    },
+    {
+      "t": 2924,
+      "text": "away into your code you don't have to wor you know you don't think about that anymore because so so this was uh the um functional API the only thing that remains now we good on time"
+    },
+    {
+      "t": 2937,
+      "text": "right okay lines so um pipeline has a very simple structure P plan is again you know um to recap to extend"
+    },
+    {
+      "t": 2956,
+      "text": "to add more fe uh models or workflows uh make them available within uh open webui um again these are the environment variables that I need any configur values that you um so this foron"
+    },
+    {
+      "t": 2974,
+      "text": "went in heavy with the plumbing jargon so valves are configurable values for your pipelines you know because you know you're you're turning valves to change you know the pressure and and stuff like"
+    },
+    {
+      "t": 2986,
+      "text": "that right so so anything that is configurable uh is a valve so when you install a pipeline those become values that you can then uh configure on the pipeline so um in this case because I want"
+    },
+    {
+      "t": 3001,
+      "text": "the user to bring in their own comfy URL their own external URL I want it to be available to them stuff that I don't want them set I'll just handle it and I'll not expose it as a valve uh"
+    },
+    {
+      "t": 3014,
+      "text": "initialization you know this is where you know you you take those Valves and you know you you're filling in those values um mostly pulling it from um environment variables if they're present if"
+    },
+    {
+      "t": 3025,
+      "text": "they're not present then you know they can fill it in on Startup again this will look familiar you've seen it like two times now but this is your standard um IO server parameters for the"
+    },
+    {
+      "t": 3039,
+      "text": "mCP server um in this case I am uh I did provide these extra extra ones right so uh open aama API base for theama instance and prompt llm llm to use that's already present on you AMA for"
+    },
+    {
+      "t": 3058,
+      "text": "topic to prom Generation Um I like to bring in the extra uh environment variable of path that helps sometimes I found with uh the command resolution so when you're using something like uvx or npx"
+    },
+    {
+      "t": 3073,
+      "text": "you don't how the mCP you know whatever uh host that is starting the mCP client what environment variables it might be passing in or it might be altering it this sort of makes sure that your path"
+    },
+    {
+      "t": 3089,
+      "text": "at least your path stays preserved and um I don't have to worry about providing us a fully qualified path anymore because I know that it's already present in my path it it just works um this"
+    },
+    {
+      "t": 3101,
+      "text": "code is the same from graph API except that it's uh it's now you know attached to the uh member uh variable startup shutdown we're not doing anything there um there is a concept of Inlet Outlet again"
+    },
+    {
+      "t": 3117,
+      "text": "Plumbing terminology but think of it this way when you're you might want some control over what input users are providing to your model uh to uh to the uh workflow and what output you want to present"
+    },
+    {
+      "t": 3132,
+      "text": "you presenting to the user um so say you know you don't want people to just abuse uh you know your your uh uh pipeline that you're creating for you know because because uh they might use it for all"
+    },
+    {
+      "t": 3145,
+      "text": "sorts of nefar stuff you so you could put in in is where basically say okay before I pass my input to the workflow I'm going to do some you know um I'm going to make sure that it's good you"
+    },
+    {
+      "t": 3156,
+      "text": "know it's sort of like guardrails um Outlet is you know well you you might some you sometimes want to also watch what the what response is being sent back um so an example would be um you know say"
+    },
+    {
+      "t": 3174,
+      "text": "if it's a something to do with medical records and uh you're you know you're using an LM tip to your patient record system and you want to make sure that accidentally pii is not leaked so you could"
+    },
+    {
+      "t": 3186,
+      "text": "have process that says that monitors whatever is coming back from your workflow and says hey just scrape this for any kind of pii and uh before you return it to the user so that's what it is um I"
+    },
+    {
+      "t": 3197,
+      "text": "the way I'm using this so I I'll come over to that later but type is basically your construct this is your main function anytime you send um uh a chat message it goes through the pipe uh it has a list"
+    },
+    {
+      "t": 3211,
+      "text": "of all the historical messages uh some additional messages some additional information is stored inside body um for example the chat ID itself is inside the body uh dictionary which is what you'll"
+    },
+    {
+      "t": 3222,
+      "text": "notice that I'm using as the thread ID because it's it's going to be unique to that chat um inside here this is basically the same uh code as the graph API the main function I'm just because"
+    },
+    {
+      "t": 3237,
+      "text": "pipe doesn't offer an asynchronous uh flavor I'm just wrapping it inside of cor routine here uh so that's the extra bit of thing uh two is again the same thing generate prompt this is all the same"
+    },
+    {
+      "t": 3248,
+      "text": "code from there prompt feedback process feedback um what's different is um the graph API returns not the image itself but the URL of the image on comfy if I just return that that's fine it will"
+    },
+    {
+      "t": 3263,
+      "text": "send that image and that that link will show up but then you'll have to click that link for it to open um that's so what I'm doing in Outlet is I'm I'm inspecting that I'm saying okay hey do I have"
+    },
+    {
+      "t": 3274,
+      "text": "an URL in there I do okay let's go and remove that message transform that message object remove it from the content body and actually add it to the file itself uh so there is a files uh property and"
+    },
+    {
+      "t": 3290,
+      "text": "you can provide an image URL to there and what that means is that the open web UI interface Cas now knows okay I have a file that was returned to me so I should display it differently so if it"
+    },
+    {
+      "t": 3303,
+      "text": "was a for example if it was a rag and you know setup you don't want to and you don't want to just show oh here's the response from the rag but you also want to include sources so that"
+    },
+    {
+      "t": 3313,
+      "text": "could be somehow you could do it so you know if your rack system gives you links to your sources you could say okay I have these sources I'm going to package it up into the F into the"
+    },
+    {
+      "t": 3322,
+      "text": "file object files object so that they can click the and they can just open up those uh in theace um so that's yeah a whole lot of mumbling here but yeah that's the let me see if I can"
+    },
+    {
+      "t": 3337,
+      "text": "um okay"
+    },
+    {
+      "t": 3356,
+      "text": "so this is the mCP in fact before I go there because I know this I don't know if this will work or won't work but yeah that's why I have"
+    },
+    {
+      "t": 3368,
+      "text": "screenshots um but yeah so this is how you would install um mCP and this is how you would configure it um so this is the AI imag in uh Pipeline and um I have the URL for my internal service"
+    },
+    {
+      "t": 3387,
+      "text": "this so I don't have to go through comfy to just post request but when I'm sending the URL out I want the externally accessible URL so I'm I'm giving it that um this is the path uh I"
+    },
+    {
+      "t": 3399,
+      "text": "had to upload the Json file so then I'm giving it the path to that Json file for the uh config uh workflow uh prompt node ID output node ID AMA instance and the model to use let's go here say"
+    },
+    {
+      "t": 3434,
+      "text": "that's how creative I am with prompting okay so it came back generate an image of a colorful parrot Pur on the FR uh fence"
+    },
+    {
+      "t": 3449,
+      "text": "post wearing a wide brimmed cowboy hat and holding a miniature guitar because I I said you know from Austin Texas uh set against a vibrant backdrop of a Texas Sunset over the"
+    },
+    {
+      "t": 3461,
+      "text": "Rolling Hills of Austin do we have Rolling Hills in Austin okay do you like this yes again okay that prom generation works I'm just going to try and"
+    },
+    {
+      "t": 3479,
+      "text": "see if image generation works or not it it might still bomb which is fine uh because it has I mean so comfy is running but the image may not be loaded okay there it"
+    },
+    {
+      "t": 3495,
+      "text": "is that's yes"
+    },
+    {
+      "t": 3517,
+      "text": "yeah yeah no so so you see the pipelines there so pipelines are"
+    },
+    {
+      "t": 3529,
+      "text": "here but if you want to configure them you have to go to the admin console click the drop down find the um specific uh Pipeline and then all the valves associated"
+    },
+    {
+      "t": 3543,
+      "text": "with it um by default it'll have uh you know you you you uh let me see let me show you the code for this one so if you notice up top here uh no not here here so we're getting them from"
+    },
+    {
+      "t": 3558,
+      "text": "the environment but if it's not there and we're just putting gibberish inside there so that's just a hack to provide placeholder text right so okay what do I put in this valve well you"
+    },
+    {
+      "t": 3570,
+      "text": "need to put your confy I could put in like a full explanation here for that um that's uh so that's so it might look like it already has the value but you you need to go in and you provide"
+    },
+    {
+      "t": 3583,
+      "text": "the correct values within in the admin in the in the admin console so yeah I'm I'm already here"
+    },
+    {
+      "t": 3597,
+      "text": "so okay so pipeline imag okay when I do this so I I uh I uh you know I click the pipeline valves I select the pipe that I need to adjust and"
+    },
+    {
+      "t": 3621,
+      "text": "then it will show me the value so if I go and if I do comy mCP pipeline which is a precursor to the this um um um pipeline that I showed this one just takes in the topic and generates the image it has"
+    },
+    {
+      "t": 3635,
+      "text": "it it all it has is a connection to the mCP it doesn't have any Lang graph it doesn't have human in the loop nothing um it will not create a prompt for you so if you already have a prompt then"
+    },
+    {
+      "t": 3646,
+      "text": "you would go and do that so in this case I have less uh valves here because I don't need the AMA component here uh but for uh image and pipeline I have a few more a couple more and these are the"
+    },
+    {
+      "t": 3659,
+      "text": "values yep the same pipeline Ser it's on the same pipeline server yes"
+    },
+    {
+      "t": 3672,
+      "text": "I only have one pipeline server set up at the moment so um but I I sort of rigged up the requirements text file for additional dependencies that I needed"
+    },
+    {
+      "t": 3693,
+      "text": "yep so if so I don't think that you can download from here well you yeah you can download from here this is what you're talking about yeah yeah you can just"
+    },
+    {
+      "t": 3706,
+      "text": "upload you can upload either you can put your like for example um since since this is available on GitHub you could just do this and paste it here when"
+    },
+    {
+      "t": 3720,
+      "text": "you do when you click here it'll install it and when I say install it it's just copying that file from GitHub and placing in a folder uh so if there's any additional setup work uh besides uh filling in the pipeline valves for example this one does"
+    },
+    {
+      "t": 3734,
+      "text": "require you to additionally upload the Json file because it expects the Json file to be on the server so um so you would need to make sure that it's it's present there but"
+    },
+    {
+      "t": 3746,
+      "text": "yeah yes yes I I need to um so I can already use it for a lot of the use cases like you know um"
+    },
+    {
+      "t": 3767,
+      "text": "when I don't need the application to be stateless but I do need to figure out what's broken in my implementation that's preventing me from having a similar flow as I had for graph API where I"
+    },
+    {
+      "t": 3780,
+      "text": "could just you know launch it give it a thread ID and have it work on just that thread ID um so that's the piece that I need to uh figure out why it's not working in mindset but otherwise"
+    },
+    {
+      "t": 3791,
+      "text": "um you know it's it's a lot easier to sort of I think with the graph API it sort of removes you from your programmer hack into a you know sort of like a more a workflow designer um you know and"
+    },
+    {
+      "t": 3806,
+      "text": "that context switching sometimes can get in the way but when you're just coding stuff you know you know okay yeah this is how I want to do I want I I want it to ask for um an interrupt"
+    },
+    {
+      "t": 3819,
+      "text": "here you know I want it to do you know Loop through here it it took a lot less time to C the functional API I started with the functional API first I was done you know in a matter of"
+    },
+    {
+      "t": 3829,
+      "text": "minutes and I had to go back and look through okay how do I create you even though I was I I was more familiar with the graph API but I had to go take a step back and say okay how do"
+    },
+    {
+      "t": 3838,
+      "text": "I create this in a graph how do I break this apart into different nodes um and and put it together I don't yeah I don't care about the visual visualization aspect as much"
+    },
+    {
+      "t": 3855,
+      "text": "I think uh what I do miss from the function from the graph API is the um the whole state the State Management side of thing the state machine side of thing right so uh where um that was the nice thing that I really liked about the graph API is you"
+    },
+    {
+      "t": 3873,
+      "text": "yes it takes a little bit planning but you could really modularize your application and you know you could sort of have these you could uh you know these uh in a in a more modular way if I"
+    },
+    {
+      "t": 3891,
+      "text": "can call it that you know work on individual um nodes in is ation because that's that's what it's supposed to do it's you know a node is supposed to takes an input works on it sends"
+    },
+    {
+      "t": 3902,
+      "text": "the output that's it and then you just you're connecting different nodes together to get it to work uh whereas I think going forward if I even if I now need to work on a graph API"
+    },
+    {
+      "t": 3917,
+      "text": "I might still start with functional because I think functional is a lot easier to prototype it"
+    }
+  ],
+  "backfill": true
+}

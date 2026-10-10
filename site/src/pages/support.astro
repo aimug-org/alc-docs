@@ -1,0 +1,157 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import { publicTalks, fmtDate } from '../lib/data';
+import { stats, links } from '../data/site';
+import room from '../assets/photos/room-sep2025.jpg';
+
+const talks = (await publicTalks()).length;
+
+// Perks are only what AIMUG delivers today (confirmed by Colin, 2026-10-10). Tiers differ by what the money covers.
+const monthly = [
+  { amount: 5, name: 'Coffee', covers: 'Keeps Office Hours caffeinated.', href: 'https://buy.stripe.com/4gMbJ12fbdsJcjF9Cn57W07' },
+  { amount: 15, name: 'Pizza', covers: 'Feeds the room at the meetup.', href: 'https://donate.stripe.com/bJe5kD7zv4WderN5m757W08' },
+  { amount: 25, name: 'Streaming', covers: 'Keeps the stream and the recordings running.', href: 'https://donate.stripe.com/3cI8wP1b73S983p4i357W09' },
+  { amount: 50, name: 'API credits', covers: 'Pays for API credits for demos and build days.', href: 'https://donate.stripe.com/4gM14naLH74lgzV29V57W0b' },
+  { amount: 100, name: 'Special events', covers: 'Makes the bigger nights possible.', href: 'https://donate.stripe.com/cNi14ncTPdsJ3N98yj57W0c' },
+];
+const once = [
+  ['$10', 'tokens for site updates', 'https://buy.stripe.com/9B628raLHagxgzV3dZ57W01'],
+  ['$25', 'pizza for 5', 'https://buy.stripe.com/cNi3cvf1XewNbfB29V57W02'],
+  ['$50', 'a month of streaming', 'https://buy.stripe.com/28EfZh0734Wd0AX4i357W03'],
+  ['$100', 'API credits for a build day', 'https://buy.stripe.com/7sY00jf1XbkBabxeWH57W04'],
+  ['$200', "a guest speaker's travel", 'https://buy.stripe.com/9B6bJ1g61fARcjF9Cn57W05'],
+  ['Any amount', 'your choice', 'https://donate.stripe.com/dRmeVd3jfdsJ1F1cOz57W06'],
+];
+// Sponsors fund something people can see, never the group (Colin, 2026-10-10: "I just don't want to be owned by anyone").
+const sponsorOffers = [
+  { name: 'Feed the room', price: '$500', per: 'night', gets: ['Better food and drinks for one meetup', "Your logo on that night's slides", 'A thank-you from the stage', 'A mention in the recap'] },
+  { name: 'Back a hackathon or a series', price: "Let's talk", gets: ['Prizes, food and a room for a build day, or a run of special nights', 'Your name on what you fund, in the room and in the recap'] },
+];
+const independence = [
+  'Sponsors fund a night or an event, never the group.',
+  'No sponsor gets a talk slot or a say in the lineup.',
+  'No exclusive deals.',
+  'We can say no to any sponsor.',
+];
+const sponsorMail = `mailto:sponsors@aimug.org?subject=${encodeURIComponent('Sponsoring AIMUG')}&body=${encodeURIComponent('Company:\nWhat you would like to support:\nBudget:\n')}`;
+
+const h2 = 'm-0 font-display text-[clamp(40px,5vw,60px)] leading-none font-normal uppercase';
+const btn = 'inline-flex min-h-[48px] items-center justify-center rounded-full bg-gold px-6 text-lg font-bold text-ink no-underline hover:bg-gold-hi hover:text-ink';
+const btn2 = 'inline-flex min-h-[48px] items-center justify-center rounded-full border-2 border-text px-6 text-lg font-bold text-text no-underline hover:border-gold hover:text-gold';
+---
+<Base title="Support AIMUG" description="AIMUG is free and independent. Monthly supporters and sponsors pay for the room, the pizza and the stream, and nobody can buy a talk.">
+  <section aria-labelledby="support-h" class="relative overflow-hidden">
+    <Image src={room} alt="" widths={[800, 1280, 1920]} sizes="100vw" loading="eager" fetchpriority="high" class="h-56 w-full object-cover sm:absolute sm:inset-0 sm:h-full" />
+    <div class="relative sm:bg-gradient-to-r sm:from-ink/85 sm:via-ink/35 sm:to-transparent">
+      <div class="mx-auto max-w-[1240px] px-4 py-8 sm:px-8 sm:py-[72px]">
+        <div class="flex max-w-[640px] flex-col gap-5 rounded-[22px] bg-ink/90 p-6 sm:p-9">
+          <p class="m-0 font-mono text-sm tracking-[0.12em] text-gold uppercase">Support AIMUG</p>
+          <h1 id="support-h" class="m-0 font-display text-[clamp(56px,8vw,104px)] leading-[0.92] font-normal uppercase">Funded by the room</h1>
+          <p class="m-0 text-xl text-[#dbe6ee]">AIMUG is free. No tickets, no paywalls, and every talk goes up on YouTube. Nobody can buy a talk slot: the lineup is picked on merit. Support from the people who come is what keeps it that way.</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#monthly" class={btn}>Give monthly</a>
+            <a href="#sponsor" class={btn2}>Sponsor a meetup</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="How AIMUG stays honest" class="bg-gold text-ink">
+    <ul class="mx-auto my-0 grid max-w-[1240px] list-none grid-cols-1 gap-x-8 gap-y-4 px-4 py-6 sm:grid-cols-3 sm:px-8">
+      <li><span class="block font-display text-[26px] tracking-wide uppercase">Free to attend</span>No tickets and no paywalls, in person or online.</li>
+      <li><span class="block font-display text-[26px] tracking-wide uppercase">Talks on merit</span>Pitches are picked on merit. Sponsors can't buy a slot.</li>
+      <li><span class="block font-display text-[26px] tracking-wide uppercase">Open by default</span>Every talk is recorded and published for anyone to learn from.</li>
+    </ul>
+  </section>
+
+  <div class="mx-auto flex max-w-[1240px] flex-col gap-20 px-4 py-16 sm:px-8">
+    <section id="monthly" aria-labelledby="monthly-h" class="flex scroll-mt-4 flex-col gap-6">
+      <div class="flex max-w-[760px] flex-col gap-3">
+        <h2 id="monthly-h" class={h2}>Give monthly</h2>
+        <p class="m-0 text-lg text-soft">A meetup costs about $150. Ten people giving $15 a month cover it, and monthly support lets us plan the pizza and the stream ahead of time. Every monthly supporter gets a thank-you in the newsletter (only if you want one) and the Supporter role on Discord.</p>
+      </div>
+      <ul class="m-0 grid list-none grid-cols-[repeat(auto-fit,minmax(min(100%,150px),1fr))] gap-3 p-0 sm:gap-4">
+        {monthly.map((t) => (
+          <li class:list={['flex flex-col gap-3 rounded-[18px] border bg-panel p-5 sm:p-6', t.amount === 15 ? 'border-gold' : 'border-line']}>
+            <p class="m-0 font-mono text-sm tracking-[0.12em] text-muted uppercase">{t.name}</p>
+            <p class="m-0 font-display text-[clamp(44px,5vw,52px)] leading-none">${t.amount}<span class="mt-1 block font-sans text-base text-soft">per month</span></p>
+            <p class="m-0 flex-1 text-soft">{t.covers}</p>
+            <a href={t.href} class:list={[t.amount === 15 ? btn : btn2, 'text-base']} aria-label={`Give $${t.amount} a month (${t.name})`}>Give ${t.amount}</a>
+          </li>
+        ))}
+      </ul>
+
+      <div class="flex flex-col gap-3">
+        <h3 class="m-0 text-[26px] font-bold">Or give once</h3>
+        <ul class="m-0 flex list-none flex-wrap gap-3 p-0">
+          {once.map(([amt, what, href]) => (
+            <li><a href={href} class="inline-flex min-h-[48px] items-center gap-2 rounded-full border border-edge bg-panel px-5 text-text no-underline hover:border-gold hover:text-gold"><span class="font-bold">{amt}</span><span class="text-soft">{what}</span></a></li>
+          ))}
+        </ul>
+        <p class="m-0 text-muted">It pays for pizza, AV and streaming, and the tools behind the site. Payments go through Stripe. Questions? Ask in #general on <a href={links.discord}>Discord</a> or at <a href="/events/#office-hours">Office Hours</a>.</p>
+      </div>
+    </section>
+
+    <section id="sponsor" aria-labelledby="sponsor-h" class="flex scroll-mt-4 flex-col gap-6">
+      <div class="flex max-w-[760px] flex-col gap-3">
+        <h2 id="sponsor-h" class={h2}>Sponsor a meetup</h2>
+        <p class="m-0 text-lg text-soft">Reach the people building with AI in Austin, in the room and on YouTube. Sponsors make it better: better food, more events, hackathons. They never buy a talk, and that's why people trust it.</p>
+      </div>
+      <dl aria-label={`Who you reach, counted ${fmtDate(new Date(stats.asOf), { weekday: undefined, year: 'numeric' })}`} class="m-0 grid grid-cols-2 gap-4 sm:grid-cols-4">
+        {[
+          [stats.meetupMembers.toLocaleString('en-US'), 'members on Meetup'],
+          [talks.toLocaleString('en-US'), 'talks recorded'],
+          [stats.youtubeViews.toLocaleString('en-US'), 'YouTube views'],
+          ['Since 2023', 'every month'],
+        ].map(([n, label]) => (
+          <div class="flex flex-col gap-1 rounded-[18px] border border-line bg-deep p-5">
+            <dt class="order-2 text-soft">{label}</dt>
+            <dd class="order-1 m-0 font-display text-[clamp(32px,4vw,44px)] leading-none text-gold">{n}</dd>
+          </div>
+        ))}
+      </dl>
+      <p class="m-0 -mt-2 text-sm text-muted">Counted {fmtDate(new Date(stats.asOf), { weekday: undefined, year: 'numeric' })}.</p>
+      <ul class="m-0 grid list-none grid-cols-[repeat(auto-fit,minmax(min(100%,260px),1fr))] gap-4 p-0">
+        {sponsorOffers.map((t) => (
+          <li class="flex flex-col gap-3 rounded-[18px] border border-line bg-panel p-6">
+            <p class="m-0 font-mono text-sm tracking-[0.12em] text-muted uppercase">{t.name}</p>
+            <p class="m-0 font-display text-[44px] leading-none">{t.price}{t.per && <span class="font-sans text-lg text-soft"> / {t.per}</span>}</p>
+            <ul class="m-0 flex list-disc flex-col gap-1.5 pl-5 text-soft marker:text-gold">{t.gets.map((g) => <li>{g}</li>)}</ul>
+          </li>
+        ))}
+        <li class="flex flex-col gap-3 rounded-[18px] border-2 border-gold bg-deep p-6">
+          <p class="m-0 font-mono text-sm tracking-[0.12em] text-gold uppercase">How we stay independent</p>
+          <ul class="m-0 flex list-disc flex-col gap-1.5 pl-5 text-text marker:text-gold">{independence.map((r) => <li>{r}</li>)}</ul>
+        </li>
+      </ul>
+      <div class="flex flex-wrap items-center gap-x-6 gap-y-3">
+        <a href={sponsorMail} class={btn}>Email sponsors@aimug.org</a>
+        <p class="m-0 max-w-[560px] text-soft">Tell us your company, what you'd like to support and your budget. Venue space, food and drinks, API credits and AV gear help as much as money.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="thanks-h" class="flex flex-col gap-5">
+      <h2 id="thanks-h" class={h2}>Thanks to</h2>
+      <ul class="m-0 grid list-none grid-cols-[repeat(auto-fit,minmax(min(100%,320px),1fr))] gap-4 p-0">
+        <li class="rounded-[18px] border border-line bg-panel p-6"><p class="m-0 text-xl font-bold">Center for Government and Civic Service, Austin Community College</p><p class="m-0 mt-2 text-soft">Our venue and education partner. CGCS gives us the room in exchange for what we bring their students, plus volunteer mentoring for their staff.</p></li>
+        <li class="rounded-[18px] border border-line bg-panel p-6"><p class="m-0 text-xl font-bold"><a href="https://www.langchain.com/" class="text-text">LangChain</a></p><p class="m-0 mt-2 text-soft">Our technology partner.</p></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="time-h" class="flex flex-col gap-5">
+      <h2 id="time-h" class={h2}>Give time instead</h2>
+      <ul class="m-0 grid list-none grid-cols-[repeat(auto-fit,minmax(min(100%,240px),1fr))] gap-4 p-0">
+        {[
+          ['Volunteer', 'AV, setup and food on meetup nights.', '/volunteer/'],
+          ['Speak', 'Pitch a short talk about what you are building or researching.', '/speak/'],
+          ['Office Hours', '2nd, 3rd and 4th Mondays, 5 PM CT, on Google Meet.', '/events/#office-hours'],
+          ['Discord', 'Help answer questions and welcome new members.', links.discord],
+        ].map(([t, d, href]) => (
+          <li><a href={href} class="flex h-full flex-col gap-1.5 rounded-[18px] border border-line bg-panel p-6 text-text no-underline hover:border-gold"><span class="text-xl font-bold text-gold">{t}</span><span class="text-soft">{d}</span></a></li>
+        ))}
+      </ul>
+    </section>
+  </div>
+</Base>

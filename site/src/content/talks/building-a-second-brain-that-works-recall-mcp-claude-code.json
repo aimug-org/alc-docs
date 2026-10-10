@@ -1,0 +1,535 @@
+{
+  "title": "Building a Second Brain That Works (Recall MCP + Claude Code)",
+  "speakers": [],
+  "date": "2026-08-04",
+  "youtubeId": "e4hFGdnRcfY",
+  "duration": 1540,
+  "summary": "Most \"second brains\" are just expensive junk drawers, you save everything you wish you knew, and it sits there forever. Here's how to actually close that gap.",
+  "topics": [
+    "MCP",
+    "Coding agents"
+  ],
+  "transcript": [
+    {
+      "t": 0,
+      "text": "Right. Uh thank you. I wanted to talk about building a second brain that works. There's a lot of talk about building like for example um uh Lang"
+    },
+    {
+      "t": 13,
+      "text": "Lang Chain just did video uh about the new launch that they had this past week or the week before on uh the LLM wikis that you can build for your organization using deep learning with Langraph. Uh so"
+    },
+    {
+      "t": 26,
+      "text": "there's a lot of chatter about how you can build a second brain and the idea of a second brain is a place where you can store everything you or your organization should know and the uh yeah so I want to talk about"
+    },
+    {
+      "t": 41,
+      "text": "something that I built recently that's very very simple and easy but I feel like it might be closing a gap that I don't hear a lot of other people talking about. Um uh so I'm using Claude almost"
+    },
+    {
+      "t": 54,
+      "text": "exclusively at this point and uh he's going to roll his eyes, he'll roll his eyes, few people roll their I like it."
+    },
+    {
+      "t": 62,
+      "text": "What can I tell you? Um but I'm also using this third party tool called recall just as a place that I am storing all the stuff that I want to know. Uh I'm going to talk a lot about recall."
+    },
+    {
+      "t": 75,
+      "text": "I'm not here to sell you on recall, but if you could subscribe, I'm such a believer in it that uh I get a little cut or whatnot. So, yeah. So, I got to talk about it. Yeah. Um so, uh a second"
+    },
+    {
+      "t": 90,
+      "text": "brain, usually the brain sits inside a jar. It's where you put the information, your knowledge base, whatever, and then that's where it sits. Uh it's sort of"
+    },
+    {
+      "t": 102,
+      "text": "like um I always think about like uh I recently went through my Chrome to look at my bookmarks and I've got like 200 bookmarks of websites and web pages that"
+    },
+    {
+      "t": 114,
+      "text": "I intended to look at at some point and go back to and over the course of 10 years or however long Claude I'm sorry Chrome has been around I never went back to no matter how well I organized those"
+    },
+    {
+      "t": 125,
+      "text": "bookmarks I never went back to them. Um it's sort of like a brain in a jar. It's there but I actually never used it. Um same thing happens I think for all of us"
+    },
+    {
+      "t": 137,
+      "text": "where you you know you maybe using Obsidian or Notebook LM now you just sort of put things you go oh I want to know about this and you have the best intentions to learn it to use it but"
+    },
+    {
+      "t": 152,
+      "text": "there's just too much. So, uh, Recall is kind of like, um, a mixture of Obsidian and Notebook LM. It's, um, um, uh, it's just a place to store, uh, PDFs,"
+    },
+    {
+      "t": 167,
+      "text": "uh, uh, podcasts, YouTube videos, uh, books, uh, gez, um, like EPUBs, uh, files. Uh, I think it takes EUBS. Uh, might be just PDFs, I can't remember."
+    },
+    {
+      "t": 180,
+      "text": "Um, geez, blog articles, you name it, it all goes in there. Um, so, and it makes they make it really easy to capture that information. Uh, you just hit uh Chrome"
+    },
+    {
+      "t": 194,
+      "text": "extension, it goes right in there. What I put in there is everything I want to know, but I don't have the time to know it."
+    },
+    {
+      "t": 206,
+      "text": "There's no there's only so many hours in the day and I can't spend even 30 minutes most days watching a single YouTube video, let alone the 8 to 12 that come out on an almost daily basis"
+    },
+    {
+      "t": 219,
+      "text": "that I really wish I knew that stuff."
+    },
+    {
+      "t": 223,
+      "text": "Um, so what I've done is I I have uh recall is where I keep all that information, all the stuff that I wish I knew. Uh, so my second brain is not what"
+    },
+    {
+      "t": 235,
+      "text": "I know and a digital replication of it. My second brain is my wish of how smart I wish I was. Um, markdown files and Claude are where I'm"
+    },
+    {
+      "t": 248,
+      "text": "keeping track of who I am, what I'm working on, um, what tasks I have ahead of me, uh, who I've got in my, uh, network that I want to stay in touch"
+    },
+    {
+      "t": 261,
+      "text": "with, uh, how I work, uh, and do the things that I want to do. Uh, so Claude has all that information. And so what I now use the MCP that's just been"
+    },
+    {
+      "t": 274,
+      "text": "released for recall is a way for me to connect those two things. I'm able to now connect everything I wish I knew with everything I'm working on, all the"
+    },
+    {
+      "t": 287,
+      "text": "tasks I have ahead of me, uh how I work, etc."
+    },
+    {
+      "t": 294,
+      "text": "So the four things that I'm generally working on on any given day, my client work, my personal projects, uh my test projects, which are usually things that I'm building to see whether"
+    },
+    {
+      "t": 307,
+      "text": "it would work for a client in the future. Some of those projects do end up becoming client work. A lot of the projects are failures, but I learn something from it almost every time. Uh"
+    },
+    {
+      "t": 319,
+      "text": "and then I'm I'm writing a book uh a Uh, so those are the four things that I'm working on in any given day. I've got nearly 4,000 different things that I've stored in recall since I started working"
+    },
+    {
+      "t": 332,
+      "text": "with it about a year and a half ago, which means that I'm clicking the living, you know what, out of the internet with all the things I wish I knew. And it's"
+    },
+    {
+      "t": 344,
+      "text": "everything from uh latest things happening in AI, different ideas. Uh it can be uh productivity ideas. It can be books on"
+    },
+    {
+      "t": 356,
+      "text": "philosophy, books on um uh geez project management, business analysis, uh tons of recipes, uh you name it. I I generally don't put"
+    },
+    {
+      "t": 368,
+      "text": "too much personal stuff in there, but there's some. And then uh yeah, to give you an idea, there's about 60 things that I've stored in in the last seven days inside of recall. Um so what I'm"
+    },
+    {
+      "t": 382,
+      "text": "trying to do with Claude now is bridge the gap. Can I utilize especially the last seven days worth of things in all of these things that I'm working on?"
+    },
+    {
+      "t": 396,
+      "text": "So yeah, a second brain isn't just where you store what you wish you knew. It needs to be applicable to what you're working on to have value. So you think about the brain that we actually have."
+    },
+    {
+      "t": 409,
+      "text": "It is how the memories and the ideas that we have in there have value because we can actually apply them to the work that we're doing. Otherwise, it just becomes trivia. I'm not interested in"
+    },
+    {
+      "t": 423,
+      "text": "trivia. I'm interested in ideas that I can apply to my client work and to my my personal projects. So, by bridging that gap between the second brain and those"
+    },
+    {
+      "t": 437,
+      "text": "things I'm working on, I'm able to take trivia and actually make it something useful. Um, and I should say like a lot of the ideas that I've applied here came"
+    },
+    {
+      "t": 450,
+      "text": "from two different books. Um, I'd recommend both of them. They're great."
+    },
+    {
+      "t": 454,
+      "text": "Uh, one is called Moonwalking with Einstein, which is all about remember uh, memory and trying to remember things. I've got a terrible memory. I wish I applied the ideas from Moonwalking with Einstein more, but uh,"
+    },
+    {
+      "t": 467,
+      "text": "I utilize some of those ideas in here. The other second book is called Ultraarning, and it's about how to learn really difficult things really fast."
+    },
+    {
+      "t": 477,
+      "text": "Another thing I wish I could do, but I'm taking the ideas to try to apply them here in how I'm learning. Um, obviously the cloud markdown file, my"
+    },
+    {
+      "t": 489,
+      "text": "memory markdown files where I keep my active projects, uh, any persistent contacts, things like that. Uh, and then my tasks are just the things that anything that I'm working on that"
+    },
+    {
+      "t": 501,
+      "text": "actually has a due date. Um and then the last file that matters here is this one which is this uh learn skill. Um so this is an early draft of"
+    },
+    {
+      "t": 515,
+      "text": "what I want to do with learn but the idea is that at the I have a AI chief of staff that I've built inside quad does a lot of really cool things and this is"
+    },
+    {
+      "t": 527,
+      "text": "just one of them. And at the end of my day, uh, it automatically gives me or I can ask end of day and it does all these cool things like"
+    },
+    {
+      "t": 540,
+      "text": "identify skills that could be created based on things that happen all the time. Um, oh jeez, uh, uh, adding tasks that come out of, uh, Fireflies transcripts, all that sort of stuff. But"
+    },
+    {
+      "t": 554,
+      "text": "also what it does is it looks at everything that I've stored in recall for the last seven days. It give it groups those things by topic. It takes"
+    },
+    {
+      "t": 566,
+      "text": "each card which is what we call every video or you know ebook or whatever is saved. Each card gives me a two sentence rundown on what was actually there. I'm not going to learn it but at least I can"
+    },
+    {
+      "t": 577,
+      "text": "scan it quickly and kind of get to it. Uh, if there is too much information, if I've saved too much, it'll just give me a couple sentences on the groups. Um, what else does it do? Oh, but where it"
+    },
+    {
+      "t": 589,
+      "text": "gets really fun, um, is the idea that came originally from ultralearning, which is that the best way to learn something, it's sort of applicable to what I was saying about, uh, presenting"
+    },
+    {
+      "t": 601,
+      "text": "next month. The best way to learn something can be for some of us to actually work with it, work with the idea. when you work with it, it starts to stick. So, um what it does is it"
+    },
+    {
+      "t": 615,
+      "text": "looks at So, it drills me, it quizzes me on things, blah blah blah. Um which came from, um Ultralarning as well, I believe. Um"
+    },
+    {
+      "t": 627,
+      "text": "it yes, connection. So, what it does is it looks at all those current projects, all these tasks, etc. It looks at the last seven days of things that I've stored and then it goes, \"Hey, this"
+    },
+    {
+      "t": 642,
+      "text": "thing that you stored actually applies really well to the chapter I'm writing in my book or the project I'm building for a client or a test project or whatever it is.\" And I can look at it, I"
+    },
+    {
+      "t": 655,
+      "text": "can analyze it, and I can tell Claude, \"Add that to the project or create a task to review it later or anything like that.\" Um, and that's where now I'm actually going to learn that concept"
+    },
+    {
+      "t": 668,
+      "text": "because I'm actually doing something with it, but also it's going to pull up really cool ideas that I thought I I wish I knew and it's going to apply them"
+    },
+    {
+      "t": 680,
+      "text": "to the the projects. Um, the book stuff actually is where it's really gotten cool, but I would add really with the client projects, it's been cool, too."
+    },
+    {
+      "t": 690,
+      "text": "Um, so that's the the learn uh markdown."
+    },
+    {
+      "t": 695,
+      "text": "Where are we going here? Um, okay. Boom. Um, okay. So, this is an example of when it worked. Um, uh, when I went to, uh, the"
+    },
+    {
+      "t": 708,
+      "text": "lang chain conference in 2025, my second favorite presentation was Andrew Ing uh, in conversation with Harrison Chase. and uh really entering anytime the guy burps"
+    },
+    {
+      "t": 722,
+      "text": "it it it's profound. He's got really great ideas and um so I was really excited about the 2026 conference."
+    },
+    {
+      "t": 733,
+      "text": "Not that I was going to go, but I was like, \"Oh, cool. They put the stuff on YouTube. I can't wait to watch Andrew's interview again with with Harrison Chase for 2026.\""
+    },
+    {
+      "t": 743,
+      "text": "But of course, like every other thing that I aspire to do, I haven't found 20 25 minutes to sit down and watch it. But what I did do is the moment that I saw it was there, I sent it into my recall."
+    },
+    {
+      "t": 756,
+      "text": "Uh, and there was something that Andrew said that I would have if I I I wouldn't have watched it taking notes. I if I watched it, this might have gone right by me and I wouldn't even thought of it."
+    },
+    {
+      "t": 767,
+      "text": "But he said something again that was so profound to me, it changed my mind on something. He said, \"We can only save so much money, but growth has almost no practical ceiling.\""
+    },
+    {
+      "t": 780,
+      "text": "And my workflow took that idea and it applied to both the book that I'm working on and a project, a client project that I'm doing"
+    },
+    {
+      "t": 793,
+      "text": "that has a lot to do with what I'm writing my book on. And the thing that whenever I have talked to clients and potential clients about AI initiatives,"
+    },
+    {
+      "t": 805,
+      "text": "the first thing they want to know about is how it can save them money. And so immediately I'm thinking, how can I save my clients money? Then the system, the"
+    },
+    {
+      "t": 817,
+      "text": "workflow says, rethink this because Andrew says this and I go, \"Wow, I hadn't thought about it that way.\" What Andrew is saying is uh the amount that of of expense that"
+    },
+    {
+      "t": 832,
+      "text": "any company has is very limited, right? It may be a lot of their, you know, working capital, but there's a cap. They only spend so much money. So therefore, AI can only help them save so much"
+    },
+    {
+      "t": 846,
+      "text": "money. It may be 90%, but there's a cap to it. When you flip and start thinking about how AI can open up new markets, open up new products, open up uh new"
+    },
+    {
+      "t": 861,
+      "text": "verticals, all those other revenue generating opportunities that AI can do. Well, there's no ceiling to that. So, I can turn to my clients and say, \"Sure, I can"
+    },
+    {
+      "t": 875,
+      "text": "build something that's going to save you money, but let's talk about how it can make you money because there's no ceiling to that.\" And that has totally flipped now how I approach uh one of my"
+    },
+    {
+      "t": 888,
+      "text": "initiatives and certainly what I'm writing about in my book on how uh uh how to think about AI in a in a in a business in an organization. So, it's just one example where I wouldn't have I"
+    },
+    {
+      "t": 902,
+      "text": "wouldn't have thought of it any other way because it was just a little thing that he said. Um, and Claude brought it up, not me. So, uh, just to give an example of how it might work. So, for"
+    },
+    {
+      "t": 916,
+      "text": "example, here's this YouTube video that I'd love to, you know, I'd love to watch, but how long is it? 16 minutes."
+    },
+    {
+      "t": 926,
+      "text": "Maybe it's good. Maybe not 16 minutes. It better be awesome. And I have no idea if it is awesome. So, what I'm going to do is I mean, this channel generally has good stuff, but is I go up here to my"
+    },
+    {
+      "t": 939,
+      "text": "recall uh Chrome extension. I just click it and it stores it right into my um recall database as a card. It gives me this cool little concise summary. I'll"
+    },
+    {
+      "t": 953,
+      "text": "use that to go, well, should I watch this or no, I'm not interested in that idea or that idea or that idea, but oh, I better I can click right here. It'll take me right to that time in the video,"
+    },
+    {
+      "t": 964,
+      "text": "for example, and I can get that idea. But regardless, the transcript has been saved to my recall uh to my recall. So, uh I'm good to go. Maybe I read this,"
+    },
+    {
+      "t": 978,
+      "text": "maybe I don't. oftentimes honestly I don't I don't I don't have time to read the the summary. Um another example is I I I'm a still a big fan this is from my"
+    },
+    {
+      "t": 990,
+      "text": "old school days I guess still a big fan of uh these research papers. There's some really cool cutting edge stuff that pops up in these research papers. So I I love I used to love pulling them up and"
+    },
+    {
+      "t": 1004,
+      "text": "just reading the abstract, right? you know, uh, who's got time to read a re I never I've never had time. I don't think I've ever read a research paper from front to back. But there's really cool stuff in"
+    },
+    {
+      "t": 1017,
+      "text": "it. So, what I can do is I can either download the PDF, which is what I used to do years ago. I would download PDFs like crazy. I I still have them all stored"
+    },
+    {
+      "t": 1029,
+      "text": "for maybe I'll read them. No, I'm never going to read them, but they're stored somewhere now. I put them all into my recall. Um, so I can do it do that and download it. But the good thing is that"
+    },
+    {
+      "t": 1041,
+      "text": "the whole article is here. So I suspect if I just hit that widget right there, hopefully it will give me the entire summary and"
+    },
+    {
+      "t": 1053,
+      "text": "it's all stored to my uh my my recall. And what's cool is, you know, I'm just looking at a conceptual study for cognitive bias amplification and agentic AIdriven business processes"
+    },
+    {
+      "t": 1065,
+      "text": "management and intelligence. And sounds like it would dubtail really really nicely with my client work and the things that I'm trying to uh to to build, but I ain't going to read it. It"
+    },
+    {
+      "t": 1078,
+      "text": "ain't that important, but now I know it because it's in my second brain. Um, so when I go to I can't do it from the screen. If I go"
+    },
+    {
+      "t": 1090,
+      "text": "here, this is what my recall looks like. And if I Yep. Yeah, you can see it stored it right there. And like I said earlier, you know, the my image on my computer is the second most embarrassing"
+    },
+    {
+      "t": 1102,
+      "text": "thing on my that you'll see today. Probably looking through all the other stuff I've been storing would be the other thing. You see lots of YouTube videos."
+    },
+    {
+      "t": 1112,
+      "text": "Uh um here's a bunch of books that uh you know that that I'd love to read, but they got great ideas in there, I'm sure."
+    },
+    {
+      "t": 1122,
+      "text": "Couple articles here from like Android Authority and decrypt.co, etc. So, this is where it all this is where my second brain lives. Uh I'm not"
+    },
+    {
+      "t": 1134,
+      "text": "going to show you all the cool things you can do with recall, but you can do a lot of cool things recall."
+    },
+    {
+      "t": 1140,
+      "text": ">> Sorry. come up yesterday. >> Yesterday?"
+    },
+    {
+      "t": 1144,
+      "text": ">> Yeah. The video come up yesterday. >> Yeah. Yeah. Yeah. Exactly. As soon as I see it, I'm click because it only takes a second to click. It's good. Um, so there's a bunch of really cool things"
+    },
+    {
+      "t": 1155,
+      "text": "you can do here, include including like chat with your entire knowledge base, which is kind of fun, and blah blah blah. But, um, what I like is the fact that they've just recently released an"
+    },
+    {
+      "t": 1168,
+      "text": "MCP for it. So, um, uh, what, uh, what I do with my Claude is like here's my just sort of daily"
+    },
+    {
+      "t": 1181,
+      "text": "chat that I have with Claude. And if I, if I type learn, now, who knows what this ends up coming back with. This could be incredibly embarrassing. We'll see. Um, uh, but I just click learn. It's looking"
+    },
+    {
+      "t": 1196,
+      "text": "at my current projects. uh uh the the book I'm writing, etc., and it's looking at the last seven days worth of cards that I've saved. And first thing it's"
+    },
+    {
+      "t": 1208,
+      "text": "going to do is it's going to give me some summaries on all these different items. Then it's going to try to quiz me on something. But the fun part that I think is applicable here is how it tries"
+    },
+    {
+      "t": 1222,
+      "text": "to tie it to some tie this second brain to things that are actually happening."
+    },
+    {
+      "t": 1228,
+      "text": "So I guess if you're thinking about building a knowledge base for your organization, uh building one for yourself, uh whatever it is, I think this is that gap that needs to be closed"
+    },
+    {
+      "t": 1242,
+      "text": "where we can try to find ways to actually apply what we learn. I've spent more hours and more more time helping companies build SOPs that nobody ever"
+    },
+    {
+      "t": 1256,
+      "text": "read ever again, but they everybody's happy that they exist. I think this is the way to draw one of the ways to draw all that great information out of those"
+    },
+    {
+      "t": 1268,
+      "text": "SOPs and apply them to things that an organization is actually doing. Um, so yeah, so you can see they grouped heavier than usual. So I've grouped by theme. So you can see AI agents, clay"
+    },
+    {
+      "t": 1281,
+      "text": "and call code migrations, 13 different books, personal stuff on surfing. Um, quick recall, you've now saved loop engineering three times from three different sources. Uh,"
+    },
+    {
+      "t": 1294,
+      "text": "[laughter] oh geez. Uh, I'm just going to I'll just go uh done."
+    },
+    {
+      "t": 1302,
+      "text": "Let's see what uh what it says to that. Um uh but once it has quized me, it's going to hopefully hopefully maybe this will be the embarrassing part. It doesn't do what I said it would do. Uh"
+    },
+    {
+      "t": 1315,
+      "text": "it will hopefully um tie it to a project that I'm actually doing. Let's see here."
+    },
+    {
+      "t": 1320,
+      "text": "Um sorry, it's taking a moment."
+    },
+    {
+      "t": 1325,
+      "text": ">> Well, Mike, do you have the workflow replicated on your phone too."
+    },
+    {
+      "t": 1329,
+      "text": ">> Uh I don't actually. Yeah, I I don't do much on my phone. Um uh let's see."
+    },
+    {
+      "t": 1341,
+      "text": "Yeah, there's Claude dispatch is just or it was released, but now I think they've replaced it with Claude mobile or something. I haven't caught up with it, so I'm not sure. Um and I've got this"
+    },
+    {
+      "t": 1352,
+      "text": "happening on Claude Code, which doesn't really talk. Um only projects does um see you already put this here. Yep. Uh"
+    },
+    {
+      "t": 1364,
+      "text": "okay. So Andre's framing for three feedback loops to drive building zero to one products with AI agents. Turn my viral blah blah blah started using it."
+    },
+    {
+      "t": 1374,
+      "text": "The core one you keep bumping into give the agent a spec plus eval tests and iterates against that spec and so on."
+    },
+    {
+      "t": 1382,
+      "text": "worth reinforcing because you've already built this exact pattern. The AI roadmap book pipeline which is an agentic system that I built has a draft an editor rewrite a jury a juror and then a jury"
+    },
+    {
+      "t": 1395,
+      "text": "and then a deciding um uh AI is the decider finalize is a spec and eval loop and it connects to something already in your memory system. So that's cool. All"
+    },
+    {
+      "t": 1407,
+      "text": "it's basically saying is you already built something and it's using these same ideas. Kudos, I guess. Um, so that's great. Um, yeah. So, um, it's not"
+    },
+    {
+      "t": 1421,
+      "text": "offering any new ideas because I guess I'm not saving any new ideas. Uh, but at least it it, you know, it's sort of drawing out, uh, and making that connection. Hopefully that is apparent"
+    },
+    {
+      "t": 1434,
+      "text": "what I'm trying to do. So yeah, the, you know, our knowledge bases are, our second brains are often a junk drawer."
+    },
+    {
+      "t": 1441,
+      "text": "You know, it's where you just put a boatload of stuff that you wish you knew and that's where it all sits forever."
+    },
+    {
+      "t": 1449,
+      "text": "Um, and by actually tying it to current projects, um, yeah, it makes a difference. Um, yeah. So, stop collecting what you wish you knew."
+    },
+    {
+      "t": 1460,
+      "text": "builds something, it hands it back to you exactly when it matters. Yeah. So, if you were interested in recall, uh here's the QR code, there's the uh uh"
+    },
+    {
+      "t": 1472,
+      "text": "link. Um 10% off, blah blah blah. Uh but again, this is not here to pitch on recall. You can use anything. There's a lot of open source stuff out there as well. Uh, but just find something that"
+    },
+    {
+      "t": 1484,
+      "text": "works for you and find a way to tie that second brain to what you're actually working on. So that stuff is useful."
+    },
+    {
+      "t": 1495,
+      "text": ">> VERY [applause] >> YOUTUBE. YEAH, >> we use about Oh, totally. Yeah. In fact, uh it's funny that you say that because uh"
+    },
+    {
+      "t": 1509,
+      "text": "yeah, there's uh uh uh the place that I learned uh about the MCP was when recall were uh"
+    },
+    {
+      "t": 1522,
+      "text": "uh kind enough to uh ask me to uh talk to them about it. So, here's me talking to recall about recall, which I put into"
+    },
+    {
+      "t": 1535,
+      "text": "my recall. So, yes. Yeah. [laughter]"
+    }
+  ],
+  "backfill": true
+}

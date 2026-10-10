@@ -1,0 +1,452 @@
+{
+  "title": "RAG on LangGraph: Avoiding Silent Failures, State vs. Memory & a Travel-Agent Demo",
+  "speakers": [],
+  "date": "2025-11-10",
+  "youtubeId": "5XKYweuFh9g",
+  "duration": 1253,
+  "summary": "Anupama Garani (Pimco) walks through why many enterprise RAG projects fail, the critical difference between context, memory, and state, and how LangGraph helps prevent silent failures, plus a live travel-agent demo that shows state persistence in action.",
+  "topics": [
+    "LangGraph",
+    "RAG",
+    "Agents"
+  ],
+  "transcript": [
+    {
+      "t": 8,
+      "text": "Okay. Hey everyone. Um, hope you're having a great evening. I love Colin's talk and mine ties in very closely with what exactly was talking about the state context management and also the"
+    },
+    {
+      "t": 21,
+      "text": "principle of retrieval augmented generation in enterprise AI. Now you might ask me why am I eligible to talk this? Well, I have tried langraph. It's amazing. Um, thanks to Colin. He's such"
+    },
+    {
+      "t": 32,
+      "text": "a huge supporter of this amazing community. I started off with Langraph um, couple of months back. I'm not a veteran in Langraph at all. Uh, but I've definitely seen a lot of amazing use"
+    },
+    {
+      "t": 44,
+      "text": "cases within Langraph. Um, so why am I here? Um, I'm Anupamai as you all know and I work at Pipco and I lead 10AI initiatives. I basically use Azure stack"
+    },
+    {
+      "t": 57,
+      "text": "there. Um we have a bunch of global products which is retrieval augmented generation enterprise-based and I am here today to talk about some of my experiences on why retrieval augmented"
+    },
+    {
+      "t": 70,
+      "text": "generation use cases crash and burn in enterprises. So with that, let's start off."
+    },
+    {
+      "t": 84,
+      "text": "Well, I already covered that. So the agenda today is going to be um brief. We'll talk about the AI landscape in 2025. um what's rag and the landscape of it and what are the production rack"
+    },
+    {
+      "t": 98,
+      "text": "failure zones and I'd be diving deep into one of these different um production zone failure which is the static rag. This is something that fails silently without people even realizing"
+    },
+    {
+      "t": 111,
+      "text": "and sometimes we also drive away a lot of users because there's not a lot of context while the users are having the conversation. Then I'll briefly touch upon what's the difference between"
+    },
+    {
+      "t": 121,
+      "text": "context, state and memory. And this would be regardless of langraph. This is going to be a concept which would be used for any sort of rag use case. And then finally how langraph specifically"
+    },
+    {
+      "t": 134,
+      "text": "helps with the state management and then we also would go through an amazing travel agent demo."
+    },
+    {
+      "t": 143,
+      "text": "All right, let's talk numbers. I love numbers because it gives us the whole landscape of what exactly is going wrong, what's important, what to concentrate on. About 42% of the AI use cases in 2025"
+    },
+    {
+      "t": 159,
+      "text": "failed. And these use cases are not PC's or toy demos. These are actual enterprise initiatives which have budgets, real deadlines, real timelines."
+    },
+    {
+      "t": 172,
+      "text": "Well, that's a significant number. And the funny part is about 61% of these were actually enterprise AI rag use cases. So where is rag really used? If"
+    },
+    {
+      "t": 184,
+      "text": "you think about all the chat bots like for example the booking.com if you want to book your trip and if you're thinking about some of the um chat bots which pop in annoyingly when you're trying to book"
+    },
+    {
+      "t": 196,
+      "text": "something maybe it's a flight. So these are the different rag use cases. It's used in highly regulated in industries such as finance, um hospitals, schools even these days. Um so this is something"
+    },
+    {
+      "t": 209,
+      "text": "which is extremely extremely broadly used and S&P global um did this survey where they interviewed about thousand different companies on how rag is"
+    },
+    {
+      "t": 222,
+      "text": "working for them. Believe it or not, just 200 of these companies was able to deploy the rack solutions successfully."
+    },
+    {
+      "t": 231,
+      "text": "The rest 800 of them actually failed miserably."
+    },
+    {
+      "t": 236,
+      "text": "This is a huge number. Well, the good thing is we started off with this rag use case in 2024 and we had about a year to experiment actually see what's working, what's not and we definitely I"
+    },
+    {
+      "t": 249,
+      "text": "wouldn't say got lucky but we got really successful and we got ourselves featured on Microsoft customer success story because we were one of the first enterprises to deploy the rack solution."
+    },
+    {
+      "t": 261,
+      "text": "So through this complete journey of what the heck is rag to actually nailing rag at least to an extent I was able to strategize all the different failures that happened and present it to you"
+    },
+    {
+      "t": 275,
+      "text": "today. So before we go to the failure zones, let's understand why is rag essential."
+    },
+    {
+      "t": 282,
+      "text": "As you all know, chat GPT and all the other LLMs is basically trained on Reddit data, YouTube data and all the different data which your company does not really have. Your company has a"
+    },
+    {
+      "t": 292,
+      "text": "specific set of documents which you would need to ask questions and get answers from. Secondly, I have seen a lot of industry veterans who've been working at a specific job doing a"
+    },
+    {
+      "t": 303,
+      "text": "specific critical task for about 20 to 30 years. When they walk out the door, all of the knowledge just follows them."
+    },
+    {
+      "t": 312,
+      "text": "If they don't have a specific documentation which is sort of decentralized, then definitely the company's at a loss. Thirdly, how many times have you tried searching for that one specific DB name through all of your"
+    },
+    {
+      "t": 325,
+      "text": "wiki? asked so many friends and co-workers and really did not get it."
+    },
+    {
+      "t": 329,
+      "text": "Traditional search really fails when it comes to companies. And finally, this is my favorite because all of the regulatory and the compliance and the auditors want you to fail because then"
+    },
+    {
+      "t": 343,
+      "text": "they can make a lot of money out of you, right? The company is going to get sued because it gave you wrong answers. Just like how Air Canada really I had a it had a blooper where um I think um they"
+    },
+    {
+      "t": 354,
+      "text": "asked for a refund and the chatbot promised the refund. When the person just got back and asked the actual company, they said, \"Oh, no, that was just an error. It's not really us. It's"
+    },
+    {
+      "t": 363,
+      "text": "the chatbot.\" But in reality, it's them. They would be losing a lot of money. So, we don't want to be there. Which is why rag is super super important."
+    },
+    {
+      "t": 374,
+      "text": "Now that we understand why is rag essential, these are the different pillars in which the rack failure actually happens. At least these are the ones which I saw while working through"
+    },
+    {
+      "t": 385,
+      "text": "the projects at PIMCO. So strategy failures, data quality, prompt engineering, evaluation blind spots and governance catastrophe. If you want to read more about this, I have written a"
+    },
+    {
+      "t": 396,
+      "text": "detailed article at the um link below and I think the slides would be delivered to you. So you can definitely take a look at it."
+    },
+    {
+      "t": 407,
+      "text": "Oh, I I'm not sure if you can see that, but I think it's much clearer there. Um Beyond these failures, what I have noticed is within these past couple of months, it's not just these"
+    },
+    {
+      "t": 420,
+      "text": "five different pillars which have the issue. There's something called as the state memory. That's much better. Thank you."
+    },
+    {
+      "t": 435,
+      "text": "Yep, even better. Um so basically other than the five different failures we have these critical chain of failures which is related to context stateless system"
+    },
+    {
+      "t": 448,
+      "text": "wrong retrieval and hallucinations. What exactly does these things mean?"
+    },
+    {
+      "t": 454,
+      "text": "Have you ever observed in the chat bots where you ask a question, say for example, I want to book um trip to a certain place, Indonesia, and then the next question that you ask is not really"
+    },
+    {
+      "t": 467,
+      "text": "having that previous context, but you're just going to say maybe I want to stay somewhere near the beaches. So you just say near beach. And so many times I've seen that the traditional chatbot really"
+    },
+    {
+      "t": 478,
+      "text": "do not persist this memory or the first question which the user has asked. So this is called the context and the memory. We'll talk more about it in the next few slides. But this is a main main"
+    },
+    {
+      "t": 492,
+      "text": "failure that I've observed other than the five pillars."
+    },
+    {
+      "t": 501,
+      "text": "Let's take a look at this specific conversation. I was having literally just two days back. This was in booking.com."
+    },
+    {
+      "t": 509,
+      "text": "I'm not sure what went wrong on the behind the scenes, but um standing in their defense, it's AI chat beta. That's what they call it. So I asked them um I asked the uh bot saying I'm thinking"
+    },
+    {
+      "t": 521,
+      "text": "about Bahamas in December. And then the next question is what's the weather like? It was able to come back and say that oh she was asking about Bahamas. So I know what it is. But the next two"
+    },
+    {
+      "t": 532,
+      "text": "questions I asked, if you see it, it clearly tripped. Something went wrong."
+    },
+    {
+      "t": 537,
+      "text": "It wasn't able to understand what I was referring to. When I said, \"Show me hotels near the beach.\" It asked, \"What beach? What hotel?\" It does not really remember. And the last one is actually"
+    },
+    {
+      "t": 549,
+      "text": "make that under 150. It's supposed to um aggregate all the different questions that I've asked and apply the filters so that it narrows the searches to the hotels which is just $150 or lower."
+    },
+    {
+      "t": 564,
+      "text": "So why did it really fail? Why didn't it work? What exactly happened? So basically back to Colin's point, the memory is not being stored. What is memory? It's just a list or a dictionary"
+    },
+    {
+      "t": 578,
+      "text": "where you append the previous conversations, questions, the responses along with the context and then you move it along the state to the next few conversations. That's the root cause why"
+    },
+    {
+      "t": 590,
+      "text": "it did not work. So what exactly state context and memory? Let's take a brief look at it."
+    },
+    {
+      "t": 597,
+      "text": "So memory if you think about is like a history book. It contains all the different things that you've talked about. Context is like a chapter. What are you currently talking about? State"
+    },
+    {
+      "t": 609,
+      "text": "is an orchestration layer which carries memory as well as the context. So state is what is persistent across the different um phases within the langraph"
+    },
+    {
+      "t": 621,
+      "text": "and langraph is able to orchestrate this complete flow and keep everything intact so that the users don't get frustrated and get complete answer."
+    },
+    {
+      "t": 633,
+      "text": "So in order to remember this, I really like this um like these two definitions."
+    },
+    {
+      "t": 637,
+      "text": "So memory plus the context is what you need to remember and state is how you do it."
+    },
+    {
+      "t": 647,
+      "text": "Finally, I wanted to fix this problem in my local. Um so I quickly use of course clot code is the best way. Um"
+    },
+    {
+      "t": 670,
+      "text": "Thank you. >> So if you basically look at it, this is the state flow diagram. The user is asking the question and you're able to see the complete user journey between the user, the langraph and the state"
+    },
+    {
+      "t": 684,
+      "text": "variables which is being stored at each and every conversation point. So the first time it does not have anything."
+    },
+    {
+      "t": 690,
+      "text": "It's a dictionary and it's a empty dictionary. It starts off with the state as location Bahamas. It's able to identify and it's also able to see what the weather is because that's what the"
+    },
+    {
+      "t": 701,
+      "text": "user's next question is. Then it was also able to remember the preference what hotels near NASA was actually the ones which um the user like. So it"
+    },
+    {
+      "t": 713,
+      "text": "stored that. Finally, it was able to zero down and give Orange Hill in as the hotel which satisfy all of these four criterias."
+    },
+    {
+      "t": 725,
+      "text": "Well, this diagram is pretty much similar to the different one. I was playing around with something called the mermaid and I I was so excited to learn more about that. So, that's the reason I"
+    },
+    {
+      "t": 734,
+      "text": "had this. This is the user flow diagram which shows the contrast between the traditional chat bots and the um lang graph."
+    },
+    {
+      "t": 744,
+      "text": "So zooming out a little bit and seeing how exactly could land graph be used in all the enterprise use cases. Land graph enables us to use nodes and edges. So"
+    },
+    {
+      "t": 757,
+      "text": "notes if you think about it could be used for dedicating each of the functions such as retrieval search generate basically all of the rag and the best part is it's able to store each"
+    },
+    {
+      "t": 769,
+      "text": "and every documents that it identified throughout the different stages."
+    },
+    {
+      "t": 777,
+      "text": "Finally I was able to um basically drop down to four different um problems. I call it the goldfish problems because um the memory is too little and I would"
+    },
+    {
+      "t": 789,
+      "text": "consider lang graph as the elephant memory because it remembers everything. So it's able to use state graph to persist the context. Then silent failures this is something which we still see in our enterprise applications"
+    },
+    {
+      "t": 801,
+      "text": "because the users might not know what the us what the bot is giving as a wrong response unless they actually see the documents that's been used for it. So plan graph could use these conditional"
+    },
+    {
+      "t": 813,
+      "text": "edges where it goes and checks a specific condition and sees if the threshold is less then you would just go to a different edge. This kind of orchestration is going to be really difficult if we were to do it in a"
+    },
+    {
+      "t": 825,
+      "text": "custom manner. Um thirdly the audit black hole like I mentioned earlier the regulators and the auditors love to find everyone. So it's the best case scenario because lang lang graph basically stores"
+    },
+    {
+      "t": 838,
+      "text": "all the different traces and the documents that's used for the rag and finally the orchestration layer lang graph is best at it and I also have a open source um rag"
+    },
+    {
+      "t": 850,
+      "text": "repository in case you're interested in contributing and also learning more about it um I'm learn I'm basically writing everything about retrieval augmented generation starting off with"
+    },
+    {
+      "t": 860,
+      "text": "the embedding tokenization indexing search retrieval, ranking, all of it."
+    },
+    {
+      "t": 868,
+      "text": "And finally, this is the demo. Um, unfortunately, I was not able to use my laptop, so please bear with this. Um, I use streamllet for this demo. And I am basically on the left side showing how"
+    },
+    {
+      "t": 879,
+      "text": "the um conversation state works. The first question was about Bahamas in December. And notice it, I did not even ask for the weather. and lang graph I mean the llm I use clot in this case was"
+    },
+    {
+      "t": 892,
+      "text": "able to immediately understand that okay if she's saying December then it must tie to something so it's the weather so LLMs are getting so smart um that's the"
+    },
+    {
+      "t": 904,
+      "text": "first question that I have so the status preserved is yes and finally the next question is show me the hotels near the beach and notice how each of the hotels it recommended me is about $300 250 800"
+    },
+    {
+      "t": 918,
+      "text": "while I'm not that rich. So that's when I'm like, nope, does not work for me. I need something way lesser. So under $150 is my next question. And it was immediately able to understand based on"
+    },
+    {
+      "t": 929,
+      "text": "the previous two questions and was able to provide me the list of the three hotels which actually fits in my budget range. So that's yeah that that's the magic of using um context state"
+    },
+    {
+      "t": 943,
+      "text": "persistence and using langraph for this."
+    },
+    {
+      "t": 953,
+      "text": "The next slide was the Q&A. Thank you all so much. >> Thank you."
+    },
+    {
+      "t": 961,
+      "text": ">> What questions does everyone have for Anna? Sure."
+    },
+    {
+      "t": 981,
+      "text": ">> And can you repeat the question for the remote audience?"
+    },
+    {
+      "t": 985,
+      "text": ">> Sure. So the question is what exactly is the difference between state and the contextualization?"
+    },
+    {
+      "t": 993,
+      "text": "So I think the best way is to go back to the slides that I had."
+    },
+    {
+      "t": 1001,
+      "text": "All right. So basically context is when you have the conversation with the bot."
+    },
+    {
+      "t": 1007,
+      "text": "Say you're asking a specific question to the bot. That's the current context paradigm. And memory is something which already you had asked previously to the context. And state is how you store all"
+    },
+    {
+      "t": 1020,
+      "text": "of this information. So state is almost like a data structure. You just store all of this information and you're able to pass this as an object to each of the call. So that's the state persistence."
+    },
+    {
+      "t": 1032,
+      "text": "So you're thinking about perspective"
+    },
+    {
+      "t": 1044,
+      "text": "that information."
+    },
+    {
+      "t": 1057,
+      "text": ">> In our case, we use the um uh Postgress and we also use the Cosmos DB >> basically a database we are able to store all of the conversation sequence that's happening"
+    },
+    {
+      "t": 1069,
+      "text": "um along with the search results in case it's a rag."
+    },
+    {
+      "t": 1073,
+      "text": ">> So like from a level how are you able to"
+    },
+    {
+      "t": 1085,
+      "text": "database"
+    },
+    {
+      "t": 1105,
+      "text": "We actually do use Azure. Um I said Postgress just because I read about it and I heard a lot in the demo. So we do use Cosmos DB. I would say the only way that affected is we had a downtime of of"
+    },
+    {
+      "t": 1117,
+      "text": "about 15 to 20 minutes because we are showing Yeah. We are basically retrieving each of this information on a minute-by-minute basis and we have a dashboard where we show how the interaction is going with each of the"
+    },
+    {
+      "t": 1129,
+      "text": "user. What exactly are they asking? What's the responses? What's the threshold? All of that. So we had a down time. Yeah. Down time of about 15 minutes. That was the Yeah."
+    },
+    {
+      "t": 1161,
+      "text": "Well, I would say um context is the tail end of the problem. I would say 5 to 10% of it um suffer with that. But the first five pillars which I showed to you which is strategy, are you even choosing the"
+    },
+    {
+      "t": 1174,
+      "text": "right problem? Second is data quality. Are you having documents which is complete and does not have any um random metadata? And then thirdly, are the prompts up to date? Does it really align"
+    },
+    {
+      "t": 1185,
+      "text": "with what the subject matter expertise are saying? And then finally, evaluation. Maybe you don't even have a golden data set and you're just like um making the rag work on the enterprise."
+    },
+    {
+      "t": 1195,
+      "text": "You're not taking much feedback from the users. So these combined would cause the failure of about 42% of the enterprise rag which fails. This would be about I I'm not sure. I don't want to put a"
+    },
+    {
+      "t": 1206,
+      "text": "wrong number to it, but this definitely has um an impact for the user experience at least because um there's a lot of likability scale feedback that the users um have like basically like or dislike"
+    },
+    {
+      "t": 1220,
+      "text": "how you do in chat JPT. So the user experience is just going to be bad and they would you might even lose the customer if the chatbot does not remember."
+    },
+    {
+      "t": 1231,
+      "text": ">> Yep. Exactly."
+    },
+    {
+      "t": 1236,
+      "text": "Thank you so much. Give her another round. [applause] Thank you."
+    },
+    {
+      "t": 1244,
+      "text": ">> Thank you."
+    }
+  ],
+  "backfill": true
+}

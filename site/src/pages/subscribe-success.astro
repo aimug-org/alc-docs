@@ -1,0 +1,21 @@
+---
+import Prose from '../components/events/Prose.astro';
+import { links } from '../data/site';
+---
+<Prose title="You're almost there" lead="Please check your email to confirm your subscription." noindex>
+  <p>We've sent a confirmation email to the address you provided. To complete your subscription, click the verification link in that email.</p>
+  <ol>
+    <li><strong>Check your email.</strong> Look for an email from AIMUG.</li>
+    <li><strong>Click the confirmation link</strong> to verify your email address.</li>
+    <li><strong>Start receiving updates:</strong> the next meetup, the new talks and the recap.</li>
+  </ol>
+  <h2>Can't find the email?</h2>
+  <ul>
+    <li>Check your spam or promotions folder</li>
+    <li>Make sure you entered your email address correctly</li>
+    <li>Allow a few minutes for the email to arrive</li>
+  </ul>
+  <h2>While you wait</h2>
+  <p>Join the <a href={links.discord}>Discord</a>, subscribe on <a href={links.youtube}>YouTube</a>, or see the <a href="/events/">upcoming events</a>.</p>
+  <p><a href="/">Return to the homepage</a></p>
+</Prose>

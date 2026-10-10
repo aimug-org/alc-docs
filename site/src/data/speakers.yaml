@@ -1,0 +1,63 @@
+# One entry per speaker. `release` is the id of their signed speaker release; leave it out until it's on file.
+# Photos are real frames from their talks, under /public/speakers/.
+
+- id: colin-mcnamara
+  name: Colin McNamara
+  photo: /speakers/colin-mcnamara.jpg
+  links:
+    - { label: Website, url: "https://www.colinmcnamara.com" }
+
+- id: jake-cukjati
+  name: Jake Cukjati
+  photo: /speakers/jake-cukjati.jpg
+
+- id: jeff-linwood
+  name: Jeff Linwood
+  photo: /speakers/jeff-linwood.jpg
+
+- id: joseph-fluckiger
+  name: Joseph Fluckiger
+  photo: /speakers/joseph-fluckiger.jpg
+
+- id: james-coffey
+  name: James Coffey
+  photo: /speakers/james-coffey.jpg
+
+- id: ryan-booth
+  name: Ryan Booth
+
+- id: venika-kakarla
+  name: Venika Kakarla
+
+- id: paul-phelps
+  name: Paul Phelps
+
+- id: sal-castoro
+  name: Sal Castoro
+
+- id: collier-king
+  name: Collier King
+
+- id: dave-sottimano
+  name: Dave Sottimano
+
+- id: juan-iturbe
+  name: Juan Iturbe
+
+- id: andy-caballero
+  name: Andy Caballero
+
+- id: robert-davis
+  name: Robert Davis
+
+- id: riccardo-pirruccio
+  name: Riccardo Pirruccio
+
+- id: dmitri-iourovitski
+  name: Dmitri Iourovitski
+
+- id: vaskin-kissoyan
+  name: Vaskin Kissoyan
+
+- id: karim-lalani
+  name: Karim Lalani

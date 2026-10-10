@@ -1,0 +1,13 @@
+---
+import Prose from '../components/events/Prose.astro';
+import { links } from '../data/site';
+---
+<Prose title="You've been unsubscribed" lead="We're sorry to see you go, but we respect your decision." noindex>
+  <h2>We value your feedback</h2>
+  <p>We try to make the newsletter valuable and relevant. If you have a moment, we'd appreciate knowing why you unsubscribed: <a href="https://docs.google.com/forms/d/e/1FAIpQLSc6He6SQ0sqsrAKpRFkOy1ib479xyWjeAIiuisqKyYc9ZAhcQ/viewform?usp=header">share your feedback</a>.</p>
+  <h2>Changed your mind?</h2>
+  <p>If you unsubscribed by accident, you can always <a href="/community/">resubscribe</a>.</p>
+  <h2>Stay connected in other ways</h2>
+  <p>Join the <a href={links.discord}>Discord</a>, follow us on <a href={links.x}>X</a>, or subscribe on <a href={links.youtube}>YouTube</a>. You're always welcome at our monthly meetups, Office Hours and Hacky Hours, no subscription required. <a href="/events/">See events</a>.</p>
+  <p><a href="/">Return to the homepage</a></p>
+</Prose>

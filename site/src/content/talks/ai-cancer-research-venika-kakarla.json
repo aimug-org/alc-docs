@@ -1,0 +1,511 @@
+{
+  "title": "AI Cancer Research",
+  "speakers": [
+    "venika-kakarla"
+  ],
+  "date": "2025-03-19",
+  "event": "2025-03-05",
+  "youtubeId": "ArqkC5sQjEY",
+  "duration": 1804,
+  "summary": "Welcome to an extraordinary student showcase featuring the brilliant Venika Kakarla! In this presentation, Venica dives deep into the analysis of P53 mutations in human hepatocellular carcinoma using state-of-the-art AI techniques.",
+  "topics": [],
+  "transcript": [
+    {
+      "t": 5,
+      "text": "hey this is Colin mcir from Austin LangChain I want to introduce Venika kakarla's presentation uh gave in our March meeting um where she basically found a way to detect the cancer that"
+    },
+    {
+      "t": 18,
+      "text": "killed her grandfather in really interesting ways using A&L so without further Ado B's presentation hello good morning my name name is Vana kakura and I'm a sophomore at Roundrock High"
+    },
+    {
+      "t": 33,
+      "text": "School I've had a great interest in AI since I was about 14 and um most importantly in the"
+    },
+    {
+      "t": 45,
+      "text": "intersections of AI with molecular biology and Healthcare um I decided to do my project uh on AI usage in um cancer research which is a vast field that is still unexplored and by utilizing"
+    },
+    {
+      "t": 63,
+      "text": "the power of these Advanced systems to detect similarities unseen to the human eye I believe we can discover new patterns and similarities in cancer to help researchers and doctors understand"
+    },
+    {
+      "t": 76,
+      "text": "these different and complex cancers even more so most importantly what I'm focusing on is a cancer called hepatocellular carcinoma or HC for short and this is is a liver cancer a fatal liver cancer"
+    },
+    {
+      "t": 92,
+      "text": "that has many different factors contributing to its fast cancer grip furthermore it's a very complex cancer which makes it so that it is great uh greatly differs from Patient to Patient"
+    },
+    {
+      "t": 103,
+      "text": "this is quite differently caused by a viral infection which is um not as common in cancers however this viral infection can cause mutations in DNA sequences in the tp53 gene which therefore"
+    },
+    {
+      "t": 118,
+      "text": "causes mutations in a protein called p-53 and this is vital for tumor suppression in um tumor growth and in hepatocellular carcinoma now why is p-53 important in this case so this protein helps"
+    },
+    {
+      "t": 134,
+      "text": "regulate the cell cycle which controls how fast tumors can grow during this cancer and it pretty much determines how much time a person can live for or what's the rate is going to deteriorate"
+    },
+    {
+      "t": 151,
+      "text": "so mutations in this protein such as even like single amino acid changes in this protein can bind to um can affect the way it binds to DNA and how it can control the growth of tumors so the problem"
+    },
+    {
+      "t": 169,
+      "text": "here is that now that we know the biology let's discuss the problem at hand affecting Millions around the world so this is the third leading cause of cancer related deaths worldwide and"
+    },
+    {
+      "t": 179,
+      "text": "the varying nature of this cancer makes it very difficult for researchers and doctors alike to diagnose or record the growth of however the small protein p53 that I was talking about"
+    },
+    {
+      "t": 190,
+      "text": "uh more specifically its DNA binding region which um includes its um main residues provide critical insight into tackling the unpredictable nature of hepatocellular carcinoma approximately 50%"
+    },
+    {
+      "t": 203,
+      "text": "of patients worldwide with HTC have mutations in p-53 and this protein is vital to controlling the growth of cancer cells but without its function the mutated cancer cells will be able to replicate"
+    },
+    {
+      "t": 216,
+      "text": "without bounds bounds and with the addition of a single amino acid change in the DNA binding domain the stability and binding Affinity of this protein to promote or sequences of DNA"
+    },
+    {
+      "t": 227,
+      "text": "that facilitate tumor growth could be altered leading to more aggressive cancer proliferation to counter this vital problem uh present in HTC I conducted a comprehensive study on p53"
+    },
+    {
+      "t": 239,
+      "text": "point mutations and developed a novel machine learning model to understand the mutations impact on stability and DNA binding Affinity to properly identify and understand P patterns in this cancer of course there are many current solutions that 53 stability"
+    },
+    {
+      "t": 258,
+      "text": "and DNA binding Affinity however um a lot of these Solutions are either costly or tedious and usually done in Labs which not everyone may have access to and most most importantly"
+    },
+    {
+      "t": 272,
+      "text": "ATC does very very much between patients as it is um determined by many different factors including the different mutations that can occur in p-53 so the current problem arises with costly"
+    },
+    {
+      "t": 286,
+      "text": "inac simulations taking hours of time to predict the stability and DNA binding Affinity of one mutant protein for example um Labs can cost upwards of $10,000 just to predict um the"
+    },
+    {
+      "t": 305,
+      "text": "thermostability and binding affinity for just a few of these proteins and this kind of money is not available to all researchers around the world and it limits the advances of This research"
+    },
+    {
+      "t": 317,
+      "text": "although scientists have created machine learning models as well to efficiently predict stability these models are trained on many different proteins with greatly different structures"
+    },
+    {
+      "t": 326,
+      "text": "and may not guarantee um p-53 specific accuracy furthermore almost no machine learning models can or have attempted to predict p-53 DNA binding Affinity which is a serious problem as this is"
+    },
+    {
+      "t": 339,
+      "text": "what pretty much determines how fast the cancer can spread and this inefficient analysis of the p-53 Reliant HC contributes to slow diagnosis time and an incomplete understanding between"
+    },
+    {
+      "t": 352,
+      "text": "patients in order to combat the inefficient analysis understanding The prominent pattern patterns in the protein structure would prove vital to proper understanding of its functional"
+    },
+    {
+      "t": 363,
+      "text": "capabilities as well so creating a way to predict the thermal stability and DNA binding Affinity uh utilizing specificity efficiency and a novel prediction method is vital to um trying to figure"
+    },
+    {
+      "t": 378,
+      "text": "out how does cancer spreads in humans uh from Patient to Patient and this is why I created a machine learning model that can analyze mutant p53 stabilities and binding affinities with DN"
+    },
+    {
+      "t": 390,
+      "text": "utilizing patient specific amino acid sequences this combines specific specificity to p-53 structural and functional aspect prediction efficiency and a novel prediction method um to"
+    },
+    {
+      "t": 403,
+      "text": "predict changes in binding Affinity specifically from Wild type to non-mutated or to mutated p53 so for my initial analysis I took about 1,400 cases of mutated p-53 protein from from the"
+    },
+    {
+      "t": 419,
+      "text": "cosmic database which is a publicly available database with each sample showing the point mutation in the amino acid sequence I then pre-processed it to only include significant point mutations without repetitions and that came out to be 249 cases and utilizing python"
+    },
+    {
+      "t": 438,
+      "text": "scripting I then um applied the mutation to the wild type p53 sequence and then the DNA binding domain was extracted and stored so that it could be process through Alpha fold which is a protein"
+    },
+    {
+      "t": 452,
+      "text": "structure prediction software and those protein structures were saved so that I could analyze them and use them to uh create a machine learning model furthermore I also utilized um scripting to"
+    },
+    {
+      "t": 466,
+      "text": "create adjacency matrices and those are just Excel files with which show the interactions between residues of a p-53 and another Excel file I use to show the interactions between the p53 and the"
+    },
+    {
+      "t": 481,
+      "text": "DNA so these are just some of the examples of the data files that I use so the cosmic database sample in Excel um it shows all of the different it shows all the different cases so it"
+    },
+    {
+      "t": 497,
+      "text": "shows like uh whether where they found the tumor in this person and what mutations were present in that p-53 Gene in this person and those were, 1400 samples this just a sample of that and the mutant"
+    },
+    {
+      "t": 512,
+      "text": "adjacency Matrix file I made 249 of those mutant adjacency Matrix files for each of the different mutant proteins that I had and those just shows the distances between each of the residues and the"
+    },
+    {
+      "t": 525,
+      "text": "I also had a file that shows each of the mutants structural features such as hydrogen bonds or salt Bridges and it records whether the mutation was in which region of the protein and this included"
+    },
+    {
+      "t": 538,
+      "text": "about 24 n rows and the DNA adjacency Matrix this is just a sample of it and this shows the interactions between the p53 residues and the DNA and the ones represent interacting residues though"
+    },
+    {
+      "t": 553,
+      "text": "that means just like it forms bonds between the two structures and the zeros represent non-interacting residues so this was my machine learning model framework and I utilize three"
+    },
+    {
+      "t": 565,
+      "text": "different um algorithms to create this so I first utilized a deep neural network and the data that was processed um it um was first inputed into the deep neural network and um this had many layers"
+    },
+    {
+      "t": 581,
+      "text": "to Output whether the p-53 DNA binding domain was stable or not and um I also utilized an XG boost model for regression to predict the numerical stability value of the p-53 DNA binding domain"
+    },
+    {
+      "t": 599,
+      "text": "and finally those two inputs were also put into a graph conventional uh model and this was able to see a graph based input of the protein structure which is more specific to uh What p-53 uh looks"
+    },
+    {
+      "t": 613,
+      "text": "like so it was able to analyze this in more depth than the previous two models and was therefore able to Output the interaction probability of a mutant p53 DNA binding CD sequence and"
+    },
+    {
+      "t": 627,
+      "text": "that's just a gene that I as a percentage of type and while type just means like non-mutated p-53 interaction and more specifically to go over the different algorithms that I used so the"
+    },
+    {
+      "t": 644,
+      "text": "Deep neural network um deep neural network uh for the input layer each neuron in the input layer represents a feature from the data set such as hydrogen bond count um solvent accessible surface"
+    },
+    {
+      "t": 658,
+      "text": "area and other encoded values each feature is then connected to all neurons in the next layer where this raw data is passed to the first hidden layer and then the feed forward function is"
+    },
+    {
+      "t": 669,
+      "text": "utilized in each layer to apply a transformation and produce an output that will be passed forward the activation function uh which is just like a nonlinearization function analyzes whether the"
+    },
+    {
+      "t": 680,
+      "text": "mutation buries or exposes a residue with basic feature interaction analysis and then the second hidden layer allows for more complex interaction ctions than the first and it analyzes different"
+    },
+    {
+      "t": 691,
+      "text": "regions of the protein and mutation occurrences in such domains with weighted neurons and finally the Dropout layer eliminates neurons that um which is crucial to prevent overfitting and instead"
+    },
+    {
+      "t": 703,
+      "text": "supports like General a generalization of the data finally the output layer gives a probability us utilizing the sigmoid function in binary cross entropy loss so that it can predict whether the"
+    },
+    {
+      "t": 716,
+      "text": "mutation was stabilizing or destabilizing and this output is then passed to the XG boost model for regression and it us utilizes decision trees that learn patterns and improve over time to"
+    },
+    {
+      "t": 729,
+      "text": "make proper predictions a loss function to predict the mean squared error is included to compute the results along with the gradient boosting equation for the trees to be properly optimized in order"
+    },
+    {
+      "t": 740,
+      "text": "to PR predict numerical thermostability first tree is a high level um split from the input so it utilizes the input data from the DNN and that's the first classification the second uh utilizes um"
+    },
+    {
+      "t": 754,
+      "text": "solvent accessible surface area which is a feature that is vital in understanding the thermostability changes and um then the third analyz is hydrogen bonds determines stability values based off of"
+    },
+    {
+      "t": 767,
+      "text": "that and the fourth and ones after that um utilize salt bridge as mutation position and residue type to refine like stability predictions properly outut stability values and this input"
+    },
+    {
+      "t": 779,
+      "text": "is then fed to the um graph conventional model to predict DNA binding Affinity so this is more of the novel part of my project as this is able to predict DNA binding Affinity which has not"
+    },
+    {
+      "t": 791,
+      "text": "been done before and is quite complex and um after receiving the numerical thermal stability value from the XG boost the gcn will convert the adjacency matrices into graph based inputs that"
+    },
+    {
+      "t": 803,
+      "text": "show the features of the edge edges and nodes and edges are just the interactions between these different residues of the protein and nodes just show the different structural features such"
+    },
+    {
+      "t": 814,
+      "text": "as the accessible solvent area and the local feature learning or um convolutional layer uses ra to show nonlinearity and it emphasizes the individual um residue interactions with"
+    },
+    {
+      "t": 831,
+      "text": "the surrounding residues the second layer also uses the railo function to expand the residue surrounding to non-direct Neighbors while encoding the effects created by the mutation and"
+    },
+    {
+      "t": 843,
+      "text": "the pooling layer um puts together the wild type complex and the mutation that is it is analyzing to finally output the interaction probability that um this mutant p-53 would bind to that"
+    },
+    {
+      "t": 856,
+      "text": "DNA sequence using the wild type complex as a base and from my results and Analysis I found that um after running many tests I found from the two best tests of each the DNN and the XG boost"
+    },
+    {
+      "t": 873,
+      "text": "um about a 96% accuracy on 50 eox and that's just how many times it runs through the training and on the XG boost I found a 99% accuracy um as it was able to predict the thermostability values quite"
+    },
+    {
+      "t": 890,
+      "text": "well and furthermore for my results and Analysis the um these two graphs on the left they just they just showed the validation results from the two different models so the regression one is the"
+    },
+    {
+      "t": 905,
+      "text": "XG boost one and the DNN just shows the training and validation loss for the 50 EPO and then in the middle I have the mutation interaction probability so this was what was outputed for those 249"
+    },
+    {
+      "t": 919,
+      "text": "mutations um from the G gcn and this just shows all of the different probabilities that the mutant p-53 would interact with the DNA and as you can see most of these are very low in the 20s or 30s"
+    },
+    {
+      "t": 933,
+      "text": "range and this means that um the mutation probably uh greatly affects the structure and function of the protein and this was able to predicted for all 249 of those mutants and this was from an initial"
+    },
+    {
+      "t": 950,
+      "text": "analysis result the frequency of point mutations that was from the initial analysis of the database and that just showed a certain mutant appearance most often which I will go over and this um shows"
+    },
+    {
+      "t": 962,
+      "text": "quite a negative correlation uh just a little bit of a negative correlation between binding probability and thermost stability as the model did use that as an input to predict the binding"
+    },
+    {
+      "t": 972,
+      "text": "probability so what I could conclude from this was that um this is the first p-53 specific machine learning model that is able to predict stability and binding Affinity of a single amino acid change"
+    },
+    {
+      "t": 985,
+      "text": "in the p-53 DNA binding domain in just a few minutes usually the current solutions that are used today if I were to utilize a computational model or like molecular Dynamic simulations it"
+    },
+    {
+      "t": 996,
+      "text": "would take about 2, like 400 hours 2,500 hours to predict all of these values however this model was able to predict those 249 mutant values in um about three minutes so this is quite an"
+    },
+    {
+      "t": 1011,
+      "text": "improvement and utilizing the initial analysis data I also found that more on the scientific side of things that an r249s mutation which is an Arginine to aine um switched um that um amino"
+    },
+    {
+      "t": 1028,
+      "text": "acid and uh decrease the stability therefore decreasing The Binding interaction probably and I found statistical majority of p53 related p uh point mutations affect the DNA interaction this"
+    },
+    {
+      "t": 1044,
+      "text": "makes them have a lower interaction with the DNA and more fast cancer progression so this shows that even like a small mutation in this protein can lead to increased proliferation"
+    },
+    {
+      "t": 1056,
+      "text": "and worsen cancer progression and furthermore this tool can save researchers a lot of time and is uh novel to understanding this protein however it can also be used in more than just"
+    },
+    {
+      "t": 1071,
+      "text": "um hepatocellular carcinoma it can be used for many different cancers as this protein may be mutated in a lot of different cancers and it um is a main protein in uh many different types of"
+    },
+    {
+      "t": 1084,
+      "text": "cancers and it controls the cell cycle which is a main part of um all different types of cancer so it has a wide variety of uses and for my future work I am planning to gather more data about this"
+    },
+    {
+      "t": 1101,
+      "text": "maybe in a lab setting and gather data on the DNA binding interactions um in a lab setting so that can get more um accurate results and then verify it as well with the gcn and then I will consult"
+    },
+    {
+      "t": 1116,
+      "text": "with professionals which is what I'm doing right now and um so that I can understand more about um the machine learning part of this then I will create a web- based interface that is uh that"
+    },
+    {
+      "t": 1127,
+      "text": "allows researchers to utilize this tool so that they can understand more about the interactions of p53 and then finally I hope to upscale this model so that it can be used by uh researchers worldwide"
+    },
+    {
+      "t": 1141,
+      "text": "and then they will be able to learn more about this cancer and many other cancers I would like to T thank Mr Brian port and Mr Colin McNamara for giving me this opportunity to present and thank"
+    },
+    {
+      "t": 1156,
+      "text": "you see if I can get this micone working thank you V for your presentation so couple"
+    },
+    {
+      "t": 1168,
+      "text": "of questions and here any question from the audience I'll leave one off um first first off wow this is really really great stuff um you know actually reminds me uh"
+    },
+    {
+      "t": 1182,
+      "text": "of friends um machine learning research um in Silicon Valley right now and you know he's on his sold his fifth company oh and he would be impressed by what what you're doing here"
+    },
+    {
+      "t": 1194,
+      "text": "so what was your inspiration for playing machine learning to the specific uh field um after I realized um how machine learning and AI can help us understand more about different cancers and help us understand help researchers in uh mostly understand more about like the patterns"
+    },
+    {
+      "t": 1211,
+      "text": "in this cancer and how specific elements of these different cancers can affect the growth or tumor growth um I decided to try and apply all of these factors into like a machine learning or AI model"
+    },
+    {
+      "t": 1225,
+      "text": "so that it can accurately predict um patterns that maybe we were not able to see or different researchers were not able to see so that we can understand more about this and my inspiration"
+    },
+    {
+      "t": 1235,
+      "text": "behind this specific topic was um a family member of mine actually had this cancer and passed away from it so I wanted to learn more about it and try to create an impact in this field so that I"
+    },
+    {
+      "t": 1247,
+      "text": "can uh change the lives of many in the future hopefully so that they don't meet same Fates very inspirational how many people around stomach cancer um this cancer hepatocellular carcinoma is"
+    },
+    {
+      "t": 1261,
+      "text": "actually widespread about um it is actually the third leading cause of cancer deaths worldwide and it's uh very fatal and it's growing even more because it's usually caused like by bad Lifestyles"
+    },
+    {
+      "t": 1274,
+      "text": "or um unhealthy like s unsustainable um like environments and um yeah many people are affected worldwide it's the third leading cause of cancer debts I don't know the exact number but I know"
+    },
+    {
+      "t": 1289,
+      "text": "it's more prominent in rural countries or in third world countries and uh but it is still prominent in all different types of countries so with the with reduction ma machine hours necessary to"
+    },
+    {
+      "t": 1303,
+      "text": "detect this type of cancer um like how much money does it or how many US dollars does it take to run mobile AIT in the te um so actually I created this model on Google collab and I started about"
+    },
+    {
+      "t": 1319,
+      "text": "yeah it's still like a prototype mod it's to be used in like a professional setting um but it is able to predict the binding affinities"
+    },
+    {
+      "t": 1333,
+      "text": "pretty well and the gcn is actually really useful for analyzing all of the results and creating like a more graph-based input which is what a protein would look like and uh that really helped me to understand like more about this protein and and allows the model itself to"
+    },
+    {
+      "t": 1350,
+      "text": "understand more about the protein so uh yeah I'm pretty sure this would uh help more people gain access to this kind of research and hopefully Advance this uh cancer research in the future"
+    },
+    {
+      "t": 1362,
+      "text": "soon there's a bunch of researchers bunch of scientist who us notebooks like yeah somewhere"
+    },
+    {
+      "t": 1378,
+      "text": "first laps were were hosted in collab to run applications like sweet give us free compute for $10 compute what questions we have from the audence microphone um so actually I was planning on using uh support Vector machine at first which is more"
+    },
+    {
+      "t": 1410,
+      "text": "widely used for thero stability predictions however I wanted to see how um different parts of this can predict like different parts of Theros stability so I wanted to break it up into two different models which is an XG boost which is like a regression type model and the"
+    },
+    {
+      "t": 1424,
+      "text": "Deep neural network so this would be able to um so if like even it fails in predicting whether it's stabilizing or destabilizing it would still be able to predict like a proper numerical stability"
+    },
+    {
+      "t": 1436,
+      "text": "value or the two wouldn't interfere with each other too much and um so it reduces like the error um over like a traditional support Vector machine that's just like one model to predict"
+    },
+    {
+      "t": 1448,
+      "text": "both of these values so I decided to use that architecture for the XG boost in DNN and for the graph conventional network uh usually those kinds of models like graph U models graph based"
+    },
+    {
+      "t": 1461,
+      "text": "models are more widely used in um and more widely used in protein analysis using AI and those like show are able to show the computer or the model uh what the interaction between the different"
+    },
+    {
+      "t": 1475,
+      "text": "residues are so that would be more useful for the algorithm itself to see the interactions so mation um my first question is how you code it so I I use Google collab to code it I use many"
+    },
+    {
+      "t": 1505,
+      "text": "different libraries like tensor flow and um torch geometric which is used for the gcn and uh I started learning Ai and machine learning um a while ago so I know a bit about"
+    },
+    {
+      "t": 1518,
+      "text": "coding it the only new neest part to me was learning about the graph conventional Network and um this was actually uh one of the first first like big projects I did with AI so um"
+    },
+    {
+      "t": 1531,
+      "text": "I spent quite a while on this about um six months to learn all of this to learn how to code this and all and um I watched a bunch of tutorials and learned um about these models how"
+    },
+    {
+      "t": 1543,
+      "text": "they can be utilized and yeah I just um started working on it in Google collab ran into a lot of Errors um I did use AI to help me understand my project so understand like the science behind"
+    },
+    {
+      "t": 1560,
+      "text": "it and all um whenever I ran into errors like I wrote the code myself however um I did use AI to understand like what went wrong or um how I could fix these errors uh but yeah"
+    },
+    {
+      "t": 1589,
+      "text": "uh yeah so hydrogen um solvent accessible surface area those were some of the features I had and those are U main features in proteins so um for example like hydrogen likein is like if"
+    },
+    {
+      "t": 1603,
+      "text": "there are more hydrogen then it is probably meaning that like the protein gets denatured or destroyed at higher temperatures so it's more likely to be able to function in the cell and um control uh tumor growth and all and um yeah most of those are more biology"
+    },
+    {
+      "t": 1622,
+      "text": "related and um yeah I learned about those um during like my biology classes and all so I was able to utilize that knowledge and pick these different features that determine like the stability of a protein how well it can function and um one of the central themes of"
+    },
+    {
+      "t": 1639,
+      "text": "biology is that structure determines function so I was able to incorporate these different features that determine structure as well as as well as function so was able to use that um to"
+    },
+    {
+      "t": 1651,
+      "text": "be inputed into this model and properly predict the different uh like stability values and all of that yeah both of those uh processes took quite a while um a lot of the machine learning part it was"
+    },
+    {
+      "t": 1674,
+      "text": "just like trying to fix errors trying to figure out what went wrong how I could improve group things I ran like a lot of tests trying to change the hyperparameters and all and uh yeah about two"
+    },
+    {
+      "t": 1685,
+      "text": "or three months I spent trying to understand all of the different aspects of this like about the proteins and how it affects um tumor growth and I read a lot of research papers on the AI part of it"
+    },
+    {
+      "t": 1697,
+      "text": "as well of how they use um different AI models to predict like the Theros stability and how I could use um my own like novel um idea to predict the DNA binding Affinity of these different um"
+    },
+    {
+      "t": 1711,
+      "text": "complexes with the different DNA sequences and the different mutant proteins and uh yeah that took quite a lot of time to figure out and put together um into a comprehensive like report and model"
+    },
+    {
+      "t": 1738,
+      "text": "thank you questions well thank you very much for your presentation the inspiration you know a lot of us deal in the middleware layer and experiment training models and stuff like that so it's really"
+    },
+    {
+      "t": 1751,
+      "text": "great to hear you describe not only your the story of the spark of your grandfather getting cancer and how that drove you know this very Innovative both in the research side but I I"
+    },
+    {
+      "t": 1763,
+      "text": "I really think that something that I saw you kind of shrink a little bit on which was the um Google collab that is one of the most brilliant things up this they did this on almost zero resources like well a lot of us you know if we're doing this work might burn literally"
+    },
+    {
+      "t": 1781,
+      "text": "burn tokens on on anything you did amazing work with with great results on zero resources so so terribly impressive thank you so much for sharing this with us today thank you you're welcome"
+    }
+  ],
+  "backfill": true
+}
