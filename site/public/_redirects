@@ -16,3 +16,11 @@
 /docs/langchain-introduction /docs/ 301
 /get-started /community/ 301
 /get-started/ /community/ 301
+# Docusaurus served attached files at hashed /assets/files/ URLs; they now live beside their notes.
+/assets/files/james-coffey-what-breaks-if-we-turn-this-off-4fa8fe8cbda68c179b5b7f92ead72dad.pdf /docs/oct-2026/presentation-materials/james-coffey-what-breaks-if-we-turn-this-off.pdf 301
+/assets/files/ai-ecosystem-slides-7a001a419cb460a9bd43db0802c310f8.pdf /docs/jun-2025/lightning-talks/ai-ecosystem-2025/presentation-materials/ai-ecosystem-slides.pdf 301
+/assets/files/ai-ecosystem-slides-concise-a388118d8134621aabf064584f14a059.pptx /docs/jun-2025/lightning-talks/ai-ecosystem-2025/presentation-materials/ai-ecosystem-slides-concise.pptx 301
+/assets/files/ai-ecosystem-slides-f0c21d75eaee126affe664c73c92de77.pptx /docs/jun-2025/lightning-talks/ai-ecosystem-2025/presentation-materials/ai-ecosystem-slides.pptx 301
+/assets/files/embedding_data_hard_negs_4-436b2d9a47b1f6257117409902e51e62.jsonl /docs/jun-2025/lightning-talks/embedding_data_hard_negs_4.jsonl 301
+/assets/files/Fine%20tuning%20embeddings%20for%20nuclear%20power-505a4e6757c0c2c4c14f4258d10184cb.pdf /docs/jun-2025/lightning-talks/Fine%20tuning%20embeddings%20for%20nuclear%20power.pdf 301
+/assets/files/finetune-embeddings-notebook-d0a5a353431be76fd88c6dc1420ca324.ipynb /docs/jun-2025/lightning-talks/finetune-embeddings-notebook.ipynb 301
