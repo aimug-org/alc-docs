@@ -11,5 +11,6 @@
   "topics": [
     "Agents"
   ],
+  "writeup": "oct-2025/langgraph-middleware",
   "backfill": true
 }

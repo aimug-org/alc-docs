@@ -1,4 +1,3 @@
-# AI Gaming Integration
 
 ## Lab Overview
 Learn how to integrate AI capabilities into gaming applications, focusing on LLM-driven NPCs and real-time interactions.

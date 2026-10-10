@@ -52,7 +52,7 @@ export const chicagoIso = (d: Date) => {
 };
 
 /** schema.org Event for an event entry, or undefined while the venue is still to be announced. */
-export const eventLd = (e: Event) => {
+export const eventLd = (e: Event, url = 'https://aimug.org/events/') => {
   if (/to be announced/i.test(e.data.venue.name)) return undefined;
   const place = { '@type': 'Place', name: e.data.venue.name, address: e.data.venue.address ?? 'Austin, TX' };
   return {
@@ -63,11 +63,11 @@ export const eventLd = (e: Event) => {
     endDate: chicagoIso(e.data.end),
     eventAttendanceMode: e.data.online ? 'https://schema.org/MixedEventAttendanceMode' : 'https://schema.org/OfflineEventAttendanceMode',
     eventStatus: 'https://schema.org/EventScheduled',
-    location: e.data.online ? [place, { '@type': 'VirtualLocation', url: 'https://aimug.org/events/' }] : place,
+    location: e.data.online ? [place, { '@type': 'VirtualLocation', url }] : place,
     image: 'https://aimug.org/og-default.jpg',
     ...(e.data.summary && { description: e.data.summary }),
     isAccessibleForFree: true,
     organizer: { '@type': 'Organization', name: 'AI Middleware Users Group', url: 'https://aimug.org' },
-    url: 'https://aimug.org/events/',
+    url,
   };
 };

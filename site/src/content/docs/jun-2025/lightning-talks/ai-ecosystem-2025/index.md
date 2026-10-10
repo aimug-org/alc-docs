@@ -2,8 +2,6 @@
 sidebar_position: 2
 ---
 
-# AI Ecosystem Landscape 2025
-
 *Colin McNamara's comprehensive analysis of the modern AI development stack*
 
 ## 🌟 **The State of AI Development in 2025**
@@ -19,10 +17,6 @@ We're witnessing a pivotal transformation in AI development - the transition fro
 - **Workflow Transformation**: How AI IDEs and async-first architectures are changing development
 - **Enterprise Maturation**: The path to FedRAMP and SOC 2 compliance in AI systems
 - **Future Architecture**: Agent mesh patterns and cross-platform collaboration strategies
-
-## 📹 **Video Recording**
-
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/Owvcy7GIvEY?start=2969" title="June 2025 AIMUG - AI Ecosystem Landscape 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ---
 

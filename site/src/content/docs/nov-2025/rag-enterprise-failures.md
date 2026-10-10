@@ -1,8 +1,4 @@
-# Why RAG Use Cases Crash and Burn in Enterprises
 
-**Speaker:** [Anupama Garani](https://www.linkedin.com/in/anupama-garani/)
-**Company:** PIMCO (Data Specialist)
-**Date:** November 5, 2025
 
 ## Overview
 

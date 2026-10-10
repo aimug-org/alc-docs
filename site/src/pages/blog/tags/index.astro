@@ -10,7 +10,7 @@ const list = [...counts].map(([id, n]) => ({ ...tagOf(known, id), n })).sort((a,
 ---
 <Base title="Recap tags" description="AIMUG recaps by topic.">
   <div class="mx-auto max-w-[1240px] px-4 pt-12 pb-20 sm:px-8 sm:pt-16">
-    <p class="m-0 mb-2 font-mono text-sm tracking-[0.12em] text-gold uppercase"><a href="/blog/" class="text-gold no-underline">Recaps</a></p>
+    <p class="m-0 mb-2 font-mono text-sm tracking-[0.12em] text-gold uppercase"><a href="/blog/" class="text-gold no-underline">News</a></p>
     <h1 class="m-0 font-display text-[clamp(44px,6vw,80px)] leading-none font-normal uppercase">Tags</h1>
     <ul class="m-0 mt-10 flex list-none flex-wrap gap-3 p-0">
       {list.map((t) => (

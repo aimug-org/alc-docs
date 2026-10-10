@@ -1,7 +1,7 @@
 // Helpers for the blog and docs migrated from Docusaurus. URL rules copy Docusaurus so every old link still lands.
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { getImage } from 'astro:assets';
-import { fmtDate, now } from '../../lib/data';
+import { allEvents, fmtDate, now, publicTalks, upcomingTalks, type Event } from '../../lib/data';
 
 export type PostEntry = CollectionEntry<'blog'>;
 export type Post = { entry: PostEntry; date: Date; url: string; excerpt: string };
@@ -41,13 +41,61 @@ function toPost(entry: PostEntry): Post {
   return { entry, date, url: `/blog/${slug}/`, excerpt: entry.data.description ?? plain(entry.body ?? '') };
 }
 
-/** Published posts, newest first (ties keep file order, as Docusaurus did). */
-export async function posts(): Promise<Post[]> {
+/** Published posts, newest first (ties keep file order, as Docusaurus did), including recaps that moved to a night page. */
+export async function allPosts(): Promise<Post[]> {
   // In production a draft, or a post dated after the build, stays hidden until the daily rebuild on or after its date.
   const all = (await getCollection('blog', (p) => !(import.meta.env.PROD && p.data.draft))).map(toPost)
     .filter((p) => !import.meta.env.PROD || p.date <= now);
   return all.sort((a, b) => b.date.getTime() - a.date.getTime() || a.entry.id.localeCompare(b.entry.id));
 }
+
+/** The blog: every published post except the recaps now shown on their night pages. */
+export async function posts(): Promise<Post[]> {
+  const { recaps } = await moves();
+  return (await allPosts()).filter((p) => !recaps.has(p.url));
+}
+
+/* Nights: one page per meetup night at /events/<id>/. A talk's write-up shows on its talk page, and a night's notes
+   overview and recap show on its night page; the old URLs redirect (see scripts/write-redirects.mjs). */
+
+// ponytail: Colin's 2026 recaps and notes stay where they are until the local legal-tech screen passes them; remove an id once it does.
+export const HELD = new Set(['2026-05-06', '2026-10-05']);
+// Notes pages that are a night's overview but aren't named index.
+const OVERVIEWS = new Set(['oct-2024/introduction-to-110', 'dec-2024/showcase-and-mixer']);
+export const nightUrl = (id: string) => `/events/${id}/`;
+const folderOf = (e: Event) => e.data.docs?.replace(/^\/docs\/|\/$/g, '');
+
+type Moves = { nights: Event[]; owner: Map<string, Event>; docs: Map<string, string>; recaps: Map<string, string> };
+let movesCache: Promise<Moves> | undefined;
+export const moves = () => (movesCache ??= computeMoves());
+
+async function computeMoves(): Promise<Moves> {
+  const events = await allEvents();
+  const live = await publicTalks();
+  const all = [...live, ...(await upcomingTalks())];
+  const count = (id: string) => all.filter((t) => t.data.event === id).length;
+  // A notes folder shared by two events belongs to the one with the most talks, then the monthly meetup, then the earlier one.
+  const score = (e: Event) => count(e.id) * 2 + +(e.data.kind === 'mixer');
+  const owner = new Map<string, Event>();
+  for (const e of events) {
+    const f = folderOf(e);
+    if (f && (!owner.has(f) || score(e) > score(owner.get(f)!))) owner.set(f, e);
+  }
+  const nights = events.filter((e) => count(e.id) > 0 || e.data.recap || owner.get(folderOf(e) ?? '') === e || (e.data.end >= now && e.data.kind !== 'hacky-hour'));
+  const docs = new Map<string, string>();
+  for (const t of live) if (t.data.writeup) docs.set(t.data.writeup, `/talks/${t.id}/`);
+  for (const d of await getCollection('docs')) {
+    const ev = owner.get(d.id.split('/')[0]);
+    if (docs.has(d.id) || !ev || HELD.has(ev.id)) continue;
+    if (/(^|\/)(index|README)$/.test(d.id) || OVERVIEWS.has(d.id)) docs.set(d.id, nightUrl(ev.id));
+  }
+  const recaps = new Map<string, string>();
+  for (const e of nights) if (e.data.recap && !HELD.has(e.id)) recaps.set(e.data.recap, nightUrl(e.id));
+  return { nights, owner, docs, recaps };
+}
+
+/** The night a notes page belongs to, by its month folder. */
+export const nightOfDoc = async (id: string) => (await moves()).owner.get(id.split('/')[0]);
 
 /** Splits a list into Docusaurus-style pages: page 1 at base, page N at base + page/N/. */
 export type Page<T> = { n: number; total: number; param?: string; items: T[]; newer?: string; older?: string };
@@ -124,7 +172,8 @@ const monthKey = (folder: string) => { const [m, y] = folder.split('-'); return 
 
 /** Sidebar like the old sidebars.js: index first, then pages by file name, then subfolders. Years and months newest first. */
 export async function docsNav(): Promise<{ docs: DocEntry[]; nav: NavItem[] }> {
-  const docs = await getCollection('docs');
+  const moved = (await moves()).docs;
+  const docs = (await getCollection('docs')).filter((d) => !moved.has(d.id));
   const label = (d: DocEntry) => d.data.sidebar_label ?? docTitle(d);
 
   const folder = (prefix: string): NavItem[] => {
@@ -156,17 +205,13 @@ export async function docsNav(): Promise<{ docs: DocEntry[]; nav: NavItem[] }> {
   return { docs, nav };
 }
 
-// Older month pages open with "Welcome to our May 2024 events!"; the card skips that line when more follows.
-const welcomeless = (s: string) => s.replace(/^Welcome to [^.!]*[.!]\s+(?=\S)/, '');
-
-/** Meetup notes by month, newest first: the month's index page (or its first page), title and opening paragraph. */
-export async function noteMonths() {
+/** What's left in Notes, by meetup month, newest first: the labs, slides and articles that aren't a talk's write-up. */
+export async function noteGroups() {
   const { docs } = await docsNav();
+  const { owner } = await moves();
   const months = [...new Set(docs.map((d) => d.id.split('/')).filter((p) => p.length > 1 && /^[a-z]{3}-\d{4}$/.test(p[0])).map((p) => p[0]))].sort((a, b) => monthKey(b) - monthKey(a));
   return months.map((m) => {
-    const pages = docs.filter((d) => d.id.startsWith(`${m}/`)).sort((a, b) => a.id.localeCompare(b.id));
-    const main = pages.find((d) => d.id === `${m}/index`) ?? pages[0];
     const [mm, year] = m.split('-');
-    return { year, label: `${MONTH_NAMES[MONTHS.indexOf(mm)]} ${year}`, folder: m, url: docUrl(main.id), title: docTitle(main), summary: welcomeless(docSummary(main, 400)), pages: pages.length };
+    return { folder: m, year, label: `${MONTH_NAMES[MONTHS.indexOf(mm)]} ${year}`, night: owner.get(m), pages: docs.filter((d) => d.id.startsWith(`${m}/`)).sort((a, b) => a.id.localeCompare(b.id)) };
   });
 }

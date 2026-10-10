@@ -1,5 +1,5 @@
-// Checks that every path from the old sitemap (scripts/legacy-urls.txt) is built in dist/ or 301'd in public/_redirects.
-// Then lists internal links in built blog and docs pages that point nowhere (informational).
+// Checks that every path from the old sitemap (scripts/legacy-urls.txt) is built in dist/ or 301'd in dist/_redirects.
+// Then lists internal links in built blog, docs, events and talk pages that point nowhere (informational).
 // Run from site/ after a build: node scripts/check-urls.mjs   Exits 1 if a /blog or /docs legacy path is missing.
 import fs from 'node:fs';
 import path from 'node:path';
@@ -9,7 +9,7 @@ const mine = (p) => /^\/(blog|docs)(\/|$)/.test(p);
 const trim = (p) => (p.length > 1 ? p.replace(/\/+$/, '') : p);
 
 // Cloudflare Pages _redirects: "/from /to [code]". A trailing * on the source matches any rest.
-const rules = fs.readFileSync('public/_redirects', 'utf8').split('\n')
+const rules = fs.readFileSync(path.join(DIST, '_redirects'), 'utf8').split('\n')
   .map((l) => l.trim().split(/\s+/)).filter(([from]) => from?.startsWith('/'))
   .map(([from, to]) => ({ from: trim(from), to }));
 const redirect = (p) => rules.find((r) => (r.from.endsWith('*') ? p.startsWith(r.from.slice(0, -1)) : r.from === trim(p)));
@@ -34,7 +34,7 @@ for (const p of others) console.log(`  ${resolves(p) ? 'ok     ' : 'missing'} ${
 const pages = (dir) => fs.readdirSync(dir, { withFileTypes: true }).flatMap((d) =>
   d.isDirectory() ? pages(path.join(dir, d.name)) : d.name.endsWith('.html') ? [path.join(dir, d.name)] : []);
 const broken = new Map();
-for (const file of ['blog', 'docs'].flatMap((d) => (fs.existsSync(path.join(DIST, d)) ? pages(path.join(DIST, d)) : []))) {
+for (const file of ['blog', 'docs', 'events', 'talks'].flatMap((d) => (fs.existsSync(path.join(DIST, d)) ? pages(path.join(DIST, d)) : []))) {
   const from = '/' + path.relative(DIST, path.dirname(file)) + '/';
   const html = fs.readFileSync(file, 'utf8');
   const main = html.slice(html.indexOf('<main'), html.indexOf('</main>')); // skip the shared header and footer

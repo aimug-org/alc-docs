@@ -1,4 +1,3 @@
-# GitHub Integration with LangChain
 
 ## Lab Overview
 Learn how to integrate LangChain with GitHub workflows for automated code generation, review, and management.

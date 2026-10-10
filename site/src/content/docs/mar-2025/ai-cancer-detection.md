@@ -3,8 +3,6 @@ title: AI Cancer Detection with Machine Learning
 description: Deep dive into a sophisticated multi-algorithm approach to detecting and analyzing hepatocellular carcinoma
 ---
 
-# AI Cancer Detection with Machine Learning
-
 In this session from our March meeting, Round Rock High School sophomore Venika Kakarla presented her groundbreaking machine learning approach to detecting and analyzing hepatocellular carcinoma (HTC), the fatal liver cancer that claimed her grandfather's life.
 
 ## The Problem: Hepatocellular Carcinoma

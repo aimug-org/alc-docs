@@ -1,7 +1,4 @@
-# Introduction to LangGraph
 
-**Speaker:** [Colin McNamara](https://www.linkedin.com/in/colinmcnamara/)
-**Date:** November 5, 2025
 
 ## Overview
 

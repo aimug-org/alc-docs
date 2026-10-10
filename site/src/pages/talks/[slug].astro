@@ -1,8 +1,10 @@
 ---
-import { getCollection, getEntries } from 'astro:content';
+import { getCollection, getEntries, getEntry, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import TalkCard from '../../components/TalkCard.astro';
 import Player from '../../components/talks/Player.astro';
+import Mermaid from '../../components/content/Mermaid.astro';
+import { docSummary, nightUrl } from '../../components/content/content';
 import { publicTalks, upcomingTalks, nextEvent, thumb, mmss, fmtDate, fmtDay, fmtTime, eventLd, now, type Talk } from '../../lib/data';
 
 // Pages exist only for public talks; a talk with a future publishAt gets its page on the first rebuild after it.
@@ -70,14 +72,19 @@ for (const l of d.transcript) {
 const nonEmpty = groups.filter((g) => g.ch || g.lines.length);
 
 const iso = (s: number) => `PT${Math.floor(s / 3600) ? `${Math.floor(s / 3600)}H` : ''}${Math.floor((s % 3600) / 60)}M${Math.floor(s % 60)}S`;
-const description = d.summary ?? `${d.title}, a talk from AIMUG, the AI Middleware Users Group in Austin.`;
+// The talk's write-up (once a notes page of its own) shows below the talk.
+const writeup = d.writeup ? await getEntry('docs', d.writeup) : undefined;
+if (d.writeup && !writeup) throw new Error(`Talk "${talk.id}" has writeup "${d.writeup}", which is not a docs entry`);
+const Writeup = writeup && (await render(writeup)).Content;
+const description = d.summary ?? (writeup && docSummary(writeup, 300)) ?? `${d.title}, a talk from AIMUG, the AI Middleware Users Group in Austin.`;
 const metaDescription = description.length <= 160 ? description : `${description.slice(0, 157).replace(/\s+\S*$/, '')}...`;
 const pageHref = new URL(`/talks/${talk.id}/`, Astro.site).href;
 const clips = sortedCh.map((c, i) => {
   const end = sortedCh[i + 1]?.t ?? d.end ?? d.duration; // chapter times are video times; endOffset is optional
   return { '@type': 'Clip', name: c.title, startOffset: c.t, ...(end !== undefined && { endOffset: end }), url: `${pageHref}?t=${c.t}` };
 });
-const { '@context': _ctx, ...recordedAt } = (ev && eventLd(ev)) || ({} as Record<string, unknown>);
+const nightLd = ev && eventLd(ev, new URL(nightUrl(ev.id), Astro.site).href);
+const { '@context': _ctx, ...recordedAt } = nightLd || ({} as Record<string, unknown>);
 const jsonld = {
   '@context': 'https://schema.org',
   '@type': 'VideoObject',
@@ -91,7 +98,7 @@ const jsonld = {
   inLanguage: d.language ?? 'en',
   ...(clips.length && { hasPart: clips }),
   ...(speakers.length && { creator: speakers.map((x) => ({ '@type': 'Person', name: x.data.name, url: new URL(`/speakers/${x.id}/`, Astro.site).href })) }),
-  ...(ev && eventLd(ev) && { recordedAt }),
+  ...(nightLd && { recordedAt }),
   ...(showTranscript && { transcript: d.transcript.map((l) => l.text).join(' ') }),
 };
 const label = 'm-0 font-mono text-sm tracking-[0.12em] text-gold uppercase';
@@ -126,14 +133,12 @@ const h2 = 'm-0 text-[26px] font-bold';
         <p class="m-0 flex flex-wrap gap-x-5 gap-y-2 text-base" data-pagefind-ignore>
           <a href={yt} class="font-bold no-underline">Watch on YouTube</a>
           {parent && <a href={`/talks/${parent.id}/`} class="no-underline">From the full recording of the night</a>}
-          {ev && <a href={`/events/#${ev.id}`} class="no-underline">Recorded at AIMUG, {fmtDate(d.date, { year: 'numeric', weekday: undefined })}</a>}
-          {ev?.data.recap && <a href={ev.data.recap} class="no-underline">Recap of the night</a>}
-          {ev?.data.docs && <a href={ev.data.docs} class="no-underline">Slides and notes</a>}
+          {ev && <a href={nightUrl(ev.id)} class="no-underline">Recorded at AIMUG, {fmtDay(ev.data.start, { year: 'numeric', weekday: undefined })}</a>}
         </p>
         {speakers.length === 0 && (
           <p class="m-0 text-base text-muted" data-pagefind-ignore>Know who gave this talk? <a href={`mailto:speakers@aimug.org?subject=${encodeURIComponent(`Credit: ${d.title}`)}`} class="font-semibold">Tell us.</a></p>
         )}
-        {stub && (
+        {stub && !Writeup && (
           <p class="m-0 text-soft" data-pagefind-ignore>Recording only. A transcript isn't available yet. <a href={yt} class="font-bold">Watch on YouTube</a></p>
         )}
         {stub && d.transcript.length > 0 && <span data-pagefind-index-attrs="data-captions" data-captions={d.transcript.map((l) => l.text).join(' ')}></span>}
@@ -185,6 +190,14 @@ const h2 = 'm-0 text-[26px] font-bold';
             </section>
           ))}
         </div>
+      )}
+
+      {Writeup && (
+        <section aria-labelledby="wu-h" class="flex min-w-0 flex-col gap-4 lg:col-start-1">
+          <h2 id="wu-h" class={h2}>Write-up</h2>
+          <div class="prose-aimug writeup"><Writeup /></div>
+          <Mermaid />
+        </section>
       )}
 
       {next && (
@@ -397,3 +410,8 @@ const h2 = 'm-0 text-[26px] font-bold';
     })();
   </script>
 </Base>
+
+<style>
+  /* The write-up follows its own "Write-up" heading, so its first block needs no top rule or gap. */
+  .writeup > :global(*:first-child) { margin-top: 0; padding-top: 0; border-top: 0; }
+</style>

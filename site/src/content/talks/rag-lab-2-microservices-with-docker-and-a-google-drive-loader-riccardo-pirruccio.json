@@ -12,5 +12,6 @@
   "topics": [
     "RAG"
   ],
+  "writeup": "feb-2024/google-drive-integration",
   "backfill": true
 }

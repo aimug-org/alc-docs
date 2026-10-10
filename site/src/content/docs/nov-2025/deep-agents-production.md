@@ -1,8 +1,4 @@
-# Deep Agents in Production - Real World Experience
 
-**Speaker:** [Collier King](https://www.linkedin.com/in/collierking/)
-**Company:** Cloudflare (Machine Learning Engineer)
-**Date:** November 5, 2025
 **GitHub:** [langchain-deepagents-examples](https://github.com/CollierKing/langchain-deepagents-examples/tree/main/examples/ai_theme_plays)
 
 ## Overview

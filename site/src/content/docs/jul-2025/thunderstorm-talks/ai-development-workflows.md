@@ -2,9 +2,6 @@
 sidebar_position: 3
 ---
 
-# Advanced AI Development Workflows
-
-*Presenter: Ryan Booth*  
 *Location: Canyon/Amarillo, Texas*  
 *Topic: Artist Dashboard SaaS & Automated Development Patterns*
 

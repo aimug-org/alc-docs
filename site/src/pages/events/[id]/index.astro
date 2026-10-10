@@ -1,0 +1,138 @@
+---
+// One page per meetup night: when and where, the night's story, its talks, and the notes that aren't a talk's write-up.
+import { getCollection, render } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import TalkCard from '../../../components/TalkCard.astro';
+import Mermaid from '../../../components/content/Mermaid.astro';
+import { eventLd, publicTalks, upcomingTalks, fmtDay, fmtTime, now, type Event } from '../../../lib/data';
+import { allPosts, docSummary, docTitle, docUrl, docsNav, moves, nightUrl, posts } from '../../../components/content/content';
+import { links } from '../../../data/site';
+
+export async function getStaticPaths() {
+  const { nights } = await moves();
+  return nights.map((ev, i) => ({ params: { id: ev.id }, props: { ev, prev: nights[i - 1], next: nights[i + 1] } }));
+}
+const { ev, prev, next } = Astro.props as { ev: Event; prev?: Event; next?: Event };
+const e = ev.data;
+const upcoming = e.end >= now;
+const { owner, recaps } = await moves();
+
+const talks = [...(await publicTalks()), ...(await upcomingTalks())].filter((t) => t.data.event === ev.id);
+// The full-night upload shows as the night's recording, not as one more talk: talks are cut from it, or it has chapters
+// while the night's talks also came out on their own.
+const isFull = (t: (typeof talks)[number]) => t.data.start === undefined &&
+  (talks.some((s) => s.data.start !== undefined && s.data.youtubeId === t.data.youtubeId) || (t.data.chapters.length >= 2 && talks.length >= 3));
+const full = talks.filter(isFull);
+const cards = talks.filter((t) => !isFull(t)).sort((a, b) => (a.data.start ?? 1e9) - (b.data.start ?? 1e9) || +a.data.date - +b.data.date);
+
+const recap = recaps.get(e.recap ?? '') ? (await allPosts()).find((p) => p.url === e.recap) : undefined;
+const Recap = recap && (await render(recap.entry)).Content;
+const heldRecap = e.recap && !recap ? e.recap : undefined; // still a blog post, linked rather than shown
+const folder = e.docs?.replace(/^\/docs\/|\/$/g, '');
+const notes = folder && owner.get(folder)?.id === ev.id
+  ? (await docsNav()).docs.filter((d) => d.id.startsWith(`${folder}/`)).sort((a, b) => a.id.localeCompare(b.id))
+  : [];
+const sharedNotes = folder && owner.get(folder)?.id !== ev.id ? owner.get(folder) : undefined;
+const more = (await posts()).filter((p) => p.entry.data.event === ev.id);
+const speakerName = new Map((await getCollection('speakers')).map((s) => [s.id, s.data.name]));
+const lineup = e.lineup.map((id) => speakerName.get(id) ?? id);
+
+const place = (v: { name: string; address?: string }) => (v.address ? `${v.name}, ${v.address}` : v.name);
+const kindLabel: Record<string, string> = { special: 'Special edition', 'hacky-hour': 'Hacky Hour', 'field-trip': 'Field trip' };
+const pageUrl = new URL(nightUrl(ev.id), Astro.site).href;
+const ld = eventLd(ev, pageUrl);
+const description = e.summary ?? `AIMUG ${e.title}, ${fmtDay(e.start, { year: 'numeric' })}: the talks, recordings and notes from the night.`;
+const label = 'm-0 font-mono text-sm tracking-[0.12em] text-gold uppercase';
+const h2 = 'm-0 font-display text-[clamp(32px,4vw,48px)] leading-none font-normal uppercase';
+const btn = 'rounded-full bg-gold px-6 py-3.5 text-lg font-bold text-ink no-underline hover:bg-gold-hi hover:text-ink';
+const btn2 = 'rounded-full border-2 border-text px-5 py-3 text-base font-bold text-text no-underline hover:border-gold hover:text-gold';
+---
+<Base title={`${e.title}, ${fmtDay(e.start, { weekday: undefined, year: 'numeric' })}`} description={description} jsonld={ld}>
+  <article class="mx-auto max-w-[1240px] px-4 pt-8 pb-16 sm:px-8">
+    <a href="/events/" class="font-mono text-sm no-underline" data-pagefind-ignore>← All events</a>
+
+    <header class="mt-6 flex max-w-[860px] flex-col gap-4">
+      <p class={label}>{upcoming ? 'Coming up' : kindLabel[e.kind] ?? 'Meetup night'} · {fmtDay(e.start, { weekday: 'long', year: 'numeric' })}</p>
+      <h1 class="m-0 font-display text-[clamp(44px,6.5vw,88px)] leading-[0.95] font-normal break-words uppercase">{e.title}</h1>
+      {e.summary && <p class="m-0 text-xl text-soft">{e.summary}</p>}
+      <dl class="m-0 grid grid-cols-[auto_1fr] gap-x-5 gap-y-2 text-base">
+        <dt class="font-mono text-sm text-muted uppercase">When</dt><dd class="m-0 font-semibold">{fmtTime(e.start)} to {fmtTime(e.end)} CT</dd>
+        <dt class="font-mono text-sm text-muted uppercase">Where</dt><dd class="m-0 font-semibold">{place(e.venue)}{upcoming && e.online && <>, and on Zoom <span class="font-normal text-soft">(the link comes with your RSVP)</span></>}</dd>
+        {e.afterparty && <><dt class="font-mono text-sm text-muted uppercase">After</dt><dd class="m-0 font-semibold">{place(e.afterparty)}</dd></>}
+      </dl>
+      {upcoming ? (
+        <div class="flex flex-wrap gap-3.5" data-pagefind-ignore>
+          {e.rsvp.luma && <a href={e.rsvp.luma} class={btn}>RSVP on Luma</a>}
+          {e.rsvp.meetup && <a href={e.rsvp.meetup} class={btn2}>RSVP on Meetup</a>}
+          {!e.rsvp.luma && !e.rsvp.meetup && <a href={links.meetup} class={btn2}>Follow on Meetup for the RSVP</a>}
+          <a href={`/events/${ev.id}.ics`} class={btn2}>Add to calendar</a>
+        </div>
+      ) : (
+        e.rsvp.meetup && <p class="m-0 text-base" data-pagefind-ignore><a href={e.rsvp.meetup}>This night on Meetup</a></p>
+      )}
+    </header>
+
+    {upcoming && (
+      <section aria-labelledby="lu-h" class="mt-12 flex max-w-[860px] flex-col gap-4">
+        <h2 id="lu-h" class={h2}>Lineup</h2>
+        {lineup.length ? (
+          <ul class="m-0 grid list-none grid-cols-[repeat(auto-fill,minmax(min(100%,220px),1fr))] gap-2.5 p-0">{lineup.map((n) => <li class="rounded-xl border border-edge p-3.5 text-base">{n}</li>)}</ul>
+        ) : (
+          <p class="m-0 text-soft">{e.lineupDate ? `Announced the week of ${fmtDay(e.lineupDate, { weekday: undefined })}.` : 'Coming soon.'} <a href="/speak/" class="font-bold">Pitch a talk</a>.</p>
+        )}
+      </section>
+    )}
+
+    {cards.length > 0 && (
+      <section aria-labelledby="t-h" class="mt-14 flex flex-col gap-6" data-pagefind-ignore="all">
+        <h2 id="t-h" class={h2}>Talks</h2>
+        <div class="grid grid-cols-[repeat(auto-fill,minmax(min(100%,280px),1fr))] gap-7">
+          {cards.map((t) => <TalkCard talk={t} size="sm" />)}
+        </div>
+        {full.map((t) => (
+          <p class="m-0 text-base"><a href={`/talks/${t.id}/`} class="font-bold">Watch the full recording of the night</a></p>
+        ))}
+      </section>
+    )}
+    {Recap && (
+      <section aria-labelledby="r-h" class="mt-14 max-w-[860px]">
+        <h2 id="r-h" class={h2}>The night</h2>
+        <p class="m-0 mt-5 text-lg text-soft">{recap!.excerpt}</p>
+        {/* The full recap retells each talk, which the talk pages already carry, so it stays folded. */}
+        <details class="mt-5">
+          <summary class="inline-flex min-h-[44px] cursor-pointer items-center font-bold text-gold">Read the full recap</summary>
+          <div class="prose-aimug night-body mt-6"><Recap /></div>
+        </details>
+        <Mermaid />
+      </section>
+    )}
+    {heldRecap && <p class="m-0 mt-10 text-lg"><a href={heldRecap} class="font-bold">Read the recap of the night</a></p>}
+
+    {notes.length > 0 && (
+      <section aria-labelledby="n-h" class="mt-14 flex max-w-[860px] flex-col gap-4" data-pagefind-ignore="all">
+        <h2 id="n-h" class={h2}>Notes and labs</h2>
+        <ul class="m-0 flex list-none flex-col p-0">
+          {notes.map((d) => (
+            <li class="flex flex-col gap-1 border-t border-line py-4 last:border-b">
+              <a href={docUrl(d.id)} class="text-lg font-bold">{docTitle(d)}</a>
+              {docSummary(d) && <span class="text-soft">{docSummary(d)}</span>}
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+    {sharedNotes && <p class="m-0 mt-10 text-base">This month's notes and labs are on the <a href={nightUrl(sharedNotes.id)} class="font-bold">{fmtDay(sharedNotes.data.start, { weekday: undefined })} night</a>.</p>}
+
+    {more.length > 0 && (
+      <section aria-labelledby="m-h" class="mt-14 flex max-w-[860px] flex-col gap-4" data-pagefind-ignore="all">
+        <h2 id="m-h" class={h2}>More from this night</h2>
+        <ul class="m-0 flex list-none flex-col p-0">{more.map((p) => <li class="border-t border-line py-4 last:border-b"><a href={p.url} class="text-lg font-bold">{p.entry.data.title}</a></li>)}</ul>
+      </section>
+    )}
+
+    <nav aria-label="Other nights" class="mt-16 flex flex-wrap justify-between gap-4 border-t border-line pt-6 text-base" data-pagefind-ignore>
+      {prev ? <a href={nightUrl(prev.id)} class="no-underline">← {fmtDay(prev.data.start, { weekday: undefined, year: 'numeric' })}: {prev.data.title}</a> : <span></span>}
+      {next && <a href={nightUrl(next.id)} class="no-underline">{fmtDay(next.data.start, { weekday: undefined, year: 'numeric' })}: {next.data.title} →</a>}
+    </nav>
+  </article>
+</Base>

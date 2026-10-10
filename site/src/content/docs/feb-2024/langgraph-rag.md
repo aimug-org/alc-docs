@@ -1,4 +1,3 @@
-# LangGraph RAG Integration
 
 ## Lab Overview
 Learn how to integrate RAG with Google Drive using LangGraph, enabling sophisticated document processing and multi-modal capabilities.

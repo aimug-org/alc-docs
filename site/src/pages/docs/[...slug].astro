@@ -1,9 +1,8 @@
 ---
 import { render } from 'astro:content';
 import DocsPage from '../../components/content/DocsPage.astro';
-import TalkCard from '../../components/TalkCard.astro';
-import { allEvents, publicTalks } from '../../lib/data';
-import { docSummary, docTitle, docUrl, docsNav, hasH1, kebab, type DocEntry } from '../../components/content/content';
+import { fmtDay } from '../../lib/data';
+import { docSummary, docTitle, docUrl, docsNav, hasH1, kebab, nightOfDoc, nightUrl, type DocEntry } from '../../components/content/content';
 
 export async function getStaticPaths() {
   const { docs } = await docsNav();
@@ -15,16 +14,14 @@ const title = docTitle(doc);
 const url = docUrl(doc.id);
 // Front matter description, else the first paragraph.
 const desc = docSummary(doc) || undefined;
-// A month's notes page leads with that night's talks, when an event links its notes here.
-const ev = (await allEvents()).find((e) => e.data.docs === url);
-const nightTalks = ev ? (await publicTalks()).filter((t) => t.data.event === ev.id) : [];
+// Notes from a meetup month point back to that night's page, where its talks and recap are.
+const night = await nightOfDoc(doc.id);
 ---
 <DocsPage title={title} description={desc} current={url}>
-  {nightTalks.length > 0 && (
-    <section aria-label="Talks from this night" class="mb-10 flex flex-col gap-4" data-pagefind-ignore="all">
-      <p class="m-0 font-mono text-sm tracking-[0.12em] text-gold uppercase">Talks from this night</p>
-      <div class="grid grid-cols-[repeat(auto-fill,minmax(min(100%,220px),1fr))] gap-4">{nightTalks.map((t) => <TalkCard talk={t} size="sm" />)}</div>
-    </section>
+  {night && (
+    <p class="m-0 mb-8 font-mono text-sm tracking-[0.12em] uppercase" data-pagefind-ignore>
+      <a href={nightUrl(night.id)} class="no-underline">From the night of {fmtDay(night.data.start, { weekday: undefined, year: 'numeric' })}: talks and recap →</a>
+    </p>
   )}
   <article class="prose-aimug doc-body">
     {!hasH1(doc) && <h1>{title}</h1>}

@@ -7,4 +7,4 @@ export async function getStaticPaths() {
 }
 const { page } = Astro.props as { page: Page<Post> };
 ---
-<PostList title="Recaps" kicker="Recaps" description={`Recaps of every AIMUG meetup: the talks, the demos and what the room learned. Page ${page.n}.`} page={page} />
+<PostList title="News" kicker="News" description={`AIMUG news, essays and Office Hours notes. Page ${page.n}.`} page={page} />

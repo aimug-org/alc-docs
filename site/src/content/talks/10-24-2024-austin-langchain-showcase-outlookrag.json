@@ -12,5 +12,6 @@
   "topics": [
     "RAG"
   ],
+  "writeup": "oct-2024/email-rag-showcase",
   "backfill": true
 }

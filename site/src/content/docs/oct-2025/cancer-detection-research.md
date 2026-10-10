@@ -2,11 +2,6 @@
 sidebar_position: 3
 ---
 
-# AI-Powered Cancer Detection Research
-
-**Presenter**: Venika Kakarla
-**Date**: October 1, 2025
-**Duration**: 15 minutes
 **Institution**: Stanford University School of Medicine, Donna Saker Lab
 
 ## Overview

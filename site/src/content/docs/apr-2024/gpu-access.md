@@ -1,4 +1,3 @@
-# Hosted GPU Access with Paperspace
 
 ## Lab Overview
 Learn how to integrate AI applications with hosted GPU resources using Paperspace by DigitalOcean, enabling powerful AI computations in the cloud.

@@ -6,6 +6,7 @@ import TalkCard from '../components/TalkCard.astro';
 import { eventLd as buildEventLd, publicTalks, upcomingTalks, nextEvent, fmtDay, fmtDate, fmtTime } from '../lib/data';
 import { stats, links, channels } from '../data/site';
 import Icon from '../components/Icon.astro';
+import { nightUrl } from '../components/content/content';
 import hero from '../assets/photos/room-feb2025.jpg';
 import room from '../assets/photos/room-sep2025.jpg';
 import lab from '../assets/photos/lab-may2024.jpg';
@@ -31,7 +32,7 @@ const nightSteps = [
   ['7:40', 'Open Q&A', 'Ask the speakers anything.'],
   ['8:00', 'The mixer', 'Optional: we walk over to The Tavern on W 12th.'],
 ];
-const eventLd = next && buildEventLd(next);
+const eventLd = next && buildEventLd(next, next.data.kind === 'hacky-hour' ? undefined : new URL(nightUrl(next.id), Astro.site).href);
 const h2 = 'm-0 font-display text-[clamp(40px,5vw,60px)] leading-none font-normal uppercase';
 const h2s = 'm-0 font-display text-[clamp(32px,4vw,44px)] leading-none font-normal uppercase';
 // Calendar days to the event in Central time, matching what the inline script recomputes for the viewer.
@@ -106,7 +107,7 @@ const countdown = days < 0 ? '' : days === 0 ? 'Tonight' : days === 1 ? 'In 1 da
     <section aria-labelledby="latest-h" class="mx-auto w-full max-w-[1240px] px-4 pt-[72px] pb-6 sm:px-8">
       <div class="mb-7 flex flex-wrap items-end justify-between gap-4">
         <div>
-          {nightDate && <p class="m-0 mb-1.5 font-mono text-sm tracking-[0.12em] text-muted uppercase">{fmtDate(nightDate, { year: 'numeric', weekday: undefined })} · {nightTalks.length} talks</p>}
+          {nightDate && lastNight && <p class="m-0 mb-1.5 font-mono text-sm tracking-[0.12em] text-muted uppercase"><a href={nightUrl(lastNight)} class="text-muted no-underline hover:text-gold">{fmtDate(nightDate, { year: 'numeric', weekday: undefined })} · {nightTalks.length} talks · The night →</a></p>}
           <h2 id="latest-h" class={h2}>Fresh from the stage</h2>
         </div>
         <a href="/talks/" class="inline-flex min-h-[44px] items-center font-bold no-underline">All talks →</a>

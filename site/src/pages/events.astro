@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import { allEvents, eventLd, publicTalks, fmtDay, fmtTime, now, type Event } from '../lib/data';
 import { links } from '../data/site';
+import { moves, nightUrl } from '../components/content/content';
 
 const events = await allEvents();
 const upcoming = events.filter((e) => e.data.end >= now);
@@ -13,6 +14,10 @@ const years = [...new Set(past.map((e) => e.id.slice(0, 4)))];
 const talks = await publicTalks();
 const speakerName = new Map((await getCollection('speakers')).map((s) => [s.id, s.data.name]));
 const talksFor = (id: string) => talks.filter((t) => t.data.event === id);
+const { nights, owner } = await moves();
+const hasPage = new Set(nights.map((e) => e.id));
+const pageOf = (e: Event) => (hasPage.has(e.id) ? nightUrl(e.id) : undefined);
+const ld = (e: Event) => eventLd(e, pageOf(e) ? new URL(nightUrl(e.id), Astro.site).href : undefined);
 
 const kindLabel: Record<string, string> = { special: 'Special edition', 'hacky-hour': 'Hacky Hour', 'field-trip': 'Field trip' };
 const hours = (e: Event) => `${fmtTime(e.data.start)} to ${fmtTime(e.data.end)} CT`;
@@ -22,7 +27,7 @@ const h2 = 'm-0 font-display text-[clamp(36px,4.5vw,56px)] leading-none font-nor
 const btn = 'rounded-full bg-gold px-6 py-3.5 text-lg font-bold text-ink no-underline hover:bg-gold-hi hover:text-ink';
 const btn2 = 'rounded-full border-2 border-text px-5 py-3 text-base font-bold text-text no-underline hover:border-gold hover:text-gold';
 ---
-<Base title="Events" description="AIMUG meets the first Monday of every month at 6 PM at ACC Rio Grande in Austin and online. Free. Office Hours run the 2nd, 3rd and 4th Mondays." jsonld={upcoming.map(eventLd).filter((x) => !!x)}>
+<Base title="Events" description="AIMUG meets the first Monday of every month at 6 PM at ACC Rio Grande in Austin and online. Free. Office Hours run the 2nd, 3rd and 4th Mondays." jsonld={upcoming.map(ld).filter((x) => !!x)}>
   <section aria-labelledby="events-h" class="mx-auto max-w-[1240px] px-4 pt-12 pb-8 sm:px-8 sm:pt-16">
     <h1 id="events-h" class="m-0 font-display text-[clamp(56px,9vw,112px)] leading-[0.92] font-normal uppercase">Events</h1>
     <p class="m-0 mt-4 max-w-[720px] text-xl text-soft">First Monday of every month, 6 PM at ACC Rio Grande in Austin, or online. Free, and everyone is welcome.</p>
@@ -35,7 +40,7 @@ const btn2 = 'rounded-full border-2 border-text px-5 py-3 text-base font-bold te
           <p class="m-0 flex items-center gap-2.5 font-mono text-sm tracking-[0.12em] text-gold"><span class="inline-block h-2.5 w-2.5 rounded-full bg-gold"></span>NEXT MEETUP</p>
           <h2 id="next-h" class="m-0 font-display leading-[0.92] font-normal uppercase">
             <span class="block text-[clamp(52px,8vw,104px)] text-gold">{fmtDay(next.data.start)}</span>
-            <span class="block text-[clamp(30px,4vw,48px)] text-white">{next.data.title}</span>
+            <span class="block text-[clamp(30px,4vw,48px)] text-white">{pageOf(next) ? <a href={pageOf(next)} class="text-white no-underline hover:text-gold">{next.data.title}</a> : next.data.title}</span>
           </h2>
           {next.data.summary && <p class="m-0 text-xl text-[#dbe6ee]">{next.data.summary}</p>}
           <dl class="m-0 grid grid-cols-[auto_1fr] gap-x-5 gap-y-2 text-base">
@@ -109,7 +114,7 @@ const btn2 = 'rounded-full border-2 border-text px-5 py-3 text-base font-bold te
           <li class="grid grid-cols-[repeat(auto-fit,minmax(min(100%,260px),1fr))] items-baseline gap-x-6 gap-y-2 border-t border-line py-5 last:border-b">
             <span class="font-display text-[30px] leading-tight text-gold uppercase">{fmtDay(e.data.start, { year: 'numeric' })}</span>
             <span class="flex flex-col gap-1">
-              <span class="text-xl font-bold">{e.data.title}</span>
+              <span class="text-xl font-bold">{pageOf(e) ? <a href={pageOf(e)} class="text-text no-underline hover:text-gold">{e.data.title}</a> : e.data.title}</span>
               <span class="text-base text-muted">{hours(e)} · {place(e.data.venue)}</span>
             </span>
             <span class="flex flex-wrap gap-3">
@@ -124,7 +129,7 @@ const btn2 = 'rounded-full border-2 border-text px-5 py-3 text-base font-bold te
 
   <section aria-labelledby="past-h" class="mx-auto max-w-[1240px] px-4 pb-16 sm:px-8">
     <h2 id="past-h" class:list={[h2, 'mb-2']}>Past events</h2>
-    <p class="m-0 mb-8 text-soft">Recaps, slides and recorded talks where we have them.</p>
+    <p class="m-0 mb-8 text-soft">Each night has its own page with the talks, the recap and the notes, where we have them.</p>
     {years.map((y) => (
       <section aria-labelledby={`y-${y}`} class="mb-10">
         <h3 id={`y-${y}`} class="m-0 mb-2 font-mono text-sm tracking-[0.12em] text-muted">{y}</h3>
@@ -138,7 +143,7 @@ const btn2 = 'rounded-full border-2 border-text px-5 py-3 text-base font-bold te
                   {kindLabel[e.data.kind] && <span class="font-mono text-sm tracking-[0.08em] text-muted uppercase">{kindLabel[e.data.kind]}</span>}
                 </span>
                 <span class="flex min-w-0 flex-col gap-1.5 sm:col-span-2">
-                  <span class="text-xl font-bold">{e.data.title}</span>
+                  <span class="text-xl font-bold">{pageOf(e) ? <a href={pageOf(e)} class="text-text no-underline hover:text-gold">{e.data.title}</a> : e.data.title}</span>
                   <span class="text-base text-muted">{e.data.venue.name}{e.data.afterparty && `, then ${e.data.afterparty.name}`}</span>
                   {e.data.summary && <span class="text-base text-soft">{e.data.summary}</span>}
                   {ts.length > 0 && (
@@ -148,11 +153,10 @@ const btn2 = 'rounded-full border-2 border-text px-5 py-3 text-base font-bold te
                       ))}
                     </ul>
                   )}
-                  {(e.data.recap || e.data.docs) && (
-                    <span class="mt-1 flex flex-wrap gap-x-5 gap-y-1 font-bold">
-                      {e.data.recap && <a href={e.data.recap}>Recap</a>}
-                      {e.data.docs && <a href={e.data.docs}>Slides and notes</a>}
-                    </span>
+                  {pageOf(e) ? (
+                    <a href={pageOf(e)} class="mt-1 self-start font-bold">See the night</a>
+                  ) : e.data.docs && owner.get(e.data.docs.replace(/^\/docs\/|\/$/g, '')) && (
+                    <a href={nightUrl(owner.get(e.data.docs.replace(/^\/docs\/|\/$/g, ''))!.id)} class="mt-1 self-start font-bold">Slides and notes</a>
                   )}
                 </span>
               </li>

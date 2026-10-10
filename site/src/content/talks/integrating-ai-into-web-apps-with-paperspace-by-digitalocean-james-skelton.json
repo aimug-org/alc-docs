@@ -10,5 +10,6 @@
   "start": 2400,
   "end": 4400,
   "topics": [],
+  "writeup": "apr-2024/gpu-access",
   "backfill": true
 }

@@ -6,8 +6,6 @@ tags: [a2a, json-rpc, astro, agent-card, discovery, caching]
 sidebar_position: 2
 ---
 
-# A2A Quick Start Guide
-
 Deploy a production-ready Agent-to-Agent protocol in 60 minutes.
 
 ## What is A2A?

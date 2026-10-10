@@ -29,7 +29,6 @@ export const channels = [
 export const nav = [
   { label: 'Talks', href: '/talks/' },
   { label: 'Events', href: '/events/' },
-  { label: 'Recaps', href: '/blog/' },
   { label: 'Speakers', href: '/speakers/' },
   { label: 'Notes', href: '/docs/' },
   { label: 'Speak', href: '/speak/' },
