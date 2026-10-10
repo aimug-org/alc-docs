@@ -38,6 +38,7 @@ function ytdlp(id, ...args) {
 const gateFile = process.env.CAPTION_GATE ?? join(homedir(), '.config/aimug/caption-gate.txt');
 if (!existsSync(gateFile)) { console.error(`caption gate list not found at ${gateFile}; refusing to run`); process.exit(1); }
 const LEGAL = readFileSync(gateFile, 'utf8').split('\n').map((t) => t.trim()).filter(Boolean);
+if (!LEGAL.length) { console.error(`caption gate list at ${gateFile} is empty; refusing to run`); process.exit(1); }
 const legalRes = LEGAL.map((k) => [k, new RegExp(`(?<![\\p{L}\\p{N}])${k.replace(/[-\s]/g, (c) => (c === ' ' ? '\\s+' : '[-\\s]?'))}(?:s|es|ed|ing|ment|ments)?(?![\\p{L}\\p{N}])`, 'giu')]);
 function legalHits(text) {
   const hits = [];
