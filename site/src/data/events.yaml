@@ -8,6 +8,7 @@
   start: 2025-01-08T18:00:00-06:00
   end: 2025-01-08T20:30:00-06:00
   venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/305038549/" }
   afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
   recap: /blog/january-2025-meeting-recap/
   docs: /docs/jan-2025/
@@ -18,6 +19,7 @@
   start: 2025-01-22T18:00:00-06:00
   end: 2025-01-22T20:00:00-06:00
   venue: { name: Kinda Tropical }
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/305504644/" }
   online: false
   recap: /blog/january-2025-hacky-hour-recap/
 
@@ -26,14 +28,16 @@
   start: 2025-02-05T18:00:00-06:00
   end: 2025-02-05T20:00:00-06:00
   venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/305540728/" }
   docs: /docs/feb-2025/
 
-- id: "2025-02-19"
+- id: "2025-02-26"
   title: February Hacky Hour
   kind: hacky-hour
-  start: 2025-02-19T18:00:00-06:00
-  end: 2025-02-19T20:00:00-06:00
-  venue: { name: Cosmic Coffee Saltillo }
+  start: 2025-02-26T18:00:00-06:00
+  end: 2025-02-26T20:00:00-06:00
+  venue: { name: Cosmic Coffee Saltillo, address: "1300 E 4th St, Austin, TX" }
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/305585780/" }
   online: false
 
 - id: "2025-03-05"
@@ -42,14 +46,26 @@
   start: 2025-03-05T18:00:00-06:00
   end: 2025-03-05T20:30:00-06:00
   venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/305993341/" }
   afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
   docs: /docs/mar-2025/
+
+- id: "2025-03-12"
+  title: SXSW Lightning Talk Party
+  kind: special
+  start: 2025-03-12T18:00:00-05:00
+  end: 2025-03-12T20:00:00-05:00
+  venue: { name: Cloudflare Austin, address: "405 Comal St, Austin, TX" }
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/306612411/" }
+  online: false
+  summary: "An off-SXSW evening of lightning talks, hosted by Cloudflare."
 
 - id: "2025-04-02"
   title: April Monthly Showcase
   start: 2025-04-02T18:00:00-05:00
   end: 2025-04-02T20:30:00-05:00
   venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/306689949/" }
   afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
 
 - id: "2025-05-07"
@@ -57,6 +73,7 @@
   start: 2025-05-07T18:00:00-05:00
   end: 2025-05-07T20:00:00-05:00
   venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/307461776/" }
   afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
   summary: "Community lightning talks, a hands-on LangChain voice agent lab with FastRTC, and a mixer at The Tavern."
   docs: /docs/may-2025/
@@ -66,16 +83,18 @@
   start: 2025-06-04T18:00:00-05:00
   end: 2025-06-04T21:00:00-05:00
   venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/307462561/" }
   afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
   summary: "Multimodal AI applications and agent architectures, with demos of vision-enabled agents, audio processing pipelines and cross-modal reasoning systems."
   docs: /docs/jun-2025/
 
-- id: "2025-06-26"
+- id: "2025-06-27"
   title: "Field Trip: Your Startup Sucks Comedy Show"
   kind: field-trip
-  start: 2025-06-26T18:30:00-05:00
-  end: 2025-06-26T21:00:00-05:00
+  start: 2025-06-27T18:30:00-05:00
+  end: 2025-06-27T21:00:00-05:00
   venue: { name: Tequila 512, address: "2201 Lake Austin Blvd, Austin, TX" }
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/308259404/" }
   online: false
   summary: "We left the terminal for Your Startup Sucks, Austin's only pitch-roast comedy show. Founders braved the stage and VCs fired back."
 
@@ -84,23 +103,44 @@
   start: 2025-07-02T18:00:00-05:00
   end: 2025-07-02T20:30:00-05:00
   venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/307462604/" }
   afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
   summary: "Lightning talks on AI development workflows, Cloudflare containers, Slack-Cursor integration, and lessons learned from building Emojourn."
   docs: /docs/jul-2025/
+
+- id: "2025-07-22"
+  title: July Hacky Hour
+  kind: hacky-hour
+  start: 2025-07-22T18:00:00-05:00
+  end: 2025-07-22T20:00:00-05:00
+  venue: { name: Cosmic Coffee Saltillo, address: "1300 E 4th St, Austin, TX" }
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/308790099/" }
+  online: false
 
 - id: "2025-08-14"
   title: August Monthly Showcase
   start: 2025-08-14T18:00:00-05:00
   end: 2025-08-14T20:30:00-05:00
   venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/307462670/" }
   summary: "Agent-to-Agent (A2A) communication protocols, with lightning talks and implementation guides."
   docs: /docs/aug-2025/
+
+- id: "2025-08-27"
+  title: August Hacky Hour
+  kind: hacky-hour
+  start: 2025-08-27T18:00:00-05:00
+  end: 2025-08-27T20:00:00-05:00
+  venue: { name: Cosmic Coffee Saltillo, address: "1300 E 4th St, Austin, TX" }
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/310525114/" }
+  online: false
 
 - id: "2025-09-10"
   title: September Thunderstorm Talks
   start: 2025-09-10T18:00:00-05:00
   end: 2025-09-10T20:30:00-05:00
   venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/307462681/" }
   afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
   summary: "Five rapid-fire Thunderstorm Talks: LangChain and LangGraph 1.0 alpha, Claude Code and custom agents, Deep Agents, Rosie the Robot, and Streamlit for AI dashboards."
   recap: /blog/september-showcase-thunderstorm-talks-replay/
@@ -111,6 +151,7 @@
   start: 2025-10-01T18:00:00-05:00
   end: 2025-10-01T20:30:00-05:00
   venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/310971734/" }
   afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
   summary: "LangGraph 1.0 middleware, A2A and AP2 protocols, cancer detection research, and inference providers."
   recap: /blog/october-2025-showcase-recap/
@@ -121,16 +162,27 @@
   start: 2025-11-05T18:00:00-06:00
   end: 2025-11-05T20:30:00-06:00
   venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/311326010/" }
   afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
   summary: "LangGraph fundamentals, enterprise RAG failures, Deep Agents in production, and AI project management anti-patterns."
   recap: /blog/november-mixer-showcase-langgraph-rag-deep-agents/
   docs: /docs/nov-2025/
+
+- id: "2025-11-18"
+  title: November Hacky Hour
+  kind: hacky-hour
+  start: 2025-11-18T18:00:00-06:00
+  end: 2025-11-18T20:00:00-06:00
+  venue: { name: Cosmic Coffee Saltillo, address: "1300 E 4th St, Austin, TX" }
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/311900027/" }
+  online: false
 
 - id: "2025-12-03"
   title: December Monthly Mixer & Showcase
   start: 2025-12-03T18:00:00-06:00
   end: 2025-12-03T21:00:00-06:00
   venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/311899965/" }
   afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
 
 - id: "2026-01-07"
@@ -138,6 +190,7 @@
   start: 2026-01-07T18:00:00-06:00
   end: 2026-01-07T21:00:00-06:00
   venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/312282646/" }
   afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
 
 - id: "2026-02-04"
@@ -145,6 +198,7 @@
   start: 2026-02-04T18:00:00-06:00
   end: 2026-02-04T21:00:00-06:00
   venue: { name: Cloudflare Austin }
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/312282689/" }
   afterparty: { name: Zilker }
 
 - id: "2026-03-04"
@@ -152,6 +206,7 @@
   start: 2026-03-04T18:00:00-06:00
   end: 2026-03-04T21:00:00-06:00
   venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/312283308/" }
   afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
 
 - id: "2026-04-01"
@@ -159,6 +214,7 @@
   start: 2026-04-01T18:00:00-05:00
   end: 2026-04-01T21:00:00-05:00
   venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/312282692/" }
   afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
 
 - id: "2026-05-06"
@@ -166,6 +222,7 @@
   start: 2026-05-06T18:00:00-05:00
   end: 2026-05-06T21:00:00-05:00
   venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/312283311/" }
   afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
   summary: "Rapid-fire 10-minute talks: highlights from ICLR 2026 on recursive self-improvement research, open source agentic security operations tooling, and auto-documentation pipelines on Cloudflare Workers and Assets."
   recap: /blog/2026/05/18/may-2026-mixer-recap/
@@ -175,6 +232,7 @@
   start: 2026-06-03T18:00:00-05:00
   end: 2026-06-03T21:00:00-05:00
   venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/312283312/" }
   afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
   summary: "Thunderstorm Talks on agentic platforms and productivity: a LangChain interrupt update, agentic framework topology primitives with Pydantic and MLflow, and scaling management productivity with agents."
 
@@ -183,14 +241,16 @@
   start: 2026-07-01T18:00:00-05:00
   end: 2026-07-01T21:00:00-05:00
   venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/312534891/" }
   afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
   summary: "Community demos and networking."
 
-- id: "2026-08-10"
+- id: "2026-08-11"
   title: August Monthly Mixer & Showcase
-  start: 2026-08-10T18:00:00-05:00
-  end: 2026-08-10T21:00:00-05:00
+  start: 2026-08-11T18:00:00-05:00
+  end: 2026-08-11T21:00:00-05:00
   venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/313446213/" }
   afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
   summary: "Moved from the usual first Wednesday. Thunderstorm-style talks on agentic middleware patterns."
 
@@ -199,6 +259,7 @@
   start: 2026-09-02T18:00:00-05:00
   end: 2026-09-02T21:00:00-05:00
   venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/314658997/" }
   afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
   summary: "Practical demos and short deep-dives on the agentic stack."
 
@@ -207,6 +268,7 @@
   start: 2026-10-05T18:00:00-05:00
   end: 2026-10-05T21:00:00-05:00
   venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  rsvp: { meetup: "https://www.meetup.com/austin-langchain-ai-group/events/315197169/" }
   afterparty: { name: The Tavern, address: "922 W 12th St, Austin, TX" }
   summary: "First Monday-night AIMUG. Talks on semantic routing and mixture of models, Grokbot and the Jev decision model, Harbor evals for coding agents, a spec-driven coding factory, and Corvic AI graph dependency tracing."
   recap: /blog/october-2026-monthly-meeting-recap/
@@ -232,6 +294,7 @@
     - { time: "8:00 PM", label: Walk to The Tavern for the mixer (optional) }
 
 # On the 2026 schedule; venue and RSVP links not posted yet. The end time follows the Monday format.
+
 - id: "2026-12-07"
   title: December Monthly Mixer & Showcase
   start: 2026-12-07T18:00:00-06:00
