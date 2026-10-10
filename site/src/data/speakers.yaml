@@ -45,6 +45,7 @@
 - id: ryan-booth
   name: Ryan Booth
   title: "AI Solutions Consultant"
+  photo: /speakers/ryan-booth.jpg
   links:
     - { label: LinkedIn, url: "https://www.linkedin.com/in/ryanbooth15/" }
     - { label: Website, url: "https://abstractryan.ai/" }
@@ -56,9 +57,11 @@
 
 - id: paul-phelps
   name: Paul Phelps
+  photo: /speakers/paul-phelps.jpg
 
 - id: sal-castoro
   name: Sal Castoro
+  photo: /speakers/sal-castoro.jpg
   links:
     - { label: LinkedIn, url: "https://www.linkedin.com/in/sal-castoro-3b1050178/" }
     - { label: Website, url: "https://salcastoro.com/" }
@@ -68,6 +71,7 @@
   name: Collier King
   title: "Machine Learning Engineer"
   company: "Cloudflare"
+  photo: /speakers/collier-king.jpg
   links:
     - { label: LinkedIn, url: "https://www.linkedin.com/in/collierking/" }
     - { label: Website, url: "http://collierking.com/" }
@@ -75,6 +79,7 @@
 
 - id: dave-sottimano
   name: Dave Sottimano
+  photo: /speakers/dave-sottimano.jpg
   links:
     - { label: GitHub, url: "https://github.com/dsottimano" }
 
@@ -82,6 +87,7 @@
   name: Juan Iturbe
   title: "LangGraph Developer and Applied AI Lead"
   company: "Ketzai"
+  photo: /speakers/juan-iturbe.jpg
   links:
     - { label: Website, url: "https://i2phi.com/" }
     - { label: GitHub, url: "https://github.com/ituPhi" }
@@ -89,6 +95,7 @@
 - id: andy-caballero
   name: Andy Caballero
   title: "AI Strategic Consultant and Technology Leader"
+  photo: /speakers/andy-caballero.jpg
   links:
     - { label: LinkedIn, url: "https://www.linkedin.com/in/andy-caballero-bb5a4983/" }
     - { label: Website, url: "https://www.andycaballero.me/" }
@@ -96,11 +103,13 @@
 
 - id: robert-davis
   name: Robert Davis
+  photo: /speakers/robert-davis.jpg
 
 - id: riccardo-pirruccio
   name: Riccardo Pirruccio
   title: "Technical Project Manager and Software Engineer"
   company: "Applied Materials"
+  photo: /speakers/riccardo-pirruccio.jpg
   links:
     - { label: LinkedIn, url: "https://www.linkedin.com/in/riccardopirruccio/" }
     - { label: Website, url: "https://rickystech.com/" }
@@ -109,11 +118,13 @@
 
 - id: dmitri-iourovitski
   name: Dmitri Iourovitski
+  photo: /speakers/dmitri-iourovitski.jpg
 
 - id: vaskin-kissoyan
   name: Vaskin Kissoyan
   title: "Retained Chief AI Officer"
   company: "Agentic Insights"
+  photo: /speakers/vaskin-kissoyan.jpg
   links:
     - { label: LinkedIn, url: "https://www.linkedin.com/in/vaskin/" }
     - { label: Website, url: "https://agenticinsights.com/" }
@@ -122,6 +133,7 @@
 
 - id: karim-lalani
   name: Karim Lalani
+  photo: /speakers/karim-lalani.jpg
   links:
     - { label: GitHub, url: "https://github.com/lalanikarim" }
 
