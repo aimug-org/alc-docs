@@ -3,8 +3,10 @@
   "speakers": [
     "ryan-booth"
   ],
-  "date": "2025-08-28",
+  "date": "2025-07-02",
+  "event": "2025-07-02",
   "youtubeId": "uhlhWiB2fMY",
+  "publishAt": "2025-08-28T12:00:00-05:00",
   "duration": 2309,
   "summary": "Ryan shares his experiences building an end-to-end application stack agentically at July's AIMUG meeting",
   "topics": [
@@ -886,6 +888,12 @@
     {
       "t": 2305,
       "text": "What's up?"
+    }
+  ],
+  "links": [
+    {
+      "label": "Slides",
+      "url": "https://github.com/aimug-org/austin_langchain/blob/main/resources/presentations/Advanced%20AI%20Development%20workflows%20-%20Ryan%20Booth%20-%200702_2025%20.pdf"
     }
   ],
   "backfill": true

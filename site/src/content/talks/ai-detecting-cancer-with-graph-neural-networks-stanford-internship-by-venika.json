@@ -3,8 +3,10 @@
   "speakers": [
     "venika-kakarla"
   ],
-  "date": "2025-10-24",
+  "date": "2025-10-01",
+  "event": "2025-10-01",
   "youtubeId": "BEGWT1DAskI",
+  "publishAt": "2025-10-24T12:00:00-05:00",
   "duration": 902,
   "topics": [
     "Graphs"

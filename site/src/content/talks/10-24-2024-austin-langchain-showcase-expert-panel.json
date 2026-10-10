@@ -1,8 +1,16 @@
 {
-  "title": "10 24 2024 Austin LangChain Showcase Expert Panel",
-  "speakers": [],
-  "date": "2024-10-21",
+  "title": "Expert Panel: AI-Accelerated Software Development",
+  "speakers": [
+    "karim-lalani",
+    "robert-kessler",
+    "jackson-arnold",
+    "ryan-booth",
+    "colin-mcnamara"
+  ],
+  "date": "2024-10-02",
+  "event": "2024-10-02",
   "youtubeId": "Ufyi_dJimI8",
+  "publishAt": "2024-10-21T12:00:00-05:00",
   "duration": 1809,
   "topics": [],
   "transcript": [

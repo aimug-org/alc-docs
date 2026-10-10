@@ -3,8 +3,10 @@
   "speakers": [
     "ryan-booth"
   ],
-  "date": "2025-10-23",
+  "date": "2025-10-01",
+  "event": "2025-10-01",
   "youtubeId": "d5l0D7h5bI4",
+  "publishAt": "2025-10-23T12:00:00-05:00",
   "duration": 1333,
   "summary": "In this AIMUG Deep Dive, Ryan Booth introduces the revolutionary A2A (Agent-to-Agent) and AP2 (Agent Payment Protocol), the open standards enabling agents to discover, negotiate, and transact autonomously.",
   "topics": [
@@ -518,6 +520,12 @@
     {
       "t": 1318,
       "text": ">> Yeah, I'll grab your question after a bit. Okay. >> I'll encourage everyone to continue the conversation at"
+    }
+  ],
+  "links": [
+    {
+      "label": "Slides",
+      "url": "https://github.com/aimug-org/austin_langchain/blob/main/resources/presentations/2025_10-1-Austin-LangChain-Ryan-A2A_AP2-demo.pptx"
     }
   ],
   "backfill": true

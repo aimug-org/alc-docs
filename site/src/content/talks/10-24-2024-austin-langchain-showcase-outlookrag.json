@@ -1,8 +1,13 @@
 {
-  "title": "10 24 2024 Austin LangChain Showcase OutlookRAG",
-  "speakers": [],
-  "date": "2024-10-21",
+  "title": "OutlookRAG: Email Categorization and Summarization",
+  "speakers": [
+    "jackson-arnold",
+    "cameron-rohn"
+  ],
+  "date": "2024-10-02",
+  "event": "2024-10-02",
   "youtubeId": "DSvQYLn8kjI",
+  "publishAt": "2024-10-21T12:00:00-05:00",
   "duration": 1948,
   "topics": [
     "RAG"

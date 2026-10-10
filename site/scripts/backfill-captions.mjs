@@ -130,7 +130,7 @@ const log = { gate: [], events: [], speakers: [], none: [] };
 for (const f of all) {
   const talk = JSON.parse(readFileSync(join(talksDir, f), 'utf8'));
   const slug = f.slice(0, -5);
-  if (!talk.backfill || talk.transcript?.length || (talk.publishAt && new Date(talk.publishAt) > new Date())) continue;
+  if (!talk.backfill || talk.start !== undefined || talk.transcript?.length || (talk.publishAt && new Date(talk.publishAt) > new Date())) continue;
   // Talks by the organizer are held for human review.
   if (talk.speakers?.includes('colin-mcnamara') || /colin/i.test(talk.title)) continue;
   stats.processed++;

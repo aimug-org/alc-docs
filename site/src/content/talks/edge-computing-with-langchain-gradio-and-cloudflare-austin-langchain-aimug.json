@@ -3,8 +3,10 @@
   "speakers": [
     "karim-lalani"
   ],
-  "date": "2024-12-23",
+  "date": "2024-12-19",
+  "event": "2024-12-19",
   "youtubeId": "47KiKEgsrKI",
+  "publishAt": "2024-12-23T12:00:00-05:00",
   "duration": 3431,
   "summary": "Explore the fascinating world of AI and user interface design with Karim Lalani at the Austin LangChain December Meeting! Karim, a seasoned software engineer and contractor for the state of Texas, takes us through a hands-on lab featuring Gradio and Cloudflare Workers AI.",
   "topics": [
@@ -1070,6 +1072,12 @@
     {
       "t": 3410,
       "text": "at the next Austin L chain aim mug event for"
+    }
+  ],
+  "links": [
+    {
+      "label": "Repo",
+      "url": "https://github.com/aimug-org/austin_langchain/tree/main/labs/LangChain_111"
     }
   ],
   "backfill": true

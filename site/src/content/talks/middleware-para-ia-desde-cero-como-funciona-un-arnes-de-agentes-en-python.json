@@ -1,6 +1,8 @@
 {
   "title": "Middleware para IA desde Cero: cómo funciona un arnés de agentes en Python",
-  "speakers": [],
+  "speakers": [
+    "juan-iturbe"
+  ],
   "date": "2026-06-23",
   "youtubeId": "1P1r1bmET1Q",
   "duration": 1802,

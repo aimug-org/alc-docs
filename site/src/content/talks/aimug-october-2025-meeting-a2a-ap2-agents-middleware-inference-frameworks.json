@@ -1,12 +1,36 @@
 {
   "title": "AIMUG October 2025 Meeting: A2A & AP2 Agents, Middleware & Inference Frameworks",
   "speakers": [],
-  "date": "2025-10-21",
+  "date": "2025-10-01",
+  "event": "2025-10-01",
   "youtubeId": "RvG3KXRiURQ",
+  "publishAt": "2025-10-21T12:00:00-05:00",
   "duration": 5251,
   "topics": [
     "Inference",
     "Agents"
+  ],
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Welcome and news"
+    },
+    {
+      "t": 1096,
+      "title": "LangChain Middleware 1.0 Alpha: Human-in-the-Loop AI, Observability & Deep Agents"
+    },
+    {
+      "t": 1839,
+      "title": "A2A & AP2: Agent Commerce Arrives (Ryan Booth)"
+    },
+    {
+      "t": 3156,
+      "title": "AI Detecting Cancer with Graph Neural Networks: Stanford Internship by Venika Kakarla"
+    },
+    {
+      "t": 4041,
+      "title": "Running LLMs Locally: Ollama, vLLM & Transformers (Dmitri Iourovitski)"
+    }
   ],
   "backfill": true
 }

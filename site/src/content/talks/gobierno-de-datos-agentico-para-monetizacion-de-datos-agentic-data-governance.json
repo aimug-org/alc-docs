@@ -1,8 +1,11 @@
 {
   "title": "Gobierno de Datos Agentico para Monetización de Datos |Agentic Data Governance for Data Monetization",
-  "speakers": [],
-  "date": "2026-05-29",
+  "speakers": [
+    "ronald-mego"
+  ],
+  "date": "2026-05-20",
   "youtubeId": "ZWrYt6lgeaw",
+  "publishAt": "2026-05-29T12:00:00-05:00",
   "duration": 809,
   "summary": "How can you move beyond \"experimental\" AI agents and actually impact your company's bottom line? In this session, we explore the critical bridge between AI development and Data Governance.",
   "topics": [
@@ -390,5 +393,11 @@
       "text": "Okay? And okay, that's all. That's my my I want to tell"
     }
   ],
-  "backfill": true
+  "backfill": true,
+  "links": [
+    {
+      "label": "Demo",
+      "url": "https://ronaldmego.com/charlas/gobierno-datos-agentico"
+    }
+  ]
 }

@@ -1,0 +1,24 @@
+{
+  "title": "Fine-Tuning Embeddings for Nuclear Regulatory Work",
+  "speakers": [
+    "rob-whelan"
+  ],
+  "date": "2025-06-04",
+  "event": "2025-06-04",
+  "youtubeId": "Owvcy7GIvEY",
+  "duration": 986,
+  "start": 1983,
+  "end": 2969,
+  "topics": [],
+  "links": [
+    {
+      "label": "Slides",
+      "url": "https://aimug.org/docs/jun-2025/lightning-talks/Fine%20tuning%20embeddings%20for%20nuclear%20power.pdf"
+    },
+    {
+      "label": "Notebook",
+      "url": "https://aimug.org/docs/jun-2025/lightning-talks/finetune-embeddings-notebook.ipynb"
+    }
+  ],
+  "backfill": true
+}

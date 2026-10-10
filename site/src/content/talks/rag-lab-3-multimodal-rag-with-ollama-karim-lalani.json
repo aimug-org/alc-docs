@@ -1,0 +1,17 @@
+{
+  "title": "RAG Lab 3: Multimodal RAG with Ollama",
+  "speakers": [
+    "karim-lalani"
+  ],
+  "date": "2024-02-07",
+  "event": "2024-02-07",
+  "youtubeId": "ZQnOEPArIcI",
+  "duration": 1429,
+  "start": 3244,
+  "end": 4673,
+  "topics": [
+    "RAG",
+    "Inference"
+  ],
+  "backfill": true
+}

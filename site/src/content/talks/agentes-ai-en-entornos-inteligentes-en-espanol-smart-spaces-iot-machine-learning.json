@@ -1,14 +1,17 @@
 {
   "title": "Agentes AI en Entornos Inteligentes En Espanol | Smart Spaces, IoT, Machine Learning",
-  "speakers": [],
-  "date": "2026-05-11",
+  "speakers": [
+    "victor-rodriguez",
+    "alejandro-mo"
+  ],
+  "date": "2026-04-15",
   "youtubeId": "BTuGssS5u1o",
+  "publishAt": "2026-05-11T12:00:00-05:00",
   "duration": 1363,
   "summary": "En esta charla del Panama AI Meetup Group (AIMUG), Victor Rodriguez y Alejandro Mo presentan su trabajo sobre agentes de Inteligencia Artificial para entornos inteligentes, combinando conceptos de IA, Machine Learning, IoT y Smart Systems.",
   "topics": [
     "Agents"
   ],
-  "language": "es",
   "transcript": [
     {
       "t": 1,
@@ -491,5 +494,6 @@
       "text": "Eh, esa es nuestra proyecto tesis preguntas. Bienvenido."
     }
   ],
+  "language": "es",
   "backfill": true
 }

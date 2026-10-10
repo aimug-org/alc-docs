@@ -10,54 +10,211 @@
 - id: jake-cukjati
   name: Jake Cukjati
   photo: /speakers/jake-cukjati.jpg
+  links:
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/jacob-cukjati-iv" }
+    - { label: Website, url: "https://byteofcode.io/" }
+    - { label: GitHub, url: "https://github.com/jackstine" }
+    - { label: X, url: "https://x.com/Byte0fCode" }
 
 - id: jeff-linwood
   name: Jeff Linwood
   photo: /speakers/jeff-linwood.jpg
+  links:
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/jefflinwood/" }
+    - { label: Website, url: "https://www.jefflinwood.com/" }
+    - { label: GitHub, url: "https://github.com/jefflinwood" }
+    - { label: X, url: "https://x.com/jefflinwood" }
 
 - id: joseph-fluckiger
   name: Joseph Fluckiger
   photo: /speakers/joseph-fluckiger.jpg
+  links:
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/josephflu" }
+    - { label: Website, url: "https://blog.fluckiger.org/" }
+    - { label: GitHub, url: "https://github.com/josephflu" }
 
 - id: james-coffey
   name: James Coffey
   photo: /speakers/james-coffey.jpg
+  links:
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/james-f-coffey" }
+    - { label: GitHub, url: "https://github.com/JamesFCoffey" }
+    - { label: X, url: "https://x.com/CoffeyFirst" }
+    - { label: Medium, url: "https://medium.com/@james-coffey" }
 
 - id: ryan-booth
   name: Ryan Booth
+  title: "AI Solutions Consultant"
+  photo: /speakers/ryan-booth.jpg
+  links:
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/ryanbooth15/" }
+    - { label: Website, url: "https://abstractryan.ai/" }
+    - { label: GitHub, url: "https://github.com/that1guy15" }
+    - { label: X, url: "https://x.com/that1guy_15" }
 
 - id: venika-kakarla
   name: Venika Kakarla
+  photo: /speakers/venika-kakarla.jpg
 
 - id: paul-phelps
   name: Paul Phelps
+  photo: /speakers/paul-phelps.jpg
 
 - id: sal-castoro
   name: Sal Castoro
+  photo: /speakers/sal-castoro.jpg
+  links:
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/sal-castoro-3b1050178/" }
+    - { label: Website, url: "https://salcastoro.com/" }
+    - { label: GitHub, url: "https://github.com/scastoro" }
 
 - id: collier-king
   name: Collier King
+  title: "Machine Learning Engineer"
+  company: "Cloudflare"
+  photo: /speakers/collier-king.jpg
+  links:
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/collierking/" }
+    - { label: Website, url: "http://collierking.com/" }
+    - { label: GitHub, url: "https://github.com/CollierKing" }
 
 - id: dave-sottimano
   name: Dave Sottimano
+  photo: /speakers/dave-sottimano.jpg
+  links:
+    - { label: GitHub, url: "https://github.com/dsottimano" }
 
 - id: juan-iturbe
   name: Juan Iturbe
+  title: "LangGraph Developer and Applied AI Lead"
+  company: "Ketzai"
+  photo: /speakers/juan-iturbe.jpg
+  links:
+    - { label: Website, url: "https://i2phi.com/" }
+    - { label: GitHub, url: "https://github.com/ituPhi" }
 
 - id: andy-caballero
   name: Andy Caballero
+  title: "AI Strategic Consultant and Technology Leader"
+  photo: /speakers/andy-caballero.jpg
+  links:
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/andy-caballero-bb5a4983/" }
+    - { label: Website, url: "https://www.andycaballero.me/" }
+    - { label: Ketzai, url: "https://www.ketzai.com/" }
 
 - id: robert-davis
   name: Robert Davis
+  photo: /speakers/robert-davis.jpg
 
 - id: riccardo-pirruccio
   name: Riccardo Pirruccio
+  title: "Technical Project Manager and Software Engineer"
+  company: "Applied Materials"
+  photo: /speakers/riccardo-pirruccio.jpg
+  links:
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/riccardopirruccio/" }
+    - { label: Website, url: "https://rickystech.com/" }
+    - { label: GitHub, url: "https://github.com/RPirruccio" }
+    - { label: X, url: "https://x.com/ricky_pirr" }
 
 - id: dmitri-iourovitski
   name: Dmitri Iourovitski
+  photo: /speakers/dmitri-iourovitski.jpg
 
 - id: vaskin-kissoyan
   name: Vaskin Kissoyan
+  title: "Retained Chief AI Officer"
+  company: "Agentic Insights"
+  photo: /speakers/vaskin-kissoyan.jpg
+  links:
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/vaskin/" }
+    - { label: Website, url: "https://agenticinsights.com/" }
+    - { label: GitHub, url: "https://github.com/killerapp" }
+    - { label: X, url: "https://x.com/VaskinK" }
 
 - id: karim-lalani
   name: Karim Lalani
+  photo: /speakers/karim-lalani.jpg
+  links:
+    - { label: GitHub, url: "https://github.com/lalanikarim" }
+
+- id: scott-askinosie
+  name: Scott Askinosie
+  links:
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/scott-askinosie" }
+    - { label: GitHub, url: "https://github.com/saskinosie" }
+
+- id: jackson-arnold
+  name: Jackson Arnold
+  links:
+    - { label: GitHub, url: "https://github.com/jacksonarnold" }
+
+- id: cameron-rohn
+  name: Cameron Rohn
+  links:
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/cameron-rohn/" }
+    - { label: Website, url: "https://cameronrohn.com/" }
+    - { label: GitHub, url: "https://github.com/Cam10001110101" }
+
+- id: saurabh-lal-saxena
+  name: Saurabh Lal Saxena
+  links:
+    - { label: GitHub, url: "https://github.com/saurabhlalsaxena" }
+
+- id: rob-whelan
+  name: Rob Whelan
+  links:
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/rob-whelan-036b905/" }
+    - { label: GitHub, url: "https://github.com/robwhelan" }
+
+- id: robert-kessler
+  name: Robert Kessler
+
+- id: james-skelton
+  name: James Skelton
+
+- id: dan-manning
+  name: Dan Manning
+
+- id: anupama-garani
+  name: Anupama Garani
+  title: "Data Specialist"
+  company: "PIMCO"
+  links:
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/anupama-garani/" }
+
+- id: nate-little
+  name: Nate Little
+
+- id: guillermo-malo-de-molina
+  name: Guillermo Malo de Molina
+
+- id: rolando-perez
+  name: Rolando Pérez
+
+- id: milagros-jaen-vargas
+  name: Milagros Jaen Vargas
+  links:
+    - { label: GitHub, url: "https://github.com/mjaenvargas" }
+
+- id: victor-rodriguez
+  name: Victor Rodriguez
+
+- id: alejandro-mo
+  name: Alejandro Mo
+
+- id: victor-rodriguez-hypernova
+  name: Victor Rodríguez
+  title: "Developer"
+  company: "Hypernova Labs"
+
+- id: max-phelps
+  name: Max Phelps
+
+- id: ronald-mego
+  name: Ronald Mego
+  links:
+    - { label: LinkedIn, url: "https://linkedin.com/in/ronaldmego" }
+    - { label: Website, url: "https://ronaldmego.com/" }
+    - { label: GitHub, url: "https://github.com/ronaldmego" }
+    - { label: X, url: "https://x.com/ronaldmego_" }

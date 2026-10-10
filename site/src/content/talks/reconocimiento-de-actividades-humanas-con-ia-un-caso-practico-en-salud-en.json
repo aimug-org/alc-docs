@@ -1,12 +1,14 @@
 {
   "title": "Reconocimiento de actividades humanas con IA: un caso práctico en salud (En Espanol)",
-  "speakers": [],
-  "date": "2026-05-06",
+  "speakers": [
+    "milagros-jaen-vargas"
+  ],
+  "date": "2026-04-15",
   "youtubeId": "-N2yV_ZWVns",
+  "publishAt": "2026-05-06T12:00:00-05:00",
   "duration": 1732,
   "summary": "Presente a Milagros Jaen Vargas IA para la salud: Human Activity Recognition (HAR) con un caso real | Panama AIMUG",
   "topics": [],
-  "language": "es",
   "transcript": [
     {
       "t": 2,
@@ -613,5 +615,6 @@
       "text": "Y bueno, eso era todo de mi parte. Ah, gracias por su atención. Si tienes ahí alguna pregunta, pues estoy aquí arri me digan."
     }
   ],
+  "language": "es",
   "backfill": true
 }

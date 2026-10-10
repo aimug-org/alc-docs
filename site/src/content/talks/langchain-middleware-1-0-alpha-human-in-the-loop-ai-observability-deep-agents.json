@@ -1,8 +1,12 @@
 {
   "title": "LangChain Middleware 1.0 Alpha: Human-in-the-Loop AI, Observability & Deep Agents",
-  "speakers": [],
-  "date": "2025-10-22",
+  "speakers": [
+    "colin-mcnamara"
+  ],
+  "date": "2025-10-01",
+  "event": "2025-10-01",
   "youtubeId": "en_kBBZCRdM",
+  "publishAt": "2025-10-22T12:00:00-05:00",
   "duration": 716,
   "topics": [
     "Agents"

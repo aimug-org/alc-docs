@@ -1,8 +1,11 @@
 {
   "title": "Cómo Programar con Agentes de IA: Contexto, Feedback y Productividad Real",
-  "speakers": [],
-  "date": "2026-02-12",
+  "speakers": [
+    "rolando-perez"
+  ],
+  "date": "2026-01-21",
   "youtubeId": "waAkY4AgHhQ",
+  "publishAt": "2026-02-12T12:00:00-05:00",
   "duration": 873,
   "topics": [
     "Agents"

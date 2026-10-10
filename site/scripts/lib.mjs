@@ -20,6 +20,7 @@ export function existingTalks() {
   const byId = new Map();
   for (const f of readdirSync(talksDir).filter((f) => f.endsWith('.json'))) {
     const d = JSON.parse(readFileSync(join(talksDir, f), 'utf8'));
+    if (d.start !== undefined) continue; // a segment of a full-night video; the video's own entry is the match
     byId.set(d.youtubeId, { slug: f.slice(0, -5), backfill: !!d.backfill, date: d.date, dateApprox: !!d.dateApprox });
   }
   return byId;

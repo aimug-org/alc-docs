@@ -1,9 +1,25 @@
 {
   "title": "December Showcase and Mixer Austin LangChain AIMUG",
   "speakers": [],
-  "date": "2024-12-20",
+  "date": "2024-12-19",
+  "event": "2024-12-19",
   "youtubeId": "sfsE6x3rP_4",
+  "publishAt": "2024-12-20T12:00:00-05:00",
   "duration": 6807,
   "topics": [],
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Welcome and news"
+    },
+    {
+      "t": 1062,
+      "title": "Edge Computing with LangChain, Gradio, and Cloudflare (Karim Lalani)"
+    },
+    {
+      "t": 4520,
+      "title": "Building a Full-Stack App in Five Days: A Marina Management System (Riccardo Pirruccio)"
+    }
+  ],
   "backfill": true
 }

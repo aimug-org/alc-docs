@@ -1,8 +1,11 @@
 {
   "title": "Arquitecturas Cognitivas y Agentes de IA: Cómo Construir Sistemas Autónomos con LangGraph",
-  "speakers": [],
-  "date": "2026-02-19",
+  "speakers": [
+    "juan-iturbe"
+  ],
+  "date": "2026-01-21",
   "youtubeId": "-T3FGOM9R9s",
+  "publishAt": "2026-02-19T12:00:00-05:00",
   "duration": 1402,
   "summary": "El consumado ingeniero de IA y desarrollador full-stack Juan Francisco Iturbe habla sobre el desarrollo de la IA durante la reunión de Panamá AI/MUG el 21 de enero de 2026.",
   "topics": [

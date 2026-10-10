@@ -1,11 +1,31 @@
 {
   "title": "Exploring LangGraph",
   "speakers": [],
-  "date": "2024-03-11",
+  "date": "2024-03-07",
+  "event": "2024-03-07",
   "youtubeId": "c-7xpl7ahZw",
+  "publishAt": "2024-03-11T12:00:00-05:00",
   "duration": 7006,
   "topics": [
     "LangGraph"
+  ],
+  "chapters": [
+    {
+      "t": 0,
+      "title": "LangGraph Labs: Agent Supervisor and Multi-Agent Collaboration"
+    },
+    {
+      "t": 3030,
+      "title": "A LangGraph RAG Agent with Ollama and SurrealDB"
+    },
+    {
+      "t": 6030,
+      "title": "Manufacturing BOM Analysis with LangGraph"
+    },
+    {
+      "t": 6900,
+      "title": "Q&A and wrap-up"
+    }
   ],
   "backfill": true
 }

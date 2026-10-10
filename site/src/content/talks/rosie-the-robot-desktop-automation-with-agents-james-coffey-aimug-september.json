@@ -3,9 +3,10 @@
   "speakers": [
     "james-coffey"
   ],
-  "date": "2025-09-30",
+  "date": "2025-09-10",
   "event": "2025-09-10",
   "youtubeId": "-TgsPm_54so",
+  "publishAt": "2025-09-30T12:00:00-05:00",
   "duration": 1033,
   "summary": "In this talk from the Austin AI Middleware Users Group (AIMUG) September Showcase, James Coffey shares how he’s using AI to solve a personal pain point: his cluttered computer desktop.",
   "topics": [

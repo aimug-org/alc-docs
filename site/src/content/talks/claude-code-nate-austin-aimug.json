@@ -1,9 +1,12 @@
 {
   "title": "Claude Code - Nate",
-  "speakers": [],
-  "date": "2025-08-27",
+  "speakers": [
+    "nate-little"
+  ],
+  "date": "2025-08-14",
   "event": "2025-08-14",
   "youtubeId": "dYHaCTUPjxs",
+  "publishAt": "2025-08-27T12:00:00-05:00",
   "duration": 2704,
   "summary": "Nate shares his Claude Code setup with the group in our August Showcase",
   "topics": [

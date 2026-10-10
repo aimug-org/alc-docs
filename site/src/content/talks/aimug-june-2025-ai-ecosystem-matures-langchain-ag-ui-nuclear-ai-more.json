@@ -1,9 +1,37 @@
 {
   "title": "AIMUG June 2025 | AI Ecosystem Matures: LangChain, AG-UI, Nuclear AI & More",
   "speakers": [],
-  "date": "2025-06-06",
+  "date": "2025-06-04",
+  "event": "2025-06-04",
   "youtubeId": "Owvcy7GIvEY",
+  "publishAt": "2025-06-06T12:00:00-05:00",
   "duration": 6331,
   "topics": [],
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Welcome and news"
+    },
+    {
+      "t": 772,
+      "title": "LangChain ecosystem news"
+    },
+    {
+      "t": 1173,
+      "title": "AG-UI: The Agent-User Interaction Protocol"
+    },
+    {
+      "t": 1983,
+      "title": "Fine-Tuning Embeddings for Nuclear Regulatory Work"
+    },
+    {
+      "t": 2969,
+      "title": "The AI Ecosystem Landscape in 2025"
+    },
+    {
+      "t": 3999,
+      "title": "Interrupt 2025 Conference Panel"
+    }
+  ],
   "backfill": true
 }

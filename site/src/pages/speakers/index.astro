@@ -14,7 +14,7 @@ const nextBy = (id: string) => soon.find((t) => t.data.speakers.includes(id));
 <Base title="Speakers" description="The people who have given talks at AIMUG, the AI Middleware Users Group in Austin.">
   <section aria-labelledby="sp-h" class="mx-auto max-w-[1240px] px-4 pt-12 pb-20 sm:px-8">
     <h1 id="sp-h" class="m-0 font-display text-[clamp(48px,7vw,96px)] leading-[0.95] font-normal uppercase">Speakers</h1>
-    <p class="m-0 mt-3 max-w-[60ch] text-xl text-soft">Builders from Austin and online who took the stage. <a href="/speak/">Your talk next?</a></p>
+    <p class="m-0 mt-3 max-w-[60ch] text-xl text-soft">{speakers.length} builders from Austin, Panama and online who took the stage since 2023. <a href="/speak/">Your talk next?</a></p>
     <ul class="m-0 mt-10 grid list-none grid-cols-[repeat(auto-fill,minmax(min(100%,220px),1fr))] gap-6 p-0" data-pagefind-ignore="all">
       {speakers.map((s) => {
         const n = talksBy(s.id);

@@ -1,8 +1,11 @@
 {
   "title": "Self-Improving Agents in Production | Agentes Con Capacidad de Autoaprendizaje en Producción",
-  "speakers": [],
-  "date": "2026-05-29",
+  "speakers": [
+    "max-phelps"
+  ],
+  "date": "2026-05-20",
   "youtubeId": "Djn_1W64118",
+  "publishAt": "2026-05-29T12:00:00-05:00",
   "duration": 1196,
   "summary": "How do you keep your company competitive and \"alive\" in the rapidly evolving age of AI?",
   "topics": [

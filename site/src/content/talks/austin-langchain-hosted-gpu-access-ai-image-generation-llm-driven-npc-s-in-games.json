@@ -1,11 +1,31 @@
 {
   "title": "Austin LangChain: Hosted GPU Access, AI Image Generation, LLM Driven NPC's in Games, and More!",
   "speakers": [],
-  "date": "2024-04-23",
+  "date": "2024-04-03",
+  "event": "2024-04-03",
   "youtubeId": "hqISYiVoGQY",
+  "publishAt": "2024-04-23T12:00:00-05:00",
   "duration": 8992,
   "topics": [
     "Inference"
+  ],
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Welcome and news (Riccardo Pirruccio)"
+    },
+    {
+      "t": 2400,
+      "title": "Integrating AI into Web Apps with Paperspace by DigitalOcean"
+    },
+    {
+      "t": 4400,
+      "title": "AI Image Generation with Automatic1111 and LangChain"
+    },
+    {
+      "t": 6720,
+      "title": "LLM-Driven NPCs in Games"
+    }
   ],
   "backfill": true
 }

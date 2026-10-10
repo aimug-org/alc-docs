@@ -1,8 +1,12 @@
 {
-  "title": "10 24 2024 Austin LangChain Showcase Perplexity Clone",
-  "speakers": [],
-  "date": "2024-10-21",
+  "title": "Building a Perplexity Clone with LangChain",
+  "speakers": [
+    "saurabh-lal-saxena"
+  ],
+  "date": "2024-10-02",
+  "event": "2024-10-02",
   "youtubeId": "slzOy2w-kVs",
+  "publishAt": "2024-10-21T12:00:00-05:00",
   "duration": 576,
   "summary": "In this showcase, Saurabh demonstrates a clone of Perplexity, highlighting the capabilities of LangChain in creating powerful question-answering systems.",
   "topics": [
