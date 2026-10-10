@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 
 const { talk } = Astro.props as { talk: Talk };
 const d = talk.data;
-const yt = `https://www.youtube.com/watch?v=${d.youtubeId}`;
+const yt = `https://www.youtube.com/watch?v=${d.youtubeId}${d.start ? `&t=${d.start}s` : ''}`;
 const speakerEntries = await getEntries(d.speakers.map((id) => ({ collection: 'speakers' as const, id })));
 const missing = d.speakers.filter((_, i) => !speakerEntries[i]);
 if (missing.length) throw new Error(`Talk "${talk.id}" lists speaker id(s) not in speakers.yaml: ${missing.join(', ')}`);
@@ -21,9 +21,15 @@ const next = await nextEvent();
 const rsvp = next?.data.rsvp.luma ?? next?.data.rsvp.meetup;
 const pitchBy = next?.data.pitchDeadline && next.data.pitchDeadline > now ? next.data.pitchDeadline : undefined;
 const btn = 'inline-flex min-h-[44px] items-center rounded-full border border-line px-4 font-semibold no-underline hover:text-gold';
-const sameNight = d.event
-  ? [...(await publicTalks()), ...(await upcomingTalks())].filter((t) => t.data.event === d.event && t.id !== talk.id)
-  : [];
+// Segments are talks cut out of one full-night upload by start/end; they share its youtubeId.
+const segment = d.start !== undefined;
+const sameVideo = (await publicTalks()).filter((t) => t.data.youtubeId === d.youtubeId && t.id !== talk.id);
+const parent = segment ? sameVideo.find((t) => t.data.start === undefined) : undefined;
+const segments = sameVideo.filter((t) => t.data.start !== undefined).sort((a, b) => a.data.start! - b.data.start!);
+const sameNight = [
+  ...segments,
+  ...(d.event ? [...(await publicTalks()), ...(await upcomingTalks())].filter((t) => t.data.event === d.event && t.id !== talk.id && !segments.includes(t)) : []),
+];
 const shown = new Set([talk.id, ...sameNight.map((t) => t.id)]);
 // Related: other public talks that share a topic (any position), ranked by shared topics, then same speaker, then closest date.
 const mine = new Set(d.topics);
@@ -45,11 +51,13 @@ const ev = d.event ? (await getCollection('events')).find((e) => e.id === d.even
 // only feed site search, through an attribute Pagefind indexes, and never show as text or structured data.
 const stub = !!d.backfill;
 const showTranscript = !d.backfill && d.transcript.length > 0;
+// A full night with no chapters of its own gets one per segment.
+const chapters = d.chapters.length ? d.chapters : segments.map((t) => ({ t: t.data.start!, title: t.data.title }));
 const recent = stub
   ? (await publicTalks()).filter((t) => !shown.has(t.id) && !more.some((m) => m.id === t.id)).sort((a, b) => +b.data.date - +a.data.date).slice(0, 3)
   : [];
 // Transcript lines grouped under the chapter they fall in; lines before the first chapter get no heading.
-const sortedCh = [...d.chapters].sort((a, b) => a.t - b.t);
+const sortedCh = [...chapters].sort((a, b) => a.t - b.t);
 const groups: { ch?: (typeof sortedCh)[number]; lines: typeof d.transcript }[] = [];
 if (!sortedCh.length || (d.transcript[0] && d.transcript[0].t < sortedCh[0].t)) groups.push({ lines: [] });
 sortedCh.forEach((ch) => groups.push({ ch, lines: [] }));
@@ -77,7 +85,7 @@ const jsonld = {
   thumbnailUrl: new URL(thumb(talk), Astro.site).href,
   uploadDate: (d.publishAt ?? d.date).toISOString(),
   ...(d.duration && { duration: iso(d.duration) }),
-  embedUrl: `https://www.youtube-nocookie.com/embed/${d.youtubeId}`,
+  embedUrl: `https://www.youtube-nocookie.com/embed/${d.youtubeId}${d.start ? `?start=${d.start}` : ''}`,
   url: pageHref,
   inLanguage: d.language ?? 'en',
   ...(clips.length && { hasPart: clips }),
@@ -94,7 +102,7 @@ const h2 = 'm-0 text-[26px] font-bold';
 
     <div class="mt-5 grid items-start gap-x-8 gap-y-10 lg:grid-cols-[minmax(0,1fr)_380px]">
       <div class="flex min-w-0 flex-col gap-4">
-        <Player id={d.youtubeId} title={d.title} image={thumb(talk)} />
+        <Player id={d.youtubeId} title={d.title} image={thumb(talk)} start={d.start} end={d.end} />
         <p class="m-0 flex flex-wrap gap-x-4 gap-y-1 font-mono text-sm text-muted uppercase" data-pagefind-ignore>
           <span data-pagefind-filter={`year:${year}`}>{fmtDate(d.date, { year: 'numeric' })}</span>
           {d.duration && <span>{mmss(d.duration)}</span>}
@@ -116,6 +124,7 @@ const h2 = 'm-0 text-[26px] font-bold';
         {d.summary && <p class="m-0 max-w-[68ch] text-xl text-soft">{d.summary}</p>}
         <p class="m-0 flex flex-wrap gap-x-5 gap-y-2 text-base" data-pagefind-ignore>
           <a href={yt} class="font-bold no-underline">Watch on YouTube</a>
+          {parent && <a href={`/talks/${parent.id}/`} class="no-underline">From the full recording of the night</a>}
           {ev && <a href={`/events/#${ev.id}`} class="no-underline">Recorded at AIMUG, {fmtDate(d.date, { year: 'numeric', weekday: undefined })}</a>}
           {ev?.data.recap && <a href={ev.data.recap} class="no-underline">Recap of the night</a>}
           {ev?.data.docs && <a href={ev.data.docs} class="no-underline">Slides and notes</a>}
@@ -129,11 +138,11 @@ const h2 = 'm-0 text-[26px] font-bold';
         {stub && d.transcript.length > 0 && <span data-pagefind-index-attrs="data-captions" data-captions={d.transcript.map((l) => l.text).join(' ')}></span>}
       </div>
 
-      {d.chapters.length > 0 && (
+      {chapters.length > 0 && (
         <aside aria-labelledby="ch-h" class="flex flex-col gap-3 rounded-[18px] border border-line bg-panel p-6 lg:sticky lg:top-4 lg:row-span-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto" data-pagefind-ignore>
           <h2 id="ch-h" class={label}>Chapters</h2>
           <ol class="m-0 flex list-none flex-col p-0">
-            {d.chapters.map((c) => (
+            {chapters.map((c) => (
               <li class="grid grid-cols-[1fr_auto] items-center gap-2 border-t border-line first:border-t-0">
                 <a href={`${yt}&t=${c.t}s`} data-t={c.t} class="grid min-h-[44px] grid-cols-[60px_1fr] items-center gap-3 py-2.5 text-text no-underline hover:text-gold">
                   <span class="font-mono text-[15px] text-gold">{mmss(c.t)}</span><span>{c.title}</span>
@@ -249,7 +258,7 @@ const h2 = 'm-0 text-[26px] font-bold';
 
     {sameNight.length > 0 && (
       <section aria-labelledby="night-h" class="mt-16 flex flex-col gap-6" data-pagefind-ignore="all">
-        <h2 id="night-h" class="m-0 font-display text-[clamp(32px,4vw,48px)] leading-none font-normal uppercase">Same night</h2>
+        <h2 id="night-h" class="m-0 font-display text-[clamp(32px,4vw,48px)] leading-none font-normal uppercase">{segments.length && !segment ? 'In this recording' : 'Same night'}</h2>
         <div class="grid grid-cols-[repeat(auto-fill,minmax(min(100%,260px),1fr))] gap-6">
           {sameNight.map((t) => <TalkCard talk={t} size="sm" />)}
         </div>

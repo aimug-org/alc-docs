@@ -2,6 +2,7 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import TalkCard from '../../components/TalkCard.astro';
+import Icon from '../../components/Icon.astro';
 import { publicTalks, upcomingTalks, fmtDate } from '../../lib/data';
 
 export async function getStaticPaths() {
@@ -14,6 +15,8 @@ const mine = (t: { data: { speakers: string[] } }) => t.data.speakers.includes(s
 const talks = (await publicTalks()).filter(mine);
 const soon = (await upcomingTalks()).filter(mine);
 const first = talks.length ? talks.reduce((a, t) => (t.data.date < a ? t.data.date : a), talks[0].data.date) : undefined;
+const icons: Record<string, 'linkedin' | 'x' | 'github' | 'youtube'> = { LinkedIn: 'linkedin', X: 'x', GitHub: 'github', YouTube: 'youtube' };
+const talkLinks = talks.flatMap((t) => t.data.links.map((l) => ({ t, l })));
 const initials = s.name.split(' ').map((w) => w[0]).slice(0, 2).join('');
 const role = [s.title, s.company].filter(Boolean).join(', ');
 const site = 'https://aimug.org';
@@ -40,7 +43,9 @@ const profileLd = {
         {role && <p class="m-0 text-xl text-soft">{role}</p>}
         {first && <p class="m-0 font-mono text-sm text-muted">{talks.length} {talks.length === 1 ? 'talk' : 'talks'} at AIMUG · First spoke {fmtDate(first, { weekday: undefined, day: undefined, year: 'numeric' })}</p>}
         {s.links.length > 0 && (
-          <p class="m-0 flex flex-wrap gap-x-5 gap-y-1 text-base">{s.links.map((l) => <a href={l.url} class="font-semibold">{l.label}</a>)}</p>
+          <p class="m-0 flex flex-wrap gap-x-5 text-base">{s.links.map((l) => (
+            <a href={l.url} rel="noopener" class="inline-flex min-h-[44px] items-center gap-2 font-semibold no-underline"><Icon name={icons[l.label] ?? 'link'} size={18} />{l.label}</a>
+          ))}</p>
         )}
       </div>
     </header>
@@ -56,5 +61,19 @@ const profileLd = {
         <p class="m-0 text-soft">No talks published yet.</p>
       )}
     </section>
+
+    {talkLinks.length > 0 && (
+      <section aria-labelledby="sl-h" class="mt-12" data-pagefind-ignore="all">
+        <h2 id="sl-h" class="m-0 mb-4 font-display text-[clamp(32px,4vw,48px)] leading-none font-normal uppercase">Slides and code</h2>
+        <ul class="m-0 flex list-none flex-col p-0">
+          {talkLinks.map(({ t, l }) => (
+            <li class="flex flex-wrap items-center gap-x-3 border-t border-line py-2 first:border-t-0">
+              <a href={l.url} rel="noopener" class="inline-flex min-h-[44px] items-center font-semibold">{l.label}</a>
+              <a href={`/talks/${t.id}/`} class="text-soft no-underline hover:text-gold">{t.data.title}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
   </article>
 </Base>

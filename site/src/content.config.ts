@@ -15,7 +15,10 @@ const talks = defineCollection({
     event: z.string().optional(), // events id, e.g. "2026-10-05"
     youtubeId: z.string(),
     publishAt: z.coerce.date().optional(), // when the video is public on YouTube; pages stay hidden before this
-    duration: z.number().optional(), // seconds
+    duration: z.number().optional(), // seconds; for a segment, the segment's length
+    // A talk inside a full-night upload: seconds into that video. The full-night entry has the same youtubeId and no start.
+    start: z.number().optional(),
+    end: z.number().optional(),
     summary: z.string().optional(),
     topics: z.array(z.string()).default([]),
     chapters: z.array(z.object({ t: z.number(), title: z.string() })).default([]),

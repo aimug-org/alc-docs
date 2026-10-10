@@ -1,11 +1,11 @@
 ---
 // YouTube facade: a thumbnail link to YouTube that swaps in the nocookie embed on click.
-// Any link on the page with data-t="<seconds>" jumps the player there.
-interface Props { id: string; title: string; image: string }
-const { id, title, image } = Astro.props;
+// Any link on the page with data-t="<seconds>" jumps the player there. start/end play one talk out of a full-night video.
+interface Props { id: string; title: string; image: string; start?: number; end?: number }
+const { id, title, image, start, end } = Astro.props;
 ---
-<div data-player={id} data-title={title}>
-  <a href={`https://www.youtube.com/watch?v=${id}`} class="group relative block aspect-video overflow-hidden rounded-[18px] bg-panel" aria-label={`Play ${title}`}>
+<div data-player={id} data-title={title} data-start={start} data-end={end}>
+  <a href={`https://www.youtube.com/watch?v=${id}${start ? `&t=${start}s` : ''}`} class="group relative block aspect-video overflow-hidden rounded-[18px] bg-panel" aria-label={`Play ${title}`}>
     <img src={image} alt="" data-pagefind-meta="image[src]" class="h-full w-full object-cover" />
     <span class="absolute inset-0 flex items-center justify-center bg-ink/10 transition-colors group-hover:bg-ink/0">
       <span class="flex h-[76px] w-[76px] items-center justify-center rounded-full bg-gold text-ink shadow-xl transition-transform group-hover:scale-105 sm:h-24 sm:w-24">
@@ -25,12 +25,13 @@ const { id, title, image } = Astro.props;
     };
     // Deep link: #t-<n> or ?t=<n> sets the start time; the facade stays until the user clicks play.
     const m = location.hash.match(/^#t-(\d+)$/) || location.search.match(/[?&]t=(\d+)/);
-    let start = m ? Number(m[1]) : 0;
+    const own = Number(box.dataset.start || 0), end = box.dataset.end;
+    let start = m ? Number(m[1]) : own;
     const note = box.querySelector('[data-start-note]');
-    if (start) { note.textContent = `Starts at ${fmt(start)}`; note.hidden = false; }
+    if (start !== own) { note.textContent = `Starts at ${fmt(start)}`; note.hidden = false; }
     const play = (t) => {
       const f = document.createElement('iframe');
-      f.src = `https://www.youtube-nocookie.com/embed/${box.dataset.player}?autoplay=1${t ? `&start=${t}` : ''}`;
+      f.src = `https://www.youtube-nocookie.com/embed/${box.dataset.player}?autoplay=1${t ? `&start=${t}` : ''}${end ? `&end=${end}` : ''}`;
       f.title = box.dataset.title;
       f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
       f.allowFullscreen = true;
