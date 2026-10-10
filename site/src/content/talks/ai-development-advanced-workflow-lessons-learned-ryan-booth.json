@@ -888,5 +888,11 @@
       "text": "What's up?"
     }
   ],
-  "backfill": true
+  "backfill": true,
+  "links": [
+    {
+      "label": "Slides",
+      "url": "https://github.com/aimug-org/austin_langchain/blob/main/resources/presentations/Advanced%20AI%20Development%20workflows%20-%20Ryan%20Booth%20-%200702_2025%20.pdf"
+    }
+  ]
 }

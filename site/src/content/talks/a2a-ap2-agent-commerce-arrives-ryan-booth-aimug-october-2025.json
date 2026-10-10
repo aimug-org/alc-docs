@@ -520,5 +520,11 @@
       "text": ">> Yeah, I'll grab your question after a bit. Okay. >> I'll encourage everyone to continue the conversation at"
     }
   ],
-  "backfill": true
+  "backfill": true,
+  "links": [
+    {
+      "label": "Slides",
+      "url": "https://github.com/aimug-org/austin_langchain/blob/main/resources/presentations/2025_10-1-Austin-LangChain-Ryan-A2A_AP2-demo.pptx"
+    }
+  ]
 }

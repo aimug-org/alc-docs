@@ -627,5 +627,11 @@
       "text": "middleware and I gave it S3 middleware so it would be able to access stuff on S3. So um we could probably do a whole talk on just middleware. Anyway, thank you so much. Uh appreciate it."
     }
   ],
-  "backfill": true
+  "backfill": true,
+  "links": [
+    {
+      "label": "Repo",
+      "url": "https://github.com/CollierKing/langchain-deepagents-examples/tree/main/examples/ai_theme_plays"
+    }
+  ]
 }

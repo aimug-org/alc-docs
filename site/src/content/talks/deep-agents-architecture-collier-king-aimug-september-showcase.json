@@ -345,5 +345,11 @@
       "text": "[01:15:02:23 - 01:15:05:03] Colin McNamara Awesome. Well, thank you so much. Yep. [01:15:11:20 - 01:15:12:14] Colin McNamara And [01:15:12:14 - 01:15:12:14]"
     }
   ],
-  "backfill": true
+  "backfill": true,
+  "links": [
+    {
+      "label": "Slides",
+      "url": "https://github.com/aimug-org/austin_langchain/blob/main/resources/presentations/2025-09-10%20Austin%20LangChain%20-%20DeepAgents.pdf"
+    }
+  ]
 }
