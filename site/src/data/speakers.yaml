@@ -127,18 +127,31 @@
 
 - id: scott-askinosie
   name: Scott Askinosie
+  links:
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/scott-askinosie" }
+    - { label: GitHub, url: "https://github.com/saskinosie" }
 
 - id: jackson-arnold
   name: Jackson Arnold
+  links:
+    - { label: GitHub, url: "https://github.com/jacksonarnold" }
 
 - id: cameron-rohn
   name: Cameron Rohn
+  links:
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/cameron-rohn/" }
+    - { label: Website, url: "https://cameronrohn.com/" }
+    - { label: GitHub, url: "https://github.com/Cam10001110101" }
 
 - id: saurabh-lal-saxena
   name: Saurabh Lal Saxena
+  links:
+    - { label: GitHub, url: "https://github.com/saurabhlalsaxena" }
 
 - id: rob-whelan
   name: Rob Whelan
+  links:
+    - { label: GitHub, url: "https://github.com/robwhelan" }
 
 - id: robert-kessler
   name: Robert Kessler
@@ -151,6 +164,10 @@
 
 - id: anupama-garani
   name: Anupama Garani
+  title: "Data Specialist"
+  company: "PIMCO"
+  links:
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/anupama-garani/" }
 
 - id: nate-little
   name: Nate Little
@@ -163,6 +180,8 @@
 
 - id: milagros-jaen-vargas
   name: Milagros Jaen Vargas
+  links:
+    - { label: GitHub, url: "https://github.com/mjaenvargas" }
 
 - id: victor-rodriguez
   name: Victor Rodríguez
@@ -172,3 +191,8 @@
 
 - id: ronald-mego
   name: Ronald Mego
+  links:
+    - { label: LinkedIn, url: "https://linkedin.com/in/ronaldmego" }
+    - { label: Website, url: "https://ronaldmego.com/" }
+    - { label: GitHub, url: "https://github.com/ronaldmego" }
+    - { label: X, url: "https://x.com/ronaldmego_" }
