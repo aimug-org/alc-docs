@@ -12,7 +12,8 @@ export async function getStaticPaths() {
 
 const { talk } = Astro.props as { talk: Talk };
 const d = talk.data;
-const yt = `https://www.youtube.com/watch?v=${d.youtubeId}${d.start ? `&t=${d.start}s` : ''}`;
+const ytBase = `https://www.youtube.com/watch?v=${d.youtubeId}`; // timestamped links add their own &t=
+const yt = `${ytBase}${d.start ? `&t=${d.start}s` : ''}`;
 const speakerEntries = await getEntries(d.speakers.map((id) => ({ collection: 'speakers' as const, id })));
 const missing = d.speakers.filter((_, i) => !speakerEntries[i]);
 if (missing.length) throw new Error(`Talk "${talk.id}" lists speaker id(s) not in speakers.yaml: ${missing.join(', ')}`);
@@ -73,7 +74,7 @@ const description = d.summary ?? `${d.title}, a talk from AIMUG, the AI Middlewa
 const metaDescription = description.length <= 160 ? description : `${description.slice(0, 157).replace(/\s+\S*$/, '')}...`;
 const pageHref = new URL(`/talks/${talk.id}/`, Astro.site).href;
 const clips = sortedCh.map((c, i) => {
-  const end = sortedCh[i + 1]?.t ?? d.duration; // endOffset is optional; leave it out when unknown
+  const end = sortedCh[i + 1]?.t ?? d.end ?? d.duration; // chapter times are video times; endOffset is optional
   return { '@type': 'Clip', name: c.title, startOffset: c.t, ...(end !== undefined && { endOffset: end }), url: `${pageHref}?t=${c.t}` };
 });
 const { '@context': _ctx, ...recordedAt } = (ev && eventLd(ev)) || ({} as Record<string, unknown>);
@@ -85,7 +86,7 @@ const jsonld = {
   thumbnailUrl: new URL(thumb(talk), Astro.site).href,
   uploadDate: (d.publishAt ?? d.date).toISOString(),
   ...(d.duration && { duration: iso(d.duration) }),
-  embedUrl: `https://www.youtube-nocookie.com/embed/${d.youtubeId}${d.start ? `?start=${d.start}` : ''}`,
+  embedUrl: `https://www.youtube-nocookie.com/embed/${d.youtubeId}${d.start ? `?start=${d.start}${d.end ? `&end=${d.end}` : ''}` : ''}`,
   url: pageHref,
   inLanguage: d.language ?? 'en',
   ...(clips.length && { hasPart: clips }),
@@ -144,7 +145,7 @@ const h2 = 'm-0 text-[26px] font-bold';
           <ol class="m-0 flex list-none flex-col p-0">
             {chapters.map((c) => (
               <li class="grid grid-cols-[1fr_auto] items-center gap-2 border-t border-line first:border-t-0">
-                <a href={`${yt}&t=${c.t}s`} data-t={c.t} class="grid min-h-[44px] grid-cols-[60px_1fr] items-center gap-3 py-2.5 text-text no-underline hover:text-gold">
+                <a href={`${ytBase}&t=${c.t}s`} data-t={c.t} class="grid min-h-[44px] grid-cols-[60px_1fr] items-center gap-3 py-2.5 text-text no-underline hover:text-gold">
                   <span class="font-mono text-[15px] text-gold">{mmss(c.t)}</span><span>{c.title}</span>
                 </a>
                 <button type="button" data-copy={c.t} class="min-h-[44px] cursor-pointer rounded-full border-0 bg-transparent px-2 font-mono text-[13px] text-muted hover:text-gold">Copy link</button>
@@ -218,7 +219,7 @@ const h2 = 'm-0 text-[26px] font-bold';
                     <ol class="m-0 flex list-none flex-col p-0">
                       {g.lines.map((l) => (
                         <li class="grid grid-cols-[64px_1fr_auto] items-center gap-3 border-t border-line px-4 py-0.5 first:border-t-0">
-                          <a href={`${yt}&t=${l.t}s`} data-t={l.t} class="inline-flex min-h-[44px] items-center font-mono text-[15px] no-underline" data-pagefind-ignore>{mmss(l.t)}</a>
+                          <a href={`${ytBase}&t=${l.t}s`} data-t={l.t} class="inline-flex min-h-[44px] items-center font-mono text-[15px] no-underline" data-pagefind-ignore>{mmss(l.t)}</a>
                           <span class="text-soft">{l.text}</span>
                           <button type="button" data-quote class="min-h-[44px] cursor-pointer border-0 bg-transparent px-1 font-mono text-[13px] text-muted hover:text-gold" aria-label={`Quote the line at ${mmss(l.t)}`} data-pagefind-ignore>Quote</button>
                         </li>

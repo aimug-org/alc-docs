@@ -17,8 +17,8 @@ const talks = defineCollection({
     publishAt: z.coerce.date().optional(), // when the video is public on YouTube; pages stay hidden before this
     duration: z.number().optional(), // seconds; for a segment, the segment's length
     // A talk inside a full-night upload: seconds into that video. The full-night entry has the same youtubeId and no start.
-    start: z.number().optional(),
-    end: z.number().optional(),
+    start: z.number().int().nonnegative().optional(),
+    end: z.number().int().positive().optional(),
     summary: z.string().optional(),
     topics: z.array(z.string()).default([]),
     chapters: z.array(z.object({ t: z.number(), title: z.string() })).default([]),
@@ -28,7 +28,7 @@ const talks = defineCollection({
     thumbnail: z.string().optional(), // path under /public, else the YouTube thumbnail is used
     language: z.string().optional(), // e.g. "es"; omitted for English
     backfill: z.boolean().default(false), // stub made from the channel listing, no transcript yet
-  }),
+  }).refine((t) => t.end === undefined || (t.start !== undefined && t.end > t.start), { message: 'end needs a start before it' }),
 });
 
 const speakers = defineCollection({

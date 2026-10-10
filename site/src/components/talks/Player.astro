@@ -27,6 +27,7 @@ const { id, title, image, start, end } = Astro.props;
     const m = location.hash.match(/^#t-(\d+)$/) || location.search.match(/[?&]t=(\d+)/);
     const own = Number(box.dataset.start || 0), end = box.dataset.end;
     let start = m ? Number(m[1]) : own;
+    if (start < own || (end && start >= Number(end))) start = own; // a segment's deep link stays inside the segment
     const note = box.querySelector('[data-start-note]');
     if (start !== own) { note.textContent = `Starts at ${fmt(start)}`; note.hidden = false; }
     const play = (t) => {
