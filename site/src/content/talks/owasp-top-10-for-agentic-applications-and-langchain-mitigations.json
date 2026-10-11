@@ -1,0 +1,64 @@
+{
+  "title": "OWASP Top 10 for Agentic Applications and LangChain Mitigations",
+  "speakers": [
+    "jeff-linwood"
+  ],
+  "date": "2026-01-07",
+  "event": "2026-01-07",
+  "youtubeId": "JnH-_iLwkZQ",
+  "publishAt": "2026-12-10T11:00:00-06:00",
+  "duration": 926,
+  "thumbnail": "/talks/owasp-top-10-for-agentic-applications-and-langchain-mitigations.jpg",
+  "topics": [
+    "Graphs",
+    "Security",
+    "Agents"
+  ],
+  "summary": "Jeff Linwood walks through the new OWASP Top 10 for agentic applications and how to mitigate the risks.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Why Agentic Security"
+    },
+    {
+      "t": 50,
+      "title": "What OWASP Is"
+    },
+    {
+      "t": 170,
+      "title": "The Agentic Top 10 for 2026"
+    },
+    {
+      "t": 257,
+      "title": "Real-World Exploit Examples"
+    },
+    {
+      "t": 359,
+      "title": "Agent Failure Modes"
+    },
+    {
+      "t": 516,
+      "title": "The Ten Risk Categories"
+    },
+    {
+      "t": 672,
+      "title": "Reading the Mitigation Guidance"
+    },
+    {
+      "t": 727,
+      "title": "Mitigations with LangChain and LangSmith"
+    },
+    {
+      "t": 828,
+      "title": "Demo: Human-Agent Trust Exploitation"
+    }
+  ],
+  "learn": [
+    "OWASP published its Top 10 for Agentic Applications the month before; the PDF pairs each risk with prevention and mitigation guidance.",
+    "Agent security has different failure modes than web security because of tool use, elevated access, long-running memory and autonomy.",
+    "The ten risks group into goal and instruction control, tools and execution, identity and privilege abuse, inter-agent communication and systemic risk such as supply chain and cascading failures.",
+    "Mitigations he covers: structure prompts and keep retrieved content out of instructions, narrow tool scope, separate agent roles in a graph with a human in the loop, and use LangSmith for observability.",
+    "The demo shows human-agent trust exploitation: an approval prompt calls a change safe while it actually drops a Kubernetes cluster, then a mitigated version adds confirmation."
+  ],
+  "links": []
+}

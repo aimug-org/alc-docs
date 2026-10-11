@@ -1,0 +1,22 @@
+{
+  "event": "2026-01-07",
+  "copy": "../archive-drops/copy/2026-01-07",
+  "transcript": false,
+  "talks": {
+    "jeff-linwood": {
+      "file": "jeff-linwood-owasp-top-10-agentic-security",
+      "youtubeId": "JnH-_iLwkZQ",
+      "publishAt": "2026-12-10T11:00:00-06:00"
+    },
+    "collier-king": {
+      "file": "collier-king-deep-research-cloudflare-workflows",
+      "youtubeId": "df28beMF7nI",
+      "publishAt": "2026-12-10T11:00:00-06:00"
+    },
+    "julian-ghadially": {
+      "file": "julian-ghadially-dspy-prompt-optimization-jepa",
+      "youtubeId": "Pwiab2Td3GQ",
+      "publishAt": "2026-12-10T11:00:00-06:00"
+    }
+  }
+}

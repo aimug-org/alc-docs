@@ -1,0 +1,71 @@
+{
+  "title": "DSPy and GEPA Prompt Optimization: A Self-Improving Fact Checker",
+  "speakers": [
+    "julian-ghadially"
+  ],
+  "date": "2026-01-07",
+  "event": "2026-01-07",
+  "youtubeId": "Pwiab2Td3GQ",
+  "publishAt": "2026-12-10T11:00:00-06:00",
+  "duration": 749,
+  "thumbnail": "/talks/dspy-and-gepa-prompt-optimization-a-self-improving-fact-checker.jpg",
+  "topics": [
+    "Evals",
+    "Agents"
+  ],
+  "summary": "Julian Ghadially shows how DSPy and GEPA tune prompts from an evaluation dataset instead of by hand.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "The Prompt Engineering Problem"
+    },
+    {
+      "t": 75,
+      "title": "Ground-Truth Data"
+    },
+    {
+      "t": 105,
+      "title": "What GEPA Is"
+    },
+    {
+      "t": 156,
+      "title": "Reflective Optimizer and Results"
+    },
+    {
+      "t": 258,
+      "title": "DSPy and Other Optimizers"
+    },
+    {
+      "t": 332,
+      "title": "DSPy Signatures"
+    },
+    {
+      "t": 416,
+      "title": "DSPy Modules"
+    },
+    {
+      "t": 467,
+      "title": "Fact Checker Architecture"
+    },
+    {
+      "t": 534,
+      "title": "Fact Checker Results"
+    },
+    {
+      "t": 570,
+      "title": "Optimizing with an LLM Judge"
+    },
+    {
+      "t": 671,
+      "title": "Optimizers That Change Code"
+    }
+  ],
+  "learn": [
+    "Prompt optimization works well when you have ground-truth labels: the dataset does the work of writing the prompt.",
+    "GEPA (Genetic Pareto) mutates and merges prompts and keeps a Pareto frontier; a reflective model sees traces, outputs and feedback to propose new prompts.",
+    "He cites researchers reporting about a 20% gain on multi-hop question-answering datasets, beating reinforcement learning.",
+    "In DSPy you write signatures instead of prompts and build modules like Predict, ChainOfThought and ReAct from them.",
+    "His fact checker, an iterative judge with a research agent, went from 91% to 96% accuracy on predicted cases, about half the errors."
+  ],
+  "links": []
+}

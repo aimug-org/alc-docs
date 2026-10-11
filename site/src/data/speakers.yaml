@@ -231,3 +231,8 @@
   company: "PayPal"
   links:
     - { label: LinkedIn, url: "https://www.linkedin.com/in/akshaymittal143/" }
+
+- id: julian-ghadially
+  name: Julian Ghadially
+  links:
+    - { label: GitHub, url: "https://github.com/julianghadially" }

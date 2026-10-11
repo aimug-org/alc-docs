@@ -1,0 +1,72 @@
+{
+  "title": "Deep Research on Cloudflare Python Workflows with Gemini",
+  "speakers": [
+    "collier-king"
+  ],
+  "date": "2026-01-07",
+  "event": "2026-01-07",
+  "youtubeId": "df28beMF7nI",
+  "publishAt": "2026-12-10T11:00:00-06:00",
+  "duration": 952,
+  "thumbnail": "/talks/deep-research-on-cloudflare-python-workflows-with-gemini.jpg",
+  "topics": [],
+  "summary": "Collier King builds a durable deep research pipeline on Cloudflare Workflows with the Gemini API.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "DIY Deep Research"
+    },
+    {
+      "t": 50,
+      "title": "Gemini and Cloudflare Workflows"
+    },
+    {
+      "t": 100,
+      "title": "Case Study: Earnings Day"
+    },
+    {
+      "t": 201,
+      "title": "The Tech Stack"
+    },
+    {
+      "t": 252,
+      "title": "Gemini Quirks"
+    },
+    {
+      "t": 355,
+      "title": "Python Workers and Pyodide"
+    },
+    {
+      "t": 455,
+      "title": "How Workflows Are Written"
+    },
+    {
+      "t": 505,
+      "title": "The Pipeline"
+    },
+    {
+      "t": 611,
+      "title": "The Prompt and the Code"
+    },
+    {
+      "t": 820,
+      "title": "Job Logs"
+    },
+    {
+      "t": 870,
+      "title": "Takeaways"
+    },
+    {
+      "t": 927,
+      "title": "Q&A"
+    }
+  ],
+  "learn": [
+    "The Gemini Deep Research API uses a file store it chunks and embeds for you, and it runs for minutes, so you have to poll for the result.",
+    "Quirks he hit: it is in beta, there is no structured output, and it searched the web even when told not to, so he locked down the prompt.",
+    "Cloudflare Python Workflows run on Python Workers and Pyodide; steps can depend on each other or run at the same time, like AWS Step Functions.",
+    "His pipeline fetches press releases and transcripts from MongoDB, uploads them, starts the job, waits, extracts JSON and saves to S3-compatible storage and Postgres through Hyperdrive.",
+    "The dashboard shows each job run with step logs; runs took from about 5 to 21 minutes."
+  ],
+  "links": []
+}
