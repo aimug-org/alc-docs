@@ -144,6 +144,9 @@
     - { label: LinkedIn, url: "https://www.linkedin.com/in/scott-askinosie" }
     - { label: GitHub, url: "https://github.com/saskinosie" }
 
+- id: butch-ewing
+  name: Butch Ewing
+
 - id: jackson-arnold
   name: Jackson Arnold
   links:

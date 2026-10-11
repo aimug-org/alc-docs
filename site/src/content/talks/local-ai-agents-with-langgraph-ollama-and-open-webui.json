@@ -1,0 +1,60 @@
+{
+  "title": "Local AI Agents with LangGraph, Ollama and Open WebUI",
+  "speakers": [
+    "riccardo-pirruccio"
+  ],
+  "date": "2024-11-07",
+  "event": "2024-11-07",
+  "youtubeId": "3ZiZ_cgpJZw",
+  "publishAt": "2026-10-15T11:00:00-05:00",
+  "duration": 628,
+  "thumbnail": "/talks/local-ai-agents-with-langgraph-ollama-and-open-webui.jpg",
+  "topics": [
+    "LangGraph",
+    "Inference",
+    "Agents"
+  ],
+  "summary": "Riccardo Pirruccio runs agents on his own hardware with Ollama and Open WebUI instead of paid APIs.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Speaker Background"
+    },
+    {
+      "t": 82,
+      "title": "Project Overview"
+    },
+    {
+      "t": 170,
+      "title": "LangGraph Architecture"
+    },
+    {
+      "t": 285,
+      "title": "Why Run Locally"
+    },
+    {
+      "t": 303,
+      "title": "Ollama and Open WebUI"
+    },
+    {
+      "t": 395,
+      "title": "Tools vs Pipelines"
+    },
+    {
+      "t": 466,
+      "title": "Docker Setup"
+    },
+    {
+      "t": 559,
+      "title": "The Vision (Not Working Yet)"
+    }
+  ],
+  "learn": [
+    "LangChain's data frame agent lets you ask questions about Excel or CSV data in natural language.",
+    "LangGraph lets agents with one task each work together; his design has a data frame, writer and publisher agent.",
+    "Ollama downloads models and runs them on your own hardware, with Docker and tool calling support.",
+    "Open WebUI gives a ChatGPT-style interface with custom tools and pipelines for your models.",
+    "His home setup uses Docker Compose, with Cloudflare and Google authentication for remote access."
+  ],
+  "links": []
+}

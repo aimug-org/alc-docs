@@ -1,6 +1,8 @@
 // Build full talk entries for one meetup night from its nerdreel output folder.
 // Usage: node scripts/import-night.mjs <nightDir> <mapping.json>
 // The mapping (scripts/nights/<event>.json) gives each talk's public YouTube id and, if scheduled, its publishAt.
+// Archive nights add `copy` (folder of the approved <file>.youtube.md, relative to nightDir), `transcript: false` (captions not hand-reviewed, so none
+// on the page, and the full entry is written before release), and per talk `file` when the cut is not named after the speaker.
 // A talk whose publishAt is still ahead gets a premiere stub (no summary, transcript, chapters, learn or links): re-run after the last premiere.
 import { existsSync, readFileSync, unlinkSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
@@ -57,7 +59,8 @@ if (unknown.length) {
 
 for (const [name, m0] of Object.entries(mapping.talks)) {
   const m = m0.publishAt ? { ...m0, publishAt: publishAtIso(m0.publishAt) } : m0;
-  const md = join(nightDir, 'out', `${name}.youtube.md`);
+  const file = m.file ?? name;
+  const md = join(nightDir, mapping.copy ?? 'out', `${file}.youtube.md`);
   if (!m.youtubeId || !existsSync(md)) {
     console.log(`skip ${name}: ${m.youtubeId ? 'no youtube.md' : 'no video id'}`);
     continue;
@@ -70,13 +73,14 @@ for (const [name, m0] of Object.entries(mapping.talks)) {
   const links = bullets(desc, 'Resources mentioned').map((b) => b.match(/^(.+?):\s+(https?:\/\/\S+)$/)).filter(Boolean).map(([, label, url]) => ({ label, url }));
   const chapters = desc.map((l) => l.match(/^((?:\d+:)?\d{1,2}:\d{2}) (.+)$/)).filter(Boolean).map(([, t, title]) => ({ t: secs(t), title }));
   const hashtags = desc.filter((l) => l.startsWith('#')).join(' ');
-  const fixed = join(nightDir, 'publish', `${name}.youtube.fixed.srt`);
-  const srt = existsSync(fixed) ? fixed : join(nightDir, 'out', `${name}.youtube.srt`);
+  const fixed = join(nightDir, 'publish', `${file}.youtube.fixed.srt`);
+  const srt = existsSync(fixed) ? fixed : join(nightDir, 'out', `${file}.youtube.srt`);
   // Length of the uploaded file (bumpers included); the cut's json duration if that file is gone.
-  const mp4 = join(nightDir, 'out', `${name}.youtube.mp4`);
-  const probed = existsSync(mp4) && Number(spawnSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', mp4], { encoding: 'utf8' }).stdout);
-  const duration = probed || JSON.parse(readFileSync(join(nightDir, 'out', `${name}.json`), 'utf8')).duration;
-  const premiere = m.publishAt && new Date(m.publishAt) > new Date();
+  const mp4 = [`${file}.youtube.mp4`, `${file}.mp4`].map((f) => join(nightDir, 'out', f)).find(existsSync);
+  const probed = mp4 && Number(spawnSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', mp4], { encoding: 'utf8' }).stdout);
+  const duration = probed || JSON.parse(readFileSync(join(nightDir, 'out', `${file}.json`), 'utf8')).duration;
+  const reviewed = mapping.transcript !== false;
+  const premiere = reviewed && m.publishAt && new Date(m.publishAt) > new Date();
 
   // A slug held by a different video gets the night appended, then -2, -3... until it is free.
   const holder = (s) => [...existing].find(([, e]) => e.slug === s)?.[0];
@@ -85,7 +89,7 @@ for (const [name, m0] of Object.entries(mapping.talks)) {
   for (let n = 1; holder(slug) && holder(slug) !== m.youtubeId; n++) slug = n === 1 ? dated : `${slugify(`${title} ${mapping.event}`, 76)}-${n}`;
   const prev = existing.get(m.youtubeId);
 
-  await sharp(join(nightDir, 'out', `${name}.thumb.jpg`)).resize({ width: 1280 }).jpeg({ quality: 75 }).toFile(join(siteDir, 'public/talks', `${slug}.jpg`));
+  await sharp(join(nightDir, 'out', `${file}.thumb.jpg`)).resize({ width: 1280 }).jpeg({ quality: 75 }).toFile(join(siteDir, 'public/talks', `${slug}.jpg`));
   const stub = {
     title,
     speakers: speakers.has(name) ? [name] : [],
@@ -97,7 +101,7 @@ for (const [name, m0] of Object.entries(mapping.talks)) {
     thumbnail: `/talks/${slug}.jpg`,
     topics: m.topics ?? topicsFor([title, summary, ...learn, hashtags].join('\n')), // mapping can override the matcher
   };
-  writeTalk(slug, premiere ? stub : { ...stub, summary, chapters, learn, links, transcript: transcript(readFileSync(srt, 'utf8')) });
+  writeTalk(slug, premiere ? stub : { ...stub, summary, chapters, learn, links, ...(reviewed && { transcript: transcript(readFileSync(srt, 'utf8')) }) });
   // Only once the new entry is written: drop this video's older entry (a stub or a renamed talk) and its thumbnail.
   if (prev && prev.slug !== slug) {
     unlinkSync(join(talksDir, `${prev.slug}.json`));
@@ -105,5 +109,5 @@ for (const [name, m0] of Object.entries(mapping.talks)) {
     if (existsSync(oldThumb)) unlinkSync(oldThumb);
   }
   existing.set(m.youtubeId, { slug, backfill: false });
-  console.log(premiere ? `${slug}: premiere stub until ${m.publishAt}` : `${slug}: ${chapters.length} chapters, ${learn.length} learn, ${links.length} links (${srt.includes('fixed') ? 'fixed' : 'raw'} srt)`);
+  console.log(premiere ? `${slug}: premiere stub until ${m.publishAt}` : `${slug}: ${chapters.length} chapters, ${learn.length} learn, ${links.length} links (${reviewed ? (srt.includes('fixed') ? 'fixed srt' : 'raw srt') : 'no transcript'})`);
 }
