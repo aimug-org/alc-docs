@@ -1,0 +1,59 @@
+{
+  "title": "LangGraph AI Data Scientist: CSV Analysis to Report",
+  "speakers": [
+    "riccardo-pirruccio"
+  ],
+  "date": "2024-05-29",
+  "event": "2024-05-29",
+  "youtubeId": "23LZfzoA-8s",
+  "publishAt": "2026-10-15T11:00:00-05:00",
+  "duration": 2077,
+  "thumbnail": "/talks/langgraph-ai-data-scientist-csv-analysis-to-report.jpg",
+  "topics": [
+    "LangGraph",
+    "Agents"
+  ],
+  "summary": "Riccardo Pirruccio builds a LangGraph agent team that analyzes CSV data and writes a report.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Intro and Inspiration"
+    },
+    {
+      "t": 97,
+      "title": "Planned Design and Simplified Graph"
+    },
+    {
+      "t": 258,
+      "title": "Input Configuration"
+    },
+    {
+      "t": 447,
+      "title": "State and Data Analyst Agent"
+    },
+    {
+      "t": 1047,
+      "title": "Writer Agent"
+    },
+    {
+      "t": 1145,
+      "title": "Lessons: JSON and Cognitive Architectures"
+    },
+    {
+      "t": 1743,
+      "title": "Publisher and Graph Setup"
+    },
+    {
+      "t": 1961,
+      "title": "Output Review"
+    }
+  ],
+  "learn": [
+    "A data analyst agent takes files and instructions, pulls out insights and generates charts.",
+    "A writer agent builds the report: title, table of contents, introduction, sections, conclusion and sources.",
+    "A runnable lambda runs every file and instruction combination in parallel.",
+    "A publisher agent outputs markdown, PDF or Word.",
+    "A Pydantic state object validates each agent output and carries it to the next node."
+  ],
+  "links": []
+}

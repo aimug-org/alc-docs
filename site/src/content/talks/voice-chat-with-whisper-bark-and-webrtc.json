@@ -1,0 +1,59 @@
+{
+  "title": "Voice Chat with Whisper, Bark and WebRTC",
+  "speakers": [
+    "karim-lalani"
+  ],
+  "date": "2024-05-29",
+  "event": "2024-05-29",
+  "youtubeId": "g99WFsHihyM",
+  "publishAt": "2026-10-15T11:00:00-05:00",
+  "duration": 1575,
+  "thumbnail": "/talks/voice-chat-with-whisper-bark-and-webrtc.jpg",
+  "topics": [
+    "RAG",
+    "Agents"
+  ],
+  "summary": "Karim Lalani turns a LangChain chain into a talking agent with WebRTC, Whisper and Bark.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Intro: Talking to Your Agent"
+    },
+    {
+      "t": 132,
+      "title": "Why WebRTC"
+    },
+    {
+      "t": 266,
+      "title": "The LangChain Part"
+    },
+    {
+      "t": 342,
+      "title": "Whisper, Bark and Colab Setup"
+    },
+    {
+      "t": 742,
+      "title": "Live Demo"
+    },
+    {
+      "t": 922,
+      "title": "Interface and Design Choices"
+    },
+    {
+      "t": 1319,
+      "title": "Modular Code Layout"
+    },
+    {
+      "t": 1419,
+      "title": "What Was Hard"
+    }
+  ],
+  "learn": [
+    "WebRTC streams media between browser and server, and a server can act as a peer.",
+    "Whisper runs locally for transcription; Suno Bark does text to audio, which is more expressive than plain text to speech.",
+    "The LangChain part is a small chain, so you can swap in a RAG app or an agent behind it.",
+    "To play audio back live, the server has to inject new audio into a running track at the right timestamp.",
+    "Transcription and synthesis live in separate modules, so either one can be swapped out."
+  ],
+  "links": []
+}

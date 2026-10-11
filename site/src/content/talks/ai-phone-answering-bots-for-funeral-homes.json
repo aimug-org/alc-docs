@@ -1,0 +1,48 @@
+{
+  "title": "AI Phone Answering Bots for Funeral Homes",
+  "speakers": [
+    "butch-ewing"
+  ],
+  "date": "2024-11-07",
+  "event": "2024-11-07",
+  "youtubeId": "6AIBLf1Wf9o",
+  "publishAt": "2026-10-15T11:00:00-05:00",
+  "duration": 243,
+  "thumbnail": "/talks/ai-phone-answering-bots-for-funeral-homes.jpg",
+  "topics": [],
+  "summary": "Butch Ewing describes an AI bot that answers the phone for funeral homes around the clock.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Death Tech and the Phone Problem"
+    },
+    {
+      "t": 34,
+      "title": "An AI Bot Answers the Call"
+    },
+    {
+      "t": 64,
+      "title": "Cost Savings"
+    },
+    {
+      "t": 94,
+      "title": "Pilot Results"
+    },
+    {
+      "t": 155,
+      "title": "Phone Menus vs a Useful Bot"
+    },
+    {
+      "t": 219,
+      "title": "Takeaway"
+    }
+  ],
+  "learn": [
+    "Funeral homes have to answer the phone 24/7, and nights and weekends often go to third-party call services.",
+    "The bot takes the call, collects the caller's information and passes it to the funeral home.",
+    "He says call services cost $1,500 to $2,000 a month, and the bot gives round-the-clock answering at a fraction of that.",
+    "In a pilot three years ago, 95% or more of callers were fine with the bot; the goal had been 40%.",
+    "The system uses Python and LangChain, with text to speech and speech to text."
+  ],
+  "links": []
+}

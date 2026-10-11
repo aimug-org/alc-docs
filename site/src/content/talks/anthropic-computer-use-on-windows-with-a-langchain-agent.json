@@ -1,0 +1,54 @@
+{
+  "title": "Anthropic Computer Use on Windows with a LangChain Agent",
+  "speakers": [
+    "cameron-rohn"
+  ],
+  "date": "2024-11-07",
+  "event": "2024-11-07",
+  "youtubeId": "1pfMiYRV2GM",
+  "publishAt": "2026-10-15T11:00:00-05:00",
+  "duration": 467,
+  "thumbnail": "/talks/anthropic-computer-use-on-windows-with-a-langchain-agent.jpg",
+  "topics": [
+    "Agents"
+  ],
+  "summary": "Cameron Rohn moves Anthropic Computer Use out of Docker onto Windows and adds a LangChain agent.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Intro and Context"
+    },
+    {
+      "t": 63,
+      "title": "The Three Tools"
+    },
+    {
+      "t": 96,
+      "title": "Potential Applications"
+    },
+    {
+      "t": 128,
+      "title": "Multi-Agent Ideas"
+    },
+    {
+      "t": 232,
+      "title": "Windows Adaptation Demo"
+    },
+    {
+      "t": 312,
+      "title": "Obsidian Notebook Demo"
+    },
+    {
+      "t": 434,
+      "title": "OmniParser and Limitations"
+    }
+  ],
+  "learn": [
+    "Computer Use breaks into three tools; the computer tool takes screenshots and tries to locate pixel coordinates.",
+    "He found the bash and command line tools the most useful, and says full file system access is powerful.",
+    "His agent has the computer tools plus several overlapping web search tools.",
+    "Demo: asking the agent to create and update a page in an Obsidian notebook, with the file path spelled out.",
+    "Microsoft OmniParser does OCR of your screen and creates attributes agents can reference."
+  ],
+  "links": []
+}

@@ -1,0 +1,54 @@
+{
+  "title": "Exploring Data with a LangChain Data Frame Agent",
+  "speakers": [
+    "scott-askinosie"
+  ],
+  "date": "2024-11-07",
+  "event": "2024-11-07",
+  "youtubeId": "-yYXFRf54OM",
+  "publishAt": "2026-10-15T11:00:00-05:00",
+  "duration": 680,
+  "thumbnail": "/talks/exploring-data-with-a-langchain-data-frame-agent.jpg",
+  "topics": [
+    "Agents"
+  ],
+  "summary": "Scott Askinosie shows a LangChain data frame agent that answers questions about your spreadsheet.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Intro: Data Exploration with Agents"
+    },
+    {
+      "t": 76,
+      "title": "Why: Data People Cannot Read"
+    },
+    {
+      "t": 163,
+      "title": "What Data Democratization Means"
+    },
+    {
+      "t": 274,
+      "title": "How the Agent Works"
+    },
+    {
+      "t": 422,
+      "title": "Notebook Walkthrough"
+    },
+    {
+      "t": 497,
+      "title": "Starbucks Data Demo"
+    },
+    {
+      "t": 620,
+      "title": "A Subjective Question"
+    }
+  ],
+  "learn": [
+    "A non-technical user can ask questions of their data in natural language.",
+    "The agent turns a question into a prompt, the LLM writes pandas code, and the agent checks the code.",
+    "If the code would fail, the agent sends the error back to the LLM until it gets code that works.",
+    "You can ask the agent what the data is about, where to start, and for visualizations like a heatmap.",
+    "A Llama 3 version keeps your data on your own computer; the notebook is on the LangChain group GitHub."
+  ],
+  "links": []
+}

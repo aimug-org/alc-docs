@@ -1,0 +1,32 @@
+{
+  "event": "2024-11-07",
+  "copy": "../archive-drops/copy/2024-11-07",
+  "transcript": false,
+  "talks": {
+    "butch-ewing": {
+      "file": "butch-ewing-mlops-2024",
+      "youtubeId": "6AIBLf1Wf9o",
+      "publishAt": "2026-10-15T11:00:00-05:00"
+    },
+    "cameron-rohn": {
+      "file": "cameron-rohn-computer-2-0",
+      "youtubeId": "1pfMiYRV2GM",
+      "publishAt": "2026-10-15T11:00:00-05:00"
+    },
+    "riccardo-pirruccio": {
+      "file": "ricky-pirruccio-community-corner",
+      "youtubeId": "3ZiZ_cgpJZw",
+      "publishAt": "2026-10-15T11:00:00-05:00"
+    },
+    "rob-whelan": {
+      "file": "rob-whelan-mlops-2024",
+      "youtubeId": "tpkf_lV-s94",
+      "publishAt": "2026-10-15T11:00:00-05:00"
+    },
+    "scott-askinosie": {
+      "file": "scott-askinosie-mlops-2024",
+      "youtubeId": "-yYXFRf54OM",
+      "publishAt": "2026-10-15T11:00:00-05:00"
+    }
+  }
+}

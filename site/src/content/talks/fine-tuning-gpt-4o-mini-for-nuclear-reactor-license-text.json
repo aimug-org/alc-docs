@@ -1,0 +1,48 @@
+{
+  "title": "Fine-Tuning GPT-4o mini for Nuclear Reactor License Text",
+  "speakers": [
+    "rob-whelan"
+  ],
+  "date": "2024-11-07",
+  "event": "2024-11-07",
+  "youtubeId": "tpkf_lV-s94",
+  "publishAt": "2026-10-15T11:00:00-05:00",
+  "duration": 562,
+  "thumbnail": "/talks/fine-tuning-gpt-4o-mini-for-nuclear-reactor-license-text.jpg",
+  "topics": [],
+  "summary": "Rob Whelan on fine-tuning GPT-4o mini to write nuclear reactor license application text.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Why Reactor Licenses Need AI"
+    },
+    {
+      "t": 123,
+      "title": "Document Requirements"
+    },
+    {
+      "t": 198,
+      "title": "Style and Data Needs"
+    },
+    {
+      "t": 219,
+      "title": "Fine-Tuning Proof of Concept"
+    },
+    {
+      "t": 328,
+      "title": "Training Data Structure"
+    },
+    {
+      "t": 433,
+      "title": "Hallucinations and Lessons"
+    }
+  ],
+  "learn": [
+    "License applications need technical data in the right places and a dry, regulator-expected tone.",
+    "When a model must speak in a particular format or style, fine-tuning is the way to go.",
+    "The proof of concept used 10,000 paragraph examples from previously submitted public licenses.",
+    "The fine-tuned model picked up more key facts and the right tone than GPT-4o out of the box.",
+    "It hallucinated every figure reference and some values, and tables were still messy."
+  ],
+  "links": []
+}
