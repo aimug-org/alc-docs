@@ -124,7 +124,7 @@ Contact us for partnership opportunities:
 ### Social Media
 - **Twitter**: [@AIMUG_org](https://twitter.com/AIMUG_org)
 - **LinkedIn**: [Austin LangChain Group](https://www.linkedin.com/groups/aimug)
-- **YouTube**: [AIMUG Channel](https://youtube.com/@AIMUG)
+- **YouTube**: [AIMUG Channel](https://www.youtube.com/@ai-mug)
 
 ### Contact
 - **Email**: info@aimug.org

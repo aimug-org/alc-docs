@@ -59,7 +59,7 @@ Whether you're new to AI or an experienced developer, our community offers multi
 2. **Join the Community**: 
    - [Discord](https://discord.gg/JzWgadPFQd) for discussions
    - [GitHub](https://github.com/aimug-org/austin_langchain) for code
-   - [YouTube](https://www.youtube.com/@AustinLangChain) for recordings
+   - [YouTube](https://www.youtube.com/@ai-mug) for recordings
 3. **Attend Events**: Check our [Events Page](/events) for upcoming meetings
 
 ## Why Learn in the Open?
@@ -87,6 +87,6 @@ You're welcome to learn alongside us!
 - [Monthly Archives](/docs): Browse our past meetings and labs
 - [GitHub Repository](https://github.com/aimug-org/austin_langchain): Access all our code
 - [Discord Community](https://discord.gg/JzWgadPFQd): Join the discussion
-- [YouTube Channel](https://www.youtube.com/@AustinLangChain): Watch our sessions
+- [YouTube Channel](https://www.youtube.com/@ai-mug): Watch our sessions
 
 Remember: Every expert was once a beginner. Join us in "Learning in the Open" as we explore the exciting world of AI together!
