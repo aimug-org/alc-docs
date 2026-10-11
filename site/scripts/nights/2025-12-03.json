@@ -1,0 +1,32 @@
+{
+  "event": "2025-12-03",
+  "copy": "../archive-drops/copy/2025-12-03",
+  "transcript": false,
+  "talks": {
+    "dmitri-iourovitski": {
+      "file": "dmitri-iourovitski-langchain-middleware",
+      "youtubeId": "YosdFAwNjVs",
+      "publishAt": "2026-10-29T11:00:00-05:00"
+    },
+    "nate-little": {
+      "file": "nate-little-claude-code-skills",
+      "youtubeId": "zUS3M0qQYWc",
+      "publishAt": "2026-10-29T11:00:00-05:00"
+    },
+    "michael-golden": {
+      "file": "michael-golden-claude-agent-sdk-cloudflare",
+      "youtubeId": "-8Qp-dbYn60",
+      "publishAt": "2026-10-29T11:00:00-05:00"
+    },
+    "collier-king": {
+      "file": "collier-king-stagehand",
+      "youtubeId": "5QvUP2RNR2Q",
+      "publishAt": "2026-10-29T11:00:00-05:00"
+    },
+    "riccardo-pirruccio": {
+      "file": "riccardo-pirruccio-lightning-agents",
+      "youtubeId": "3-gEUKL9G-U",
+      "publishAt": "2026-10-29T11:00:00-05:00"
+    }
+  }
+}

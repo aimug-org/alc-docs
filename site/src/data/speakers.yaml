@@ -121,6 +121,9 @@
   name: Dmitri Iourovitski
   photo: /speakers/dmitri-iourovitski.jpg
 
+- id: michael-golden
+  name: Michael Golden
+
 - id: vaskin-kissoyan
   name: Vaskin Kissoyan
   title: "Retained Chief AI Officer"

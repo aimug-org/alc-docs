@@ -1,0 +1,80 @@
+{
+  "title": "LangChain Middleware: Hooks for Agent State, Tools and Guardrails",
+  "speakers": [
+    "dmitri-iourovitski"
+  ],
+  "date": "2025-12-03",
+  "event": "2025-12-03",
+  "youtubeId": "YosdFAwNjVs",
+  "publishAt": "2026-10-29T11:00:00-05:00",
+  "duration": 1378,
+  "thumbnail": "/talks/langchain-middleware-hooks-for-agent-state-tools-and-guardrails.jpg",
+  "topics": [
+    "Security",
+    "Agents"
+  ],
+  "summary": "Dmitri Iourovitski explains LangChain middleware: hooks that run before and after the agent and the model.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Middleware Overview"
+    },
+    {
+      "t": 48,
+      "title": "From Chaining to Graphs"
+    },
+    {
+      "t": 141,
+      "title": "The Four Hooks"
+    },
+    {
+      "t": 177,
+      "title": "Before Agent"
+    },
+    {
+      "t": 275,
+      "title": "Before Model"
+    },
+    {
+      "t": 364,
+      "title": "After Model"
+    },
+    {
+      "t": 453,
+      "title": "After Agent"
+    },
+    {
+      "t": 513,
+      "title": "Best Practices"
+    },
+    {
+      "t": 595,
+      "title": "Q&A"
+    },
+    {
+      "t": 714,
+      "title": "Hook Ordering"
+    },
+    {
+      "t": 829,
+      "title": "Guardrails and PII Routing"
+    },
+    {
+      "t": 996,
+      "title": "Middleware vs LangGraph"
+    },
+    {
+      "t": 1237,
+      "title": "Isolated Middleware"
+    }
+  ],
+  "learn": [
+    "LangChain middleware has four hooks: before agent, before model, after model and after agent.",
+    "Before agent is the place to set up heavy resources, such as the shell tool environment, so the agent does not have to create one mid-run.",
+    "Before model is where dynamic state, such as the to-do list, goes into the system prompt, and where tools can be selected with the built-in tool selector middleware.",
+    "After model, middleware can run safety checks, limit tool calls and cache web service calls.",
+    "Iourovitski says agents often claim they are done when they are not, and an after agent hook can jump back to the model.",
+    "Modifying messages can break the prompt cache, and Iourovitski says removing parts of tool calls makes Anthropic return a 500 error."
+  ],
+  "links": []
+}

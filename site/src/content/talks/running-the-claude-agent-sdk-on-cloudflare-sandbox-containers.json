@@ -1,0 +1,57 @@
+{
+  "title": "Running the Claude Agent SDK on Cloudflare Sandbox Containers",
+  "speakers": [
+    "michael-golden"
+  ],
+  "date": "2025-12-03",
+  "event": "2025-12-03",
+  "youtubeId": "-8Qp-dbYn60",
+  "publishAt": "2026-10-29T11:00:00-05:00",
+  "duration": 1262,
+  "thumbnail": "/talks/running-the-claude-agent-sdk-on-cloudflare-sandbox-containers.jpg",
+  "topics": [
+    "LangGraph",
+    "Coding agents",
+    "Agents"
+  ],
+  "summary": "Michael Golden walks through a working app that runs the Claude Agent SDK inside Cloudflare Sandbox containers.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Introduction and Background"
+    },
+    {
+      "t": 188,
+      "title": "The Problem with Agents"
+    },
+    {
+      "t": 248,
+      "title": "Application Demo"
+    },
+    {
+      "t": 637,
+      "title": "Why Use Claude Agent SDK"
+    },
+    {
+      "t": 878,
+      "title": "Why Cloudflare"
+    },
+    {
+      "t": 1021,
+      "title": "Workers, D1, R2 and Durable Objects"
+    },
+    {
+      "t": 1112,
+      "title": "Containers and the Sandbox Image"
+    }
+  ],
+  "learn": [
+    "Golden says the Claude Agent SDK gives an app the power of Claude Code without building and orchestrating an agent on LangGraph and LangChain.",
+    "The deployed stack uses Cloudflare Workers for the front end and back end, Sandbox containers to run the SDK in TypeScript, a D1 SQLite database, R2 object storage, and Clerk for authentication.",
+    "In the demo, a React app lets users pick Sonnet, Haiku or Opus, create skills and sub-agents scoped to projects, and see hooks stream back from the agent.",
+    "A live prompt asks the agent to research orbital data, write Python and output a GIF simulating the solar system, running entirely inside the sandbox.",
+    "Golden explains that agents need to execute code, need a file system, and need one isolated instance per user, and that runs can last 40 to 50 minutes.",
+    "Sandbox SDK is built on containers and Durable Objects, and the image is Ubuntu with Node, Bun, and Python libraries such as Matplotlib, NumPy and Pandas."
+  ],
+  "links": []
+}

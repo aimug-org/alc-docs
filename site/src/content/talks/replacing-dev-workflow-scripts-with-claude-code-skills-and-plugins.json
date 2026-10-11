@@ -1,0 +1,76 @@
+{
+  "title": "Replacing Dev Workflow Scripts with Claude Code Skills and Plugins",
+  "speakers": [
+    "nate-little"
+  ],
+  "date": "2025-12-03",
+  "event": "2025-12-03",
+  "youtubeId": "zUS3M0qQYWc",
+  "publishAt": "2026-10-29T11:00:00-05:00",
+  "duration": 1549,
+  "thumbnail": "/talks/replacing-dev-workflow-scripts-with-claude-code-skills-and-plugins.jpg",
+  "topics": [
+    "Coding agents",
+    "Agents"
+  ],
+  "summary": "Nate Little replaces a set of Python feature scripts with Claude Code skills packaged as a plugin.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Skills for a Dev Workflow"
+    },
+    {
+      "t": 138,
+      "title": "Previous Script Workflow"
+    },
+    {
+      "t": 249,
+      "title": "Why Skills"
+    },
+    {
+      "t": 341,
+      "title": "Skills Save Context"
+    },
+    {
+      "t": 512,
+      "title": "Skills, Sub-agents and Commands"
+    },
+    {
+      "t": 644,
+      "title": "New Dev Process"
+    },
+    {
+      "t": 741,
+      "title": "Plugin Marketplaces"
+    },
+    {
+      "t": 807,
+      "title": "Feature Start Demo"
+    },
+    {
+      "t": 833,
+      "title": "Plugin and Skill Structure"
+    },
+    {
+      "t": 1173,
+      "title": "Feature Build Skill"
+    },
+    {
+      "t": 1252,
+      "title": "Q&A"
+    },
+    {
+      "t": 1432,
+      "title": "Next Steps"
+    }
+  ],
+  "learn": [
+    "Little describes the previous workflow: Python scripts for feature start, rebase and merge, plus a create PRD command that pulls a Linear ticket and interviews the developer.",
+    "A skill combines prompts with bash or Python code, so deterministic steps run as code while the agent handles edge cases such as a branch name that already exists.",
+    "Little says a skill loads only its front matter description into context, reads SKILL.md when invoked, and loads other files in its folder as needed, which helps when MCPs inflate context.",
+    "Little keeps slash commands as one-line wrappers that call skills, and uses a sub-agent only for a log reviewer, because sub-agents get their own context and return a short summary.",
+    "Live demo: a feature start command takes a Linear ticket number, runs a PRD interview with multiple choice questions, then offers a work tree and Taskmaster task generation.",
+    "The workflow is packaged as a plugin in a marketplace: one marketplace JSON file, one JSON file per plugin, and folders for commands, agents, scripts and skills."
+  ],
+  "links": []
+}
