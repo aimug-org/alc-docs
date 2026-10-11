@@ -5,9 +5,9 @@
   ],
   "date": "2024-07-10",
   "event": "2024-07-10",
-  "youtubeId": "s4T6SabmXSo",
+  "youtubeId": "zyKiVG7m5qM",
   "publishAt": "2026-10-15T11:00:00-05:00",
-  "duration": 1652,
+  "duration": 1010,
   "thumbnail": "/talks/next-js-front-end-for-langserve-document-summaries.jpg",
   "topics": [
     "Security"
@@ -49,10 +49,6 @@
     {
       "t": 847,
       "title": "Chain of Density"
-    },
-    {
-      "t": 1013,
-      "title": "PII and Guardrails"
     }
   ],
   "learn": [
@@ -60,7 +56,7 @@
     "A RemoteRunnable on the client lets you invoke a chain or stream its output chunk by chunk.",
     "The PDF is decoded, loaded into documents and passed through a chain with a prompt template.",
     "Next.js authentication was the hardest part, and he plans to move to Firebase.",
-    "In the Q&A, the group discusses the Chain of Density prompt, NeMo Guardrails and Presidio for PII."
+    "In the Q&A, the group discusses the Chain of Density prompt, and he names PII as his biggest blocker to testing with legal documents."
   ],
   "links": []
 }
