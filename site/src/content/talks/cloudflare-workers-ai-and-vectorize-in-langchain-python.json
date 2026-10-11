@@ -1,0 +1,55 @@
+{
+  "title": "Cloudflare Workers AI and Vectorize in LangChain (Python)",
+  "speakers": [
+    "collier-king"
+  ],
+  "date": "2025-04-02",
+  "event": "2025-04-02",
+  "youtubeId": "MCeg_KxId88",
+  "publishAt": "2026-12-03T11:00:00-06:00",
+  "duration": 427,
+  "thumbnail": "/talks/cloudflare-workers-ai-and-vectorize-in-langchain-python.jpg",
+  "topics": [
+    "RAG",
+    "Community"
+  ],
+  "summary": "Collier King introduces his Python LangChain integration for Cloudflare's Vectorize vector database.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Workers AI and Vectorize"
+    },
+    {
+      "t": 46,
+      "title": "Install and API Tokens"
+    },
+    {
+      "t": 114,
+      "title": "Creating Indexes"
+    },
+    {
+      "t": 141,
+      "title": "Loading and Querying"
+    },
+    {
+      "t": 234,
+      "title": "Metadata Filtering and Namespaces"
+    },
+    {
+      "t": 282,
+      "title": "IDs and Upserts"
+    },
+    {
+      "t": 329,
+      "title": "Async, TypeScript and Limits"
+    }
+  ],
+  "learn": [
+    "Vectorize is Cloudflare's vector database on the edge; it stores vectors, metadata and namespaces, while D1 stores the raw data.",
+    "Install from a standalone package or LangChain community, with either a global API token or tokens for Vectorize and D1.",
+    "Indexes default to cosine similarity and 1024 dimensions; metadata filtering needs a metadata index.",
+    "Query with a top K, filter on metadata, search by ID, upsert new or changed data, and use the async functions.",
+    "Limits he lists: up to 1536 dimensions, 50,000 vectors and 50,000 namespaces per index; a TypeScript package already exists on npm."
+  ],
+  "links": []
+}

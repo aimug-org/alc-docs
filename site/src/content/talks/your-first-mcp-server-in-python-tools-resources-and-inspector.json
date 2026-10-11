@@ -1,0 +1,90 @@
+{
+  "title": "Your First MCP Server in Python: Tools, Resources and Inspector",
+  "speakers": [
+    "karim-lalani"
+  ],
+  "date": "2025-04-02",
+  "event": "2025-04-02",
+  "youtubeId": "-4Qy1HMetQQ",
+  "publishAt": "2026-12-03T11:00:00-06:00",
+  "duration": 1784,
+  "thumbnail": "/talks/your-first-mcp-server-in-python-tools-resources-and-inspector.jpg",
+  "topics": [
+    "MCP"
+  ],
+  "summary": "Karim Lalani walks through building a first MCP server in Python and using it in Claude Desktop.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "How the Lab Works"
+    },
+    {
+      "t": 126,
+      "title": "SDKs and About Karim"
+    },
+    {
+      "t": 210,
+      "title": "Installing uv"
+    },
+    {
+      "t": 248,
+      "title": "The Greeter Server"
+    },
+    {
+      "t": 309,
+      "title": "Resources and Prompts"
+    },
+    {
+      "t": 374,
+      "title": "Docstrings as Tool Descriptions"
+    },
+    {
+      "t": 495,
+      "title": "MCP Inspector"
+    },
+    {
+      "t": 618,
+      "title": "Running the Inspector with uv"
+    },
+    {
+      "t": 804,
+      "title": "Templated Resources"
+    },
+    {
+      "t": 866,
+      "title": "Tools"
+    },
+    {
+      "t": 931,
+      "title": "What Tools Can Reach"
+    },
+    {
+      "t": 1078,
+      "title": "Install in Claude Desktop"
+    },
+    {
+      "t": 1178,
+      "title": "How Claude Picks the Tool"
+    },
+    {
+      "t": 1262,
+      "title": "Q&A"
+    },
+    {
+      "t": 1439,
+      "title": "Managing Many MCP Servers"
+    },
+    {
+      "t": 1698,
+      "title": "Calling an LLM from an MCP Tool"
+    }
+  ],
+  "learn": [
+    "The lab builds a simple Greeter server whose one tool returns a Texas greeting.",
+    "MCP servers advertise tools, resources and prompts; the Python SDK publishes a tool's docstring as its description, which becomes context for the language model.",
+    "MCP Inspector lets you introspect and test your server without an LLM, so you do not burn tokens while developing.",
+    "You run it with uv, and the SDK has a command to install the server into Claude Desktop, which he says works on a Mac.",
+    "An MCP tool can reach outside the LLM, even call another LLM: his ComfyUI MCP server has an LLM write the image prompt."
+  ],
+  "links": []
+}
