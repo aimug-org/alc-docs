@@ -224,3 +224,10 @@
     - { label: Website, url: "https://ronaldmego.com/" }
     - { label: GitHub, url: "https://github.com/ronaldmego" }
     - { label: X, url: "https://x.com/ronaldmego_" }
+
+- id: akshay-mittal
+  name: Akshay Mittal
+  title: "Senior Software Engineer"
+  company: "PayPal"
+  links:
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/akshaymittal143/" }

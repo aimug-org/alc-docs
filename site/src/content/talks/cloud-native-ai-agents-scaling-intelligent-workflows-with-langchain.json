@@ -1,0 +1,72 @@
+{
+  "title": "Cloud-Native AI Agents: Scaling Intelligent Workflows with LangChain",
+  "speakers": [
+    "akshay-mittal"
+  ],
+  "date": "2025-04-02",
+  "event": "2025-04-02",
+  "youtubeId": "V0OWdUzg9L0",
+  "publishAt": "2026-12-03T11:00:00-06:00",
+  "duration": 803,
+  "thumbnail": "/talks/cloud-native-ai-agents-scaling-intelligent-workflows-with-langchain.jpg",
+  "topics": [
+    "Routing",
+    "RAG",
+    "Inference"
+  ],
+  "summary": "Akshay Mittal explains how cloud-native practices help LangChain agents scale in production.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Intro"
+    },
+    {
+      "t": 47,
+      "title": "Why AI Agents and Cloud Native"
+    },
+    {
+      "t": 216,
+      "title": "LangChain Meets Cloud-Native Architecture"
+    },
+    {
+      "t": 280,
+      "title": "Deployment Best Practices"
+    },
+    {
+      "t": 326,
+      "title": "Use Cases and Challenges"
+    },
+    {
+      "t": 410,
+      "title": "Key Takeaways"
+    },
+    {
+      "t": 437,
+      "title": "Joint Lightning-Talk Q&A"
+    },
+    {
+      "t": 493,
+      "title": "Collier King on His Vectorize Package"
+    },
+    {
+      "t": 653,
+      "title": "Vectorize and MCP Servers"
+    },
+    {
+      "t": 701,
+      "title": "Agents in Financial Services"
+    },
+    {
+      "t": 746,
+      "title": "PhD Research on Cloud-Native Security"
+    }
+  ],
+  "learn": [
+    "LLMs are resource intensive and have unpredictable scaling needs, so traditional scaling is not enough.",
+    "Agents act as autonomous decision makers, chains handle sequential steps, and memory manages context, which maps well to microservices.",
+    "Deployment tips: containerize with Kubernetes, use serverless such as AWS Lambda, store embedded context in vector databases and monitor latency with Prometheus.",
+    "A financial services case uses 25 specialized agents for retrieval, with a sidecar pattern, an event mesh and model routing.",
+    "Challenges he names: data privacy, model drift and real-time inference cost. His advice: start small, maybe with a chatbot, then scale."
+  ],
+  "links": []
+}
