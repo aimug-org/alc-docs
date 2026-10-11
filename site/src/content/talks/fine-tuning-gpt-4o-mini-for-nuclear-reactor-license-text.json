@@ -5,9 +5,9 @@
   ],
   "date": "2024-11-07",
   "event": "2024-11-07",
-  "youtubeId": "tpkf_lV-s94",
+  "youtubeId": "ukKbV5TTL9E",
   "publishAt": "2026-10-15T11:00:00-05:00",
-  "duration": 562,
+  "duration": 529,
   "thumbnail": "/talks/fine-tuning-gpt-4o-mini-for-nuclear-reactor-license-text.jpg",
   "topics": [],
   "summary": "Rob Whelan on fine-tuning GPT-4o mini to write nuclear reactor license application text.",
@@ -17,23 +17,23 @@
       "title": "Why Reactor Licenses Need AI"
     },
     {
-      "t": 123,
+      "t": 98,
       "title": "Document Requirements"
     },
     {
-      "t": 198,
+      "t": 173,
       "title": "Style and Data Needs"
     },
     {
-      "t": 219,
+      "t": 194,
       "title": "Fine-Tuning Proof of Concept"
     },
     {
-      "t": 328,
+      "t": 303,
       "title": "Training Data Structure"
     },
     {
-      "t": 433,
+      "t": 408,
       "title": "Hallucinations and Lessons"
     }
   ],
