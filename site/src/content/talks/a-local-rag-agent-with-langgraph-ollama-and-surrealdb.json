@@ -1,0 +1,84 @@
+{
+  "title": "A Local RAG Agent with LangGraph, Ollama and SurrealDB",
+  "speakers": [
+    "karim-lalani"
+  ],
+  "date": "2024-02-21",
+  "event": "2024-02-21",
+  "youtubeId": "jVtixVdDKJY",
+  "publishAt": "2026-11-19T11:00:00-06:00",
+  "duration": 2030,
+  "thumbnail": "/talks/a-local-rag-agent-with-langgraph-ollama-and-surrealdb.jpg",
+  "topics": [
+    "LangGraph",
+    "Graphs",
+    "RAG"
+  ],
+  "summary": "Karim Lalani builds a RAG agent that runs on local open source models, over a recipe database.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Intro: Open Source Local RAG"
+    },
+    {
+      "t": 148,
+      "title": "Ollama"
+    },
+    {
+      "t": 196,
+      "title": "SurrealDB and the Plan"
+    },
+    {
+      "t": 290,
+      "title": "Notebook Setup"
+    },
+    {
+      "t": 436,
+      "title": "Libraries and Search Tool"
+    },
+    {
+      "t": 609,
+      "title": "Two Vector Stores"
+    },
+    {
+      "t": 651,
+      "title": "Loading the Datasets"
+    },
+    {
+      "t": 1006,
+      "title": "Similarity Search Test"
+    },
+    {
+      "t": 1078,
+      "title": "Why Review Retrieval"
+    },
+    {
+      "t": 1119,
+      "title": "Designing the Graph"
+    },
+    {
+      "t": 1366,
+      "title": "Agent State"
+    },
+    {
+      "t": 1437,
+      "title": "JSON Mode and Classification Chains"
+    },
+    {
+      "t": 1729,
+      "title": "Node Functions"
+    },
+    {
+      "t": 1941,
+      "title": "Building and Compiling the Graph"
+    }
+  ],
+  "learn": [
+    "Ollama runs Llama 2 locally, so you connect to a local endpoint instead of OpenAI; he argues that if it works on a smaller open source model it should carry over to proprietary ones.",
+    "SurrealDB holds two vector stores, recipes and cocktails, each loaded with 5,000 entries from Hugging Face datasets.",
+    "Without filtering or guardrails, a similarity search always returns something, even poor matches, so the graph adds a step to review retrieval quality.",
+    "The graph classifies each question as food, drink or search, retrieves from the matching store, reviews the result and falls back to a DuckDuckGo search that needs no API key.",
+    "Ollama's JSON mode plus a Pydantic schema helps keep the classification and review outputs structured, and a state object tracks the question, context and response."
+  ],
+  "links": []
+}
