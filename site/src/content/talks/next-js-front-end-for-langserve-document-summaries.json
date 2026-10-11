@@ -1,0 +1,66 @@
+{
+  "title": "Next.js Front End for LangServe Document Summaries",
+  "speakers": [
+    "jackson-arnold"
+  ],
+  "date": "2024-07-10",
+  "event": "2024-07-10",
+  "youtubeId": "W2-H9PIisUw",
+  "publishAt": "2026-10-15T11:00:00-05:00",
+  "duration": 1652,
+  "thumbnail": "/talks/next-js-front-end-for-langserve-document-summaries.jpg",
+  "topics": [
+    "Security"
+  ],
+  "summary": "Jackson Arnold shows a Next.js app that calls LangServe chains to summarize uploaded PDFs.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Intro and Motivation"
+    },
+    {
+      "t": 216,
+      "title": "Tech Stack"
+    },
+    {
+      "t": 353,
+      "title": "App Demo"
+    },
+    {
+      "t": 458,
+      "title": "Code Walkthrough"
+    },
+    {
+      "t": 517,
+      "title": "Authentication and Next Steps"
+    },
+    {
+      "t": 539,
+      "title": "RemoteRunnable on the Client"
+    },
+    {
+      "t": 607,
+      "title": "Repository Structure"
+    },
+    {
+      "t": 720,
+      "title": "NextAuth Problems"
+    },
+    {
+      "t": 847,
+      "title": "Chain of Density"
+    },
+    {
+      "t": 1013,
+      "title": "PII and Guardrails"
+    }
+  ],
+  "learn": [
+    "LangServe sits on FastAPI, so a chain and your own API endpoints share one backend.",
+    "A RemoteRunnable on the client lets you invoke a chain or stream its output chunk by chunk.",
+    "The PDF is decoded, loaded into documents and passed through a chain with a prompt template.",
+    "Next.js authentication was the hardest part, and he plans to move to Firebase.",
+    "In the Q&A, the group discusses the Chain of Density prompt, NeMo Guardrails and Presidio for PII."
+  ],
+  "links": []
+}

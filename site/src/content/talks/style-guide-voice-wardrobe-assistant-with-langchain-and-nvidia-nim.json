@@ -1,0 +1,60 @@
+{
+  "title": "Style Guide: Voice Wardrobe Assistant with LangChain and NVIDIA NIM",
+  "speakers": [
+    "karim-lalani"
+  ],
+  "date": "2024-07-10",
+  "event": "2024-07-10",
+  "youtubeId": "w3JRo5FA55o",
+  "publishAt": "2026-10-15T11:00:00-05:00",
+  "duration": 1177,
+  "thumbnail": "/talks/style-guide-voice-wardrobe-assistant-with-langchain-and-nvidia-nim.jpg",
+  "topics": [
+    "Graphs",
+    "RAG",
+    "Inference"
+  ],
+  "summary": "Karim Lalani demos Style Guide, a voice assistant that recommends outfits from your wardrobe photos.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Intro and Origin Story"
+    },
+    {
+      "t": 107,
+      "title": "Style Guide Concept"
+    },
+    {
+      "t": 167,
+      "title": "Technical Architecture"
+    },
+    {
+      "t": 284,
+      "title": "Photo Upload Workflow"
+    },
+    {
+      "t": 319,
+      "title": "AI Agent Logic"
+    },
+    {
+      "t": 446,
+      "title": "Challenges and Solutions"
+    },
+    {
+      "t": 613,
+      "title": "RAG Question and Demo"
+    },
+    {
+      "t": 897,
+      "title": "Graph Complexity"
+    }
+  ],
+  "learn": [
+    "You upload clothing photos; a vision model describes them and the details are stored in a vector database.",
+    "NVIDIA inference microservices (NIM) are hosted inference that NVIDIA runs, or you can host it yourself.",
+    "The NVIDIA model in LangChain lacked tool calling, so he wrote a wrapper that adds it to a model.",
+    "The vision model was weak at JSON, so he fed its output into Llama 3 for structured output.",
+    "The agent graph is simple: an Oracle node, a tool node and a summarize node."
+  ],
+  "links": []
+}
