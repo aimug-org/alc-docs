@@ -1,0 +1,68 @@
+{
+  "title": "Traversing a Bill of Materials with a LangGraph Agent",
+  "speakers": [
+    "riccardo-pirruccio"
+  ],
+  "date": "2024-02-21",
+  "event": "2024-02-21",
+  "youtubeId": "rWhyM-1gtLM",
+  "publishAt": "2026-11-19T11:00:00-06:00",
+  "duration": 981,
+  "thumbnail": "/talks/traversing-a-bill-of-materials-with-a-langgraph-agent.jpg",
+  "topics": [
+    "Routing",
+    "LangGraph",
+    "Graphs"
+  ],
+  "summary": "Riccardo Pirruccio builds a LangGraph agent team that answers questions about a bill of materials.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "BOM Data as a Graph"
+    },
+    {
+      "t": 106,
+      "title": "Agent Collaborator Pattern"
+    },
+    {
+      "t": 205,
+      "title": "The Three Agents"
+    },
+    {
+      "t": 318,
+      "title": "Custom Tools and the State Problem"
+    },
+    {
+      "t": 393,
+      "title": "Demo: The BOM Data"
+    },
+    {
+      "t": 483,
+      "title": "Querying the Graph"
+    },
+    {
+      "t": 558,
+      "title": "Lessons Learned"
+    },
+    {
+      "t": 698,
+      "title": "Prompting and Schemas Discussion"
+    },
+    {
+      "t": 867,
+      "title": "What He Would Change in the Routing"
+    },
+    {
+      "t": 939,
+      "title": "Code Structure Recap"
+    }
+  ],
+  "learn": [
+    "A manufacturing bill of materials is already a graph: a product, its sub-assemblies, and their children down to individual parts.",
+    "The agent collaborator pattern uses a router node to send requests between agent nodes and a node holding the tools.",
+    "His team has three agents: a graph traverser, a data frame constructor and a chart generator, with the BOM held in a NetworkX graph.",
+    "The demo app asks the traverser to find the highest priced parts; it runs Python against the graph and answers.",
+    "He hard-coded the graph into a tool because passing state to it was a blocker, and the prompt had to say exactly which graph variable and node attributes to use."
+  ],
+  "links": []
+}

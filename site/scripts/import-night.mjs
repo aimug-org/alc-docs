@@ -89,7 +89,9 @@ for (const [name, m0] of Object.entries(mapping.talks)) {
   for (let n = 1; holder(slug) && holder(slug) !== m.youtubeId; n++) slug = n === 1 ? dated : `${slugify(`${title} ${mapping.event}`, 76)}-${n}`;
   const prev = existing.get(m.youtubeId);
 
-  await sharp(join(nightDir, 'out', `${file}.thumb.jpg`)).resize({ width: 1280 }).jpeg({ quality: 75 }).toFile(join(siteDir, 'public/talks', `${slug}.jpg`));
+  // A cut with a masked region (e.g. a camera tile blurred out) has its thumbnail rebuilt as <file>.masked.thumb.jpg: prefer it.
+  const thumb = [`${file}.masked.thumb.jpg`, `${file}.thumb.jpg`].map((f) => join(nightDir, 'out', f)).find(existsSync);
+  await sharp(thumb).resize({ width: 1280 }).jpeg({ quality: 75 }).toFile(join(siteDir, 'public/talks', `${slug}.jpg`));
   const stub = {
     title,
     speakers: speakers.has(name) ? [name] : [],
