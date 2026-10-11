@@ -1,0 +1,64 @@
+{
+  "title": "Lightning Agents: A Registry Pattern for Claude Agent SDK Agents",
+  "speakers": [
+    "riccardo-pirruccio"
+  ],
+  "date": "2025-12-03",
+  "event": "2025-12-03",
+  "youtubeId": "3-gEUKL9G-U",
+  "publishAt": "2026-10-29T11:00:00-05:00",
+  "duration": 784,
+  "thumbnail": "/talks/lightning-agents-a-registry-pattern-for-claude-agent-sdk-agents.jpg",
+  "topics": [
+    "Security",
+    "Agents"
+  ],
+  "summary": "Riccardo Pirruccio presents Lightning Agents, a plugin and registry pattern on the Claude Agent SDK that lets agents create new agents.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Introduction to Lightning Agents"
+    },
+    {
+      "t": 23,
+      "title": "The Problem with Empirical Agents"
+    },
+    {
+      "t": 85,
+      "title": "Proposing the Factory Pattern"
+    },
+    {
+      "t": 156,
+      "title": "Voyager and Skill Registries"
+    },
+    {
+      "t": 259,
+      "title": "Pipeline and Registry Implementation"
+    },
+    {
+      "t": 333,
+      "title": "Agents Creating New Agents"
+    },
+    {
+      "t": 479,
+      "title": "Q&A on the Factory of Factories"
+    },
+    {
+      "t": 577,
+      "title": "Guardrails and Fault Tolerance"
+    },
+    {
+      "t": 746,
+      "title": "Logging Instead of Telemetry"
+    }
+  ],
+  "learn": [
+    "Pirruccio says building agents has been an empirical, step-by-step process, and chains of callables in the early LangChain style leave code and prompts everywhere that do not scale.",
+    "The proposal is a plugin system with a registry, built on the Claude Agent SDK, so agent configurations persist in a database instead of being defined in a file each time.",
+    "Pirruccio traces the idea to Voyager, a 2023 NVIDIA paper in which a GPT-4 model plays Minecraft and adds learned skills to a skills registry to progress.",
+    "The demo shows an agents.json configuration added to the registry and called through a registry function, so the agent becomes available as a runnable.",
+    "Agents get CRUD tools for the agent and tool registries, and an architect agent and a tools architect agent generate new ones through a CLI.",
+    "Pirruccio says agent design is shifting from edge cases to environment boundary conditions and guardrails, and uses a plain logger instead of an OpenTelemetry setup."
+  ],
+  "links": []
+}

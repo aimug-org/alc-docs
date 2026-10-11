@@ -1,0 +1,72 @@
+{
+  "title": "Browser Automation with Stagehand: Finding Company Press Release Pages",
+  "speakers": [
+    "collier-king"
+  ],
+  "date": "2025-12-03",
+  "event": "2025-12-03",
+  "youtubeId": "5QvUP2RNR2Q",
+  "publishAt": "2026-10-29T11:00:00-05:00",
+  "duration": 1212,
+  "thumbnail": "/talks/browser-automation-with-stagehand-finding-company-press-release-pages.jpg",
+  "topics": [
+    "Inference",
+    "Agents"
+  ],
+  "summary": "Collier King shows how Stagehand combines natural language and code to automate a browser, including a case study that finds company press release pages.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Introduction to Stagehand"
+    },
+    {
+      "t": 13,
+      "title": "Why Agentic Browsing"
+    },
+    {
+      "t": 110,
+      "title": "Deterministic Trade-offs"
+    },
+    {
+      "t": 208,
+      "title": "Core Features"
+    },
+    {
+      "t": 340,
+      "title": "Best Practices"
+    },
+    {
+      "t": 414,
+      "title": "Caching"
+    },
+    {
+      "t": 476,
+      "title": "Model Evals and Integrations"
+    },
+    {
+      "t": 583,
+      "title": "Case Study: Press Releases"
+    },
+    {
+      "t": 765,
+      "title": "Model Results"
+    },
+    {
+      "t": 932,
+      "title": "Q&A on Playwright"
+    },
+    {
+      "t": 1026,
+      "title": "Code Walkthrough"
+    }
+  ],
+  "learn": [
+    "Stagehand has four core calls, observe, act, extract and agent, and the TypeScript project builds on Playwright.",
+    "King shows extract with a Zod schema that pulls a product name, price and stock status from a page.",
+    "Stagehand can cache the steps an LLM took for act and agent under a custom key, and King says to recompute and cache again when the page changes.",
+    "King recommends describing elements (\"the sign-in button\") instead of how they look (\"the blue button\"), and not combining multiple steps in one act call.",
+    "In the case study, King finds news and PR pages for the Dow 30 companies in three steps: a DuckDuckGo search, clicking around the homepage, then the site search box.",
+    "King compares several models, including an open model run on Ollama, and says cheap, older models handle the task, with Haiku the fastest and GPT-4o using the fewest tokens."
+  ],
+  "links": []
+}
