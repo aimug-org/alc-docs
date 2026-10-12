@@ -1,0 +1,96 @@
+{
+  "title": "Optimizing AI Systems: A Coding Agent in a Loop with CodeEvolver",
+  "speakers": [
+    "julian-ghadially"
+  ],
+  "date": "2026-03-04",
+  "event": "2026-03-04",
+  "youtubeId": "NdluUug8YQA",
+  "publishAt": "2026-12-17T11:00:00-06:00",
+  "duration": 1249,
+  "thumbnail": "/talks/optimizing-ai-systems-a-coding-agent-in-a-loop-with-codeevolver.jpg",
+  "topics": [
+    "Evals",
+    "RAG",
+    "Coding agents"
+  ],
+  "summary": "Julian Ghadially puts a coding agent in a loop that fixes AI system failures by changing prompts and code.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "A Coding Agent in a Loop"
+    },
+    {
+      "t": 57,
+      "title": "Types of AI Systems"
+    },
+    {
+      "t": 117,
+      "title": "The Reliability Problem"
+    },
+    {
+      "t": 172,
+      "title": "GEPA Recap"
+    },
+    {
+      "t": 261,
+      "title": "CodeEvolver"
+    },
+    {
+      "t": 302,
+      "title": "Results"
+    },
+    {
+      "t": 339,
+      "title": "Test Set and Controls"
+    },
+    {
+      "t": 405,
+      "title": "What It Tried on HotpotQA"
+    },
+    {
+      "t": 459,
+      "title": "The Winning Trajectory"
+    },
+    {
+      "t": 509,
+      "title": "Before and After, and HoVer"
+    },
+    {
+      "t": 567,
+      "title": "Open Source and Early Access"
+    },
+    {
+      "t": 682,
+      "title": "Q&A: Claude Code in a Sandbox"
+    },
+    {
+      "t": 740,
+      "title": "Agile and Six Sigma for AI"
+    },
+    {
+      "t": 864,
+      "title": "Heavy vs Light Mode"
+    },
+    {
+      "t": 927,
+      "title": "Cost per Iteration"
+    },
+    {
+      "t": 1021,
+      "title": "Optimizing the Whole System"
+    },
+    {
+      "t": 1135,
+      "title": "Search Space and Reflection Agents"
+    }
+  ],
+  "learn": [
+    "Prompt optimization lets an optimizer write prompts from a dataset and reward function; code optimization also lets it change the code, such as adding sub-agents, tools or context steps.",
+    "GEPA (Genetic Pareto) is the prompt optimizer behind it; CodeEvolver, his open-source tool, runs Claude Code in a sandbox that makes Git branches and keeps the winners against an eval set.",
+    "He reports 5 to 15 points over prompt optimization on HoVer and HotpotQA, measured on a held-out test set with a resource penalty and controlled for chain-of-thought reasoning.",
+    "The best HotpotQA trajectory was short: two-hop retrieval, summarization dropped, answer extraction instead of generation, and 10 pages per search instead of 7.",
+    "Q&A covers Claude Code in a sandbox, agile and Six Sigma views, heavy versus light mode, and optimizer cost of about $0.50 to $1 per iteration and $40 to $60 per cycle, not counting running the system itself."
+  ],
+  "links": []
+}
