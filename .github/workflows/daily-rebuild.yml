@@ -4,7 +4,7 @@ name: Daily site rebuild
 # This asks Cloudflare Pages to rebuild main once a day, after the 10:00 AM Central premiere slot.
 on:
   schedule:
-    - cron: '15 16 * * *' # 11:15 AM CDT / 10:15 AM CST
+    - cron: '15 17 * * *' # 12:15 PM CDT / 11:15 AM CST: after the 11:00 CT archive releases all year (16:15 ran before them in winter)
   workflow_dispatch:
 
 jobs:
