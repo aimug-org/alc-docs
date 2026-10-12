@@ -5,9 +5,9 @@
   ],
   "date": "2026-04-01",
   "event": "2026-04-01",
-  "youtubeId": "TlsiB3zFOFU",
+  "youtubeId": "K_1rxNFA9lc",
   "publishAt": "2026-11-12T11:00:00-06:00",
-  "duration": 786,
+  "duration": 805,
   "thumbnail": "/talks/buildscript-a-website-built-from-a-google-doc.jpg",
   "topics": [
     "Coding agents"
@@ -19,35 +19,35 @@
       "title": "Who He Is and What BuildScript Is"
     },
     {
-      "t": 63,
+      "t": 66,
       "title": "The WordPress Problem"
     },
     {
-      "t": 191,
+      "t": 194,
       "title": "How the Sync Works"
     },
     {
-      "t": 272,
+      "t": 275,
       "title": "Demo: The Document Is the System"
     },
     {
-      "t": 374,
+      "t": 377,
       "title": "Setup and Deployment"
     },
     {
-      "t": 437,
+      "t": 440,
       "title": "Why Google Docs"
     },
     {
-      "t": 522,
+      "t": 525,
       "title": "The Markdown Behind the Doc"
     },
     {
-      "t": 562,
+      "t": 565,
       "title": "Where to Find It"
     },
     {
-      "t": 624,
+      "t": 627,
       "title": "Q&A: Images and Scale"
     }
   ],

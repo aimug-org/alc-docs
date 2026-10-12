@@ -1,0 +1,90 @@
+{
+  "title": "ATune: Heart Rate and Game Sounds in Your Terminal",
+  "speakers": [
+    "colin-mcnamara"
+  ],
+  "date": "2026-08-11",
+  "event": "2026-08-11",
+  "youtubeId": "82Z6fhRAAFQ",
+  "publishAt": "2026-11-05T11:00:00-06:00",
+  "duration": 1125,
+  "thumbnail": "/talks/atune-heart-rate-and-game-sounds-in-your-terminal.jpg",
+  "topics": [
+    "Coding agents"
+  ],
+  "summary": "Colin McNamara uses a chest-strap ECG to learn which alert sounds keep him in flow at the terminal.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "The Flow Problem"
+    },
+    {
+      "t": 64,
+      "title": "Building ATune"
+    },
+    {
+      "t": 125,
+      "title": "Where the Idea Started"
+    },
+    {
+      "t": 185,
+      "title": "The Cost of Interruptions"
+    },
+    {
+      "t": 247,
+      "title": "Sounds That Land and Sounds That Jar"
+    },
+    {
+      "t": 313,
+      "title": "Method: ECG, Orientation vs Startle"
+    },
+    {
+      "t": 358,
+      "title": "A Self-Tuning Reward Function"
+    },
+    {
+      "t": 437,
+      "title": "Human in the Loop"
+    },
+    {
+      "t": 498,
+      "title": "Build Your Own"
+    },
+    {
+      "t": 551,
+      "title": "Keeping the Data Local"
+    },
+    {
+      "t": 603,
+      "title": "The Stack"
+    },
+    {
+      "t": 681,
+      "title": "Resources"
+    },
+    {
+      "t": 745,
+      "title": "Q&A: Adding Qualitative Data"
+    },
+    {
+      "t": 885,
+      "title": "Q&A: Which Papers Inspired It"
+    },
+    {
+      "t": 934,
+      "title": "Peopleware and a Sound Demo"
+    },
+    {
+      "t": 1041,
+      "title": "Q&A: Does Culture Matter?"
+    }
+  ],
+  "learn": [
+    "Being pulled out of flow can cost about 20 minutes, so he built ATune, a Rust app that reads ECG from a Polar H10 heart rate monitor over Bluetooth at 130 Hz alongside his coding terminal.",
+    "It windows the ECG around each alert sound and scores whether he oriented back to the task or startled; in his data a Zelda sound calmed him and a Duke Nukem sound did not.",
+    "It turns those scores into a reward function and keeps tuning its sound choices: sounds compete in leagues like a bracket, and a recency decay shows that a sound's calming effect fades.",
+    "The idea comes from the HarnessX paper on self-improving harnesses, which he heard about in a talk by Esteban Puerta at Antler.",
+    "Data stays local, with a Qwen3.5 27B model on his machine doing private digestion and Claude and Codex checking each other; the terminal is herdr, a front end for tmux."
+  ],
+  "links": []
+}

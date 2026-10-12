@@ -5,9 +5,9 @@
   ],
   "date": "2026-07-01",
   "event": "2026-07-01",
-  "youtubeId": "ju_X-T5leLc",
+  "youtubeId": "k8hBC_ji_IM",
   "publishAt": "2026-10-29T11:00:00-05:00",
-  "duration": 1171,
+  "duration": 1189,
   "thumbnail": "/talks/under-the-hood-of-a-coding-agent-the-loop-tools-and-reasoning.jpg",
   "topics": [
     "Coding agents",
@@ -21,55 +21,55 @@
       "title": "Intro"
     },
     {
-      "t": 61,
+      "t": 64,
       "title": "Following Along"
     },
     {
-      "t": 94,
+      "t": 97,
       "title": "Models Trained to Use Tools"
     },
     {
-      "t": 186,
+      "t": 189,
       "title": "Demo Setup"
     },
     {
-      "t": 272,
+      "t": 275,
       "title": "Defining the Tools"
     },
     {
-      "t": 359,
+      "t": 362,
       "title": "System Prompt and First Run"
     },
     {
-      "t": 440,
+      "t": 443,
       "title": "Reading the Model's Reasoning"
     },
     {
-      "t": 567,
+      "t": 570,
       "title": "Non-Deterministic Tool Calls"
     },
     {
-      "t": 628,
+      "t": 631,
       "title": "The Model Returns a Fixed File"
     },
     {
-      "t": 688,
+      "t": 691,
       "title": "What Just Happened"
     },
     {
-      "t": 750,
+      "t": 753,
       "title": "The Same Agent in LangChain"
     },
     {
-      "t": 918,
+      "t": 921,
       "title": "Q&A: Platform vs Codex"
     },
     {
-      "t": 1001,
+      "t": 1004,
       "title": "Checking the Patch"
     },
     {
-      "t": 1064,
+      "t": 1067,
       "title": "Q&A: Reviewing Changes First"
     }
   ],

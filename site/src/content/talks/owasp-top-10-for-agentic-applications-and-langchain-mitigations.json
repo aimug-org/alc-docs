@@ -5,9 +5,9 @@
   ],
   "date": "2026-01-07",
   "event": "2026-01-07",
-  "youtubeId": "JnH-_iLwkZQ",
+  "youtubeId": "YtgPt5AKo10",
   "publishAt": "2026-12-10T11:00:00-06:00",
-  "duration": 926,
+  "duration": 944,
   "thumbnail": "/talks/owasp-top-10-for-agentic-applications-and-langchain-mitigations.jpg",
   "topics": [
     "Graphs",
@@ -21,35 +21,35 @@
       "title": "Why Agentic Security"
     },
     {
-      "t": 50,
+      "t": 53,
       "title": "What OWASP Is"
     },
     {
-      "t": 170,
+      "t": 173,
       "title": "The Agentic Top 10 for 2026"
     },
     {
-      "t": 257,
+      "t": 260,
       "title": "Real-World Exploit Examples"
     },
     {
-      "t": 359,
+      "t": 362,
       "title": "Agent Failure Modes"
     },
     {
-      "t": 516,
+      "t": 519,
       "title": "The Ten Risk Categories"
     },
     {
-      "t": 672,
+      "t": 675,
       "title": "Reading the Mitigation Guidance"
     },
     {
-      "t": 727,
+      "t": 730,
       "title": "Mitigations with LangChain and LangSmith"
     },
     {
-      "t": 828,
+      "t": 831,
       "title": "Demo: Human-Agent Trust Exploitation"
     }
   ],

@@ -5,8 +5,13 @@
   "talks": {
     "stefano-casafranca": {
       "file": "stefano-casafranca-event-request-agents-at-cgcs",
-      "youtubeId": "NY02wOKa93k",
+      "youtubeId": "9IQ8E9YEJyY",
       "publishAt": "2026-10-29T11:00:00-05:00"
+    },
+    "colin-mcnamara": {
+      "file": "colin-mcnamara-atune-heart-rate-in-your-terminal",
+      "youtubeId": "82Z6fhRAAFQ",
+      "publishAt": "2026-11-05T11:00:00-06:00"
     }
   }
 }

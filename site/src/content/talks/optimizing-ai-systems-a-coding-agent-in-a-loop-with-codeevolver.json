@@ -5,9 +5,9 @@
   ],
   "date": "2026-03-04",
   "event": "2026-03-04",
-  "youtubeId": "NdluUug8YQA",
+  "youtubeId": "Yds0AmV8Umk",
   "publishAt": "2026-11-19T11:00:00-06:00",
-  "duration": 1249,
+  "duration": 1268,
   "thumbnail": "/talks/optimizing-ai-systems-a-coding-agent-in-a-loop-with-codeevolver.jpg",
   "topics": [
     "Evals",
@@ -21,67 +21,67 @@
       "title": "A Coding Agent in a Loop"
     },
     {
-      "t": 57,
+      "t": 60,
       "title": "Types of AI Systems"
     },
     {
-      "t": 117,
+      "t": 120,
       "title": "The Reliability Problem"
     },
     {
-      "t": 172,
+      "t": 175,
       "title": "GEPA Recap"
     },
     {
-      "t": 261,
+      "t": 264,
       "title": "CodeEvolver"
     },
     {
-      "t": 302,
+      "t": 305,
       "title": "Results"
     },
     {
-      "t": 339,
+      "t": 342,
       "title": "Test Set and Controls"
     },
     {
-      "t": 405,
+      "t": 408,
       "title": "What It Tried on HotpotQA"
     },
     {
-      "t": 459,
+      "t": 462,
       "title": "The Winning Trajectory"
     },
     {
-      "t": 509,
+      "t": 512,
       "title": "Before and After, and HoVer"
     },
     {
-      "t": 567,
+      "t": 570,
       "title": "Open Source and Early Access"
     },
     {
-      "t": 682,
+      "t": 685,
       "title": "Q&A: Claude Code in a Sandbox"
     },
     {
-      "t": 740,
+      "t": 743,
       "title": "Agile and Six Sigma for AI"
     },
     {
-      "t": 864,
+      "t": 867,
       "title": "Heavy vs Light Mode"
     },
     {
-      "t": 927,
+      "t": 930,
       "title": "Cost per Iteration"
     },
     {
-      "t": 1021,
+      "t": 1024,
       "title": "Optimizing the Whole System"
     },
     {
-      "t": 1135,
+      "t": 1138,
       "title": "Search Space and Reflection Agents"
     }
   ],

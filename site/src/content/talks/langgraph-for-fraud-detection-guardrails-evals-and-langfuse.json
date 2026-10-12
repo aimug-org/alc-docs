@@ -5,9 +5,9 @@
   ],
   "date": "2026-06-03",
   "event": "2026-06-03",
-  "youtubeId": "paYVjZRrrFQ",
+  "youtubeId": "dAHCioMb0Q0",
   "publishAt": "2026-11-05T11:00:00-06:00",
-  "duration": 1258,
+  "duration": 1276,
   "thumbnail": "/talks/langgraph-for-fraud-detection-guardrails-evals-and-langfuse.jpg",
   "topics": [
     "Evals",
@@ -21,59 +21,59 @@
       "title": "Intro"
     },
     {
-      "t": 105,
+      "t": 108,
       "title": "Why Fraud Detection Is Hard"
     },
     {
-      "t": 121,
+      "t": 124,
       "title": "One Big Prompt vs a Graph"
     },
     {
-      "t": 184,
+      "t": 187,
       "title": "Demo: Labeled Simulated Data"
     },
     {
-      "t": 245,
+      "t": 248,
       "title": "Timeline, Human Approval and Evals"
     },
     {
-      "t": 306,
+      "t": 309,
       "title": "The Graph as a Mermaid Chart"
     },
     {
-      "t": 390,
+      "t": 393,
       "title": "From Coder to Project Manager"
     },
     {
-      "t": 518,
+      "t": 521,
       "title": "Letting Agents Report Back"
     },
     {
-      "t": 614,
+      "t": 617,
       "title": "Results"
     },
     {
-      "t": 674,
+      "t": 677,
       "title": "Q&A: Benefits of the Graph"
     },
     {
-      "t": 736,
+      "t": 739,
       "title": "Q&A: Langfuse"
     },
     {
-      "t": 842,
+      "t": 845,
       "title": "Q&A: The Graph in Code"
     },
     {
-      "t": 1052,
+      "t": 1055,
       "title": "Q&A: Guardrails for Enterprise"
     },
     {
-      "t": 1113,
+      "t": 1116,
       "title": "Q&A: Evals"
     },
     {
-      "t": 1194,
+      "t": 1197,
       "title": "Q&A: Command-Line Tools"
     }
   ],

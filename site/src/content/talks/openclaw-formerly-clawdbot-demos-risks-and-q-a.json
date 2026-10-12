@@ -5,9 +5,9 @@
   ],
   "date": "2026-02-04",
   "event": "2026-02-04",
-  "youtubeId": "4Ir9R6uCV54",
+  "youtubeId": "CboQUScz40c",
   "publishAt": "2026-12-03T11:00:00-06:00",
-  "duration": 2018,
+  "duration": 2037,
   "thumbnail": "/talks/openclaw-formerly-clawdbot-demos-risks-and-q-a.jpg",
   "topics": [
     "Coding agents",
@@ -21,63 +21,63 @@
       "title": "The Names: Clawdbot, Moltbot, OpenClaw"
     },
     {
-      "t": 124,
+      "t": 127,
       "title": "Moltbook and ClawHub"
     },
     {
-      "t": 246,
+      "t": 249,
       "title": "How It Works"
     },
     {
-      "t": 307,
+      "t": 310,
       "title": "Gateway and Agent Runners"
     },
     {
-      "t": 428,
+      "t": 431,
       "title": "A Step Beyond Skills"
     },
     {
-      "t": 488,
+      "t": 491,
       "title": "Isolation Advice"
     },
     {
-      "t": 614,
+      "t": 617,
       "title": "Proactive by Default"
     },
     {
-      "t": 708,
+      "t": 711,
       "title": "Daily Uses"
     },
     {
-      "t": 919,
+      "t": 922,
       "title": "Reviewing Session Logs"
     },
     {
-      "t": 1010,
+      "t": 1013,
       "title": "Sharing Skills Across Agents"
     },
     {
-      "t": 1232,
+      "t": 1235,
       "title": "Why He Tried It"
     },
     {
-      "t": 1293,
+      "t": 1296,
       "title": "About 100 Hours of Work"
     },
     {
-      "t": 1415,
+      "t": 1418,
       "title": "Q&A: An Honest Review of the Code"
     },
     {
-      "t": 1573,
+      "t": 1576,
       "title": "A Stray Agent Query"
     },
     {
-      "t": 1723,
+      "t": 1726,
       "title": "Defenses Against Injection"
     },
     {
-      "t": 1773,
+      "t": 1776,
       "title": "Q&A: Searching Past Sessions"
     }
   ],

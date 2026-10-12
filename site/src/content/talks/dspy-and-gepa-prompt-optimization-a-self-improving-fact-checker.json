@@ -5,9 +5,9 @@
   ],
   "date": "2026-01-07",
   "event": "2026-01-07",
-  "youtubeId": "Pwiab2Td3GQ",
+  "youtubeId": "xfFLbKjhuts",
   "publishAt": "2026-12-10T11:00:00-06:00",
-  "duration": 749,
+  "duration": 768,
   "thumbnail": "/talks/dspy-and-gepa-prompt-optimization-a-self-improving-fact-checker.jpg",
   "topics": [
     "Evals",
@@ -20,43 +20,43 @@
       "title": "The Prompt Engineering Problem"
     },
     {
-      "t": 75,
+      "t": 78,
       "title": "Ground-Truth Data"
     },
     {
-      "t": 105,
+      "t": 108,
       "title": "What GEPA Is"
     },
     {
-      "t": 156,
+      "t": 159,
       "title": "Reflective Optimizer and Results"
     },
     {
-      "t": 258,
+      "t": 261,
       "title": "DSPy and Other Optimizers"
     },
     {
-      "t": 332,
+      "t": 335,
       "title": "DSPy Signatures"
     },
     {
-      "t": 416,
+      "t": 419,
       "title": "DSPy Modules"
     },
     {
-      "t": 467,
+      "t": 470,
       "title": "Fact Checker Architecture"
     },
     {
-      "t": 534,
+      "t": 537,
       "title": "Fact Checker Results"
     },
     {
-      "t": 570,
+      "t": 573,
       "title": "Optimizing with an LLM Judge"
     },
     {
-      "t": 671,
+      "t": 674,
       "title": "Optimizers That Change Code"
     }
   ],

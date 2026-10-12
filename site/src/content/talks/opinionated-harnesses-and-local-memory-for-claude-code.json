@@ -5,9 +5,9 @@
   ],
   "date": "2026-02-04",
   "event": "2026-02-04",
-  "youtubeId": "lhwSgYVW3jw",
+  "youtubeId": "CPleRj70yFk",
   "publishAt": "2026-12-03T11:00:00-06:00",
-  "duration": 1103,
+  "duration": 1122,
   "thumbnail": "/talks/opinionated-harnesses-and-local-memory-for-claude-code.jpg",
   "topics": [
     "LangGraph",
@@ -21,51 +21,51 @@
       "title": "Intro and Background"
     },
     {
-      "t": 101,
+      "t": 104,
       "title": "From Prompts to Harness Engineering"
     },
     {
-      "t": 204,
+      "t": 207,
       "title": "What claude-mem Is"
     },
     {
-      "t": 255,
+      "t": 258,
       "title": "Why He Forked It for Ollama"
     },
     {
-      "t": 337,
+      "t": 340,
       "title": "The Five Hooks"
     },
     {
-      "t": 432,
+      "t": 435,
       "title": "Retrieval with SQLite and Chroma"
     },
     {
-      "t": 460,
+      "t": 463,
       "title": "Opinionated Decisions"
     },
     {
-      "t": 516,
+      "t": 519,
       "title": "Security and Moltbook"
     },
     {
-      "t": 571,
+      "t": 574,
       "title": "Manufacturing and the Toyota LangGraph Talk"
     },
     {
-      "t": 678,
+      "t": 681,
       "title": "Voyager and Skill Libraries"
     },
     {
-      "t": 730,
+      "t": 733,
       "title": "Takeaways"
     },
     {
-      "t": 837,
+      "t": 840,
       "title": "The Agent's Roast"
     },
     {
-      "t": 932,
+      "t": 935,
       "title": "Q&A: Memory, Worker and the Local Model"
     }
   ],

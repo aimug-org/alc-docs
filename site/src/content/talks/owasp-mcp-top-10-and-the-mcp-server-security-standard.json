@@ -5,9 +5,9 @@
   ],
   "date": "2026-04-01",
   "event": "2026-04-01",
-  "youtubeId": "FYOJwHna_58",
+  "youtubeId": "CSg-CS_ARTA",
   "publishAt": "2026-11-12T11:00:00-06:00",
-  "duration": 926,
+  "duration": 944,
   "thumbnail": "/talks/owasp-mcp-top-10-and-the-mcp-server-security-standard.jpg",
   "topics": [
     "MCP",
@@ -20,47 +20,47 @@
       "title": "Two Lightning Talks"
     },
     {
-      "t": 55,
+      "t": 58,
       "title": "Compliance Context and VetSec"
     },
     {
-      "t": 110,
+      "t": 113,
       "title": "What OWASP Is"
     },
     {
-      "t": 165,
+      "t": 168,
       "title": "The MCP Top 10"
     },
     {
-      "t": 336,
+      "t": 339,
       "title": "An Incident Walkthrough"
     },
     {
-      "t": 391,
+      "t": 394,
       "title": "The MCP Server Security Standard"
     },
     {
-      "t": 446,
+      "t": 449,
       "title": "Domains and Compliance Levels"
     },
     {
-      "t": 474,
+      "t": 477,
       "title": "Controls Mapped to Threats"
     },
     {
-      "t": 616,
+      "t": 619,
       "title": "Questions the Standard Asks"
     },
     {
-      "t": 671,
+      "t": 674,
       "title": "Getting Involved"
     },
     {
-      "t": 726,
+      "t": 729,
       "title": "Q&A: Where to Start"
     },
     {
-      "t": 894,
+      "t": 897,
       "title": "Where Both Frameworks Stand"
     }
   ],

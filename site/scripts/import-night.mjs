@@ -78,7 +78,8 @@ for (const [name, m0] of Object.entries(mapping.talks)) {
   const fixed = join(nightDir, 'publish', `${file}.youtube.fixed.srt`);
   const srt = existsSync(fixed) ? fixed : join(nightDir, 'out', `${file}.youtube.srt`);
   // Length of the uploaded file (bumpers included); the cut's json duration if that file is gone.
-  const mp4 = [`${file}.youtube.mp4`, `${file}.mp4`].map((f) => join(nightDir, 'out', f)).find(existsSync);
+  // .final.mp4: the uploaded cut wrapped in the archive bumper and outro (2026-10-12), so it is the uploaded file when present
+  const mp4 = [`${file}.final.mp4`, `${file}.youtube.mp4`, `${file}.mp4`].map((f) => join(nightDir, 'out', f)).find(existsSync);
   const probed = mp4 && Number(spawnSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', mp4], { encoding: 'utf8' }).stdout);
   const duration = probed || JSON.parse(readFileSync(join(nightDir, 'out', `${file}.json`), 'utf8')).duration;
   const reviewed = mapping.transcript !== false;

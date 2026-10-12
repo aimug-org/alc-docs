@@ -5,9 +5,9 @@
   ],
   "date": "2026-04-01",
   "event": "2026-04-01",
-  "youtubeId": "wSgIyRzzbo8",
+  "youtubeId": "G-HGhHmG-o8",
   "publishAt": "2026-11-12T11:00:00-06:00",
-  "duration": 893,
+  "duration": 912,
   "thumbnail": "/talks/spec-driven-agent-coding-specs-as-source-of-truth-with-forgectl.jpg",
   "topics": [
     "Evals",
@@ -21,39 +21,39 @@
       "title": "Six Months with AI Agents"
     },
     {
-      "t": 135,
+      "t": 138,
       "title": "Why Specs and Scaffolding"
     },
     {
-      "t": 252,
+      "t": 255,
       "title": "Ralph and Spec-Driven Development"
     },
     {
-      "t": 333,
+      "t": 336,
       "title": "Reverse-Engineering Code into Specs"
     },
     {
-      "t": 369,
+      "t": 372,
       "title": "forgectl"
     },
     {
-      "t": 475,
+      "t": 478,
       "title": "The State Machine and Evaluators"
     },
     {
-      "t": 508,
+      "t": 511,
       "title": "The Road Ahead"
     },
     {
-      "t": 587,
+      "t": 590,
       "title": "Specs Stay with the Code"
     },
     {
-      "t": 680,
+      "t": 683,
       "title": "Q&A: Working Only in Specs"
     },
     {
-      "t": 759,
+      "t": 762,
       "title": "Q&A: Architecture-Level Work"
     }
   ],

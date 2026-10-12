@@ -5,9 +5,9 @@
   ],
   "date": "2026-06-03",
   "event": "2026-06-03",
-  "youtubeId": "ojnFaZ6pNEQ",
+  "youtubeId": "hKPHeP9OEno",
   "publishAt": "2026-11-05T11:00:00-06:00",
-  "duration": 887,
+  "duration": 906,
   "thumbnail": "/talks/agent-foundry-a-platform-for-building-and-running-agent-systems.jpg",
   "topics": [
     "LangGraph",
@@ -21,51 +21,51 @@
       "title": "Intro"
     },
     {
-      "t": 60,
+      "t": 63,
       "title": "Goals and Origins"
     },
     {
-      "t": 120,
+      "t": 123,
       "title": "Architecture and Markdown Communication"
     },
     {
-      "t": 158,
+      "t": 161,
       "title": "Shared Workspace and Primitives"
     },
     {
-      "t": 264,
+      "t": 267,
       "title": "Composing Primitives into Archipelago"
     },
     {
-      "t": 306,
+      "t": 309,
       "title": "Where It Fits and the Responder Provider"
     },
     {
-      "t": 366,
+      "t": 369,
       "title": "Headless Claude Code and Standard I/O"
     },
     {
-      "t": 426,
+      "t": 429,
       "title": "Artifacts and the Lifecycle File"
     },
     {
-      "t": 523,
+      "t": 526,
       "title": "Dynamic Agent Instructions"
     },
     {
-      "t": 551,
+      "t": 554,
       "title": "Archetype"
     },
     {
-      "t": 674,
+      "t": 677,
       "title": "Q&A: LangGraph Integration"
     },
     {
-      "t": 785,
+      "t": 788,
       "title": "Q&A: Agent Roles and Feedback"
     },
     {
-      "t": 857,
+      "t": 860,
       "title": "Biggest Challenge: Time"
     }
   ],

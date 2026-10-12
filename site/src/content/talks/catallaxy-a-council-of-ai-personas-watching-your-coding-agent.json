@@ -5,9 +5,9 @@
   ],
   "date": "2026-07-01",
   "event": "2026-07-01",
-  "youtubeId": "87cRiV06lgw",
+  "youtubeId": "AdpS5gV9_Rs",
   "publishAt": "2026-10-29T11:00:00-05:00",
-  "duration": 1390,
+  "duration": 1408,
   "thumbnail": "/talks/catallaxy-a-council-of-ai-personas-watching-your-coding-agent.jpg",
   "topics": [
     "Coding agents",
@@ -21,59 +21,59 @@
       "title": "The Problem"
     },
     {
-      "t": 70,
+      "t": 73,
       "title": "Copy-and-Paste Reviews"
     },
     {
-      "t": 140,
+      "t": 143,
       "title": "The Early Version"
     },
     {
-      "t": 219,
+      "t": 222,
       "title": "What Catallaxy Is"
     },
     {
-      "t": 361,
+      "t": 364,
       "title": "Dispatching Personas"
     },
     {
-      "t": 433,
+      "t": 436,
       "title": "Same Persona, Different Models"
     },
     {
-      "t": 503,
+      "t": 506,
       "title": "Alerts Back into Claude Code"
     },
     {
-      "t": 721,
+      "t": 724,
       "title": "Beyond Code"
     },
     {
-      "t": 769,
+      "t": 772,
       "title": "Sharing Personas"
     },
     {
-      "t": 880,
+      "t": 883,
       "title": "Credential Redaction"
     },
     {
-      "t": 938,
+      "t": 941,
       "title": "Personalities"
     },
     {
-      "t": 1009,
+      "t": 1012,
       "title": "Q&A: Do Personas Talk to Each Other"
     },
     {
-      "t": 1169,
+      "t": 1172,
       "title": "Q&A: Why Multiple Models"
     },
     {
-      "t": 1267,
+      "t": 1270,
       "title": "Q&A: CLI Calls and Token Use"
     },
     {
-      "t": 1365,
+      "t": 1368,
       "title": "Closing: Agreement Means a Real Problem"
     }
   ],
