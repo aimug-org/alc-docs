@@ -1,0 +1,56 @@
+{
+  "title": "A2A: Agent to Agent Protocol and How It Fits with MCP",
+  "speakers": [
+    "colin-mcnamara"
+  ],
+  "date": "2025-05-07",
+  "event": "2025-05-07",
+  "youtubeId": "v-3FOz-A7_U",
+  "publishAt": "2027-01-07T11:00:00-06:00",
+  "duration": 733,
+  "thumbnail": "/talks/a2a-agent-to-agent-protocol-and-how-it-fits-with-mcp.jpg",
+  "topics": [
+    "LangGraph",
+    "Graphs",
+    "MCP"
+  ],
+  "summary": "Colin McNamara explains Google's agent-to-agent (A2A) protocol and how it complements MCP.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Intro"
+    },
+    {
+      "t": 30,
+      "title": "The Future of the Organization"
+    },
+    {
+      "t": 153,
+      "title": "What A2A Does"
+    },
+    {
+      "t": 312,
+      "title": "Federating Intelligence"
+    },
+    {
+      "t": 405,
+      "title": "A2A vs MCP"
+    },
+    {
+      "t": 500,
+      "title": "Use Cases"
+    },
+    {
+      "t": 657,
+      "title": "Ecosystem and Wrap-up"
+    }
+  ],
+  "learn": [
+    "A2A lets you express in a simple JSON file what an agent can do, how to connect and how to authenticate.",
+    "LangGraph and similar tools handle workflow inside a graph; A2A handles messaging between agents and services.",
+    "A2A is complementary to MCP: MCP gives agents tools, A2A lets agents search a swarm for capabilities and delegate.",
+    "He says an implementation was about 300 lines of code at the time, and leaner ones had already appeared.",
+    "Use cases: recruiting, supply chain data exchange (EDI) and triaging customer support issues."
+  ],
+  "links": []
+}
