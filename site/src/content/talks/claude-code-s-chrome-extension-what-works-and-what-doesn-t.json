@@ -1,0 +1,83 @@
+{
+  "title": "Claude Code's Chrome Extension: What Works and What Doesn't",
+  "speakers": [
+    "joseph-fluckiger"
+  ],
+  "date": "2026-01-07",
+  "event": "2026-01-07",
+  "youtubeId": "bLTcYaN4ucM",
+  "publishAt": "2026-12-10T11:00:00-06:00",
+  "duration": 931,
+  "thumbnail": "/talks/claude-code-s-chrome-extension-what-works-and-what-doesn-t.jpg",
+  "topics": [
+    "Coding agents",
+    "Agents"
+  ],
+  "summary": "Joseph Fluckiger tries the Claude Code Chrome extension on real tasks and reports what worked.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Where Agents Are in 2026"
+    },
+    {
+      "t": 96,
+      "title": "Why Give Agents the Browser"
+    },
+    {
+      "t": 142,
+      "title": "Anthropic's Demo Video"
+    },
+    {
+      "t": 218,
+      "title": "Key Capabilities"
+    },
+    {
+      "t": 281,
+      "title": "Setup"
+    },
+    {
+      "t": 326,
+      "title": "Demo: Trigger an Error and Read the Console"
+    },
+    {
+      "t": 418,
+      "title": "Finding Tickets"
+    },
+    {
+      "t": 481,
+      "title": "What Did Not Work"
+    },
+    {
+      "t": 555,
+      "title": "Slides Workaround and Personal Data Warning"
+    },
+    {
+      "t": 625,
+      "title": "Token Costs"
+    },
+    {
+      "t": 667,
+      "title": "Tips and Best Practices"
+    },
+    {
+      "t": 696,
+      "title": "Q&A: Parallel Tab Groups"
+    },
+    {
+      "t": 817,
+      "title": "Q&A: DevTools Access"
+    },
+    {
+      "t": 847,
+      "title": "Q&A: Long Pages"
+    }
+  ],
+  "learn": [
+    "The beta extension lets Claude Code drive your own Chrome with your live sessions, for live debugging, design verification, authenticated web app testing and data extraction.",
+    "It uses Chrome native messaging and a tab group that limits which tabs the extension can reach; setup is the latest Chrome and Claude Code plus a chrome argument.",
+    "What worked: on a local FastAPI app it clicked a button to trigger an error and read the console; it found a BYU vs. Baylor ticket page and stopped short of buying.",
+    "What did not: it usually refused to edit a Notion page, stalled on creating Google Slides, was slow and used a lot of tokens; local Claude Code built a PowerPoint instead.",
+    "Tips: modal dialogs can interrupt JavaScript, use fresh tabs when it gets stuck, and set site permissions. Claude warns against sharing personal information such as finances."
+  ],
+  "links": []
+}
