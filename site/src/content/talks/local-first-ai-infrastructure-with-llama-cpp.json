@@ -1,0 +1,83 @@
+{
+  "title": "Local-First AI Infrastructure with llama.cpp",
+  "speakers": [
+    "bert"
+  ],
+  "date": "2026-08-11",
+  "event": "2026-08-11",
+  "youtubeId": "I7ihSP4hDH8",
+  "publishAt": "2026-11-26T11:00:00-06:00",
+  "duration": 1178,
+  "thumbnail": "/talks/local-first-ai-infrastructure-with-llama-cpp.jpg",
+  "topics": [
+    "Routing",
+    "Inference"
+  ],
+  "summary": "Bert walks through a local-first inference router that places models on GPUs and bursts to the cloud.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "An Interactive Session"
+    },
+    {
+      "t": 64,
+      "title": "Machines and Request Metrics"
+    },
+    {
+      "t": 250,
+      "title": "An Active Inference Request Router"
+    },
+    {
+      "t": 312,
+      "title": "Monitoring Power, Temperature and PCIe"
+    },
+    {
+      "t": 405,
+      "title": "Q&A: Sharding Across GPUs"
+    },
+    {
+      "t": 437,
+      "title": "A Four-GPU Machine"
+    },
+    {
+      "t": 541,
+      "title": "Local First, Cloud Fallback"
+    },
+    {
+      "t": 630,
+      "title": "One Slot per GPU"
+    },
+    {
+      "t": 692,
+      "title": "Costs and Picking a Model"
+    },
+    {
+      "t": 753,
+      "title": "llama.cpp and the Model Advisor"
+    },
+    {
+      "t": 845,
+      "title": "Live System: Updating llama.cpp"
+    },
+    {
+      "t": 901,
+      "title": "Host Configuration"
+    },
+    {
+      "t": 995,
+      "title": "Routing Preferences"
+    },
+    {
+      "t": 1090,
+      "title": "A Multi-Model Batch Workload"
+    }
+  ],
+  "learn": [
+    "The router knows the hardware layout and decides where and how to deploy each model; every request logs its machine, wall-clock time, tokens in and out, cache hit rate, prefill and generation speed, and cost.",
+    "He monitors power, temperature, PCIe speed and PCIe replays; PCIe traffic while processing tokens means the setup is wrong, and in his experience sharding a model across GPUs is a significant speed penalty.",
+    "Local comes first: when local space runs out, a configured equivalency chain bursts to cloud providers; running locally first saves cost and keeps data local, with electricity as the local cost estimate.",
+    "Each GPU is a slot, a model advisor flags suboptimal configurations and pushes fixes across the fleet, and he can update the llama.cpp build for one machine or all of them.",
+    "A live workload fans embedding, LLM and vision-language models across three machines for image classification and training jobs."
+  ],
+  "links": []
+}
