@@ -1,0 +1,80 @@
+{
+  "title": "Opinionated Harnesses and Local Memory for Claude Code",
+  "speakers": [
+    "riccardo-pirruccio"
+  ],
+  "date": "2026-02-04",
+  "event": "2026-02-04",
+  "youtubeId": "lhwSgYVW3jw",
+  "publishAt": "2026-12-17T11:00:00-06:00",
+  "duration": 1103,
+  "thumbnail": "/talks/opinionated-harnesses-and-local-memory-for-claude-code.jpg",
+  "topics": [
+    "LangGraph",
+    "MCP",
+    "RAG"
+  ],
+  "summary": "Riccardo Pirruccio shows how hooks and a local memory plugin make Claude Code agents more useful.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Intro and Background"
+    },
+    {
+      "t": 101,
+      "title": "From Prompts to Harness Engineering"
+    },
+    {
+      "t": 204,
+      "title": "What claude-mem Is"
+    },
+    {
+      "t": 255,
+      "title": "Why He Forked It for Ollama"
+    },
+    {
+      "t": 337,
+      "title": "The Five Hooks"
+    },
+    {
+      "t": 432,
+      "title": "Retrieval with SQLite and Chroma"
+    },
+    {
+      "t": 460,
+      "title": "Opinionated Decisions"
+    },
+    {
+      "t": 516,
+      "title": "Security and Moltbook"
+    },
+    {
+      "t": 571,
+      "title": "Manufacturing and the Toyota LangGraph Talk"
+    },
+    {
+      "t": 678,
+      "title": "Voyager and Skill Libraries"
+    },
+    {
+      "t": 730,
+      "title": "Takeaways"
+    },
+    {
+      "t": 837,
+      "title": "The Agent's Roast"
+    },
+    {
+      "t": 932,
+      "title": "Q&A: Memory, Worker and the Local Model"
+    }
+  ],
+  "learn": [
+    "He traces the shift from prompt engineering to context engineering to today's harness engineering: a plug-in ecosystem of hooks, skills and tools around an agent (from a post by Viv).",
+    "claude-mem stores observations from your sessions in SQLite, injects context from earlier sessions at session start, and uses Chroma for vector search through an MCP; five hooks capture the session.",
+    "His fork runs the observation step on local Ollama on his RTX 4090 with a 7B model, so the session notes come from a local model instead of a hosted one; he credits the original project for the hooks, Chroma and compression.",
+    "A slide on fast-shipping AI tools and weak security, including the Moltbook API key exposure, makes the case for opinionated choices.",
+    "Takeaways: stay narrow and deep, make opinionated decisions, keep context local, and know the limits. He cites a Toyota LangGraph factory talk and NVIDIA's Voyager paper."
+  ],
+  "links": []
+}

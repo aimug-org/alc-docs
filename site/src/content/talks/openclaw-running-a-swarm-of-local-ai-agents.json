@@ -1,0 +1,67 @@
+{
+  "title": "OpenClaw: Running a Swarm of Local AI Agents",
+  "speakers": [
+    "joseph-fluckiger"
+  ],
+  "date": "2026-03-04",
+  "event": "2026-03-04",
+  "youtubeId": "tfGDp3GBXCI",
+  "publishAt": "2026-12-17T11:00:00-06:00",
+  "duration": 862,
+  "thumbnail": "/talks/openclaw-running-a-swarm-of-local-ai-agents.jpg",
+  "topics": [
+    "Security",
+    "Agents"
+  ],
+  "summary": "Joseph Fluckiger shows how he runs a swarm of local OpenClaw agents that share a Markdown vault.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Why OpenClaw Now"
+    },
+    {
+      "t": 45,
+      "title": "Gateway, Agent Loop and Memory"
+    },
+    {
+      "t": 161,
+      "title": "A Swarm of Specialized Agents"
+    },
+    {
+      "t": 256,
+      "title": "The Shared Obsidian Vault"
+    },
+    {
+      "t": 302,
+      "title": "SOUL.md, USER.md, AGENTS.md and the Heartbeat"
+    },
+    {
+      "t": 374,
+      "title": "A Daily Image Job and Connected Services"
+    },
+    {
+      "t": 478,
+      "title": "Tailscale, Voice and Owning Your Data"
+    },
+    {
+      "t": 557,
+      "title": "Mistakes and What Is Next"
+    },
+    {
+      "t": 604,
+      "title": "The Agent Economy"
+    },
+    {
+      "t": 646,
+      "title": "Q&A"
+    }
+  ],
+  "learn": [
+    "OpenClaw runs on your machine: a gateway connects chat apps such as Telegram, Discord and Slack, an agent loop runs any model you pick, and a durable memory layer builds context over time.",
+    "His swarm has five specialized agents (strategy and tech ops, personal assistant, engineer, security and QA, finance), each with its own workspace, sharing an Obsidian vault of Markdown files.",
+    "Each agent is shaped by files: SOUL.md for personality, USER.md for who you are, AGENTS.md loads first, and a heartbeat file says what to do each time the agent wakes on its schedule; memory is compacted daily.",
+    "Examples: a daily job that pulls \"this day in history\" from Wikipedia and generates an image, browser automation that is \"a little bit rough sometimes\", Tailscale between devices and Wispr Flow for voice.",
+    "He argues for owning your data, admits agents still hallucinate, and says services should be easy for agents to use. The Q&A covers models, what leaves the machine, reviewing email drafts before they send, and enterprise readiness."
+  ],
+  "links": []
+}
