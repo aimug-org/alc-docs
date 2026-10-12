@@ -1,0 +1,12 @@
+{
+  "event": "2026-08-11",
+  "copy": "../archive-drops/copy/2026-08-11",
+  "transcript": false,
+  "talks": {
+    "stefano-casafranca": {
+      "file": "stefano-casafranca-event-request-agents-at-cgcs",
+      "youtubeId": "NY02wOKa93k",
+      "publishAt": "2026-10-29T11:00:00-05:00"
+    }
+  }
+}
