@@ -5,22 +5,22 @@
   "talks": {
     "jeff-linwood": {
       "file": "jeff-linwood-owasp-top-10-agentic-security",
-      "youtubeId": "JnH-_iLwkZQ",
+      "youtubeId": "YtgPt5AKo10",
       "publishAt": "2026-12-10T11:00:00-06:00"
     },
     "collier-king": {
       "file": "collier-king-deep-research-cloudflare-workflows",
-      "youtubeId": "D50JGLTJkWQ",
+      "youtubeId": "od3zipPYXbo",
       "publishAt": "2026-12-10T11:00:00-06:00"
     },
     "julian-ghadially": {
       "file": "julian-ghadially-dspy-prompt-optimization-jepa",
-      "youtubeId": "Pwiab2Td3GQ",
+      "youtubeId": "xfFLbKjhuts",
       "publishAt": "2026-12-10T11:00:00-06:00"
     },
     "joseph-fluckiger": {
       "file": "joseph-fluckiger-claude-code-chrome-extension",
-      "youtubeId": "bLTcYaN4ucM",
+      "youtubeId": "jL_d0C7LWKA",
       "publishAt": "2026-12-10T11:00:00-06:00"
     }
   }

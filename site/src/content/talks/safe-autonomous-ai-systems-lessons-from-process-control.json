@@ -5,7 +5,7 @@
   ],
   "date": "2026-04-01",
   "event": "2026-04-01",
-  "youtubeId": "zeKKr7DPz3Y",
+  "youtubeId": "o16EgnBYuQ0",
   "publishAt": "2026-11-12T11:00:00-06:00",
   "duration": 896,
   "thumbnail": "/talks/safe-autonomous-ai-systems-lessons-from-process-control.jpg",
@@ -19,43 +19,43 @@
       "title": "Safety First"
     },
     {
-      "t": 84,
+      "t": 87,
       "title": "Intelligence and Authority Scale Inversely"
     },
     {
-      "t": 127,
+      "t": 130,
       "title": "Process Control as a Model"
     },
     {
-      "t": 210,
+      "t": 213,
       "title": "Controller, Kubernetes and Secrets"
     },
     {
-      "t": 248,
+      "t": 251,
       "title": "OpenShell"
     },
     {
-      "t": 312,
+      "t": 315,
       "title": "A Closed-Loop Design"
     },
     {
-      "t": 442,
+      "t": 445,
       "title": "Letting Agents Improve the System"
     },
     {
-      "t": 566,
+      "t": 569,
       "title": "Trust Boundaries"
     },
     {
-      "t": 633,
+      "t": 636,
       "title": "Identity Delegation"
     },
     {
-      "t": 695,
+      "t": 698,
       "title": "Trust Tiers and Fallbacks"
     },
     {
-      "t": 788,
+      "t": 791,
       "title": "What Has Not Worked Yet"
     }
   ],

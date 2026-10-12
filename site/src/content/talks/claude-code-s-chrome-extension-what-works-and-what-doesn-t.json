@@ -5,7 +5,7 @@
   ],
   "date": "2026-01-07",
   "event": "2026-01-07",
-  "youtubeId": "bLTcYaN4ucM",
+  "youtubeId": "jL_d0C7LWKA",
   "publishAt": "2026-12-10T11:00:00-06:00",
   "duration": 931,
   "thumbnail": "/talks/claude-code-s-chrome-extension-what-works-and-what-doesn-t.jpg",
@@ -20,55 +20,55 @@
       "title": "Where Agents Are in 2026"
     },
     {
-      "t": 96,
+      "t": 99,
       "title": "Why Give Agents the Browser"
     },
     {
-      "t": 142,
+      "t": 145,
       "title": "Anthropic's Demo Video"
     },
     {
-      "t": 218,
+      "t": 221,
       "title": "Key Capabilities"
     },
     {
-      "t": 281,
+      "t": 284,
       "title": "Setup"
     },
     {
-      "t": 326,
+      "t": 329,
       "title": "Demo: Trigger an Error and Read the Console"
     },
     {
-      "t": 418,
+      "t": 421,
       "title": "Finding Tickets"
     },
     {
-      "t": 481,
+      "t": 484,
       "title": "What Did Not Work"
     },
     {
-      "t": 555,
+      "t": 558,
       "title": "Slides Workaround and Personal Data Warning"
     },
     {
-      "t": 625,
+      "t": 628,
       "title": "Token Costs"
     },
     {
-      "t": 667,
+      "t": 670,
       "title": "Tips and Best Practices"
     },
     {
-      "t": 696,
+      "t": 699,
       "title": "Q&A: Parallel Tab Groups"
     },
     {
-      "t": 817,
+      "t": 820,
       "title": "Q&A: DevTools Access"
     },
     {
-      "t": 847,
+      "t": 850,
       "title": "Q&A: Long Pages"
     }
   ],

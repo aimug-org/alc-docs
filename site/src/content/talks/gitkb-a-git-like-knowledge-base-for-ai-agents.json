@@ -5,7 +5,7 @@
   ],
   "date": "2026-04-01",
   "event": "2026-04-01",
-  "youtubeId": "Ccu1CMhHltQ",
+  "youtubeId": "x5xBDcBIrZk",
   "publishAt": "2026-11-12T11:00:00-06:00",
   "duration": 1064,
   "thumbnail": "/talks/gitkb-a-git-like-knowledge-base-for-ai-agents.jpg",
@@ -20,47 +20,47 @@
       "title": "Intro"
     },
     {
-      "t": 63,
+      "t": 66,
       "title": "What GitKB Is"
     },
     {
-      "t": 245,
+      "t": 248,
       "title": "The Ladder of Context Workarounds"
     },
     {
-      "t": 307,
+      "t": 310,
       "title": "Silent Context Loss"
     },
     {
-      "t": 333,
+      "t": 336,
       "title": "Sparse, Per-Document History"
     },
     {
-      "t": 432,
+      "t": 435,
       "title": "The Code Graph"
     },
     {
-      "t": 494,
+      "t": 497,
       "title": "Spec-Driven Development at Scale"
     },
     {
-      "t": 531,
+      "t": 534,
       "title": "Bootstrapped Context Docs"
     },
     {
-      "t": 621,
+      "t": 624,
       "title": "A Real Task"
     },
     {
-      "t": 853,
+      "t": 856,
       "title": "Wrap-up"
     },
     {
-      "t": 896,
+      "t": 899,
       "title": "Q&A: Files Instead of a Database"
     },
     {
-      "t": 992,
+      "t": 995,
       "title": "Q&A: Many Agents, Many Worktrees"
     }
   ],

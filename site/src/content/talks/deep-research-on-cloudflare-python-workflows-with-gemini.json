@@ -5,7 +5,7 @@
   ],
   "date": "2026-01-07",
   "event": "2026-01-07",
-  "youtubeId": "D50JGLTJkWQ",
+  "youtubeId": "od3zipPYXbo",
   "publishAt": "2026-12-10T11:00:00-06:00",
   "duration": 952,
   "thumbnail": "/talks/deep-research-on-cloudflare-python-workflows-with-gemini.jpg",
@@ -17,47 +17,47 @@
       "title": "DIY Deep Research"
     },
     {
-      "t": 50,
+      "t": 53,
       "title": "Gemini and Cloudflare Workflows"
     },
     {
-      "t": 100,
+      "t": 103,
       "title": "Case Study: Earnings Day"
     },
     {
-      "t": 201,
+      "t": 204,
       "title": "The Tech Stack"
     },
     {
-      "t": 252,
+      "t": 255,
       "title": "Gemini Quirks"
     },
     {
-      "t": 355,
+      "t": 358,
       "title": "Python Workers and Pyodide"
     },
     {
-      "t": 455,
+      "t": 458,
       "title": "How Workflows Are Written"
     },
     {
-      "t": 505,
+      "t": 508,
       "title": "The Pipeline"
     },
     {
-      "t": 611,
+      "t": 614,
       "title": "The Prompt and the Code"
     },
     {
-      "t": 820,
+      "t": 823,
       "title": "Job Logs"
     },
     {
-      "t": 870,
+      "t": 873,
       "title": "Takeaways"
     },
     {
-      "t": 927,
+      "t": 930,
       "title": "Q&A"
     }
   ],

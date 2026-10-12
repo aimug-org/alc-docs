@@ -5,7 +5,7 @@
   ],
   "date": "2026-09-02",
   "event": "2026-09-02",
-  "youtubeId": "20p_ITBFnlY",
+  "youtubeId": "QSF0lQkr4ZQ",
   "publishAt": "2026-10-29T11:00:00-05:00",
   "duration": 2327,
   "thumbnail": "/talks/your-harness-is-the-other-half-of-the-model.jpg",
@@ -21,87 +21,87 @@
       "title": "Intro and the Setup"
     },
     {
-      "t": 77,
+      "t": 80,
       "title": "One Card, Four Jobs"
     },
     {
-      "t": 153,
+      "t": 156,
       "title": "vLLM-SR and Routing"
     },
     {
-      "t": 231,
+      "t": 234,
       "title": "Inside a GH200"
     },
     {
-      "t": 333,
+      "t": 336,
       "title": "Memory Bandwidth Is the Limit"
     },
     {
-      "t": 384,
+      "t": 387,
       "title": "The KV Cache"
     },
     {
-      "t": 460,
+      "t": 463,
       "title": "Grouped Queries"
     },
     {
-      "t": 536,
+      "t": 539,
       "title": "Speculative Decoding"
     },
     {
-      "t": 600,
+      "t": 603,
       "title": "Engine Upgrades"
     },
     {
-      "t": 677,
+      "t": 680,
       "title": "Engrams and Experts"
     },
     {
-      "t": 752,
+      "t": 755,
       "title": "Model and Harness Are Coupled"
     },
     {
-      "t": 903,
+      "t": 906,
       "title": "Three Memory Tiers"
     },
     {
-      "t": 979,
+      "t": 982,
       "title": "Offloading Experts to the CPU"
     },
     {
-      "t": 1054,
+      "t": 1057,
       "title": "Pointing Coding Agents at It"
     },
     {
-      "t": 1129,
+      "t": 1132,
       "title": "Testing One Variable at a Time"
     },
     {
-      "t": 1205,
+      "t": 1208,
       "title": "Routing and Prompt-Injection Defense"
     },
     {
-      "t": 1354,
+      "t": 1357,
       "title": "Audience Q&A"
     },
     {
-      "t": 1507,
+      "t": 1510,
       "title": "Q&A: Largest Model"
     },
     {
-      "t": 1585,
+      "t": 1588,
       "title": "Q&A: Selecting and Offloading Experts"
     },
     {
-      "t": 1751,
+      "t": 1754,
       "title": "Routing Rules"
     },
     {
-      "t": 1805,
+      "t": 1808,
       "title": "Q&A: Engrams Explained"
     },
     {
-      "t": 2096,
+      "t": 2099,
       "title": "Q&A: Quantizing the KV Cache"
     }
   ],
