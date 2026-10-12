@@ -236,3 +236,12 @@
   name: Julian Ghadially
   links:
     - { label: GitHub, url: "https://github.com/julianghadially" }
+
+- id: john-van-lowe
+  name: John Van Lowe
+
+- id: matt-walters
+  name: Matt Walters
+
+- id: stefano-casafranca
+  name: Stefano Casafranca

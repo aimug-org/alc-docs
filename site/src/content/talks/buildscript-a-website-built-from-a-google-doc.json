@@ -1,0 +1,62 @@
+{
+  "title": "BuildScript: A Website Built from a Google Doc",
+  "speakers": [
+    "stefano-casafranca"
+  ],
+  "date": "2026-04-01",
+  "event": "2026-04-01",
+  "youtubeId": "TlsiB3zFOFU",
+  "publishAt": "2027-01-07T11:00:00-06:00",
+  "duration": 786,
+  "thumbnail": "/talks/buildscript-a-website-built-from-a-google-doc.jpg",
+  "topics": [
+    "Coding agents"
+  ],
+  "summary": "Stefano Casafranca shows BuildScript, which turns edits in a Google Doc into a website built by Claude Code.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Who He Is and What BuildScript Is"
+    },
+    {
+      "t": 63,
+      "title": "The WordPress Problem"
+    },
+    {
+      "t": 191,
+      "title": "How the Sync Works"
+    },
+    {
+      "t": 272,
+      "title": "Demo: The Document Is the System"
+    },
+    {
+      "t": 374,
+      "title": "Setup and Deployment"
+    },
+    {
+      "t": 437,
+      "title": "Why Google Docs"
+    },
+    {
+      "t": 522,
+      "title": "The Markdown Behind the Doc"
+    },
+    {
+      "t": 562,
+      "title": "Where to Find It"
+    },
+    {
+      "t": 624,
+      "title": "Q&A: Images and Scale"
+    }
+  ],
+  "learn": [
+    "The business owner edits a Google Doc that describes the site; after about 10 seconds with no activity, a daemon injects the change into Claude Code, which writes the code and commits it.",
+    "He argues this could replace WordPress for small businesses, where a small change can take an agency a week.",
+    "The demo updates a small Austin LangChain meetups site from a Google Doc, with a quality gate in the injected prompt.",
+    "Setup is a slash command that interviews you about fully autonomous sync and connecting to Vercel or GitHub.",
+    "He chose Google Docs as the plainest interface for non-technical people, and asks for feedback, for example on handling images with Google Drive links."
+  ],
+  "links": []
+}

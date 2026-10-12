@@ -1,0 +1,70 @@
+{
+  "title": "Safe Autonomous AI Systems: Lessons from Process Control",
+  "speakers": [
+    "riccardo-pirruccio"
+  ],
+  "date": "2026-04-01",
+  "event": "2026-04-01",
+  "youtubeId": "zeKKr7DPz3Y",
+  "publishAt": "2027-01-07T11:00:00-06:00",
+  "duration": 896,
+  "thumbnail": "/talks/safe-autonomous-ai-systems-lessons-from-process-control.jpg",
+  "topics": [
+    "Agents"
+  ],
+  "summary": "Riccardo Pirruccio applies fab process-control ideas to governing autonomous AI agents.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Safety First"
+    },
+    {
+      "t": 84,
+      "title": "Intelligence and Authority Scale Inversely"
+    },
+    {
+      "t": 127,
+      "title": "Process Control as a Model"
+    },
+    {
+      "t": 210,
+      "title": "Controller, Kubernetes and Secrets"
+    },
+    {
+      "t": 248,
+      "title": "OpenShell"
+    },
+    {
+      "t": 312,
+      "title": "A Closed-Loop Design"
+    },
+    {
+      "t": 442,
+      "title": "Letting Agents Improve the System"
+    },
+    {
+      "t": 566,
+      "title": "Trust Boundaries"
+    },
+    {
+      "t": 633,
+      "title": "Identity Delegation"
+    },
+    {
+      "t": 695,
+      "title": "Trust Tiers and Fallbacks"
+    },
+    {
+      "t": 788,
+      "title": "What Has Not Worked Yet"
+    }
+  ],
+  "learn": [
+    "His thesis: intelligence and authority scale inversely. A safety logic controller is the dumbest thing in a fab yet has absolute veto power, while advanced process control can only recommend.",
+    "His proposed agent design uses Kubernetes and Argo CD as the controller for safety-critical decisions, OpenClaw as the agent runtime, and an observability stack to collect traces.",
+    "OpenShell, an ephemeral execution runtime, lets scripts use secrets while the agent has zero exposure to them; he forked it to try to make it work.",
+    "Treat it as identity delegation, not separation: an agent's identity must tie back to yours so its access can be scoped. Trust tiers with metrics let the controller graduate trust over time.",
+    "He emphasizes fallbacks for reliability and safety, and says he has not gotten the system running yet because Claude kept using SSH to modify the cluster instead of updating the manifest."
+  ],
+  "links": []
+}

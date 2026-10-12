@@ -1,0 +1,68 @@
+{
+  "title": "Spec-Driven Agent Coding: Specs as Source of Truth with forgectl",
+  "speakers": [
+    "jake-cukjati"
+  ],
+  "date": "2026-04-01",
+  "event": "2026-04-01",
+  "youtubeId": "wSgIyRzzbo8",
+  "publishAt": "2027-01-07T11:00:00-06:00",
+  "duration": 893,
+  "thumbnail": "/talks/spec-driven-agent-coding-specs-as-source-of-truth-with-forgectl.jpg",
+  "topics": [
+    "Evals",
+    "Coding agents",
+    "Agents"
+  ],
+  "summary": "Jake Cukjati explains spec-driven agent coding and forgectl, his tool for generating code from specs.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Six Months with AI Agents"
+    },
+    {
+      "t": 135,
+      "title": "Why Specs and Scaffolding"
+    },
+    {
+      "t": 252,
+      "title": "Ralph and Spec-Driven Development"
+    },
+    {
+      "t": 333,
+      "title": "Reverse-Engineering Code into Specs"
+    },
+    {
+      "t": 369,
+      "title": "forgectl"
+    },
+    {
+      "t": 475,
+      "title": "The State Machine and Evaluators"
+    },
+    {
+      "t": 508,
+      "title": "The Road Ahead"
+    },
+    {
+      "t": 587,
+      "title": "Specs Stay with the Code"
+    },
+    {
+      "t": 680,
+      "title": "Q&A: Working Only in Specs"
+    },
+    {
+      "t": 759,
+      "title": "Q&A: Architecture-Level Work"
+    }
+  ],
+  "learn": [
+    "He kept hitting the same problem with a coding agent: end-to-end and integration tests exposed code that had to be redone, which doubled the work.",
+    "Spec-driven development, from the Ralph Playbook, treats specs as the source of truth; he also had an agent reverse-engineer an existing codebase into specs, which surfaced a bug he was stuck on.",
+    "forgectl takes a plan through specifying, implementation planning and implementation, much as a compiler works through layers, with specs as the code you edit.",
+    "It runs as a state machine with evaluators at nearly every step; the evaluation rounds, commit behavior and agent type are configurable, and it uses Claude Code sub-agents.",
+    "Specs stay with the codebase, later iterations produce spec diffs, and he says it cannot yet reverse-engineer brownfield projects; plugins are planned."
+  ],
+  "links": []
+}
