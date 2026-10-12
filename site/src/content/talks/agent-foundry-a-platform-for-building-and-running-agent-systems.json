@@ -7,7 +7,7 @@
   "event": "2026-06-03",
   "youtubeId": "hKPHeP9OEno",
   "publishAt": "2026-11-05T11:00:00-06:00",
-  "duration": 887,
+  "duration": 906,
   "thumbnail": "/talks/agent-foundry-a-platform-for-building-and-running-agent-systems.jpg",
   "topics": [
     "LangGraph",

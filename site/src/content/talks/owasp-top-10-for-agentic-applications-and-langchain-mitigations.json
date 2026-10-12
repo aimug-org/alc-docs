@@ -7,7 +7,7 @@
   "event": "2026-01-07",
   "youtubeId": "YtgPt5AKo10",
   "publishAt": "2026-12-10T11:00:00-06:00",
-  "duration": 926,
+  "duration": 944,
   "thumbnail": "/talks/owasp-top-10-for-agentic-applications-and-langchain-mitigations.jpg",
   "topics": [
     "Graphs",

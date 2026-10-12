@@ -7,7 +7,7 @@
   "event": "2026-01-07",
   "youtubeId": "od3zipPYXbo",
   "publishAt": "2026-12-10T11:00:00-06:00",
-  "duration": 952,
+  "duration": 971,
   "thumbnail": "/talks/deep-research-on-cloudflare-python-workflows-with-gemini.jpg",
   "topics": [],
   "summary": "Collier King builds a durable deep research pipeline on Cloudflare Workflows with the Gemini API.",
