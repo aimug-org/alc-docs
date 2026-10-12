@@ -14,7 +14,8 @@ const s = speaker.data;
 const mine = (t: { data: { speakers: string[] } }) => t.data.speakers.includes(speaker.id);
 const talks = (await publicTalks()).filter(mine);
 const soon = (await upcomingTalks()).filter(mine);
-const first = talks.length ? talks.reduce((a, t) => (t.data.date < a ? t.data.date : a), talks[0].data.date) : undefined;
+const all = [...talks, ...soon];  // scheduled archive talks were recorded already: they count for 'first spoke' too
+const first = all.length ? all.reduce((a, t) => (t.data.date < a ? t.data.date : a), all[0].data.date) : undefined;
 const icons: Record<string, 'linkedin' | 'x' | 'github' | 'youtube'> = { LinkedIn: 'linkedin', X: 'x', GitHub: 'github', YouTube: 'youtube' };
 const talkLinks = talks.flatMap((t) => t.data.links.map((l) => ({ t, l })));
 const initials = s.name.split(' ').map((w) => w[0]).slice(0, 2).join('');
@@ -41,7 +42,7 @@ const profileLd = {
         <p class="m-0 font-mono text-sm tracking-[0.12em] text-gold uppercase">Speaker</p>
         <h1 class="m-0 font-display text-[clamp(44px,6vw,80px)] leading-[0.95] font-normal break-words uppercase">{s.name}</h1>
         {role && <p class="m-0 text-xl text-soft">{role}</p>}
-        {first && <p class="m-0 font-mono text-sm text-muted">{talks.length} {talks.length === 1 ? 'talk' : 'talks'} at AIMUG · First spoke {fmtDate(first, { weekday: undefined, day: undefined, year: 'numeric' })}</p>}
+        {talks.length + soon.length > 0 && <p class="m-0 font-mono text-sm text-muted">{talks.length + soon.length} {talks.length + soon.length === 1 ? 'talk' : 'talks'} at AIMUG{first && ` · First spoke ${fmtDate(first, { weekday: undefined, day: undefined, year: 'numeric' })}`}</p>}
         {s.links.length > 0 && (
           <p class="m-0 flex flex-wrap gap-x-5 text-base">{s.links.map((l) => (
             <a href={l.url} rel="noopener" class="inline-flex min-h-[44px] items-center gap-2 font-semibold no-underline"><Icon name={icons[l.label] ?? 'link'} size={18} />{l.label}</a>

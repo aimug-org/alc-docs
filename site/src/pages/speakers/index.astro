@@ -6,7 +6,8 @@ import { publicTalks, upcomingTalks, fmtDay } from '../../lib/data';
 const live = await publicTalks();
 const soon = await upcomingTalks();
 const talksOf = (id: string) => live.filter((t) => t.data.speakers.includes(id));
-const talksBy = (id: string) => talksOf(id).length;
+// every talk on file counts, released or scheduled; the card shows a premiere date only while none is out yet
+const talksBy = (id: string) => talksOf(id).length + soon.filter((t) => t.data.speakers.includes(id)).length;
 const lastBy = (id: string) => Math.max(0, ...talksOf(id).map((t) => +t.data.date));
 const speakers = (await getCollection('speakers')).sort((a, b) => lastBy(b.id) - lastBy(a.id) || a.data.name.localeCompare(b.data.name));
 const nextBy = (id: string) => soon.find((t) => t.data.speakers.includes(id));
@@ -27,7 +28,7 @@ const nextBy = (id: string) => soon.find((t) => t.data.speakers.includes(id));
                 : <span class="flex h-[140px] w-[140px] items-center justify-center rounded-full border border-line bg-panel font-display text-5xl text-gold">{s.data.name.split(' ').map((w) => w[0]).slice(0, 2).join('')}</span>}
               <span class="text-xl font-bold group-hover:text-gold">{s.data.name}</span>
               <span class="font-mono text-sm text-muted">
-                {n > 0 ? `${n} ${n === 1 ? 'talk' : 'talks'}` : next ? `Premieres ${fmtDay(next.data.publishAt!, { weekday: undefined })}` : 'Talk coming'}
+                {talksOf(s.id).length > 0 ? `${n} ${n === 1 ? 'talk' : 'talks'}` : next ? `Premieres ${fmtDay(next.data.publishAt!, { weekday: undefined })}` : 'Talk coming'}
               </span>
             </a>
           </li>
