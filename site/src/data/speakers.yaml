@@ -11,6 +11,7 @@
 
 - id: jake-cukjati
   name: Jake Cukjati
+  company: "Nomi Health"
   photo: /speakers/jake-cukjati.jpg
   links:
     - { label: LinkedIn, url: "https://www.linkedin.com/in/jacob-cukjati-iv" }
@@ -76,11 +77,13 @@
 - id: sal-castoro
   name: Sal Castoro
   title: "Software Engineer"
+  company: "Avtal"
   photo: /speakers/sal-castoro.jpg
   links:
     - { label: LinkedIn, url: "https://www.linkedin.com/in/sal-castoro-3b1050178/" }
     - { label: Website, url: "https://salcastoro.com/" }
     - { label: GitHub, url: "https://github.com/scastoro" }
+    - { label: X, url: "https://x.com/s_castoro" }
 
 - id: collier-king
   name: Collier King
@@ -97,6 +100,7 @@
   photo: /speakers/dave-sottimano.jpg
   links:
     - { label: GitHub, url: "https://github.com/dsottimano" }
+    - { label: X, url: "https://x.com/dsottimano" }
 
 - id: juan-iturbe
   name: Juan Iturbe
@@ -106,6 +110,7 @@
   links:
     - { label: Website, url: "https://i2phi.com/" }
     - { label: GitHub, url: "https://github.com/ituPhi" }
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/juan-iturbe-dev/" }
 
 - id: andy-caballero
   name: Andy Caballero
@@ -138,6 +143,8 @@
 
 - id: michael-golden
   name: Michael Golden
+  title: "Founder"
+  company: "Blueprinter"
   photo: /speakers/michael-golden.jpg
   links:
     - { label: GitHub, url: "https://github.com/MichaelAGolden" }
@@ -164,6 +171,7 @@
 
 - id: scott-askinosie
   name: Scott Askinosie
+  company: "SteelEngine"
   photo: /speakers/scott-askinosie.jpg
   links:
     - { label: LinkedIn, url: "https://www.linkedin.com/in/scott-askinosie" }
@@ -181,9 +189,11 @@
 
 - id: jackson-arnold
   name: Jackson Arnold
+  company: "Seso"
   photo: /speakers/jackson-arnold.jpg
   links:
     - { label: GitHub, url: "https://github.com/jacksonarnold" }
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/jackson-s-arnold/" }
 
 - id: cameron-rohn
   name: Cameron Rohn
@@ -234,9 +244,12 @@
 
 - id: rolando-perez
   name: Rolando Pérez
+  title: "Developer"
 
 - id: milagros-jaen-vargas
   name: Milagros Jaen Vargas
+  title: "Ph.D. in Biomedical Engineering"
+  company: "Centro de Tecnología Biomédica, Universidad Politécnica de Madrid"
   photo: /speakers/milagros-jaen-vargas.jpg
   links:
     - { label: GitHub, url: "https://github.com/mjaenvargas" }
@@ -292,6 +305,7 @@
 
 - id: matt-walters
   name: Matt Walters
+  title: "Founder"
   company: "GitKB"
   photo: /speakers/matt-walters.jpg
   links:

@@ -1,0 +1,92 @@
+{
+  "title": "OpenClaw, Formerly Clawdbot: Demos, Risks and Q&A",
+  "speakers": [
+    "nate-little"
+  ],
+  "date": "2026-02-04",
+  "event": "2026-02-04",
+  "youtubeId": "4Ir9R6uCV54",
+  "publishAt": "2026-12-03T11:00:00-06:00",
+  "duration": 2018,
+  "thumbnail": "/talks/openclaw-formerly-clawdbot-demos-risks-and-q-a.jpg",
+  "topics": [
+    "Coding agents",
+    "Security",
+    "Agents"
+  ],
+  "summary": "Nate Little demos OpenClaw, formerly Clawdbot, and explains why he gives it its own machine and accounts.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "The Names: Clawdbot, Moltbot, OpenClaw"
+    },
+    {
+      "t": 124,
+      "title": "Moltbook and ClawHub"
+    },
+    {
+      "t": 246,
+      "title": "How It Works"
+    },
+    {
+      "t": 307,
+      "title": "Gateway and Agent Runners"
+    },
+    {
+      "t": 428,
+      "title": "A Step Beyond Skills"
+    },
+    {
+      "t": 488,
+      "title": "Isolation Advice"
+    },
+    {
+      "t": 614,
+      "title": "Proactive by Default"
+    },
+    {
+      "t": 708,
+      "title": "Daily Uses"
+    },
+    {
+      "t": 919,
+      "title": "Reviewing Session Logs"
+    },
+    {
+      "t": 1010,
+      "title": "Sharing Skills Across Agents"
+    },
+    {
+      "t": 1232,
+      "title": "Why He Tried It"
+    },
+    {
+      "t": 1293,
+      "title": "About 100 Hours of Work"
+    },
+    {
+      "t": 1415,
+      "title": "Q&A: An Honest Review of the Code"
+    },
+    {
+      "t": 1573,
+      "title": "A Stray Agent Query"
+    },
+    {
+      "t": 1723,
+      "title": "Defenses Against Injection"
+    },
+    {
+      "t": 1773,
+      "title": "Q&A: Searching Past Sessions"
+    }
+  ],
+  "learn": [
+    "The project went from Clawdbot to Moltbot to OpenClaw, made by Peter Steinberger. Moltbook is a separate agent social network, and ClawHub is the skills registry where malicious skills have been posted.",
+    "A gateway normalizes messages from Telegram, Discord, iMessage and WhatsApp and routes them to an agent runner such as Claude Code, Pi, OpenCode or Codex, with voice replies through ElevenLabs.",
+    "He sees it as a step beyond skills: autonomous, proactive, with cron jobs built in, which is both the appeal and the risk. His advice: give it its own machine, its own email address and its own accounts.",
+    "He has put in at least 100 hours, much of it learning, and without constant correction the agent makes a mess. He finds the engineering elegant but says the velocity causes security issues.",
+    "He describes a stray agent running an unexpected database query, defenses such as injected prompt-injection guidance, and a planned daily review of session logs that recommends fixes for his approval, implemented through pull requests."
+  ],
+  "links": []
+}
