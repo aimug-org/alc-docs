@@ -50,8 +50,10 @@ function transcript(srt) {
   return lines.map(({ t, text }) => ({ t, text }));
 }
 
-// A key must be a speaker id, or a non-speaker segment (e.g. colin-intro) that has no youtubeId. Anything else is a typo.
-const unknown = Object.entries(mapping.talks).filter(([name, m]) => !speakers.has(name) && m.youtubeId).map(([name]) => name);
+// A key must be a speaker id, or a non-speaker segment (e.g. colin-intro) that has no youtubeId, or a multi-speaker talk
+// (a panel) whose `speakers` list names its speaker ids. Anything else is a typo.
+const unknown = Object.entries(mapping.talks).flatMap(([name, m]) => m.speakers ? m.speakers.filter((s) => !speakers.has(s))
+  : !speakers.has(name) && m.youtubeId ? [name] : []);
 if (unknown.length) {
   console.error(`import-night: mapping key(s) not in speakers.yaml: ${unknown.join(', ')}. Fix the key, or add the speaker, or drop the youtubeId for a non-speaker segment.`);
   process.exit(1);
@@ -94,7 +96,7 @@ for (const [name, m0] of Object.entries(mapping.talks)) {
   await sharp(thumb).resize({ width: 1280 }).jpeg({ quality: 75 }).toFile(join(siteDir, 'public/talks', `${slug}.jpg`));
   const stub = {
     title,
-    speakers: speakers.has(name) ? [name] : [],
+    speakers: m0.speakers ?? (speakers.has(name) ? [name] : []),
     date: mapping.event,
     event: mapping.event,
     youtubeId: m.youtubeId,

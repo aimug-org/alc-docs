@@ -1,0 +1,72 @@
+{
+  "title": "Ontology as a Translation Layer for AI",
+  "speakers": [
+    "steven-tran"
+  ],
+  "date": "2026-06-03",
+  "event": "2026-06-03",
+  "youtubeId": "jMx1ZnidADc",
+  "publishAt": "2026-11-05T11:00:00-06:00",
+  "duration": 1168,
+  "thumbnail": "/talks/ontology-as-a-translation-layer-for-ai.jpg",
+  "topics": [],
+  "summary": "Steven Tran argues that ontology can act as a translation layer so AI understands what words mean.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Intro and Soundcheck Live"
+    },
+    {
+      "t": 146,
+      "title": "Magic, Alchemy and AI"
+    },
+    {
+      "t": 274,
+      "title": "What an Ontology Is"
+    },
+    {
+      "t": 336,
+      "title": "Cloud Platforms and Their Taxonomies"
+    },
+    {
+      "t": 412,
+      "title": "Stuff, Shape, Maker and Point"
+    },
+    {
+      "t": 616,
+      "title": "Fear of the Unknown"
+    },
+    {
+      "t": 678,
+      "title": "Q&A: Ontology in Application Development"
+    },
+    {
+      "t": 801,
+      "title": "One Event, Many Meanings"
+    },
+    {
+      "t": 924,
+      "title": "A Translation Layer and Wasted Tokens"
+    },
+    {
+      "t": 985,
+      "title": "Why It Matters Now"
+    },
+    {
+      "t": 1093,
+      "title": "Q&A: One Ontology, Many Taxonomies"
+    },
+    {
+      "t": 1140,
+      "title": "Context Changes Meaning"
+    }
+  ],
+  "learn": [
+    "He compares magic, alchemy and AI as ways of creating, each with stuff, shape, a maker and a point.",
+    "An ontology is the canonical definition of what is real; a taxonomy is the names a platform or person uses for it. Cloud platforms model the same ideas differently, with no direct mapping.",
+    "In live events, \"an event\" is a performance to the performer, a booking to the venue and a job to the caterer, so one tool does not fit everyone.",
+    "A good ontology works as a universal translation layer, so you need not change your backend, and he says it cuts wasted tokens mapping between tools.",
+    "Context changes meaning: \"play\" means one thing in sports and another in a music app, which is where AI gets confused."
+  ],
+  "links": []
+}

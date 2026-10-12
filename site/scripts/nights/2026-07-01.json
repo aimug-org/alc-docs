@@ -1,0 +1,17 @@
+{
+  "event": "2026-07-01",
+  "copy": "../archive-drops/copy/2026-07-01",
+  "transcript": false,
+  "talks": {
+    "jeff-linwood": {
+      "file": "jeff-linwood-under-the-hood-of-a-coding-agent",
+      "youtubeId": "ju_X-T5leLc",
+      "publishAt": "2026-10-29T11:00:00-05:00"
+    },
+    "max-marty": {
+      "file": "max-marty-persona-observers-for-coding-agents",
+      "youtubeId": "87cRiV06lgw",
+      "publishAt": "2026-10-29T11:00:00-05:00"
+    }
+  }
+}

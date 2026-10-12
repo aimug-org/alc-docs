@@ -6,6 +6,8 @@
   photo: /speakers/colin-mcnamara.jpg
   links:
     - { label: Website, url: "https://www.colinmcnamara.com" }
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/colinmcnamara/" }
+    - { label: X, url: "https://x.com/colinmcnamara" }
 
 - id: jake-cukjati
   name: Jake Cukjati
@@ -15,18 +17,24 @@
     - { label: Website, url: "https://byteofcode.io/" }
     - { label: GitHub, url: "https://github.com/jackstine" }
     - { label: X, url: "https://x.com/Byte0fCode" }
+    - { label: Project, url: "https://github.com/jackstine/forgectl" }
 
 - id: jeff-linwood
   name: Jeff Linwood
+  title: "Principal Consultant and Trainer"
+  company: "Biscotti Labs"
   photo: /speakers/jeff-linwood.jpg
   links:
     - { label: LinkedIn, url: "https://www.linkedin.com/in/jefflinwood/" }
     - { label: Website, url: "https://www.jefflinwood.com/" }
     - { label: GitHub, url: "https://github.com/jefflinwood" }
     - { label: X, url: "https://x.com/jefflinwood" }
+    - { label: Biscotti Labs, url: "https://biscottilabs.com/" }
 
 - id: joseph-fluckiger
   name: Joseph Fluckiger
+  title: "Principal Software Engineer"
+  company: "eBay"
   photo: /speakers/joseph-fluckiger.jpg
   links:
     - { label: LinkedIn, url: "https://www.linkedin.com/in/josephflu" }
@@ -45,6 +53,7 @@
 - id: ryan-booth
   name: Ryan Booth
   title: "AI Solutions Consultant"
+  company: "Blue Ridge Systems"
   photo: /speakers/ryan-booth.jpg
   links:
     - { label: LinkedIn, url: "https://www.linkedin.com/in/ryanbooth15/" }
@@ -58,10 +67,15 @@
 
 - id: paul-phelps
   name: Paul Phelps
+  title: "Chief AI Officer"
+  company: "Productivity Engines"
   photo: /speakers/paul-phelps.jpg
+  links:
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/mrpaulphelps/" }
 
 - id: sal-castoro
   name: Sal Castoro
+  title: "Software Engineer"
   photo: /speakers/sal-castoro.jpg
   links:
     - { label: LinkedIn, url: "https://www.linkedin.com/in/sal-castoro-3b1050178/" }
@@ -96,6 +110,7 @@
 - id: andy-caballero
   name: Andy Caballero
   title: "AI Strategic Consultant and Technology Leader"
+  company: "Ketzai"
   photo: /speakers/andy-caballero.jpg
   links:
     - { label: LinkedIn, url: "https://www.linkedin.com/in/andy-caballero-bb5a4983/" }
@@ -123,6 +138,9 @@
 
 - id: michael-golden
   name: Michael Golden
+  photo: /speakers/michael-golden.jpg
+  links:
+    - { label: GitHub, url: "https://github.com/MichaelAGolden" }
 
 - id: vaskin-kissoyan
   name: Vaskin Kissoyan
@@ -137,30 +155,45 @@
 
 - id: karim-lalani
   name: Karim Lalani
+  title: "Software Solutions Architect"
   photo: /speakers/karim-lalani.jpg
   links:
     - { label: GitHub, url: "https://github.com/lalanikarim" }
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/-karim-lalani/" }
+    - { label: Medium, url: "https://medium.com/@klcoder" }
 
 - id: scott-askinosie
   name: Scott Askinosie
+  photo: /speakers/scott-askinosie.jpg
   links:
     - { label: LinkedIn, url: "https://www.linkedin.com/in/scott-askinosie" }
     - { label: GitHub, url: "https://github.com/saskinosie" }
 
 - id: butch-ewing
   name: Butch Ewing
+  title: "Founder"
+  company: "Bruce & Eddy"
+  photo: /speakers/butch-ewing.jpg
+  links:
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/butchewing/" }
+    - { label: GitHub, url: "https://github.com/butchewing" }
+    - { label: Website, url: "https://www.butchewing.com/" }
 
 - id: jackson-arnold
   name: Jackson Arnold
+  photo: /speakers/jackson-arnold.jpg
   links:
     - { label: GitHub, url: "https://github.com/jacksonarnold" }
 
 - id: cameron-rohn
   name: Cameron Rohn
+  title: "AI Strategist, Agent Engineer and Cloud Infrastructure Specialist"
+  photo: /speakers/cameron-rohn.jpg
   links:
     - { label: LinkedIn, url: "https://www.linkedin.com/in/cameron-rohn/" }
     - { label: Website, url: "https://cameronrohn.com/" }
     - { label: GitHub, url: "https://github.com/Cam10001110101" }
+    - { label: Podcast, url: "https://buildaipod.com" }
 
 - id: saurabh-lal-saxena
   name: Saurabh Lal Saxena
@@ -194,12 +227,17 @@
 
 - id: guillermo-malo-de-molina
   name: Guillermo Malo de Molina
+  title: "COO and CTO"
+  company: "Innovation Smart District"
+  links:
+    - { label: LinkedIn, url: "https://pa.linkedin.com/in/guillermo-malo-de-molina-3765032a" }
 
 - id: rolando-perez
   name: Rolando Pérez
 
 - id: milagros-jaen-vargas
   name: Milagros Jaen Vargas
+  photo: /speakers/milagros-jaen-vargas.jpg
   links:
     - { label: GitHub, url: "https://github.com/mjaenvargas" }
 
@@ -219,6 +257,8 @@
 
 - id: ronald-mego
   name: Ronald Mego
+  title: "Data and Analytics Executive"
+  photo: /speakers/ronald-mego.jpg
   links:
     - { label: LinkedIn, url: "https://linkedin.com/in/ronaldmego" }
     - { label: Website, url: "https://ronaldmego.com/" }
@@ -229,19 +269,53 @@
   name: Akshay Mittal
   title: "Senior Software Engineer"
   company: "PayPal"
+  photo: /speakers/akshay-mittal.jpg
   links:
     - { label: LinkedIn, url: "https://www.linkedin.com/in/akshaymittal143/" }
 
 - id: julian-ghadially
   name: Julian Ghadially
+  title: "Co-founder"
+  company: "CodeEvolver"
+  photo: /speakers/julian-ghadially.jpg
   links:
     - { label: GitHub, url: "https://github.com/julianghadially" }
+    - { label: Website, url: "https://codeevolver.ai" }
 
 - id: john-van-lowe
   name: John Van Lowe
+  photo: /speakers/john-van-lowe.jpg
+  links:
+    - { label: GitHub, url: "https://github.com/johnvanlowe" }
+    - { label: LinkedIn, url: "https://linkedin.com/in/johnvl" }
+    - { label: Website, url: "https://retroencabulation.com" }
 
 - id: matt-walters
   name: Matt Walters
+  company: "GitKB"
+  photo: /speakers/matt-walters.jpg
+  links:
+    - { label: GitHub, url: "https://github.com/mateodelnorte" }
 
 - id: stefano-casafranca
   name: Stefano Casafranca
+  title: "UX Designer"
+
+- id: mark-norman
+  name: Mark Norman
+
+- id: steven-tran
+  name: Steven Tran
+  title: "Co-founder and CTO"
+  company: "Soundcheck Live"
+  links:
+    - { label: Soundcheck Live, url: "https://soundchecklive.io" }
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/steven-tran-808293aa/" }
+
+- id: max-marty
+  name: Max Marty
+  links:
+    - { label: Website, url: "https://catallaxy.ai" }
+
+- id: gannon-combs
+  name: Gannon Combs

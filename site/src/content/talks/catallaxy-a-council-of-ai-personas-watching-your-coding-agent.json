@@ -1,0 +1,88 @@
+{
+  "title": "Catallaxy: A Council of AI Personas Watching Your Coding Agent",
+  "speakers": [
+    "max-marty"
+  ],
+  "date": "2026-07-01",
+  "event": "2026-07-01",
+  "youtubeId": "87cRiV06lgw",
+  "publishAt": "2026-10-29T11:00:00-05:00",
+  "duration": 1390,
+  "thumbnail": "/talks/catallaxy-a-council-of-ai-personas-watching-your-coding-agent.jpg",
+  "topics": [
+    "Coding agents",
+    "Security",
+    "Agents"
+  ],
+  "summary": "Max Marty shows Catallaxy, a council of AI personas that watch a Claude Code session and flag problems.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "The Problem"
+    },
+    {
+      "t": 70,
+      "title": "Copy-and-Paste Reviews"
+    },
+    {
+      "t": 140,
+      "title": "The Early Version"
+    },
+    {
+      "t": 219,
+      "title": "What Catallaxy Is"
+    },
+    {
+      "t": 361,
+      "title": "Dispatching Personas"
+    },
+    {
+      "t": 433,
+      "title": "Same Persona, Different Models"
+    },
+    {
+      "t": 503,
+      "title": "Alerts Back into Claude Code"
+    },
+    {
+      "t": 721,
+      "title": "Beyond Code"
+    },
+    {
+      "t": 769,
+      "title": "Sharing Personas"
+    },
+    {
+      "t": 880,
+      "title": "Credential Redaction"
+    },
+    {
+      "t": 938,
+      "title": "Personalities"
+    },
+    {
+      "t": 1009,
+      "title": "Q&A: Do Personas Talk to Each Other"
+    },
+    {
+      "t": 1169,
+      "title": "Q&A: Why Multiple Models"
+    },
+    {
+      "t": 1267,
+      "title": "Q&A: CLI Calls and Token Use"
+    },
+    {
+      "t": 1365,
+      "title": "Closing: Agreement Means a Real Problem"
+    }
+  ],
+  "learn": [
+    "He got tired of copy-pasting between windows to have Codex or Gemini review Claude Code's work, so he built a tool that does it; he shows an early version from March.",
+    "Personas are different prompts and focuses, such as security, simplicity, finding existing libraries, UI and UX, and testing, each running on a model you choose.",
+    "Alerts can be copied back into Claude Code, and he adjudicates which matter; the same persona can run on several models for more diverse answers.",
+    "When several personas flag the same problem, it is probably real. Personas can be dispatched manually or automatically, and can be shared through an exchange.",
+    "A credential redaction system strips things that look like API keys or environment variables before anything is sent to a model."
+  ],
+  "links": []
+}

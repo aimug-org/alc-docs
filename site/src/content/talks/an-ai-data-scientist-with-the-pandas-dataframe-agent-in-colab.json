@@ -1,0 +1,62 @@
+{
+  "title": "An AI Data Scientist with the Pandas DataFrame Agent in Colab",
+  "speakers": [
+    "scott-askinosie"
+  ],
+  "date": "2024-05-01",
+  "event": "2024-05-01",
+  "youtubeId": "hlEGupV9G_g",
+  "publishAt": "2027-01-28T11:00:00-06:00",
+  "duration": 2626,
+  "thumbnail": "/talks/an-ai-data-scientist-with-the-pandas-dataframe-agent-in-colab.jpg",
+  "topics": [
+    "Agents"
+  ],
+  "summary": "Scott Askinosie walks through a Colab lab where a LangChain agent analyzes a CSV using OpenAI.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Intro and Background"
+    },
+    {
+      "t": 130,
+      "title": "The AI Data Scientist Idea"
+    },
+    {
+      "t": 358,
+      "title": "Setup and Prerequisites"
+    },
+    {
+      "t": 519,
+      "title": "Installing Libraries"
+    },
+    {
+      "t": 993,
+      "title": "Loading Data"
+    },
+    {
+      "t": 1281,
+      "title": "Building the Agent"
+    },
+    {
+      "t": 1724,
+      "title": "Live Analysis"
+    },
+    {
+      "t": 2101,
+      "title": "Charts and Heat Map"
+    },
+    {
+      "t": 2516,
+      "title": "A Subjective Question"
+    }
+  ],
+  "learn": [
+    "The pandas DataFrame agent in LangChain Experimental is the \"brain\": it writes code to answer questions about your data.",
+    "Set the LLM temperature to 0 when you want facts, and turn verbose on to see the steps the agent takes.",
+    "With error handling on, the agent inspects the generated code before it runs; if the code is bad it sends it back to try again.",
+    "In the demo on Starbucks drink data, the agent explains what the data is, suggests where to start and reports 242 rows and 18 columns.",
+    "You can ask for summary statistics, a bar chart and a correlation heat map, then a subjective question like the healthiest drink."
+  ],
+  "links": []
+}

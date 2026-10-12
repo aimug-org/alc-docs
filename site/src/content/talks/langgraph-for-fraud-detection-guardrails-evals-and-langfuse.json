@@ -1,0 +1,88 @@
+{
+  "title": "LangGraph for Fraud Detection: Guardrails, Evals and Langfuse",
+  "speakers": [
+    "joseph-fluckiger"
+  ],
+  "date": "2026-06-03",
+  "event": "2026-06-03",
+  "youtubeId": "paYVjZRrrFQ",
+  "publishAt": "2026-11-05T11:00:00-06:00",
+  "duration": 1258,
+  "thumbnail": "/talks/langgraph-for-fraud-detection-guardrails-evals-and-langfuse.jpg",
+  "topics": [
+    "Evals",
+    "LangGraph",
+    "Graphs"
+  ],
+  "summary": "Joseph Fluckiger replaces a single giant fraud-detection prompt with a LangGraph graph of code and LLM steps.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Intro"
+    },
+    {
+      "t": 105,
+      "title": "Why Fraud Detection Is Hard"
+    },
+    {
+      "t": 121,
+      "title": "One Big Prompt vs a Graph"
+    },
+    {
+      "t": 184,
+      "title": "Demo: Labeled Simulated Data"
+    },
+    {
+      "t": 245,
+      "title": "Timeline, Human Approval and Evals"
+    },
+    {
+      "t": 306,
+      "title": "The Graph as a Mermaid Chart"
+    },
+    {
+      "t": 390,
+      "title": "From Coder to Project Manager"
+    },
+    {
+      "t": 518,
+      "title": "Letting Agents Report Back"
+    },
+    {
+      "t": 614,
+      "title": "Results"
+    },
+    {
+      "t": 674,
+      "title": "Q&A: Benefits of the Graph"
+    },
+    {
+      "t": 736,
+      "title": "Q&A: Langfuse"
+    },
+    {
+      "t": 842,
+      "title": "Q&A: The Graph in Code"
+    },
+    {
+      "t": 1052,
+      "title": "Q&A: Guardrails for Enterprise"
+    },
+    {
+      "t": 1113,
+      "title": "Q&A: Evals"
+    },
+    {
+      "t": 1194,
+      "title": "Q&A: Command-Line Tools"
+    }
+  ],
+  "learn": [
+    "The old agent was a roughly 2,000-line prompt plus about 30 tools; results were non-deterministic and could take 4 minutes.",
+    "LangGraph lets him run a directed acyclic graph that mixes deterministic JavaScript functions with LLM nodes, which he says cut runs to 10 to 20 seconds, exportable as a Mermaid chart.",
+    "A human approves the agent's findings before anything changes on an account, and labeled simulated data feeds evals per workflow so he can see changes over time.",
+    "Langfuse gives visibility into where time goes after his own tracing kept crashing; he calls LangSmith another good option that tends to be cloud-first.",
+    "He argues LangGraph suits enterprises because of its guardrails, where a local agent that can do anything on disk carries too much risk."
+  ],
+  "links": []
+}

@@ -1,0 +1,77 @@
+{
+  "title": "Agents on Edge: Deploying LangChain Apps on Cloudflare Workers AI",
+  "speakers": [
+    "karim-lalani"
+  ],
+  "date": "2024-09-11",
+  "event": "2024-09-11",
+  "youtubeId": "lRiYtwyrCrM",
+  "publishAt": "2027-01-21T11:00:00-06:00",
+  "duration": 1608,
+  "thumbnail": "/talks/agents-on-edge-deploying-langchain-apps-on-cloudflare-workers-ai.jpg",
+  "topics": [
+    "LangGraph",
+    "Inference",
+    "Agents"
+  ],
+  "summary": "Karim Lalani shows how to build a LangChain app in JavaScript and deploy it to Cloudflare Workers, with Workers AI serving the model at the edge.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Intro and Open Source Models"
+    },
+    {
+      "t": 170,
+      "title": "What Is Edge"
+    },
+    {
+      "t": 345,
+      "title": "Real-Time AI at the Edge"
+    },
+    {
+      "t": 500,
+      "title": "Scalability and Cost"
+    },
+    {
+      "t": 714,
+      "title": "Why Cloudflare"
+    },
+    {
+      "t": 829,
+      "title": "Creating a Cloudflare Worker"
+    },
+    {
+      "t": 1058,
+      "title": "Environment Variables and Secrets"
+    },
+    {
+      "t": 1144,
+      "title": "Workers AI Models"
+    },
+    {
+      "t": 1199,
+      "title": "LangChain on Cloudflare"
+    },
+    {
+      "t": 1325,
+      "title": "Code Walkthrough"
+    },
+    {
+      "t": 1466,
+      "title": "Hosted Chatbot and Free Tier"
+    },
+    {
+      "t": 1550,
+      "title": "Q&A on Edge Latency"
+    }
+  ],
+  "learn": [
+    "Edge servers sit near population centers around the globe, so an app deployed there loads faster and inference feels closer to real time.",
+    "A Cloudflare Worker is a cloud function much like AWS Lambda: scaffold it with npm create cloudflare@latest, test it locally with npm run start, then ship it with npm run deploy.",
+    "Values that are safe to commit go under vars in wrangler.toml, while API keys belong in secrets that the Worker reads from env at runtime.",
+    "Workers AI hosts open models from the Llama, Mistral, Phi-2, Falcon and Qwen families, plus Whisper for speech to text, Stable Diffusion for images and text embeddings.",
+    "The @langchain/cloudflare partner package lacks native tool calling and supports only an older LangGraph, so Lalani published an npm package, tool calling LLM, to add tool use.",
+    "The demo chatbot runs on Cloudflare Pages, and Lalani says the Llama model is in beta on Workers AI, so its requests are almost unlimited on the free tier."
+  ],
+  "links": []
+}

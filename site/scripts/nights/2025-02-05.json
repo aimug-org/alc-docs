@@ -1,0 +1,12 @@
+{
+  "event": "2025-02-05",
+  "copy": "../archive-drops/copy/2025-02-05",
+  "transcript": false,
+  "talks": {
+    "riccardo-pirruccio": {
+      "file": "riccardo-pirruccio-langgraph-mcp-server",
+      "youtubeId": "3wuMYmkftjA",
+      "publishAt": "2027-01-21T11:00:00-06:00"
+    }
+  }
+}

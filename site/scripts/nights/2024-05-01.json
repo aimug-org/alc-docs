@@ -1,0 +1,28 @@
+{
+  "event": "2024-05-01",
+  "copy": "../archive-drops/copy/2024-05-01",
+  "transcript": false,
+  "talks": {
+    "scott-askinosie": {
+      "file": "scott-askinosie-ai-data-scientist",
+      "youtubeId": "hlEGupV9G_g",
+      "publishAt": "2027-01-28T11:00:00-06:00"
+    },
+    "gannon-combs": {
+      "file": "gannon-combs-voice-controlled-crypto-agents",
+      "youtubeId": "24oh1RSMlD0",
+      "publishAt": "2027-01-28T11:00:00-06:00"
+    },
+    "lessons-learned-panel": {
+      "file": "lessons-learned-panel-langchain",
+      "youtubeId": "Qea0F8M_MDM",
+      "speakers": [
+        "karim-lalani",
+        "riccardo-pirruccio",
+        "robert-kessler",
+        "scott-askinosie"
+      ],
+      "publishAt": "2027-01-28T11:00:00-06:00"
+    }
+  }
+}

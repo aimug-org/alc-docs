@@ -1,0 +1,70 @@
+{
+  "title": "Lessons Learned Building Apps with LangChain: Panel Discussion",
+  "speakers": [
+    "karim-lalani",
+    "riccardo-pirruccio",
+    "robert-kessler",
+    "scott-askinosie"
+  ],
+  "date": "2024-05-01",
+  "event": "2024-05-01",
+  "youtubeId": "Qea0F8M_MDM",
+  "publishAt": "2027-01-28T11:00:00-06:00",
+  "duration": 2181,
+  "thumbnail": "/talks/lessons-learned-building-apps-with-langchain-panel-discussion.jpg",
+  "topics": [
+    "Inference",
+    "Agents"
+  ],
+  "summary": "Four builders share LangChain lessons on version pinning, debugging, model changes and hallucinations.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Panelist Introductions"
+    },
+    {
+      "t": 446,
+      "title": "Pin Your Library Versions"
+    },
+    {
+      "t": 568,
+      "title": "Debugging Agent by Agent"
+    },
+    {
+      "t": 669,
+      "title": "Production Lessons"
+    },
+    {
+      "t": 928,
+      "title": "Bringing AI into a Workflow"
+    },
+    {
+      "t": 1484,
+      "title": "Graph Transformations and Ollama Tool Calling"
+    },
+    {
+      "t": 1720,
+      "title": "LangServe and FastAPI over Google Drive"
+    },
+    {
+      "t": 1789,
+      "title": "Hallucinations and Audit Trails"
+    },
+    {
+      "t": 1885,
+      "title": "Community and Reading the Docs"
+    },
+    {
+      "t": 1940,
+      "title": "Audience Q&A"
+    }
+  ],
+  "learn": [
+    "Lock down library versions: before 0.1, LangChain code that worked one day could break the next.",
+    "Debug agents one chain at a time with LangSmith and print statements instead of testing the whole system at once.",
+    "Name the exact model version you use, because results shift when the provider upgrades a model.",
+    "Karim Lalani reworked an old Ollama tool-calling library to add structured output and bind tools, and got the change merged.",
+    "Robert Kessler gives answers an audit trail that links to the source passage, to help with hallucinations."
+  ],
+  "links": []
+}
