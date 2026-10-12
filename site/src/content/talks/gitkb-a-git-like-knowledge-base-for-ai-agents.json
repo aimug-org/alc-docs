@@ -1,0 +1,75 @@
+{
+  "title": "GitKB: A Git-Like Knowledge Base for AI Agents",
+  "speakers": [
+    "matt-walters"
+  ],
+  "date": "2026-04-01",
+  "event": "2026-04-01",
+  "youtubeId": "Ccu1CMhHltQ",
+  "publishAt": "2027-01-07T11:00:00-06:00",
+  "duration": 1064,
+  "thumbnail": "/talks/gitkb-a-git-like-knowledge-base-for-ai-agents.jpg",
+  "topics": [
+    "Graphs",
+    "Agents"
+  ],
+  "summary": "Matt Walters demos GitKB, a distributed, Git-like knowledge base for the context your agents need.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Intro"
+    },
+    {
+      "t": 63,
+      "title": "What GitKB Is"
+    },
+    {
+      "t": 245,
+      "title": "The Ladder of Context Workarounds"
+    },
+    {
+      "t": 307,
+      "title": "Silent Context Loss"
+    },
+    {
+      "t": 333,
+      "title": "Sparse, Per-Document History"
+    },
+    {
+      "t": 432,
+      "title": "The Code Graph"
+    },
+    {
+      "t": 494,
+      "title": "Spec-Driven Development at Scale"
+    },
+    {
+      "t": 531,
+      "title": "Bootstrapped Context Docs"
+    },
+    {
+      "t": 621,
+      "title": "A Real Task"
+    },
+    {
+      "t": 853,
+      "title": "Wrap-up"
+    },
+    {
+      "t": 896,
+      "title": "Q&A: Files Instead of a Database"
+    },
+    {
+      "t": 992,
+      "title": "Q&A: Many Agents, Many Worktrees"
+    }
+  ],
+  "learn": [
+    "GitKB is a distributed, Git-like knowledge base for everything that is not code: specs, tasks and context that shouldn't live with your code.",
+    "It is single-branch and sparse by default, so you can pull just a path, and every document has its own commit chain.",
+    "Agents work with Markdown files and commit them; the commit process builds a graph, and a code graph from parsing your code can be linked to the document graph.",
+    "The demo bootstraps a knowledge base for a project, then shows a real task: an agent root-causes a CI stall, works in a worktree and checks off acceptance criteria.",
+    "Many agents can work on many branches against one knowledge base using Git worktrees. He says most operations take under 30 milliseconds."
+  ],
+  "links": []
+}

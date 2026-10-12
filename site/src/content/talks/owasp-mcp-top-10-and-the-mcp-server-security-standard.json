@@ -1,0 +1,75 @@
+{
+  "title": "OWASP MCP Top 10 and the MCP Server Security Standard",
+  "speakers": [
+    "john-van-lowe"
+  ],
+  "date": "2026-04-01",
+  "event": "2026-04-01",
+  "youtubeId": "FYOJwHna_58",
+  "publishAt": "2027-01-07T11:00:00-06:00",
+  "duration": 926,
+  "thumbnail": "/talks/owasp-mcp-top-10-and-the-mcp-server-security-standard.jpg",
+  "topics": [
+    "MCP",
+    "Security"
+  ],
+  "summary": "John Van Lowe gives two lightning talks on MCP security: the OWASP Top 10 and the MSSS.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Two Lightning Talks"
+    },
+    {
+      "t": 55,
+      "title": "Compliance Context and VetSec"
+    },
+    {
+      "t": 110,
+      "title": "What OWASP Is"
+    },
+    {
+      "t": 165,
+      "title": "The MCP Top 10"
+    },
+    {
+      "t": 336,
+      "title": "An Incident Walkthrough"
+    },
+    {
+      "t": 391,
+      "title": "The MCP Server Security Standard"
+    },
+    {
+      "t": 446,
+      "title": "Domains and Compliance Levels"
+    },
+    {
+      "t": 474,
+      "title": "Controls Mapped to Threats"
+    },
+    {
+      "t": 616,
+      "title": "Questions the Standard Asks"
+    },
+    {
+      "t": 671,
+      "title": "Getting Involved"
+    },
+    {
+      "t": 726,
+      "title": "Q&A: Where to Start"
+    },
+    {
+      "t": 894,
+      "title": "Where Both Frameworks Stand"
+    }
+  ],
+  "learn": [
+    "The OWASP MCP Top 10 covers risks where MCP lets LLMs reach data sources and tools, often with no human in the loop: prompt injection, insufficient authentication, shadow MCP servers, context injection, secret exposure and tool poisoning.",
+    "He walks a recent supply-chain compromise through those risks, from a package upgrade to command execution, exfiltration and token mismanagement.",
+    "The MCP Server Security Standard (MSSS) has eight domains and compliance levels from essential to maximum assurance, and he suggests developers meet at least the six essential controls.",
+    "Controls map to threats: secret redaction, OAuth delegation, least privilege and RBAC, URL validation against server-side request forgery, container hardening, audit logging and file system sandboxing.",
+    "He frames this against PCI DSS, SOC 2, ISO 27001 and FedRAMP, and points to VetSec, OWASP Austin and other groups for getting involved."
+  ],
+  "links": []
+}
