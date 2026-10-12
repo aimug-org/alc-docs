@@ -1,0 +1,84 @@
+{
+  "title": "Under the Hood of a Coding Agent: The Loop, Tools and Reasoning",
+  "speakers": [
+    "jeff-linwood"
+  ],
+  "date": "2026-07-01",
+  "event": "2026-07-01",
+  "youtubeId": "ju_X-T5leLc",
+  "publishAt": "2026-10-29T11:00:00-05:00",
+  "duration": 1171,
+  "thumbnail": "/talks/under-the-hood-of-a-coding-agent-the-loop-tools-and-reasoning.jpg",
+  "topics": [
+    "Coding agents",
+    "Security",
+    "Agents"
+  ],
+  "summary": "Jeff Linwood shows how a coding agent works: a model that reasons and calls tools in a loop.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Intro"
+    },
+    {
+      "t": 61,
+      "title": "Following Along"
+    },
+    {
+      "t": 94,
+      "title": "Models Trained to Use Tools"
+    },
+    {
+      "t": 186,
+      "title": "Demo Setup"
+    },
+    {
+      "t": 272,
+      "title": "Defining the Tools"
+    },
+    {
+      "t": 359,
+      "title": "System Prompt and First Run"
+    },
+    {
+      "t": 440,
+      "title": "Reading the Model's Reasoning"
+    },
+    {
+      "t": 567,
+      "title": "Non-Deterministic Tool Calls"
+    },
+    {
+      "t": 628,
+      "title": "The Model Returns a Fixed File"
+    },
+    {
+      "t": 688,
+      "title": "What Just Happened"
+    },
+    {
+      "t": 750,
+      "title": "The Same Agent in LangChain"
+    },
+    {
+      "t": 918,
+      "title": "Q&A: Platform vs Codex"
+    },
+    {
+      "t": 1001,
+      "title": "Checking the Patch"
+    },
+    {
+      "t": 1064,
+      "title": "Q&A: Reviewing Changes First"
+    }
+  ],
+  "learn": [
+    "Models have been trained to use tools, and tools such as read file, write file, list directory and run tests are what make a coding harness possible.",
+    "In a demo on the OpenAI developer platform he defines those tools and asks a model to fix security problems in an app file; the model's own visible reasoning decides which tool to call next.",
+    "The loop: we ask, the model reasons and requests a tool, we run it and return the result, and it repeats until the model finishes.",
+    "It is not deterministic: on one run the model asked for the requirements file, and on another it did not.",
+    "He then rebuilds the same review agent in Python with the LangChain agents framework and a sandbox of tools, and the file is patched."
+  ],
+  "links": []
+}

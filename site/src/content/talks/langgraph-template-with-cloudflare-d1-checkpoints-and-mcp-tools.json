@@ -1,0 +1,52 @@
+{
+  "title": "LangGraph Template with Cloudflare D1 Checkpoints and MCP Tools",
+  "speakers": [
+    "collier-king"
+  ],
+  "date": "2025-05-07",
+  "event": "2025-05-07",
+  "youtubeId": "cJf59ivLSUY",
+  "publishAt": "2027-01-07T11:00:00-06:00",
+  "duration": 603,
+  "thumbnail": "/talks/langgraph-template-with-cloudflare-d1-checkpoints-and-mcp-tools.jpg",
+  "topics": [
+    "LangGraph",
+    "Graphs",
+    "MCP"
+  ],
+  "summary": "Collier King builds a reusable LangGraph app template with D1 checkpoints and a remote MCP server.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Intro and Goals"
+    },
+    {
+      "t": 151,
+      "title": "Cloudflare Checkpoint Package"
+    },
+    {
+      "t": 242,
+      "title": "App Demo"
+    },
+    {
+      "t": 405,
+      "title": "AI Gateway Tracking"
+    },
+    {
+      "t": 437,
+      "title": "Code Architecture"
+    },
+    {
+      "t": 528,
+      "title": "Future Ideas"
+    }
+  ],
+  "learn": [
+    "A LangGraph checkpoint package for Cloudflare D1 stores short-term chat state in a serverless database.",
+    "After a Docker restart or refresh, the app pulls the conversation state back from D1.",
+    "The graph merges a local search tool with remote tools from an MCP server.",
+    "AI Gateway tracks inference requests, token use and prompts, and the logs can be downloaded.",
+    "A graph registry lets one FastAPI backend serve multiple graphs behind a Next.js front end."
+  ],
+  "links": []
+}

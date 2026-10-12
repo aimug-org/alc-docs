@@ -1,0 +1,80 @@
+{
+  "title": "Agent Foundry: A Platform for Building and Running Agent Systems",
+  "speakers": [
+    "mark-norman"
+  ],
+  "date": "2026-06-03",
+  "event": "2026-06-03",
+  "youtubeId": "ojnFaZ6pNEQ",
+  "publishAt": "2026-11-05T11:00:00-06:00",
+  "duration": 887,
+  "thumbnail": "/talks/agent-foundry-a-platform-for-building-and-running-agent-systems.jpg",
+  "topics": [
+    "LangGraph",
+    "Coding agents",
+    "Inference"
+  ],
+  "summary": "Mark Norman presents Agent Foundry, a platform for building, running and managing agentic systems.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Intro"
+    },
+    {
+      "t": 60,
+      "title": "Goals and Origins"
+    },
+    {
+      "t": 120,
+      "title": "Architecture and Markdown Communication"
+    },
+    {
+      "t": 158,
+      "title": "Shared Workspace and Primitives"
+    },
+    {
+      "t": 264,
+      "title": "Composing Primitives into Archipelago"
+    },
+    {
+      "t": 306,
+      "title": "Where It Fits and the Responder Provider"
+    },
+    {
+      "t": 366,
+      "title": "Headless Claude Code and Standard I/O"
+    },
+    {
+      "t": 426,
+      "title": "Artifacts and the Lifecycle File"
+    },
+    {
+      "t": 523,
+      "title": "Dynamic Agent Instructions"
+    },
+    {
+      "t": 551,
+      "title": "Archetype"
+    },
+    {
+      "t": 674,
+      "title": "Q&A: LangGraph Integration"
+    },
+    {
+      "t": 785,
+      "title": "Q&A: Agent Roles and Feedback"
+    },
+    {
+      "t": 857,
+      "title": "Biggest Challenge: Time"
+    }
+  ],
+  "learn": [
+    "Agent Foundry grew out of Archipelago, his software engineering system, which is not yet fully autonomous; he pulled the shared machinery out into its own platform.",
+    "You compose structural primitives (loops, sequences, retry) and behavioral primitives, and any slot that takes one primitive takes any other; the primitives wrap LangGraph.",
+    "Agents are Claude Code running headless in containers and share Markdown files in a workspace. Clarification requests rise to the orchestration layer; the responder provider connects the running instance to the outside world over standard I/O.",
+    "Every run writes an artifacts folder, including a lifecycle JSON of agent, function and inference calls with timing, plus each agent's reasoning log, to learn from.",
+    "Archetype, which he plans to open source first, pairs Pydantic with Markdown to validate agent output and put the structure into the instructions. One of his biggest challenges is time."
+  ],
+  "links": []
+}

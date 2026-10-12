@@ -1,0 +1,22 @@
+{
+  "event": "2026-06-03",
+  "copy": "../archive-drops/copy/2026-06-03",
+  "transcript": false,
+  "talks": {
+    "mark-norman": {
+      "file": "mark-norman-agent-foundry",
+      "youtubeId": "ojnFaZ6pNEQ",
+      "publishAt": "2026-11-05T11:00:00-06:00"
+    },
+    "steven-tran": {
+      "file": "steven-tran-ontology-translation-layer-for-ai",
+      "youtubeId": "jMx1ZnidADc",
+      "publishAt": "2026-11-05T11:00:00-06:00"
+    },
+    "joseph-fluckiger": {
+      "file": "joseph-fluckiger-langgraph-fraud-detection",
+      "youtubeId": "paYVjZRrrFQ",
+      "publishAt": "2026-11-05T11:00:00-06:00"
+    }
+  }
+}

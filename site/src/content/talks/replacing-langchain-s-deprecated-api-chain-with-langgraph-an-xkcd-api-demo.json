@@ -1,0 +1,97 @@
+{
+  "title": "Replacing LangChain's Deprecated API Chain with LangGraph: An xkcd API Demo",
+  "speakers": [
+    "ryan-booth"
+  ],
+  "date": "2024-09-11",
+  "event": "2024-09-11",
+  "youtubeId": "XL9h8sCQG3M",
+  "publishAt": "2027-01-21T11:00:00-06:00",
+  "duration": 2885,
+  "thumbnail": "/talks/replacing-langchain-s-deprecated-api-chain-with-langgraph-an-xkcd-api-demo.jpg",
+  "topics": [
+    "LangGraph",
+    "Graphs",
+    "RAG"
+  ],
+  "summary": "Ryan Booth rebuilds LangChain's deprecated API chain in LangGraph so an LLM can turn an API spec into live REST calls, using the xkcd API as the demo.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Intro and Background"
+    },
+    {
+      "t": 113,
+      "title": "Why API Chains"
+    },
+    {
+      "t": 304,
+      "title": "From API Chain to LangGraph"
+    },
+    {
+      "t": 419,
+      "title": "How an API Chain Works"
+    },
+    {
+      "t": 554,
+      "title": "Notebook and LangSmith Setup"
+    },
+    {
+      "t": 740,
+      "title": "Choosing the xkcd API"
+    },
+    {
+      "t": 837,
+      "title": "Sanitizing the API Spec"
+    },
+    {
+      "t": 961,
+      "title": "Model, Tools and API Prompt"
+    },
+    {
+      "t": 1115,
+      "title": "Shared State and Graph Nodes"
+    },
+    {
+      "t": 1380,
+      "title": "Adding Nodes and Edges"
+    },
+    {
+      "t": 1628,
+      "title": "Running the First Query"
+    },
+    {
+      "t": 1758,
+      "title": "Careful with Write Calls"
+    },
+    {
+      "t": 1880,
+      "title": "Adding a Curation Step"
+    },
+    {
+      "t": 2227,
+      "title": "Time Travel Demo"
+    },
+    {
+      "t": 2346,
+      "title": "Q&A: Use Cases and Readiness"
+    },
+    {
+      "t": 2512,
+      "title": "Q&A: Scaling"
+    },
+    {
+      "t": 2786,
+      "title": "Maturity, Flowise and Testing"
+    }
+  ],
+  "learn": [
+    "An API chain passes a question and an API spec to an LLM, which finds the right endpoints, builds the request and then interprets the response.",
+    "LangChain has deprecated its API chain, so the notebook follows the LangGraph example in the LangChain docs instead.",
+    "Booth says sanitizing the API spec is where about 90 percent of the time goes, and a spec too large for the context window needs a RAG pipeline or a step that picks only the relevant endpoints.",
+    "The graph has three nodes, call tool, execute tool and call model, and its first query returns the latest xkcd comic, \"Asteroid News,\" published that day.",
+    "Booth warns that the model makes real API calls, so exposing DELETE, POST, PUT or PATCH endpoints can break things fast.",
+    "A curation node asks GPT-4o mini for the top five xkcd comics on a topic and parses the comic numbers into shared state; Booth chose this over DuckDuckGo or Tavily search because the scraped results were poor."
+  ],
+  "links": []
+}

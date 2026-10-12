@@ -1,0 +1,51 @@
+{
+  "title": "Controlling Odoo ERP with an AI Agent over MCP",
+  "speakers": [
+    "joseph-fluckiger"
+  ],
+  "date": "2025-05-07",
+  "event": "2025-05-07",
+  "youtubeId": "KcjidAnCGAA",
+  "publishAt": "2027-01-07T11:00:00-06:00",
+  "duration": 593,
+  "thumbnail": "/talks/controlling-odoo-erp-with-an-ai-agent-over-mcp.jpg",
+  "topics": [
+    "MCP",
+    "Agents"
+  ],
+  "summary": "Joseph Fluckiger connects an AI agent to Odoo, an open-source ERP system, through an MCP server.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Intro and Motivation"
+    },
+    {
+      "t": 81,
+      "title": "Agents and Tools"
+    },
+    {
+      "t": 132,
+      "title": "ERP Demo"
+    },
+    {
+      "t": 252,
+      "title": "MCP Assets and Code"
+    },
+    {
+      "t": 441,
+      "title": "Business Use Cases"
+    },
+    {
+      "t": 501,
+      "title": "Questions on Planning and Limits"
+    }
+  ],
+  "learn": [
+    "An agent system interprets a question, selects tools, makes decisions and reflects on the response.",
+    "He configured an existing MCP server for Odoo running locally in Docker, using Claude Desktop.",
+    "Live demo: count employees, create an employee and create a product through the ERP API.",
+    "MCP has three kinds of assets: resources, prompts and tools; with the Python mcp package you mark methods as resources.",
+    "The next step is constraining the agent so it does the right thing, since it can change a lot in the ERP."
+  ],
+  "links": []
+}

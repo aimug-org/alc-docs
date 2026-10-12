@@ -1,0 +1,74 @@
+{
+  "title": "Voice Agents with FastRTC: WebRTC Made Simple in Python",
+  "speakers": [
+    "karim-lalani"
+  ],
+  "date": "2025-05-07",
+  "event": "2025-05-07",
+  "youtubeId": "16KwR_i6t6g",
+  "publishAt": "2027-01-07T11:00:00-06:00",
+  "duration": 3903,
+  "thumbnail": "/talks/voice-agents-with-fastrtc-webrtc-made-simple-in-python.jpg",
+  "topics": [
+    "Agents"
+  ],
+  "summary": "Karim Lalani explains voice agents and builds one with FastRTC, from echo server to LLM agent.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Intro and WebRTC Pain"
+    },
+    {
+      "t": 184,
+      "title": "WebRTC Basics"
+    },
+    {
+      "t": 460,
+      "title": "Why Voice Agents"
+    },
+    {
+      "t": 823,
+      "title": "Voice Activity and the Pipeline"
+    },
+    {
+      "t": 1005,
+      "title": "FastRTC Overview"
+    },
+    {
+      "t": 1192,
+      "title": "Lab Setup"
+    },
+    {
+      "t": 1556,
+      "title": "FastRTC Handler Code"
+    },
+    {
+      "t": 1739,
+      "title": "Echo Server"
+    },
+    {
+      "t": 2203,
+      "title": "Adding Speech to Text and Text to Speech"
+    },
+    {
+      "t": 2476,
+      "title": "Adding an LLM Agent"
+    },
+    {
+      "t": 2668,
+      "title": "FastAPI and Custom Frontend"
+    },
+    {
+      "t": 3122,
+      "title": "Discussion and Q&A"
+    }
+  ],
+  "learn": [
+    "FastRTC is a lightweight library that removes the boilerplate of setting up a WebRTC server; the same app also gets WebSocket endpoints.",
+    "A voice agent chains voice activity detection, speech to text, an LLM or agent, and text to speech.",
+    "Build-up: an echo server, then speech to text and text to speech, then an agent between the two models.",
+    "The app can launch as a Gradio app with a public link, or sit behind a FastAPI backend with a custom HTML and JavaScript client.",
+    "Streaming speech chunks as they are ready lets the agent start talking before the full response is done."
+  ],
+  "links": []
+}

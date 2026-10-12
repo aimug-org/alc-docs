@@ -22,7 +22,8 @@ const talks = [...(await publicTalks()), ...(await upcomingTalks())].filter((t) 
 // an hour with chapters while the night's talks also came out on their own.
 const isFull = (t: (typeof talks)[number]) => t.data.start === undefined &&
   (talks.some((s) => s.data.start !== undefined && s.data.youtubeId === t.data.youtubeId) ||
-    (t.data.chapters.length >= 2 && (t.data.duration ?? 0) >= 3600 && talks.length >= 3));
+    // a talk with a named speaker is that speaker's (long lab), never the night (Karim's hour-plus FastRTC lab, 2026-10-12)
+    (t.data.speakers.length === 0 && t.data.chapters.length >= 2 && (t.data.duration ?? 0) >= 3600 && talks.length >= 3));
 const full = talks.filter(isFull);
 const cards = talks.filter((t) => !isFull(t)).sort((a, b) => (a.data.start ?? 1e9) - (b.data.start ?? 1e9) || +a.data.date - +b.data.date);
 

@@ -1,0 +1,57 @@
+{
+  "title": "Building a General LangGraph MCP Server for Assistants and Threads",
+  "speakers": [
+    "riccardo-pirruccio"
+  ],
+  "date": "2025-02-05",
+  "event": "2025-02-05",
+  "youtubeId": "3wuMYmkftjA",
+  "publishAt": "2027-01-21T11:00:00-06:00",
+  "duration": 840,
+  "thumbnail": "/talks/building-a-general-langgraph-mcp-server-for-assistants-and-threads.jpg",
+  "topics": [
+    "LangGraph",
+    "Graphs",
+    "MCP"
+  ],
+  "summary": "Riccardo Pirruccio builds a general-purpose LangGraph MCP server that lists, inspects and runs assistants and reads thread state.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Intro and Context"
+    },
+    {
+      "t": 39,
+      "title": "LangGraph Overview"
+    },
+    {
+      "t": 137,
+      "title": "General MCP Concept"
+    },
+    {
+      "t": 272,
+      "title": "Assistants and Threads"
+    },
+    {
+      "t": 351,
+      "title": "MCP Tools Demo"
+    },
+    {
+      "t": 543,
+      "title": "Thread State Retrieval"
+    },
+    {
+      "t": 605,
+      "title": "Docker and Live Demo"
+    }
+  ],
+  "learn": [
+    "LangGraph is LangChain's abstraction for creating agent systems, with a lot of control over how they are built and how state is managed.",
+    "Because LangGraph graphs can now be exposed as an API, the MCP can be general instead of tailored to a single graph.",
+    "An assistant is an instance of a graph with certain configurations embedded, such as the model or an API key, and one graph can have many assistants.",
+    "A thread preserves state, so a thread can be reused however many times is needed, while a stateless run keeps none.",
+    "The first three tools list assistants through the LangGraph Python SDK search API, fetch an assistant's schema, and run an assistant with the input that schema describes.",
+    "Running an assistant timed out with the slow-thinking R1 model, so Pirruccio added tools to search threads and read thread state, then demos the MCP against a graph running in Docker, switching from Claude Desktop to Cline when Claude fails."
+  ],
+  "links": []
+}

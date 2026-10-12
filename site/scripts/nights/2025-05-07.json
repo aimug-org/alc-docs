@@ -1,0 +1,22 @@
+{
+  "event": "2025-05-07",
+  "copy": "../archive-drops/copy/2025-05-07",
+  "transcript": false,
+  "talks": {
+    "collier-king": {
+      "file": "collier-king-langgraph",
+      "youtubeId": "cJf59ivLSUY",
+      "publishAt": "2027-01-07T11:00:00-06:00"
+    },
+    "joseph-fluckiger": {
+      "file": "joseph-fluckiger-mcp",
+      "youtubeId": "KcjidAnCGAA",
+      "publishAt": "2027-01-07T11:00:00-06:00"
+    },
+    "karim-lalani": {
+      "file": "karim-lalani-fastrtc",
+      "youtubeId": "16KwR_i6t6g",
+      "publishAt": "2027-01-07T11:00:00-06:00"
+    }
+  }
+}

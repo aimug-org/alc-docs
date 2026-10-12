@@ -1,0 +1,17 @@
+{
+  "event": "2024-09-11",
+  "copy": "../archive-drops/copy/2024-09-11",
+  "transcript": false,
+  "talks": {
+    "karim-lalani": {
+      "file": "karim-lalani-agents-on-edge",
+      "youtubeId": "lRiYtwyrCrM",
+      "publishAt": "2027-01-21T11:00:00-06:00"
+    },
+    "ryan-booth": {
+      "file": "ryan-booth-langgraph-api-chains",
+      "youtubeId": "XL9h8sCQG3M",
+      "publishAt": "2027-01-21T11:00:00-06:00"
+    }
+  }
+}
