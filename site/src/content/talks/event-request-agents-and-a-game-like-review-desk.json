@@ -1,0 +1,80 @@
+{
+  "title": "Event-Request Agents and a Game-Like Review Desk",
+  "speakers": [
+    "stefano-casafranca"
+  ],
+  "date": "2026-08-11",
+  "event": "2026-08-11",
+  "youtubeId": "NY02wOKa93k",
+  "publishAt": "2026-10-29T11:00:00-05:00",
+  "duration": 781,
+  "thumbnail": "/talks/event-request-agents-and-a-game-like-review-desk.jpg",
+  "topics": [
+    "Evals",
+    "Graphs",
+    "Agents"
+  ],
+  "summary": "Stefano Casafranca shows agents that triage event requests, and a game-like interface to review them.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "What the Center Does"
+    },
+    {
+      "t": 47,
+      "title": "Requests Touch Many Departments"
+    },
+    {
+      "t": 95,
+      "title": "The Dashboard and a Feedback Session"
+    },
+    {
+      "t": 141,
+      "title": "Why Gamify It"
+    },
+    {
+      "t": 191,
+      "title": "The Game: The Center"
+    },
+    {
+      "t": 282,
+      "title": "Red Button, Green Stamp, Escalate"
+    },
+    {
+      "t": 375,
+      "title": "The Agent Graph"
+    },
+    {
+      "t": 420,
+      "title": "Tags in Code for LangSmith"
+    },
+    {
+      "t": 488,
+      "title": "The Review Desk"
+    },
+    {
+      "t": 515,
+      "title": "Rewinding Errors"
+    },
+    {
+      "t": 561,
+      "title": "KPIs and the Fellow's Learning"
+    },
+    {
+      "t": 634,
+      "title": "Game Inspirations"
+    },
+    {
+      "t": 676,
+      "title": "Q&A: Tagging Strategy"
+    }
+  ],
+  "learn": [
+    "The center rents its venue to internal and external partners, and requests arrive in many forms, including long email forms that touch departments such as catering, police coverage, furniture and moving crews.",
+    "A dashboard shows what each event needs, and feedback from a review session pushed him toward gamifying it so new interns can pick up the workflow faster.",
+    "In the concept, called The Center, a red button would run the agent (\"the fellow\") and a green stamp would approve or send an email, with escalation as a separate option; the goal is for the agent to learn and grow more reliable over time.",
+    "He treats tags in code as the most important part of the agent graph: department tags, plus proposed tags for whether a request came from a form or an email reply, so LangSmith traces can be segmented and evaluated.",
+    "He names Papers, Please, Undertale, Ace Attorney and Duolingo as inspirations, and says KPIs should be defined before tagging."
+  ],
+  "links": []
+}
