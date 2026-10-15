@@ -5,17 +5,17 @@
   "talks": {
     "mark-norman": {
       "file": "mark-norman-agent-foundry",
-      "youtubeId": "hKPHeP9OEno",
+      "youtubeId": "RwEIzFbyJQM",
       "publishAt": "2026-11-05T11:00:00-06:00"
     },
     "steven-tran": {
       "file": "steven-tran-ontology-translation-layer-for-ai",
-      "youtubeId": "1mmQkgnx0wA",
+      "youtubeId": "AS5k0PYk8Mg",
       "publishAt": "2026-11-05T11:00:00-06:00"
     },
     "joseph-fluckiger": {
       "file": "joseph-fluckiger-langgraph-fraud-detection",
-      "youtubeId": "dAHCioMb0Q0",
+      "youtubeId": "wtGOveRTqGg",
       "publishAt": "2026-11-05T11:00:00-06:00"
     }
   }

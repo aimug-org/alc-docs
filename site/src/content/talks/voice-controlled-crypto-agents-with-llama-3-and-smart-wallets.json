@@ -5,9 +5,9 @@
   ],
   "date": "2024-05-01",
   "event": "2024-05-01",
-  "youtubeId": "24oh1RSMlD0",
+  "youtubeId": "0A-8cqbum38",
   "publishAt": "2027-01-28T11:00:00-06:00",
-  "duration": 1511,
+  "duration": 1798,
   "thumbnail": "/talks/voice-controlled-crypto-agents-with-llama-3-and-smart-wallets.jpg",
   "topics": [
     "Agents"
@@ -19,36 +19,44 @@
       "title": "Intro and Context"
     },
     {
-      "t": 181,
+      "t": 184,
       "title": "Why Crypto for AI"
     },
     {
-      "t": 319,
+      "t": 322,
       "title": "Smart Wallets and MPC"
     },
     {
-      "t": 577,
+      "t": 580,
       "title": "The ReAct Pattern"
     },
     {
-      "t": 825,
+      "t": 828,
       "title": "Prompt Strategy and Tools"
     },
     {
-      "t": 947,
+      "t": 950,
       "title": "Live Demo Setup"
     },
     {
-      "t": 1286,
+      "t": 1289,
       "title": "The ReAct Loop Running"
     },
     {
-      "t": 1341,
+      "t": 1344,
       "title": "Sending Testnet Crypto"
     },
     {
-      "t": 1441,
+      "t": 1444,
       "title": "Issues and Future Goals"
+    },
+    {
+      "t": 1541,
+      "title": "Rabbit R1, Plaid and Open APIs"
+    },
+    {
+      "t": 1686,
+      "title": "Q&A"
     }
   ],
   "learn": [
@@ -56,7 +64,9 @@
     "He argues crypto suits agents that need to pay, and covers smart wallets with spending rules and MPC key shards.",
     "The agent follows the ReAct pattern, a loop of thought, action, pause and observation, driven by the prompt rather than LangChain; LangChain supplies the structured output parser and prompt templates.",
     "Structured output pulls the recipient, quantity and token from a request, and a name-to-address map stands in for a Telegram bot.",
-    "He found Llama more volatile than GPT. In his testing two days earlier, a testnet ETH send went through, but the loop then wanted to send again because the result never goes back to the agent."
+    "He found Llama more volatile than GPT. In his testing two days earlier, a testnet ETH send went through, but the loop then wanted to send again because the result never goes back to the agent.",
+    "In closing he argues that UIs are made for people and APIs for computers, pointing to the Rabbit R1, Plaid's approach to bank APIs, and Stripe taking crypto payments again after six years.",
+    "In the Q&A: Whisper rate limits, Venmo's thin personal API, and recurring payments on chain through Chainlink oracles and a Paymaster."
   ],
   "links": []
 }

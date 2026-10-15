@@ -5,9 +5,9 @@
   ],
   "date": "2024-07-10",
   "event": "2024-07-10",
-  "youtubeId": "8lztLCZSn-g",
+  "youtubeId": "8eYvHhhx1Gc",
   "publishAt": "2026-12-17T11:00:00-06:00",
-  "duration": 1169,
+  "duration": 1187,
   "thumbnail": "/talks/style-guide-voice-wardrobe-assistant-with-langchain-and-nvidia-nim.jpg",
   "topics": [
     "Graphs",
@@ -21,31 +21,31 @@
       "title": "Intro and Origin Story"
     },
     {
-      "t": 107,
+      "t": 110,
       "title": "Style Guide Concept"
     },
     {
-      "t": 167,
+      "t": 170,
       "title": "Technical Architecture"
     },
     {
-      "t": 284,
+      "t": 287,
       "title": "Photo Upload Workflow"
     },
     {
-      "t": 319,
+      "t": 322,
       "title": "AI Agent Logic"
     },
     {
-      "t": 446,
+      "t": 449,
       "title": "Challenges and Solutions"
     },
     {
-      "t": 613,
+      "t": 616,
       "title": "RAG Question and Demo"
     },
     {
-      "t": 897,
+      "t": 900,
       "title": "Graph Complexity"
     }
   ],

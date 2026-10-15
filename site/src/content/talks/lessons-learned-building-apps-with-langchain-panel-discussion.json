@@ -8,9 +8,9 @@
   ],
   "date": "2024-05-01",
   "event": "2024-05-01",
-  "youtubeId": "Qea0F8M_MDM",
+  "youtubeId": "-h3Wzsp5jWc",
   "publishAt": "2027-01-28T11:00:00-06:00",
-  "duration": 2181,
+  "duration": 2199,
   "thumbnail": "/talks/lessons-learned-building-apps-with-langchain-panel-discussion.jpg",
   "topics": [
     "Inference",
@@ -23,39 +23,39 @@
       "title": "Panelist Introductions"
     },
     {
-      "t": 446,
+      "t": 449,
       "title": "Pin Your Library Versions"
     },
     {
-      "t": 568,
+      "t": 571,
       "title": "Debugging Agent by Agent"
     },
     {
-      "t": 669,
+      "t": 672,
       "title": "Production Lessons"
     },
     {
-      "t": 928,
+      "t": 931,
       "title": "Bringing AI into a Workflow"
     },
     {
-      "t": 1484,
+      "t": 1487,
       "title": "Graph Transformations and Ollama Tool Calling"
     },
     {
-      "t": 1720,
+      "t": 1723,
       "title": "LangServe and FastAPI over Google Drive"
     },
     {
-      "t": 1789,
+      "t": 1792,
       "title": "Hallucinations and Audit Trails"
     },
     {
-      "t": 1885,
+      "t": 1888,
       "title": "Community and Reading the Docs"
     },
     {
-      "t": 1940,
+      "t": 1943,
       "title": "Audience Q&A"
     }
   ],

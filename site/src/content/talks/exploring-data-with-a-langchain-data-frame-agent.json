@@ -5,9 +5,9 @@
   ],
   "date": "2024-11-07",
   "event": "2024-11-07",
-  "youtubeId": "-yYXFRf54OM",
+  "youtubeId": "CDeHB8cr-I8",
   "publishAt": "2026-12-17T11:00:00-06:00",
-  "duration": 680,
+  "duration": 698,
   "thumbnail": "/talks/exploring-data-with-a-langchain-data-frame-agent.jpg",
   "topics": [
     "Agents"
@@ -19,27 +19,27 @@
       "title": "Intro: Data Exploration with Agents"
     },
     {
-      "t": 76,
+      "t": 79,
       "title": "Why: Data People Cannot Read"
     },
     {
-      "t": 163,
+      "t": 166,
       "title": "What Data Democratization Means"
     },
     {
-      "t": 274,
+      "t": 277,
       "title": "How the Agent Works"
     },
     {
-      "t": 422,
+      "t": 425,
       "title": "Notebook Walkthrough"
     },
     {
-      "t": 497,
+      "t": 500,
       "title": "Starbucks Data Demo"
     },
     {
-      "t": 620,
+      "t": 623,
       "title": "A Subjective Question"
     }
   ],

@@ -5,9 +5,9 @@
   ],
   "date": "2024-02-21",
   "event": "2024-02-21",
-  "youtubeId": "jVtixVdDKJY",
+  "youtubeId": "TRnSzCoz4Ys",
   "publishAt": "2027-02-04T11:00:00-06:00",
-  "duration": 2030,
+  "duration": 2049,
   "thumbnail": "/talks/a-local-rag-agent-with-langgraph-ollama-and-surrealdb.jpg",
   "topics": [
     "LangGraph",
@@ -21,55 +21,55 @@
       "title": "Intro: Open Source Local RAG"
     },
     {
-      "t": 148,
+      "t": 151,
       "title": "Ollama"
     },
     {
-      "t": 196,
+      "t": 199,
       "title": "SurrealDB and the Plan"
     },
     {
-      "t": 290,
+      "t": 293,
       "title": "Notebook Setup"
     },
     {
-      "t": 436,
+      "t": 439,
       "title": "Libraries and Search Tool"
     },
     {
-      "t": 609,
+      "t": 612,
       "title": "Two Vector Stores"
     },
     {
-      "t": 651,
+      "t": 654,
       "title": "Loading the Datasets"
     },
     {
-      "t": 1006,
+      "t": 1009,
       "title": "Similarity Search Test"
     },
     {
-      "t": 1078,
+      "t": 1081,
       "title": "Why Review Retrieval"
     },
     {
-      "t": 1119,
+      "t": 1122,
       "title": "Designing the Graph"
     },
     {
-      "t": 1366,
+      "t": 1369,
       "title": "Agent State"
     },
     {
-      "t": 1437,
+      "t": 1440,
       "title": "JSON Mode and Classification Chains"
     },
     {
-      "t": 1729,
+      "t": 1732,
       "title": "Node Functions"
     },
     {
-      "t": 1941,
+      "t": 1944,
       "title": "Building and Compiling the Graph"
     }
   ],

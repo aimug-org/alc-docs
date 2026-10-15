@@ -5,9 +5,9 @@
   ],
   "date": "2025-12-03",
   "event": "2025-12-03",
-  "youtubeId": "-8Qp-dbYn60",
+  "youtubeId": "-Nw9VfLvExQ",
   "publishAt": "2027-01-14T11:00:00-06:00",
-  "duration": 1262,
+  "duration": 1280,
   "thumbnail": "/talks/running-the-claude-agent-sdk-on-cloudflare-sandbox-containers.jpg",
   "topics": [
     "LangGraph",
@@ -21,27 +21,27 @@
       "title": "Introduction and Background"
     },
     {
-      "t": 188,
+      "t": 191,
       "title": "The Problem with Agents"
     },
     {
-      "t": 248,
+      "t": 251,
       "title": "Application Demo"
     },
     {
-      "t": 637,
+      "t": 640,
       "title": "Why Use Claude Agent SDK"
     },
     {
-      "t": 878,
+      "t": 881,
       "title": "Why Cloudflare"
     },
     {
-      "t": 1021,
+      "t": 1024,
       "title": "Workers, D1, R2 and Durable Objects"
     },
     {
-      "t": 1112,
+      "t": 1115,
       "title": "Containers and the Sandbox Image"
     }
   ],

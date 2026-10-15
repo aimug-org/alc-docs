@@ -5,9 +5,9 @@
   ],
   "date": "2024-07-10",
   "event": "2024-07-10",
-  "youtubeId": "zyKiVG7m5qM",
+  "youtubeId": "1eCpskt47UQ",
   "publishAt": "2026-12-17T11:00:00-06:00",
-  "duration": 1010,
+  "duration": 1029,
   "thumbnail": "/talks/next-js-front-end-for-langserve-document-summaries.jpg",
   "topics": [
     "Security"
@@ -19,35 +19,35 @@
       "title": "Intro and Motivation"
     },
     {
-      "t": 216,
+      "t": 219,
       "title": "Tech Stack"
     },
     {
-      "t": 353,
+      "t": 356,
       "title": "App Demo"
     },
     {
-      "t": 458,
+      "t": 461,
       "title": "Code Walkthrough"
     },
     {
-      "t": 517,
+      "t": 520,
       "title": "Authentication and Next Steps"
     },
     {
-      "t": 539,
+      "t": 542,
       "title": "RemoteRunnable on the Client"
     },
     {
-      "t": 607,
+      "t": 610,
       "title": "Repository Structure"
     },
     {
-      "t": 720,
+      "t": 723,
       "title": "NextAuth Problems"
     },
     {
-      "t": 847,
+      "t": 850,
       "title": "Chain of Density"
     }
   ],

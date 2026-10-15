@@ -5,9 +5,9 @@
   ],
   "date": "2025-05-07",
   "event": "2025-05-07",
-  "youtubeId": "16KwR_i6t6g",
+  "youtubeId": "I8jhhTAauZk",
   "publishAt": "2027-01-07T11:00:00-06:00",
-  "duration": 3903,
+  "duration": 3922,
   "thumbnail": "/talks/voice-agents-with-fastrtc-webrtc-made-simple-in-python.jpg",
   "topics": [
     "Agents"
@@ -19,47 +19,47 @@
       "title": "Intro and WebRTC Pain"
     },
     {
-      "t": 184,
+      "t": 187,
       "title": "WebRTC Basics"
     },
     {
-      "t": 460,
+      "t": 463,
       "title": "Why Voice Agents"
     },
     {
-      "t": 823,
+      "t": 826,
       "title": "Voice Activity and the Pipeline"
     },
     {
-      "t": 1005,
+      "t": 1008,
       "title": "FastRTC Overview"
     },
     {
-      "t": 1192,
+      "t": 1195,
       "title": "Lab Setup"
     },
     {
-      "t": 1556,
+      "t": 1559,
       "title": "FastRTC Handler Code"
     },
     {
-      "t": 1739,
+      "t": 1742,
       "title": "Echo Server"
     },
     {
-      "t": 2203,
+      "t": 2206,
       "title": "Adding Speech to Text and Text to Speech"
     },
     {
-      "t": 2476,
+      "t": 2479,
       "title": "Adding an LLM Agent"
     },
     {
-      "t": 2668,
+      "t": 2671,
       "title": "FastAPI and Custom Frontend"
     },
     {
-      "t": 3122,
+      "t": 3125,
       "title": "Discussion and Q&A"
     }
   ],

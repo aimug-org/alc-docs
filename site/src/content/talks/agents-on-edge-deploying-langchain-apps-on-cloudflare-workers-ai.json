@@ -5,9 +5,9 @@
   ],
   "date": "2024-09-11",
   "event": "2024-09-11",
-  "youtubeId": "lRiYtwyrCrM",
+  "youtubeId": "hrZuECoTE34",
   "publishAt": "2027-01-21T11:00:00-06:00",
-  "duration": 1608,
+  "duration": 1627,
   "thumbnail": "/talks/agents-on-edge-deploying-langchain-apps-on-cloudflare-workers-ai.jpg",
   "topics": [
     "LangGraph",
@@ -21,47 +21,47 @@
       "title": "Intro and Open Source Models"
     },
     {
-      "t": 170,
+      "t": 173,
       "title": "What Is Edge"
     },
     {
-      "t": 345,
+      "t": 348,
       "title": "Real-Time AI at the Edge"
     },
     {
-      "t": 500,
+      "t": 503,
       "title": "Scalability and Cost"
     },
     {
-      "t": 714,
+      "t": 717,
       "title": "Why Cloudflare"
     },
     {
-      "t": 829,
+      "t": 832,
       "title": "Creating a Cloudflare Worker"
     },
     {
-      "t": 1058,
+      "t": 1061,
       "title": "Environment Variables and Secrets"
     },
     {
-      "t": 1144,
+      "t": 1147,
       "title": "Workers AI Models"
     },
     {
-      "t": 1199,
+      "t": 1202,
       "title": "LangChain on Cloudflare"
     },
     {
-      "t": 1325,
+      "t": 1328,
       "title": "Code Walkthrough"
     },
     {
-      "t": 1466,
+      "t": 1469,
       "title": "Hosted Chatbot and Free Tier"
     },
     {
-      "t": 1550,
+      "t": 1553,
       "title": "Q&A on Edge Latency"
     }
   ],

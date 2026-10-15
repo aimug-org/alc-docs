@@ -5,9 +5,9 @@
   ],
   "date": "2025-12-03",
   "event": "2025-12-03",
-  "youtubeId": "zUS3M0qQYWc",
+  "youtubeId": "84FaNRk3lFA",
   "publishAt": "2027-01-14T11:00:00-06:00",
-  "duration": 1549,
+  "duration": 1567,
   "thumbnail": "/talks/replacing-dev-workflow-scripts-with-claude-code-skills-and-plugins.jpg",
   "topics": [
     "Coding agents",
@@ -20,47 +20,47 @@
       "title": "Skills for a Dev Workflow"
     },
     {
-      "t": 138,
+      "t": 141,
       "title": "Previous Script Workflow"
     },
     {
-      "t": 249,
+      "t": 252,
       "title": "Why Skills"
     },
     {
-      "t": 341,
+      "t": 344,
       "title": "Skills Save Context"
     },
     {
-      "t": 512,
+      "t": 515,
       "title": "Skills, Sub-agents and Commands"
     },
     {
-      "t": 644,
+      "t": 647,
       "title": "New Dev Process"
     },
     {
-      "t": 741,
+      "t": 744,
       "title": "Plugin Marketplaces"
     },
     {
-      "t": 807,
+      "t": 810,
       "title": "Feature Start Demo"
     },
     {
-      "t": 833,
+      "t": 836,
       "title": "Plugin and Skill Structure"
     },
     {
-      "t": 1173,
+      "t": 1176,
       "title": "Feature Build Skill"
     },
     {
-      "t": 1252,
+      "t": 1255,
       "title": "Q&A"
     },
     {
-      "t": 1432,
+      "t": 1435,
       "title": "Next Steps"
     }
   ],

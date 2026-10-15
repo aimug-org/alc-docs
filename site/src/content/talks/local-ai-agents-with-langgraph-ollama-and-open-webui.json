@@ -5,9 +5,9 @@
   ],
   "date": "2024-11-07",
   "event": "2024-11-07",
-  "youtubeId": "3ZiZ_cgpJZw",
+  "youtubeId": "zYWlVqIoDVA",
   "publishAt": "2026-12-17T11:00:00-06:00",
-  "duration": 628,
+  "duration": 647,
   "thumbnail": "/talks/local-ai-agents-with-langgraph-ollama-and-open-webui.jpg",
   "topics": [
     "LangGraph",
@@ -21,31 +21,31 @@
       "title": "Speaker Background"
     },
     {
-      "t": 82,
+      "t": 85,
       "title": "Project Overview"
     },
     {
-      "t": 170,
+      "t": 173,
       "title": "LangGraph Architecture"
     },
     {
-      "t": 285,
+      "t": 288,
       "title": "Why Run Locally"
     },
     {
-      "t": 303,
+      "t": 306,
       "title": "Ollama and Open WebUI"
     },
     {
-      "t": 395,
+      "t": 398,
       "title": "Tools vs Pipelines"
     },
     {
-      "t": 466,
+      "t": 469,
       "title": "Docker Setup"
     },
     {
-      "t": 559,
+      "t": 562,
       "title": "The Vision (Not Working Yet)"
     }
   ],

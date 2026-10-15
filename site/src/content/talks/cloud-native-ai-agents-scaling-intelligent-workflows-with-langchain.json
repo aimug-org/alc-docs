@@ -5,9 +5,9 @@
   ],
   "date": "2025-04-02",
   "event": "2025-04-02",
-  "youtubeId": "V0OWdUzg9L0",
+  "youtubeId": "wRrfhTPzpS4",
   "publishAt": "2027-02-11T11:00:00-06:00",
-  "duration": 803,
+  "duration": 822,
   "thumbnail": "/talks/cloud-native-ai-agents-scaling-intelligent-workflows-with-langchain.jpg",
   "topics": [
     "Routing",
@@ -21,43 +21,43 @@
       "title": "Intro"
     },
     {
-      "t": 47,
+      "t": 50,
       "title": "Why AI Agents and Cloud Native"
     },
     {
-      "t": 216,
+      "t": 219,
       "title": "LangChain Meets Cloud-Native Architecture"
     },
     {
-      "t": 280,
+      "t": 283,
       "title": "Deployment Best Practices"
     },
     {
-      "t": 326,
+      "t": 329,
       "title": "Use Cases and Challenges"
     },
     {
-      "t": 410,
+      "t": 413,
       "title": "Key Takeaways"
     },
     {
-      "t": 437,
+      "t": 440,
       "title": "Joint Lightning-Talk Q&A"
     },
     {
-      "t": 493,
+      "t": 496,
       "title": "Collier King on His Vectorize Package"
     },
     {
-      "t": 653,
+      "t": 656,
       "title": "Vectorize and MCP Servers"
     },
     {
-      "t": 701,
+      "t": 704,
       "title": "Agents in Financial Services"
     },
     {
-      "t": 746,
+      "t": 749,
       "title": "PhD Research on Cloud-Native Security"
     }
   ],

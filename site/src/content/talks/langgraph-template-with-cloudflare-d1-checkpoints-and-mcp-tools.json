@@ -5,9 +5,9 @@
   ],
   "date": "2025-05-07",
   "event": "2025-05-07",
-  "youtubeId": "cJf59ivLSUY",
+  "youtubeId": "03j-Rlc3ZHA",
   "publishAt": "2027-01-07T11:00:00-06:00",
-  "duration": 603,
+  "duration": 621,
   "thumbnail": "/talks/langgraph-template-with-cloudflare-d1-checkpoints-and-mcp-tools.jpg",
   "topics": [
     "LangGraph",
@@ -21,23 +21,23 @@
       "title": "Intro and Goals"
     },
     {
-      "t": 151,
+      "t": 154,
       "title": "Cloudflare Checkpoint Package"
     },
     {
-      "t": 242,
+      "t": 245,
       "title": "App Demo"
     },
     {
-      "t": 405,
+      "t": 408,
       "title": "AI Gateway Tracking"
     },
     {
-      "t": 437,
+      "t": 440,
       "title": "Code Architecture"
     },
     {
-      "t": 528,
+      "t": 531,
       "title": "Future Ideas"
     }
   ],

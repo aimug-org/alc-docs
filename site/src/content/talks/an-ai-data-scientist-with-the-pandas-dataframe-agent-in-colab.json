@@ -5,9 +5,9 @@
   ],
   "date": "2024-05-01",
   "event": "2024-05-01",
-  "youtubeId": "hlEGupV9G_g",
+  "youtubeId": "LXDLCdZhcN8",
   "publishAt": "2027-01-28T11:00:00-06:00",
-  "duration": 2626,
+  "duration": 2645,
   "thumbnail": "/talks/an-ai-data-scientist-with-the-pandas-dataframe-agent-in-colab.jpg",
   "topics": [
     "Agents"
@@ -19,35 +19,35 @@
       "title": "Intro and Background"
     },
     {
-      "t": 130,
+      "t": 133,
       "title": "The AI Data Scientist Idea"
     },
     {
-      "t": 358,
+      "t": 361,
       "title": "Setup and Prerequisites"
     },
     {
-      "t": 519,
+      "t": 522,
       "title": "Installing Libraries"
     },
     {
-      "t": 993,
+      "t": 996,
       "title": "Loading Data"
     },
     {
-      "t": 1281,
+      "t": 1284,
       "title": "Building the Agent"
     },
     {
-      "t": 1724,
+      "t": 1727,
       "title": "Live Analysis"
     },
     {
-      "t": 2101,
+      "t": 2104,
       "title": "Charts and Heat Map"
     },
     {
-      "t": 2516,
+      "t": 2519,
       "title": "A Subjective Question"
     }
   ],

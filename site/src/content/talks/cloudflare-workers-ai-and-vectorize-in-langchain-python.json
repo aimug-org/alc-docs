@@ -5,9 +5,9 @@
   ],
   "date": "2025-04-02",
   "event": "2025-04-02",
-  "youtubeId": "MCeg_KxId88",
+  "youtubeId": "8Z5k1DBI004",
   "publishAt": "2027-02-11T11:00:00-06:00",
-  "duration": 427,
+  "duration": 446,
   "thumbnail": "/talks/cloudflare-workers-ai-and-vectorize-in-langchain-python.jpg",
   "topics": [
     "RAG",
@@ -20,27 +20,27 @@
       "title": "Workers AI and Vectorize"
     },
     {
-      "t": 46,
+      "t": 49,
       "title": "Install and API Tokens"
     },
     {
-      "t": 114,
+      "t": 117,
       "title": "Creating Indexes"
     },
     {
-      "t": 141,
+      "t": 144,
       "title": "Loading and Querying"
     },
     {
-      "t": 234,
+      "t": 237,
       "title": "Metadata Filtering and Namespaces"
     },
     {
-      "t": 282,
+      "t": 285,
       "title": "IDs and Upserts"
     },
     {
-      "t": 329,
+      "t": 332,
       "title": "Async, TypeScript and Limits"
     }
   ],

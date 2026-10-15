@@ -5,9 +5,9 @@
   ],
   "date": "2024-11-07",
   "event": "2024-11-07",
-  "youtubeId": "1pfMiYRV2GM",
+  "youtubeId": "1jamVeGN6Zg",
   "publishAt": "2026-12-17T11:00:00-06:00",
-  "duration": 467,
+  "duration": 486,
   "thumbnail": "/talks/anthropic-computer-use-on-windows-with-a-langchain-agent.jpg",
   "topics": [
     "Agents"
@@ -19,27 +19,27 @@
       "title": "Intro and Context"
     },
     {
-      "t": 63,
+      "t": 66,
       "title": "The Three Tools"
     },
     {
-      "t": 96,
+      "t": 99,
       "title": "Potential Applications"
     },
     {
-      "t": 128,
+      "t": 131,
       "title": "Multi-Agent Ideas"
     },
     {
-      "t": 232,
+      "t": 235,
       "title": "Windows Adaptation Demo"
     },
     {
-      "t": 312,
+      "t": 315,
       "title": "Obsidian Notebook Demo"
     },
     {
-      "t": 434,
+      "t": 437,
       "title": "OmniParser and Limitations"
     }
   ],

@@ -5,9 +5,9 @@
   ],
   "date": "2025-12-03",
   "event": "2025-12-03",
-  "youtubeId": "5QvUP2RNR2Q",
+  "youtubeId": "uJNDtla9yL8",
   "publishAt": "2027-01-14T11:00:00-06:00",
-  "duration": 1212,
+  "duration": 1231,
   "thumbnail": "/talks/browser-automation-with-stagehand-finding-company-press-release-pages.jpg",
   "topics": [
     "Inference",
@@ -20,43 +20,43 @@
       "title": "Introduction to Stagehand"
     },
     {
-      "t": 13,
+      "t": 16,
       "title": "Why Agentic Browsing"
     },
     {
-      "t": 110,
+      "t": 113,
       "title": "Deterministic Trade-offs"
     },
     {
-      "t": 208,
+      "t": 211,
       "title": "Core Features"
     },
     {
-      "t": 340,
+      "t": 343,
       "title": "Best Practices"
     },
     {
-      "t": 414,
+      "t": 417,
       "title": "Caching"
     },
     {
-      "t": 476,
+      "t": 479,
       "title": "Model Evals and Integrations"
     },
     {
-      "t": 583,
+      "t": 586,
       "title": "Case Study: Press Releases"
     },
     {
-      "t": 765,
+      "t": 768,
       "title": "Model Results"
     },
     {
-      "t": 932,
+      "t": 935,
       "title": "Q&A on Playwright"
     },
     {
-      "t": 1026,
+      "t": 1029,
       "title": "Code Walkthrough"
     }
   ],
