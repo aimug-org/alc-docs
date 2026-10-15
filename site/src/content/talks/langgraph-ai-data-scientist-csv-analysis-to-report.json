@@ -5,9 +5,9 @@
   ],
   "date": "2024-05-29",
   "event": "2024-05-29",
-  "youtubeId": "IRXx-RIeGGo",
+  "youtubeId": "pCotIqWasnk",
   "publishAt": "2026-12-17T11:00:00-06:00",
-  "duration": 2004,
+  "duration": 2023,
   "thumbnail": "/talks/langgraph-ai-data-scientist-csv-analysis-to-report.jpg",
   "topics": [
     "LangGraph",
@@ -20,31 +20,31 @@
       "title": "Intro and Inspiration"
     },
     {
-      "t": 97,
+      "t": 100,
       "title": "Planned Design and Simplified Graph"
     },
     {
-      "t": 258,
+      "t": 261,
       "title": "Input Configuration"
     },
     {
-      "t": 447,
+      "t": 450,
       "title": "State and Data Analyst Agent"
     },
     {
-      "t": 1047,
+      "t": 1050,
       "title": "Writer Agent"
     },
     {
-      "t": 1145,
+      "t": 1148,
       "title": "Lessons: JSON and Cognitive Architectures"
     },
     {
-      "t": 1743,
+      "t": 1746,
       "title": "Publisher and Graph Setup"
     },
     {
-      "t": 1961,
+      "t": 1964,
       "title": "Output Review"
     }
   ],

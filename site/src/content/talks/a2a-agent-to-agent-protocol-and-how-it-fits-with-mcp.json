@@ -5,9 +5,9 @@
   ],
   "date": "2025-05-07",
   "event": "2025-05-07",
-  "youtubeId": "v-3FOz-A7_U",
+  "youtubeId": "hhHdepHT34s",
   "publishAt": "2027-01-07T11:00:00-06:00",
-  "duration": 733,
+  "duration": 752,
   "thumbnail": "/talks/a2a-agent-to-agent-protocol-and-how-it-fits-with-mcp.jpg",
   "topics": [
     "LangGraph",
@@ -21,27 +21,27 @@
       "title": "Intro"
     },
     {
-      "t": 30,
+      "t": 33,
       "title": "The Future of the Organization"
     },
     {
-      "t": 153,
+      "t": 156,
       "title": "What A2A Does"
     },
     {
-      "t": 312,
+      "t": 315,
       "title": "Federating Intelligence"
     },
     {
-      "t": 405,
+      "t": 408,
       "title": "A2A vs MCP"
     },
     {
-      "t": 500,
+      "t": 503,
       "title": "Use Cases"
     },
     {
-      "t": 657,
+      "t": 660,
       "title": "Ecosystem and Wrap-up"
     }
   ],

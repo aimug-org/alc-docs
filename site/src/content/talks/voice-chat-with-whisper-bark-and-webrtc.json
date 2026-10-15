@@ -5,9 +5,9 @@
   ],
   "date": "2024-05-29",
   "event": "2024-05-29",
-  "youtubeId": "sL7rw4eyuu8",
+  "youtubeId": "irqDVAKjI1Q",
   "publishAt": "2026-12-17T11:00:00-06:00",
-  "duration": 1550,
+  "duration": 1569,
   "thumbnail": "/talks/voice-chat-with-whisper-bark-and-webrtc.jpg",
   "topics": [
     "RAG",
@@ -20,31 +20,31 @@
       "title": "Intro: Talking to Your Agent"
     },
     {
-      "t": 132,
+      "t": 135,
       "title": "Why WebRTC"
     },
     {
-      "t": 266,
+      "t": 269,
       "title": "The LangChain Part"
     },
     {
-      "t": 342,
+      "t": 345,
       "title": "Whisper, Bark and Colab Setup"
     },
     {
-      "t": 742,
+      "t": 745,
       "title": "Live Demo"
     },
     {
-      "t": 922,
+      "t": 925,
       "title": "Interface and Design Choices"
     },
     {
-      "t": 1319,
+      "t": 1322,
       "title": "Modular Code Layout"
     },
     {
-      "t": 1419,
+      "t": 1422,
       "title": "What Was Hard"
     }
   ],

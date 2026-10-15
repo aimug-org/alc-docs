@@ -5,9 +5,9 @@
   ],
   "date": "2025-04-02",
   "event": "2025-04-02",
-  "youtubeId": "-4Qy1HMetQQ",
+  "youtubeId": "CKihD-__O80",
   "publishAt": "2027-02-11T11:00:00-06:00",
-  "duration": 1784,
+  "duration": 1802,
   "thumbnail": "/talks/your-first-mcp-server-in-python-tools-resources-and-inspector.jpg",
   "topics": [
     "MCP"
@@ -19,63 +19,63 @@
       "title": "How the Lab Works"
     },
     {
-      "t": 126,
+      "t": 129,
       "title": "SDKs and About Karim"
     },
     {
-      "t": 210,
+      "t": 213,
       "title": "Installing uv"
     },
     {
-      "t": 248,
+      "t": 251,
       "title": "The Greeter Server"
     },
     {
-      "t": 309,
+      "t": 312,
       "title": "Resources and Prompts"
     },
     {
-      "t": 374,
+      "t": 377,
       "title": "Docstrings as Tool Descriptions"
     },
     {
-      "t": 495,
+      "t": 498,
       "title": "MCP Inspector"
     },
     {
-      "t": 618,
+      "t": 621,
       "title": "Running the Inspector with uv"
     },
     {
-      "t": 804,
+      "t": 807,
       "title": "Templated Resources"
     },
     {
-      "t": 866,
+      "t": 869,
       "title": "Tools"
     },
     {
-      "t": 931,
+      "t": 934,
       "title": "What Tools Can Reach"
     },
     {
-      "t": 1078,
+      "t": 1081,
       "title": "Install in Claude Desktop"
     },
     {
-      "t": 1178,
+      "t": 1181,
       "title": "How Claude Picks the Tool"
     },
     {
-      "t": 1262,
+      "t": 1265,
       "title": "Q&A"
     },
     {
-      "t": 1439,
+      "t": 1442,
       "title": "Managing Many MCP Servers"
     },
     {
-      "t": 1698,
+      "t": 1701,
       "title": "Calling an LLM from an MCP Tool"
     }
   ],

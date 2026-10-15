@@ -5,9 +5,9 @@
   ],
   "date": "2025-12-03",
   "event": "2025-12-03",
-  "youtubeId": "3-gEUKL9G-U",
+  "youtubeId": "jCdPEiqtbdc",
   "publishAt": "2027-01-14T11:00:00-06:00",
-  "duration": 784,
+  "duration": 803,
   "thumbnail": "/talks/lightning-agents-a-registry-pattern-for-claude-agent-sdk-agents.jpg",
   "topics": [
     "Security",
@@ -20,35 +20,35 @@
       "title": "Introduction to Lightning Agents"
     },
     {
-      "t": 23,
+      "t": 26,
       "title": "The Problem with Empirical Agents"
     },
     {
-      "t": 85,
+      "t": 88,
       "title": "Proposing the Factory Pattern"
     },
     {
-      "t": 156,
+      "t": 159,
       "title": "Voyager and Skill Registries"
     },
     {
-      "t": 259,
+      "t": 262,
       "title": "Pipeline and Registry Implementation"
     },
     {
-      "t": 333,
+      "t": 336,
       "title": "Agents Creating New Agents"
     },
     {
-      "t": 479,
+      "t": 482,
       "title": "Q&A on the Factory of Factories"
     },
     {
-      "t": 577,
+      "t": 580,
       "title": "Guardrails and Fault Tolerance"
     },
     {
-      "t": 746,
+      "t": 749,
       "title": "Logging Instead of Telemetry"
     }
   ],

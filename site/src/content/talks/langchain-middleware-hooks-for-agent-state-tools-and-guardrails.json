@@ -5,9 +5,9 @@
   ],
   "date": "2025-12-03",
   "event": "2025-12-03",
-  "youtubeId": "YosdFAwNjVs",
+  "youtubeId": "_wnZWipAa1M",
   "publishAt": "2027-01-14T11:00:00-06:00",
-  "duration": 1378,
+  "duration": 1397,
   "thumbnail": "/talks/langchain-middleware-hooks-for-agent-state-tools-and-guardrails.jpg",
   "topics": [
     "Security",
@@ -20,51 +20,51 @@
       "title": "Middleware Overview"
     },
     {
-      "t": 48,
+      "t": 51,
       "title": "From Chaining to Graphs"
     },
     {
-      "t": 141,
+      "t": 144,
       "title": "The Four Hooks"
     },
     {
-      "t": 177,
+      "t": 180,
       "title": "Before Agent"
     },
     {
-      "t": 275,
+      "t": 278,
       "title": "Before Model"
     },
     {
-      "t": 364,
+      "t": 367,
       "title": "After Model"
     },
     {
-      "t": 453,
+      "t": 456,
       "title": "After Agent"
     },
     {
-      "t": 513,
+      "t": 516,
       "title": "Best Practices"
     },
     {
-      "t": 595,
+      "t": 598,
       "title": "Q&A"
     },
     {
-      "t": 714,
+      "t": 717,
       "title": "Hook Ordering"
     },
     {
-      "t": 829,
+      "t": 832,
       "title": "Guardrails and PII Routing"
     },
     {
-      "t": 996,
+      "t": 999,
       "title": "Middleware vs LangGraph"
     },
     {
-      "t": 1237,
+      "t": 1240,
       "title": "Isolated Middleware"
     }
   ],

@@ -5,12 +5,12 @@
   "talks": {
     "karim-lalani": {
       "file": "karim-lalani-agents-on-edge",
-      "youtubeId": "lRiYtwyrCrM",
+      "youtubeId": "hrZuECoTE34",
       "publishAt": "2027-01-21T11:00:00-06:00"
     },
     "ryan-booth": {
       "file": "ryan-booth-langgraph-api-chains",
-      "youtubeId": "XL9h8sCQG3M",
+      "youtubeId": "sBML7VGhu54",
       "publishAt": "2027-01-21T11:00:00-06:00"
     }
   }

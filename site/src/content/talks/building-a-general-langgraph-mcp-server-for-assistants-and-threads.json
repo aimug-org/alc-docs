@@ -5,9 +5,9 @@
   ],
   "date": "2025-02-05",
   "event": "2025-02-05",
-  "youtubeId": "3wuMYmkftjA",
+  "youtubeId": "sYtqK7OOR_I",
   "publishAt": "2027-01-21T11:00:00-06:00",
-  "duration": 840,
+  "duration": 858,
   "thumbnail": "/talks/building-a-general-langgraph-mcp-server-for-assistants-and-threads.jpg",
   "topics": [
     "LangGraph",
@@ -21,27 +21,27 @@
       "title": "Intro and Context"
     },
     {
-      "t": 39,
+      "t": 42,
       "title": "LangGraph Overview"
     },
     {
-      "t": 137,
+      "t": 140,
       "title": "General MCP Concept"
     },
     {
-      "t": 272,
+      "t": 275,
       "title": "Assistants and Threads"
     },
     {
-      "t": 351,
+      "t": 354,
       "title": "MCP Tools Demo"
     },
     {
-      "t": 543,
+      "t": 546,
       "title": "Thread State Retrieval"
     },
     {
-      "t": 605,
+      "t": 608,
       "title": "Docker and Live Demo"
     }
   ],

@@ -5,27 +5,27 @@
   "talks": {
     "dmitri-iourovitski": {
       "file": "dmitri-iourovitski-langchain-middleware",
-      "youtubeId": "YosdFAwNjVs",
+      "youtubeId": "_wnZWipAa1M",
       "publishAt": "2027-01-14T11:00:00-06:00"
     },
     "nate-little": {
       "file": "nate-little-claude-code-skills",
-      "youtubeId": "zUS3M0qQYWc",
+      "youtubeId": "84FaNRk3lFA",
       "publishAt": "2027-01-14T11:00:00-06:00"
     },
     "michael-golden": {
       "file": "michael-golden-claude-agent-sdk-cloudflare",
-      "youtubeId": "-8Qp-dbYn60",
+      "youtubeId": "-Nw9VfLvExQ",
       "publishAt": "2027-01-14T11:00:00-06:00"
     },
     "collier-king": {
       "file": "collier-king-stagehand",
-      "youtubeId": "5QvUP2RNR2Q",
+      "youtubeId": "uJNDtla9yL8",
       "publishAt": "2027-01-14T11:00:00-06:00"
     },
     "riccardo-pirruccio": {
       "file": "riccardo-pirruccio-lightning-agents",
-      "youtubeId": "3-gEUKL9G-U",
+      "youtubeId": "jCdPEiqtbdc",
       "publishAt": "2027-01-14T11:00:00-06:00"
     }
   }

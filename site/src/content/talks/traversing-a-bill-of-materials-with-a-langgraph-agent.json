@@ -5,9 +5,9 @@
   ],
   "date": "2024-02-21",
   "event": "2024-02-21",
-  "youtubeId": "rWhyM-1gtLM",
+  "youtubeId": "cc7dfxfzRuI",
   "publishAt": "2027-02-04T11:00:00-06:00",
-  "duration": 981,
+  "duration": 1000,
   "thumbnail": "/talks/traversing-a-bill-of-materials-with-a-langgraph-agent.jpg",
   "topics": [
     "Routing",
@@ -21,39 +21,39 @@
       "title": "BOM Data as a Graph"
     },
     {
-      "t": 106,
+      "t": 109,
       "title": "Agent Collaborator Pattern"
     },
     {
-      "t": 205,
+      "t": 208,
       "title": "The Three Agents"
     },
     {
-      "t": 318,
+      "t": 321,
       "title": "Custom Tools and the State Problem"
     },
     {
-      "t": 393,
+      "t": 396,
       "title": "Demo: The BOM Data"
     },
     {
-      "t": 483,
+      "t": 486,
       "title": "Querying the Graph"
     },
     {
-      "t": 558,
+      "t": 561,
       "title": "Lessons Learned"
     },
     {
-      "t": 698,
+      "t": 701,
       "title": "Prompting and Schemas Discussion"
     },
     {
-      "t": 867,
+      "t": 870,
       "title": "What He Would Change in the Routing"
     },
     {
-      "t": 939,
+      "t": 942,
       "title": "Code Structure Recap"
     }
   ],

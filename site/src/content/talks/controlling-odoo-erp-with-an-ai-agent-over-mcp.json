@@ -5,9 +5,9 @@
   ],
   "date": "2025-05-07",
   "event": "2025-05-07",
-  "youtubeId": "KcjidAnCGAA",
+  "youtubeId": "ju71yeijQF4",
   "publishAt": "2027-01-07T11:00:00-06:00",
-  "duration": 593,
+  "duration": 611,
   "thumbnail": "/talks/controlling-odoo-erp-with-an-ai-agent-over-mcp.jpg",
   "topics": [
     "MCP",
@@ -20,23 +20,23 @@
       "title": "Intro and Motivation"
     },
     {
-      "t": 81,
+      "t": 84,
       "title": "Agents and Tools"
     },
     {
-      "t": 132,
+      "t": 135,
       "title": "ERP Demo"
     },
     {
-      "t": 252,
+      "t": 255,
       "title": "MCP Assets and Code"
     },
     {
-      "t": 441,
+      "t": 444,
       "title": "Business Use Cases"
     },
     {
-      "t": 501,
+      "t": 504,
       "title": "Questions on Planning and Limits"
     }
   ],
