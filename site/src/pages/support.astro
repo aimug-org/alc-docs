@@ -27,7 +27,7 @@ const once = [
 ];
 // Sponsors fund something people can see, never the group (Colin, 2026-10-10: "I just don't want to be owned by anyone").
 const sponsorOffers = [
-  { name: 'Feed the room', price: '$500', per: 'night', gets: ['Better food and drinks for one meetup', "Your logo on that night's slides", 'A thank-you from the stage', 'A mention in the recap'], cta: { label: 'Sponsor a night', interest: 'meetup' } },
+  { name: 'Feed the room', price: '$500', per: 'night', gets: ['Better food and drinks for one meetup', "Your logo on that night's slides", 'A thank-you from the stage', 'A mention in the recap'], cta: { label: 'Sponsor a night', interest: 'meetup' }, pay: 'https://buy.stripe.com/6oUdR9cTPbkB0AXeWH57W0e' },
   { name: 'Back a Hacky Hour', price: "Let's talk", gets: ['Food, drinks or API credits for a Hacky Hour, our casual build-and-demo nights', 'Your name on what you fund, in the room and in the recap'], cta: { label: 'Back a Hacky Hour', interest: 'hacky-hour' } },
   // Colin, 2026-10-19: projects apply; leadership evaluates, and members choose to take one on ("we are community led").
   { name: 'Bring your project to a hackathon', price: 'By application', gets: [
@@ -128,7 +128,10 @@ const btn2 = 'inline-flex min-h-[48px] items-center justify-center rounded-full 
             <p class="m-0 font-mono text-sm tracking-[0.12em] text-muted uppercase">{t.name}</p>
             <p class="m-0 font-display text-[44px] leading-none">{t.price}{t.per && <span class="font-sans text-lg text-soft"> / {t.per}</span>}</p>
             <ul class="m-0 flex list-disc flex-col gap-1.5 pl-5 text-soft marker:text-gold">{t.gets.map((g) => <li>{g}</li>)}</ul>
-            <a href={`/support/?interest=${t.cta.interest}#sponsor-form`} class:list={[btn2, 'mt-auto self-start text-base']}>{t.cta.label}</a>
+            <div class="mt-auto flex flex-wrap gap-3">
+              {t.pay && <a href={t.pay} class:list={[btn, 'text-base']}>Pay {t.price} now</a>}
+              <a href={`/support/?interest=${t.cta.interest}#sponsor-form`} class:list={[btn2, 'text-base']}>{t.cta.label}</a>
+            </div>
           </li>
         ))}
         <li class="flex flex-col gap-3 rounded-[18px] border-2 border-gold bg-deep p-6">
