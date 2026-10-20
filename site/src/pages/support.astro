@@ -3,6 +3,8 @@ import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import { publicTalks, fmtDate } from '../lib/data';
 import { stats, links } from '../data/site';
+import { ui } from '../lib/speak';
+import { SPONSOR_AS, INTERESTS } from '../../functions/_lib/sponsor.js';
 import room from '../assets/photos/room-sep2025.jpg';
 
 const talks = (await publicTalks()).length;
@@ -25,16 +27,23 @@ const once = [
 ];
 // Sponsors fund something people can see, never the group (Colin, 2026-10-10: "I just don't want to be owned by anyone").
 const sponsorOffers = [
-  { name: 'Feed the room', price: '$500', per: 'night', gets: ['Better food and drinks for one meetup', "Your logo on that night's slides", 'A thank-you from the stage', 'A mention in the recap'] },
-  { name: 'Back a hackathon or a series', price: "Let's talk", gets: ['Prizes, food and a room for a build day, or a run of special nights', 'Your name on what you fund, in the room and in the recap'] },
+  { name: 'Feed the room', price: '$500', per: 'night', gets: ['Better food and drinks for one meetup', "Your logo on that night's slides", 'A thank-you from the stage', 'A mention in the recap'], cta: { label: 'Sponsor a night', interest: 'meetup' } },
+  { name: 'Back a Hacky Hour', price: "Let's talk", gets: ['Food, drinks or API credits for a Hacky Hour, our casual build-and-demo nights', 'Your name on what you fund, in the room and in the recap'], cta: { label: 'Back a Hacky Hour', interest: 'hacky-hour' } },
+  // Colin, 2026-10-19: projects apply; leadership evaluates, and members choose to take one on ("we are community led").
+  { name: 'Bring your project to a hackathon', price: 'By application', gets: [
+    'AIMUG co-sponsors larger hackathons with other AI communities and field teams, in Central Texas and around the world.',
+    "Apply with your project. AIMUG's leadership decides whether it's interesting, aligned and valuable to the community.",
+    "We're community led, so your project has to prove its value to senior engineering leaders across Texas.",
+    'If it does, and our members choose to take it on, we help get it featured as a track or a bug bounty and put a full team on building with it.',
+  ], cta: { label: 'Apply with your project', interest: 'hackathon' } },
 ];
 const independence = [
   'Sponsors fund a night or an event, never the group.',
   'No sponsor gets a talk slot or a say in the lineup.',
   'No exclusive deals.',
   'We can say no to any sponsor.',
+  "A sponsor's project gets a hackathon team only when our members choose it.",
 ];
-const sponsorMail = `mailto:sponsors@aimug.org?subject=${encodeURIComponent('Sponsoring AIMUG')}&body=${encodeURIComponent('Company:\nWhat you would like to support:\nBudget:\n')}`;
 
 const h2 = 'm-0 font-display text-[clamp(40px,5vw,60px)] leading-none font-normal uppercase';
 const btn = 'inline-flex min-h-[48px] items-center justify-center rounded-full bg-gold px-6 text-lg font-bold text-ink no-underline hover:bg-gold-hi hover:text-ink';
@@ -51,7 +60,7 @@ const btn2 = 'inline-flex min-h-[48px] items-center justify-center rounded-full 
           <p class="m-0 text-xl text-[#dbe6ee]">AIMUG is free. No tickets, no paywalls, and every talk goes up on YouTube. Nobody can buy a talk slot: the lineup is picked on merit. Support from the people who come is what keeps it that way.</p>
           <div class="flex flex-wrap gap-3">
             <a href="#monthly" class={btn}>Give monthly</a>
-            <a href="#sponsor" class={btn2}>Sponsor a meetup</a>
+            <a href="#sponsor" class={btn2}>Sponsor an event</a>
           </div>
         </div>
       </div>
@@ -96,8 +105,8 @@ const btn2 = 'inline-flex min-h-[48px] items-center justify-center rounded-full 
 
     <section id="sponsor" aria-labelledby="sponsor-h" class="flex scroll-mt-4 flex-col gap-6">
       <div class="flex max-w-[760px] flex-col gap-3">
-        <h2 id="sponsor-h" class={h2}>Sponsor a meetup</h2>
-        <p class="m-0 text-lg text-soft">Reach the people building with AI in Austin, in the room and on YouTube. Sponsors make it better: better food, more events, hackathons. They never buy a talk, and that's why people trust it.</p>
+        <h2 id="sponsor-h" class={h2}>Sponsor an event</h2>
+        <p class="m-0 text-lg text-soft">Sponsor as yourself or as your company, and reach the people building with AI in Austin, in the room and on YouTube. Sponsors make it better: better food, more events, hackathons. They never buy a talk, and that's why people trust it.</p>
       </div>
       <dl aria-label={`Who you reach, counted ${fmtDate(new Date(stats.asOf), { weekday: undefined, year: 'numeric' })}`} class="m-0 grid grid-cols-2 gap-4 sm:grid-cols-4">
         {[
@@ -113,12 +122,13 @@ const btn2 = 'inline-flex min-h-[48px] items-center justify-center rounded-full 
         ))}
       </dl>
       <p class="m-0 -mt-2 text-sm text-muted">Counted {fmtDate(new Date(stats.asOf), { weekday: undefined, year: 'numeric' })}.</p>
-      <ul class="m-0 grid list-none grid-cols-[repeat(auto-fit,minmax(min(100%,260px),1fr))] gap-4 p-0">
+      <ul class="m-0 grid list-none grid-cols-1 gap-4 p-0 sm:grid-cols-2">
         {sponsorOffers.map((t) => (
           <li class="flex flex-col gap-3 rounded-[18px] border border-line bg-panel p-6">
             <p class="m-0 font-mono text-sm tracking-[0.12em] text-muted uppercase">{t.name}</p>
             <p class="m-0 font-display text-[44px] leading-none">{t.price}{t.per && <span class="font-sans text-lg text-soft"> / {t.per}</span>}</p>
             <ul class="m-0 flex list-disc flex-col gap-1.5 pl-5 text-soft marker:text-gold">{t.gets.map((g) => <li>{g}</li>)}</ul>
+            <a href={`/support/?interest=${t.cta.interest}#sponsor-form`} class:list={[btn2, 'mt-auto self-start text-base']}>{t.cta.label}</a>
           </li>
         ))}
         <li class="flex flex-col gap-3 rounded-[18px] border-2 border-gold bg-deep p-6">
@@ -126,10 +136,69 @@ const btn2 = 'inline-flex min-h-[48px] items-center justify-center rounded-full 
           <ul class="m-0 flex list-disc flex-col gap-1.5 pl-5 text-text marker:text-gold">{independence.map((r) => <li>{r}</li>)}</ul>
         </li>
       </ul>
-      <div class="flex flex-wrap items-center gap-x-6 gap-y-3">
-        <a href={sponsorMail} class={btn}>Email sponsors@aimug.org</a>
-        <p class="m-0 max-w-[560px] text-soft">Tell us your company, what you'd like to support and your budget. Venue space, food and drinks, API credits and AV gear help as much as money.</p>
-      </div>
+      {/* Saved by /api/sponsor (functions/api/sponsor.js), which emails the organizers. Without JS it's a plain form post. */}
+      <form id="sponsor-form" action="/api/sponsor" method="post" class="flex max-w-[860px] scroll-mt-4 flex-col gap-5">
+        <h3 class="m-0 text-[26px] font-bold">Tell us what you'd like to sponsor</h3>
+        <div class={ui.panel}>
+          <fieldset class="m-0 min-w-0 p-0">
+            <legend class={`${ui.label} mb-1.5 p-0`}>Who's sponsoring?</legend>
+            <div class="grid gap-3 sm:grid-cols-2">
+              {Object.entries(SPONSOR_AS).map(([v, l]) => (
+                <label class="flex min-h-14 cursor-pointer items-center gap-3 rounded-xl border-2 border-edge bg-ink px-4 py-3 has-checked:border-gold"><input type="radio" name="sponsor_as" value={v} required class={ui.box} />{l}</label>
+              ))}
+            </div>
+          </fieldset>
+          <div class={ui.field}>
+            <label for="so-interest" class={ui.label}>What would you like to support?</label>
+            <select id="so-interest" name="interest" required class={`${ui.input} min-h-[52px] cursor-pointer`}>
+              <option value="" disabled selected>Pick one</option>
+              {Object.entries(INTERESTS).map(([v, l]) => <option value={v}>{l}</option>)}
+            </select>
+          </div>
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div class={ui.field}>
+              <label for="so-name" class={ui.label}>Name</label>
+              <input id="so-name" name="name" type="text" required maxlength="120" autocomplete="name" class={ui.input} />
+            </div>
+            <div class={ui.field}>
+              <label for="so-email" class={ui.label}>Email</label>
+              <input id="so-email" name="email" type="email" required maxlength="254" autocomplete="email" class={ui.input} />
+            </div>
+            <div class={ui.field}>
+              <label for="so-company" class={ui.label}>Company <span class="font-normal text-muted">(if your company is sponsoring)</span></label>
+              <input id="so-company" name="company" type="text" maxlength="120" autocomplete="organization" class={ui.input} />
+            </div>
+            <div class={ui.field}>
+              <label for="so-budget" class={ui.label}>Budget <span class="font-normal text-muted">(optional)</span></label>
+              <input id="so-budget" name="budget" type="text" maxlength="80" class={ui.input} />
+            </div>
+          </div>
+          <div class={ui.field}>
+            <label for="so-message" class={ui.label}>What do you have in mind?</label>
+            <textarea id="so-message" name="message" required minlength="10" maxlength="2000" rows="5" aria-describedby="so-message-hint" class={ui.input}></textarea>
+            <p id="so-message-hint" class={ui.hint}>What you'd like to fund or bring, and when. Venue space, food and drinks, API credits and AV gear help as much as money. For a hackathon project: what it does, why builders would care, and links.</p>
+          </div>
+          {/* Honeypot and page-load time: /api/sponsor rejects a filled honeypot or a submit under 3 s. */}
+          <div class="absolute -left-[9999px]" aria-hidden="true">
+            <label for="so-website">Leave this empty</label>
+            <input id="so-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+          <input type="hidden" name="t" value={Date.now()} />
+        </div>
+        <div class="flex flex-wrap items-center gap-x-6 gap-y-3">
+          <button type="submit" class={ui.gold}>Send</button>
+          <p class="m-0 max-w-[560px] text-soft">An organizer replies by email. Rather write? <a href="mailto:sponsors@aimug.org">sponsors@aimug.org</a></p>
+        </div>
+      </form>
+      <script is:inline>
+        // A fresh fill-time stamp, and ?interest=<key> from a sponsor card picks that option.
+        (() => {
+          const f = document.getElementById('sponsor-form');
+          f.elements.t.value = String(Date.now());
+          const want = new URLSearchParams(location.search).get('interest');
+          if (want && [...f.elements.interest.options].some((o) => o.value === want)) f.elements.interest.value = want;
+        })();
+      </script>
     </section>
 
     <section aria-labelledby="thanks-h" class="flex flex-col gap-5">

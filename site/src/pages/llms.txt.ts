@@ -18,7 +18,7 @@ const head = `# AIMUG
 ## Optional
 
 - [Community](https://aimug.org/community/): Discord, newsletter and other ways to connect
-- [Support](https://aimug.org/support/): monthly support, one-time gifts and sponsorship
+- [Support](https://aimug.org/support/): monthly support, one-time gifts, and sponsorship of meetups, Hacky Hours and hackathons
 - [Code of conduct](https://aimug.org/code-of-conduct/)
 `;
 

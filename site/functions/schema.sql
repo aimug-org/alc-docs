@@ -1,6 +1,8 @@
--- Signed speaker releases: new pitches from /speak/ and release-only sign-offs from /speak/release/. One row per submission.
+-- The aimug-speakers D1 database: signed speaker releases (submissions) and sponsorship inquiries (sponsor_inquiries).
 -- New database: wrangler d1 execute aimug-speakers --remote --file functions/schema.sql (or --local)
 -- A database made from an older copy of this file: also run the files in functions/migrations/ in order.
+
+-- Signed speaker releases: new pitches from /speak/ and release-only sign-offs from /speak/release/. One row per submission.
 CREATE TABLE IF NOT EXISTS submissions (
   id TEXT PRIMARY KEY,                 -- random UUID, also the speaker's release id
   created_at TEXT NOT NULL,            -- ISO 8601 UTC, when they signed
@@ -30,3 +32,22 @@ CREATE TABLE IF NOT EXISTS submissions (
 CREATE INDEX IF NOT EXISTS submissions_email ON submissions (email);
 CREATE INDEX IF NOT EXISTS submissions_created_at ON submissions (created_at);
 CREATE INDEX IF NOT EXISTS submissions_preferred_event ON submissions (preferred_event);
+
+-- Sponsorship inquiries from the form on /support/, from people and companies. One row per inquiry.
+CREATE TABLE IF NOT EXISTS sponsor_inquiries (
+  id TEXT PRIMARY KEY,                 -- random UUID
+  created_at TEXT NOT NULL,            -- ISO 8601 UTC
+  sponsor_as TEXT NOT NULL CHECK (sponsor_as IN ('individual', 'company')),
+  interest TEXT NOT NULL,              -- a key of INTERESTS in functions/_lib/sponsor.js
+  name TEXT NOT NULL,
+  email TEXT NOT NULL,
+  company TEXT,                        -- required when sponsor_as = 'company'
+  budget TEXT,
+  message TEXT NOT NULL,
+  ip_hash TEXT NOT NULL,               -- SHA-256 of IP_SALT + client IP; the raw IP is never stored
+  user_agent TEXT,
+  status TEXT NOT NULL DEFAULT 'new',  -- new, then whatever the organizers set (talking, paid, declined, ...)
+  emailed INTEGER NOT NULL DEFAULT 0   -- 0 not sent or failed, 1 organizer notice and sender copy sent, 2 no email configured
+);
+
+CREATE INDEX IF NOT EXISTS sponsor_inquiries_created_at ON sponsor_inquiries (created_at);
