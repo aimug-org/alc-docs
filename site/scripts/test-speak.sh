@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# End-to-end check of /speak/, /speak/release/ and /api/speak against fresh local D1 databases: build, apply the
+# End-to-end check of /speak/, /speak/release/, /api/speak and the /support/ sponsor form (/api/sponsor) against fresh local D1 databases: build, apply the
 # schema, run `wrangler pages dev dist` three ways, curl each case, print a pass/fail table, stop everything.
 #   A: full config, with email going to a local mock of the Resend API (most cases)
 #   B: no email configured (emailed = 2, and the concurrency case on a fresh rate-limit budget)
@@ -76,7 +76,7 @@ body() {
 }
 # post BODY [curl args...] -> CODE, RESP, and the response headers in $STATE/h. CT overrides the Content-Type.
 post() {
-  RESP=$(curl -s -D "$STATE/h" -o - -w '\n%{http_code}' -H "Content-Type: ${CT:-application/json}" "${@:2}" --data-binary "$1" "${BASE:-$URL}/api/speak") || true
+  RESP=$(curl -s -D "$STATE/h" -o - -w '\n%{http_code}' -H "Content-Type: ${CT:-application/json}" "${@:2}" --data-binary "$1" "${BASE:-$URL}${EP:-/api/speak}") || true
   CODE=${RESP##*$'\n'}; RESP=${RESP%$'\n'*}
 }
 says() { [[ "$(jq -r '.error // empty' <<<"$RESP" 2>/dev/null)" == *"$1"* ]]; } # the error names the right problem
@@ -233,6 +233,56 @@ gate has-release
 record "release gate, all lineup released" "exit 0" "exit $CODE" "$([ "$CODE" = 0 ] && echo 1)"
 gate "has-release, no-release"
 record "release gate, lineup speaker unreleased" "exit 1" "exit $CODE" "$([ "$CODE" = 1 ] && [[ "$GATE_OUT" == *"2099-01-05: no-release"* ]] && echo 1)"
+
+# 13. The /support/ sponsor form and /api/sponsor (table sponsor_inquiries, its own rate-limit budget).
+scount() { query "SELECT COUNT(*) FROM sponsor_inquiries WHERE email = '$1'"; }
+sbody() {
+  local o=${1:-'{}'}
+  jq -nc --argjson t "$(( $(ms) - 10000 ))" "{
+    sponsor_as: \"company\", interest: \"meetup\", name: \"Test Sponsor\", email: \"sponsor1@example.com\", company: \"Example Co\",
+    budget: \"500 dollars\", message: \"We would like to feed the room in December.\", website: \"\", t: \$t
+  } + $o"
+}
+grep -qF 'action="/api/sponsor"' dist/support/index.html && grep -qF 'value="hackathon"' dist/support/index.html \
+  && grep -qF '/support/?interest=hackathon#sponsor-form' dist/support/index.html \
+  && record "support page: form, choices, card links" "present" "present" 1 || record "support page: form, choices, card links" "present" "missing" 0
+EP=/api/sponsor post "$(sbody)" -H "Origin: $URL"
+SID=$(jq -r '.id // empty' <<<"$RESP")
+record "sponsor: valid company inquiry" "200 ok+id" "$CODE ${SID:0:8}" "$([ "$CODE" = 200 ] && [ -n "$SID" ] && echo 1)"
+IFS=$'\t' read -r SAS SINT SCO SSTAT < <(query "SELECT sponsor_as, interest, company, status FROM sponsor_inquiries WHERE id = '$SID'") || true
+record "  row as/interest/company/status" "company/meetup/Example Co/new" "$SAS/$SINT/$SCO/$SSTAT" "$([ "$SAS/$SINT/$SCO/$SSTAT" = "company/meetup/Example Co/new" ] && echo 1)"
+E=$(for _ in $(seq 1 20); do v=$(query "SELECT emailed FROM sponsor_inquiries WHERE id = '$SID'"); [ "$v" = 1 ] && break; sleep 0.25; done; echo "$v")
+SMAIL=$(grep -F 'sponsor1@example.com' "$STATE/mail.log" || true)
+SCOPY=$(jq -c 'select(.to == ["sponsor1@example.com"])' <<<"$SMAIL" 2>/dev/null || true)
+SNOTE=$(jq -c 'select(.to == ["organizers@example.com"])' <<<"$SMAIL" 2>/dev/null || true)
+record "  emails: sender copy + organizer notice" "emailed=1, 2 messages" "emailed=$E, $(grep -c . <<<"$SMAIL") messages" "$([ "$E" = 1 ] && [ "$(grep -c . <<<"$SMAIL")" = 2 ] && echo 1)"
+record "  notice has the message, copy does not" "notice yes, copy no" "notice $(grep -qF 'feed the room in December' <<<"$SNOTE" && echo yes || echo no), copy $(grep -qF 'feed the room in December' <<<"$SCOPY" && echo yes || echo no)" \
+  "$(grep -qF 'feed the room in December' <<<"$SNOTE" && ! grep -qF 'feed the room in December' <<<"$SCOPY" && echo 1)"
+record "  reply_to: copy -> inbox, notice -> sender" "sponsors@aimug.org, sponsor1@" "$(jq -r .reply_to <<<"$SCOPY"), $(jq -r .reply_to <<<"$SNOTE" | cut -d@ -f1)@" \
+  "$([ "$(jq -r .reply_to <<<"$SCOPY")" = sponsors@aimug.org ] && [ "$(jq -r .reply_to <<<"$SNOTE")" = sponsor1@example.com ] && echo 1)"
+EP=/api/sponsor post "$(sbody '{email:"noco@example.com", company:""}')"
+record "sponsor: company without a company name" "400" "$CODE" "$([ "$CODE" = 400 ] && says 'Company name' && [ "$(scount noco@example.com)" = 0 ] && echo 1)"
+EP=/api/sponsor post "$(sbody '{email:"badint@example.com", interest:"constructor"}')"
+record "sponsor: interest=constructor" "400" "$CODE" "$([ "$CODE" = 400 ] && says 'support' && [ "$(scount badint@example.com)" = 0 ] && echo 1)"
+EP=/api/sponsor post "$(sbody '{email:"sbot@example.com", website:"http://spam.example"}')"
+record "sponsor: honeypot" "200, no row" "$CODE, rows=$(scount sbot@example.com)" "$([ "$CODE" = 200 ] && [ "$(scount sbot@example.com)" = 0 ] && echo 1)"
+EP=/api/sponsor post "$(sbody '{email:"sxsite@example.com"}')" -H 'Origin: https://evil.example'
+record "sponsor: cross-site Origin" "403" "$CODE" "$([ "$CODE" = 403 ] && [ "$(scount sxsite@example.com)" = 0 ] && echo 1)"
+LOC=$(curl -s -D "$STATE/h" -o /dev/null -w '%{http_code} %{redirect_url}' --data-urlencode "sponsor_as=individual" --data-urlencode "interest=hackathon" \
+  --data-urlencode "name=Solo Sponsor" --data-urlencode "email=solo@example.com" --data-urlencode "message=An agent eval harness for the next hackathon." \
+  --data-urlencode "website=" --data-urlencode "t=$(( $(ms) - 60000 ))" "$URL/api/sponsor") || true
+record "sponsor: individual form post (no JS)" "303 /support/thanks/" "${LOC/$URL/}" \
+  "$([[ "$LOC" == "303 $URL/support/thanks/" ]] && curl -fs -o /dev/null "$URL/support/thanks/" && [ "$(scount solo@example.com)" = 1 ] && secure && echo 1)"
+EP=/api/sponsor post "$(sbody '{email:"sponsor3@example.com"}')"
+EP=/api/sponsor post "$(sbody '{email:"sponsor4@example.com"}')"
+record "sponsor: 4th inquiry in 10 minutes" "429" "$CODE" "$([ "$CODE" = 429 ] && says 'Too many' && [ "$(scount sponsor3@example.com)" = 1 ] && [ "$(scount sponsor4@example.com)" = 0 ] && echo 1)"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' "$URL/api/sponsor")
+record "sponsor: GET /api/sponsor" "405" "$CODE" "$([ "$CODE" = 405 ] && echo 1)"
+BASE=$URL_C EP=/api/sponsor post "$(sbody '{email:"snosalt@example.com"}')"
+record "sponsor: no IP_SALT (server C)" "500 Not configured" "$CODE $(jq -r '.error // empty' <<<"$RESP")" "$([ "$CODE" = 500 ] && says 'Not configured' && echo 1)"
+LIST=$(bash scripts/sponsors.sh --persist-to "$STATE/a" 2>/dev/null || true)
+record "sponsors.sh lists new inquiries" "sponsor1@, solo@, sponsor3@" "$(grep -o '[a-z0-9]*@example.com' <<<"$LIST" | sort -u | tr '\n' ' ')" \
+  "$(grep -qF sponsor1@example.com <<<"$LIST" && grep -qF solo@example.com <<<"$LIST" && grep -qF sponsor3@example.com <<<"$LIST" && echo 1)"
 
 printf '\n%-44s %-32s %-32s %s\n' CASE EXPECTED ACTUAL RESULT
 printf '%s\n' "${ROWS[@]}"
