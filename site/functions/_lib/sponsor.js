@@ -3,8 +3,9 @@ export const SPONSOR_AS = { individual: 'Me, as an individual', company: 'My com
 
 export const INTERESTS = {
   meetup: 'Feed the room at a meetup',
-  'hacky-hour': 'Back a Hacky Hour',
-  hackathon: 'Bring your project to a hackathon',
+  quarter: 'Feed the room all quarter',
+  event: 'Sponsor an event or a Hacky Hour',
+  hackathon: 'Sponsor at a hackathon: a track, a bounty or your project',
   'in-kind': 'Give in kind: venue, food, API credits or AV gear',
   other: 'Something else',
 };

@@ -28,14 +28,16 @@ const once = [
 // Sponsors fund something people can see, never the group (Colin, 2026-10-10: "I just don't want to be owned by anyone").
 const sponsorOffers = [
   { name: 'Feed the room', price: '$500', per: 'night', gets: ['Better food and drinks for one meetup', "Your logo on that night's slides", 'A thank-you from the stage', 'A mention in the recap'], cta: { label: 'Sponsor a night', interest: 'meetup' }, pay: 'https://buy.stripe.com/6oUdR9cTPbkB0AXeWH57W0e' },
-  { name: 'Back a Hacky Hour', price: "Let's talk", gets: ['Food, drinks or API credits for a Hacky Hour, our casual build-and-demo nights', 'Your name on what you fund, in the room and in the recap'], cta: { label: 'Back a Hacky Hour', interest: 'hacky-hour' } },
-  // Colin, 2026-10-19: projects apply; leadership evaluates, and members choose to take one on ("we are community led").
-  { name: 'Bring your project to a hackathon', price: 'By application', gets: [
+  // Colin, 2026-10-20: three nights plus a funded Hacky Hour; it starts with a conversation, since it commits AIMUG to a Hacky Hour that quarter.
+  { name: 'Feed the room all quarter', price: '$1,750', per: 'quarter', gets: ['Better food and drinks at all three meetups that quarter', "Your logo on each night's slides, a thank-you from the stage and a mention in each recap", 'One Hacky Hour that quarter, funded by you', 'Your name on our Thanks list for the quarter'], cta: { label: "Let's talk first", interest: 'quarter' } },
+  { name: 'Sponsor an event', price: "Let's talk", gets: ['A Hacky Hour, our casual build-and-demo nights, or a bigger night: a mixer, a showcase or a build day', 'Food, drinks, API credits or the venue', 'Your name on what you fund, in the room and in the recap'], cta: { label: 'Sponsor an event', interest: 'event' } },
+  // Colin, 2026-10-19: projects apply; leadership evaluates, and members choose to take one on ("we are community led"). 2026-10-20: tracks and bounties too.
+  { name: 'Sponsor at a hackathon', price: 'By application', gets: [
     'AIMUG co-sponsors larger hackathons with other AI communities and field teams, in Central Texas and around the world.',
-    "Apply with your project. AIMUG's leadership decides whether it's interesting, aligned and valuable to the community.",
-    "We're community led, so your project has to prove its value to senior engineering leaders across Texas.",
-    'If it does, and our members choose to take it on, we help get it featured as a track or a bug bounty and put a full team on building with it.',
-  ], cta: { label: 'Apply with your project', interest: 'hackathon' } },
+    'Sponsor a track, put up a bounty, or bring your project for a full team to build with.',
+    "Apply first. AIMUG's leadership decides whether it's interesting, aligned and valuable to the community.",
+    "We're community led, so it has to prove its value to senior engineering leaders across Texas, and our members choose what they take on.",
+  ], cta: { label: 'Apply to sponsor', interest: 'hackathon' } },
 ];
 const independence = [
   'Sponsors fund a night or an event, never the group.',
@@ -134,7 +136,7 @@ const btn2 = 'inline-flex min-h-[48px] items-center justify-center rounded-full 
             </div>
           </li>
         ))}
-        <li class="flex flex-col gap-3 rounded-[18px] border-2 border-gold bg-deep p-6">
+        <li class="flex flex-col gap-3 rounded-[18px] border-2 border-gold bg-deep p-6 sm:col-span-2">
           <p class="m-0 font-mono text-sm tracking-[0.12em] text-gold uppercase">How we stay independent</p>
           <ul class="m-0 flex list-disc flex-col gap-1.5 pl-5 text-text marker:text-gold">{independence.map((r) => <li>{r}</li>)}</ul>
         </li>
