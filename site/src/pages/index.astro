@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import { getCollection, getEntries } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import TalkCard from '../components/TalkCard.astro';
+import Thanks from '../components/Thanks.astro';
 import { eventLd as buildEventLd, publicTalks, upcomingTalks, nextEvent, fmtDay, fmtDate, fmtTime } from '../lib/data';
 import { stats, links, channels } from '../data/site';
 import Icon from '../components/Icon.astro';
@@ -191,6 +192,11 @@ const countdown = days < 0 ? '' : days === 0 ? 'Tonight' : days === 1 ? 'In 1 da
         <a href={href} class="inline-flex min-h-[44px] items-center self-start font-bold no-underline">{cta}</a>
       </div>
     ))}
+  </section>
+
+  <section aria-labelledby="thanks-h" class="mx-auto flex max-w-[1240px] flex-col gap-5 px-4 pb-14 sm:px-8">
+    <h2 id="thanks-h" class={h2s}>Thanks to</h2>
+    <Thanks />
   </section>
 
   <section aria-label="Stay in touch" class="mx-auto grid max-w-[1240px] grid-cols-[repeat(auto-fit,minmax(min(100%,460px),1fr))] gap-6 px-4 pb-16 sm:px-8">
