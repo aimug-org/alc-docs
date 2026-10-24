@@ -2,3 +2,4 @@
 austin_langchain
 .env
 .worktrees/
+node_modules/
