@@ -361,11 +361,11 @@ johnvanlowe:
   image_url: https://ui-avatars.com/api/?name=J+V&background=0D8ABC&color=fff&size=400
   page: true
   description: 'Security Operations specialist at Austin LangChain AIMUG, focusing on agentic SOC operations, blue/red team automation, and AI-driven cyber defense.
-  
-  Key Contributions:
-  - Presentations on Autonomous SOC Operations for Blue/Red Teams
-  - Demonstrations of VIGIL, PentAGI, and other autonomous agent frameworks
-  - Research into agent-based offensive and defensive cyber operations'
+
+    Key Contributions:
+    - Presentations on Autonomous SOC Operations for Blue/Red Teams
+    - Demonstrations of VIGIL, PentAGI, and other autonomous agent frameworks
+    - Research into agent-based offensive and defensive cyber operations'
   socials:
     github: johnvanlowe
     linkedin: johnvl
