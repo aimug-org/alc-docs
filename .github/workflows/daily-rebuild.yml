@@ -1,5 +1,7 @@
 name: Daily site rebuild
 
+permissions: {}
+
 # The site is static: premieres go live, the "next meetup" rolls over and dated recaps appear only when it rebuilds.
 # This asks Cloudflare Pages to rebuild main once a day, after the 10:00 AM Central premiere slot.
 on:

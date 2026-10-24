@@ -17,7 +17,7 @@
     "@fontsource/anton": "5.3.0",
     "@fontsource/barlow": "5.3.0",
     "@fontsource/jetbrains-mono": "5.3.0",
-    "astro": "7.3.5"
+    "astro": "7.4.2"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.10",
