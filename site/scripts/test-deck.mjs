@@ -32,9 +32,19 @@ for (const [who, title] of talks) {
   assert(nov.includes(title), `2026-11-02: no "${title}"`);
 }
 for (const s of ["Tonight's talks", 'Thank you', 'The Tavern', 'RGC 3000', 'Be cool to each other']) assert(nov.includes(s), `2026-11-02: no "${s}"`);
-// Colin, 2026-11-02: the thanks come at the beginning, right after the welcome.
-const headings = [...nov.matchAll(/<section[^>]*>[\s\S]*?<h[12][^>]*>([^<]+)</g)].map((m) => m[1].trim());
-assert.equal(headings[1], 'Thank you', `2026-11-02: second slide is "${headings[1]}", not the thanks`);
+// Flow (EBI round 1): an opening, one "up next" slide per talk, then a closing. Thanks right after the welcome
+// (Colin, 2026-11-02); the lineup ends the opening.
+const order = (html) => [...html.matchAll(/<section[^>]*data-slide="([a-z]+)"/g)].map((m) => m[1]);
+assert.deepEqual(order(nov), ['welcome', 'thanks', 'who', 'conduct', 'tonight', 'lineup', 'talk', 'talk', 'talk', 'talk', 'talk', 'next', 'where', 'afterparty', 'closing'], `2026-11-02 order: ${order(nov)}`);
+assert.deepEqual(order(dec), ['welcome', 'thanks', 'who', 'conduct', 'where', 'closing'], `2026-12-07 order: ${order(dec)}`);
+// The lineup shows each talk's rough start, 15 minutes apart from 6:30 PM.
+const bill = nov.slice(nov.indexOf('class="bill"'), nov.indexOf('</ol>', nov.indexOf('class="bill"')));
+assert.deepEqual([...bill.matchAll(/(\d{1,2}:\d{2})/g)].map((m) => m[1]), ['6:30', '6:45', '7:00', '7:15', '7:30'], 'lineup times');
+// Each up-next slide carries its speaker's intro on screen; every slide has speaker notes.
+assert(nov.includes('Software development engineer at Amazon.'), 'up-next slide has no intro for Sai');
+// Initials stand in for a missing photo: first and last name (Sai Ashrith Gavini is SG, not SA).
+assert(/>SG</.test(nov) && !/>SA</.test(nov), 'initials for Sai Ashrith Gavini are not SG');
+assert.equal((nov.match(/<aside class="notes"/g) ?? []).length, order(nov).length, 'a slide has no speaker notes');
 assert(!dec.includes("Tonight's talks"), '2026-12-07: has a talks slide with no lineup');
 // With a key, a thank-you slide without names means the Stripe read failed (it fails soft, with only a warning).
 if (process.env.STRIPE_READ_KEY) assert(/<ul class="supporters"[^>]*>\s*<li>/.test(nov), '2026-11-02: STRIPE_READ_KEY is set but the deck lists no supporters');
