@@ -21,7 +21,6 @@ for (const [name, html] of [['present/', next], ['2026-11-02', nov], ['2026-12-0
 }
 
 const talks = [
-  ['Sai Ashrith Gavini', 'D-Matrix: Making AI Agents Better Decision-Makers'],
   ['Julian Ghadially', 'Self-Improving AI Harnesses: Latest Research'],
   ['Sal Castoro', 'Building my first iPhone &amp; Apple Watch app to train for a 5K'],
   ['Colin McNamara', 'A security filter, switched off by a name: Black October, from a token bill to a security advisory'],
@@ -32,23 +31,25 @@ for (const [who, title] of talks) {
 }
 // Colin, 2026-11-02: Randall can't make it, so he comes off the lineup.
 assert(!nov.includes('Randall Gossett') && !nov.includes('Verification Is the Job'), '2026-11-02: Randall is still on the deck');
+// Colin, 2026-11-02: Sai is out sick, so he comes off the lineup too.
+assert(!nov.includes('Sai Ashrith Gavini') && !nov.includes('D-Matrix'), '2026-11-02: Sai is still on the deck');
 for (const s of ["Tonight's talks", 'Thank you', 'The Tavern', 'RGC 3000', 'Be cool to each other']) assert(nov.includes(s), `2026-11-02: no "${s}"`);
 // Flow (EBI round 1): an opening, one "up next" slide per talk, then a closing. Where we meet and the after party
 // are part of the opening (Colin, 2026-11-02). Thanks come right after the
 // code of conduct (Colin, 2026-11-02); the lineup ends the opening.
 const order = (html) => [...html.matchAll(/<section[^>]*data-slide="([a-z]+)"/g)].map((m) => m[1]);
-assert.deepEqual(order(nov), ['welcome', 'who', 'conduct', 'thanks', 'where', 'afterparty', 'tonight', 'lineup', 'talk', 'talk', 'talk', 'talk', 'next', 'closing'], `2026-11-02 order: ${order(nov)}`);
+assert.deepEqual(order(nov), ['welcome', 'who', 'conduct', 'thanks', 'where', 'afterparty', 'tonight', 'lineup', 'talk', 'talk', 'talk', 'next', 'closing'], `2026-11-02 order: ${order(nov)}`);
 assert.deepEqual(order(dec), ['welcome', 'who', 'conduct', 'thanks', 'where', 'closing'], `2026-12-07 order: ${order(dec)}`);
 // No per-talk times (Colin, 2026-11-02: "take the specific talks timing off"): the lineup numbers the speaking order.
 const bill = nov.slice(nov.indexOf('class="bill"'), nov.indexOf('</ol>', nov.indexOf('class="bill"')));
-assert.deepEqual([...bill.matchAll(/class="at">([^<]+)</g)].map((m) => m[1]), ['1', '2', '3', '4'], 'lineup numbers');
+assert.deepEqual([...bill.matchAll(/class="at">([^<]+)</g)].map((m) => m[1]), ['1', '2', '3'], 'lineup numbers');
 assert(!/\d{1,2}:\d{2}/.test(bill) && !/Up next, \d/.test(nov), 'a talk still shows a time');
 // Each up-next slide carries its speaker's intro on screen; every slide has speaker notes.
-assert(nov.includes('Software development engineer at Amazon.'), 'up-next slide has no intro for Sai');
+assert(nov.includes('Software engineer at Avtal'), 'up-next slide has no intro for Sal');
 // Colin, 2026-11-02: the welcome says talks start at 6:20 (the kickoff), and the speaking order.
 assert(nov.includes('Talks start at 6:20 PM'), 'welcome does not say talks start at 6:20 PM');
 const billNames = [...bill.matchAll(/class="who">([^<]+)</g)].map((m) => m[1]);
-assert.deepEqual(billNames, ['Julian Ghadially', 'Sai Ashrith Gavini', 'Sal Castoro', 'Colin McNamara'], `lineup order: ${billNames}`);
+assert.deepEqual(billNames, ['Julian Ghadially', 'Sal Castoro', 'Colin McNamara'], `lineup order: ${billNames}`);
 // Colin, 2026-11-02: don't highlight free talks; AIMUG's talks cover the boundary between pure research and early implementation.
 assert(!/free talks/i.test(nov), 'deck still highlights free talks');
 assert(nov.includes('Where pure research meets early implementation.') && nov.includes('boundary between pure research and early implementation'), 'deck does not say what the talks cover');
