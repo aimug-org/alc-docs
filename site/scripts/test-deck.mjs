@@ -46,6 +46,9 @@ assert(nov.includes('Software development engineer at Amazon.'), 'up-next slide 
 assert(nov.includes('Talks start at 6:20 PM'), 'welcome does not say talks start at 6:20 PM');
 const billNames = [...bill.matchAll(/class="who">([^<]+)</g)].map((m) => m[1]);
 assert.deepEqual(billNames, ['Julian Ghadially', 'Sai Ashrith Gavini', 'Sal Castoro', 'Randall Gossett', 'Colin McNamara'], `lineup order: ${billNames}`);
+// Colin, 2026-11-02: don't highlight free talks; AIMUG's talks cover the boundary between pure research and early implementation.
+assert(!/free talks/i.test(nov), 'deck still highlights free talks');
+assert(nov.includes('Where pure research meets early implementation.') && nov.includes('boundary between pure research and early implementation'), 'deck does not say what the talks cover');
 // Initials stand in for a missing photo: first and last name (Sai Ashrith Gavini is SG, not SA).
 assert(/>SG</.test(nov) && !/>SA</.test(nov), 'initials for Sai Ashrith Gavini are not SG');
 assert.equal((nov.match(/<aside class="notes"/g) ?? []).length, order(nov).length, 'a slide has no speaker notes');

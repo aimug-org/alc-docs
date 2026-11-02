@@ -78,7 +78,7 @@ const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomF
           <div class="frame welcome">
             <p class="group">AI Middleware Users Group</p>
             <h1>{e.title.replace(/ Monthly /, ' ')}</h1>
-            <p class="tag">Free talks on the agentic stack in Austin and online.</p>
+            <p class="tag">Where pure research meets early implementation.</p>
             <p class="when">{fmtDay(e.start, { weekday: 'long', month: 'long' })}, {e.venue.name}</p>
             {(kickoff ?? talksItem) && <p class="start">Talks start at {(kickoff ?? talksItem)!.time}</p>}
           </div>
@@ -106,7 +106,7 @@ const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomF
         <section data-slide="who" data-background-color="#06182b" data-background-image={bgRoomFeb} data-background-opacity="0.28">
           <div class="frame">
             <h2>Who we are</h2>
-            <p class="lead wide">The AI Middleware Users Group. Short talks on something people built or broke in the agentic stack.</p>
+            <p class="lead wide">The AI Middleware Users Group, in Austin and online. Our talks cover the boundary between pure research and early implementation.</p>
             <div class="stats">
               <p><span>{stats.meetupMembers.toLocaleString('en-US')}</span>members on Meetup</p>
               <p><span>{stats.youtubeViews.toLocaleString('en-US')}</span>views on YouTube</p>
