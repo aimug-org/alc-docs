@@ -586,9 +586,6 @@
       title: "Self-Improving AI Harnesses: Latest Research"
       intro: Co-founder of CodeEvolver, back for his third AIMUG talk.
       releasePending: true # Colin, 2026-11-01: "you can put julians talk up there"
-    - speaker: sai-ashrith-gavini
-      title: "D-Matrix: Making AI Agents Better Decision-Makers"
-      intro: Software development engineer at Amazon.
     - speaker: sal-castoro
       title: "Building my first iPhone & Apple Watch app to train for a 5K"
       intro: Software engineer at Avtal, back with the app he built to train for the Austin 5K.
