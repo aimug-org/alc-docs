@@ -50,6 +50,10 @@ assert.deepEqual(billNames, ['Julian Ghadially', 'Sai Ashrith Gavini', 'Sal Cast
 // Colin, 2026-11-02: don't highlight free talks; AIMUG's talks cover the boundary between pure research and early implementation.
 assert(!/free talks/i.test(nov), 'deck still highlights free talks');
 assert(nov.includes('Where pure research meets early implementation.') && nov.includes('boundary between pure research and early implementation'), 'deck does not say what the talks cover');
+// Colin, 2026-11-02: the after party slide shows the walking map, as October's did. Everyone is already in the
+// room at 6:20, so no "Finding us".
+assert(/<svg[^>]*aria-label="Walking route from RGC 3000 to The Tavern/.test(nov), 'after party slide has no map');
+assert(!nov.includes('Finding us'), 'deck still has "Finding us"');
 // Initials stand in for a missing photo: first and last name (Sai Ashrith Gavini is SG, not SA).
 assert(/>SG</.test(nov) && !/>SA</.test(nov), 'initials for Sai Ashrith Gavini are not SG');
 assert.equal((nov.match(/<aside class="notes"/g) ?? []).length, order(nov).length, 'a slide has no speaker notes');

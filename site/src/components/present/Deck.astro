@@ -19,9 +19,8 @@ import roomSep from '../../assets/photos/room-sep2025.jpg';
 import roomFeb from '../../assets/photos/room-feb2025.jpg';
 import plate from '../../assets/plate.jpg';
 import parrotMug from '../../assets/present/parrot-mug.png';
-import parrotSkyline from '../../assets/present/parrot-skyline.jpg';
 import parrotsCoding from '../../assets/present/parrots-coding.jpg';
-import rgc from '../../assets/present/rgc-3000.jpg';
+import TavernMap from './TavernMap.astro';
 
 interface Props {
   event: Event;
@@ -31,7 +30,8 @@ interface Props {
 const { event, next, supporters } = Astro.props;
 const e = event.data;
 const tba = (v: { name: string }) => /to be announced/i.test(v.name);
-const place = (v: { name: string; address?: string }) => (v.address ? `${v.name}, ${v.address}` : v.name);
+// The walking map is drawn for ACC Rio Grande to The Tavern, the usual pair.
+const walk = !!e.afterparty && /tavern/i.test(e.afterparty.name) && /rio grande|rgc/i.test(e.venue.name);
 
 // Each talk's rough start: the agenda's talks time ("6:30 PM"), plus the minutes its label gives ("about 15 minutes each").
 const talksItem = e.agenda.find((a) => /talk/i.test(a.label));
@@ -139,28 +139,17 @@ const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomF
           <aside class="notes"><p>Office Hours are the place to work through problems between meetups.</p></aside>
         </section>
 
-        {(e.afterparty || !tba(e.venue)) && (
+        {e.afterparty && (
           <section data-slide="afterparty" data-background-color="#06182b">
-            <div class="frame split right">
+            <div class="frame split party">
               <div>
-                {e.afterparty && (
-                  <>
-                    <h2>After party</h2>
-                    <p class="venue">{e.afterparty.name}</p>
-                    {e.afterparty.address && <p class="when">{e.afterparty.address}</p>}
-                  </>
-                )}
-                {!tba(e.venue) && (
-                  <div class="finding">
-                    <Image src={rgc} alt="The RGC 3000 building at ACC Rio Grande" width={360} />
-                    <div>
-                      <h3>Finding us</h3>
-                      <p>{place(e.venue)}. The parking garage is free, but its doors lock at 9&nbsp;PM. Street parking is free after 6&nbsp;PM.</p>
-                    </div>
-                  </div>
-                )}
+                <h2>After party</h2>
+                <p class="venue">{e.afterparty.name}</p>
+                {e.afterparty.address && <p class="when">{e.afterparty.address}</p>}
+                {walk && <p class="route">0.3 miles: down West Ave to 12th, then west to Lamar.</p>}
+                {!tba(e.venue) && <p class="foot">Parked in the ACC garage? Its doors lock at 9&nbsp;PM.</p>}
               </div>
-              {e.afterparty && <Image src={parrotSkyline} alt="" class="art square side" width={520} />}
+              {walk && <TavernMap />}
             </div>
             <aside class="notes"><p>We walk over together after Q&amp;A. The garage doors lock at 9.</p></aside>
           </section>
@@ -300,12 +289,12 @@ const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomF
       .reveal .split .foot { margin-top: 36px; }
       .reveal .art { flex: none; margin: 0; height: auto; border-radius: 28px; box-shadow: 0 24px 60px rgb(0 0 0 / 0.5); }
       .reveal .art.square { width: 470px; }
-      .reveal .art.side { width: 420px; }
-      .reveal .split.right { justify-content: space-between; }
+      .reveal .party { gap: 48px; }
+      .reveal .party > div { flex: 0 0 440px; }
+      .reveal .party .route { font-size: 30px; color: var(--color-text); margin-top: 28px; }
+      .reveal .party .foot { margin-top: 28px; }
+      .reveal .tavern-map { flex: 1 1 auto; width: 640px; height: auto; border-radius: 24px; box-shadow: 0 24px 60px rgb(0 0 0 / 0.45); }
       .reveal .venue { font-family: var(--font-display); font-size: 64px; text-transform: uppercase; color: var(--color-gold); line-height: 1; }
-      .reveal .finding { display: grid; grid-template-columns: 220px 1fr; gap: 28px; align-items: center; margin-top: 48px; max-width: 700px; }
-      .reveal .finding img { width: 220px; height: 165px; object-fit: cover; border-radius: 16px; margin: 0; }
-      .reveal .finding p { font-size: 24px; color: var(--color-soft); margin-top: 8px; }
 
       .reveal .cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; margin-top: 48px; }
       .reveal .cols > div { border-top: 4px solid var(--color-gold); padding-top: 24px; }
