@@ -74,6 +74,7 @@ const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomF
             <p class="tag">Where pure research meets early implementation.</p>
             <p class="when">{fmtDay(e.start, { weekday: 'long', month: 'long' })}, {e.venue.name}</p>
             {(kickoff ?? talksItem) && <p class="start">Talks start at {(kickoff ?? talksItem)!.time}</p>}
+            <p class="hello">First time here? Welcome. Say hello to someone nearby.<br /><span>Tonight's talks are recorded and streamed.</span></p>
           </div>
           <aside class="notes"><p>Welcome. First time at AIMUG? Raise a hand.</p><p>We record and stream every talk; they go up on YouTube.</p></aside>
         </section>
@@ -99,7 +100,7 @@ const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomF
               <p class="foot">The whole code of conduct:<br /><span class="nowrap">aimug.org/code-of-conduct</span></p>
             </div>
           </div>
-          <aside class="notes"><p>One rule, two parts.</p></aside>
+          <aside class="notes"><p>One rule, two parts. Ask questions, make room for others, help someone feel welcome.</p></aside>
         </section>
 
         <section data-slide="thanks" data-background-color="#06182b">
@@ -107,7 +108,7 @@ const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomF
             <h2>Thank you</h2>
             {supporters.length > 0 && (
               <>
-                <p class="lead">{supporters.length} monthly supporters keep AIMUG free and independent.</p>
+                <p class="lead">{supporters.length} monthly supporters keep AIMUG independent.</p>
                 <ul class="supporters">{supporters.map((n) => <li>{n}</li>)}</ul>
               </>
             )}
@@ -117,16 +118,16 @@ const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomF
             <p class="partners">Thanks also to ACC's Center for Government and Civic Service, our venue and education partner, and to LangChain, where we started.</p>
             <Image src={parrotMug} alt="" class="parrot-mug" width={420} />
           </div>
-          <aside class="notes"><p>Thank the monthly supporters by name: they keep AIMUG free and independent.</p><p>Thank CGCS at ACC for the room.</p></aside>
+          <aside class="notes"><p>These are the people who help us keep meeting, learning and sharing. Thank you.</p><p>Pause on the names, then thank CGCS at ACC for the room.</p></aside>
         </section>
 
         <section data-slide="where" data-background-color="#06182b" data-background-image={bgPlate} data-background-opacity="0.5">
           <div class="frame">
             <h2>Where and when we meet</h2>
             <div class="cols">
-              <div><h3>The meetup</h3><p>First Monday of every month, 6&nbsp;PM at ACC Rio Grande in Austin, or online.</p></div>
-              <div><h3>Office Hours</h3><p>2nd, 3rd and 4th Mondays, 5&nbsp;PM CT, on Google Meet.</p></div>
-              <div><h3>Hacky Hours</h3><p>Casual meetups to work on projects together and talk shop, announced on Meetup and Discord.</p></div>
+              <div><h3>The meetup</h3><p class="invite">Meet the people behind the talks.</p><p>First Monday of every month, 6&nbsp;PM at ACC Rio Grande, or online.</p></div>
+              <div><h3>Office Hours</h3><p class="invite">Bring a bug, a paper or a half-built agent.</p><p>2nd, 3rd and 4th Mondays, 5&nbsp;PM CT, on Google Meet.</p></div>
+              <div><h3>Hacky Hours</h3><p class="invite">Work on your project alongside other builders.</p><p>Scheduled as they come up, announced on Meetup and Discord.</p></div>
             </div>
           </div>
           <aside class="notes"><p>Office Hours are the place to work through problems between meetups.</p></aside>
@@ -144,7 +145,7 @@ const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomF
               </div>
               {walk && <TavernMap />}
             </div>
-            <aside class="notes"><p>We walk over together after Q&amp;A. The garage doors lock at 9.</p></aside>
+            <aside class="notes"><p>We walk over together after Q&amp;A. If you came on your own, come with us.</p><p>The garage doors lock at 9.</p></aside>
           </section>
         )}
 
@@ -177,7 +178,7 @@ const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomF
                 ))}
               </ol>
             </div>
-            <aside class="notes"><p>{talks.length} talks tonight, in this order.</p></aside>
+            <aside class="notes"><p>{talks.length} talks tonight, in this order. Which of these connects with something you're working on?</p></aside>
           </section>
         )}
 
@@ -192,7 +193,7 @@ const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomF
                 {t.intro && <p class="intro">{t.intro}</p>}
               </div>
             </div>
-            <aside class="notes"><p>Talk {i + 1} of {talks.length}.</p>{t.intro && <p>{t.name}: {t.intro}</p>}</aside>
+            <aside class="notes"><p>Talk {i + 1} of {talks.length}.</p>{t.intro && <p>{t.name}: {t.intro}</p>}{t.title && <p>Tonight: {t.title}.</p>}<p>Please welcome {t.first}.</p></aside>
           </section>
         ))}
 
@@ -205,10 +206,11 @@ const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomF
               <p class="when">{fmtDay(next.data.start, { weekday: 'long', month: 'long' })}, {fmtTime(next.data.start)}{!tba(next.data.venue) && `, ${next.data.venue.name}`}</p>
               <div class="actions">
                 <p>RSVP at aimug.org/events</p>
+                {next.data.pitchDeadline && <p class="invite">Next time, one of these talks could be yours.</p>}
                 {next.data.pitchDeadline && <p>Pitch a talk at aimug.org/speak by {fmtDay(next.data.pitchDeadline, { weekday: 'long', month: 'long' })}, {fmtTime(next.data.pitchDeadline)}</p>}
               </div>
             </div>
-            <aside class="notes"><p>Same place, first Monday. RSVP on Meetup or Luma.</p></aside>
+            <aside class="notes"><p>Same place, first Monday. RSVP on Meetup or Luma.</p><p>Think of one thing you built, tried or learned that someone here could use.</p></aside>
           </section>
         )}
 
@@ -216,6 +218,7 @@ const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomF
           <div class="frame">
             <h2 class="big">{e.afterparty ? `See you at ${e.afterparty.name}` : 'See you next month'}</h2>
             {talks.length > 0 && <p class="lead wide">Thanks to tonight's speakers, {speakerList}, and to everyone here and online.</p>}
+            <p class="foot">Watching online? Keep the conversation going at aimug.org/community</p>
           </div>
           <aside class="notes"><p>Thank the speakers and the room. Point the way to the after party.</p></aside>
         </section>
@@ -256,6 +259,8 @@ const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomF
       .reveal .lead { font-size: 32px; color: var(--color-soft); max-width: 820px; }
       .reveal .lead.wide { max-width: 1000px; font-size: 40px; color: var(--color-text); }
       .reveal .foot { font-size: 30px; line-height: 1.25; color: var(--color-soft); max-width: 1000px; }
+      .reveal .welcome .hello { font-size: 30px; margin-top: 36px; }
+      .reveal .welcome .hello span { color: var(--color-soft); }
       .reveal .welcome .when { color: var(--color-text); font-weight: 500; }
       .reveal .welcome h1, .reveal h2.big { text-shadow: 0 4px 30px rgb(4 18 34 / 0.6); }
 
@@ -296,9 +301,11 @@ const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomF
 
       .reveal .cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; margin-top: 48px; }
       .reveal .cols > div { border-top: 4px solid var(--color-gold); padding-top: 24px; }
+      .reveal .cols p.invite { color: var(--color-text); font-weight: 600; }
       .reveal .cols p { font-size: 32px; line-height: 1.25; margin-top: 14px; color: var(--color-soft); }
 
       [data-slide="next"] h2 { font-size: 72px; }
+      .reveal .actions p.invite { color: var(--color-gold-hi); font-weight: 600; margin-top: 18px; }
       .reveal .actions p { font-size: 30px; color: var(--color-text); line-height: 1.3; }
       .reveal .actions { margin-top: 28px !important; }
       .reveal .date { font-family: var(--font-display); font-size: 180px; line-height: 0.85; color: var(--color-gold); text-transform: uppercase; }

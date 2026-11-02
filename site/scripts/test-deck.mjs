@@ -55,10 +55,15 @@ assert(nov.includes('Where pure research meets early implementation.') && nov.in
 // room at 6:20, so no "Finding us".
 assert(/<svg[^>]*aria-label="Walking route from RGC 3000 to The Tavern/.test(nov), 'after party slide has no map');
 assert(!nov.includes('Finding us'), 'deck still has "Finding us"');
+// EBI round 3 (resonance): the room is told it is recorded, the online audience gets somewhere to go, and the
+// supporters line keeps independence without "free".
+assert(nov.includes('recorded and streamed'), 'welcome does not say the talks are recorded and streamed');
+assert(nov.includes('aimug.org/community'), 'closing gives the online audience nowhere to go');
+assert(!/keep AIMUG free/.test(nov), 'supporters line still says free');
 // Initials stand in for a missing photo: first and last name (Sai Ashrith Gavini is SG, not SA).
 assert(/>SG</.test(nov) && !/>SA</.test(nov), 'initials for Sai Ashrith Gavini are not SG');
 assert.equal((nov.match(/<aside class="notes"/g) ?? []).length, order(nov).length, 'a slide has no speaker notes');
-assert(!dec.includes("Tonight's talks"), '2026-12-07: has a talks slide with no lineup');
+assert(!/<h2>Tonight's talks<\/h2>/.test(dec), '2026-12-07: has a talks slide with no lineup');
 // With a key, a thank-you slide without names means the Stripe read failed (it fails soft, with only a warning).
 if (process.env.STRIPE_READ_KEY) assert(/<ul class="supporters"[^>]*>\s*<li>/.test(nov), '2026-11-02: STRIPE_READ_KEY is set but the deck lists no supporters');
 assert(!dec.includes('The Tavern'), '2026-12-07: has an after-party slide with no after party');
