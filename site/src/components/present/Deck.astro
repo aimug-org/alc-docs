@@ -33,27 +33,19 @@ const tba = (v: { name: string }) => /to be announced/i.test(v.name);
 // The walking map is drawn for ACC Rio Grande to The Tavern, the usual pair.
 const walk = !!e.afterparty && /tavern/i.test(e.afterparty.name) && /rio grande|rgc/i.test(e.venue.name);
 
-// Each talk's rough start: the agenda's talks time ("6:30 PM"), plus the minutes its label gives ("about 15 minutes each").
+// The agenda's talks item ("6:30 PM", "about 15 minutes each"). No per-talk times on screen (Colin, 2026-11-02).
 const talksItem = e.agenda.find((a) => /talk/i.test(a.label));
 // The welcome's start time is the kickoff (Colin, 2026-11-02: "talks start at 6:20"), else the talks.
 const kickoff = e.agenda.find((a) => /introduction|kickoff/i.test(a.label));
 const perTalk = Number(talksItem?.label.match(/(\d+)\s*minutes/)?.[1]) || 0;
-const toMin = (t?: string) => {
-  const m = t?.match(/^(\d{1,2}):(\d{2})\s*(AM|PM)$/i);
-  return m ? ((+m[1] % 12) + (/pm/i.test(m[3]) ? 12 : 0)) * 60 + +m[2] : undefined;
-};
-const clock = (min: number) => `${((Math.floor(min / 60) + 11) % 12) + 1}:${String(min % 60).padStart(2, '0')} ${min >= 720 ? 'PM' : 'AM'}`;
-const firstTalk = toMin(talksItem?.time);
-const gap = 5; // minutes between speakers (Colin, 2026-11-02)
 
 const speakers = new Map((await getCollection('speakers')).map((s) => [s.id, s.data]));
-const talks = lineupEntries(event).map((x, i) => {
+const talks = lineupEntries(event).map((x) => {
   const who = speakers.get(x.speaker);
   const name = who?.name ?? x.speaker;
   return {
     ...x, name, first: name.split(/\s+/)[0], photo: who?.photo,
     initials: ((w) => w[0][0] + (w.length > 1 ? w[w.length - 1][0] : ''))(name.split(/\s+/)),
-    at: firstTalk != null && perTalk ? clock(firstTalk + i * (perTalk + gap)) : undefined,
   };
 });
 const firstNames = talks.map((t) => t.first);
@@ -164,7 +156,7 @@ const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomF
                 {e.agenda.map((a) => <li class:list={{ now: /introduction|kickoff/i.test(a.label) }}><span class="t">{a.time}</span><span>{a.label}</span></li>)}
               </ol>
             </div>
-            <aside class="notes"><p>Each talk is about {perTalk || 15} minutes, Q&amp;A included, with {gap} minutes between speakers. Keep the conversation going at the mixer after.</p></aside>
+            <aside class="notes"><p>Each talk is about {perTalk || 15} minutes, Q&amp;A included, with a short break between speakers. Keep the conversation going at the mixer after.</p></aside>
           </section>
         )}
 
@@ -175,7 +167,7 @@ const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomF
               <ol class="bill">
                 {talks.map((t, i) => (
                   <li>
-                    <span class="at">{t.at ? t.at.replace(/ (AM|PM)$/, '') : i + 1}</span>
+                    <span class="at">{i + 1}</span>
                     {t.photo ? <img src={t.photo} alt="" /> : <span class="initials">{t.initials}</span>}
                     <div>
                       <p class="who">{t.name}</p>
@@ -185,7 +177,7 @@ const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomF
                 ))}
               </ol>
             </div>
-            <aside class="notes"><p>{talks.length} talks tonight. Times are rough.</p></aside>
+            <aside class="notes"><p>{talks.length} talks tonight, in this order.</p></aside>
           </section>
         )}
 
@@ -194,7 +186,7 @@ const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomF
             <div class="frame split">
               {t.photo ? <img src={t.photo} alt="" class="portrait" /> : <span class="portrait initials">{t.initials}</span>}
               <div>
-                <p class="group">{t.at ? `Up next, ${t.at}` : 'Up next'}</p>
+                <p class="group">Up next</p>
                 <h2 class="name">{t.name}</h2>
                 {t.title && <p class="talk-title">{t.title}</p>}
                 {t.intro && <p class="intro">{t.intro}</p>}
@@ -304,8 +296,8 @@ const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomF
       .reveal .date { font-family: var(--font-display); font-size: 220px; line-height: 0.85; color: var(--color-gold); text-transform: uppercase; }
 
       .reveal .bill { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 16px; }
-      .reveal .bill li { display: grid; grid-template-columns: 110px 84px 1fr; gap: 22px; align-items: center; }
-      .reveal .bill .at { font-family: var(--font-display); font-size: 44px; color: var(--color-gold); text-align: right; }
+      .reveal .bill li { display: grid; grid-template-columns: 56px 84px 1fr; gap: 22px; align-items: center; }
+      .reveal .bill .at { font-family: var(--font-display); font-size: 56px; color: var(--color-gold); text-align: right; }
       .reveal .bill img, .reveal .bill .initials { width: 84px; height: 84px; border-radius: 50%; object-fit: cover; margin: 0; border: 3px solid var(--color-gold); box-sizing: border-box; }
       .reveal .initials { display: grid; place-items: center; background: var(--color-panel); font-family: var(--font-display); font-size: 34px; color: var(--color-gold); }
       .reveal .bill .who { font-family: var(--font-display); font-size: 40px; text-transform: uppercase; line-height: 1; }

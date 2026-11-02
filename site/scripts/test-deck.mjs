@@ -38,9 +38,10 @@ for (const s of ["Tonight's talks", 'Thank you', 'The Tavern', 'RGC 3000', 'Be c
 const order = (html) => [...html.matchAll(/<section[^>]*data-slide="([a-z]+)"/g)].map((m) => m[1]);
 assert.deepEqual(order(nov), ['welcome', 'who', 'conduct', 'thanks', 'where', 'afterparty', 'tonight', 'lineup', 'talk', 'talk', 'talk', 'talk', 'talk', 'next', 'closing'], `2026-11-02 order: ${order(nov)}`);
 assert.deepEqual(order(dec), ['welcome', 'who', 'conduct', 'thanks', 'where', 'closing'], `2026-12-07 order: ${order(dec)}`);
-// The lineup shows each talk's rough start from 6:30 PM: 15 minutes each plus a 5-minute buffer (Colin, 2026-11-02).
+// No per-talk times (Colin, 2026-11-02: "take the specific talks timing off"): the lineup numbers the speaking order.
 const bill = nov.slice(nov.indexOf('class="bill"'), nov.indexOf('</ol>', nov.indexOf('class="bill"')));
-assert.deepEqual([...bill.matchAll(/(\d{1,2}:\d{2})/g)].map((m) => m[1]), ['6:30', '6:50', '7:10', '7:30', '7:50'], 'lineup times');
+assert.deepEqual([...bill.matchAll(/class="at">([^<]+)</g)].map((m) => m[1]), ['1', '2', '3', '4', '5'], 'lineup numbers');
+assert(!/\d{1,2}:\d{2}/.test(bill) && !/Up next, \d/.test(nov), 'a talk still shows a time');
 // Each up-next slide carries its speaker's intro on screen; every slide has speaker notes.
 assert(nov.includes('Software development engineer at Amazon.'), 'up-next slide has no intro for Sai');
 // Colin, 2026-11-02: the welcome says talks start at 6:20 (the kickoff), and the speaking order.
