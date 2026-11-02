@@ -1,8 +1,8 @@
 ---
 // The meetup intro deck: a whole reveal.js document for one event, built from events.yaml, speakers.yaml and the
 // Stripe supporters. A slide whose data is missing is left out. Wording on the fixed slides is the site's own.
-// Flow: an opening at 6:20 (welcome, thanks right after it, who we are, code of conduct, where we meet, the after
-// party, tonight, the lineup; Colin 2026-11-02), one "up next" slide per talk to advance between speakers, then a
+// Flow: an opening at 6:20 (welcome, who we are, code of conduct, thanks, where we meet, the after party, tonight,
+// the lineup; Colin 2026-11-02), one "up next" slide per talk to advance between speakers, then a
 // closing for the wrap-up (next meetup, see you at the after party). Every slide carries speaker notes (press S); notes are in the
 // page source, so they hold only public text. data-slide names each slide for scripts/test-deck.mjs.
 import '@fontsource/anton';
@@ -44,6 +44,7 @@ const toMin = (t?: string) => {
 };
 const clock = (min: number) => `${((Math.floor(min / 60) + 11) % 12) + 1}:${String(min % 60).padStart(2, '0')} ${min >= 720 ? 'PM' : 'AM'}`;
 const firstTalk = toMin(talksItem?.time);
+const gap = 5; // minutes between speakers (Colin, 2026-11-02)
 
 const speakers = new Map((await getCollection('speakers')).map((s) => [s.id, s.data]));
 const talks = lineupEntries(event).map((x, i) => {
@@ -52,7 +53,7 @@ const talks = lineupEntries(event).map((x, i) => {
   return {
     ...x, name, first: name.split(/\s+/)[0], photo: who?.photo,
     initials: ((w) => w[0][0] + (w.length > 1 ? w[w.length - 1][0] : ''))(name.split(/\s+/)),
-    at: firstTalk != null && perTalk ? clock(firstTalk + i * perTalk) : undefined,
+    at: firstTalk != null && perTalk ? clock(firstTalk + i * (perTalk + gap)) : undefined,
   };
 });
 const firstNames = talks.map((t) => t.first);
@@ -85,24 +86,6 @@ const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomF
           <aside class="notes"><p>Welcome. First time at AIMUG? Raise a hand.</p><p>We record and stream every talk; they go up on YouTube.</p></aside>
         </section>
 
-        <section data-slide="thanks" data-background-color="#06182b">
-          <div class="frame thanks">
-            <h2>Thank you</h2>
-            {supporters.length > 0 && (
-              <>
-                <p class="lead">{supporters.length} monthly supporters keep AIMUG free and independent.</p>
-                <ul class="supporters">{supporters.map((n) => <li>{n}</li>)}</ul>
-              </>
-            )}
-            {e.sponsor && (
-              <p class="lead sponsor">Tonight's food and drinks: {e.sponsor.logo ? <img src={e.sponsor.logo} alt={e.sponsor.name} /> : e.sponsor.name}</p>
-            )}
-            <p class="partners">Thanks also to ACC's Center for Government and Civic Service, our venue and education partner, and to LangChain, where we started.</p>
-            <Image src={parrotMug} alt="" class="parrot-mug" width={420} />
-          </div>
-          <aside class="notes"><p>Thank the monthly supporters by name: they keep AIMUG free and independent.</p><p>Thank CGCS at ACC for the room.</p></aside>
-        </section>
-
         <section data-slide="who" data-background-color="#06182b" data-background-image={bgRoomFeb} data-background-opacity="0.28">
           <div class="frame">
             <h2>Who we are</h2>
@@ -125,6 +108,24 @@ const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomF
             </div>
           </div>
           <aside class="notes"><p>One rule, two parts.</p></aside>
+        </section>
+
+        <section data-slide="thanks" data-background-color="#06182b">
+          <div class="frame thanks">
+            <h2>Thank you</h2>
+            {supporters.length > 0 && (
+              <>
+                <p class="lead">{supporters.length} monthly supporters keep AIMUG free and independent.</p>
+                <ul class="supporters">{supporters.map((n) => <li>{n}</li>)}</ul>
+              </>
+            )}
+            {e.sponsor && (
+              <p class="lead sponsor">Tonight's food and drinks: {e.sponsor.logo ? <img src={e.sponsor.logo} alt={e.sponsor.name} /> : e.sponsor.name}</p>
+            )}
+            <p class="partners">Thanks also to ACC's Center for Government and Civic Service, our venue and education partner, and to LangChain, where we started.</p>
+            <Image src={parrotMug} alt="" class="parrot-mug" width={420} />
+          </div>
+          <aside class="notes"><p>Thank the monthly supporters by name: they keep AIMUG free and independent.</p><p>Thank CGCS at ACC for the room.</p></aside>
         </section>
 
         <section data-slide="where" data-background-color="#06182b" data-background-image={bgPlate} data-background-opacity="0.5">
@@ -163,7 +164,7 @@ const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomF
                 {e.agenda.map((a) => <li class:list={{ now: /introduction|kickoff/i.test(a.label) }}><span class="t">{a.time}</span><span>{a.label}</span></li>)}
               </ol>
             </div>
-            <aside class="notes"><p>Each talk is about {perTalk || 15} minutes, Q&amp;A included. Keep the conversation going at the mixer after.</p></aside>
+            <aside class="notes"><p>Each talk is about {perTalk || 15} minutes, Q&amp;A included, with {gap} minutes between speakers. Keep the conversation going at the mixer after.</p></aside>
           </section>
         )}
 
