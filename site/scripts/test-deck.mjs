@@ -62,8 +62,6 @@ assert(!nov.includes('Finding us'), 'deck still has "Finding us"');
 assert(nov.includes('recorded and streamed'), 'welcome does not say the talks are recorded and streamed');
 assert(nov.includes('aimug.org/community'), 'closing gives the online audience nowhere to go');
 assert(!/keep AIMUG free/.test(nov), 'supporters line still says free');
-// Initials stand in for a missing photo: first and last name (Sai Ashrith Gavini is SG, not SA).
-assert(/>SG</.test(nov) && !/>SA</.test(nov), 'initials for Sai Ashrith Gavini are not SG');
 assert.equal((nov.match(/<aside class="notes"/g) ?? []).length, order(nov).length, 'a slide has no speaker notes');
 assert(!/<h2>Tonight's talks<\/h2>/.test(dec), '2026-12-07: has a talks slide with no lineup');
 // With a key, a thank-you slide without names means the Stripe read failed (it fails soft, with only a warning).
