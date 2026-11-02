@@ -1,14 +1,25 @@
 ---
 // The meetup intro deck: a whole reveal.js document for one event, built from events.yaml, speakers.yaml and the
 // Stripe supporters. A slide whose data is missing is left out. Wording on the fixed slides is the site's own.
+// Order (Colin, 2026-11-02: thanks at the beginning): welcome, thanks, tonight, who we are, code of conduct, where we
+// meet, next meetup, after party, and the lineup last, so it is up as the first speaker walks on.
 import '@fontsource/anton';
 import '@fontsource/barlow/400.css';
+import '@fontsource/barlow/500.css';
 import '@fontsource/barlow/600.css';
 import '@fontsource/barlow/700.css';
 import '../../styles/global.css';
+import { Image, getImage } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import { lineupEntries, fmtDay, fmtTime, type Event } from '../../lib/data';
 import { stats } from '../../data/site';
+import roomSep from '../../assets/photos/room-sep2025.jpg';
+import roomFeb from '../../assets/photos/room-feb2025.jpg';
+import plate from '../../assets/plate.jpg';
+import parrotMug from '../../assets/present/parrot-mug.png';
+import parrotSkyline from '../../assets/present/parrot-skyline.jpg';
+import parrotsCoding from '../../assets/present/parrots-coding.jpg';
+import rgc from '../../assets/present/rgc-3000.jpg';
 
 interface Props {
   event: Event;
@@ -18,10 +29,16 @@ interface Props {
 const { event, next, supporters } = Astro.props;
 const e = event.data;
 const speakers = new Map((await getCollection('speakers')).map((s) => [s.id, s.data]));
-const talks = lineupEntries(event).map((x) => ({ ...x, who: speakers.get(x.speaker) }));
+const talks = lineupEntries(event).map((x) => {
+  const who = speakers.get(x.speaker);
+  const name = who?.name ?? x.speaker;
+  return { ...x, name, photo: who?.photo, initials: name.split(/\s+/).map((w) => w[0]).slice(0, 2).join('') };
+});
 const tba = (v: { name: string }) => /to be announced/i.test(v.name);
 const talksAt = e.agenda.find((a) => /talk/i.test(a.label))?.time;
 const place = (v: { name: string; address?: string }) => (v.address ? `${v.name}, ${v.address}` : v.name);
+const bg = async (src: ImageMetadata) => (await getImage({ src, width: 1920, format: 'webp', quality: 70 })).src;
+const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomFeb), bg(plate)]);
 ---
 
 <!doctype html>
@@ -36,97 +53,133 @@ const place = (v: { name: string; address?: string }) => (v.address ? `${v.name}
   <body data-pagefind-ignore="all">
     <div class="reveal">
       <div class="slides">
-        <section>
-          <p class="kicker">AIMUG · AI Middleware Users Group</p>
-          <h1>{e.title}</h1>
-          <p class="big">{fmtDay(e.start, { weekday: 'long', month: 'long' })} · {e.venue.name}</p>
-          {talksAt && <p class="big gold">Talks start at {talksAt}</p>}
-          <p class="url">aimug.org</p>
+        <section data-background-color="#06182b" data-background-image={bgRoomSep} data-background-opacity="0.34">
+          <div class="frame welcome">
+            <p class="group">AI Middleware Users Group</p>
+            <h1>{e.title.replace(/ Monthly /, ' ')}</h1>
+            <p class="when">{fmtDay(e.start, { weekday: 'long', month: 'long' })}, {e.venue.name}</p>
+            {talksAt && <p class="start">Talks start at {talksAt}</p>}
+          </div>
+        </section>
+
+        <section data-background-color="#06182b">
+          <div class="frame thanks">
+            <h2>Thank you</h2>
+            {supporters.length > 0 && (
+              <>
+                <p class="lead">{supporters.length} monthly supporters keep AIMUG free and independent.</p>
+                <ul class="supporters">{supporters.map((n) => <li>{n}</li>)}</ul>
+              </>
+            )}
+            {e.sponsor && (
+              <p class="lead sponsor">Tonight's food and drinks: {e.sponsor.logo ? <img src={e.sponsor.logo} alt={e.sponsor.name} /> : e.sponsor.name}</p>
+            )}
+            <p class="partners">Thanks also to ACC's Center for Government and Civic Service, our venue and education partner, and to LangChain, where we started.</p>
+            <Image src={parrotMug} alt="" class="parrot-mug" width={420} />
+          </div>
         </section>
 
         {e.agenda.length > 0 && (
-          <section>
-            <h2>Tonight</h2>
-            <ul class="agenda">
-              {e.agenda.map((a) => <li><span class="gold">{a.time}</span><span>{a.label}</span></li>)}
-            </ul>
+          <section data-background-color="#06182b">
+            <div class="frame">
+              <h2>Tonight</h2>
+              <ol class="agenda">
+                {e.agenda.map((a) => <li class:list={{ now: /introduction|kickoff/i.test(a.label) }}><span class="t">{a.time}</span><span>{a.label}</span></li>)}
+              </ol>
+            </div>
           </section>
         )}
 
-        <section>
-          <h2>Who we are</h2>
-          <p class="big">The AI Middleware Users Group. Free talks on the agentic stack in Austin and online.</p>
-          <div class="stats">
-            <p><span class="gold">{stats.meetupMembers.toLocaleString('en-US')}</span> members on Meetup</p>
-            <p><span class="gold">{stats.youtubeViews.toLocaleString('en-US')}</span> views on YouTube</p>
+        <section data-background-color="#06182b" data-background-image={bgRoomFeb} data-background-opacity="0.28">
+          <div class="frame">
+            <h2>Who we are</h2>
+            <p class="lead wide">The AI Middleware Users Group. Free talks on the agentic stack in Austin and online.</p>
+            <div class="stats">
+              <p><span>{stats.meetupMembers.toLocaleString('en-US')}</span>members on Meetup</p>
+              <p><span>{stats.youtubeViews.toLocaleString('en-US')}</span>views on YouTube</p>
+            </div>
           </div>
         </section>
 
-        <section>
-          <h2>Be cool to each other</h2>
-          <h2 class="gold">Don't be gross</h2>
-          <p class="url">aimug.org/code-of-conduct</p>
-        </section>
-
-        <section>
-          <h2>Where and when we meet</h2>
-          <div class="cards">
-            <div><h3>The meetup</h3><p>First Monday of every month, 6 PM at ACC Rio Grande in Austin, or online.</p></div>
-            <div><h3>Office Hours</h3><p>2nd, 3rd and 4th Mondays, 5 PM CT, on Google Meet.</p></div>
-            <div><h3>Hacky Hours</h3><p>Casual meetups to work on projects together and talk shop, announced on Meetup and Discord.</p></div>
+        <section data-background-color="#06182b">
+          <div class="frame split">
+            <Image src={parrotsCoding} alt="" class="art square" width={520} />
+            <div>
+              <h2 class="rule">Be cool to each other.</h2>
+              <h2 class="rule gold">Don't be gross.</h2>
+              <p class="foot">The whole code of conduct is at <span class="nowrap">aimug.org/code-of-conduct</span></p>
+            </div>
           </div>
         </section>
 
-        {talks.length > 0 && (
-          <section>
-            <h2>Tonight's talks</h2>
-            <ol class="talks">
-              {talks.map((t) => (
-                <li>
-                  {t.who?.photo ? <img src={t.who.photo} alt="" /> : <span class="nophoto" />}
-                  <div><p class="who">{t.who?.name ?? t.speaker}</p>{t.title && <p class="title">{t.title}</p>}</div>
-                </li>
-              ))}
-            </ol>
-            <aside class="notes">
-              {talks.map((t) => <p>{t.who?.name ?? t.speaker}{t.intro ? `: ${t.intro}` : ''}</p>)}
-            </aside>
-          </section>
-        )}
-
-        <section>
-          <h2>Thank you</h2>
-          {supporters.length > 0 && (
-            <>
-              <p class="lead">Our monthly supporters keep AIMUG free and independent</p>
-              <ul class="supporters">{supporters.map((n) => <li>{n}</li>)}</ul>
-            </>
-          )}
-          {e.sponsor && (
-            <p class="lead">Tonight's food and drinks: {e.sponsor.logo ? <img class="logo" src={e.sponsor.logo} alt={e.sponsor.name} /> : e.sponsor.name}</p>
-          )}
-          <p class="partners">Center for Government and Civic Service, Austin Community College · LangChain</p>
+        <section data-background-color="#06182b" data-background-image={bgPlate} data-background-opacity="0.5">
+          <div class="frame">
+            <h2>Where and when we meet</h2>
+            <div class="cols">
+              <div><h3>The meetup</h3><p>First Monday of every month, 6&nbsp;PM at ACC Rio Grande in Austin, or online.</p></div>
+              <div><h3>Office Hours</h3><p>2nd, 3rd and 4th Mondays, 5&nbsp;PM CT, on Google Meet.</p></div>
+              <div><h3>Hacky Hours</h3><p>Casual meetups to work on projects together and talk shop, announced on Meetup and Discord.</p></div>
+            </div>
+          </div>
         </section>
 
         {next && (
-          <section>
-            <p class="kicker">Next meetup</p>
-            <h2>{next.data.title}</h2>
-            <p class="big">{fmtDay(next.data.start, { weekday: 'long', month: 'long' })}, {fmtTime(next.data.start)}</p>
-            <p class="big">{next.data.venue.name}</p>
-            <p class="url">aimug.org/events</p>
+          <section data-background-color="#06182b">
+            <div class="frame">
+              <p class="group">Next meetup</p>
+              <p class="date">{fmtDay(next.data.start, { weekday: undefined, month: 'short' })}</p>
+              <h2>{next.data.title}</h2>
+              <p class="when">{fmtDay(next.data.start, { weekday: 'long', month: 'long' })}, {fmtTime(next.data.start)}{!tba(next.data.venue) && `, ${next.data.venue.name}`}</p>
+              <p class="foot">Details and RSVP at aimug.org/events</p>
+            </div>
           </section>
         )}
 
         {(e.afterparty || !tba(e.venue)) && (
-          <section>
-            {e.afterparty && (<><h2>After party</h2><p class="big gold">{place(e.afterparty)}</p></>)}
-            {!tba(e.venue) && (
-              <>
-                <h3>Finding us</h3>
-                <p>{place(e.venue)}. The parking garage is free, but its doors lock at 9 PM. Street parking is free after 6 PM.</p>
-              </>
-            )}
+          <section data-background-color="#06182b">
+            <div class="frame split right">
+              <div>
+                {e.afterparty && (
+                  <>
+                    <h2>After party</h2>
+                    <p class="venue">{e.afterparty.name}</p>
+                    {e.afterparty.address && <p class="when">{e.afterparty.address}</p>}
+                  </>
+                )}
+                {!tba(e.venue) && (
+                  <div class="finding">
+                    <Image src={rgc} alt="The RGC 3000 building at ACC Rio Grande" width={360} />
+                    <div>
+                      <h3>Finding us</h3>
+                      <p>{place(e.venue)}. The parking garage is free, but its doors lock at 9&nbsp;PM. Street parking is free after 6&nbsp;PM.</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+              {e.afterparty && <Image src={parrotSkyline} alt="" class="art square side" width={520} />}
+            </div>
+          </section>
+        )}
+
+        {talks.length > 0 && (
+          <section data-background-color="#06182b" data-background-image={bgPlate} data-background-opacity="0.35">
+            <div class="frame">
+              <h2>Tonight's talks</h2>
+              <ol class="bill">
+                {talks.map((t) => (
+                  <li>
+                    {t.photo ? <img src={t.photo} alt="" /> : <span class="initials">{t.initials}</span>}
+                    <div>
+                      <p class="who">{t.name}</p>
+                      {t.title && <p class="title">{t.title}</p>}
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </div>
+            <aside class="notes">
+              {talks.map((t) => <p>{t.name}{t.intro ? `: ${t.intro}` : ''}</p>)}
+            </aside>
           </section>
         )}
       </div>
@@ -137,40 +190,82 @@ const place = (v: { name: string; address?: string }) => (v.address ? `${v.name}
       import Notes from 'reveal.js/plugin/notes';
       import 'reveal.js/reset.css';
       import 'reveal.js/reveal.css';
-      Reveal.initialize({ hash: true, width: 1280, height: 720, margin: 0.04, plugins: [Notes] });
+      const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      Reveal.initialize({
+        hash: true, width: 1280, height: 720, margin: 0, center: false,
+        transition: still ? 'none' : 'fade', backgroundTransition: still ? 'none' : 'fade',
+        plugins: [Notes],
+      });
     </script>
 
     <style is:global>
       html, body, .reveal-viewport { --r-background-color: var(--color-ink); background: var(--color-ink); }
-      .reveal { font-family: var(--font-sans); font-size: 34px; color: var(--color-text); }
+      .reveal { font-family: var(--font-sans); font-size: 32px; color: var(--color-text); }
       .reveal .slides { text-align: left; }
-      .reveal .slides section > * + * { margin-top: 22px; }
-      .reveal h1, .reveal h2, .reveal h3 { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.02; margin: 0; color: var(--color-text); }
-      .reveal h1 { font-size: 104px; }
-      .reveal h2 { font-size: 72px; }
-      .reveal h3 { font-size: 34px; color: var(--color-gold); }
+      .reveal .frame { box-sizing: border-box; height: 720px; padding: 64px 88px; display: flex; flex-direction: column; justify-content: center; position: relative; }
+      .reveal .frame > * + * { margin-top: 20px; }
+      .reveal h1, .reveal h2, .reveal h3 { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; line-height: 0.92; letter-spacing: 0.01em; margin: 0; color: var(--color-text); text-wrap: balance; }
+      .reveal h1 { font-size: 132px; max-width: 1000px; }
+      .reveal h2 { font-size: 84px; }
+      .reveal h3 { font-size: 38px; color: var(--color-gold); }
       .reveal p { margin: 0; line-height: 1.3; }
       .reveal .gold { color: var(--color-gold); }
-      .reveal .kicker { font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-gold); font-size: 26px; }
-      .reveal .big { font-size: 40px; color: var(--color-soft); }
-      .reveal .lead { font-size: 30px; color: var(--color-soft); }
-      .reveal .url { font-family: var(--font-mono); font-size: 26px; color: var(--color-muted); }
-      .reveal .agenda { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
-      .reveal .agenda li { display: grid; grid-template-columns: 170px 1fr; font-size: 36px; }
-      .reveal .stats { display: flex; gap: 60px; font-size: 32px; }
-      .reveal .stats .gold { font-family: var(--font-display); font-size: 72px; display: block; }
-      .reveal .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-      .reveal .cards > div { background: var(--color-panel); border: 1px solid var(--color-line); border-radius: 18px; padding: 24px; display: grid; gap: 12px; align-content: start; font-size: 28px; }
-      .reveal .talks { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
-      .reveal .talks li { display: grid; grid-template-columns: 64px 1fr; gap: 18px; align-items: center; }
-      .reveal .talks img, .reveal .talks .nophoto { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 2px solid var(--color-gold); }
-      .reveal .talks .nophoto { background: var(--color-panel); }
-      .reveal .talks .who { font-weight: 700; font-size: 24px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-gold); }
-      .reveal .talks .title { font-size: 29px; line-height: 1.15; }
-      .reveal .supporters { list-style: none; margin: 0; padding: 0; columns: 4; column-gap: 32px; font-size: 30px; }
-      .reveal .supporters li { break-inside: avoid; padding: 3px 0; }
-      .reveal .logo { height: 64px; vertical-align: middle; }
-      .reveal .partners { font-size: 24px; color: var(--color-muted); }
+      .reveal .nowrap { white-space: nowrap; }
+      .reveal .group { font-weight: 600; font-size: 28px; color: var(--color-gold); }
+      .reveal .when { font-size: 36px; color: var(--color-soft); }
+      .reveal .start { font-weight: 600; font-size: 40px; color: var(--color-gold-hi); }
+      .reveal .lead { font-size: 32px; color: var(--color-soft); max-width: 820px; }
+      .reveal .lead.wide { max-width: 980px; font-size: 40px; color: var(--color-text); }
+      .reveal .foot { font-size: 26px; color: var(--color-muted); }
+      .reveal .welcome h1 { text-shadow: 0 4px 30px rgb(4 18 34 / 0.6); }
+
+      .reveal .thanks { padding-right: 380px; }
+      .reveal .thanks .lead { font-size: 28px; max-width: none; }
+      .reveal .thanks .supporters { margin-top: 30px; }
+      .reveal .supporters { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, auto); justify-content: start; column-gap: 56px; row-gap: 6px; font-size: 34px; font-weight: 600; }
+      .reveal .supporters li { white-space: nowrap; }
+      .reveal .partners { font-size: 22px; color: var(--color-muted); max-width: 720px; }
+      .reveal .sponsor img { height: 64px; vertical-align: middle; }
+      .reveal .parrot-mug { position: absolute; right: 40px; bottom: 0; width: 400px; height: auto; margin: 0; filter: drop-shadow(0 20px 40px rgb(0 0 0 / 0.45)); }
+
+      .reveal .agenda { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; border-left: 3px solid var(--color-line); }
+      .reveal .agenda li { display: grid; grid-template-columns: 200px 1fr; align-items: baseline; padding: 10px 0 10px 32px; font-size: 36px; color: var(--color-soft); }
+      .reveal .agenda .t { font-family: var(--font-display); font-size: 44px; color: var(--color-text); }
+      .reveal .agenda li.now { border-left: 3px solid var(--color-gold); margin-left: -3px; color: var(--color-text); font-weight: 600; }
+      .reveal .agenda li.now .t { color: var(--color-gold); }
+
+      .reveal .stats { display: flex; gap: 96px; margin-top: 44px; }
+      .reveal .stats p { font-size: 28px; color: var(--color-soft); }
+      .reveal .stats span { display: block; font-family: var(--font-display); font-size: 120px; line-height: 1; color: var(--color-gold); }
+
+      .reveal .split { flex-direction: row; align-items: center; gap: 64px; }
+      .reveal .split > * + * { margin-top: 0; }
+      .reveal .split .rule { font-size: 92px; }
+      .reveal .split .rule + .rule { margin-top: 12px; }
+      .reveal .split .foot { margin-top: 36px; }
+      .reveal .art { flex: none; margin: 0; height: auto; border-radius: 28px; box-shadow: 0 24px 60px rgb(0 0 0 / 0.5); }
+      .reveal .art.square { width: 470px; }
+      .reveal .art.side { width: 420px; }
+      .reveal .split.right { justify-content: space-between; }
+      .reveal .venue { font-family: var(--font-display); font-size: 64px; text-transform: uppercase; color: var(--color-gold); line-height: 1; margin-top: 16px; }
+      .reveal .finding { display: grid; grid-template-columns: 220px 1fr; gap: 28px; align-items: center; margin-top: 48px; max-width: 700px; }
+      .reveal .finding img { width: 220px; height: 165px; object-fit: cover; border-radius: 16px; margin: 0; }
+      .reveal .finding p { font-size: 24px; color: var(--color-soft); margin-top: 8px; }
+
+      .reveal .cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; margin-top: 48px; }
+      .reveal .cols > div { border-top: 4px solid var(--color-gold); padding-top: 24px; }
+      .reveal .cols p { font-size: 30px; margin-top: 14px; color: var(--color-soft); }
+
+      .reveal .date { font-family: var(--font-display); font-size: 220px; line-height: 0.85; color: var(--color-gold); text-transform: uppercase; }
+
+      .reveal .bill { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 16px; counter-reset: talk; }
+      .reveal .bill li { display: grid; grid-template-columns: 56px 84px 1fr; gap: 22px; align-items: center; counter-increment: talk; }
+      .reveal .bill li::before { content: counter(talk); font-family: var(--font-display); font-size: 56px; color: var(--color-gold); text-align: right; }
+      .reveal .bill img, .reveal .bill .initials { width: 84px; height: 84px; border-radius: 50%; object-fit: cover; margin: 0; border: 3px solid var(--color-gold); box-sizing: border-box; }
+      .reveal .bill .initials { display: grid; place-items: center; background: var(--color-panel); font-family: var(--font-display); font-size: 34px; color: var(--color-gold); }
+      .reveal .bill .who { font-family: var(--font-display); font-size: 40px; text-transform: uppercase; line-height: 1; }
+      .reveal .bill .title { font-size: 25px; line-height: 1.22; color: var(--color-soft); margin-top: 4px; max-width: 980px; }
+
       .reveal .controls { color: var(--color-gold); }
       .reveal .progress { color: var(--color-gold); }
     </style>

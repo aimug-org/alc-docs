@@ -32,6 +32,9 @@ for (const [who, title] of talks) {
   assert(nov.includes(title), `2026-11-02: no "${title}"`);
 }
 for (const s of ["Tonight's talks", 'Thank you', 'The Tavern', 'RGC 3000', 'Be cool to each other']) assert(nov.includes(s), `2026-11-02: no "${s}"`);
+// Colin, 2026-11-02: the thanks come at the beginning, right after the welcome.
+const headings = [...nov.matchAll(/<section[^>]*>[\s\S]*?<h[12][^>]*>([^<]+)</g)].map((m) => m[1].trim());
+assert.equal(headings[1], 'Thank you', `2026-11-02: second slide is "${headings[1]}", not the thanks`);
 assert(!dec.includes("Tonight's talks"), '2026-12-07: has a talks slide with no lineup');
 // With a key, a thank-you slide without names means the Stripe read failed (it fails soft, with only a warning).
 if (process.env.STRIPE_READ_KEY) assert(/<ul class="supporters"[^>]*>\s*<li>/.test(nov), '2026-11-02: STRIPE_READ_KEY is set but the deck lists no supporters');
