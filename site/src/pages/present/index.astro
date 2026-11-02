@@ -1,0 +1,12 @@
+---
+// The intro deck for the next meetup (or the last one, when nothing is scheduled). Colin opens this at the venue.
+import Deck from '../../components/present/Deck.astro';
+import { allEvents, nextEvent } from '../../lib/data';
+import { loadSupporters } from '../../lib/supporters.mjs';
+
+const events = await allEvents();
+const upcoming = await nextEvent();
+const i = upcoming ? events.findIndex((e) => e.id === upcoming.id) : events.length - 1;
+---
+
+<Deck event={events[i]} next={events[i + 1]} supporters={await loadSupporters()} />
