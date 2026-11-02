@@ -4,7 +4,7 @@ import { getCollection, render } from 'astro:content';
 import Base from '../../../layouts/Base.astro';
 import TalkCard from '../../../components/TalkCard.astro';
 import Mermaid from '../../../components/content/Mermaid.astro';
-import { eventLd, publicTalks, upcomingTalks, fmtDay, fmtTime, now, type Event } from '../../../lib/data';
+import { eventLd, lineupEntries, publicTalks, upcomingTalks, fmtDay, fmtTime, now, type Event } from '../../../lib/data';
 import { allPosts, docSummary, docTitle, docUrl, docsNav, moves, nightUrl, posts } from '../../../components/content/content';
 import { links } from '../../../data/site';
 
@@ -37,7 +37,7 @@ const notes = folder && owner.get(folder)?.id === ev.id
 const sharedNotes = folder && owner.get(folder)?.id !== ev.id ? owner.get(folder) : undefined;
 const more = (await posts()).filter((p) => p.entry.data.event === ev.id);
 const speakerName = new Map((await getCollection('speakers')).map((s) => [s.id, s.data.name]));
-const lineup = e.lineup.map((id) => speakerName.get(id) ?? id);
+const lineup = lineupEntries(ev).map(({ speaker }) => speakerName.get(speaker) ?? speaker);
 
 const place = (v: { name: string; address?: string }) => (v.address ? `${v.name}, ${v.address}` : v.name);
 const kindLabel: Record<string, string> = { special: 'Special edition', 'hacky-hour': 'Hacky Hour', 'field-trip': 'Field trip' };
