@@ -32,10 +32,11 @@ for (const [who, title] of talks) {
   assert(nov.includes(title), `2026-11-02: no "${title}"`);
 }
 for (const s of ["Tonight's talks", 'Thank you', 'The Tavern', 'RGC 3000', 'Be cool to each other']) assert(nov.includes(s), `2026-11-02: no "${s}"`);
-// Flow (EBI round 1): an opening, one "up next" slide per talk, then a closing. Thanks right after the welcome
+// Flow (EBI round 1): an opening, one "up next" slide per talk, then a closing. Where we meet and the after party
+// are part of the opening (Colin, 2026-11-02). Thanks right after the welcome
 // (Colin, 2026-11-02); the lineup ends the opening.
 const order = (html) => [...html.matchAll(/<section[^>]*data-slide="([a-z]+)"/g)].map((m) => m[1]);
-assert.deepEqual(order(nov), ['welcome', 'thanks', 'who', 'conduct', 'tonight', 'lineup', 'talk', 'talk', 'talk', 'talk', 'talk', 'next', 'where', 'afterparty', 'closing'], `2026-11-02 order: ${order(nov)}`);
+assert.deepEqual(order(nov), ['welcome', 'thanks', 'who', 'conduct', 'where', 'afterparty', 'tonight', 'lineup', 'talk', 'talk', 'talk', 'talk', 'talk', 'next', 'closing'], `2026-11-02 order: ${order(nov)}`);
 assert.deepEqual(order(dec), ['welcome', 'thanks', 'who', 'conduct', 'where', 'closing'], `2026-12-07 order: ${order(dec)}`);
 // The lineup shows each talk's rough start, 15 minutes apart from 6:30 PM.
 const bill = nov.slice(nov.indexOf('class="bill"'), nov.indexOf('</ol>', nov.indexOf('class="bill"')));

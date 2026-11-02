@@ -1,9 +1,9 @@
 ---
 // The meetup intro deck: a whole reveal.js document for one event, built from events.yaml, speakers.yaml and the
 // Stripe supporters. A slide whose data is missing is left out. Wording on the fixed slides is the site's own.
-// Flow: an opening at 6:20 (welcome, thanks right after it per Colin 2026-11-02, who we are, code of conduct,
-// tonight, the lineup), one "up next" slide per talk to advance between speakers, then a closing for the wrap-up
-// (next meetup, where we meet, after party, thanks). Every slide carries speaker notes (press S); notes are in the
+// Flow: an opening at 6:20 (welcome, thanks right after it, who we are, code of conduct, where we meet, the after
+// party, tonight, the lineup; Colin 2026-11-02), one "up next" slide per talk to advance between speakers, then a
+// closing for the wrap-up (next meetup, see you at the after party). Every slide carries speaker notes (press S); notes are in the
 // page source, so they hold only public text. data-slide names each slide for scripts/test-deck.mjs.
 import '@fontsource/anton';
 import '@fontsource/barlow/400.css';
@@ -127,6 +127,45 @@ const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomF
           <aside class="notes"><p>One rule, two parts.</p></aside>
         </section>
 
+        <section data-slide="where" data-background-color="#06182b" data-background-image={bgPlate} data-background-opacity="0.5">
+          <div class="frame">
+            <h2>Where and when we meet</h2>
+            <div class="cols">
+              <div><h3>The meetup</h3><p>First Monday of every month, 6&nbsp;PM at ACC Rio Grande in Austin, or online.</p></div>
+              <div><h3>Office Hours</h3><p>2nd, 3rd and 4th Mondays, 5&nbsp;PM CT, on Google Meet.</p></div>
+              <div><h3>Hacky Hours</h3><p>Casual meetups to work on projects together and talk shop, announced on Meetup and Discord.</p></div>
+            </div>
+          </div>
+          <aside class="notes"><p>Office Hours are the place to work through problems between meetups.</p></aside>
+        </section>
+
+        {(e.afterparty || !tba(e.venue)) && (
+          <section data-slide="afterparty" data-background-color="#06182b">
+            <div class="frame split right">
+              <div>
+                {e.afterparty && (
+                  <>
+                    <h2>After party</h2>
+                    <p class="venue">{e.afterparty.name}</p>
+                    {e.afterparty.address && <p class="when">{e.afterparty.address}</p>}
+                  </>
+                )}
+                {!tba(e.venue) && (
+                  <div class="finding">
+                    <Image src={rgc} alt="The RGC 3000 building at ACC Rio Grande" width={360} />
+                    <div>
+                      <h3>Finding us</h3>
+                      <p>{place(e.venue)}. The parking garage is free, but its doors lock at 9&nbsp;PM. Street parking is free after 6&nbsp;PM.</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+              {e.afterparty && <Image src={parrotSkyline} alt="" class="art square side" width={520} />}
+            </div>
+            <aside class="notes"><p>We walk over together after Q&amp;A. The garage doors lock at 9.</p></aside>
+          </section>
+        )}
+
         {e.agenda.length > 0 && (
           <section data-slide="tonight" data-background-color="#06182b">
             <div class="frame">
@@ -185,45 +224,6 @@ const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomF
               <p class="foot">Details and RSVP at aimug.org/events{next.data.pitchDeadline && `. Pitch a talk at aimug.org/speak by ${fmtDay(next.data.pitchDeadline, { weekday: 'long', month: 'long' })}, ${fmtTime(next.data.pitchDeadline)}.`}</p>
             </div>
             <aside class="notes"><p>Same place, first Monday. RSVP on Meetup or Luma.</p></aside>
-          </section>
-        )}
-
-        <section data-slide="where" data-background-color="#06182b" data-background-image={bgPlate} data-background-opacity="0.5">
-          <div class="frame">
-            <h2>Where and when we meet</h2>
-            <div class="cols">
-              <div><h3>The meetup</h3><p>First Monday of every month, 6&nbsp;PM at ACC Rio Grande in Austin, or online.</p></div>
-              <div><h3>Office Hours</h3><p>2nd, 3rd and 4th Mondays, 5&nbsp;PM CT, on Google Meet.</p></div>
-              <div><h3>Hacky Hours</h3><p>Casual meetups to work on projects together and talk shop, announced on Meetup and Discord.</p></div>
-            </div>
-          </div>
-          <aside class="notes"><p>Office Hours are the place to work through problems between meetups.</p></aside>
-        </section>
-
-        {(e.afterparty || !tba(e.venue)) && (
-          <section data-slide="afterparty" data-background-color="#06182b">
-            <div class="frame split right">
-              <div>
-                {e.afterparty && (
-                  <>
-                    <h2>After party</h2>
-                    <p class="venue">{e.afterparty.name}</p>
-                    {e.afterparty.address && <p class="when">{e.afterparty.address}</p>}
-                  </>
-                )}
-                {!tba(e.venue) && (
-                  <div class="finding">
-                    <Image src={rgc} alt="The RGC 3000 building at ACC Rio Grande" width={360} />
-                    <div>
-                      <h3>Finding us</h3>
-                      <p>{place(e.venue)}. The parking garage is free, but its doors lock at 9&nbsp;PM. Street parking is free after 6&nbsp;PM.</p>
-                    </div>
-                  </div>
-                )}
-              </div>
-              {e.afterparty && <Image src={parrotSkyline} alt="" class="art square side" width={520} />}
-            </div>
-            <aside class="notes"><p>We walk over together after Q&amp;A. The garage doors lock at 9.</p></aside>
           </section>
         )}
 
