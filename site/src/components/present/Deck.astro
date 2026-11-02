@@ -35,6 +35,8 @@ const place = (v: { name: string; address?: string }) => (v.address ? `${v.name}
 
 // Each talk's rough start: the agenda's talks time ("6:30 PM"), plus the minutes its label gives ("about 15 minutes each").
 const talksItem = e.agenda.find((a) => /talk/i.test(a.label));
+// The welcome's start time is the kickoff (Colin, 2026-11-02: "talks start at 6:20"), else the talks.
+const kickoff = e.agenda.find((a) => /introduction|kickoff/i.test(a.label));
 const perTalk = Number(talksItem?.label.match(/(\d+)\s*minutes/)?.[1]) || 0;
 const toMin = (t?: string) => {
   const m = t?.match(/^(\d{1,2}):(\d{2})\s*(AM|PM)$/i);
@@ -78,7 +80,7 @@ const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomF
             <h1>{e.title.replace(/ Monthly /, ' ')}</h1>
             <p class="tag">Free talks on the agentic stack in Austin and online.</p>
             <p class="when">{fmtDay(e.start, { weekday: 'long', month: 'long' })}, {e.venue.name}</p>
-            {talksItem && <p class="start">Talks start at {talksItem.time}</p>}
+            {(kickoff ?? talksItem) && <p class="start">Talks start at {(kickoff ?? talksItem)!.time}</p>}
           </div>
           <aside class="notes"><p>Welcome. First time at AIMUG? Raise a hand.</p><p>We record and stream every talk; they go up on YouTube.</p></aside>
         </section>

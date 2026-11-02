@@ -581,20 +581,20 @@
     - { time: "6:30 PM", label: "Thunderstorm Talks, about 15 minutes each" }
     - { time: "7:40 PM", label: Open Q&A }
     - { time: "8:00 PM", label: Walk to The Tavern for the mixer (optional) }
-  lineup:
-    - speaker: sai-ashrith-gavini
-      title: "D-Matrix: Making AI Agents Better Decision-Makers"
-      intro: Software development engineer at Amazon.
-    - speaker: randall-gossett
-      title: "Verification Is the Job: What Breaks When You Let Agents Ship Unchecked"
-      intro: Installs dog fences for a living and ships everything through AI agents, including music as Lladnaros.
+  lineup: # speaking order (Colin, 2026-11-02)
     - speaker: julian-ghadially
       title: "Self-Improving AI Harnesses: Latest Research"
       intro: Co-founder of CodeEvolver, back for his third AIMUG talk.
       releasePending: true # Colin, 2026-11-01: "you can put julians talk up there"
+    - speaker: sai-ashrith-gavini
+      title: "D-Matrix: Making AI Agents Better Decision-Makers"
+      intro: Software development engineer at Amazon.
     - speaker: sal-castoro
       title: "Building my first iPhone & Apple Watch app to train for a 5K"
       intro: Software engineer at Avtal, back with the app he built to train for the Austin 5K.
+    - speaker: randall-gossett
+      title: "Verification Is the Job: What Breaks When You Let Agents Ship Unchecked"
+      intro: Installs dog fences for a living and ships everything through AI agents, including music as Lladnaros.
     - speaker: colin-mcnamara
       title: "A security filter, switched off by a name: Black October, from a token bill to a security advisory"
 

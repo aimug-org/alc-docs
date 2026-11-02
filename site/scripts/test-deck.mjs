@@ -42,6 +42,10 @@ const bill = nov.slice(nov.indexOf('class="bill"'), nov.indexOf('</ol>', nov.ind
 assert.deepEqual([...bill.matchAll(/(\d{1,2}:\d{2})/g)].map((m) => m[1]), ['6:30', '6:45', '7:00', '7:15', '7:30'], 'lineup times');
 // Each up-next slide carries its speaker's intro on screen; every slide has speaker notes.
 assert(nov.includes('Software development engineer at Amazon.'), 'up-next slide has no intro for Sai');
+// Colin, 2026-11-02: the welcome says talks start at 6:20 (the kickoff), and the speaking order.
+assert(nov.includes('Talks start at 6:20 PM'), 'welcome does not say talks start at 6:20 PM');
+const billNames = [...bill.matchAll(/class="who">([^<]+)</g)].map((m) => m[1]);
+assert.deepEqual(billNames, ['Julian Ghadially', 'Sai Ashrith Gavini', 'Sal Castoro', 'Randall Gossett', 'Colin McNamara'], `lineup order: ${billNames}`);
 // Initials stand in for a missing photo: first and last name (Sai Ashrith Gavini is SG, not SA).
 assert(/>SG</.test(nov) && !/>SA</.test(nov), 'initials for Sai Ashrith Gavini are not SG');
 assert.equal((nov.match(/<aside class="notes"/g) ?? []).length, order(nov).length, 'a slide has no speaker notes');
