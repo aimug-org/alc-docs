@@ -4,7 +4,7 @@ import { getCollection, getEntries } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import TalkCard from '../components/TalkCard.astro';
 import Thanks from '../components/Thanks.astro';
-import { eventLd as buildEventLd, publicTalks, upcomingTalks, nextEvent, fmtDay, fmtDate, fmtTime } from '../lib/data';
+import { eventLd as buildEventLd, publicTalks, upcomingTalks, nextEvent, lineupEntries, fmtDay, fmtDate, fmtTime } from '../lib/data';
 import { stats, links, channels } from '../data/site';
 import Icon from '../components/Icon.astro';
 import { nightUrl } from '../components/content/content';
@@ -68,7 +68,7 @@ const countdown = days < 0 ? '' : days === 0 ? 'Tonight' : days === 1 ? 'In 1 da
               </div>
               <p class="m-0 border-t border-line pt-4 text-base text-soft">
                 {next.data.lineup.length
-                  ? <><span class="font-bold text-text">Lineup:</span> {next.data.lineup.map((id) => speakerName.get(id) ?? id).join(', ')}. <a href="/speak/" class="font-bold">Your talk? Pitch it</a></>
+                  ? <><span class="font-bold text-text">Lineup:</span> {lineupEntries(next).map(({ speaker }) => speakerName.get(speaker) ?? speaker).join(', ')}. <a href="/speak/" class="font-bold">Your talk? Pitch it</a></>
                   : <>Lineup announced{next.data.lineupDate ? ` the week of ${fmtDay(next.data.lineupDate, { weekday: undefined })}` : ' soon'}. Your talk? <a href="/speak/" class="font-bold">Pitch it</a></>}
               </p>
             </>

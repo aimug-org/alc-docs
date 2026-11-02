@@ -9,6 +9,6 @@ export default defineConfig({
   build: { format: 'directory' },
   // Leave mermaid blocks as plain code so components/content/Mermaid.astro can draw them.
   markdown: { syntaxHighlight: { type: 'shiki', excludeLangs: ['mermaid'] } },
-  integrations: [mdx(), sitemap({ filter: (p) => !/\/((un)?subscribe-|speak\/(thanks|release)\/)/.test(p) })],
+  integrations: [mdx(), sitemap({ filter: (p) => !/\/((un)?subscribe-|speak\/(thanks|release)\/|present\/)/.test(p) })],
   vite: { plugins: [tailwindcss()] },
 });

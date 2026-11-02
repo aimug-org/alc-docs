@@ -32,6 +32,8 @@ expect() { # expect <pass|fail> <name> <message fragment>
 fixture pass "$ev";                                                    expect pass pass
 fixture end "${ev/T20:00/T17:00}";                                     expect fail end "is not after start"
 fixture lineup "${ev/\[ann\]/[ann, bob]}";                             expect fail lineup 'lineup speaker "bob"'
+obj='[{ speaker: ann, title: "A talk" }]';  fixture lineupobj "${ev/\[ann\]/$obj}";      expect pass lineupobj
+obj='[{ speaker: bob, title: "A talk" }]';  fixture lineupobjbad "${ev/\[ann\]/$obj}";   expect fail lineupobjbad 'lineup speaker "bob"'
 fixture talkspk "$ev"; echo '{"speakers":["zed"]}' > "$tmp/talkspk/src/content/talks/x.json"; expect fail talkspk 'speaker "zed"'
 fixture talkevt "$ev"; echo '{"event":"2030-01-01"}' > "$tmp/talkevt/src/content/talks/x.json"; expect fail talkevt 'event "2030-01-01"'
 fixture recap "${ev/2026\/01\/01\/recap/nope}";                       expect fail recap "recap /blog/nope/"

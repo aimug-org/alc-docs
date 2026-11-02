@@ -25,7 +25,7 @@ const docsDir = join(root, 'src/content/docs');
 
 for (const e of events) {
   if (!(new Date(e.end) > new Date(e.start))) errors.push(`event ${e.id}: end (${e.end}) is not after start (${e.start})`);
-  for (const id of e.lineup ?? []) if (!speakers.has(id)) errors.push(`event ${e.id}: lineup speaker "${id}" is not in speakers.yaml`);
+  for (const id of (e.lineup ?? []).map((x) => x?.speaker ?? x)) if (!speakers.has(id)) errors.push(`event ${e.id}: lineup speaker "${id}" is not in speakers.yaml`);
   if (e.recap && !postUrls.has(e.recap)) errors.push(`event ${e.id}: recap ${e.recap} is not the URL of any blog post`);
   const docs = e.docs?.replace(/^\/docs\/|\/$/g, '');
   if (e.docs && !(docs && existsSync(join(docsDir, docs)))) errors.push(`event ${e.id}: docs ${e.docs} has no folder under src/content/docs`);

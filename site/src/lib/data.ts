@@ -22,6 +22,11 @@ export async function allEvents(): Promise<Event[]> {
   return (await getCollection('events')).sort((a, b) => a.data.start.getTime() - b.data.start.getTime());
 }
 
+export type LineupEntry = { speaker: string; title?: string; intro?: string; releasePending?: boolean };
+
+/** An event's lineup with every entry as an object (a bare speaker id becomes { speaker }). */
+export const lineupEntries = (e: Event): LineupEntry[] => e.data.lineup.map((x) => (typeof x === 'string' ? { speaker: x } : x));
+
 /** The next event that hasn't ended yet, or undefined. */
 export async function nextEvent(): Promise<Event | undefined> {
   return (await allEvents()).find((e) => e.data.end >= now);

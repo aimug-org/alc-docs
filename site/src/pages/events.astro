@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
-import { allEvents, eventLd, publicTalks, fmtDay, fmtTime, now, type Event } from '../lib/data';
+import { allEvents, eventLd, lineupEntries, publicTalks, fmtDay, fmtTime, now, type Event } from '../lib/data';
 import { links } from '../data/site';
 import { moves, nightUrl } from '../components/content/content';
 
@@ -62,7 +62,7 @@ const btn2 = 'rounded-full border-2 border-text px-5 py-3 text-base font-bold te
           </div>
           {next.data.lineup.length ? (
             <ul class="m-0 grid list-none grid-cols-2 gap-2.5 p-0">
-              {next.data.lineup.map((id) => <li class="rounded-xl border border-edge p-3.5 text-base">{speakerName.get(id) ?? id}</li>)}
+              {lineupEntries(next).map(({ speaker }) => <li class="rounded-xl border border-edge p-3.5 text-base">{speakerName.get(speaker) ?? speaker}</li>)}
             </ul>
           ) : (
             <p class="m-0 text-soft">{next.data.lineupDate ? `Lineup announced the week of ${fmtDay(next.data.lineupDate, { weekday: undefined })}.${next.data.pitchDeadline && next.data.pitchDeadline > now ? ` Pitches due ${fmtDay(next.data.pitchDeadline, { weekday: 'long' })}, ${fmtTime(next.data.pitchDeadline)} CT.` : ''}` : 'Lineup coming soon.'} <a href="/speak/" class="font-bold">Pitch a talk</a>.</p>

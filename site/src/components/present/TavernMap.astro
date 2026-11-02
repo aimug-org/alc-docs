@@ -1,0 +1,31 @@
+---
+// The walk from RGC 3000 (1218 West Ave) to The Tavern (922 W 12th St at N Lamar), drawn in the site's colors.
+// Traced from the Google Maps route on the October 2026 intro deck (0.3 miles): north is up, coordinates are that
+// screenshot's pixels. Our own drawing, so no map tiles, no attribution and nothing to load at the venue.
+interface Props { class?: string }
+const { class: cls } = Astro.props;
+---
+
+<svg class:list={['tavern-map', cls]} viewBox="0 0 1048 622" role="img" aria-label="Walking route from RGC 3000 to The Tavern: south on West Ave to W 12th St, then west to N Lamar Blvd, 0.3 miles">
+  <rect width="1048" height="622" rx="28" fill="#0b2540" />
+  <g fill="none" stroke="#1e4466" stroke-linecap="round">
+    <path d="M315 -20 L75 650" stroke-width="30" />
+    <path d="M330 -20 L470 650" stroke-width="20" />
+    <path d="M-20 348 L1068 680" stroke-width="30" />
+    <path d="M1003 -20 L794 650" stroke-width="24" />
+    <path d="M905 250 L1068 262" stroke-width="18" />
+  </g>
+  <g fill="#a7bccd" font-family="Barlow, sans-serif" font-size="42" font-weight="600" stroke="#0b2540" stroke-width="10" paint-order="stroke">
+    <text x="250" y="250" transform="rotate(-70 250 250)">N Lamar Blvd</text>
+    <text x="356" y="30" transform="rotate(78 356 30)">Shoal Creek</text>
+    <text x="520" y="478" transform="rotate(17 520 478)">W 12th St</text>
+    <text x="915" y="520" transform="rotate(-72 915 520)">West Ave</text>
+    <text x="1032" y="232" text-anchor="end">W 13th</text>
+  </g>
+  <path d="M800 252 L912 268 L808 600 L185 410" fill="none" stroke="#f5b81c" stroke-width="14" stroke-linejoin="round" stroke-linecap="round" />
+  <path d="M185 410 L218 352" fill="none" stroke="#f5b81c" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 18" />
+  <circle cx="790" cy="250" r="20" fill="#f5b81c" stroke="#06182b" stroke-width="6" />
+  <text x="762" y="240" text-anchor="end" fill="#eef3f7" stroke="#0b2540" stroke-width="8" paint-order="stroke" font-family="Barlow, sans-serif" font-size="46" font-weight="700">RGC 3000</text>
+  <circle cx="222" cy="344" r="22" fill="#ffd35c" stroke="#06182b" stroke-width="6" />
+  <text x="252" y="330" fill="#eef3f7" stroke="#0b2540" stroke-width="10" paint-order="stroke" font-family="Anton, sans-serif" font-size="52">THE TAVERN</text>
+</svg>

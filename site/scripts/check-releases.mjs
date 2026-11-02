@@ -14,14 +14,20 @@ const known = new Set(speakers.map((s) => s.id));
 const released = new Set(speakers.filter((s) => s.release).map((s) => s.id));
 const now = new Date();
 const upcoming = read(eventsFile).filter((e) => new Date(e.end) > now); // still on until it ends
-const lineup = upcoming.flatMap((e) => (e.lineup ?? []).map((id) => [e.id, id]));
-const unknown = lineup.filter(([, id]) => !known.has(id)).map(([e, id]) => `  ${e}: ${id}`);
-const missing = lineup.filter(([, id]) => known.has(id) && !released.has(id)).map(([e, id]) => `  ${e}: ${id}`);
+// An entry is a speaker id or { speaker, title, releasePending }. releasePending (Colin's per-talk exception) lists the
+// speaker with a warning; it never counts as a release for publishing.
+const entries = upcoming.flatMap((e) => (e.lineup ?? []).map((x) => [e.id, x?.speaker ?? x, x?.releasePending === true]));
+const unknown = entries.filter(([, id]) => !known.has(id)).map(([e, id]) => `  ${e}: ${id}`);
+const unsigned = entries.filter(([, id]) => known.has(id) && !released.has(id));
+const missing = unsigned.filter(([, , p]) => !p).map(([e, id]) => `  ${e}: ${id}`);
+const pending = unsigned.filter(([, , p]) => p).map(([e, id]) => `  release pending: ${e}: ${id}`);
 
+if (pending.length) console.warn(`check-releases: listed before their release is signed (Colin's exception):\n${pending.join('\n')}`);
 if (unknown.length || missing.length) {
   if (unknown.length) console.error(`check-releases: these lineup ids are not in speakers.yaml:\n${unknown.join('\n')}`);
   if (missing.length) console.error(`check-releases: these lineup speakers have no signed release on file:\n${missing.join('\n')}\n` +
     'Add `release: <record id>` to their entry in src/data/speakers.yaml (find it with scripts/releases.sh), or take them off the lineup.');
   process.exit(1);
 }
-console.log(`check-releases: ok, every lineup speaker in ${upcoming.length} upcoming event(s) has a release on file`);
+console.log(`check-releases: ok, every lineup speaker in ${upcoming.length} upcoming event(s) has a release on file` +
+  (pending.length ? `, except ${pending.length} listed as release pending` : ''));

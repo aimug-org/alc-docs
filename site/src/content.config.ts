@@ -58,7 +58,15 @@ const events = defineCollection({
     rsvp: z.object({ luma: z.url().optional(), meetup: z.url().optional() }).default({}),
     summary: z.string().optional(),
     agenda: z.array(z.object({ time: z.string(), label: z.string() })).default([]),
-    lineup: z.array(z.string()).default([]), // speaker ids, only once each has a release
+    // Speaker ids, only once each has a release. An entry can carry the talk title (the intro deck shows it) and a
+    // one-line stage intro for the deck's speaker notes. releasePending is Colin's per-talk exception (2026-11-01): the
+    // speaker is listed before signing, with a warning from check-releases; it is never a release for publishing.
+    lineup: z.array(z.union([
+      z.string(),
+      z.object({ speaker: z.string(), title: z.string(), intro: z.string().optional(), releasePending: z.boolean().optional() }),
+    ])).default([]),
+    // The night's "Feed the room" sponsor: /support/ promises their logo on that night's slides. logo is a site path.
+    sponsor: z.object({ name: z.string(), logo: z.string().optional() }).optional(),
     lineupDate: z.coerce.date().optional(), // week the lineup is announced (picked at that Monday's Office Hours)
     pitchDeadline: z.coerce.date().optional(), // pitches due: the Monday before, before Office Hours at 5 PM CT
     recap: z.string().optional(), // site path of the recap post

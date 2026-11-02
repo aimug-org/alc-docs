@@ -1,0 +1,14 @@
+---
+// The intro deck for one event, by its id: /present/2026-11-02/.
+import Deck from '../../components/present/Deck.astro';
+import { allEvents, type Event } from '../../lib/data';
+import { loadSupporters } from '../../lib/supporters.mjs';
+
+export async function getStaticPaths() {
+  const events = await allEvents();
+  return events.map((event, i) => ({ params: { id: event.id }, props: { event, next: events[i + 1] } }));
+}
+const { event, next } = Astro.props as { event: Event; next?: Event };
+---
+
+<Deck event={event} next={next} supporters={await loadSupporters()} />

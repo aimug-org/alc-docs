@@ -1,0 +1,6 @@
+# Overrides for the supporters the intro deck thanks (src/lib/supporters.mjs). Supporters come from Stripe at build
+# time and show as first name and last initial. Keyed by Stripe customer id (cus_...), never by name.
+# full: show the full name; only after the supporter says yes.
+# hide: leave them off the slide.
+full: []
+hide: []

@@ -3,6 +3,7 @@
 
 - id: colin-mcnamara
   name: Colin McNamara
+  release: cbe136f7-6004-4105-bcf4-12cbee2c7459
   photo: /speakers/colin-mcnamara.jpg
   links:
     - { label: Website, url: "https://www.colinmcnamara.com" }
@@ -76,6 +77,7 @@
 
 - id: sal-castoro
   name: Sal Castoro
+  release: f8138450-ae2b-42bd-adc8-cf9f2b01e387
   title: "Software Engineer"
   company: "Avtal"
   photo: /speakers/sal-castoro.jpg
@@ -336,3 +338,15 @@
 
 - id: bert
   name: Bert
+
+- id: sai-ashrith-gavini
+  name: Sai Ashrith Gavini
+  title: "Software Development Engineer"
+  company: "Amazon"
+  release: d16e05a7-ad1a-4107-90bf-b4abf4a7e95f
+  links:
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/saiashrithgavini/" }
+
+- id: randall-gossett
+  name: Randall Gossett
+  release: e44a8db7-150f-40f2-8335-6fec1985ab03

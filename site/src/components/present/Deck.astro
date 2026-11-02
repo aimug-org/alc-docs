@@ -1,0 +1,332 @@
+---
+// The meetup intro deck: a whole reveal.js document for one event, built from events.yaml, speakers.yaml and the
+// Stripe supporters. A slide whose data is missing is left out. Wording on the fixed slides is the site's own.
+// Flow: an opening at 6:20 (welcome, who we are, code of conduct, thanks, where we meet, the after party, tonight,
+// the lineup; Colin 2026-11-02), one "up next" slide per talk to advance between speakers, then a
+// closing for the wrap-up (next meetup, see you at the after party). Every slide carries speaker notes (press S); notes are in the
+// page source, so they hold only public text. data-slide names each slide for scripts/test-deck.mjs.
+import '@fontsource/anton';
+import '@fontsource/barlow/400.css';
+import '@fontsource/barlow/500.css';
+import '@fontsource/barlow/600.css';
+import '@fontsource/barlow/700.css';
+import '../../styles/global.css';
+import { Image, getImage } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import { lineupEntries, fmtDay, fmtTime, type Event } from '../../lib/data';
+import { stats } from '../../data/site';
+import roomSep from '../../assets/photos/room-sep2025.jpg';
+import roomFeb from '../../assets/photos/room-feb2025.jpg';
+import plate from '../../assets/plate.jpg';
+import parrotMug from '../../assets/present/parrot-mug.png';
+import parrotsCoding from '../../assets/present/parrots-coding.jpg';
+import TavernMap from './TavernMap.astro';
+
+interface Props {
+  event: Event;
+  next?: Event;
+  supporters: string[];
+}
+const { event, next, supporters } = Astro.props;
+const e = event.data;
+const tba = (v: { name: string }) => /to be announced/i.test(v.name);
+// The walking map is drawn for ACC Rio Grande to The Tavern, the usual pair.
+const walk = !!e.afterparty && /tavern/i.test(e.afterparty.name) && /rio grande|rgc/i.test(e.venue.name);
+
+// The agenda's talks item ("6:30 PM", "about 15 minutes each"). No per-talk times on screen (Colin, 2026-11-02).
+const talksItem = e.agenda.find((a) => /talk/i.test(a.label));
+// The welcome's start time is the kickoff (Colin, 2026-11-02: "talks start at 6:20"), else the talks.
+const kickoff = e.agenda.find((a) => /introduction|kickoff/i.test(a.label));
+const perTalk = Number(talksItem?.label.match(/(\d+)\s*minutes/)?.[1]) || 0;
+
+const speakers = new Map((await getCollection('speakers')).map((s) => [s.id, s.data]));
+const talks = lineupEntries(event).map((x) => {
+  const who = speakers.get(x.speaker);
+  const name = who?.name ?? x.speaker;
+  return {
+    ...x, name, first: name.split(/\s+/)[0], photo: who?.photo,
+    initials: ((w) => w[0][0] + (w.length > 1 ? w[w.length - 1][0] : ''))(name.split(/\s+/)),
+  };
+});
+const firstNames = talks.map((t) => t.first);
+const speakerList = firstNames.length > 1 ? `${firstNames.slice(0, -1).join(', ')} and ${firstNames.at(-1)}` : firstNames[0];
+
+const bg = async (src: ImageMetadata) => (await getImage({ src, width: 1920, format: 'webp', quality: 70 })).src;
+const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomFeb), bg(plate)]);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>{`${e.title}, ${fmtDay(e.start)} | AIMUG intro`}</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+  </head>
+  <body data-pagefind-ignore="all">
+    <div class="reveal">
+      <div class="slides">
+        <section data-slide="welcome" data-background-color="#06182b" data-background-image={bgRoomSep} data-background-opacity="0.26">
+          <div class="frame welcome">
+            <p class="group">AI Middleware Users Group</p>
+            <h1>{e.title.replace(/ Monthly /, ' ')}</h1>
+            <p class="tag">Where pure research meets early implementation.</p>
+            <p class="when">{fmtDay(e.start, { weekday: 'long', month: 'long' })}, {e.venue.name}</p>
+            {(kickoff ?? talksItem) && <p class="start">Talks start at {(kickoff ?? talksItem)!.time}</p>}
+            <p class="hello">First time here? Welcome. Say hello to someone nearby.<br /><span>Tonight's talks are recorded and streamed.</span></p>
+          </div>
+          <aside class="notes"><p>Welcome. First time at AIMUG? Raise a hand.</p><p>We record and stream every talk; they go up on YouTube.</p></aside>
+        </section>
+
+        <section data-slide="who" data-background-color="#06182b" data-background-image={bgRoomFeb} data-background-opacity="0.24">
+          <div class="frame">
+            <h2>Who we are</h2>
+            <p class="lead wide">The AI Middleware Users Group, in Austin and online. Our talks cover the boundary between pure research and early implementation.</p>
+            <div class="stats">
+              <p><span>{stats.meetupMembers.toLocaleString('en-US')}</span>members on Meetup</p>
+              <p><span>{stats.youtubeViews.toLocaleString('en-US')}</span>views on YouTube</p>
+            </div>
+          </div>
+          <aside class="notes"><p>We started as Austin LangChain. Now it's the whole agentic stack.</p><p>Built something? Pitch a talk at aimug.org/speak.</p></aside>
+        </section>
+
+        <section data-slide="conduct" data-background-color="#06182b">
+          <div class="frame split">
+            <Image src={parrotsCoding} alt="" class="art square" width={520} />
+            <div>
+              <h2 class="rule">Be cool to each other.</h2>
+              <h2 class="rule gold">Don't be gross.</h2>
+              <p class="foot">The whole code of conduct:<br /><span class="nowrap">aimug.org/code-of-conduct</span></p>
+            </div>
+          </div>
+          <aside class="notes"><p>One rule, two parts. Ask questions, make room for others, help someone feel welcome.</p></aside>
+        </section>
+
+        <section data-slide="thanks" data-background-color="#06182b">
+          <div class="frame thanks">
+            <h2>Thank you</h2>
+            {supporters.length > 0 && (
+              <>
+                <p class="lead">{supporters.length} monthly supporters keep AIMUG independent.</p>
+                <ul class="supporters">{supporters.map((n) => <li>{n}</li>)}</ul>
+              </>
+            )}
+            {e.sponsor && (
+              <p class="lead sponsor">Tonight's food and drinks: {e.sponsor.logo ? <img src={e.sponsor.logo} alt={e.sponsor.name} /> : e.sponsor.name}</p>
+            )}
+            <p class="partners">Thanks also to ACC's Center for Government and Civic Service, our venue and education partner, and to LangChain, where we started.</p>
+            <Image src={parrotMug} alt="" class="parrot-mug" width={420} />
+          </div>
+          <aside class="notes"><p>These are the people who help us keep meeting, learning and sharing. Thank you.</p><p>Pause on the names, then thank CGCS at ACC for the room.</p></aside>
+        </section>
+
+        <section data-slide="where" data-background-color="#06182b" data-background-image={bgPlate} data-background-opacity="0.5">
+          <div class="frame">
+            <h2>Where and when we meet</h2>
+            <div class="cols">
+              <div><h3>The meetup</h3><p class="invite">Meet the people behind the talks.</p><p>First Monday of every month, 6&nbsp;PM at ACC Rio Grande, or online.</p></div>
+              <div><h3>Office Hours</h3><p class="invite">Bring a bug, a paper or a half-built agent.</p><p>2nd, 3rd and 4th Mondays, 5&nbsp;PM CT, on Google Meet.</p></div>
+              <div><h3>Hacky Hours</h3><p class="invite">Work on your project alongside other builders.</p><p>Scheduled as they come up, announced on Meetup and Discord.</p></div>
+            </div>
+          </div>
+          <aside class="notes"><p>Office Hours are the place to work through problems between meetups.</p></aside>
+        </section>
+
+        {e.afterparty && (
+          <section data-slide="afterparty" data-background-color="#06182b">
+            <div class="frame split party">
+              <div>
+                <h2>After party</h2>
+                <p class="venue">{e.afterparty.name}</p>
+                {e.afterparty.address && <p class="when">{e.afterparty.address}</p>}
+                {walk && <p class="route">0.3 miles: down West Ave to 12th, then west to Lamar.</p>}
+                {!tba(e.venue) && <p class="foot">Parked in the ACC garage? Its doors lock at 9&nbsp;PM.</p>}
+              </div>
+              {walk && <TavernMap />}
+            </div>
+            <aside class="notes"><p>We walk over together after Q&amp;A. If you came on your own, come with us.</p><p>The garage doors lock at 9.</p></aside>
+          </section>
+        )}
+
+        {e.agenda.length > 0 && (
+          <section data-slide="tonight" data-background-color="#06182b">
+            <div class="frame">
+              <h2>Tonight</h2>
+              <ol class="agenda">
+                {e.agenda.map((a) => <li class:list={{ now: /introduction|kickoff/i.test(a.label) }}><span class="t">{a.time}</span><span>{a.label}</span></li>)}
+              </ol>
+            </div>
+            <aside class="notes"><p>Each talk is about {perTalk || 15} minutes, Q&amp;A included, with a short break between speakers. Keep the conversation going at the mixer after.</p></aside>
+          </section>
+        )}
+
+        {talks.length > 0 && (
+          <section data-slide="lineup" data-background-color="#06182b" data-background-image={bgPlate} data-background-opacity="0.35">
+            <div class="frame">
+              <h2>Tonight's talks</h2>
+              <ol class="bill">
+                {talks.map((t, i) => (
+                  <li>
+                    <span class="at">{i + 1}</span>
+                    {t.photo ? <img src={t.photo} alt="" /> : <span class="initials">{t.initials}</span>}
+                    <div>
+                      <p class="who">{t.name}</p>
+                      {t.title && <p class="title">{t.title}</p>}
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </div>
+            <aside class="notes"><p>{talks.length} talks tonight, in this order. Which of these connects with something you're working on?</p></aside>
+          </section>
+        )}
+
+        {talks.map((t, i) => (
+          <section data-slide="talk" data-background-color="#06182b" data-background-image={bgPlate} data-background-opacity="0.35">
+            <div class="frame split">
+              {t.photo ? <img src={t.photo} alt="" class="portrait" /> : <span class="portrait initials">{t.initials}</span>}
+              <div>
+                <p class="group">Up next</p>
+                <h2 class="name">{t.name}</h2>
+                {t.title && <p class="talk-title">{t.title}</p>}
+                {t.intro && <p class="intro">{t.intro}</p>}
+              </div>
+            </div>
+            <aside class="notes"><p>Talk {i + 1} of {talks.length}.</p>{t.intro && <p>{t.name}: {t.intro}</p>}{t.title && <p>Tonight: {t.title}.</p>}<p>Please welcome {t.first}.</p></aside>
+          </section>
+        ))}
+
+        {next && (
+          <section data-slide="next" data-background-color="#06182b">
+            <div class="frame">
+              <p class="group">Next meetup</p>
+              <p class="date">{fmtDay(next.data.start, { weekday: undefined, month: 'short' })}</p>
+              <h2>{next.data.title}</h2>
+              <p class="when">{fmtDay(next.data.start, { weekday: 'long', month: 'long' })}, {fmtTime(next.data.start)}{!tba(next.data.venue) && `, ${next.data.venue.name}`}</p>
+              <div class="actions">
+                <p>RSVP at aimug.org/events</p>
+                {next.data.pitchDeadline && <p class="invite">Next time, one of these talks could be yours.</p>}
+                {next.data.pitchDeadline && <p>Pitch a talk at aimug.org/speak by {fmtDay(next.data.pitchDeadline, { weekday: 'long', month: 'long' })}, {fmtTime(next.data.pitchDeadline)}</p>}
+              </div>
+            </div>
+            <aside class="notes"><p>Same place, first Monday. RSVP on Meetup or Luma.</p><p>Think of one thing you built, tried or learned that someone here could use.</p></aside>
+          </section>
+        )}
+
+        <section data-slide="closing" data-background-color="#06182b" data-background-image={bgRoomSep} data-background-opacity="0.24">
+          <div class="frame">
+            <h2 class="big">{e.afterparty ? `See you at ${e.afterparty.name}` : 'See you next month'}</h2>
+            {talks.length > 0 && <p class="lead wide">Thanks to tonight's speakers, {speakerList}, and to everyone here and online.</p>}
+            <p class="foot">Watching online? Keep the conversation going at aimug.org/community</p>
+          </div>
+          <aside class="notes"><p>Thank the speakers and the room. Point the way to the after party.</p></aside>
+        </section>
+      </div>
+    </div>
+
+    <script>
+      import Reveal from 'reveal.js';
+      import Notes from 'reveal.js/plugin/notes';
+      import 'reveal.js/reset.css';
+      import 'reveal.js/reveal.css';
+      const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      Reveal.initialize({
+        hash: true, width: 1280, height: 720, margin: 0, center: false,
+        transition: still ? 'none' : 'fade', backgroundTransition: still ? 'none' : 'fade',
+        plugins: [Notes],
+      });
+    </script>
+
+    <style is:global>
+      html, body, .reveal-viewport { --r-background-color: var(--color-ink); background: var(--color-ink); }
+      .reveal { font-family: var(--font-sans); font-size: 32px; color: var(--color-text); }
+      .reveal .slides { text-align: left; }
+      .reveal .frame { box-sizing: border-box; height: 720px; padding: 64px 88px; display: flex; flex-direction: column; justify-content: center; position: relative; }
+      .reveal .frame > * + * { margin-top: 20px; }
+      .reveal h1, .reveal h2, .reveal h3 { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; line-height: 0.92; letter-spacing: 0.01em; margin: 0; color: var(--color-text); text-wrap: balance; }
+      .reveal h1 { font-size: 132px; max-width: 1000px; }
+      .reveal h2 { font-size: 84px; }
+      .reveal h2.big { font-size: 112px; max-width: 1000px; }
+      .reveal h3 { font-size: 38px; color: var(--color-gold); }
+      .reveal p { margin: 0; line-height: 1.3; }
+      .reveal .gold { color: var(--color-gold); }
+      .reveal .nowrap { white-space: nowrap; }
+      .reveal .group { font-weight: 600; font-size: 28px; color: var(--color-gold); }
+      .reveal .tag { font-size: 34px; color: var(--color-text); }
+      .reveal .when { font-size: 36px; color: var(--color-soft); }
+      .reveal .start { font-weight: 600; font-size: 40px; color: var(--color-gold-hi); }
+      .reveal .lead { font-size: 32px; color: var(--color-soft); max-width: 820px; }
+      .reveal .lead.wide { max-width: 1000px; font-size: 40px; color: var(--color-text); }
+      .reveal .foot { font-size: 30px; line-height: 1.25; color: var(--color-soft); max-width: 1000px; }
+      .reveal .welcome .hello { font-size: 30px; margin-top: 36px; }
+      .reveal .welcome .hello span { color: var(--color-soft); }
+      .reveal .welcome .when { color: var(--color-text); font-weight: 500; }
+      .reveal .welcome h1, .reveal h2.big { text-shadow: 0 4px 30px rgb(4 18 34 / 0.6); }
+
+      .reveal .thanks { padding-right: 380px; }
+      .reveal .thanks .lead { font-size: 30px; max-width: none; }
+      .reveal .thanks .supporters { margin-top: 30px; }
+      .reveal .supporters { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, auto); justify-content: start; column-gap: 56px; row-gap: 6px; font-size: 34px; font-weight: 600; }
+      .reveal .supporters li { white-space: nowrap; }
+      .reveal .partners { font-size: 28px; color: var(--color-soft); max-width: 760px; }
+      .reveal .sponsor img { height: 64px; vertical-align: middle; }
+      .reveal .parrot-mug { position: absolute; right: 40px; bottom: 0; width: 400px; height: auto; margin: 0; filter: drop-shadow(0 20px 40px rgb(0 0 0 / 0.45)); }
+
+      .reveal .agenda { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; border-left: 3px solid var(--color-line); }
+      .reveal .agenda li { display: grid; grid-template-columns: 200px 1fr; align-items: baseline; padding: 10px 0 10px 32px; font-size: 36px; color: var(--color-soft); }
+      .reveal .agenda .t { font-family: var(--font-display); font-size: 44px; color: var(--color-text); }
+      .reveal .agenda li.now { border-left: 3px solid var(--color-gold); margin-left: -3px; color: var(--color-text); font-weight: 600; }
+      .reveal .agenda li.now .t { color: var(--color-gold); }
+
+      .reveal .stats { display: flex; gap: 96px; margin-top: 44px; }
+      .reveal .stats p { font-size: 28px; color: var(--color-soft); }
+      .reveal .stats span { display: block; font-family: var(--font-display); font-size: 120px; line-height: 1; color: var(--color-gold); }
+
+      .reveal .split { flex-direction: row; align-items: center; gap: 64px; }
+      .reveal .split > * + * { margin-top: 0; }
+      .reveal .split > div > * + * { margin-top: 18px; }
+      .reveal .split .rule { font-size: 92px; }
+      .reveal .split .rule + .rule { margin-top: 12px; }
+      .reveal .split .foot { margin-top: 36px; }
+      .reveal .art { flex: none; margin: 0; height: auto; border-radius: 28px; box-shadow: 0 24px 60px rgb(0 0 0 / 0.5); }
+      .reveal .art.square { width: 470px; }
+      .reveal .party { gap: 48px; }
+      .reveal .party > div { flex: 0 0 400px; }
+      .reveal .party h2 { font-size: 74px; white-space: nowrap; }
+      .reveal .party .route { font-size: 32px; line-height: 1.25; color: var(--color-text); margin-top: 28px; }
+      .reveal .party .foot { margin-top: 28px; }
+      .reveal .tavern-map { flex: 1 1 auto; width: 660px; height: auto; border-radius: 24px; box-shadow: 0 24px 60px rgb(0 0 0 / 0.45); }
+      .reveal .venue { font-family: var(--font-display); font-size: 64px; text-transform: uppercase; color: var(--color-gold); line-height: 1; }
+
+      .reveal .cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; margin-top: 48px; }
+      .reveal .cols > div { border-top: 4px solid var(--color-gold); padding-top: 24px; }
+      .reveal .cols p.invite { color: var(--color-text); font-weight: 600; }
+      .reveal .cols p { font-size: 32px; line-height: 1.25; margin-top: 14px; color: var(--color-soft); }
+
+      [data-slide="next"] h2 { font-size: 72px; }
+      .reveal .actions p.invite { color: var(--color-gold-hi); font-weight: 600; margin-top: 18px; }
+      .reveal .actions p { font-size: 30px; color: var(--color-text); line-height: 1.3; }
+      .reveal .actions { margin-top: 28px !important; }
+      .reveal .date { font-family: var(--font-display); font-size: 180px; line-height: 0.85; color: var(--color-gold); text-transform: uppercase; }
+
+      .reveal .bill { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 12px; }
+      .reveal .bill li { display: grid; grid-template-columns: 56px 84px 1fr; gap: 22px; align-items: center; }
+      .reveal .bill .at { font-family: var(--font-display); font-size: 56px; color: var(--color-gold); text-align: right; }
+      .reveal .bill img, .reveal .bill .initials { width: 84px; height: 84px; border-radius: 50%; object-fit: cover; margin: 0; border: 3px solid var(--color-gold); box-sizing: border-box; }
+      .reveal .initials { display: grid; place-items: center; background: var(--color-panel); font-family: var(--font-display); font-size: 34px; color: var(--color-gold); }
+      .reveal .bill .who { font-family: var(--font-display); font-size: 40px; text-transform: uppercase; line-height: 1; }
+      .reveal .bill .title { font-size: 30px; line-height: 1.15; color: var(--color-soft); margin-top: 4px; max-width: 940px; }
+
+      .reveal .portrait { flex: none; width: 320px; height: 320px; border-radius: 50%; object-fit: cover; margin: 0; border: 6px solid var(--color-gold); box-sizing: border-box; box-shadow: 0 24px 60px rgb(0 0 0 / 0.5); }
+      .reveal .portrait.initials { font-size: 120px; }
+      .reveal .name { font-size: 96px; }
+      .reveal .talk-title { font-size: 40px; line-height: 1.2; max-width: 760px; }
+      .reveal .intro { font-size: 30px; line-height: 1.25; color: var(--color-soft); max-width: 760px; }
+      [data-slide="talk"] .split > div { flex: 1; min-width: 0; min-height: 380px; }
+
+      .reveal .controls { color: var(--color-gold); }
+      .reveal .progress { color: var(--color-gold); }
+    </style>
+  </body>
+</html>
