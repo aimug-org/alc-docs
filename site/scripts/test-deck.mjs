@@ -48,6 +48,9 @@ assert(!/\d{1,2}:\d{2}/.test(bill) && !/Up next, \d/.test(nov), 'a talk still sh
 assert(nov.includes('Software engineer at Avtal'), 'up-next slide has no intro for Sal');
 // Colin, 2026-11-02: the welcome says talks start at 6:20 (the kickoff), and the speaking order.
 assert(nov.includes('Talks start at 6:20 PM'), 'welcome does not say talks start at 6:20 PM');
+// Colin, 2026-11-02: a QR code on the first slide points people to aimug.org.
+const welcome = nov.slice(nov.indexOf('data-slide="welcome"'), nov.indexOf('data-slide="who"'));
+assert(/class="qr"[^>]*aria-label="QR code for aimug.org"/.test(welcome) && /<svg[^>]*>/.test(welcome) && welcome.includes('>aimug.org<'), 'welcome slide has no aimug.org QR code');
 const billNames = [...bill.matchAll(/class="who">([^<]+)</g)].map((m) => m[1]);
 assert.deepEqual(billNames, ['Julian Ghadially', 'Sal Castoro', 'Colin McNamara'], `lineup order: ${billNames}`);
 // Colin, 2026-11-02: don't highlight free talks; AIMUG's talks cover the boundary between pure research and early implementation.

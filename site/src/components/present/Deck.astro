@@ -17,6 +17,7 @@ import { lineupEntries, fmtDay, fmtTime, type Event } from '../../lib/data';
 import { stats } from '../../data/site';
 import roomSep from '../../assets/photos/room-sep2025.jpg';
 import roomFeb from '../../assets/photos/room-feb2025.jpg';
+import qrAimug from '../../assets/present/qr-aimug.svg?raw'; // segno, error level H, decodes to https://aimug.org
 import plate from '../../assets/plate.jpg';
 import parrotMug from '../../assets/present/parrot-mug.png';
 import parrotsCoding from '../../assets/present/parrots-coding.jpg';
@@ -75,6 +76,7 @@ const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomF
             <p class="when">{fmtDay(e.start, { weekday: 'long', month: 'long' })}, {e.venue.name}</p>
             {(kickoff ?? talksItem) && <p class="start">Talks start at {(kickoff ?? talksItem)!.time}</p>}
             <p class="hello">First time here? Welcome. Say hello to someone nearby.<br /><span>Tonight's talks are recorded and streamed.</span></p>
+            <div class="qr" role="img" aria-label="QR code for aimug.org"><Fragment set:html={qrAimug} /><p>aimug.org</p></div>
           </div>
           <aside class="notes"><p>Welcome. First time at AIMUG? Raise a hand.</p><p>We record and stream every talk; they go up on YouTube.</p></aside>
         </section>
@@ -262,6 +264,9 @@ const [bgRoomSep, bgRoomFeb, bgPlate] = await Promise.all([bg(roomSep), bg(roomF
       .reveal .welcome .hello { font-size: 30px; margin-top: 36px; }
       .reveal .welcome .hello span { color: var(--color-soft); }
       .reveal .welcome .when { color: var(--color-text); font-weight: 500; }
+      .reveal .welcome .qr { position: absolute; right: 88px; bottom: 56px; margin: 0; text-align: center; }
+      .reveal .welcome .qr svg { display: block; border-radius: 12px; }
+      .reveal .welcome .qr p { margin: 10px 0 0; font-size: 28px; font-weight: 600; color: var(--color-text); }
       .reveal .welcome h1, .reveal h2.big { text-shadow: 0 4px 30px rgb(4 18 34 / 0.6); }
 
       .reveal .thanks { padding-right: 380px; }
