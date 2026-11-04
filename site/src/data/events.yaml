@@ -592,13 +592,16 @@
     - speaker: colin-mcnamara
       title: "A security filter, switched off by a name: Black October, from a token bill to a security advisory"
 
-# On the 2026 schedule; venue and RSVP links not posted yet. The end time follows the Monday format.
+# On the 2026 schedule. The end time follows the Monday format.
 
 - id: "2026-12-07"
   title: December Monthly Mixer & Showcase
   start: 2026-12-07T18:00:00-06:00
   end: 2026-12-07T21:00:00-06:00
-  venue: { name: Venue to be announced }
+  venue: { name: "ACC Rio Grande, RGC 3000", address: "1218 West Ave, Austin, TX" }
+  rsvp:
+    luma: https://luma.com/p000t7we
+    meetup: https://www.meetup.com/austin-langchain-ai-group/events/316965400/ # the hybrid series event; a standalone in-person duplicate (316397087) also exists
   # Pitches close the Monday before the meetup, 5 PM CT. CST, -06:00.
   lineupDate: 2026-11-30T12:00:00-06:00
   pitchDeadline: 2026-11-30T17:00:00-06:00
