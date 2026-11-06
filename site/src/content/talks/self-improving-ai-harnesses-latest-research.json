@@ -1,0 +1,62 @@
+{
+  "title": "Self-Improving AI Harnesses: Latest Research",
+  "speakers": [
+    "julian-ghadially"
+  ],
+  "date": "2026-11-02",
+  "event": "2026-11-02",
+  "youtubeId": "r1xrVJim9Do",
+  "publishAt": "2026-11-05T09:00:00-06:00",
+  "duration": 1538,
+  "thumbnail": "/talks/self-improving-ai-harnesses-latest-research.jpg",
+  "topics": [
+    "Coding agents",
+    "Agents"
+  ],
+  "summary": "Julian Ghadially shows agent-directed search matches evolutionary AI harness optimization.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Introduction and Background"
+    },
+    {
+      "t": 56,
+      "title": "Principles for AI Quality"
+    },
+    {
+      "t": 158,
+      "title": "Experiential Learning and Evals"
+    },
+    {
+      "t": 344,
+      "title": "Research: Evolutionary Search"
+    },
+    {
+      "t": 503,
+      "title": "Experimental Design"
+    },
+    {
+      "t": 595,
+      "title": "Results and Findings"
+    },
+    {
+      "t": 700,
+      "title": "Why Evolution Fails Now"
+    },
+    {
+      "t": 838,
+      "title": "CodeEvolver and Conclusion"
+    },
+    {
+      "t": 917,
+      "title": "Q&A Session"
+    }
+  ],
+  "learn": [
+    "Agent-directed search is just as good, if not better, than evolutionary search.",
+    "Evolution was beneficial on the old models, but it's just not seen anymore with models that are much more capable coding agents.",
+    "There's literally no difference between the exploration for the Pareto evolution versus the agent-directed search.",
+    "The starting state for agent-directed search doesn't matter so much, because if it has a bunch of bugs, the agent will usually find those bugs, fix them."
+  ],
+  "links": []
+}

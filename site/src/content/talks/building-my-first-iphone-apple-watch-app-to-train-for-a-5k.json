@@ -1,0 +1,57 @@
+{
+  "title": "Building my first iPhone & Apple Watch app to train for a 5K",
+  "speakers": [
+    "sal-castoro"
+  ],
+  "date": "2026-11-02",
+  "event": "2026-11-02",
+  "youtubeId": "d7qt-SPXo1k",
+  "publishAt": "2026-11-06T11:00:00-06:00",
+  "duration": 1209,
+  "thumbnail": "/talks/building-my-first-iphone-apple-watch-app-to-train-for-a-5k.jpg",
+  "topics": [
+    "Agents"
+  ],
+  "summary": "Sal Castoro built a custom 5K runner app using AI agents and Swift.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Why build a runner app"
+    },
+    {
+      "t": 153,
+      "title": "Vibe coding with AI agents"
+    },
+    {
+      "t": 239,
+      "title": "Cloudflare backend and dashboard"
+    },
+    {
+      "t": 396,
+      "title": "Detecting walk vs run"
+    },
+    {
+      "t": 575,
+      "title": "Automating workout transitions"
+    },
+    {
+      "t": 651,
+      "title": "Development road bumps"
+    },
+    {
+      "t": 739,
+      "title": "AI health coaching"
+    },
+    {
+      "t": 795,
+      "title": "Tools and workflow"
+    }
+  ],
+  "learn": [
+    "Use Apple's WorkoutKit to create custom workouts that vibrate the wrist to signal transitions.",
+    "Leverage HealthKit to track cadence and heart rate to distinguish walking from jogging.",
+    "Host a dashboard on Cloudflare workers with a generous free tier.",
+    "Use AI agents to review health data and provide coaching feedback."
+  ],
+  "links": []
+}

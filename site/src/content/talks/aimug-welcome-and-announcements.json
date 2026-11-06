@@ -1,0 +1,43 @@
+{
+  "title": "AIMUG welcome and announcements",
+  "speakers": [],
+  "date": "2026-11-02",
+  "event": "2026-11-02",
+  "youtubeId": "IDotm1OyZSs",
+  "publishAt": "2026-11-05T09:00:00-06:00",
+  "duration": 376,
+  "thumbnail": "/talks/aimug-welcome-and-announcements.jpg",
+  "topics": [
+    "Community"
+  ],
+  "summary": "Colin McNamara introduces the AI Middleware User Group, its community rules, and the night's speakers.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Welcome to AI Middleware"
+    },
+    {
+      "t": 55,
+      "title": "Community Rules and Values"
+    },
+    {
+      "t": 112,
+      "title": "Independence and Support"
+    },
+    {
+      "t": 148,
+      "title": "Meeting Locations and Schedule"
+    },
+    {
+      "t": 262,
+      "title": "Tonight's Speakers and Topics"
+    }
+  ],
+  "learn": [
+    "The group presents on the bleeding edge of technology, specifically things that happened in the last 60 to 90 days in AI.",
+    "The community protects the space for sharing new ideas by being cool to each other, recognizing that sharing is vulnerable.",
+    "The meetup is independent and supported by members, ensuring no sales pitches are made during the events.",
+    "The group meets in person in Austin and online, with office hours available for sharing projects and solving technical problems."
+  ],
+  "links": []
+}
