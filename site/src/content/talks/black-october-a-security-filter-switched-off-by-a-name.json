@@ -1,0 +1,62 @@
+{
+  "title": "Black October: a security filter switched off by a name",
+  "speakers": [
+    "colin-mcnamara"
+  ],
+  "date": "2026-11-02",
+  "event": "2026-11-02",
+  "youtubeId": "8_1kXuBmww4",
+  "publishAt": "2026-11-09T11:00:00-06:00",
+  "duration": 2441,
+  "thumbnail": "/talks/black-october-a-security-filter-switched-off-by-a-name.jpg",
+  "topics": [
+    "Inference",
+    "Security"
+  ],
+  "summary": "Colin McNamara on bypassing AI policy via headers and the cost of coordinated disclosure.",
+  "chapters": [
+    {
+      "t": 0,
+      "title": "Patch fatigue and CVE trends"
+    },
+    {
+      "t": 200,
+      "title": "Semantic router and token efficiency"
+    },
+    {
+      "t": 299,
+      "title": "Building the defense in depth lab"
+    },
+    {
+      "t": 369,
+      "title": "Discovering the header bypass vulnerability"
+    },
+    {
+      "t": 762,
+      "title": "AI tools locking out researchers"
+    },
+    {
+      "t": 916,
+      "title": "Using sovereign AI for patches"
+    },
+    {
+      "t": 1177,
+      "title": "Coordinated disclosure challenges"
+    },
+    {
+      "t": 1487,
+      "title": "Solving the security logjam"
+    },
+    {
+      "t": 1715,
+      "title": "Supporting volunteer maintainers"
+    }
+  ],
+  "learn": [
+    "Finding vulnerabilities and fixing them has scaled with compute access to GPUs and Frontier APIs.",
+    "When an endpoint picker and a filter share a name, a single header can skip policy. The fix is simple: don't give them the same name.",
+    "GitHub is now rate-limiting the vulnerability reports, creating a platform barrier between consumers and maintainers.",
+    "Writing the fixes took way less time than the entire process of coordinating a disclosure."
+  ],
+  "links": []
+}
