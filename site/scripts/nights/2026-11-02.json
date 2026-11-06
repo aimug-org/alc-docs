@@ -1,0 +1,24 @@
+{
+  "event": "2026-11-02",
+  "copy": "../archive-drops/copy/2026-11-02",
+  "transcript": false,
+  "talks": {
+    "colin-intro": {
+      "youtubeId": "IDotm1OyZSs",
+      "publishAt": "2026-11-05T09:00:00-06:00",
+      "speakers": []
+    },
+    "julian-ghadially": {
+      "youtubeId": "r1xrVJim9Do",
+      "publishAt": "2026-11-05T09:00:00-06:00"
+    },
+    "sal-castoro": {
+      "youtubeId": "d7qt-SPXo1k",
+      "publishAt": "2026-11-06T11:00:00-06:00"
+    },
+    "colin-mcnamara": {
+      "youtubeId": "8_1kXuBmww4",
+      "publishAt": "2026-11-09T11:00:00-06:00"
+    }
+  }
+}
